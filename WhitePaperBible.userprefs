@@ -1,0 +1,40 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Tests/PaperTests.cs">
+    <Files>
+      <File FileName="WhitePaperBible.Tests/PaperTests.cs" Line="9" Column="15" />
+      <File FileName="WhitePaperBible.Tests/AppDelegate.cs" Line="7" Column="26" />
+      <File FileName="WhitePaperBibleCore/Services/PaperService.cs" Line="34" Column="18" />
+      <File FileName="WhitePaperBibleCore/Models/Paper.cs" Line="9" Column="20" />
+      <File FileName="WhitePaperBibleCore/Models/PaperCollection.cs" Line="6" Column="30" />
+      <File FileName="WhitePaperBibleCore/Models/PaperNode.cs" Line="1" Column="30" />
+      <File FileName="WhitePaperBibleCore/Models/Reference.cs" Line="3" Column="30" />
+      <File FileName="WhitePaperBibleCore/Models/ReferenceNode.cs" Line="3" Column="30" />
+      <File FileName="resources/RestSharp/RestSharp/Deserializers/JsonDeserializer.cs" Line="60" Column="55" />
+      <File FileName="resources/RestSharp/RestSharp.MonoTouch/SimpleJson.cs" Line="1502" Column="57" />
+      <File FileName="resources/RestSharp/RestSharp/RestClient.Async.cs" Line="33" Column="82" />
+      <File FileName="resources/RestSharp/RestSharp/RestClient.Sync.cs" Line="70" Column="31" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="WhitePaperBible.Core" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Services" expanded="True" />
+          </Node>
+          <Node name="WhitePaperBible.Tests" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
