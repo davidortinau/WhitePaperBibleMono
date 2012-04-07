@@ -5,10 +5,13 @@ using System.Runtime.Serialization;
 
 namespace WhitePaperBibleCore.Models
 {
-    [DataContract]
+	[DataContract]
     public class PaperCollection
-    {
-        [DataMember(Name = "paper")] 
-        public List<Paper> Papers { get; set; }   
-    }
+	{
+		[DataMember(Name = "title")]
+		public String Title { get; set; }
+		
+		[DataMember(Name = "paper")] 
+		public List<Paper> Papers { get; set; }   
+	}
 }

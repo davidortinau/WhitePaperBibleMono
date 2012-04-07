@@ -70,6 +70,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Fixtures\PaperTests.cs" />
     <Compile Include="Fixtures\TagTests.cs" />
+    <Compile Include="Fixtures\CachingTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
