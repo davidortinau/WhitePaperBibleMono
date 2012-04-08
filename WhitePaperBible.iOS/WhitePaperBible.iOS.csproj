@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WhitePaperBible.iOS</RootNamespace>
+    <AssemblyName>WhitePaperBibleiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="SecondViewController.cs" />
+    <Compile Include="SecondViewController.designer.cs">
+      <DependentUpon>SecondViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\PapersView.cs" />
+    <Compile Include="Views\iPhone\TagsView.cs" />
+    <Compile Include="Views\Common\TabBarController.cs" />
+    <Compile Include="Views\iPhone\FavoritesView.cs" />
+    <Compile Include="Views\iPhone\SearchView.cs" />
+    <Compile Include="Views\iPhone\MyPapersView.cs" />
+    <Compile Include="Views\iPhone\AboutView.cs" />
+    <Compile Include="TableSource\PapersTableSource.cs" />
+    <Compile Include="Views\iPhone\PaperDetailsView.cs" />
+    <Compile Include="Views\iPhone\PaperDetailsView.designer.cs">
+      <DependentUpon>PaperDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomElements\PaperCell.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
+    <InterfaceDefinition Include="SecondViewController_iPad.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\first.png" />
+    <Content Include="Images\first%402x.png" />
+    <Content Include="Images\second.png" />
+    <Content Include="Images\second%402x.png" />
+    <Content Include="Images\AboutLogo.png" />
+    <Content Include="Images\bg_fade_bar_white.png" />
+    <Content Include="Images\bg_fade_bar_white-longer.png" />
+    <Content Include="Images\bg_fade_to_white.png" />
+    <Content Include="Images\bg_overlay.png" />
+    <Content Include="Images\btn_close.png" />
+    <Content Include="Images\btn_create_account.png" />
+    <Content Include="Images\btn_edit_profile.png" />
+    <Content Include="Images\btn_edit_profile_sm.png" />
+    <Content Include="Images\btn_edit_sm.png" />
+    <Content Include="Images\btn_search_the_bible.png" />
+    <Content Include="Images\Default.png" />
+    <Content Include="Images\default%402x.png" />
+    <Content Include="Images\default_bible_search.png" />
+    <Content Include="Images\default_favorites.png" />
+    <Content Include="Images\default_mypapers.png" />
+    <Content Include="Images\default_papers.png" />
+    <Content Include="Images\favorited.png" />
+    <Content Include="Images\favorited%402x.png" />
+    <Content Include="Images\first_16x16.png" />
+    <Content Include="Images\first_24x24.png" />
+    <Content Include="Images\greenPlusIcon.png" />
+    <Content Include="Images\headphones.png" />
+    <Content Include="Images\headphones%402x.png" />
+    <Content Include="Images\heaphones_24x21.png" />
+    <Content Include="Images\icon.png" />
+    <Content Include="Images\last.png" />
+    <Content Include="Images\last%402x.png" />
+    <Content Include="Images\last_16x16.png" />
+    <Content Include="Images\loading.png" />
+    <Content Include="Images\loading%402x.png" />
+    <Content Include="Images\loadingbutton.png" />
+    <Content Include="Images\loop_16x16.png" />
+    <Content Include="Images\loop_8x8.png" />
+    <Content Include="Images\loop_8x8_red.png" />
+    <Content Include="Images\pause_12x16.png" />
+    <Content Include="Images\pausebutton.png" />
+    <Content Include="Images\play.png" />
+    <Content Include="Images\play%402x.png" />
+    <Content Include="Images\play_12x16.png" />
+    <Content Include="Images\play_alt_16x16.png" />
+    <Content Include="Images\playbutton.png" />
+    <Content Include="Images\rounded_box.png" />
+    <Content Include="Images\share.png" />
+    <Content Include="Images\stop.png" />
+    <Content Include="Images\stop%402x.png" />
+    <Content Include="Images\stop_16x16.png" />
+    <Content Include="Images\stopbutton.png" />
+    <Content Include="Images\tag_fill_16x16.png" />
+    <Content Include="Images\tag_fill_24x24.png" />
+    <Content Include="Images\tag_fill_32x32.png" />
+    <Content Include="Images\Tabs\papers.png" />
+    <Content Include="Images\Tabs\papers%402x.png" />
+    <Content Include="Images\Tabs\tag.png" />
+    <Content Include="Images\Tabs\tag%402x.png" />
+    <Content Include="Images\Tabs\favorites.png" />
+    <Content Include="Images\Tabs\favorites%402x.png" />
+    <Content Include="Images\Tabs\search.png" />
+    <Content Include="Images\Tabs\search%402x.png" />
+    <Content Include="Images\Tabs\my_papers.png" />
+    <Content Include="Images\Tabs\my_papers%402x.png" />
+    <Content Include="Images\Tabs\myDots.png" />
+    <Content Include="Images\Tabs\myDots%402x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Views\Common\" />
+    <Folder Include="Views\iPhone\" />
+    <Folder Include="Views\iPad\" />
+    <Folder Include="Images\Tabs\" />
+    <Folder Include="TableSource\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\CustomElements\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WhitePaperBibleCore\WhitePaperBible.Core.csproj">
+      <Project>{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}</Project>
+      <Name>WhitePaperBible.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

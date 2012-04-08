@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Tests", "Wh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.MonoTouch", "resources\RestSharp\RestSharp.MonoTouch\RestSharp.MonoTouch.csproj", "{E9A9D1C5-4E06-4D31-9809-A97188C70B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOS", "WhitePaperBible.iOS\WhitePaperBible.iOS.csproj", "{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,18 @@ Global
 		{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}.Release|iPhone.Build.0 = Release|iPhone
 		{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|iPhone.Build.0 = Debug|iPhone
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|iPhone.ActiveCfg = Release|iPhone
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|iPhone.Build.0 = Release|iPhone
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
