@@ -177,5 +177,9 @@
       <Project>{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}</Project>
       <Name>WhitePaperBible.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\resources\RestSharp\RestSharp.MonoTouch\RestSharp.MonoTouch.csproj">
+      <Project>{E9A9D1C5-4E06-4D31-9809-A97188C70B2C}</Project>
+      <Name>RestSharp.MonoTouch</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -45,8 +45,16 @@ Global
 		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhone.Build.0 = Release|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{E9A9D1C5-4E06-4D31-9809-A97188C70B2C}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{E9A9D1C5-4E06-4D31-9809-A97188C70B2C}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{E9A9D1C5-4E06-4D31-9809-A97188C70B2C}.Debug|iPhone.ActiveCfg = Debug|iPhone
@@ -61,6 +69,16 @@ Global
 		{E9A9D1C5-4E06-4D31-9809-A97188C70B2C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = WhitePaperBibleCore\WhitePaperBible.Core.csproj
+		StartupItem = WhitePaperBible.iOS\WhitePaperBible.iOS.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 120
+		$2.TabWidth = 4
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/plain
+		$2.scope = text/plain
 	EndGlobalSection
 EndGlobal

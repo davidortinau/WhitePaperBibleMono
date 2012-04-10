@@ -16,7 +16,7 @@ namespace WhitePaperBible.iOS
 	{
 		public PapersView () : base (UITableViewStyle.Plain, null, true)
 		{
-			EnableSearch = true; // requires Element to implement Matches()
+			EnableSearch = true; 
 			AutoHideSearch = true;
 			SearchPlaceholder = @"Find Papers";
 		}
@@ -32,7 +32,6 @@ namespace WhitePaperBible.iOS
 		
 		private void onErrorReceived (string error)
 		{
-			// OOPS
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
 		}
 
@@ -42,15 +41,13 @@ namespace WhitePaperBible.iOS
 			
 			Root = new RootElement ("Papers") {
 					from node in papers
-				group node by (node.paper.title[0].ToString().ToUpper()) into alpha
-					orderby alpha.Key
-				select new Section (alpha.Key){
-					from eachNode in alpha
-					select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
-				}};
+						group node by (node.paper.title [0].ToString ().ToUpper ()) into alpha
+						orderby alpha.Key
+					select new Section (alpha.Key){
+						from eachNode in alpha
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+			}};
 
-			
-			TableView.Source = new PapersTableSource (papers, this);
 			TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 		}
 	}
