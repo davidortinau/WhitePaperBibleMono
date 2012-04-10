@@ -85,6 +85,7 @@
       <DependentUpon>PaperDetailsView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CustomElements\PaperCell.cs" />
+    <Compile Include="UI\CustomElements\PaperElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />

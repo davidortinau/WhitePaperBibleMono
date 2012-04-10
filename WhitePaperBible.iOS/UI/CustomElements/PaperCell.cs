@@ -8,19 +8,16 @@ using WhitePaperBibleCore.Models;
 namespace WhitePaperBible.iOS.UI.CustomElements
 {
 	public class PaperCell : UITableViewCell {
-		static UIFont bigFont = UIFont.FromName ("Helvetica-Light", AppDelegate.Font16pt);
-		static UIFont smallFont = UIFont.FromName ("Helvetica-LightOblique", AppDelegate.Font10pt);
-//		static UIImage favorite = UIImage.FromFile (AppDelegate.ImageNotFavorite);
-//		static UIImage favorited = UIImage.FromFile (AppDelegate.ImageIsFavorite);
-//		static UIImage building = UIImage.FromFile (AppDelegate.ImageLocation);
+		static UIFont bigFont = UIFont.FromName ("Helvetica", AppDelegate.Font10_5pt);
+		static UIFont smallFont = UIFont.FromName ("Helvetica-Light", AppDelegate.Font10pt);
 		UILabel titleLabel, descriptionLabel;
 		UIButton button;
 		UIImageView locationImageView;
 		PaperNode paperNode;
-		const int padding = 13;
-		const int buttonSpace = 45; //24;
 		
-		public PaperCell (UITableViewCellStyle style, NSString ident, PaperNode paperNode, string big, string small) : base (style, ident)
+		const int padding = 13;
+		
+		public PaperCell (UITableViewCellStyle style, NSString ident, PaperNode paperNode) : base (style, ident)
 		{
 			SelectionStyle = UITableViewCellSelectionStyle.Blue;
 			
@@ -35,50 +32,21 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 				TextColor = UIColor.DarkGray,
 				BackgroundColor = UIColor.FromWhiteAlpha (0f, 0f)
 			};
-			
-//			locationImageView = new UIImageView();
-//			locationImageView.Image = building;
 
-//			button = UIButton.FromType (UIButtonType.Custom);
-//			button.TouchDown += delegate {
-//				UpdateImage (ToggleFavorite ());
-//				if (AppDelegate.IsPad) {
-//					NSObject o = new NSObject();
-//					NSDictionary progInfo = NSDictionary.FromObjectAndKey(o, new NSString("FavUpdate"));
-//
-//					NSNotificationCenter.DefaultCenter.PostNotificationName(
-//						"NotificationFavoriteUpdated", o, progInfo);
-//				}
-//			};
-			UpdateCell (paperNode, big, small);
+			UpdateCell (paperNode);
 			
 			ContentView.Add (titleLabel);
 			ContentView.Add (descriptionLabel);
-			ContentView.Add (button);
-			ContentView.Add (locationImageView);
 		}
 		
-		/// <summary>
-		/// Update colors/fonts for use on the HomeScreen only
-		/// </summary>
-		public void StyleForHome ()
-		{
-			BackgroundColor = AppDelegate.ColorCellBackgroundHome;
-			titleLabel.TextColor = AppDelegate.ColorTextHome;
-			titleLabel.Font = UIFont.FromName ("Helvetica-Bold", AppDelegate.Font16pt);
-			descriptionLabel.TextColor = AppDelegate.ColorTextHome;
-			descriptionLabel.Font = UIFont.FromName ("Helvetica", AppDelegate.Font10_5pt);
-		}
-
-		public void UpdateCell (PaperNode paperNode, string big, string small)
+		public void UpdateCell (PaperNode paperNode)
 		{
 			paperNode = paperNode;
-			//UpdateImage (FavoritesManager.IsFavorite (paperNode.Key));
 			
 			titleLabel.Font = bigFont;
-			titleLabel.Text = big;
+			titleLabel.Text = paperNode.paper.title;
 			
-			descriptionLabel.Text = small;
+			descriptionLabel.Text = paperNode.paper.description;
 		}
 		
 //		void UpdateImage (bool selected)
@@ -114,12 +82,12 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			base.LayoutSubviews ();
 			var full = ContentView.Bounds;
 			var titleAdjustment = 0;			
-			var titleFrame = full; 
+			var titleFrame = full;
 
 			titleFrame.X = padding;
 			titleFrame.Y = 12; //15 ?
 			titleFrame.Height = 25;
-			titleFrame.Width -= (padding + buttonSpace); // +10
+			titleFrame.Width -= (padding); // +10
 
 			SizeF size = titleLabel.StringSize (titleLabel.Text
 						, titleLabel.Font

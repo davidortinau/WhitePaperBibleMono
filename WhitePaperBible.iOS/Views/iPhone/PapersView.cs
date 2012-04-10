@@ -19,19 +19,39 @@ namespace WhitePaperBible.iOS
 			EnableSearch = true; // requires Element to implement Matches()
 			AutoHideSearch = true;
 			SearchPlaceholder = @"Find Papers";
-			var svc = new PaperService();
-			svc.GetPapers(onPapersReceived, onErrorReceived);
 		}
 		
-		private void onErrorReceived(string error)
-        {
-            // OOPS
-        }
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+			var svc = new PaperService ();
+			svc.GetPapers (onPapersReceived, onErrorReceived);
+		}
+		
+		private void onErrorReceived (string error)
+		{
+			// OOPS
+			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+		}
 
-        private void onPapersReceived(List<PaperNode> papers)
-        {
-			TableView.Source = new PapersTableSource(papers, this);
-			TableView.ScrollToRow (NSIndexPath.FromRowSection (0,0), UITableViewScrollPosition.Top, false);
-        }
+		private void onPapersReceived (List<PaperNode> papers)
+		{
+			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+			
+			Root = new RootElement ("Papers") {
+					from node in papers
+				group node by (node.paper.title[0].ToString().ToUpper()) into alpha
+					orderby alpha.Key
+				select new Section (alpha.Key){
+					from eachNode in alpha
+					select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+				}};
+
+			
+			TableView.Source = new PapersTableSource (papers, this);
+			TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+		}
 	}
 }

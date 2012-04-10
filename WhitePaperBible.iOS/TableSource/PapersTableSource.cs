@@ -1,8 +1,11 @@
 using System;
+using System.Linq;
+
 using WhitePaperBibleCore.Models;
 using System.Collections.Generic;
-using MonoTouch.UIKit;
+using MonoTouch.Dialog;
 using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 
 namespace WhitePaperBible.iOS.TableSource
 {
@@ -10,7 +13,7 @@ namespace WhitePaperBible.iOS.TableSource
 		IList<PaperNode> papers;
 		PapersView view;
 		
-		static NSString cellId = new NSString("PaperCell");
+		static NSString cellId = new NSString("PaperElement");
 
 		public PapersTableSource (List<PaperNode> papers, PapersView view)
 		{
@@ -28,10 +31,19 @@ namespace WhitePaperBible.iOS.TableSource
 			cell.TextLabel.Text = paperNode.paper.title;
 			return cell;
 		}
+		
+//		public override string[] SectionIndexTitles (UITableView tableView)
+//		{
+//			var sit = from node in papers
+//                    group node by (node.paper.title[0].ToString().ToUpper()) into alpha
+//						orderby alpha.Key
+//						select alpha.Key;
+//			return sit.ToArray();
+//		}
 
 		public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 		{
-			return 40f;
+			return 60f;
 		}
 
 		public override int RowsInSection (UITableView tableview, int section)

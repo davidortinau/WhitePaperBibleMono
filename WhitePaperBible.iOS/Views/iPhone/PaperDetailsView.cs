@@ -3,13 +3,20 @@ using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using WhitePaperBibleCore.Models;
+using WhitePaperBibleCore.Services;
+using System.Collections.Generic;
 
 namespace WhitePaperBible.iOS
 {
 	public partial class PaperDetailsView : UIViewController
 	{
-		public PaperDetailsView () : base ("PaperDetailsView", null)
+		Paper paper;
+		
+		
+		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
+			this.paper = paper;
 		}
 		
 		public override void DidReceiveMemoryWarning ()
@@ -25,6 +32,16 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
+			var svc = new PaperService();
+			svc.GetPaperReferences(paper.id, onReferencesReceived, onFailure);
+		}
+		
+		private void onFailure(String msg){
+			// Ooops
+		}
+		
+		private void onReferencesReceived(List<ReferenceNode> nodes){
+			// do what?	
 		}
 		
 		public override void ViewDidUnload ()

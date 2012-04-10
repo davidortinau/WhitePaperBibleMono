@@ -1,12 +1,11 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Tests/PaperTests.cs">
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Views/iPhone/PapersView.cs">
     <Files>
-      <File FileName="WhitePaperBible.Tests/PaperTests.cs" Line="9" Column="15" />
       <File FileName="WhitePaperBible.Tests/AppDelegate.cs" Line="7" Column="26" />
-      <File FileName="WhitePaperBibleCore/Services/PaperService.cs" Line="34" Column="18" />
-      <File FileName="WhitePaperBibleCore/Models/Paper.cs" Line="9" Column="20" />
-      <File FileName="WhitePaperBibleCore/Models/PaperCollection.cs" Line="6" Column="30" />
+      <File FileName="WhitePaperBibleCore/Services/PaperService.cs" Line="14" Column="21" />
+      <File FileName="WhitePaperBibleCore/Models/Paper.cs" Line="10" Column="46" />
+      <File FileName="WhitePaperBibleCore/Models/PaperCollection.cs" Line="11" Column="16" />
       <File FileName="WhitePaperBibleCore/Models/PaperNode.cs" Line="1" Column="30" />
       <File FileName="WhitePaperBibleCore/Models/Reference.cs" Line="3" Column="30" />
       <File FileName="WhitePaperBibleCore/Models/ReferenceNode.cs" Line="3" Column="30" />
@@ -14,15 +13,39 @@
       <File FileName="resources/RestSharp/RestSharp.MonoTouch/SimpleJson.cs" Line="1502" Column="57" />
       <File FileName="resources/RestSharp/RestSharp/RestClient.Async.cs" Line="33" Column="82" />
       <File FileName="resources/RestSharp/RestSharp/RestClient.Sync.cs" Line="70" Column="31" />
+      <File FileName="WhitePaperBibleCore/Services/TagService.cs" Line="34" Column="3" />
+      <File FileName="WhitePaperBibleCore/Constants.cs" Line="11" Column="32" />
+      <File FileName="WhitePaperBibleCore/Models/Tag.cs" Line="6" Column="15" />
+      <File FileName="WhitePaperBibleCore/Models/TagNode.cs" Line="3" Column="37" />
+      <File FileName="WhitePaperBible.Tests/Fixtures/PaperTests.cs" Line="51" Column="10" />
+      <File FileName="WhitePaperBible.Tests/Fixtures/CachingTests.cs" Line="77" Column="66" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="24" Column="34" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="32" Column="10" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="15" Column="33" />
+      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="76" Column="4" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" Line="15" Column="38" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/SearchView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="22" Column="29" />
+      <File FileName="WhitePaperBible.iOS/TableSource/PapersTableSource.cs" Line="34" Column="12" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="53" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="WhitePaperBible.Core" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="Services" expanded="True" />
+          <Node name="WhitePaperBible.iOS" expanded="True" selected="True">
+            <Node name="TableSource" expanded="True" />
+            <Node name="UI" expanded="True">
+              <Node name="CustomElements" expanded="True" />
+            </Node>
+            <Node name="Views" expanded="True">
+              <Node name="iPhone" expanded="True" />
+            </Node>
           </Node>
-          <Node name="WhitePaperBible.Tests" expanded="True" selected="True" />
+          <Node name="WhitePaperBible.Tests" expanded="True">
+            <Node name="Fixtures" expanded="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -30,6 +53,9 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
