@@ -13,6 +13,14 @@ namespace WhitePaperBible.iOS
 	{
 		Paper paper;
 		
+		/**
+		 * TODO
+		 * if I own the paper, set EDIT button in upper right nav
+		 * if logged in enable favorites
+		 * 
+		 * 
+		 * */
+		
 		
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
@@ -31,9 +39,28 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 			
-			// Perform any additional setup after loading the view, typically from a nib.
+			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 			var svc = new PaperService();
 			svc.GetPaperReferences(paper.id, onReferencesReceived, onFailure);
+			
+			this.Title = paper.title;
+	
+			webView.ScrollView.ScrollEnabled = true;
+			this.NavigationController.SetNavigationBarHidden(true, false);
+			
+			webView.ShouldStartLoad += webViewShouldStartLoad;
+			
+		}
+
+		bool webViewShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType)
+		{
+			Console.WriteLine(request.Url.AbsoluteString);
+			if(request.Url.AbsoluteString.IndexOf("#back") > -1){
+				NavigationController.PopViewControllerAnimated(true);
+				return false;
+			}
+		
+			return true;
 		}
 		
 		private void onFailure(String msg){
@@ -41,7 +68,19 @@ namespace WhitePaperBible.iOS
 		}
 		
 		private void onReferencesReceived(List<ReferenceNode> nodes){
-			// do what?	
+			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+			
+			
+			string html = @"<style type='text/css'>body { color: #000000; background-color: white; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
+			html += "<a href='#back'>back</a><h1>" + paper.title + "</h1>";
+			
+			foreach(ReferenceNode node in nodes){
+				string content = node.reference.content;
+				html += content;
+			}
+			
+			webView.LoadHtmlString(html, NSUrl.FromString("http://whitepaperbible.org"));
+			
 		}
 		
 		public override void ViewDidUnload ()

@@ -80,17 +80,22 @@
     <Compile Include="Views\iPhone\MyPapersView.cs" />
     <Compile Include="Views\iPhone\AboutView.cs" />
     <Compile Include="TableSource\PapersTableSource.cs" />
-    <Compile Include="Views\iPhone\PaperDetailsView.cs" />
+    <Compile Include="Views\iPhone\PaperDetailsView.cs"/>
     <Compile Include="Views\iPhone\PaperDetailsView.designer.cs">
       <DependentUpon>PaperDetailsView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CustomElements\PaperCell.cs" />
     <Compile Include="UI\CustomElements\PaperElement.cs" />
+    <Compile Include="Views\iPhone\PapersListView.cs" />
+    <Compile Include="Views\iPhone\PapersListView.designer.cs">
+      <DependentUpon>PapersListView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PapersListView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\first.png" />

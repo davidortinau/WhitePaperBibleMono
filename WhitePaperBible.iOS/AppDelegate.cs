@@ -5,6 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.ObjCRuntime;
+using WhitePaperBibleCore.Models;
 
 namespace WhitePaperBible.iOS
 {
@@ -30,6 +31,8 @@ namespace WhitePaperBible.iOS
 		// class-level declarations
 		UIWindow window;
 		UITabBarController tabBarController;
+		
+		public static List<PaperNode> papers;
 		
 		public static bool IsPhone {
 			get {
@@ -61,6 +64,8 @@ namespace WhitePaperBible.iOS
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+			UINavigationBar.Appearance.TintColor = UIColor.Black;
+			
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			

@@ -1,37 +1,50 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Tests/AppDelegate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Main.cs">
     <Files>
-      <File FileName="WhitePaperBible.Tests/AppDelegate.cs" Line="7" Column="26" />
-      <File FileName="WhitePaperBibleCore/Services/PaperService.cs" Line="14" Column="21" />
-      <File FileName="WhitePaperBibleCore/Models/Paper.cs" Line="10" Column="46" />
-      <File FileName="WhitePaperBibleCore/Models/PaperCollection.cs" Line="11" Column="16" />
-      <File FileName="WhitePaperBibleCore/Models/PaperNode.cs" Line="3" Column="15" />
-      <File FileName="WhitePaperBibleCore/Models/Reference.cs" Line="3" Column="30" />
-      <File FileName="WhitePaperBibleCore/Models/ReferenceNode.cs" Line="3" Column="30" />
-      <File FileName="resources/RestSharp/RestSharp/Deserializers/JsonDeserializer.cs" Line="60" Column="55" />
-      <File FileName="resources/RestSharp/RestSharp.MonoTouch/SimpleJson.cs" Line="1502" Column="57" />
-      <File FileName="resources/RestSharp/RestSharp/RestClient.Async.cs" Line="33" Column="82" />
-      <File FileName="resources/RestSharp/RestSharp/RestClient.Sync.cs" Line="70" Column="31" />
-      <File FileName="WhitePaperBibleCore/Services/TagService.cs" Line="34" Column="3" />
-      <File FileName="WhitePaperBibleCore/Constants.cs" Line="8" Column="4" />
-      <File FileName="WhitePaperBibleCore/Models/Tag.cs" Line="6" Column="15" />
-      <File FileName="WhitePaperBibleCore/Models/TagNode.cs" Line="3" Column="37" />
-      <File FileName="WhitePaperBible.Tests/Fixtures/PaperTests.cs" Line="18" Column="10" />
-      <File FileName="WhitePaperBible.Tests/Fixtures/CachingTests.cs" Line="77" Column="66" />
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="24" Column="34" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="19" Column="44" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="29" Column="4" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="15" Column="33" />
-      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="76" Column="4" />
+      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="26" Column="39" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" Line="15" Column="38" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/SearchView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="22" Column="29" />
-      <File FileName="WhitePaperBible.iOS/TableSource/PapersTableSource.cs" Line="35" Column="6" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="27" Column="18" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="7" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="66" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="17" Column="3" />
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperElement.cs" Line="49" Column="79" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="30" Column="3" />
+      <File FileName="WhitePaperBibleCore/Services/PaperService.cs" Line="21" Column="65" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListView.cs" Line="137" Column="4" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListView.designer.cs" Line="12" Column="30" />
+      <File FileName="WhitePaperBible.iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="WhitePaperBible.iOS/TableSource/PapersTableSource.cs" Line="13" Column="10" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="WhitePaperBible.Core" expanded="True">
+            <Node name="Models" expanded="True" />
+            <Node name="Services" expanded="True" />
+          </Node>
+          <Node name="WhitePaperBible.iOS" expanded="True">
+            <Node name="UI" expanded="True" />
+            <Node name="Views" expanded="True">
+              <Node name="iPhone" expanded="True" />
+            </Node>
+            <Node name="Main.cs" selected="True" />
+          </Node>
+          <Node name="WhitePaperBible.Tests" expanded="True">
+            <Node name="Fixtures" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

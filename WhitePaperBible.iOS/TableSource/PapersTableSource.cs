@@ -10,7 +10,7 @@ using MonoTouch.UIKit;
 namespace WhitePaperBible.iOS.TableSource
 {
 	public class PapersTableSource: UITableViewSource {
-		IList<PaperNode> papers;
+		public IList<PaperNode> papers;
 		PapersView view;
 		
 		static NSString cellId = new NSString("PaperElement");
@@ -63,6 +63,7 @@ namespace WhitePaperBible.iOS.TableSource
 			//view.SelectSession(session); // TODO implement select method
 			if (AppDelegate.IsPhone) tableView.DeselectRow (indexPath, true);
 		}
+		
 	}
 }
 

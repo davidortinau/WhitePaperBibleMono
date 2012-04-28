@@ -5,6 +5,7 @@ namespace WhitePaperBible.iOS
 {
 	public class TabBarController : UITabBarController {
 		UIViewController papersScreen = null;
+		UIViewController papersList = null;
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
 		DialogViewController tagsView, favoritesView, searchView, myPapersView, aboutView;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
@@ -30,18 +31,29 @@ namespace WhitePaperBible.iOS
 			papersNav.TabBarItem = new UITabBarItem("Papers"
 										, UIImage.FromBundle("Images/Tabs/papers.png"), 0);
 			
-			// tags tab
-			if (AppDelegate.IsPhone) {
-				tagsView = new TagsView();			
-				tagsNav = new UINavigationController();
-				tagsNav.TabBarItem = new UITabBarItem("Tags"
-											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
-				tagsNav.PushViewController ( tagsView, false );
-			} else {
-//				speakersSplitView = new MWC.iOS.Screens.iPad.Speakers.SpeakerSplitView();
-//				speakersSplitView.TabBarItem = new UITabBarItem("Speakers"
+//			// tags tab
+//			if (AppDelegate.IsPhone) {
+//				tagsView = new TagsView();			
+//				tagsNav = new UINavigationController();
+//				tagsNav.TabBarItem = new UITabBarItem("Tags"
 //											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
-			}
+//				tagsNav.PushViewController ( tagsView, false );
+//			} else {
+////				speakersSplitView = new MWC.iOS.Screens.iPad.Speakers.SpeakerSplitView();
+////				speakersSplitView.TabBarItem = new UITabBarItem("Speakers"
+////											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
+//			}
+			
+			papersList = new PapersListView();
+			papersList.Title = "Papers List";
+			tagsNav = new UINavigationController();
+			tagsNav.TabBarItem = new UITabBarItem("Tags"
+						, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
+			tagsNav.PushViewController ( papersList, false );
+
+			
+			
+			
 
 			// favorites
 			if (AppDelegate.IsPhone) {

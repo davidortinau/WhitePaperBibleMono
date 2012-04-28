@@ -11,8 +11,29 @@ namespace WhitePaperBible.iOS
 	[Register ("PaperDetailsView")]
 	partial class PaperDetailsView
 	{
+		[Outlet]
+		MonoTouch.UIKit.UIWebView webView { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIToolbar toolbar { get; set; }
+
+		[Action ("favoritePressed:")]
+		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender);
+
+		[Action ("sharePressed:")]
+		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender);
+		
 		void ReleaseDesignerOutlets ()
 		{
+			if (webView != null) {
+				webView.Dispose ();
+				webView = null;
+			}
+
+			if (toolbar != null) {
+				toolbar.Dispose ();
+				toolbar = null;
+			}
 		}
 	}
 }
