@@ -80,7 +80,7 @@
     <Compile Include="Views\iPhone\MyPapersView.cs" />
     <Compile Include="Views\iPhone\AboutView.cs" />
     <Compile Include="TableSource\PapersTableSource.cs" />
-    <Compile Include="Views\iPhone\PaperDetailsView.cs"/>
+    <Compile Include="Views\iPhone\PaperDetailsView.cs" />
     <Compile Include="Views\iPhone\PaperDetailsView.designer.cs">
       <DependentUpon>PaperDetailsView.cs</DependentUpon>
     </Compile>
@@ -165,6 +165,7 @@
     <Content Include="Images\Tabs\my_papers%402x.png" />
     <Content Include="Images\Tabs\myDots.png" />
     <Content Include="Images\Tabs\myDots%402x.png" />
+    <Content Include="Images\btn_back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

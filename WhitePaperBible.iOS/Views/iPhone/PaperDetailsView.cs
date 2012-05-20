@@ -7,6 +7,8 @@ using WhitePaperBibleCore.Models;
 using WhitePaperBibleCore.Services;
 using System.Collections.Generic;
 using MonoTouch.ObjCRuntime;
+using MonoTouch.MessageUI;
+using MonoTouch.Twitter;
 
 namespace WhitePaperBible.iOS
 {
@@ -55,6 +57,8 @@ namespace WhitePaperBible.iOS
 			tapRecognizer.NumberOfTapsRequired = 1;
 			tapRecognizer.Delegate = new GestureDelegate ();
 			
+			//var swipeRecognizer = new UISwipeGestureRecognizer
+						
 			webView.AddGestureRecognizer (tapRecognizer);
 			
 //			UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleTapFrom:)];
@@ -64,6 +68,38 @@ namespace WhitePaperBible.iOS
 			
 		}
 		
+//		float startX;
+//		
+//		public override void HandleTouchesBegan (NSSet touches, UIEvent evt)
+//		{
+//			Console.WriteLine("touchesBegan");
+//			var touch = (touches.AnyObject as UITouch);
+//			
+//			if(touch.View == this.View)
+//			{
+//				var location = touch.LocationInView(this.View);	
+//				startX = location.X - this.View.Center.X;
+//			}
+//		}
+//	
+//		public override void TouchesMoved (NSSet touches, UIEvent evt)
+//		{
+//			Console.WriteLine("touchesMoved");
+//			var touch = (touches.AnyObject as UITouch);
+//			if(touch.View == this.View)
+//			{
+//				var location = touch.LocationInView(this.View);	
+//				location.X = location.X - startX;
+//				this.View.Center = location;
+//			}
+//		}
+//		
+//		public override void TouchesEnded (NSSet touches, UIEvent evt)
+//		{
+//			Console.WriteLine("touchesEnded");
+//			// do anything?
+//		}
+		
 		[Export("HandleTapFrom")]
 		public void HandleTapFrom (UITapGestureRecognizer recognizer)
 		{
@@ -71,7 +107,7 @@ namespace WhitePaperBible.iOS
 			
 			// so the question is how long were we holding it down? Has the user initialized text selection?
 			var selection = webView.EvaluateJavascript ("window.getSelection().toString()");
-			Console.WriteLine("selection {0}", selection);
+			Console.WriteLine ("selection {0}", selection);
 			
 			if (selection.Length <= 0) {			
 				// TODO animate these
@@ -153,14 +189,14 @@ namespace WhitePaperBible.iOS
 			
 			
 			string html = @"<style type='text/css'>body { color: #000000; background-color: white; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
-			html += "<a href='#back'>back</a><h1>" + paper.title + "</h1>";
+			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a><h1>" + paper.title + "</h1>";
 			
 			foreach (ReferenceNode node in nodes) {
 				string content = node.reference.content;
 				html += content;
 			}
 			
-			webView.LoadHtmlString (html, NSUrl.FromString ("http://whitepaperbible.org"));
+			webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);
 			
 		}
 		
@@ -181,6 +217,118 @@ namespace WhitePaperBible.iOS
 			// Return true for supported orientations
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
+
+		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1)
+		{
+//			UIActionSheet *actionSheet =[[UIActionSheet alloc]
+//										 initWithTitle:@"Share this paper"
+//										 delegate:self 
+//										 cancelButtonTitle:@"Cancel" 
+//										 destructiveButtonTitle:nil
+//										 otherButtonTitles:@"E-mail",@"Twitter",@"Facebook", nil];
+//			[actionSheet showInView:self.view];
+
+			var actionSheet = new UIActionSheet ("Sharing", null, "Cancel", null, null){
+				Style = UIActionSheetStyle.BlackTranslucent
+			};
+			actionSheet.AddButton("Email");
+			actionSheet.AddButton("Twitter");
+			actionSheet.AddButton("Facebook");
+			actionSheet.Clicked += HandleShareOptionClicked;
+				
+			actionSheet.ShowInView (View);
+		}
+
+		void HandleShareOptionClicked (object sender, UIButtonEventArgs e)
+		{
+			UIActionSheet myActionSheet = sender as UIActionSheet;
+			Console.WriteLine ("Clicked on item {0}", e.ButtonIndex);
+			if( e.ButtonIndex != myActionSheet.CancelButtonIndex) {
+				
+				string paperTitle = paper.title;
+				string urlTitle = paper.url_title;
+				string subject = "White Paper Bible: " + paperTitle;
+				string paperFullURL = "http://whitepaperbible.org/" + urlTitle;
+
+				string messageCombined = subject + Environment.NewLine + paperFullURL;
+
+				if(e.ButtonIndex == 1){
+					//email
+					if(MFMailComposeViewController.CanSendMail){
+						MFMailComposeViewController _mail = new MFMailComposeViewController ();
+						_mail.SetSubject( subject );
+			            _mail.SetMessageBody ( messageCombined, false);
+			            _mail.Finished += HandleMailFinished;
+			            this.PresentModalViewController (_mail, true);
+					}			
+				}
+				else if(e.ButtonIndex == 2){
+					TWTweetComposeViewController tweetComposer = new TWTweetComposeViewController();
+					tweetComposer.SetInitialText(paperTitle + " | " + paperFullURL);
+					this.PresentModalViewController( tweetComposer, true );
+				}
+				else if(e.ButtonIndex == 3){
+					//facebook
+					string encodedURLString = System.Web.HttpServerUtility.UrlEncode(paperFullURL);
+					string URLString = @"http://www.facebook.com/sharer.php?u=" + encodedURLString;
+					UIApplication.SharedApplication.OpenUrl(URLString);
+					
+				}
+		    }
+		
+		}
+
+		void HandleMailFinished (object sender, MFComposeResultEventArgs e){
+
+		    if (e.Result == MFMailComposeResult.Sent) {
+		        UIAlertView alert = new UIAlertView ("Mail Alert", "Mail Sent",
+		            null, "Yippie", null);
+		        alert.Show ();
+		        
+		        // you should handle other values that could be returned 
+		        // in e.Result and also in e.Error 
+		    }
+		    e.Controller.DismissModalViewControllerAnimated (true);
+		}
+
+		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender)
+		{
+//			WhitePaperBibleAppDelegate *appDelegate = (WhitePaperBibleAppDelegate *)[[UIApplication sharedApplication] delegate];
+//	
+//			if([appDelegate isUserLoggedIn]){
+//				NSString *paperIDToFavorite = [[NSString alloc] initWithFormat:@"%@",[paper valueForKey:@"id"]];
+//				if(!isFavorite){
+//					[favoriteButton setImage:[UIImage imageNamed:@"favorited.png"]];
+//					
+//					NSString *postPath = [NSString stringWithFormat:@"/favorite/create/%@",paperIDToFavorite];
+//					[HRRestModel postPath:postPath withOptions:nil object:nil];
+//					isFavorite = YES;
+//					//send a call out to favorite the paper
+//				}
+//				else{
+//					//[favoriteButton setTitle:@"FAV"];
+//					[favoriteButton setImage:[UIImage imageNamed:@"favorites.png"]];
+//					isFavorite = NO;
+//					NSString *postPath = [NSString stringWithFormat:@"/favorite/destroy/%@",paperIDToFavorite];
+//					[HRRestModel deletePath:postPath withOptions:nil object:nil];
+//					//send a call out to UNfavorite the paper
+//				}
+//			}
+//			else{
+//		
+//				NotLoggedInViewController *notLoggedInViewController = [[NotLoggedInViewController alloc] initWithNibName:@"NotLoggedInViewController"  bundle:[NSBundle mainBundle]];
+//				notLoggedInViewController.title = [paper valueForKey:@"title"];
+//			
+//				
+//				[self presentModalViewController:notLoggedInViewController animated:YES];
+//				
+//				[notLoggedInViewController release];
+//				
+//				
+//			}
+//		
+		}
+
 	}
 	
 	public class GestureDelegate : UIGestureRecognizerDelegate
