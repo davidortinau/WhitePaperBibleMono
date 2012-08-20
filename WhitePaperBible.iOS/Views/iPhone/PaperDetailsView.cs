@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using MonoTouch.ObjCRuntime;
 using MonoTouch.MessageUI;
 using MonoTouch.Twitter;
+using System.Web;
 
 namespace WhitePaperBible.iOS
 {
@@ -65,7 +66,6 @@ namespace WhitePaperBible.iOS
 //    tapRecognizer.numberOfTapsRequired = 1;
 //    tapRecognizer.delegate = self;
 //    [self.webView addGestureRecognizer:tapRecognizer];
-			
 		}
 		
 //		float startX;
@@ -186,17 +186,20 @@ namespace WhitePaperBible.iOS
 		private void onReferencesReceived (List<ReferenceNode> nodes)
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
-			
-			
-			string html = @"<style type='text/css'>body { color: #000000; background-color: white; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
+
+			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
 			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a><h1>" + paper.title + "</h1>";
+
 			
 			foreach (ReferenceNode node in nodes) {
 				string content = node.reference.content;
 				html += content;
 			}
+
+			InvokeOnMainThread (delegate {
+				webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);//NSBundle.MainBundle.BundleUrl
+			});
 			
-			webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);
 			
 		}
 		
@@ -269,10 +272,10 @@ namespace WhitePaperBible.iOS
 				}
 				else if(e.ButtonIndex == 3){
 					//facebook
-					string encodedURLString = System.Web.HttpServerUtility.UrlEncode(paperFullURL);
+					string encodedURLString = HttpUtility.UrlEncode(paperFullURL);
 					string URLString = @"http://www.facebook.com/sharer.php?u=" + encodedURLString;
-					UIApplication.SharedApplication.OpenUrl(URLString);
-					
+					UIApplication.SharedApplication.OpenUrl(NSUrl.FromString(URLString));
+
 				}
 		    }
 		
@@ -328,6 +331,32 @@ namespace WhitePaperBible.iOS
 //			}
 //		
 		}
+
+		protected UIWebView webViewTest;
+		protected void AddWebView ()
+		{
+//			Font = UIFont.FromName ("OpenSans", 14),
+//				TextColor = UIColor.FromRGB (67, 67, 67),
+//				TextAlignment = UITextAlignment.Left,
+//				BackgroundColor = UIColor.Clear,
+//				Text = '<a href="http://mydiem.com/index.cfm?event=main.faq">Help</a><br/><a href="mailto:support@mydiem.com">Email Support</a>',
+//				LineBreakMode = UILineBreakMode.WordWrap,
+//				Lines = 0
+			var style = "<style type='text/css'>body { color: #000000; background-color: transparent; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding: 20px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: normal; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
+			var html = style + "<body><h2>Contact</h2><a href='http://mydiem.com/index.cfm?event=main.faq'>Help</a><br/><a href='mailto:support@mydiem.com'>Email Support</a><br/><br/>";
+			html += "<h2>Our Story</h2><p>If you've ever sent your child empty-handed to a class party, attended parent/teacher conferences on the wrong day or arrived an hour early for a game, you're not alone. It's not bad parenting, it's bad scheduling and trust us, we've been there too.</p><p>Year after year we would receive paper calendars from our children's schools, get several emails a week, or would be encouraged to visit websites to view upcoming events (sports teams, Boy Scouts/ Girl Scouts, ballet, band and track club all had different sites!). Sometimes we would enter the information into a paper agenda, which couldn't be shared. Or we would type everything into our computer's calendar hoping the information wouldn't change. And, as the school year progressed, updates would take the form of crumpled notes, skimmed over emails and hurried messages from coaches and teachers that didn't always make it to the master calendar. We'd often ask ourselves, \"Why can't school events appear on our smart phones or computer calendar programs?\" or \"If there is a change, couldn't someone update the calendar for us so we don't have to keep track of emails, notes, etc? Then, one day, we stopped wishing and got to work.</p><p>We are parents to three school-age (and very busy) children and now we\'re also the proud parents of MyDiem.com. We're so happy to share this much-needed tool with other busy parents. Hopefully you will find this tool helpful in keeping track of your child's activities.</p>";
+			html += "</body>";
+
+			webViewTest = new UIWebView (new RectangleF (0, 0, 320, 435));
+			webViewTest.SizeToFit ();
+			View.AddSubview (webViewTest);
+
+			webViewTest.Opaque = false;
+			webViewTest.BackgroundColor = UIColor.Clear;
+			webViewTest.LoadHtmlString(html, NSUrl.FromString("http://localhost"));
+
+//			DescriptionLabel.ShouldStartLoad = myHandler;
+		}	
 
 	}
 	

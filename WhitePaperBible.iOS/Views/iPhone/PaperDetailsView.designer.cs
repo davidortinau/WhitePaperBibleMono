@@ -17,11 +17,11 @@ namespace WhitePaperBible.iOS
 		[Outlet]
 		MonoTouch.UIKit.UIToolbar toolbar { get; set; }
 
+		[Action ("sharePressed:")]
+		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1);
+
 		[Action ("favoritePressed:")]
 		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender);
-
-		[Action ("sharePressed:")]
-		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

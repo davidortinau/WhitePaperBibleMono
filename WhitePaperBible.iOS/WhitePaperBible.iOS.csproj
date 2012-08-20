@@ -61,6 +61,7 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System.Web.Services" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -90,12 +91,17 @@
     <Compile Include="Views\iPhone\PapersListView.designer.cs">
       <DependentUpon>PapersListView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\iPhone\WebViewTest.cs" />
+    <Compile Include="Views\iPhone\WebViewTest.designer.cs">
+      <DependentUpon>WebViewTest.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\PapersListView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\WebViewTest.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\first.png" />
