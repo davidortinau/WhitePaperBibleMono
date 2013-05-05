@@ -1,0 +1,3 @@
+[submodule "MonkeyArms"]
+	path = MonkeyArms
+	url = git@github.com:benbishop/MonkeyArms.git

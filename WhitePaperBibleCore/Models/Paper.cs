@@ -20,7 +20,7 @@ namespace WhitePaperBibleCore.Models
         //public bool public { get; set; }
 
         [DataMember(Name = "featured")] 
-        public bool featured { get; set; }
+        public bool? featured { get; set; }
 
         [DataMember(Name = "id")] 
         public int id { get; set; }

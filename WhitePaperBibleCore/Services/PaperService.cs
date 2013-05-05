@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using RestSharp;
 using WhitePaperBibleCore.Models;
+using Newtonsoft.Json;
 
 namespace WhitePaperBibleCore.Services
 {
@@ -16,15 +17,16 @@ namespace WhitePaperBibleCore.Services
             var client = new RestClient(Constants.BASE_URI);
             var request = new RestRequest("papers.json?caller=wpb-iPhone", Method.GET) { RequestFormat = DataFormat.Json };
 
-			client.ExecuteAsync(request, (response, async) =>
+			client.ExecuteAsync(request, response =>
             {
-                if (response.ResponseStatus == ResponseStatus.Error)
+				if (response.ResponseStatus == ResponseStatus.Error)
                 {
                     failure(response.ErrorMessage);
                 }
                 else
                 {
-                    success( SimpleJson.SimpleJson.DeserializeObject<List<PaperNode>>(response.Content) );
+					List<PaperNode> nodes = JsonConvert.DeserializeObject<List<PaperNode>> (response.Content);
+                    success( nodes );
                 }
             });
         }
@@ -35,7 +37,7 @@ namespace WhitePaperBibleCore.Services
 
             var request = new RestRequest("papers/" + paperId.ToString() + "/references.json?caller=wpb-iPhone", Method.GET) { RequestFormat = DataFormat.Json };
 
-            client.ExecuteAsync(request, (response, async) =>
+			client.ExecuteAsync(request, response =>
             {
                 if (response.ResponseStatus == ResponseStatus.Error)
                 {
@@ -43,7 +45,7 @@ namespace WhitePaperBibleCore.Services
                 }
                 else
                 {
-                    success( SimpleJson.SimpleJson.DeserializeObject<List<ReferenceNode>>(response.Content) );
+                    success( JsonConvert.DeserializeObject<List<ReferenceNode>>(response.Content) );
                 }
             });
         }

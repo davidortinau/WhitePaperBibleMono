@@ -1,0 +1,81 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../MonkeyArms/MonkeyArms/MonkeyArmsFramework/Invoker.cs">
+    <Files>
+      <File FileName="../WhitePaperBibleCore/Models/Paper.cs" Line="24" Column="3" />
+      <File FileName="../WhitePaperBibleCore/Services/PaperService.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBibleCore/Services/TagService.cs" Line="1" Column="1" />
+      <File FileName="Components/json.net-4.5.11/samples/Json.NET.Android.Sample/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="37" Column="3" />
+      <File FileName="../WhitePaperBibleCore/Models/PaperNode.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" Line="13" Column="73" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PapersAdapter.cs" Line="62" Column="4" />
+      <File FileName="../WhitePaperBibleCore/Models/PaperCollection.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Core/Models/AppModel.cs" Line="12" Column="4" />
+      <File FileName="WhitePaperBible.Core/Invokers/BootstrapInvoker.cs" Line="1" Column="1" />
+      <File FileName="../MonkeyArms/MonkeyArms/MonkeyArmsFramework/Command.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainApplication.cs" Line="31" Column="42" />
+      <File FileName="WhitePaperBible.Core/Commands/GetPapersCommand.cs" Line="26" Column="4" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Commands/ConfigureViewsCommand.cs" Line="16" Column="1" />
+      <File FileName="../MonkeyArms/MonkeyArms/MonkeyArmsTests/MediatorTests.cs" Line="90" Column="3" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Commands/BootstrapCommand.cs" Line="18" Column="7" />
+      <File FileName="WhitePaperBible.Core/Invokers/ConfigureModelsInvoker.cs" Line="7" Column="37" />
+      <File FileName="WhitePaperBible.Core/Commands/ConfigureModelsCommand.cs" Line="4" Column="35" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Invokers/ConfigureViewsInvoker.cs" Line="4" Column="35" />
+      <File FileName="WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" Line="28" Column="6" />
+      <File FileName="WhitePaperBible.Core/Views/IPapersListView.cs" Line="9" Column="25" />
+      <File FileName="WhitePaperBible.Core/Invokers/PapersReceivedInvoker.cs" Line="2" Column="1" />
+      <File FileName="../MonkeyArms/MonkeyArms/MonkeyArmsFramework/DIUtil.cs" Line="40" Column="7" />
+      <File FileName="../MonkeyArms/MonkeyArms/MonkeyArmsTests/InvokerTests.cs" Line="83" Column="3" />
+      <File FileName="../MonkeyArms/MonkeyArms/MonkeyArmsFramework/Invoker.cs" Line="19" Column="56" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MonkeyArmsFramework" expanded="True">
+            <Node name="Invoker.cs" selected="True" />
+          </Node>
+          <Node name="MonkeyArmsTests" expanded="True" />
+          <Node name="WhitePaperBible.Android" expanded="True">
+            <Node name="Commands" expanded="True" />
+            <Node name="Invokers" expanded="True" />
+          </Node>
+          <Node name="WhitePaperBible.Core" expanded="True">
+            <Node name="Commands" expanded="True" />
+            <Node name="Invokers" expanded="True" />
+            <Node name="Models" expanded="True" />
+            <Node name="Views" expanded="True">
+              <Node name="Mediators" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True">
+          <Option id="ShowSystemObjects" value="True" />
+          <Option id="ShowDatabaseName" value="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBibleAndroid/WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" line="37" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBibleAndroid/WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" line="27" column="17" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBibleAndroid/WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" line="26" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBibleAndroid/WhitePaperBible.Core/Commands/ConfigureModelsCommand.cs" line="15" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" line="27" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android AndroidDeviceId-Debug="04fbaa120ecd1946" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+</Properties>

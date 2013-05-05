@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using RestSharp;
 using WhitePaperBibleCore.Models;
+using Newtonsoft.Json;
 
 
 namespace WhitePaperBibleCore.Services
@@ -26,7 +27,7 @@ namespace WhitePaperBibleCore.Services
                 }
                 else
                 {
-                    success( SimpleJson.SimpleJson.DeserializeObject<List<TagNode>>(response.Content) );
+                    success( JsonConvert.DeserializeObject<List<TagNode>>(response.Content) );
                 }
             });
         }
@@ -45,7 +46,7 @@ namespace WhitePaperBibleCore.Services
                 }
                 else
                 {
-                    success( SimpleJson.SimpleJson.DeserializeObject<List<PaperNode>>(response.Content) );
+                    success( JsonConvert.DeserializeObject<List<PaperNode>>(response.Content) );
                 }
             });
         }

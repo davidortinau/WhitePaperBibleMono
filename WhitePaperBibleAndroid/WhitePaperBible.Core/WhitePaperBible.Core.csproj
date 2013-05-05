@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F25426B-4BEC-4060-BF74-C9BF6A21CA46}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WhitePaperBible.Core</RootNamespace>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AssemblyName>WhitePaperBible.Core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="RestSharp.MonoDroid">
+      <HintPath>..\Components\restsharp-104.1.0\lib\android\RestSharp.MonoDroid.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="..\..\WhitePaperBibleCore\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\Paper.cs">
+      <Link>Models\Paper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\PaperCollection.cs">
+      <Link>Models\PaperCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\PaperNode.cs">
+      <Link>Models\PaperNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\Reference.cs">
+      <Link>Models\Reference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\ReferenceNode.cs">
+      <Link>Models\ReferenceNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\Tag.cs">
+      <Link>Models\Tag.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Models\TagNode.cs">
+      <Link>Models\TagNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Services\PaperService.cs">
+      <Link>Services\PaperService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\WhitePaperBibleCore\Services\TagService.cs">
+      <Link>Services\TagService.cs</Link>
+    </Compile>
+    <Compile Include="Models\AppModel.cs" />
+    <Compile Include="Invokers\BootstrapInvoker.cs" />
+    <Compile Include="Commands\GetPapersCommand.cs" />
+    <Compile Include="Invokers\PapersReceivedInvoker.cs" />
+    <Compile Include="Invokers\GetPapersInvoker.cs" />
+    <Compile Include="Views\Mediators\PapersListMediator.cs" />
+    <Compile Include="Invokers\ConfigureModelsInvoker.cs" />
+    <Compile Include="Commands\ConfigureModelsCommand.cs" />
+    <Compile Include="Views\IPapersListView.cs" />
+    <Compile Include="Commands\ConfigureInvokersCommand.cs" />
+    <Compile Include="Invokers\ConfigureInvokersInvoker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="restsharp">
+      <InstallationInProgress>False</InstallationInProgress>
+      <Version>104.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <InstallationInProgress>False</InstallationInProgress>
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonkeyArms\MonkeyArms\MonkeyArmsFramework\MonkeyArmsFramework.csproj">
+      <Project>{A58D8DAE-62D2-40C4-9361-5BAF30CF1747}</Project>
+      <Name>MonkeyArmsFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Invokers\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Mediators\" />
+  </ItemGroup>
+</Project>
