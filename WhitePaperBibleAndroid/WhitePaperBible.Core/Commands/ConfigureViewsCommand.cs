@@ -1,10 +1,9 @@
-using System;
+
 using MonkeyArms;
 using WhitePaperBibleCore.Views.Mediators;
-using WhitePaperBible.Android;
 using WhitePaperBible.Core.Views;
 
-namespace WhitePaperBible.Android.Commands
+namespace WhitePaperBibleCore.Commands
 {
 	public class ConfigureViewsCommand : Command
 	{
@@ -13,7 +12,7 @@ namespace WhitePaperBible.Android.Commands
 			base.Execute (args);
 
 			// Don't think we can get here b/c the bootstrapping is happening in Core. Maybe that first command should be in the app
-			DI.MapMediatorToClass<PapersListMediator, PapersListActivity> ();
+			DI.MapMediatorToClass<PapersListMediator, IPapersListView> ();
 
 		}
 	}

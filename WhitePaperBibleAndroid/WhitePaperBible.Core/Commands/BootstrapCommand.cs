@@ -4,7 +4,6 @@ using WhitePaperBibleCore.Models;
 using WhitePaperBibleCore.Invokers;
 using WhitePaperBible.Android.Commands;
 using WhitePaperBibleCore.Commands;
-using WhitePaperBible.Android.Invokers;
 using WhitePaperBible.Core.Invokers;
 
 namespace WhitePaperBible.Android.Commands
@@ -19,14 +18,6 @@ namespace WhitePaperBible.Android.Commands
 			DI.MapCommandToInvoker<ConfigureViewsCommand, ConfigureViewsInvoker> ().Invoke();
 			DI.MapCommandToInvoker<ConfigureInvokersCommand, ConfigureInvokersInvoker> ().Invoke();
 			DI.MapCommandToInvoker<GetPapersCommand, GetPapersInvoker> ().Invoke();
-
-
-//			DI.Get<ConfigureModelsInvoker>().Invoke ();
-//			DI.Get<ConfigureViewsInvoker>().Invoke ();
-//			DI.Get<ConfigureInvokersInvoker>().Invoke ();
-//
-//			DI.Get<GetPapersInvoker>().Invoke ();
-
 		}
 	}
 }

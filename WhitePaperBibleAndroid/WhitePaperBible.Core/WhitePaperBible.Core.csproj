@@ -93,6 +93,9 @@
     <Compile Include="Views\IPapersListView.cs" />
     <Compile Include="Commands\ConfigureInvokersCommand.cs" />
     <Compile Include="Invokers\ConfigureInvokersInvoker.cs" />
+    <Compile Include="Commands\ConfigureViewsCommand.cs" />
+    <Compile Include="Commands\BootstrapCommand.cs" />
+    <Compile Include="Invokers\ConfigureViewsInvoker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

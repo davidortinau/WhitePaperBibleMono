@@ -16,8 +16,8 @@ namespace WhitePaperBibleCore.Views.Mediators
 
 		IPapersListView Target;
 
-		public PapersListMediator(IMediatorTarget target):base(target){
-			Target = target as IPapersListView;
+		public PapersListMediator(IPapersListView view):base(view){
+			this.Target = view;
 		}
 
 		public override void Register ()

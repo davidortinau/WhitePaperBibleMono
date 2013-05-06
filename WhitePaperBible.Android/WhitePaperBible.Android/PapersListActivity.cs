@@ -10,7 +10,7 @@ using MonkeyArms;
 namespace WhitePaperBible.Android
 {
 	[Activity (Label = "Papers")]			
-	public class PapersListActivity : ListActivity, IPapersListView, IMediatorTarget
+	public class PapersListActivity : ListActivity, IPapersListView
 	{
 		[Inject]
 		public AppModel Model;
@@ -20,6 +20,8 @@ namespace WhitePaperBible.Android
 			base.OnCreate (bundle);
 
 			SetContentView( Resource.Layout.PapersList );
+
+			DI.RequestMediator(this);
 
 //			if(Model.Papers != null){
 //				SetPapers (Model.Papers);

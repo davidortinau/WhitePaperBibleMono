@@ -50,9 +50,6 @@
     <Compile Include="PapersListActivity.cs" />
     <Compile Include="PapersAdapter.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="Commands\ConfigureViewsCommand.cs" />
-    <Compile Include="Commands\BootstrapCommand.cs" />
-    <Compile Include="Invokers\ConfigureViewsInvoker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

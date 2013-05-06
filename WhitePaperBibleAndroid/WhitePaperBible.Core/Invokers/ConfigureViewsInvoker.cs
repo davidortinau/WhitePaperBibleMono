@@ -1,7 +1,7 @@
 using System;
 using MonkeyArms;
 
-namespace WhitePaperBible.Android.Invokers
+namespace WhitePaperBibleCore.Invokers
 {
 	public class ConfigureViewsInvoker : Invoker
 	{
