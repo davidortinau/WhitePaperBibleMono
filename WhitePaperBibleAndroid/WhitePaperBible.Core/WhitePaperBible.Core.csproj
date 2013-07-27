@@ -96,6 +96,8 @@
     <Compile Include="Commands\ConfigureViewsCommand.cs" />
     <Compile Include="Commands\BootstrapCommand.cs" />
     <Compile Include="Invokers\ConfigureViewsInvoker.cs" />
+    <Compile Include="Views\Mediators\LoadingViewMediator.cs" />
+    <Compile Include="Views\ILoadingView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

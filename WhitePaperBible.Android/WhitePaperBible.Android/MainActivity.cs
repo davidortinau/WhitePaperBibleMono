@@ -1,23 +1,15 @@
-using System;
 
 using Android.App;
 using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using WhitePaperBibleCore.Services;
-using WhitePaperBibleCore.Models;
-using WhitePaperBibleCore.Invokers;
-using WhitePaperBibleCore.Commands;
-using System.Collections.Generic;
 
+using WhitePaperBible.Core.Views;
 using MonkeyArms;
 
 namespace WhitePaperBible.Android
 {
-	[Activity (Label = "Welcome", MainLauncher = true)]
-	public class Activity1 : Activity
+	[Activity (Label = "Loading", MainLauncher = true)]
+	public class Activity1 : Activity, ILoadingView
 	{
 		protected override void OnStart ()
 		{
@@ -28,22 +20,21 @@ namespace WhitePaperBible.Android
 		{
 			base.OnCreate (bundle);
 
+			DI.RequestMediator(this);
+
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			initUI ();
 		}
 
-		void initUI() {
-			Button button = FindViewById<Button> (Resource.Id.myButton);
+		#region ILoadingView implementation
+		public void OnLoadingComplete ()
+		{
+			var papersView = new Intent(this, typeof(PapersListActivity));
+			StartActivity( papersView );
 
-			button.Click += delegate {
-				var papersView = new Intent(this, typeof(PapersListActivity));
-				StartActivity( papersView );
-			};
 		}
-
-
+		#endregion
 	}
 }
 

@@ -11,7 +11,7 @@ namespace WhitePaperBibleCore.Commands
 		{
 			base.Execute (args);
 
-			// Don't think we can get here b/c the bootstrapping is happening in Core. Maybe that first command should be in the app
+			DI.MapMediatorToClass<LoadingViewMediator, ILoadingView> ();
 			DI.MapMediatorToClass<PapersListMediator, IPapersListView> ();
 
 		}
