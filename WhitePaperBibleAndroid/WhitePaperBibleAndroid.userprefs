@@ -1,25 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="37" Column="32" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="1" Column="1" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/PapersListFragment.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs" Line="80" Column="8" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs" Line="62" Column="26" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" Line="1" Column="1" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/ActionItems.axml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" Line="22" Column="4" />
+      <File FileName="WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Views/IPapersListView.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PaperDetailActivity.cs" Line="16" Column="61" />
-      <File FileName="WhitePaperBible.Core/Views/IPaperDetailView.cs" Line="10" Column="31" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PaperDetailActivity.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Core/Views/IPaperDetailView.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MonkeyArmsFramework" expanded="True" />
           <Node name="WhitePaperBible.Android" expanded="True">
-            <Node name="Fragments" expanded="True">
-              <Node name="BaseFragment.cs" selected="True" />
-            </Node>
+            <Node name="ComponentReferenceFolder" selected="True" />
+            <Node name="Fragments" expanded="True" />
             <Node name="Resources" expanded="True">
               <Node name="drawable" expanded="True" />
               <Node name="layout" expanded="True" />

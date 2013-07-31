@@ -110,11 +110,11 @@ namespace WhitePaperBible.Android
 			// aapt resource value: 0x7f080005
 			public const int paperTextView = 2131230725;
 			
+			// aapt resource value: 0x7f080004
+			public const int progressBar1 = 2131230724;
+			
 			// aapt resource value: 0x7f080000
 			public const int relativeLayout1 = 2131230720;
-			
-			// aapt resource value: 0x7f080004
-			public const int spinner1 = 2131230724;
 			
 			// aapt resource value: 0x7f080003
 			public const int textView1 = 2131230723;

@@ -5,7 +5,8 @@
     p1:layout_centerInParent="true"
     p1:layout_width="fill_parent"
     p1:layout_height="fill_parent"
-    p1:id="@+id/relativeLayout1">
+    p1:id="@+id/relativeLayout1"
+    p1:background="#ff000000">
     <LinearLayout
         p1:orientation="vertical"
         p1:minWidth="25px"
@@ -23,7 +24,11 @@
             p1:layout_marginTop="40dp"
             p1:layout_gravity="center_horizontal"
             p1:layout_marginBottom="0.0dp"
-            p1:layout_marginRight="0.0dp" />
+            p1:layout_marginRight="0.0dp"
+            p1:maxWidth="100dp"
+            p1:maxHeight="100dp"
+            p1:scaleX="0.7"
+            p1:scaleY="0.7" />
         <TextView
             p1:text="White Paper Bible"
             p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -34,12 +39,10 @@
             p1:gravity="center_vertical"
             p1:layout_gravity="center_horizontal"
             p1:layout_marginTop="20dp" />
-        <Spinner
+        <ProgressBar
             p1:layout_width="fill_parent"
             p1:layout_height="wrap_content"
-            p1:layout_centerHorizontal="true"
-            p1:id="@+id/spinner1"
-            p1:layout_gravity="center_horizontal"
+            p1:id="@+id/progressBar1"
             p1:layout_marginTop="20dp" />
     </LinearLayout>
 </RelativeLayout>
