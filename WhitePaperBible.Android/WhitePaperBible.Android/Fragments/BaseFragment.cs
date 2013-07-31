@@ -77,7 +77,7 @@ namespace WhitePaperBible.Android.Fragments
 			var frame = new LinearLayout (Activity);
 			frame.Orientation = Orientation.Vertical;
 
-			InitHeader (inflater, frame);
+//			InitHeader (inflater, frame);
 
 
 			var view = inflater.Inflate (LayoutID, null);
@@ -86,16 +86,16 @@ namespace WhitePaperBible.Android.Fragments
 			return frame;
 		}
 
-		void InitHeader (LayoutInflater inflater, LinearLayout frame)
-		{
-			var headerView = inflater.Inflate (Resource.Layout.ScreenHeader, null);
-			frame.AddView (headerView);
-
-			var titleText = headerView.FindViewById (Resource.Id.screenTitle) as TextView;
-			titleText.Text = ScreenTitle;
-
-			InitSearchInput (headerView, titleText);
-		}
+//		void InitHeader (LayoutInflater inflater, LinearLayout frame)
+//		{
+//			var headerView = inflater.Inflate (Resource.Layout.ScreenHeader, null);
+//			frame.AddView (headerView);
+//
+//			var titleText = headerView.FindViewById (Resource.Id.screenTitle) as TextView;
+//			titleText.Text = ScreenTitle;
+//
+//			InitSearchInput (headerView, titleText);
+//		}
 
 		virtual protected void SubmitSearch(string query)
 		{
@@ -112,22 +112,22 @@ namespace WhitePaperBible.Android.Fragments
 			throw(new NotImplementedException("RightHeaderButtonClicked needs to be overridden if right header button is going to be used"));
 		}
 
-		void InitSearchInput (View headerView, TextView titleText)
-		{
-			SearchInput = headerView.FindViewById (Resource.Id.searchInput) as SearchView;
-			SearchInput.QueryTextFocusChange += (object sender, View.FocusChangeEventArgs e) =>  {
-				if (!e.HasFocus) {
-					ResetSearch ();
-				}
-			};
-			SearchInput.SearchClick += (object sender, EventArgs e) =>  {
-				titleText.Visibility = ViewStates.Gone;
-			};
-			SearchInput.QueryTextSubmit += (object sender, SearchView.QueryTextSubmitEventArgs e) =>  {
-				SubmitSearch (SearchInput.Query);
-			};
-			SearchInput.Visibility = SearchVisibility;
-		}
+//		void InitSearchInput (View headerView, TextView titleText)
+//		{
+//			SearchInput = headerView.FindViewById (Resource.Id.searchInput) as SearchView;
+//			SearchInput.QueryTextFocusChange += (object sender, View.FocusChangeEventArgs e) =>  {
+//				if (!e.HasFocus) {
+//					ResetSearch ();
+//				}
+//			};
+//			SearchInput.SearchClick += (object sender, EventArgs e) =>  {
+//				titleText.Visibility = ViewStates.Gone;
+//			};
+//			SearchInput.QueryTextSubmit += (object sender, SearchView.QueryTextSubmitEventArgs e) =>  {
+//				SubmitSearch (SearchInput.Query);
+//			};
+//			SearchInput.Visibility = SearchVisibility;
+//		}
 	}
 }
 

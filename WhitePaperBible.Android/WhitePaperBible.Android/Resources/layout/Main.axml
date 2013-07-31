@@ -2,14 +2,44 @@
 <RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
     p1:minWidth="25px"
     p1:minHeight="25px"
+    p1:layout_centerInParent="true"
     p1:layout_width="fill_parent"
     p1:layout_height="fill_parent"
     p1:id="@+id/relativeLayout1">
-    <ImageView
-        p1:src="@drawable/splash"
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
         p1:layout_width="match_parent"
-        p1:layout_height="match_parent"
-        p1:id="@+id/imageView1"
-        p1:baselineAlignBottom="true"
-        p1:layout_alignParentBottom="true" />
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1"
+        p1:layout_centerHorizontal="true">
+        <ImageView
+            p1:src="@drawable/logo_300"
+            p1:id="@+id/imageView1"
+            p1:layout_centerHorizontal="true"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:layout_marginTop="40dp"
+            p1:layout_gravity="center_horizontal"
+            p1:layout_marginBottom="0.0dp"
+            p1:layout_marginRight="0.0dp" />
+        <TextView
+            p1:text="White Paper Bible"
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_centerHorizontal="true"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView1"
+            p1:gravity="center_vertical"
+            p1:layout_gravity="center_horizontal"
+            p1:layout_marginTop="20dp" />
+        <Spinner
+            p1:layout_width="fill_parent"
+            p1:layout_height="wrap_content"
+            p1:layout_centerHorizontal="true"
+            p1:id="@+id/spinner1"
+            p1:layout_gravity="center_horizontal"
+            p1:layout_marginTop="20dp" />
+    </LinearLayout>
 </RelativeLayout>

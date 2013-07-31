@@ -1,33 +1,36 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Core/Views/IPapersListView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs">
     <Files>
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="37" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="37" Column="32" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/PapersListFragment.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs" Line="6" Column="22" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" Line="60" Column="24" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/ActionItems.axml" Line="4" Column="62" />
-      <File FileName="WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" Line="17" Column="13" />
-      <File FileName="WhitePaperBible.Core/Views/IPapersListView.cs" Line="10" Column="39" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs" Line="80" Column="8" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/ActionItems.axml" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" Line="22" Column="4" />
+      <File FileName="WhitePaperBible.Core/Views/IPapersListView.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PaperDetailActivity.cs" Line="16" Column="61" />
+      <File FileName="WhitePaperBible.Core/Views/IPaperDetailView.cs" Line="10" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MonkeyArmsFramework" expanded="True" />
           <Node name="WhitePaperBible.Android" expanded="True">
-            <Node name="Fragments" expanded="True" />
+            <Node name="Fragments" expanded="True">
+              <Node name="BaseFragment.cs" selected="True" />
+            </Node>
             <Node name="Resources" expanded="True">
               <Node name="drawable" expanded="True" />
               <Node name="layout" expanded="True" />
               <Node name="menu" expanded="True" />
-              <Node name="values" expanded="True" />
             </Node>
           </Node>
           <Node name="WhitePaperBible.Core" expanded="True">
             <Node name="Commands" expanded="True" />
+            <Node name="Models" expanded="True" />
             <Node name="Views" expanded="True">
               <Node name="Mediators" expanded="True" />
-              <Node name="IPapersListView.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -51,13 +54,10 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBibleAndroid/WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" line="37" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" line="98" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" line="121" column="1" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/WhitePaperBible.Android/Commands/ConfigureViewsCommand.cs" line="16" column="61" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" line="50" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" line="49" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android AndroidDeviceId-Debug="04fbaa120ecd1946" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android AndroidDeviceId-Debug="emulator-5554" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
 </Properties>

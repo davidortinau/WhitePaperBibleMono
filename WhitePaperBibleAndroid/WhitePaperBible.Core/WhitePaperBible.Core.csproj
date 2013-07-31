@@ -33,7 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -98,6 +97,7 @@
     <Compile Include="Invokers\ConfigureViewsInvoker.cs" />
     <Compile Include="Views\Mediators\LoadingViewMediator.cs" />
     <Compile Include="Views\ILoadingView.cs" />
+    <Compile Include="Views\IPaperDetailView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

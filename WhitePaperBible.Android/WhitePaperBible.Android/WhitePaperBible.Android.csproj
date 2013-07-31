@@ -53,6 +53,7 @@
     <Compile Include="MainApplication.cs" />
     <Compile Include="Fragments\PapersListFragment.cs" />
     <Compile Include="Fragments\BaseFragment.cs" />
+    <Compile Include="PaperDetailActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -71,9 +72,10 @@
     <AndroidResource Include="Resources\drawable\WPB_32.png" />
     <AndroidResource Include="Resources\drawable\WPB_48.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
-    <AndroidResource Include="Resources\layout\ScreenHeader.axml" />
     <AndroidResource Include="Resources\drawable\HeaderBackground.png" />
     <AndroidResource Include="Resources\menu\ActionItems.axml" />
+    <AndroidResource Include="Resources\drawable\logo_300.png" />
+    <AndroidResource Include="Resources\layout\PaperDetail.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

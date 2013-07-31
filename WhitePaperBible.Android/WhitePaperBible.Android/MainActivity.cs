@@ -35,23 +35,9 @@ namespace WhitePaperBible.Android
 		{
 			var papersView = new Intent(this, typeof(PapersListActivity));
 			StartActivity( papersView );
-//			SetContentFragment (new PapersListFragment());
 		}
 		#endregion
 
-		void SetContentFragment(Fragment fragment)
-		{
-//			if (CurrentScreen != null) {
-//				CurrentScreen.ToggleSettingsView -= HandleToggleSettingsView;
-//			}
-//			CurrentScreen = fragment as BaseFragment;
-//			CurrentScreen.ToggleSettingsView += HandleToggleSettingsView;
-
-			var transaction = FragmentManager.BeginTransaction ();
-			transaction.Replace (Resource.Id.contentFrame, fragment);
-			transaction.SetTransition (FragmentTransit.FragmentFade);
-			transaction.Commit ();
-		}
 	}
 }
 

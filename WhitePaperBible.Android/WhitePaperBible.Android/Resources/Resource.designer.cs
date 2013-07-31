@@ -68,19 +68,22 @@ namespace WhitePaperBible.Android
 			public const int Icon = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash = 2130837506;
+			public const int logo_300 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int WPB_128 = 2130837507;
+			public const int splash = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int WPB_16 = 2130837508;
+			public const int WPB_128 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int WPB_32 = 2130837509;
+			public const int WPB_16 = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int WPB_48 = 2130837510;
+			public const int WPB_32 = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int WPB_48 = 2130837511;
 			
 			static Drawable()
 			{
@@ -95,32 +98,29 @@ namespace WhitePaperBible.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080003
-			public const int autoCompleteTextView1 = 2131230723;
-			
-			// aapt resource value: 0x7f080004
-			public const int contentContainer = 2131230724;
-			
-			// aapt resource value: 0x7f080005
-			public const int contentFrame = 2131230725;
+			// aapt resource value: 0x7f080002
+			public const int imageView1 = 2131230722;
 			
 			// aapt resource value: 0x7f080001
-			public const int imageView1 = 2131230721;
+			public const int linearLayout1 = 2131230721;
 			
-			// aapt resource value: 0x7f080008
-			public const int menu_search = 2131230728;
+			// aapt resource value: 0x7f080007
+			public const int menu_search = 2131230727;
+			
+			// aapt resource value: 0x7f080005
+			public const int paperTextView = 2131230725;
 			
 			// aapt resource value: 0x7f080000
 			public const int relativeLayout1 = 2131230720;
 			
-			// aapt resource value: 0x7f080007
-			public const int screenTitle = 2131230727;
+			// aapt resource value: 0x7f080004
+			public const int spinner1 = 2131230724;
+			
+			// aapt resource value: 0x7f080003
+			public const int textView1 = 2131230723;
 			
 			// aapt resource value: 0x7f080006
-			public const int searchInput = 2131230726;
-			
-			// aapt resource value: 0x7f080002
-			public const int titleTextView = 2131230722;
+			public const int titleTextView = 2131230726;
 			
 			static Id()
 			{
@@ -139,13 +139,13 @@ namespace WhitePaperBible.Android
 			public const int Main = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int PaperListItem = 2130903041;
+			public const int PaperDetail = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int PapersList = 2130903042;
+			public const int PaperListItem = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int ScreenHeader = 2130903043;
+			public const int PapersList = 2130903043;
 			
 			static Layout()
 			{
