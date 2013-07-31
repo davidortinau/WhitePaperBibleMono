@@ -15,6 +15,8 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>WhitePaperBible.Android</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v3.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,7 +36,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -50,10 +51,13 @@
     <Compile Include="PapersListActivity.cs" />
     <Compile Include="PapersAdapter.cs" />
     <Compile Include="MainApplication.cs" />
+    <Compile Include="Fragments\PapersListFragment.cs" />
+    <Compile Include="Fragments\BaseFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -61,6 +65,15 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\PapersList.axml" />
     <AndroidResource Include="Resources\layout\PaperListItem.axml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\WPB_128.png" />
+    <AndroidResource Include="Resources\drawable\WPB_16.png" />
+    <AndroidResource Include="Resources\drawable\WPB_32.png" />
+    <AndroidResource Include="Resources\drawable\WPB_48.png" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\layout\ScreenHeader.axml" />
+    <AndroidResource Include="Resources\drawable\HeaderBackground.png" />
+    <AndroidResource Include="Resources\menu\ActionItems.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -76,6 +89,8 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Invokers\" />
+    <Folder Include="Fragments\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

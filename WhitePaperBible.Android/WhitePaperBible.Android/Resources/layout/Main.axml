@@ -5,11 +5,11 @@
     p1:layout_width="fill_parent"
     p1:layout_height="fill_parent"
     p1:id="@+id/relativeLayout1">
-    <EditText
-        p1:id="@+id/editText1"
-        p1:text="Loading..."
-        p1:layout_width="wrap_content"
-        p1:layout_height="wrap_content"
-        p1:layout_centerInParent="true"
-        p1:layout_centerVertical="false" />
+    <ImageView
+        p1:src="@drawable/splash"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/imageView1"
+        p1:baselineAlignBottom="true"
+        p1:layout_alignParentBottom="true" />
 </RelativeLayout>

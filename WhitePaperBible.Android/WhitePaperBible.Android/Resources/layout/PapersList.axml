@@ -13,4 +13,18 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@android:id/list" />
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <FrameLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contentFrame" />
+    </FrameLayout>
 </LinearLayout>

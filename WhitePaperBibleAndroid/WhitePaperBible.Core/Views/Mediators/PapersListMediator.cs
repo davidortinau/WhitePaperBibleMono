@@ -3,6 +3,7 @@ using MonkeyArms;
 using WhitePaperBibleCore.Models;
 using WhitePaperBibleCore.Invokers;
 using WhitePaperBible.Core.Views;
+using System.Linq;
 
 namespace WhitePaperBibleCore.Views.Mediators
 {
@@ -24,6 +25,10 @@ namespace WhitePaperBibleCore.Views.Mediators
 		{
 			base.Register ();
 
+			Target.Filter += HandleFilter;
+
+			Target.SearchPlaceHolderText = "Search Papers";
+
 			SetPapers ();
 
 			DI.Get<PapersReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
@@ -38,6 +43,16 @@ namespace WhitePaperBibleCore.Views.Mediators
 		public override void Unregister ()
 		{
 			base.Unregister ();
+		}
+
+		void HandleFilter (object sender, EventArgs e)
+		{
+			if (AppModel.Papers != null) {
+				var query = Target.SearchQuery;
+				var filteredPapers = AppModel.Papers.Where(ce =>(ce.title.ToLower().Contains(query))).ToList();
+
+				Target.SetPapers ( filteredPapers );
+			}
 		}
 
 		public void SetPapers(){
