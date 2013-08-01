@@ -25,15 +25,6 @@ namespace WhitePaperBibleCore.Views.Mediators
 		{
 			base.Register ();
 
-//			Target.Filter += HandleFilter;
-//			Target.OnPaperSelected += HandlerPaperSelected;
-//
-//			Target.SearchPlaceHolderText = "Search Papers";
-
-//			SetPapers ();
-
-			DI.Get<GetPaperDetailsInvoker> ().Invoke ();
-
 			DI.Get<PaperDetailsReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
 				SetPaper();
 			};
@@ -44,6 +35,8 @@ namespace WhitePaperBibleCore.Views.Mediators
 
 			if(AppModel.CurrentPaper != null){
 				Target.SetPaper (AppModel.CurrentPaper);
+			}else{
+				DI.Get<GetPaperDetailsInvoker> ().Invoke ();
 			}
 		}
 
@@ -52,21 +45,6 @@ namespace WhitePaperBibleCore.Views.Mediators
 			base.Unregister ();
 		}
 
-//		void HandleFilter (object sender, EventArgs e)
-//		{
-//			if (AppModel.Papers != null) {
-//				var query = Target.SearchQuery;
-//				var filteredPapers = AppModel.Papers.Where(ce =>(ce.title.ToLower().Contains(query))).ToList();
-//
-//				Target.SetPapers ( filteredPapers );
-//			}
-//		}
-//
-//		void HandlerPaperSelected (object sender, EventArgs e)
-//		{
-//			throw new NotImplementedException ();
-//		}
-//
 		public void SetPaper(){
 			if (AppModel.CurrentPaper != null) {
 				Target.SetPaper (AppModel.CurrentPaper);

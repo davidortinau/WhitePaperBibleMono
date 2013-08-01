@@ -98,6 +98,9 @@ namespace WhitePaperBible.Android
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f080005
+			public const int detailsWebView = 2131230725;
+			
 			// aapt resource value: 0x7f080002
 			public const int imageView1 = 2131230722;
 			
@@ -106,9 +109,6 @@ namespace WhitePaperBible.Android
 			
 			// aapt resource value: 0x7f080007
 			public const int menu_search = 2131230727;
-			
-			// aapt resource value: 0x7f080005
-			public const int paperTextView = 2131230725;
 			
 			// aapt resource value: 0x7f080004
 			public const int progressBar1 = 2131230724;
@@ -162,6 +162,9 @@ namespace WhitePaperBible.Android
 			
 			// aapt resource value: 0x7f070000
 			public const int ActionItems = 2131165184;
+			
+			// aapt resource value: 0x7f070001
+			public const int PaperDetailsActionItems = 2131165185;
 			
 			static Menu()
 			{

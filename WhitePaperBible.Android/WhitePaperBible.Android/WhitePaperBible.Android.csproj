@@ -76,6 +76,7 @@
     <AndroidResource Include="Resources\menu\ActionItems.axml" />
     <AndroidResource Include="Resources\drawable\logo_300.png" />
     <AndroidResource Include="Resources\layout\PaperDetail.axml" />
+    <AndroidResource Include="Resources\menu\PaperDetailsActionItems.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

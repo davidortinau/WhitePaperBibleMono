@@ -43,9 +43,11 @@ namespace WhitePaperBibleCore.Models
 			set;
 		}
 
-		public string Content {
+		public string HtmlContent {
 			get {
-				var html = "<h1>" + title + "</h1>";
+				var html = "<style type='text/css'>body { color: #000000; background-color: white; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
+				html +=	"<h1>" + title + "</h1>";
+				html += "<h2>" + description + "</h2>";
 				if (references != null) {
 					foreach (var reference in references) {
 						html += reference.content;

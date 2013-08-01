@@ -10,15 +10,13 @@ using Android.Views;
 using Android.Widget;
 using System;
 using Android.Text;
+using Android.Webkit;
 
 namespace WhitePaperBible.Android
 {
 	[Activity (Label = "Paper")]			
 	public class PaperDetailActivity : Activity, IPaperDetailView, IInjectingTarget
 	{
-		[Inject]
-		public AppModel Model;
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -30,21 +28,22 @@ namespace WhitePaperBible.Android
 
 			DI.RequestMediator(this);
 
-//			if(Model.CurrentPaper!= null){
-//				SetPaper (Model.CurrentPaper);
-//			}
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
-			MenuInflater.Inflate(Resource.Menu.ActionItems,menu);
+			MenuInflater.Inflate(Resource.Menu.PaperDetailsActionItems,menu);
+//			menu.SetDisplayHomeAsUpEnabled(true);
+			ActionBar.SetDisplayHomeAsUpEnabled (true);
+//			ActionBar.DisplayOptions = ActionBarDisplayOptions.HomeAsUp | ActionBarDisplayOptions.UseLogo | ActionBarDisplayOptions.ShowHome;
 
 			return true;
 		}
 
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
-			//TODO: Handle the selection event here.
+			// TODO how to navigate back? Or is it just start the list activity?
+
 			return false;
 		}
 
@@ -52,9 +51,8 @@ namespace WhitePaperBible.Android
 		#region IPaperDetailView implementation
 		public void SetPaper (Paper paper)
 		{
-			var paperTextView = (TextView)FindViewById (Resource.Id.paperTextView);
-			paperTextView.TextFormatted = Html.FromHtml(paper.Content);
-//			myTextView.setText(Html.fromHtml()
+			var paperView = (WebView)FindViewById (Resource.Id.detailsWebView);
+			paperView.LoadData(paper.HtmlContent, "text/html", "utf-8");
 		}
 		#endregion
 	}

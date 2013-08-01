@@ -5,9 +5,13 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
+    <WebView
+        android:id="@+id/detailsWebView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+<!--    <TextView
         android:text="Paper Details go here via myTextView.setText(Html.fromHtml()"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/paperTextView" />
+        android:id="@+id/paperTextView" />-->
 </LinearLayout>
