@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.Serialization;
+using System.Collections.Generic;
 
 namespace WhitePaperBibleCore.Models
 {
@@ -36,5 +37,22 @@ namespace WhitePaperBibleCore.Models
 
         [DataMember(Name = "created_at")] 
         public DateTime created_at { get; set; }
+
+		public List<Reference> references {
+			get;
+			set;
+		}
+
+		public string Content {
+			get {
+				var html = "<h1>" + title + "</h1>";
+				if (references != null) {
+					foreach (var reference in references) {
+						html += reference.content;
+					}
+				}
+				return html;
+			}
+		}
     }
 }

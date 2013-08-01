@@ -12,6 +12,7 @@ namespace WhitePaperBibleCore.Commands
 			base.Execute (args);
 
 			DI.MapSingleton<PapersReceivedInvoker> ();
+			DI.MapSingleton<PaperDetailsReceivedInvoker> ();
 		}
 	}
 }

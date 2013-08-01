@@ -99,6 +99,9 @@
     <Compile Include="Views\ILoadingView.cs" />
     <Compile Include="Views\IPaperDetailView.cs" />
     <Compile Include="Views\Mediators\PaperDetailMediator.cs" />
+    <Compile Include="Invokers\PaperDetailsReceivedInvoker.cs" />
+    <Compile Include="Invokers\GetPaperDetailssInvoker.cs" />
+    <Compile Include="Commands\GetPaperDetailsCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -12,8 +12,8 @@ namespace WhitePaperBibleCore.Views.Mediators
 		[Inject]
 		public AppModel AppModel;
 
-//		[Inject]
-//		public PapersReceivedInvoker PapersReceived;
+		[Inject]
+		public PaperDetailsReceivedInvoker PaperDetailsReceived;
 
 		IPaperDetailView Target;
 
@@ -32,13 +32,15 @@ namespace WhitePaperBibleCore.Views.Mediators
 
 //			SetPapers ();
 
-//			DI.Get<PapersReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
-//				SetPapers();
-//			};
+			DI.Get<GetPaperDetailsInvoker> ().Invoke ();
 
-//			PapersReceived.Invoked += (object sender, EventArgs e) => {
-//				SetPapers();
-//			};
+			DI.Get<PaperDetailsReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
+				SetPaper();
+			};
+
+			PaperDetailsReceived.Invoked += (object sender, EventArgs e) => {
+				SetPaper();
+			};
 
 			if(AppModel.CurrentPaper != null){
 				Target.SetPaper (AppModel.CurrentPaper);
@@ -65,10 +67,10 @@ namespace WhitePaperBibleCore.Views.Mediators
 //			throw new NotImplementedException ();
 //		}
 //
-//		public void SetPapers(){
-//			if (AppModel.Papers != null) {
-//				Target.SetPapers (AppModel.Papers);
-//			}
-//		}
+		public void SetPaper(){
+			if (AppModel.CurrentPaper != null) {
+				Target.SetPaper (AppModel.CurrentPaper);
+			}
+		}
 	}
 }

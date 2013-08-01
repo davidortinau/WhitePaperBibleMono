@@ -9,6 +9,7 @@ using MonkeyArms;
 using Android.Views;
 using Android.Widget;
 using System;
+using Android.Text;
 
 namespace WhitePaperBible.Android
 {
@@ -52,7 +53,7 @@ namespace WhitePaperBible.Android
 		public void SetPaper (Paper paper)
 		{
 			var paperTextView = (TextView)FindViewById (Resource.Id.paperTextView);
-			paperTextView.Text = paper.title;
+			paperTextView.TextFormatted = Html.FromHtml(paper.Content);
 //			myTextView.setText(Html.fromHtml()
 		}
 		#endregion

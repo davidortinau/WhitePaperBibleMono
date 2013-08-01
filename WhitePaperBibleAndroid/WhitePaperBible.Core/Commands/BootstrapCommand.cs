@@ -18,6 +18,8 @@ namespace WhitePaperBible.Android.Commands
 			DI.MapCommandToInvoker<ConfigureViewsCommand, ConfigureViewsInvoker> ().Invoke();
 			DI.MapCommandToInvoker<ConfigureInvokersCommand, ConfigureInvokersInvoker> ().Invoke();
 			DI.MapCommandToInvoker<GetPapersCommand, GetPapersInvoker> ().Invoke();
+
+			DI.MapCommandToInvoker<GetPaperDetailsCommand, GetPaperDetailsInvoker> ();
 		}
 	}
 }
