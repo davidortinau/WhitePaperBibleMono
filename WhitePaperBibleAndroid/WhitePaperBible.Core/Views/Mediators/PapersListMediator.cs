@@ -26,6 +26,7 @@ namespace WhitePaperBibleCore.Views.Mediators
 			base.Register ();
 
 			Target.Filter += HandleFilter;
+			Target.OnPaperSelected += HandlerPaperSelected;
 
 			Target.SearchPlaceHolderText = "Search Papers";
 
@@ -53,6 +54,11 @@ namespace WhitePaperBibleCore.Views.Mediators
 
 				Target.SetPapers ( filteredPapers );
 			}
+		}
+
+		void HandlerPaperSelected (object sender, EventArgs e)
+		{
+			AppModel.CurrentPaper = Target.SelectedPaper;
 		}
 
 		public void SetPapers(){

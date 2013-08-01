@@ -9,11 +9,15 @@ namespace WhitePaperBible.Core.Views
 	{
 		event EventHandler Filter;
 
+		event EventHandler OnPaperSelected;
+
 		void SetPapers (List<Paper> papers);
 
 		string SearchPlaceHolderText{get;set;}
 
 		string SearchQuery{get;}
+
+		Paper SelectedPaper{get;set;}
 	}
 }
 

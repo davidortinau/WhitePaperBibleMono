@@ -13,6 +13,7 @@ namespace WhitePaperBibleCore.Commands
 
 			DI.MapMediatorToClass<LoadingViewMediator, ILoadingView> ();
 			DI.MapMediatorToClass<PapersListMediator, IPapersListView> ();
+			DI.MapMediatorToClass<PaperDetailMediator, IPaperDetailView> ();
 
 		}
 	}

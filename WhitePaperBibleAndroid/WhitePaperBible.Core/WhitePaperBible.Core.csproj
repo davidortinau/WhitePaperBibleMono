@@ -98,6 +98,7 @@
     <Compile Include="Views\Mediators\LoadingViewMediator.cs" />
     <Compile Include="Views\ILoadingView.cs" />
     <Compile Include="Views\IPaperDetailView.cs" />
+    <Compile Include="Views\Mediators\PaperDetailMediator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 
 using Android.App;
+using Android.Content;
 using Android.OS;
+using Android.Views;
+using Android.Widget;
+
 using WhitePaperBibleCore.Models;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
-using Android.Views;
-using Android.Widget;
 using System;
 
 namespace WhitePaperBible.Android
 {
 	[Activity (Label = "Papers")]			
-	public class PapersListActivity : ListActivity, IPapersListView
+	public class PapersListActivity : ListActivity, IPapersListView, IInjectingTarget
 	{
 		[Inject]
 		public AppModel Model;
 
+		List<Paper> Papers;
+
 		public event EventHandler Filter = delegate {};
+
+		public event EventHandler OnPaperSelected = delegate {};
 
 		public string SearchQuery {
 			get;
@@ -26,6 +32,11 @@ namespace WhitePaperBible.Android
 		}
 
 		public string SearchPlaceHolderText {
+			get;
+			set;
+		}
+
+		public Paper SelectedPaper {
 			get;
 			set;
 		}
@@ -40,10 +51,22 @@ namespace WhitePaperBible.Android
 			SetContentView( Resource.Layout.PapersList );
 
 			DI.RequestMediator(this);
+		}
 
-//			if(Model.Papers != null){
-//				SetPapers (Model.Papers);
-//			}
+		protected override void OnListItemClick (ListView l, View v, int position, long id)
+		{
+			base.OnListItemClick (l, v, position, id);
+
+			SelectedPaper = Papers [position];
+
+			OnPaperSelected (this, new EventArgs ());
+
+			if(Model != null){
+				Model.CurrentPaper = SelectedPaper;
+			}
+
+			var detailsView = new Intent(this, typeof(PaperDetailActivity));
+			StartActivity ( detailsView );
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
@@ -82,6 +105,7 @@ namespace WhitePaperBible.Android
 
 		public void SetPapers (List<Paper> papers)
 		{
+			this.Papers = papers;
 //			RunOnUiThread(()=>{
 				ListAdapter = new PapersAdapter(this, papers);
 //			});

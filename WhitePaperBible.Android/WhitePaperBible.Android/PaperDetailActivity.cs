@@ -13,7 +13,7 @@ using System;
 namespace WhitePaperBible.Android
 {
 	[Activity (Label = "Paper")]			
-	public class PaperDetailActivity : ListActivity, IPaperDetailView
+	public class PaperDetailActivity : Activity, IPaperDetailView, IInjectingTarget
 	{
 		[Inject]
 		public AppModel Model;
@@ -29,8 +29,8 @@ namespace WhitePaperBible.Android
 
 			DI.RequestMediator(this);
 
-//			if(Model.Papers != null){
-//				SetPapers (Model.Papers);
+//			if(Model.CurrentPaper!= null){
+//				SetPaper (Model.CurrentPaper);
 //			}
 		}
 
@@ -51,7 +51,9 @@ namespace WhitePaperBible.Android
 		#region IPaperDetailView implementation
 		public void SetPaper (Paper paper)
 		{
-			throw new NotImplementedException ();
+			var paperTextView = (TextView)FindViewById (Resource.Id.paperTextView);
+			paperTextView.Text = paper.title;
+//			myTextView.setText(Html.fromHtml()
 		}
 		#endregion
 	}
