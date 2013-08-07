@@ -23,10 +23,11 @@ namespace WhitePaperBibleCore.Commands
 
 		void onSuccess (System.Collections.Generic.List<ReferenceNode> referenceNodes)
 		{
-			AM.CurrentPaper.references = new List<Reference> ();
+			var references = new List<Reference> ();
 			foreach(var node in referenceNodes){
-				AM.CurrentPaper.references.Add (node.reference);
+				references.Add (node.reference);
 			}
+			AM.CurrentPaper.references = references;
 
 			DI.Get<PaperDetailsReceivedInvoker> ().Invoke ();
 		}

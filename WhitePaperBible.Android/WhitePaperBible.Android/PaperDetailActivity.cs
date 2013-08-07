@@ -15,7 +15,7 @@ using Android.Content;
 
 namespace WhitePaperBible.Android
 {
-	[Activity (Label = "Paper")]			
+	[Activity (Label = "")]			
 	public class PaperDetailActivity : Activity, IPaperDetailView, IInjectingTarget
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -53,8 +53,12 @@ namespace WhitePaperBible.Android
 		#region IPaperDetailView implementation
 		public void SetPaper (Paper paper)
 		{
-			var paperView = (WebView)FindViewById (Resource.Id.detailsWebView);
-			paperView.LoadData(paper.HtmlContent, "text/html", "utf-8");
+			RunOnUiThread (() => {
+				var paperView = (WebView)FindViewById (Resource.Id.detailsWebView);
+				paperView.LoadData (paper.HtmlContent, "text/html", "utf-8");
+			});
+
+//			this.Title = paper.title;
 		}
 		#endregion
 	}

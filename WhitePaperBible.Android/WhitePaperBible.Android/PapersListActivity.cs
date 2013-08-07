@@ -106,9 +106,9 @@ namespace WhitePaperBible.Android
 		public void SetPapers (List<Paper> papers)
 		{
 			this.Papers = papers;
-//			RunOnUiThread(()=>{
+			RunOnUiThread(()=>{
 				ListAdapter = new PapersAdapter(this, papers);
-//			});
+			});
 		}
 
 		#endregion

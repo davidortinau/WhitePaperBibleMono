@@ -26,7 +26,7 @@ namespace WhitePaperBible.Android
 			DI.RequestMediator(this);
 
 			// Set our view from the "main" layout resource
-//			SetContentView (Resource.Layout.Main);
+			SetContentView (Resource.Layout.Main);
 
 		}
 

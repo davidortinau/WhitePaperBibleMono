@@ -5,8 +5,7 @@
     p1:layout_centerInParent="true"
     p1:layout_width="fill_parent"
     p1:layout_height="fill_parent"
-    p1:id="@+id/relativeLayout1"
-    p1:background="#ff000000">
+    p1:id="@+id/relativeLayout1">
     <LinearLayout
         p1:orientation="vertical"
         p1:minWidth="25px"
@@ -14,8 +13,9 @@
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/linearLayout1"
-        p1:layout_centerHorizontal="true">
-        <ImageView
+        p1:layout_centerHorizontal="true"
+        p1:layout_centerVertical="true">
+    <!--        <ImageView
             p1:src="@drawable/logo_300"
             p1:id="@+id/imageView1"
             p1:layout_centerHorizontal="true"
@@ -28,7 +28,7 @@
             p1:maxWidth="100dp"
             p1:maxHeight="100dp"
             p1:scaleX="0.7"
-            p1:scaleY="0.7" />
+            p1:scaleY="0.7" />-->
         <TextView
             p1:text="White Paper Bible"
             p1:textAppearance="?android:attr/textAppearanceSmall"

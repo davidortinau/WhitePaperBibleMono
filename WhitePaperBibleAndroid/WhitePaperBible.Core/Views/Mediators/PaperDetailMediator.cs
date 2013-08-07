@@ -33,11 +33,11 @@ namespace WhitePaperBibleCore.Views.Mediators
 				SetPaper();
 			};
 
-			if(AppModel.CurrentPaper != null){
-				Target.SetPaper (AppModel.CurrentPaper);
-			}else{
+//			if(AppModel.CurrentPaper != null){
+//				Target.SetPaper (AppModel.CurrentPaper);
+//			}else{
 				DI.Get<GetPaperDetailsInvoker> ().Invoke ();
-			}
+//			}
 		}
 
 		public override void Unregister ()
