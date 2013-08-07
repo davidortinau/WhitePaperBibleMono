@@ -11,6 +11,7 @@ using Android.Widget;
 using System;
 using Android.Text;
 using Android.Webkit;
+using Android.Content;
 
 namespace WhitePaperBible.Android
 {
@@ -42,8 +43,9 @@ namespace WhitePaperBible.Android
 
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
-			// TODO how to navigate back? Or is it just start the list activity?
 
+			var papersView = new Intent(this, typeof(PapersListActivity));
+			StartActivity( papersView );
 			return false;
 		}
 

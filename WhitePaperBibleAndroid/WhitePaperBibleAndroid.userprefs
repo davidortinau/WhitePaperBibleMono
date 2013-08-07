@@ -2,15 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../WhitePaperBible.Android/WhitePaperBible.Android/PaperDetailActivity.cs">
     <Files>
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/MainActivity.cs" Line="36" Column="4" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/PapersListFragment.cs" Line="1" Column="1" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Fragments/BaseFragment.cs" Line="1" Column="1" />
       <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PapersListActivity.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/ActionItems.axml" Line="5" Column="8" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/ActionItems.axml" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Views/Mediators/PapersListMediator.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PaperDetailActivity.cs" Line="46" Column="4" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/PaperDetailActivity.cs" Line="4" Column="19" />
       <File FileName="WhitePaperBible.Core/Views/IPaperDetailView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Core/Views/Mediators/PaperDetailMediator.cs" Line="47" Column="1" />
+      <File FileName="WhitePaperBible.Core/Views/Mediators/PaperDetailMediator.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Models/AppModel.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Commands/ConfigureViewsCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Commands/ConfigureModelsCommand.cs" Line="1" Column="1" />
@@ -19,9 +19,9 @@
       <File FileName="WhitePaperBible.Core/Invokers/GetPaperDetailssInvoker.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Commands/GetPaperDetailsCommand.cs" Line="1" Column="1" />
       <File FileName="../WhitePaperBibleCore/Services/PaperService.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBibleCore/Models/Paper.cs" Line="50" Column="44" />
+      <File FileName="../WhitePaperBibleCore/Models/Paper.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Core/Commands/BootstrapCommand.cs" Line="1" Column="1" />
-      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/PaperDetailsActionItems.axml" Line="2" Column="65" />
+      <File FileName="../WhitePaperBible.Android/WhitePaperBible.Android/Resources/menu/PaperDetailsActionItems.axml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -71,5 +71,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android AndroidDeviceId-Debug="emulator-5554" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android AndroidDeviceId-Debug="04fbaa120ecd1946" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
 </Properties>

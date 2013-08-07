@@ -9,8 +9,8 @@ using WhitePaperBible.Android.Fragments;
 
 namespace WhitePaperBible.Android
 {
-	[Activity (Label = "Loading", NoHistory=true, MainLauncher = true)]
-	public class Activity1 : Activity, ILoadingView
+	[Activity (Theme = "@style/Theme.Splash", MainLauncher=true, NoHistory=true)]			
+	public class MainActivity : Activity, ILoadingView
 	{
 		protected BaseFragment CurrentScreen;
 
@@ -26,7 +26,7 @@ namespace WhitePaperBible.Android
 			DI.RequestMediator(this);
 
 			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+//			SetContentView (Resource.Layout.Main);
 
 		}
 
