@@ -77,7 +77,6 @@
       <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\iPhone\PapersView.cs" />
-    <Compile Include="Views\iPhone\TagsView.cs" />
     <Compile Include="Views\Common\TabBarController.cs" />
     <Compile Include="Views\iPhone\FavoritesView.cs" />
     <Compile Include="Views\iPhone\SearchView.cs" />
@@ -94,12 +93,20 @@
     <Compile Include="Views\iPhone\PapersListView.designer.cs">
       <DependentUpon>PapersListView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\iPhone\TagsListView.cs" />
+    <Compile Include="Views\iPhone\TagsListView.designer.cs">
+      <DependentUpon>TagsListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSource\TagsTableSource.cs" />
+    <Compile Include="UI\CustomElements\TagElement.cs" />
+    <Compile Include="UI\CustomElements\TagCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\PapersListView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\TagsListView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\first.png" />
@@ -190,7 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>104.1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>

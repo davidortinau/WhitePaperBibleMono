@@ -11,12 +11,12 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 	/// on iPhone, pushes via MT.D
 	/// on iPad, sends view to SplitViewController
 	/// </summary>
-	public class PaperElement : Element  {
-		static NSString cellId = new NSString ("PaperCell");
-		PaperNode tagNode;
+	public class TagElement : Element  {
+		static NSString cellId = new NSString ("TagCell");
+		TagNode tagNode;
 		
 		/// <summary>for iPhone</summary>
-		public PaperElement (PaperNode node) : base (node.paper.title)
+		public TagElement (TagNode node) : base (node.tag.permalink)
 		{
 			tagNode = node;
 		}
@@ -28,9 +28,9 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			var cell = tv.DequeueReusableCell (cellId);
 			count++;
 			if (cell == null)
-				cell = new PaperCell (UITableViewCellStyle.Default, cellId, tagNode);
+				cell = new TagCell (UITableViewCellStyle.Default, cellId, tagNode);
 			else
-				((PaperCell)cell).UpdateCell (tagNode);
+				((TagCell)cell).UpdateCell (tagNode);
 
 			return cell;
 		}
@@ -38,7 +38,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// <summary>Implement MT.D search on name and company properties</summary>
 		public override bool Matches (string text)
 		{
-			return tagNode.paper.title.ToLower ().IndexOf (text.ToLower ()) >= 0;
+			return tagNode.tag.permalink.ToLower ().IndexOf (text.ToLower ()) >= 0;
 		}
 
 		/// <summary>
@@ -46,9 +46,11 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// </summary>
 		public override void Selected (DialogViewController dvc, UITableView tableView, MonoTouch.Foundation.NSIndexPath path)
 		{
-			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(tagNode.paper);
-			paperDetails.Title = tagNode.paper.title;
-			dvc.ActivateController(paperDetails);		
+			//TODO on selected go to papers list for this tag
+
+//			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(tagNode.tag);
+			//paperDetails.Title = tagNode.tag.permalink;
+//			dvc.ActivateController(paperDetails);		
 		}
 	}
 }

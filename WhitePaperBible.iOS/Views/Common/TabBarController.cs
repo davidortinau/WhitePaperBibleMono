@@ -5,9 +5,9 @@ namespace WhitePaperBible.iOS
 {
 	public class TabBarController : UITabBarController {
 		UIViewController papersScreen = null;
-		UIViewController papersList = null;
+		UIViewController papersList = null, tagsView = null;
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
-		DialogViewController tagsView, favoritesView, searchView, myPapersView, aboutView;
+		DialogViewController favoritesView, searchView, myPapersView, aboutView;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
 		
 		public TabBarController ()
@@ -44,12 +44,12 @@ namespace WhitePaperBible.iOS
 ////											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
 //			}
 			
-			papersList = new PapersListView();
-			papersList.Title = "Papers List";
+			tagsView = new TagsListView();
+			tagsView.Title = "Tags";
 			tagsNav = new UINavigationController();
 			tagsNav.TabBarItem = new UITabBarItem("Tags"
 						, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
-			tagsNav.PushViewController ( papersList, false );
+			tagsNav.PushViewController ( tagsView, false );
 
 			
 			

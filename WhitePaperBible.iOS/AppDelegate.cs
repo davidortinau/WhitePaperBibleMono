@@ -33,6 +33,11 @@ namespace WhitePaperBible.iOS
 		UITabBarController tabBarController;
 		
 		public static List<PaperNode> papers;
+
+		public static List<TagNode> tags {
+			get;
+			set;
+		}
 		
 		public static bool IsPhone {
 			get {

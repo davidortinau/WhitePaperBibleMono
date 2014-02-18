@@ -22,6 +22,8 @@ namespace WhitePaperBible.iOS
 		 * if I own the paper, set EDIT button in upper right nav
 		 * if logged in enable favorites
 		 * 
+		 * Toolbar with Favorite and Share
+		 * 
 		 * 
 		 * */
 		
@@ -29,6 +31,8 @@ namespace WhitePaperBible.iOS
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
 			this.paper = paper;
+
+			this.HidesBottomBarWhenPushed = true;
 		}
 		
 		public override void DidReceiveMemoryWarning ()
@@ -42,7 +46,7 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 			var svc = new PaperService ();
 			svc.GetPaperReferences (paper.id, onReferencesReceived, onFailure);
@@ -50,7 +54,10 @@ namespace WhitePaperBible.iOS
 			this.Title = paper.title;
 	
 			webView.ScrollView.ScrollEnabled = true;
-			this.NavigationController.SetNavigationBarHidden (true, false);
+//			this.NavigationController.SetNavigationBarHidden (true, false);
+
+
+//			this.TabBarController.
 			
 			webView.ShouldStartLoad += webViewShouldStartLoad;
 			
@@ -187,10 +194,11 @@ namespace WhitePaperBible.iOS
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
 
-			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
-			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a><h1>" + paper.title + "</h1>";
-
-			
+			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; } .description { border-radius: 5px; background-color:#F1F1F1; margin: 10px; padding: 8px; }</style>";
+//			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a>";
+			html += "<h1>" + paper.title + "</h1>";
+			html += "<section class=\"description\">" + paper.description + "</section>";
+						
 			foreach (ReferenceNode node in nodes) {
 				string content = node.reference.content;
 				html += content;

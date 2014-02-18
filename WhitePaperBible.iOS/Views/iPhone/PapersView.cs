@@ -56,7 +56,7 @@ namespace WhitePaperBible.iOS
 							orderby alpha.Key
 						select new Section (alpha.Key){
 							from eachNode in alpha
-							select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
 				}};
 	
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);

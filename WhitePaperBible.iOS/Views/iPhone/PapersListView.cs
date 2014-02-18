@@ -30,7 +30,7 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
 			papers = AppDelegate.papers;
 			papersTableSource = new WhitePaperBible.iOS.TableSource.PapersTableSource (papers, new PapersView ());
 			

@@ -13,7 +13,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		UILabel titleLabel, descriptionLabel;
 		UIButton button;
 		UIImageView locationImageView;
-		PaperNode paperNode;
+		PaperNode tagNode;
 		
 		const int padding = 13;
 		
