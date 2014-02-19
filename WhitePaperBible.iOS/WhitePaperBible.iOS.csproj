@@ -124,8 +124,6 @@
     <Content Include="Images\btn_edit_profile_sm.png" />
     <Content Include="Images\btn_edit_sm.png" />
     <Content Include="Images\btn_search_the_bible.png" />
-    <Content Include="Images\Default.png" />
-    <Content Include="Images\default%402x.png" />
     <Content Include="Images\default_bible_search.png" />
     <Content Include="Images\default_favorites.png" />
     <Content Include="Images\default_mypapers.png" />
@@ -211,5 +209,9 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\favorites.png" />
+    <BundleResource Include="Resources\favorites%402x.png" />
+    <BundleResource Include="Resources\favorited.png" />
+    <BundleResource Include="Resources\favorited%402x.png" />
   </ItemGroup>
 </Project>
