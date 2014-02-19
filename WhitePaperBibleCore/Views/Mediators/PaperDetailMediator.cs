@@ -23,8 +23,6 @@ namespace WhitePaperBible.Core.Views.Mediators
 
 		public override void Register ()
 		{
-//			base.Register ();
-
 			DI.Get<PaperDetailsReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
 				SetPaper();
 			};

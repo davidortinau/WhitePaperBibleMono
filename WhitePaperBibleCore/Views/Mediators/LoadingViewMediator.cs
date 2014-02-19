@@ -18,9 +18,6 @@ namespace WhitePaperBible.Core.Views.Mediators
 
 		public override void Register ()
 		{
-
-//			base.Register ();
-
 			PapersReceived.Invoked += (object sender, EventArgs e) => {
 				Target.OnLoadingComplete();
 			};

@@ -9,6 +9,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.TableSource;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Views;
+using MonkeyArms;
 
 namespace WhitePaperBible.iOS
 {
@@ -39,6 +40,7 @@ namespace WhitePaperBible.iOS
 		
 		public PapersListView () : base ("PapersListView", null)
 		{
+
 		}
 		
 		public override void DidReceiveMemoryWarning ()
@@ -69,6 +71,8 @@ namespace WhitePaperBible.iOS
 		
 		public override void ViewWillAppear(bool animated){
 			base.ViewWillAppear(animated);
+
+			DI.RequestMediator (this);
 			
 			NavigationController.SetNavigationBarHidden(false, false);
 		}
@@ -94,6 +98,12 @@ namespace WhitePaperBible.iOS
 			searchBar.ResignFirstResponder ();
 			this.NavigationController.SetNavigationBarHidden (false, true);
 			searchBar.SetShowsCancelButton (false, true);
+		}
+
+		public override void ViewDidDisappear (bool animated)
+		{
+			base.ViewDidDisappear (animated);
+			DI.DestroyMediator (this);
 		}
 		
 		public override void ViewDidUnload ()
@@ -171,16 +181,17 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
-			this.Papers = papers;
 
-			papersTableSource = new PapersTableSource (Papers, new PapersView ());
+			InvokeOnMainThread (delegate {
+				this.Papers = papers;
 
-			this.table.Source = papersTableSource;
-			this.table.Delegate = new TableDelegate (this);
+				papersTableSource = new PapersTableSource (Papers, new PapersView ());
 
-//			RunOnUiThread(()=>{
-//				ListAdapter = new PapersAdapter(this, papers);
-//			});
+				this.table.Source = papersTableSource;
+				this.table.Delegate = new TableDelegate (this);
+
+
+			});
 		}
 
 		#endregion

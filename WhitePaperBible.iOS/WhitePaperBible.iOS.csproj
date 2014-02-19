@@ -65,13 +65,9 @@
     <Reference Include="RestSharp.MonoTouch">
       <HintPath>..\Components\restsharp-104.1.0\lib\ios\RestSharp.MonoTouch.dll</HintPath>
     </Reference>
-    <Reference Include="TinyIOC">
-      <HintPath>..\packages\MonkeyArms.1.0.18\lib\TinyIOC.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -103,15 +99,6 @@
     <Compile Include="TableSource\TagsTableSource.cs" />
     <Compile Include="UI\CustomElements\TagElement.cs" />
     <Compile Include="UI\CustomElements\TagCell.cs" />
-    <Compile Include="MonkeyArms\Command.cs" />
-    <Compile Include="MonkeyArms\Actor.cs" />
-    <Compile Include="MonkeyArms\Context.cs" />
-    <Compile Include="MonkeyArms\DI.cs" />
-    <Compile Include="MonkeyArms\DIUtil.cs" />
-    <Compile Include="MonkeyArms\Invoker.cs" />
-    <Compile Include="MonkeyArms\InvokerChain.cs" />
-    <Compile Include="MonkeyArms\InvokerMap.cs" />
-    <Compile Include="MonkeyArms\Mediator.cs" />
     <Compile Include="Views\iPhone\PapersView.cs" />
   </ItemGroup>
   <ItemGroup>

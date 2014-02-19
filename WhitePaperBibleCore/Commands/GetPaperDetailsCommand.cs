@@ -15,8 +15,6 @@ namespace WhitePaperBible.Core.Commands
 
 		public override void Execute (InvokerArgs args)
 		{
-//			base.Execute (args);
-
 			var svc = new PaperService();
 			svc.GetPaperReferences(AM.CurrentPaper.id, onSuccess, onFail);
 		}

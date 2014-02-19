@@ -1,14 +1,12 @@
-﻿using MonkeyArms;
-using WhitePaperBible.Core.Invokers;
+﻿using WhitePaperBible.Core.Invokers;
+using MonkeyArms;
 
 namespace WhitePaperBible.Core.Commands
 {
-	public class BootstrapCommand : Command
+	public class BootstrapCommand : MonkeyArms.Command
 	{
 		public override void Execute (InvokerArgs args)
 		{
-//			base.Execute (args);
-
 			DI.MapCommandToInvoker<ConfigureModelsCommand, ConfigureModelsInvoker> ().Invoke();
 			DI.MapCommandToInvoker<ConfigureViewsCommand, ConfigureViewsInvoker> ().Invoke();
 			DI.MapCommandToInvoker<ConfigureInvokersCommand, ConfigureInvokersInvoker> ().Invoke();

@@ -23,8 +23,6 @@ namespace WhitePaperBible.Core.Views.Mediators
 
 		public override void Register ()
 		{
-//			base.Register ();
-
 			Target.Filter += HandleFilter;
 			Target.OnPaperSelected += HandlerPaperSelected;
 
