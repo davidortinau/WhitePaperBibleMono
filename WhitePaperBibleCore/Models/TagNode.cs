@@ -1,6 +1,6 @@
 using System;
 
-namespace WhitePaperBibleCore.Models
+namespace WhitePaperBible.Core.Models
 {
 	public class TagNode
 	{

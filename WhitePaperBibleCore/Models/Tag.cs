@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace WhitePaperBibleCore.Models
+namespace WhitePaperBible.Core.Models
 {
 	[DataContract(Name = "tag")]
     public class Tag

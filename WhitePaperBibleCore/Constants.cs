@@ -1,6 +1,6 @@
 using System;
 
-namespace WhitePaperBibleCore
+namespace WhitePaperBible.Core
 {
 	public class Constants
 	{

@@ -3,7 +3,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using System.Drawing;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.iOS.UI.CustomElements
 {

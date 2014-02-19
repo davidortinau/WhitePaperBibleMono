@@ -65,9 +65,13 @@
     <Reference Include="RestSharp.MonoTouch">
       <HintPath>..\Components\restsharp-104.1.0\lib\ios\RestSharp.MonoTouch.dll</HintPath>
     </Reference>
+    <Reference Include="TinyIOC">
+      <HintPath>..\packages\MonkeyArms.1.0.18\lib\TinyIOC.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -76,7 +80,6 @@
     <Compile Include="SecondViewController.designer.cs">
       <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\iPhone\PapersView.cs" />
     <Compile Include="Views\Common\TabBarController.cs" />
     <Compile Include="Views\iPhone\FavoritesView.cs" />
     <Compile Include="Views\iPhone\SearchView.cs" />
@@ -100,6 +103,16 @@
     <Compile Include="TableSource\TagsTableSource.cs" />
     <Compile Include="UI\CustomElements\TagElement.cs" />
     <Compile Include="UI\CustomElements\TagCell.cs" />
+    <Compile Include="MonkeyArms\Command.cs" />
+    <Compile Include="MonkeyArms\Actor.cs" />
+    <Compile Include="MonkeyArms\Context.cs" />
+    <Compile Include="MonkeyArms\DI.cs" />
+    <Compile Include="MonkeyArms\DIUtil.cs" />
+    <Compile Include="MonkeyArms\Invoker.cs" />
+    <Compile Include="MonkeyArms\InvokerChain.cs" />
+    <Compile Include="MonkeyArms\InvokerMap.cs" />
+    <Compile Include="MonkeyArms\Mediator.cs" />
+    <Compile Include="Views\iPhone\PapersView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -109,74 +122,16 @@
     <InterfaceDefinition Include="Views\iPhone\TagsListView.xib" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\first.png" />
-    <Content Include="Images\first%402x.png" />
-    <Content Include="Images\second.png" />
-    <Content Include="Images\second%402x.png" />
-    <Content Include="Images\AboutLogo.png" />
-    <Content Include="Images\bg_fade_bar_white.png" />
-    <Content Include="Images\bg_fade_bar_white-longer.png" />
-    <Content Include="Images\bg_fade_to_white.png" />
-    <Content Include="Images\bg_overlay.png" />
-    <Content Include="Images\btn_close.png" />
-    <Content Include="Images\btn_create_account.png" />
-    <Content Include="Images\btn_edit_profile.png" />
-    <Content Include="Images\btn_edit_profile_sm.png" />
-    <Content Include="Images\btn_edit_sm.png" />
-    <Content Include="Images\btn_search_the_bible.png" />
-    <Content Include="Images\Default.png" />
-    <Content Include="Images\default%402x.png" />
-    <Content Include="Images\default_bible_search.png" />
-    <Content Include="Images\default_favorites.png" />
-    <Content Include="Images\default_mypapers.png" />
-    <Content Include="Images\default_papers.png" />
-    <Content Include="Images\favorited.png" />
-    <Content Include="Images\favorited%402x.png" />
-    <Content Include="Images\first_16x16.png" />
-    <Content Include="Images\first_24x24.png" />
-    <Content Include="Images\greenPlusIcon.png" />
-    <Content Include="Images\headphones.png" />
-    <Content Include="Images\headphones%402x.png" />
-    <Content Include="Images\heaphones_24x21.png" />
-    <Content Include="Images\icon.png" />
-    <Content Include="Images\last.png" />
-    <Content Include="Images\last%402x.png" />
-    <Content Include="Images\last_16x16.png" />
-    <Content Include="Images\loading.png" />
-    <Content Include="Images\loading%402x.png" />
-    <Content Include="Images\loadingbutton.png" />
-    <Content Include="Images\loop_16x16.png" />
-    <Content Include="Images\loop_8x8.png" />
-    <Content Include="Images\loop_8x8_red.png" />
-    <Content Include="Images\pause_12x16.png" />
-    <Content Include="Images\pausebutton.png" />
-    <Content Include="Images\play.png" />
-    <Content Include="Images\play%402x.png" />
-    <Content Include="Images\play_12x16.png" />
-    <Content Include="Images\play_alt_16x16.png" />
-    <Content Include="Images\playbutton.png" />
-    <Content Include="Images\rounded_box.png" />
-    <Content Include="Images\share.png" />
-    <Content Include="Images\stop.png" />
-    <Content Include="Images\stop%402x.png" />
-    <Content Include="Images\stop_16x16.png" />
-    <Content Include="Images\stopbutton.png" />
-    <Content Include="Images\tag_fill_16x16.png" />
-    <Content Include="Images\tag_fill_24x24.png" />
-    <Content Include="Images\tag_fill_32x32.png" />
     <Content Include="Images\Tabs\papers.png" />
     <Content Include="Images\Tabs\papers%402x.png" />
     <Content Include="Images\Tabs\tag.png" />
     <Content Include="Images\Tabs\tag%402x.png" />
-    <Content Include="Images\Tabs\favorites.png" />
-    <Content Include="Images\Tabs\favorites%402x.png" />
     <Content Include="Images\Tabs\search.png" />
     <Content Include="Images\Tabs\search%402x.png" />
     <Content Include="Images\Tabs\my_papers.png" />
     <Content Include="Images\Tabs\my_papers%402x.png" />
     <Content Include="Images\Tabs\myDots.png" />
     <Content Include="Images\Tabs\myDots%402x.png" />
-    <Content Include="Images\btn_back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -208,8 +163,73 @@
     <BundleResource Include="Resources\Icon-72%402x.png" />
     <BundleResource Include="Resources\Icon-76.png" />
     <BundleResource Include="Resources\Icon-76%402x.png" />
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Images\AboutLogo.png" />
+    <BundleResource Include="Images\bg_fade_bar_white-longer.png" />
+    <BundleResource Include="Images\bg_fade_bar_white.png" />
+    <BundleResource Include="Images\bg_fade_to_white.png" />
+    <BundleResource Include="Images\bg_overlay.png" />
+    <BundleResource Include="Images\btn_back.png" />
+    <BundleResource Include="Images\btn_close.png" />
+    <BundleResource Include="Images\btn_create_account.png" />
+    <BundleResource Include="Images\btn_edit_profile.png" />
+    <BundleResource Include="Images\btn_edit_profile_sm.png" />
+    <BundleResource Include="Images\btn_edit_sm.png" />
+    <BundleResource Include="Images\btn_search_the_bible.png" />
+    <BundleResource Include="Images\default_bible_search.png" />
+    <BundleResource Include="Images\default_favorites.png" />
+    <BundleResource Include="Images\default_mypapers.png" />
+    <BundleResource Include="Images\default_papers.png" />
+    <BundleResource Include="Images\favorited.png" />
+    <BundleResource Include="Images\favorited%402x.png" />
+    <BundleResource Include="Images\first.png" />
+    <BundleResource Include="Images\first%402x.png" />
+    <BundleResource Include="Images\first_16x16.png" />
+    <BundleResource Include="Images\first_24x24.png" />
+    <BundleResource Include="Images\greenPlusIcon.png" />
+    <BundleResource Include="Images\headphones.png" />
+    <BundleResource Include="Images\headphones%402x.png" />
+    <BundleResource Include="Images\heaphones_24x21.png" />
+    <BundleResource Include="Images\icon.png" />
+    <BundleResource Include="Images\icon%402x.png" />
+    <BundleResource Include="Images\icon_120.png" />
+    <BundleResource Include="Images\icon_144.png" />
+    <BundleResource Include="Images\icon_152.png" />
+    <BundleResource Include="Images\icon_72.png" />
+    <BundleResource Include="Images\icon_76.png" />
+    <BundleResource Include="Images\last.png" />
+    <BundleResource Include="Images\last%402x.png" />
+    <BundleResource Include="Images\last_16x16.png" />
+    <BundleResource Include="Images\loading.png" />
+    <BundleResource Include="Images\loading%402x.png" />
+    <BundleResource Include="Images\loadingbutton.png" />
+    <BundleResource Include="Images\loop_16x16.png" />
+    <BundleResource Include="Images\loop_8x8.png" />
+    <BundleResource Include="Images\loop_8x8_red.png" />
+    <BundleResource Include="Images\pause_12x16.png" />
+    <BundleResource Include="Images\pausebutton.png" />
+    <BundleResource Include="Images\play.png" />
+    <BundleResource Include="Images\play%402x.png" />
+    <BundleResource Include="Images\play_12x16.png" />
+    <BundleResource Include="Images\play_alt_16x16.png" />
+    <BundleResource Include="Images\playbutton.png" />
+    <BundleResource Include="Images\rounded_box.png" />
+    <BundleResource Include="Images\second.png" />
+    <BundleResource Include="Images\second%402x.png" />
+    <BundleResource Include="Images\share.png" />
+    <BundleResource Include="Images\stop.png" />
+    <BundleResource Include="Images\stop%402x.png" />
+    <BundleResource Include="Images\stop_16x16.png" />
+    <BundleResource Include="Images\stopbutton.png" />
+    <BundleResource Include="Images\tag_fill_16x16.png" />
+    <BundleResource Include="Images\tag_fill_24x24.png" />
+    <BundleResource Include="Images\tag_fill_32x32.png" />
+    <BundleResource Include="Resources\favorited.png" />
+    <BundleResource Include="Resources\favorites.png" />
+    <BundleResource Include="Resources\favorited%402x.png" />
+    <BundleResource Include="Resources\favorites%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Images\Tabs\favorites.png" />
+    <ImageAsset Include="Images\Tabs\favorites%402x.png" />
   </ItemGroup>
 </Project>

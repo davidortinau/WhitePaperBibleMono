@@ -5,15 +5,37 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Collections.Generic;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.TableSource;
+using WhitePaperBible.Core.Models;
+using WhitePaperBible.Core.Views;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PapersListView : UIViewController
+	public partial class PapersListView : UIViewController, IPapersListView
 	{
-		List<PaperNode> papers;
+		List<Paper> Papers;
+
 		PapersTableSource papersTableSource;
+
+		public event EventHandler Filter;
+
+		public event EventHandler OnPaperSelected;
+
+		public string SearchPlaceHolderText {
+			get;
+			set;
+		}
+
+		public string SearchQuery {
+			get;
+			set;
+		}
+
+		public Paper SelectedPaper {
+			get;
+			set;
+		}
 		
 		public PapersListView () : base ("PapersListView", null)
 		{
@@ -31,11 +53,12 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			papers = AppDelegate.papers;
-			papersTableSource = new WhitePaperBible.iOS.TableSource.PapersTableSource (papers, new PapersView ());
-			
-			this.table.Source = papersTableSource;
-			this.table.Delegate = new TableDelegate (this);
+//			papers = AppDelegate.papers;
+//			Papers = Model.Papers;
+//			papersTableSource = new WhitePaperBible.iOS.TableSource.PapersTableSource (Papers, new PapersView ());
+//			
+//			this.table.Source = papersTableSource;
+//			this.table.Delegate = new TableDelegate (this);
 			
 			this.searchBar.ShouldBeginEditing += shouldBeginEditing;
 			this.searchBar.ShouldEndEditing += shouldEndEditing;
@@ -53,9 +76,9 @@ namespace WhitePaperBible.iOS
 
 		void HandleSearchBarhandleTextChanged (object sender, UISearchBarTextChangedEventArgs e)
 		{		
-			papersTableSource.papers = (from node in AppDelegate.papers
-				where node.paper.title.ToLower ().Contains (searchBar.Text.ToLower ())
-			          select node).ToList<PaperNode> ();
+			papersTableSource.papers = (from paper in Papers
+				where paper.title.ToLower ().Contains (searchBar.Text.ToLower ())
+				select paper).ToList<Paper> ();
 			
 			table.ReloadData ();
 		}
@@ -130,7 +153,7 @@ namespace WhitePaperBible.iOS
 				
 				avc.NavigationController.NavigationBarHidden = false;
 				
-				Paper paper = ((PaperNode)avc.papersTableSource.papers.ElementAt (tableView.IndexPathForSelectedRow.Row)).paper;
+				Paper paper = ((Paper)avc.papersTableSource.papers.ElementAt (tableView.IndexPathForSelectedRow.Row));
 				PaperDetailsView details = new PaperDetailsView (paper);
 				
 				details.HidesBottomBarWhenPushed = true;
@@ -142,6 +165,24 @@ namespace WhitePaperBible.iOS
 			
 			
 		}
+		#endregion
+
+		#region IPapersListView implementation
+
+		public void SetPapers (List<Paper> papers)
+		{
+			this.Papers = papers;
+
+			papersTableSource = new PapersTableSource (Papers, new PapersView ());
+
+			this.table.Source = papersTableSource;
+			this.table.Delegate = new TableDelegate (this);
+
+//			RunOnUiThread(()=>{
+//				ListAdapter = new PapersAdapter(this, papers);
+//			});
+		}
+
 		#endregion
 		
 	}

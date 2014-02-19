@@ -3,7 +3,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Collections.Generic;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.TableSource;
 
 namespace WhitePaperBible.iOS

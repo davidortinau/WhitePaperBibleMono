@@ -27,7 +27,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="8"/>
-                        <barButtonItem title="Item" style="plain" id="9">
+                        <barButtonItem image="favorites.png" style="plain" id="9">
                             <connections>
                                 <action selector="favoritePressed:" destination="-1" id="16"/>
                             </connections>
@@ -46,4 +46,7 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="favorites.png" width="30" height="30"/>
+    </resources>
 </document>

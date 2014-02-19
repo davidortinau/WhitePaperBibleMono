@@ -5,7 +5,10 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.ObjCRuntime;
-using WhitePaperBibleCore.Models;
+using MonkeyArms;
+using WhitePaperBible.Core.Commands;
+using WhitePaperBible.Core.Invokers;
+using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.iOS
 {
@@ -32,8 +35,8 @@ namespace WhitePaperBible.iOS
 		UIWindow window;
 		UITabBarController tabBarController;
 		
-		public static List<PaperNode> papers;
-
+//		public static List<PaperNode> papers;
+//
 		public static List<TagNode> tags {
 			get;
 			set;
@@ -78,8 +81,18 @@ namespace WhitePaperBible.iOS
 			
 			window.RootViewController = tabBarController;
 			window.MakeKeyAndVisible ();
+
+			initMonkeyArms ();
 			
 			return true;
+		}
+
+		void initMonkeyArms() {
+			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker>().Invoke();
+
+			DI.Get<PapersReceivedInvoker>().Invoked += (object sender, EventArgs e) => {
+				Console.WriteLine("GOT PAPERS");
+			};
 		}
 	}
 }

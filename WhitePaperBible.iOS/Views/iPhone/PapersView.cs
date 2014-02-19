@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-using WhitePaperBibleCore.Models;
-using WhitePaperBibleCore.Services;
+using WhitePaperBible.Core.Models;
+using WhitePaperBible.Core.Services;
 using WhitePaperBible.iOS.TableSource;
 
 using MonoTouch.Foundation;
@@ -47,20 +47,20 @@ namespace WhitePaperBible.iOS
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
 			
-			InvokeOnMainThread (delegate {
-				AppDelegate.papers = papers;
-				
-				Root = new RootElement("Papers") {
-						from node in papers
-							group node by (node.paper.title [0].ToString ().ToUpper ()) into alpha
-							orderby alpha.Key
-						select new Section (alpha.Key){
-							from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
-				}};
-	
-				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
-			});
+//			InvokeOnMainThread (delegate {
+//				AppDelegate.papers = papers;
+//				
+//				Root = new RootElement("Papers") {
+//						from node in papers
+//							group node by (node.paper.title [0].ToString ().ToUpper ()) into alpha
+//							orderby alpha.Key
+//						select new Section (alpha.Key){
+//							from eachNode in alpha
+//						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+//				}};
+//	
+//				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+//			});
 		}
 	}
 }

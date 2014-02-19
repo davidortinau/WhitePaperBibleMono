@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using RestSharp;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using Newtonsoft.Json;
 
-namespace WhitePaperBibleCore.Services
+namespace WhitePaperBible.Core.Services
 {
 	public class PaperService
 	{

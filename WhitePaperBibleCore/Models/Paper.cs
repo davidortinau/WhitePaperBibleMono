@@ -2,7 +2,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 
-namespace WhitePaperBibleCore.Models
+namespace WhitePaperBible.Core.Models
 {
     [DataContract(Name = "paper")]
     public class Paper
