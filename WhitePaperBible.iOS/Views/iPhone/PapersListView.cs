@@ -140,6 +140,25 @@ namespace WhitePaperBible.iOS
 			searchBar.SetShowsCancelButton (false, true);
 			return true;
 		}
+
+		#region IPapersListView implementation
+
+		public void SetPapers (List<Paper> papers)
+		{
+
+			InvokeOnMainThread (delegate {
+				this.Papers = papers;
+
+				papersTableSource = new PapersTableSource (Papers, new PapersView ());
+
+				this.table.Source = papersTableSource;
+				this.table.Delegate = new TableDelegate (this);
+
+
+			});
+		}
+
+		#endregion
 		
 		#region Delegates for the table
 		
@@ -177,24 +196,7 @@ namespace WhitePaperBible.iOS
 		}
 		#endregion
 
-		#region IPapersListView implementation
 
-		public void SetPapers (List<Paper> papers)
-		{
-
-			InvokeOnMainThread (delegate {
-				this.Papers = papers;
-
-				papersTableSource = new PapersTableSource (Papers, new PapersView ());
-
-				this.table.Source = papersTableSource;
-				this.table.Delegate = new TableDelegate (this);
-
-
-			});
-		}
-
-		#endregion
 		
 	}
 }

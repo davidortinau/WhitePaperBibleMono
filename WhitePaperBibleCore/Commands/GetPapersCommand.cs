@@ -13,13 +13,6 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public AppModel AM;
 
-//		[Inject]
-//		public PapersReceivedInvoker PapersReceived;
-
-		// This injection throws an error
-//		[Inject]
-//		public PapersListMediator PM;
-
 		public override void Execute (InvokerArgs args)
 		{
 			var svc = new PaperService();
@@ -33,7 +26,6 @@ namespace WhitePaperBible.Core.Commands
 				AM.Papers.Add (node.paper);
 			}
 
-//			PM.SetPapers ();
 			DI.Get<PapersReceivedInvoker> ().Invoke ();
 		}
 

@@ -13,11 +13,11 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		UILabel titleLabel, descriptionLabel;
 		UIButton button;
 		UIImageView locationImageView;
-		PaperNode tagNode;
-		
+		Paper paper;
+
 		const int padding = 13;
 		
-		public PaperCell (UITableViewCellStyle style, NSString ident, PaperNode paperNode) : base (style, ident)
+		public PaperCell (UITableViewCellStyle style, NSString ident, Paper paperNode) : base (style, ident)
 		{
 			SelectionStyle = UITableViewCellSelectionStyle.Blue;
 			
@@ -39,14 +39,14 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			ContentView.Add (descriptionLabel);
 		}
 		
-		public void UpdateCell (PaperNode paperNode)
+		public void UpdateCell (Paper p)
 		{
-			paperNode = paperNode;
+			paper = p;
 			
 			titleLabel.Font = bigFont;
-			titleLabel.Text = paperNode.paper.title;
+			titleLabel.Text = paper.title;
 			
-			descriptionLabel.Text = paperNode.paper.description;
+			descriptionLabel.Text = paper.description;
 		}
 		
 //		void UpdateImage (bool selected)

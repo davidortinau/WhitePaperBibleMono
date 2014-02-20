@@ -13,12 +13,12 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 	/// </summary>
 	public class PaperElement : Element  {
 		static NSString cellId = new NSString ("PaperCell");
-		PaperNode tagNode;
+		Paper paper;
 		
 		/// <summary>for iPhone</summary>
-		public PaperElement (PaperNode node) : base (node.paper.title)
+		public PaperElement (Paper p) : base (p.title)
 		{
-			tagNode = node;
+			paper = p;
 		}
 		
 		
@@ -28,9 +28,9 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			var cell = tv.DequeueReusableCell (cellId);
 			count++;
 			if (cell == null)
-				cell = new PaperCell (UITableViewCellStyle.Default, cellId, tagNode);
+				cell = new PaperCell (UITableViewCellStyle.Default, cellId, paper);
 			else
-				((PaperCell)cell).UpdateCell (tagNode);
+				((PaperCell)cell).UpdateCell (paper);
 
 			return cell;
 		}
@@ -38,7 +38,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// <summary>Implement MT.D search on name and company properties</summary>
 		public override bool Matches (string text)
 		{
-			return tagNode.paper.title.ToLower ().IndexOf (text.ToLower ()) >= 0;
+			return paper.title.ToLower ().IndexOf (text.ToLower ()) >= 0;
 		}
 
 		/// <summary>
@@ -46,8 +46,8 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// </summary>
 		public override void Selected (DialogViewController dvc, UITableView tableView, MonoTouch.Foundation.NSIndexPath path)
 		{
-			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(tagNode.paper);
-			paperDetails.Title = tagNode.paper.title;
+			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(paper);
+			paperDetails.Title = paper.title;
 			dvc.ActivateController(paperDetails);		
 		}
 	}
