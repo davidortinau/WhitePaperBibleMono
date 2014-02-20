@@ -3,7 +3,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
-using WhitePaperBible.Core.Views.Mediators;
+using WhitePaperBible.Core.Mediators;
 using System.Collections.Generic;
 using System.Diagnostics;
 

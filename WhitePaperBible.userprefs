@@ -1,12 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/MonkeyArms/DI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/Views/ILoadingView.cs">
     <Files>
-      <File FileName="WhitePaperBible.PCL/Services/PaperService.cs" Line="41" Column="41" />
-      <File FileName="WhitePaperBible.PCL/Constants.cs" Line="11" Column="3" />
-      <File FileName="WhitePaperBible.PCL/Services/TagService.cs" Line="39" Column="88" />
-      <File FileName="WhitePaperBible.PCL/Services/IJSONWebClient.cs" Line="3" Column="40" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="112" Column="34" />
+      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="26" Column="6" />
+      <File FileName="WhitePaperBible.PCL/Services/PaperService.cs" Line="20" Column="5" />
+      <File FileName="WhitePaperBibileCoreTests/Test.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/LoadingViewMediator.cs" Line="6" Column="32" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PaperDetailMediator.cs" Line="8" Column="32" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="8" Column="32" />
+      <File FileName="WhitePaperBible.PCL/Views/ILoadingView.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

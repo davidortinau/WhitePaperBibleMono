@@ -1,6 +1,5 @@
-
 using MonkeyArms;
-using WhitePaperBible.Core.Views.Mediators;
+using WhitePaperBible.Core.Mediators;
 using WhitePaperBible.Core.Views;
 
 namespace WhitePaperBible.Core.Commands

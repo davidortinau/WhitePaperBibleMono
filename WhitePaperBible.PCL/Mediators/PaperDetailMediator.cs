@@ -5,36 +5,35 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using System.Linq;
 
-namespace WhitePaperBible.Core.Views.Mediators
+namespace WhitePaperBible.Core.Mediators
 {
 	public class PaperDetailMediator : Mediator
 	{
 		[Inject]
 		public AppModel AppModel;
-
 		[Inject]
 		public PaperDetailsReceivedInvoker PaperDetailsReceived;
-
 		IPaperDetailView Target;
 
-		public PaperDetailMediator(IPaperDetailView view):base(view){
+		public PaperDetailMediator (IPaperDetailView view) : base (view)
+		{
 			this.Target = view;
 		}
 
 		public override void Register ()
 		{
 			DI.Get<PaperDetailsReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
-				SetPaper();
+				SetPaper ();
 			};
 
 			PaperDetailsReceived.Invoked += (object sender, EventArgs e) => {
-				SetPaper();
+				SetPaper ();
 			};
 
 //			if(AppModel.CurrentPaper != null){
 //				Target.SetPaper (AppModel.CurrentPaper);
 //			}else{
-				DI.Get<GetPaperDetailsInvoker> ().Invoke ();
+			DI.Get<GetPaperDetailsInvoker> ().Invoke ();
 //			}
 		}
 
@@ -43,7 +42,8 @@ namespace WhitePaperBible.Core.Views.Mediators
 			base.Unregister ();
 		}
 
-		public void SetPaper(){
+		public void SetPaper ()
+		{
 			if (AppModel.CurrentPaper != null) {
 				Target.SetPaper (AppModel.CurrentPaper);
 			}

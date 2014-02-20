@@ -8,7 +8,7 @@
     <ProjectGuid>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>WhitePaperBible.PCL</RootNamespace>
+    <RootNamespace>WhitePaperBible.Core</RootNamespace>
     <AssemblyName>WhitePaperBible.PCL</AssemblyName>
     <TargetFrameworkProfile>Profile136</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -71,10 +71,10 @@
     <Compile Include="Views\ILoadingView.cs" />
     <Compile Include="Views\IPaperDetailView.cs" />
     <Compile Include="Views\IPapersListView.cs" />
-    <Compile Include="Views\Mediators\LoadingViewMediator.cs" />
-    <Compile Include="Views\Mediators\PaperDetailMediator.cs" />
-    <Compile Include="Views\Mediators\PapersListMediator.cs" />
     <Compile Include="Services\IJSONWebClient.cs" />
+    <Compile Include="Mediators\LoadingViewMediator.cs" />
+    <Compile Include="Mediators\PaperDetailMediator.cs" />
+    <Compile Include="Mediators\PapersListMediator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -88,4 +88,13 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedHierarchical" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
 </Project>

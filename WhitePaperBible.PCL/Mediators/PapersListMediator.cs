@@ -5,19 +5,18 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using System.Linq;
 
-namespace WhitePaperBible.Core.Views.Mediators
+namespace WhitePaperBible.Core.Mediators
 {
 	public class PapersListMediator : Mediator
 	{
 		[Inject]
 		public AppModel AppModel;
-
 		[Inject]
 		public PapersReceivedInvoker PapersReceived;
-
 		IPapersListView Target;
 
-		public PapersListMediator(IPapersListView view):base(view){
+		public PapersListMediator (IPapersListView view) : base (view)
+		{
 			this.Target = view;
 		}
 
@@ -31,11 +30,11 @@ namespace WhitePaperBible.Core.Views.Mediators
 			SetPapers ();
 
 			DI.Get<PapersReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
-				SetPapers();
+				SetPapers ();
 			};
 
 			PapersReceived.Invoked += (object sender, EventArgs e) => {
-				SetPapers();
+				SetPapers ();
 			};
 		}
 
@@ -48,9 +47,9 @@ namespace WhitePaperBible.Core.Views.Mediators
 		{
 			if (AppModel.Papers != null) {
 				var query = Target.SearchQuery;
-				var filteredPapers = AppModel.Papers.Where(ce =>(ce.title.ToLower().Contains(query))).ToList();
+				var filteredPapers = AppModel.Papers.Where (ce => (ce.title.ToLower ().Contains (query))).ToList ();
 
-				Target.SetPapers ( filteredPapers );
+				Target.SetPapers (filteredPapers);
 			}
 		}
 
@@ -59,7 +58,8 @@ namespace WhitePaperBible.Core.Views.Mediators
 			AppModel.CurrentPaper = Target.SelectedPaper;
 		}
 
-		public void SetPapers(){
+		public void SetPapers ()
+		{
 			if (AppModel.Papers != null) {
 				Target.SetPapers (AppModel.Papers);
 			}
