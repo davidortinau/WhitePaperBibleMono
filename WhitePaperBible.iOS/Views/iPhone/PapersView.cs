@@ -81,5 +81,12 @@ namespace WhitePaperBible.iOS
 			
 		}
 
+		public override void ViewDidDisappear (bool animated)
+		{
+			base.ViewDidDisappear (animated);
+
+			DI.DestroyMediator (this);
+		}
+
 	}
 }

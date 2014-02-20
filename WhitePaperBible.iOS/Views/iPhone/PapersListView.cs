@@ -9,11 +9,10 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.TableSource;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Views;
-using MonkeyArms;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PapersListView : UIViewController, IPapersListView
+	public partial class PapersListView : UIViewController
 	{
 		List<Paper> Papers;
 
@@ -71,9 +70,7 @@ namespace WhitePaperBible.iOS
 		
 		public override void ViewWillAppear(bool animated){
 			base.ViewWillAppear(animated);
-
-			DI.RequestMediator (this);
-			
+						
 			NavigationController.SetNavigationBarHidden(false, false);
 		}
 		
@@ -103,7 +100,6 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidDisappear (bool animated)
 		{
 			base.ViewDidDisappear (animated);
-			DI.DestroyMediator (this);
 		}
 		
 		public override void ViewDidUnload ()
@@ -140,25 +136,6 @@ namespace WhitePaperBible.iOS
 			searchBar.SetShowsCancelButton (false, true);
 			return true;
 		}
-
-		#region IPapersListView implementation
-
-		public void SetPapers (List<Paper> papers)
-		{
-
-			InvokeOnMainThread (delegate {
-				this.Papers = papers;
-
-				papersTableSource = new PapersTableSource (Papers, new PapersView ());
-
-				this.table.Source = papersTableSource;
-				this.table.Delegate = new TableDelegate (this);
-
-
-			});
-		}
-
-		#endregion
 		
 		#region Delegates for the table
 		
