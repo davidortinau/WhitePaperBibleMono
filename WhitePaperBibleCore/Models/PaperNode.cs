@@ -1,4 +1,4 @@
-﻿namespace WhitePaperBibleCore.Models
+﻿namespace WhitePaperBible.Core.Models
 {
 	public class PaperNode
 	{

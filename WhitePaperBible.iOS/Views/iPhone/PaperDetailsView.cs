@@ -3,8 +3,8 @@ using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using WhitePaperBibleCore.Models;
-using WhitePaperBibleCore.Services;
+using WhitePaperBible.Core.Models;
+using WhitePaperBible.Core.Services;
 using System.Collections.Generic;
 using MonoTouch.ObjCRuntime;
 using MonoTouch.MessageUI;
@@ -304,6 +304,7 @@ namespace WhitePaperBible.iOS
 
 		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender)
 		{
+
 //			WhitePaperBibleAppDelegate *appDelegate = (WhitePaperBibleAppDelegate *)[[UIApplication sharedApplication] delegate];
 //	
 //			if([appDelegate isUserLoggedIn]){

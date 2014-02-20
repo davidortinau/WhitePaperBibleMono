@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
-using WhitePaperBibleCore.Services;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Services;
+using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.Tests
 {

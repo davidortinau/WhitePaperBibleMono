@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using System.Collections.Generic;
 using MonoTouch.Dialog;
 using MonoTouch.Foundation;

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using System.Collections.Generic;
 using MonoTouch.Dialog;
 using MonoTouch.Foundation;
@@ -10,12 +10,12 @@ using MonoTouch.UIKit;
 namespace WhitePaperBible.iOS.TableSource
 {
 	public class PapersTableSource: UITableViewSource {
-		public IList<PaperNode> papers;
+		public IList<Paper> papers;
 		PapersView view;
 		
 		static NSString cellId = new NSString("PaperElement");
 
-		public PapersTableSource (List<PaperNode> papers, PapersView view)
+		public PapersTableSource (List<Paper> papers, PapersView view)
 		{
 			this.papers = papers;
 			this.view = view;
@@ -23,12 +23,12 @@ namespace WhitePaperBible.iOS.TableSource
 
 		public override UITableViewCell GetCell (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
 		{
-			var paperNode = papers[indexPath.Row] as PaperNode;
+			var paper = papers[indexPath.Row] as Paper;
 			var cell = tableView.DequeueReusableCell(cellId);
 			if(cell == null) 
 				cell = new UITableViewCell (UITableViewCellStyle.Default, cellId);
 			
-			cell.TextLabel.Text = paperNode.paper.title;
+			cell.TextLabel.Text = paper.title;
 			return cell;
 		}
 		
@@ -58,7 +58,7 @@ namespace WhitePaperBible.iOS.TableSource
 
 		public override void RowSelected (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
 		{
-			var paperNode = papers[indexPath.Row] as PaperNode;
+			var paperNode = papers[indexPath.Row] as Paper;
 			//ConsoleD.WriteLine("PapersTableSource.RowSelected");			
 			//view.SelectSession(session); // TODO implement select method
 			if (AppDelegate.IsPhone) tableView.DeselectRow (indexPath, true);

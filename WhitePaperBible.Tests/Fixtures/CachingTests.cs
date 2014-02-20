@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO.IsolatedStorage;
 using System.Runtime.Serialization;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using System.Xml.Serialization;
 
 namespace WhitePaperBible.Tests

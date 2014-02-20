@@ -1,24 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBibleCore/Commands/BootstrapCommand.cs">
     <Files>
       <File FileName="WhitePaperBibleCore/Services/PaperService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="47" Column="3" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListView.cs" Line="34" Column="4" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsListView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/TableSource/TagsTableSource.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagElement.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagCell.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="67" Column="5" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="92" Column="38" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListView.designer.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsListView.designer.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperElement.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBibleCore/Services/TagService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBibleCore/Constants.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/TableSource/PapersTableSource.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="310" Column="39" />
+      <File FileName="WhitePaperBibleCore/Commands/BootstrapCommand.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

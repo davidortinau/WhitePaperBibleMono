@@ -1,5 +1,5 @@
 using System;
-using WhitePaperBibleCore.Models;
+using WhitePaperBible.Core.Models;
 using MonoTouch.Dialog;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;

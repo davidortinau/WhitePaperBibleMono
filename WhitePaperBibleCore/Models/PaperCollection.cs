@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Runtime.Serialization;
 
-namespace WhitePaperBibleCore.Models
+namespace WhitePaperBible.Core.Models
 {
 	[DataContract]
     public class PaperCollection
