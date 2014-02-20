@@ -9,13 +9,13 @@ using MonkeyArms;
 namespace WhitePaperBibileCoreTests
 {
 	[TestFixture ()]
-	public class LoadingViewMediatorTests
+	public class LoadingViewMediatorTests:BaseTest
 	{
-		[Test (Description = "When PapersReceivedInvoker dispatches, Mediator should call OnLoadingComplete on View")]
+		[Test, Property ("Intent", "When PapersReceivedInvoker dispatches, Mediator should call OnLoadingComplete on View")]
 		public void Verify_View_OnLoadingComplete ()
 		{
 			MockPapersReceivedInvoker.Raise (invoker => invoker.Invoked += null, InvokerArgs.Empty);
-			MockView.Verify (view => view.OnLoadingComplete (), Times.Once ());
+			MockView.Verify (view => view.OnLoadingComplete (), Times.Once (), TestIntent);
 		}
 
 		Mock<ILoadingView> MockView;
