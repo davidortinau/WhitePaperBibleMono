@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Core", "WhitePaperBibleCore\WhitePaperBible.Core.csproj", "{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOS", "WhitePaperBible.iOS\WhitePaperBible.iOS.csproj", "{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Tests", "WhitePaperBible.Tests\WhitePaperBible.Tests.csproj", "{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}"
@@ -69,18 +67,6 @@ Global
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhone.Build.0 = Release|Any CPU
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhone.Build.0 = Release|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = WhitePaperBible.iOS\WhitePaperBible.iOS.csproj

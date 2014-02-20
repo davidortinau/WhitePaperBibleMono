@@ -10,7 +10,7 @@
 	-sim \
 	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/WhitePaperBibleTests.app \
 	-r \
-	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBibleCore/bin/Debug/WhitePaperBibleCore.dll \
+	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBible.PCL/bin/Debug/WhitePaperBible.PCL.dll \
 	-r \
 	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
 	-r \

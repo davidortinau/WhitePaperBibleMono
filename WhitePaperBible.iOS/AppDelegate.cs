@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.ObjCRuntime;
@@ -9,16 +8,16 @@ using MonkeyArms;
 using WhitePaperBible.Core.Commands;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
+using WhitePaperBible.Core.Services;
 
 namespace WhitePaperBible.iOS
 {
-	// The UIApplicationDelegate for the application. This class is responsible for launching the 
-	// User Interface of the application, as well as listening (and optionally responding) to 
+	// The UIApplicationDelegate for the application. This class is responsible for launching the
+	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : UIApplicationDelegate
 	{
-		
 		public const float Font16pt = 22f;
 		public const float Font10_5pt = 14f;
 		public const float Font10pt = 13f;
@@ -28,20 +27,17 @@ namespace WhitePaperBible.iOS
 		public static readonly UIColor ColorTextHome = UIColor.FromRGB (192, 205, 223);
 		public static readonly UIColor ColorHeadingHome = UIColor.FromRGB (150, 210, 254);
 		public static readonly UIColor ColorCellBackgroundHome = UIColor.FromRGB (36, 54, 72);
-		public static readonly UIColor ColorTextLink = UIColor.FromRGB (9, 9, 238);	
-		
-		
+		public static readonly UIColor ColorTextLink = UIColor.FromRGB (9, 9, 238);
 		// class-level declarations
 		UIWindow window;
 		UITabBarController tabBarController;
-		
-//		public static List<PaperNode> papers;
-//
+		//		public static List<PaperNode> papers;
+		//
 		public static List<TagNode> tags {
 			get;
 			set;
 		}
-		
+
 		public static bool IsPhone {
 			get {
 				return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone;
@@ -62,9 +58,8 @@ namespace WhitePaperBible.iOS
 					return false;
 			}
 		}
-		
 		//
-		// This method is invoked when the application has loaded and is ready to run. In this 
+		// This method is invoked when the application has loaded and is ready to run. In this
 		// method you should instantiate the window, load the UI into it and then make the window
 		// visible.
 		//
@@ -79,7 +74,7 @@ namespace WhitePaperBible.iOS
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
-			tabBarController = new TabBarController();
+			tabBarController = new TabBarController ();
 			
 			window.RootViewController = tabBarController;
 			window.MakeKeyAndVisible ();
@@ -89,11 +84,15 @@ namespace WhitePaperBible.iOS
 			return true;
 		}
 
-		void initMonkeyArms() {
-			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker>().Invoke();
+		void initMonkeyArms ()
+		{
 
-			DI.Get<PapersReceivedInvoker>().Invoked += (object sender, EventArgs e) => {
-				Console.WriteLine("GOT PAPERS");
+			DI.MapClassToInterface<WebClient, IJSONWebClient> ();
+
+			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
+
+			DI.Get<PapersReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
+				Console.WriteLine ("GOT PAPERS");
 			};
 		}
 	}

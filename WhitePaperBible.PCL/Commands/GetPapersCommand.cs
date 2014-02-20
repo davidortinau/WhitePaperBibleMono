@@ -5,6 +5,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using WhitePaperBible.Core.Views.Mediators;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace WhitePaperBible.Core.Commands
 {
@@ -15,14 +16,14 @@ namespace WhitePaperBible.Core.Commands
 
 		public override void Execute (InvokerArgs args)
 		{
-			var svc = new PaperService();
-			svc.GetPapers(onSuccess, onFail);
+			var svc = new PaperService ();
+			svc.GetPapers (onSuccess, onFail);
 		}
 
 		void onSuccess (System.Collections.Generic.List<PaperNode> paperNodes)
 		{
 			AM.Papers = new List<Paper> ();
-			foreach(var node in paperNodes){
+			foreach (var node in paperNodes) {
 				AM.Papers.Add (node.paper);
 			}
 
@@ -31,7 +32,7 @@ namespace WhitePaperBible.Core.Commands
 
 		void onFail (string message)
 		{
-			Console.WriteLine("ERROR {0}", message);
+			Debug.WriteLine ("ERROR {0}", message);
 		}
 	}
 }

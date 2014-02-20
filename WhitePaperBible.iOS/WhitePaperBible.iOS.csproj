@@ -96,6 +96,7 @@
     <Compile Include="UI\CustomElements\TagElement.cs" />
     <Compile Include="UI\CustomElements\TagCell.cs" />
     <Compile Include="Views\iPhone\PapersView.cs" />
+    <Compile Include="Services\WebClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -125,12 +126,9 @@
     <Folder Include="TableSource\" />
     <Folder Include="UI\" />
     <Folder Include="UI\CustomElements\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WhitePaperBibleCore\WhitePaperBible.Core.csproj">
-      <Project>{950C92D0-BB3C-49A0-B3E1-633B30EA6EED}</Project>
-      <Name>WhitePaperBible.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
       <Project>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</Project>
       <Name>WhitePaperBible.PCL</Name>
