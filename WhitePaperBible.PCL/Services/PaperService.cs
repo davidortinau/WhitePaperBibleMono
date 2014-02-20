@@ -17,6 +17,7 @@ namespace WhitePaperBible.Core.Services
 			IJSONWebClient webClient = DI.Get<IJSONWebClient> ();
 
 			webClient.RequestComplete += (object sender, EventArgs e) => {
+
 				List<PaperNode> nodes = JsonConvert.DeserializeObject<List<PaperNode>> (webClient.ResponseText);
 				success (nodes);
 			};
