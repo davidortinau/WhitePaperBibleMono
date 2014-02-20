@@ -1,16 +1,16 @@
 # Version: 7.0.6.168 (2ed9bc9)
-# [first argument, ignore] # /Users/dave/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/mtouch.exe
+# [first argument, ignore] # /Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/mtouch.exe
 /Developer/MonoTouch/usr/bin/mtouch \
 	-sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--cache \
-	/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Tests/obj/iPhoneSimulator/Debug/mtouch-cache \
+	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBible.Tests/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--nomanifest \
 	--nosign \
 	-sim \
-	/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/WhitePaperBibleTests.app \
+	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/WhitePaperBibleTests.app \
 	-r \
-	/Users/dave/Projects/WhitePaperBible/WhitePaperBibleCore/bin/Debug/WhitePaperBibleCore.dll \
+	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBibleCore/bin/Debug/WhitePaperBibleCore.dll \
 	-r \
 	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
 	-r \
@@ -26,4 +26,4 @@
 	-sdk \
 	7.0 \
 	--abi=i386 \
-	/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/WhitePaperBibleTests.exe \
+	/Users/bishopben/Documents/Projects/WhitePaperBible/WhitePaperBible.Tests/bin/iPhoneSimulator/Debug/WhitePaperBibleTests.exe \
