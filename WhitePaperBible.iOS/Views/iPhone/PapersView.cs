@@ -17,8 +17,6 @@ namespace WhitePaperBible.iOS
 {
 	public partial class PapersView : DialogViewController, IPapersListView
 	{
-		List<Paper> Papers;
-
 		public PapersView () : base (UITableViewStyle.Plain, null, true)
 		{
 			EnableSearch = true; 
@@ -34,21 +32,19 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
-				this.Papers = papers;
+			InvokeOnMainThread (delegate {
 
-				InvokeOnMainThread (delegate {
+				Root = new RootElement("Papers") {
+					from node in papers
+					group node by (node.title [0].ToString ().ToUpper ()) into alpha
+					orderby alpha.Key
+					select new Section (alpha.Key){
+						from eachNode in alpha
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+					}};
 
-					Root = new RootElement("Papers") {
-						from node in papers
-						group node by (node.title [0].ToString ().ToUpper ()) into alpha
-						orderby alpha.Key
-						select new Section (alpha.Key){
-							from eachNode in alpha
-							select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
-						}};
-
-					TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
-				});
+				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+			});
 
 		}
 

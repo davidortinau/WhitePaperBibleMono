@@ -88,10 +88,6 @@
     </Compile>
     <Compile Include="UI\CustomElements\PaperCell.cs" />
     <Compile Include="UI\CustomElements\PaperElement.cs" />
-    <Compile Include="Views\iPhone\PapersListView.cs" />
-    <Compile Include="Views\iPhone\PapersListView.designer.cs">
-      <DependentUpon>PapersListView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\iPhone\TagsListView.cs" />
     <Compile Include="Views\iPhone\TagsListView.designer.cs">
       <DependentUpon>TagsListView.cs</DependentUpon>
@@ -105,7 +101,6 @@
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
-    <InterfaceDefinition Include="Views\iPhone\PapersListView.xib" />
     <InterfaceDefinition Include="Views\iPhone\TagsListView.xib" />
   </ItemGroup>
   <ItemGroup>
