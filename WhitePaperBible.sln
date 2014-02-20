@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOS", "Whit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Tests", "WhitePaperBible.Tests\WhitePaperBible.Tests.csproj", "{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBibileCoreTests", "WhitePaperBibileCoreTests\WhitePaperBibileCoreTests.csproj", "{46DE30A6-9B97-42A4-A58C-891EE72D1A93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBibile.PCL.Tests", "WhitePaperBibileCoreTests\WhitePaperBibile.PCL.Tests.csproj", "{46DE30A6-9B97-42A4-A58C-891EE72D1A93}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.PCL", "WhitePaperBible.PCL\WhitePaperBible.PCL.csproj", "{75317DE9-E9AA-40ED-A17D-273B3EEAF998}"
 EndProject
