@@ -1,6 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBibileCoreTests/Mediators/LoadingViewMediatorTests.cs">
+    <Files>
+      <File FileName="WhitePaperBible.PCL/Mediators/LoadingViewMediator.cs" Line="22" Column="29" />
+      <File FileName="WhitePaperBibileCoreTests/Mediators/LoadingViewMediatorTests.cs" Line="3" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
