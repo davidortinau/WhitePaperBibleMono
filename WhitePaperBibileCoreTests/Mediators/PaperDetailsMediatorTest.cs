@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
 using WhitePaperBible.Core.Views;
 using Moq;
 using MonkeyArms;

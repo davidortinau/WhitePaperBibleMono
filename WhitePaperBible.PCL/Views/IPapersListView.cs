@@ -7,17 +7,17 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IPapersListView : IMediatorTarget
 	{
-		event EventHandler Filter;
+		Invoker Filter{ get; }
 
-		event EventHandler OnPaperSelected;
+		Invoker OnPaperSelected{ get; }
 
 		void SetPapers (List<Paper> papers);
 
-		string SearchPlaceHolderText{get;set;}
+		string SearchPlaceHolderText{ get; set; }
 
-		string SearchQuery{get;}
+		string SearchQuery{ get; }
 
-		Paper SelectedPaper{get;set;}
+		Paper SelectedPaper{ get; set; }
 	}
 }
 

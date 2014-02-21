@@ -2,11 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using WhitePaperBible.iOS.TableSource;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
@@ -22,26 +20,35 @@ namespace WhitePaperBible.iOS
 			EnableSearch = true; 
 			AutoHideSearch = true;
 			SearchPlaceholder = @"Find Papers";
+			this.Filter = new Invoker ();
+			this.OnPaperSelected = new Invoker ();
 		}
 
 		#region IPapersListView implementation
 
-		public event EventHandler Filter;
+		public Invoker Filter {
+			get;
+			private set;
+		}
 
-		public event EventHandler OnPaperSelected;
+		public Invoker OnPaperSelected {
+			get;
+			private set;
+		}
 
 		public void SetPapers (List<Paper> papers)
 		{
 			InvokeOnMainThread (delegate {
 
-				Root = new RootElement("Papers") {
+				Root = new RootElement ("Papers") {
 					from node in papers
 					group node by (node.title [0].ToString ().ToUpper ()) into alpha
 					orderby alpha.Key
-					select new Section (alpha.Key){
+					select new Section (alpha.Key) {
 						from eachNode in alpha
 						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
-					}};
+					}
+				};
 
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 			});
@@ -64,7 +71,7 @@ namespace WhitePaperBible.iOS
 		}
 
 		#endregion
-		
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -72,7 +79,7 @@ namespace WhitePaperBible.iOS
 			DI.RequestMediator (this);
 
 			SearchTextChanged += (sender, args) => {
-				Console.WriteLine("search text changed");	
+				Console.WriteLine ("search text changed");	
 			};
 			
 		}
@@ -83,6 +90,5 @@ namespace WhitePaperBible.iOS
 
 			DI.DestroyMediator (this);
 		}
-
 	}
 }

@@ -45,6 +45,7 @@
     <Compile Include="Mediators\LoadingViewMediatorTests.cs" />
     <Compile Include="BaseTest.cs" />
     <Compile Include="Mediators\PaperDetailsMediatorTest.cs" />
+    <Compile Include="Mediators\PaperListMediatorTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
