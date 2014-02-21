@@ -29,6 +29,7 @@ namespace WhitePaperBible.Core.Commands
 			AM.CurrentPaper.references = references;
 
 			DI.Get<PaperDetailsReceivedInvoker> ().Invoke ();
+
 		}
 
 		void onFail (string message)
