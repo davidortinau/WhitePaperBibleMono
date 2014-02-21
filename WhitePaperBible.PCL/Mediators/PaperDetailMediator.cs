@@ -13,6 +13,8 @@ namespace WhitePaperBible.Core.Mediators
 		public AppModel AppModel;
 		[Inject]
 		public PaperDetailsReceivedInvoker PaperDetailsReceived;
+		[Inject]
+		public GetPaperDetailsInvoker GetPaperDetails;
 		IPaperDetailView Target;
 
 		public PaperDetailMediator (IPaperDetailView view) : base (view)
@@ -22,24 +24,10 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-			DI.Get<PaperDetailsReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
-				SetPaper ();
-			};
+		
+			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetPaper ());
 
-			PaperDetailsReceived.Invoked += (object sender, EventArgs e) => {
-				SetPaper ();
-			};
-
-//			if(AppModel.CurrentPaper != null){
-//				Target.SetPaper (AppModel.CurrentPaper);
-//			}else{
-			DI.Get<GetPaperDetailsInvoker> ().Invoke ();
-//			}
-		}
-
-		public override void Unregister ()
-		{
-			base.Unregister ();
+			GetPaperDetails.Invoke ();
 		}
 
 		public void SetPaper ()

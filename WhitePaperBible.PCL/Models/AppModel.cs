@@ -1,14 +1,13 @@
 using System;
-
 using System.Collections.Generic;
 
 namespace WhitePaperBible.Core.Models
 {
 	public class AppModel
 	{
-		public List<Paper> Papers { get; set; } 
+		public List<Paper> Papers { get; set; }
 
-		public Paper CurrentPaper {
+		public virtual Paper CurrentPaper {
 			get;
 			set;
 		}
