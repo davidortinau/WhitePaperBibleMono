@@ -12,7 +12,7 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public AppModel AM;
 		[Inject]
-		public GetPapersService Service;
+		public IGetPapersService Service;
 		[Inject]
 		public PapersReceivedInvoker PapersReceived;
 

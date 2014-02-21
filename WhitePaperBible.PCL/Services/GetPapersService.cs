@@ -5,8 +5,18 @@ using Newtonsoft.Json;
 
 namespace WhitePaperBible.Core.Services
 {
-	public class GetPapersService:BaseService
+	public interface IGetPapersService:IBaseService
 	{
+		void Execute ();
+	}
+
+	public class GetPapersService:BaseService, IGetPapersService
+	{
+		public GetPapersService ()
+		{
+
+		}
+
 		public GetPapersService (IJSONWebClient webClient) : base (webClient)
 		{
 	

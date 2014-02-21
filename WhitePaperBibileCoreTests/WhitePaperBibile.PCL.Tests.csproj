@@ -51,6 +51,8 @@
     <Compile Include="Mediators\PaperListMediatorTests.cs" />
     <Compile Include="Services\BaseServiceTestClass.cs" />
     <Compile Include="Services\GetPapersServiceTests.cs" />
+    <Compile Include="TestData.cs" />
+    <Compile Include="Commands\GetPapersCommandTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -65,5 +67,6 @@
   <ItemGroup>
     <Folder Include="Mediators\" />
     <Folder Include="Services\" />
+    <Folder Include="Commands\" />
   </ItemGroup>
 </Project>

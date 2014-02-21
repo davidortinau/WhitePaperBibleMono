@@ -9,7 +9,7 @@ namespace WhitePaperBible.Core.Commands
 		public override void Execute (InvokerArgs args)
 		{
 
-
+			DI.MapClassToInterface<GetPapersService, IGetPapersService> ();
 
 			DI.MapCommandToInvoker<ConfigureModelsCommand, ConfigureModelsInvoker> ().Invoke ();
 			DI.MapCommandToInvoker<ConfigureViewsCommand, ConfigureViewsInvoker> ().Invoke ();

@@ -4,7 +4,13 @@ using Newtonsoft.Json;
 
 namespace WhitePaperBible.Core.Services
 {
-	public class BaseService:IInjectingTarget
+	public interface IBaseService
+	{
+		event EventHandler Success;
+		event EventHandler Fault;
+	}
+
+	public class BaseService:IInjectingTarget, IBaseService
 	{
 		[Inject]
 		public IJSONWebClient Client;

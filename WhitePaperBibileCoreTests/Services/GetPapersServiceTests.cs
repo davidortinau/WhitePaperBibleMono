@@ -22,15 +22,11 @@ namespace WhitePaperBibileCoreTests
 		[Test, Property ("Intent", "When WebClient raises Complete, Service should raise Success")]
 		public void VerifySuccessRaised ()
 		{
-			bool successRaised = false;
-			Service.Success += (object sender, EventArgs e) => {
-				successRaised = true;
-				((GetPapersServiceEventArgs)e).Papers.Count.ShouldEqual (TestData.PaperNodeList.Count, TestIntent);
-				((GetPapersServiceEventArgs)e).Papers [0].Index.ShouldEqual (TestData.PaperNodeList [0].Index, TestIntent);
-			};
+			bool successRaisedAndValid = false;
+			Service.Success += (object sender, EventArgs e) => successRaisedAndValid = VerifyResultIsValid (e);
 			MockWebClientSuccessResponseText ();
 			MockWebClient.Raise (client => client.RequestComplete += null, EventArgs.Empty);
-			successRaised.ShouldBeTrue (TestIntent);
+			successRaisedAndValid.ShouldBeTrue (TestIntent);
 		}
 
 		Mock<IJSONWebClient> MockWebClient;
@@ -48,6 +44,14 @@ namespace WhitePaperBibileCoreTests
 		static string UrlIsValid ()
 		{
 			return It.Is<string> (url => url.Contains ("papers.json"));
+		}
+
+		bool VerifyResultIsValid (EventArgs e)
+		{
+			var args = ((GetPapersServiceEventArgs)e);
+			args.Papers.Count.ShouldEqual (TestData.PaperNodeList.Count, TestIntent);
+			args.Papers [0].Index.ShouldEqual (TestData.PaperNodeList [0].Index, TestIntent);
+			return true;
 		}
 
 		void MockWebClientSuccessResponseText ()
