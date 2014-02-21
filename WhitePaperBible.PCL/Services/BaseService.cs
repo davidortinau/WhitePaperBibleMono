@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace WhitePaperBible.Core.Services
 {
-	public abstract class BaseService:IInjectingTarget
+	public class BaseService:IInjectingTarget
 	{
 		[Inject]
 		public IJSONWebClient Client;
@@ -40,7 +40,10 @@ namespace WhitePaperBible.Core.Services
 			Success (this, args);
 		}
 
-		protected abstract void HandleSuccess (object sender, EventArgs args);
+		protected virtual void HandleSuccess (object sender, EventArgs args)
+		{
+			throw(new NotImplementedException ());
+		}
 	}
 
 	public class ServiceFaultEventArgs:EventArgs
