@@ -25,8 +25,8 @@ namespace WhitePaperBibileCoreTests
 			bool successRaised = false;
 			Service.Success += (object sender, EventArgs e) => {
 				successRaised = true;
-				((GetPapersServiceEventArgs)e).Papers.Count.ShouldEqual (1, TestIntent);
-				((GetPapersServiceEventArgs)e).Papers [0].Index.ShouldEqual ("H", TestIntent);
+				((GetPapersServiceEventArgs)e).Papers.Count.ShouldEqual (TestData.PaperNodeList.Count, TestIntent);
+				((GetPapersServiceEventArgs)e).Papers [0].Index.ShouldEqual (TestData.PaperNodeList [0].Index, TestIntent);
 			};
 			MockWebClientSuccessResponseText ();
 			MockWebClient.Raise (client => client.RequestComplete += null, EventArgs.Empty);
@@ -52,13 +52,7 @@ namespace WhitePaperBibileCoreTests
 
 		void MockWebClientSuccessResponseText ()
 		{
-			MockWebClient.SetupGet (client => client.ResponseText).Returns (JsonConvert.SerializeObject (new List<PaperNode> () {
-				new PaperNode () {
-					paper = new Paper () {
-						title = "Hello World"
-					}
-				}
-			}));
+			MockWebClient.SetupGet (client => client.ResponseText).Returns (TestData.PapersJSON);
 		}
 	}
 }
