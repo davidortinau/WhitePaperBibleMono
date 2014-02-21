@@ -3,9 +3,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
-using WhitePaperBible.Core.Mediators;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace WhitePaperBible.Core.Commands
 {
@@ -13,26 +11,25 @@ namespace WhitePaperBible.Core.Commands
 	{
 		[Inject]
 		public AppModel AM;
+		[Inject]
+		public GetPapersService Service;
+		[Inject]
+		public PapersReceivedInvoker PapersReceived;
 
 		public override void Execute (InvokerArgs args)
 		{
-			var svc = new PaperService ();
-			svc.GetPapers (onSuccess, onFail);
+			Service.Success += onSuccess;
+			Service.Execute ();
 		}
 
-		void onSuccess (System.Collections.Generic.List<PaperNode> paperNodes)
+		void onSuccess (object sender, EventArgs args)
 		{
 			AM.Papers = new List<Paper> ();
-			foreach (var node in paperNodes) {
+			foreach (var node in ((GetPapersServiceEventArgs)args).Papers) {
 				AM.Papers.Add (node.paper);
 			}
 
-			DI.Get<PapersReceivedInvoker> ().Invoke ();
-		}
-
-		void onFail (string message)
-		{
-			Debug.WriteLine ("ERROR {0}", message);
+			PapersReceived.Invoke ();
 		}
 	}
 }

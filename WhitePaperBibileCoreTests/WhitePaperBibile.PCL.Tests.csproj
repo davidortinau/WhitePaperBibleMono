@@ -39,6 +39,9 @@
     <Reference Include="Should">
       <HintPath>..\packages\Should.1.1.20\lib\Should.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test.cs" />
@@ -46,6 +49,8 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="Mediators\PaperDetailsMediatorTest.cs" />
     <Compile Include="Mediators\PaperListMediatorTests.cs" />
+    <Compile Include="Services\BaseServiceTestClass.cs" />
+    <Compile Include="Services\GetPapersServiceTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -59,5 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mediators\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

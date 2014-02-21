@@ -75,6 +75,8 @@
     <Compile Include="Mediators\LoadingViewMediator.cs" />
     <Compile Include="Mediators\PaperDetailMediator.cs" />
     <Compile Include="Mediators\PapersListMediator.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\GetPapersService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
