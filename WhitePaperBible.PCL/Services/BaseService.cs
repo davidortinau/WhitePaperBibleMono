@@ -17,7 +17,7 @@ namespace WhitePaperBible.Core.Services
 
 		public event EventHandler Success = delegate{};
 		public event EventHandler Fault = delegate{};
-
+		//TODO: Figure out if we can get rid of two constructors
 		public BaseService ()
 		{
 			DIUtil.InjectProps (this);
