@@ -78,6 +78,9 @@
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\GetPapersService.cs" />
     <Compile Include="Services\GetTagsService.cs" />
+    <Compile Include="Mediators\TagsListMediator.cs" />
+    <Compile Include="Invokers\TagsReceivedInvoker.cs" />
+    <Compile Include="Views\ITagsListView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

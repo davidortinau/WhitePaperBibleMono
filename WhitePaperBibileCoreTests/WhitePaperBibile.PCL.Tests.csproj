@@ -54,6 +54,7 @@
     <Compile Include="TestData.cs" />
     <Compile Include="Commands\GetPapersCommandTest.cs" />
     <Compile Include="Services\GetTagsServiceTests.cs" />
+    <Compile Include="Mediators\TagListMediatorTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -8,7 +8,14 @@ namespace WhitePaperBible.Core.Models
 	{
 		public virtual List<Paper> Papers { get; set; }
 
+		public virtual List<Tag> Tags { get; set; }
+
 		public virtual Paper CurrentPaper {
+			get;
+			set;
+		}
+
+		public virtual Tag CurrentTag {
 			get;
 			set;
 		}
@@ -16,6 +23,11 @@ namespace WhitePaperBible.Core.Models
 		public virtual List<Paper> FilterPapers (string query)
 		{
 			return Papers.Where (ce => (ce.title.ToLower ().Contains (query))).ToList ();
+		}
+
+		public virtual List<Tag> FilterTags (string query)
+		{
+			return Tags.Where (ce => (ce.permalink.ToLower ().Contains (query))).ToList ();
 		}
 
 		public AppModel ()
