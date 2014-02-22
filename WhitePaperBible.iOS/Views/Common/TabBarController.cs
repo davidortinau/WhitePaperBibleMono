@@ -4,8 +4,7 @@ using MonoTouch.UIKit;
 namespace WhitePaperBible.iOS
 {
 	public class TabBarController : UITabBarController {
-		UIViewController papersScreen = null;
-		UIViewController papersList = null, tagsView = null;
+		UIViewController papersScreen = null, tagsScreen;
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
 		DialogViewController favoritesView, searchView, myPapersView, aboutView;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
@@ -44,12 +43,12 @@ namespace WhitePaperBible.iOS
 ////											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
 //			}
 			
-			tagsView = new TagsListView();
-			tagsView.Title = "Tags";
+			tagsScreen = new TagsView();
+			tagsScreen.Title = "Tags";
 			tagsNav = new UINavigationController();
 			tagsNav.TabBarItem = new UITabBarItem("Tags"
 						, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
-			tagsNav.PushViewController ( tagsView, false );
+			tagsNav.PushViewController ( tagsScreen, false );
 
 			
 			

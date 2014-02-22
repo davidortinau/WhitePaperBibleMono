@@ -81,6 +81,8 @@
     <Compile Include="Mediators\TagsListMediator.cs" />
     <Compile Include="Invokers\TagsReceivedInvoker.cs" />
     <Compile Include="Views\ITagsListView.cs" />
+    <Compile Include="Commands\GetTagsCommand.cs" />
+    <Compile Include="Invokers\GetTagsInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

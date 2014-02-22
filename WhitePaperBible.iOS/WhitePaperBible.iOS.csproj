@@ -81,28 +81,22 @@
     <Compile Include="Views\iPhone\SearchView.cs" />
     <Compile Include="Views\iPhone\MyPapersView.cs" />
     <Compile Include="Views\iPhone\AboutView.cs" />
-    <Compile Include="TableSource\PapersTableSource.cs" />
     <Compile Include="Views\iPhone\PaperDetailsView.cs" />
     <Compile Include="Views\iPhone\PaperDetailsView.designer.cs">
       <DependentUpon>PaperDetailsView.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\CustomElements\PaperCell.cs" />
     <Compile Include="UI\CustomElements\PaperElement.cs" />
-    <Compile Include="Views\iPhone\TagsListView.cs" />
-    <Compile Include="Views\iPhone\TagsListView.designer.cs">
-      <DependentUpon>TagsListView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TableSource\TagsTableSource.cs" />
     <Compile Include="UI\CustomElements\TagElement.cs" />
     <Compile Include="UI\CustomElements\TagCell.cs" />
     <Compile Include="Views\iPhone\PapersView.cs" />
     <Compile Include="Services\WebClient.cs" />
+    <Compile Include="Views\iPhone\TagsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
-    <InterfaceDefinition Include="Views\iPhone\TagsListView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />
@@ -123,7 +117,6 @@
     <Folder Include="Views\iPhone\" />
     <Folder Include="Views\iPad\" />
     <Folder Include="Images\Tabs\" />
-    <Folder Include="TableSource\" />
     <Folder Include="UI\" />
     <Folder Include="UI\CustomElements\" />
     <Folder Include="Services\" />

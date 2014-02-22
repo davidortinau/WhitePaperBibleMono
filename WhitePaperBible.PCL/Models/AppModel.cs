@@ -27,7 +27,7 @@ namespace WhitePaperBible.Core.Models
 
 		public virtual List<Tag> FilterTags (string query)
 		{
-			return Tags.Where (ce => (ce.permalink.ToLower ().Contains (query))).ToList ();
+			return Tags.Where (ce => (ce.name.ToLower ().Contains (query))).ToList ();
 		}
 
 		public AppModel ()

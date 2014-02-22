@@ -38,7 +38,7 @@ namespace WhitePaperBibileCoreTests
 				return new List<TagNode> () {
 					new TagNode () {
 						tag = new Tag () {
-							permalink = "this-is-a-permalink"
+							name = "Faith"
 						}
 					}
 				};

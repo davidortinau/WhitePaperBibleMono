@@ -6,8 +6,14 @@ namespace WhitePaperBible.Core.Models
 	[DataContract(Name = "tag")]
     public class Tag
     {
-        [DataMember(Name = "permalink")] 
-        public string permalink { get; set; }
+		[DataMember(Name = "name")] 
+		public string name { get; set; }
+
+		[DataMember(Name = "count")] 
+		public Int32 count { get; set; }
+
+		[DataMember(Name = "id")] 
+		public Int32 id { get; set; }
 	}
 }
 

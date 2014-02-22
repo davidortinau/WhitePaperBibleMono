@@ -10,40 +10,40 @@ using MonkeyArms;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PapersView : DialogViewController, IPapersListView
+	public partial class TagsView : DialogViewController, ITagsListView
 	{
-		public PapersView () : base (UITableViewStyle.Plain, null, true)
+		public TagsView () : base (UITableViewStyle.Plain, null, true)
 		{
 			EnableSearch = true; 
 			AutoHideSearch = true;
-			SearchPlaceholder = @"Find Papers";
+			SearchPlaceholder = @"Find Tags";
 			this.Filter = new Invoker ();
-			this.OnPaperSelected = new Invoker ();
+			this.OnTagSelected = new Invoker ();
 		}
 
-		#region IPapersListView implementation
+		#region ITagsListView implementation
 
 		public Invoker Filter {
 			get;
 			private set;
 		}
 
-		public Invoker OnPaperSelected {
+		public Invoker OnTagSelected {
 			get;
 			private set;
 		}
 
-		public void SetPapers (List<Paper> papers)
+		public void SetTags (List<Tag> tags)
 		{
 			InvokeOnMainThread (delegate {
 
-				Root = new RootElement ("Papers") {
-					from node in papers
-					group node by (node.title [0].ToString ().ToUpper ()) into alpha
+				Root = new RootElement ("Tags") {
+					from node in tags
+					group node by (node.name [0].ToString ().ToUpper ()) into alpha
 					orderby alpha.Key
 					select new Section (alpha.Key) {
 						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.TagElement (eachNode)
 					}
 				};
 
@@ -62,7 +62,7 @@ namespace WhitePaperBible.iOS
 			set;
 		}
 
-		public Paper SelectedPaper {
+		public Tag SelectedTag {
 			get;
 			set;
 		}

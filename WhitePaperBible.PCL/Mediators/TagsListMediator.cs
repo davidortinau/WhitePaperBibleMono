@@ -13,6 +13,9 @@ namespace WhitePaperBible.Core.Mediators
 		public AppModel AppModel;
 
 		[Inject]
+		public GetTagsInvoker GetTags;
+
+		[Inject]
 		public TagsReceivedInvoker TagsReceived;
 
 		ITagsListView Target;
@@ -50,6 +53,8 @@ namespace WhitePaperBible.Core.Mediators
 		{
 			if (AppModel.Tags != null) {
 				Target.SetTags (AppModel.Tags);
+			}else{
+				GetTags.Invoke ();
 			}
 		}
 	}
