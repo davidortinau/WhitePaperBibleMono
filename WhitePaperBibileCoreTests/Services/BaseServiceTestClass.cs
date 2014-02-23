@@ -9,46 +9,42 @@ namespace WhitePaperBibileCoreTests
 	[TestFixture ()]
 	public class BaseServiceTestClass:BaseTest
 	{
-		[Test, Property ("Intent", "When WebClient raises RequestComplete, BaseService should call HandleSuccess")]
-		public void VerifyHandleSuccess ()
-		{
-			MockWebClient.Raise (client => client.RequestComplete += null, EventArgs.Empty);
-			Service.HandleSuccessInvoked.ShouldBeTrue (TestIntent);
-		}
-
-		[Test, Property ("Intent", "When WebClient raises RequestError, BaseService should raise Fault")]
-		public void VerifyFaultRaied ()
-		{
-			bool faultRaised = false;
-			Service.Fault += (object sender, EventArgs e) => faultRaised = true;
-			MockWebClient.Raise (client => client.RequestError += null, EventArgs.Empty);
-			faultRaised.ShouldBeTrue (TestIntent);
-		}
-
-		Mock<IJSONWebClient> MockWebClient;
-		TestBaseService Service;
-
-		[SetUp]
-		public void Init ()
+		protected Mock<IJSONWebClient> MockWebClient;
+		//		[Test, Property ("Intent", "When WebClient raises RequestError, BaseService should raise Fault")]
+		//		public void VerifyFaultRaied ()
+		//		{
+		//			bool faultRaised = false;
+		//			Service.Fault += (object sender, EventArgs e) => faultRaised = true;
+		//			MockWebClient.Raise (client => client.RequestError += null, EventArgs.Empty);
+		//			faultRaised.ShouldBeTrue (TestIntent);
+		//		}
+		protected TService InitService<TService> () where TService:class
 		{
 			MockWebClient = new Mock<IJSONWebClient> ();
-			Service = new TestBaseService ();
-			Service.Client = MockWebClient.Object;
+			TService Service = Activator.CreateInstance<TService> ();
+			(Service as BaseService).Client = MockWebClient.Object;
+			return Service;
 		}
-	}
 
-	public class TestBaseService:BaseService
-	{
-		public bool HandleSuccessInvoked = false;
-
-		#region implemented abstract members of BaseService
-
-		protected override void HandleSuccess (object sender, EventArgs args)
+		protected void VerifyOpenedURLContains (string methodName)
 		{
-			HandleSuccessInvoked = true;
+			MockWebClient.Verify (client => client.OpenURL (UrlContains (methodName)));
 		}
 
-		#endregion
+		protected string UrlContains (string methodName)
+		{
+			return It.Is<string> (url => url.Contains (methodName));
+		}
+
+		protected void MockWebClientSuccessResponseText (string jsonResponse)
+		{
+			MockWebClient.SetupGet (client => client.ResponseText).Returns (jsonResponse);
+		}
+
+		protected void RaiseRequestComplete ()
+		{
+			MockWebClient.Raise (client => client.RequestComplete += null, EventArgs.Empty);
+		}
 	}
 }
 
