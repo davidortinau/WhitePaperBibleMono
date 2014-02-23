@@ -12,16 +12,6 @@ namespace WhitePaperBible.Core.Services
 
 	public class GetPapersService:BaseService, IGetPapersService
 	{
-		public GetPapersService ()
-		{
-
-		}
-
-		public GetPapersService (IJSONWebClient webClient) : base (webClient)
-		{
-	
-		}
-
 		public void Execute ()
 		{
 			Client.OpenURL (Constants.BASE_URI + "papers.json?caller=wpb-iPhone");

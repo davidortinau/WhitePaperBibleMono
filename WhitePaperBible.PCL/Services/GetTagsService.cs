@@ -12,16 +12,6 @@ namespace WhitePaperBible.Core.Services
 
 	public class GetTagsService:BaseService, IGetTagsService
 	{
-		public GetTagsService ()
-		{
-
-		}
-
-		public GetTagsService (IJSONWebClient webClient) : base (webClient)
-		{
-	
-		}
-
 		public void Execute ()
 		{
 			Client.OpenURL (Constants.BASE_URI + "tag.json?caller=wpb-iPhone");

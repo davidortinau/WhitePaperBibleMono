@@ -32,18 +32,14 @@ namespace WhitePaperBibileCoreTests
 		public void Init ()
 		{
 			MockWebClient = new Mock<IJSONWebClient> ();
-			Service = new TestBaseService (MockWebClient.Object);
+			Service = new TestBaseService ();
+			Service.Client = MockWebClient.Object;
 		}
 	}
 
 	public class TestBaseService:BaseService
 	{
 		public bool HandleSuccessInvoked = false;
-
-		public TestBaseService (IJSONWebClient client) : base (client)
-		{
-	
-		}
 
 		#region implemented abstract members of BaseService
 

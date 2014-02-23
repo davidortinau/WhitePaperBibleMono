@@ -62,6 +62,11 @@ namespace MonkeyArms
 
 		}
 
+		public static bool CanResolve<TClassToInject> () where TClassToInject:class
+		{
+			return Injector.CanResolve<TClassToInject> ();
+		}
+
 		public static TInvoker MapCommandToInvoker<TCommand, TInvoker> ()
 			where TCommand : Command
 			where TInvoker : Invoker

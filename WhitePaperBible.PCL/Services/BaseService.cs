@@ -10,35 +10,40 @@ namespace WhitePaperBible.Core.Services
 		event EventHandler Fault;
 	}
 
-	public class BaseService:IInjectingTarget, IBaseService
+	public abstract class BaseService:IInjectingTarget, IBaseService
 	{
+		private IJSONWebClient _client;
+
 		[Inject]
-		public IJSONWebClient Client;
+		public IJSONWebClient Client {
+			get {
+				return _client;
+			}
+			set {
+				_client = value;
+				AddEventListeners ();
+			}
+		}
 
 		public event EventHandler Success = delegate{};
 		public event EventHandler Fault = delegate{};
-		//TODO: Figure out if we can get rid of two constructors
-		public BaseService ()
-		{
-			DIUtil.InjectProps (this);
-			AddEventListeners ();
-		}
 
-		public BaseService (IJSONWebClient webClient)
+		protected BaseService ()
 		{
-			Client = webClient;
-			AddEventListeners ();
+			if (DI.CanResolve<IJSONWebClient> ()) {
+				DIUtil.InjectProps (this);
+			}
 		}
 
 		protected virtual void AddEventListeners ()
 		{
-			Client.RequestComplete += HandleSuccess;
-			Client.RequestError += (object sender, EventArgs e) => Fault (this, new ServiceFaultEventArgs (Client.ResponseText));
+			_client.RequestComplete += HandleSuccess;
+			_client.RequestError += (object sender, EventArgs e) => Fault (this, new ServiceFaultEventArgs (_client.ResponseText));
 		}
 
 		protected virtual TParseType ParseResponse<TParseType> () where TParseType:class
 		{
-			return JsonConvert.DeserializeObject<TParseType> (Client.ResponseText);
+			return JsonConvert.DeserializeObject<TParseType> (_client.ResponseText);
 		}
 
 		protected virtual void DispatchSuccess (EventArgs args)

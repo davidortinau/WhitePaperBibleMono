@@ -36,9 +36,9 @@ namespace WhitePaperBibileCoreTests
 		public void Init ()
 		{
 			MockWebClient = new Mock<IJSONWebClient> ();
-			Service = new GetTagsService (MockWebClient.Object);
+			Service = new GetTagsService ();
+			Service.Client = MockWebClient.Object;
 		}
-
 		/*
 		 * HELPER METHODS
 		 */
