@@ -11,6 +11,7 @@ namespace WhitePaperBible.Core.Commands
 
 			DI.MapClassToInterface<GetPapersService, IGetPapersService> ();
 			DI.MapClassToInterface<GetTagsService, IGetTagsService> ();
+			DI.MapClassToInterface<GetPapersByTagService, IGetPapersByTagService> ();
 
 			DI.MapCommandToInvoker<ConfigureModelsCommand, ConfigureModelsInvoker> ().Invoke ();
 			DI.MapCommandToInvoker<ConfigureViewsCommand, ConfigureViewsInvoker> ().Invoke ();
@@ -19,6 +20,7 @@ namespace WhitePaperBible.Core.Commands
 
 			DI.MapCommandToInvoker<GetPaperDetailsCommand, GetPaperDetailsInvoker> ();
 			DI.MapCommandToInvoker<GetTagsCommand, GetTagsInvoker> ();
+			DI.MapCommandToInvoker<GetPapersByTagCommand, GetPapersByTagInvoker> ();
 		}
 	}
 }

@@ -14,6 +14,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapMediatorToClass<PapersListMediator, IPapersListView> ();
 			DI.MapMediatorToClass<PaperDetailMediator, IPaperDetailView> ();
 			DI.MapMediatorToClass<TagsListMediator, ITagsListView> ();
+			DI.MapMediatorToClass<PapersListByTagMediator, IPapersByTagListView> ();
 
 		}
 	}

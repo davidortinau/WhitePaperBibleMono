@@ -47,6 +47,10 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		public override void Selected (DialogViewController dvc, UITableView tableView, MonoTouch.Foundation.NSIndexPath path)
 		{
 			//TODO on selected go to papers list for this tag
+			var papersByTagList = new PapersByTagView ();
+			papersByTagList.SelectedTag = tag;
+			papersByTagList.Title = tag.name;
+			dvc.ActivateController (papersByTagList);
 
 //			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(tagNode.tag);
 			//paperDetails.Title = tagNode.tag.permalink;
