@@ -92,6 +92,7 @@
     <Compile Include="Views\iPhone\PapersView.cs" />
     <Compile Include="Services\WebClient.cs" />
     <Compile Include="Views\iPhone\TagsView.cs" />
+    <Compile Include="Views\iPhone\PapersByTagView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />

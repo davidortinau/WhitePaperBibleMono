@@ -5,21 +5,17 @@ using Newtonsoft.Json;
 
 namespace WhitePaperBible.Core.Services
 {
-	public interface IGetPapersByTagService
+	public interface IGetPapersByTagService:IBaseService
 	{
-		void Execute (int tagId);
+		void Execute (string tagName);
 	}
 
 	public class GetPapersByTagService:BaseService, IGetPapersByTagService
 	{
-		#region IGetPapersByTagService implementation
-
-		public void Execute (int tagId)
+		public void Execute (string tagName)
 		{
-			Client.OpenURL ("papers/tagged/" + tagId.ToString () + "?caller=wpb-iPhone");
+			Client.OpenURL (Constants.BASE_URI + "papers/tagged/" + tagName + ".json?caller=wpb-iPhone");
 		}
-
-		#endregion
 
 		#region implemented abstract members of BaseService
 

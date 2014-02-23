@@ -66,6 +66,7 @@
     <Compile Include="Invokers\GetPapersInvoker.cs" />
     <Compile Include="Invokers\PaperDetailsReceivedInvoker.cs" />
     <Compile Include="Invokers\PapersReceivedInvoker.cs" />
+    <Compile Include="Services\TagService.cs" />
     <Compile Include="Views\ILoadingView.cs" />
     <Compile Include="Views\IPaperDetailView.cs" />
     <Compile Include="Views\IPapersListView.cs" />
@@ -84,6 +85,11 @@
     <Compile Include="Services\GetPaperReferencesService.cs" />
     <Compile Include="Invokers\PaperReferencesReceivedInvoker.cs" />
     <Compile Include="Services\GetPapersByTagService.cs" />
+    <Compile Include="Commands\GetPapersByTagCommand.cs" />
+    <Compile Include="Invokers\GetPapersByTagInvoker.cs" />
+    <Compile Include="Invokers\PapersByTagReceivedInvoker.cs" />
+    <Compile Include="Views\IPapersByTagListView.cs" />
+    <Compile Include="Mediators\PapersListByTagMediator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

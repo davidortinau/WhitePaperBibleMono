@@ -57,6 +57,7 @@
     <Compile Include="Mediators\TagListMediatorTests.cs" />
     <Compile Include="Services\GetPaperReferencesTestClass.cs" />
     <Compile Include="Services\GetPapersByTagServiceTests.cs" />
+    <Compile Include="Mediators\PaperListByTagMediatorTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
