@@ -75,6 +75,7 @@ namespace WhitePaperBibileCoreTests
 			TestMediator = new TagsListMediator (MockView.Object);
 			CreateAppModelMock ();
 			CreateTagsReceivedMock ();
+			TestMediator.GetTags = new Mock<GetTagsInvoker> ().Object;
 
 		}
 
