@@ -9,19 +9,16 @@ namespace WhitePaperBible.Tests
 	[TestFixture]
 	public class TagTests
 	{
-		TagService svc;
-
-		[SetUp]
-		public void init ()
-		{
-			svc = new TagService ();
-		}
-
-		[Test]
-		public void CanUseTagService ()
-		{
-			Assert.NotNull (svc, "TagService should not be null");
-		}
+		//		[SetUp]
+		//		public void init ()
+		//		{
+		//			svc = new TagService ();
+		//		}
+		//		[Test]
+		//		public void CanUseTagService ()
+		//		{
+		//			Assert.NotNull (svc, "TagService should not be null");
+		//		}
 		//		[Test]
 		//		public void CanGetTags ()
 		//		{

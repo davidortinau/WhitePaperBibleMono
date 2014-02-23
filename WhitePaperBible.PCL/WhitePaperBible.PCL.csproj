@@ -66,7 +66,6 @@
     <Compile Include="Invokers\GetPapersInvoker.cs" />
     <Compile Include="Invokers\PaperDetailsReceivedInvoker.cs" />
     <Compile Include="Invokers\PapersReceivedInvoker.cs" />
-    <Compile Include="Services\TagService.cs" />
     <Compile Include="Views\ILoadingView.cs" />
     <Compile Include="Views\IPaperDetailView.cs" />
     <Compile Include="Views\IPapersListView.cs" />
