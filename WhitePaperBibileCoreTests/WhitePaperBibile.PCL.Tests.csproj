@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{46DE30A6-9B97-42A4-A58C-891EE72D1A93}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -53,6 +53,8 @@
     <Compile Include="Services\GetPapersServiceTests.cs" />
     <Compile Include="TestData.cs" />
     <Compile Include="Commands\GetPapersCommandTest.cs" />
+    <Compile Include="Services\GetTagsServiceTests.cs" />
+    <Compile Include="Mediators\TagListMediatorTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -86,14 +86,8 @@ namespace WhitePaperBible.iOS
 
 		void initMonkeyArms ()
 		{
-
 			DI.MapClassToInterface<WebClient, IJSONWebClient> ();
-
 			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
-
-			DI.Get<PapersReceivedInvoker> ().Invoked += (object sender, EventArgs e) => {
-				Console.WriteLine ("GOT PAPERS");
-			};
 		}
 	}
 }

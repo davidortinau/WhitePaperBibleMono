@@ -13,8 +13,12 @@ namespace WhitePaperBibileCoreTests
 			get {
 				return JsonConvert.SerializeObject (PaperNodeList);
 			}
+		}
 
-
+		public static string TagsJSON {
+			get {
+				return JsonConvert.SerializeObject (TagNodeList);
+			}
 		}
 
 		public static List<PaperNode> PaperNodeList {
@@ -23,6 +27,18 @@ namespace WhitePaperBibileCoreTests
 					new PaperNode () {
 						paper = new Paper () {
 							title = "Hello World"
+						}
+					}
+				};
+			}
+		}
+
+		public static List<TagNode> TagNodeList {
+			get {
+				return new List<TagNode> () {
+					new TagNode () {
+						tag = new Tag () {
+							name = "Faith"
 						}
 					}
 				};

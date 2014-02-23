@@ -13,12 +13,12 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 	/// </summary>
 	public class TagElement : Element  {
 		static NSString cellId = new NSString ("TagCell");
-		TagNode tagNode;
+		Tag tag;
 		
 		/// <summary>for iPhone</summary>
-		public TagElement (TagNode node) : base (node.tag.permalink)
+		public TagElement (Tag tag) : base (tag.name)
 		{
-			tagNode = node;
+			this.tag = tag;
 		}
 		
 		
@@ -28,9 +28,9 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			var cell = tv.DequeueReusableCell (cellId);
 			count++;
 			if (cell == null)
-				cell = new TagCell (UITableViewCellStyle.Default, cellId, tagNode);
+				cell = new TagCell (UITableViewCellStyle.Default, cellId, tag);
 			else
-				((TagCell)cell).UpdateCell (tagNode);
+				((TagCell)cell).UpdateCell (tag);
 
 			return cell;
 		}
@@ -38,7 +38,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// <summary>Implement MT.D search on name and company properties</summary>
 		public override bool Matches (string text)
 		{
-			return tagNode.tag.permalink.ToLower ().IndexOf (text.ToLower ()) >= 0;
+			return tag.name.ToLower ().IndexOf (text.ToLower ()) >= 0;
 		}
 
 		/// <summary>

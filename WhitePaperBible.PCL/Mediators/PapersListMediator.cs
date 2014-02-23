@@ -11,8 +11,10 @@ namespace WhitePaperBible.Core.Mediators
 	{
 		[Inject]
 		public AppModel AppModel;
+
 		[Inject]
 		public PapersReceivedInvoker PapersReceived;
+
 		IPapersListView Target;
 
 		public PapersListMediator (IPapersListView view) : base (view)

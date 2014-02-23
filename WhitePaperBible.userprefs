@@ -1,8 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/Services/BaseService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Views/iPhone/TagsListView.cs">
     <Files>
-      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="28" Column="4" />
+      <File FileName="WhitePaperBible.PCL/Models/PaperCollection.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/GetPapersCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/PaperService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="8" Column="5" />
+      <File FileName="WhitePaperBible.PCL/Services/TagService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBibileCoreTests/Mediators/PaperListMediatorTests.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsListView.cs" Line="66" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
