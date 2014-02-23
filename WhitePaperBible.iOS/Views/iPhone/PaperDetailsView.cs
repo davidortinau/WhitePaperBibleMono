@@ -1,6 +1,5 @@
 using System;
 using System.Drawing;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using WhitePaperBible.Core.Models;
@@ -10,13 +9,17 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.MessageUI;
 using MonoTouch.Twitter;
 using System.Web;
+using MonkeyArms;
+using RestSharp;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PaperDetailsView : UIViewController
+	public partial class PaperDetailsView : UIViewController, IInjectingTarget
 	{
 		Paper paper;
-		
+		[Inject]
+		public GetPaperReferencesService PaperReferencesService;
+
 		/**
 		 * TODO
 		 * if I own the paper, set EDIT button in upper right nav
@@ -30,11 +33,12 @@ namespace WhitePaperBible.iOS
 		
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
+			DIUtil.InjectProps (this);
 			this.paper = paper;
 
 			this.HidesBottomBarWhenPushed = true;
 		}
-		
+
 		public override void DidReceiveMemoryWarning ()
 		{
 			// Releases the view if it doesn't have a superview.
@@ -42,14 +46,18 @@ namespace WhitePaperBible.iOS
 			
 			// Release any cached data, images, etc that aren't in use.
 		}
-		
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
-			var svc = new PaperService ();
-			svc.GetPaperReferences (paper.id, onReferencesReceived, onFailure);
+
+			PaperReferencesService.Success += (object sender, EventArgs e) => {
+				GetPaperReferencesServiceEventArgs args = e as GetPaperReferencesServiceEventArgs;
+				onReferencesReceived (args.References);
+			};
+			PaperReferencesService.Execute (paper.id);
 			
 			this.Title = paper.title;
 	
@@ -74,40 +82,38 @@ namespace WhitePaperBible.iOS
 //    tapRecognizer.delegate = self;
 //    [self.webView addGestureRecognizer:tapRecognizer];
 		}
-		
-//		float startX;
-//		
-//		public override void HandleTouchesBegan (NSSet touches, UIEvent evt)
-//		{
-//			Console.WriteLine("touchesBegan");
-//			var touch = (touches.AnyObject as UITouch);
-//			
-//			if(touch.View == this.View)
-//			{
-//				var location = touch.LocationInView(this.View);	
-//				startX = location.X - this.View.Center.X;
-//			}
-//		}
-//	
-//		public override void TouchesMoved (NSSet touches, UIEvent evt)
-//		{
-//			Console.WriteLine("touchesMoved");
-//			var touch = (touches.AnyObject as UITouch);
-//			if(touch.View == this.View)
-//			{
-//				var location = touch.LocationInView(this.View);	
-//				location.X = location.X - startX;
-//				this.View.Center = location;
-//			}
-//		}
-//		
-//		public override void TouchesEnded (NSSet touches, UIEvent evt)
-//		{
-//			Console.WriteLine("touchesEnded");
-//			// do anything?
-//		}
-		
-		[Export("HandleTapFrom")]
+		//		float startX;
+		//
+		//		public override void HandleTouchesBegan (NSSet touches, UIEvent evt)
+		//		{
+		//			Console.WriteLine("touchesBegan");
+		//			var touch = (touches.AnyObject as UITouch);
+		//
+		//			if(touch.View == this.View)
+		//			{
+		//				var location = touch.LocationInView(this.View);
+		//				startX = location.X - this.View.Center.X;
+		//			}
+		//		}
+		//
+		//		public override void TouchesMoved (NSSet touches, UIEvent evt)
+		//		{
+		//			Console.WriteLine("touchesMoved");
+		//			var touch = (touches.AnyObject as UITouch);
+		//			if(touch.View == this.View)
+		//			{
+		//				var location = touch.LocationInView(this.View);
+		//				location.X = location.X - startX;
+		//				this.View.Center = location;
+		//			}
+		//		}
+		//
+		//		public override void TouchesEnded (NSSet touches, UIEvent evt)
+		//		{
+		//			Console.WriteLine("touchesEnded");
+		//			// do anything?
+		//		}
+		[Export ("HandleTapFrom")]
 		public void HandleTapFrom (UITapGestureRecognizer recognizer)
 		{
 			Console.WriteLine ("getting taps");
@@ -155,7 +161,7 @@ namespace WhitePaperBible.iOS
 //		        // I perform content relayout here in the now modified webView screen real estate
 //		    }
 		}
-		
+
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
@@ -164,8 +170,8 @@ namespace WhitePaperBible.iOS
 			var userInfo = new NSString ("MyUserInfo");
 			var timer = NSTimer.CreateScheduledTimer (2, this, new Selector ("HideToolBar"), userInfo, false);
 		}
-		
-		[Export("HideToolBar")]
+
+		[Export ("HideToolBar")]
 		void HideToolBar (NSTimer timer)
 		{
 			toolbar.Alpha = 0f;
@@ -184,12 +190,12 @@ namespace WhitePaperBible.iOS
 		
 			return true;
 		}
-		
+
 		private void onFailure (String msg)
 		{
 			// Ooops
 		}
-		
+
 		private void onReferencesReceived (List<ReferenceNode> nodes)
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
@@ -210,7 +216,7 @@ namespace WhitePaperBible.iOS
 			
 			
 		}
-		
+
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
@@ -222,7 +228,7 @@ namespace WhitePaperBible.iOS
 			
 			ReleaseDesignerOutlets ();
 		}
-		
+
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
 			// Return true for supported orientations
@@ -239,12 +245,12 @@ namespace WhitePaperBible.iOS
 //										 otherButtonTitles:@"E-mail",@"Twitter",@"Facebook", nil];
 //			[actionSheet showInView:self.view];
 
-			var actionSheet = new UIActionSheet ("Sharing", null, "Cancel", null, null){
+			var actionSheet = new UIActionSheet ("Sharing", null, "Cancel", null, null) {
 				Style = UIActionSheetStyle.BlackTranslucent
 			};
-			actionSheet.AddButton("Email");
-			actionSheet.AddButton("Twitter");
-			actionSheet.AddButton("Facebook");
+			actionSheet.AddButton ("Email");
+			actionSheet.AddButton ("Twitter");
+			actionSheet.AddButton ("Facebook");
 			actionSheet.Clicked += HandleShareOptionClicked;
 				
 			actionSheet.ShowInView (View);
@@ -254,7 +260,7 @@ namespace WhitePaperBible.iOS
 		{
 			UIActionSheet myActionSheet = sender as UIActionSheet;
 			Console.WriteLine ("Clicked on item {0}", e.ButtonIndex);
-			if( e.ButtonIndex != myActionSheet.CancelButtonIndex) {
+			if (e.ButtonIndex != myActionSheet.CancelButtonIndex) {
 				
 				string paperTitle = paper.title;
 				string urlTitle = paper.url_title;
@@ -263,43 +269,42 @@ namespace WhitePaperBible.iOS
 
 				string messageCombined = subject + Environment.NewLine + paperFullURL;
 
-				if(e.ButtonIndex == 1){
+				if (e.ButtonIndex == 1) {
 					//email
-					if(MFMailComposeViewController.CanSendMail){
+					if (MFMailComposeViewController.CanSendMail) {
 						MFMailComposeViewController _mail = new MFMailComposeViewController ();
-						_mail.SetSubject( subject );
-			            _mail.SetMessageBody ( messageCombined, false);
-			            _mail.Finished += HandleMailFinished;
-			            this.PresentModalViewController (_mail, true);
+						_mail.SetSubject (subject);
+						_mail.SetMessageBody (messageCombined, false);
+						_mail.Finished += HandleMailFinished;
+						this.PresentModalViewController (_mail, true);
 					}			
-				}
-				else if(e.ButtonIndex == 2){
-					TWTweetComposeViewController tweetComposer = new TWTweetComposeViewController();
-					tweetComposer.SetInitialText(paperTitle + " | " + paperFullURL);
-					this.PresentModalViewController( tweetComposer, true );
-				}
-				else if(e.ButtonIndex == 3){
+				} else if (e.ButtonIndex == 2) {
+					TWTweetComposeViewController tweetComposer = new TWTweetComposeViewController ();
+					tweetComposer.SetInitialText (paperTitle + " | " + paperFullURL);
+					this.PresentModalViewController (tweetComposer, true);
+				} else if (e.ButtonIndex == 3) {
 					//facebook
-					string encodedURLString = HttpUtility.UrlEncode(paperFullURL);
+					string encodedURLString = HttpUtility.UrlEncode (paperFullURL);
 					string URLString = @"http://www.facebook.com/sharer.php?u=" + encodedURLString;
-					UIApplication.SharedApplication.OpenUrl(NSUrl.FromString(URLString));
+					UIApplication.SharedApplication.OpenUrl (NSUrl.FromString (URLString));
 
 				}
-		    }
+			}
 		
 		}
 
-		void HandleMailFinished (object sender, MFComposeResultEventArgs e){
+		void HandleMailFinished (object sender, MFComposeResultEventArgs e)
+		{
 
-		    if (e.Result == MFMailComposeResult.Sent) {
-		        UIAlertView alert = new UIAlertView ("Mail Alert", "Mail Sent",
-		            null, "Yippie", null);
-		        alert.Show ();
+			if (e.Result == MFMailComposeResult.Sent) {
+				UIAlertView alert = new UIAlertView ("Mail Alert", "Mail Sent",
+					                    null, "Yippie", null);
+				alert.Show ();
 		        
-		        // you should handle other values that could be returned 
-		        // in e.Result and also in e.Error 
-		    }
-		    e.Controller.DismissModalViewControllerAnimated (true);
+				// you should handle other values that could be returned 
+				// in e.Result and also in e.Error 
+			}
+			e.Controller.DismissModalViewControllerAnimated (true);
 		}
 
 		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender)
@@ -342,6 +347,7 @@ namespace WhitePaperBible.iOS
 		}
 
 		protected UIWebView webViewTest;
+
 		protected void AddWebView ()
 		{
 //			Font = UIFont.FromName ("OpenSans", 14),
@@ -362,36 +368,33 @@ namespace WhitePaperBible.iOS
 
 			webViewTest.Opaque = false;
 			webViewTest.BackgroundColor = UIColor.Clear;
-			webViewTest.LoadHtmlString(html, NSUrl.FromString("http://localhost"));
+			webViewTest.LoadHtmlString (html, NSUrl.FromString ("http://localhost"));
 
 //			DescriptionLabel.ShouldStartLoad = myHandler;
-		}	
-
+		}
 	}
-	
+
 	public class GestureDelegate : UIGestureRecognizerDelegate
 	{
 		public override bool ShouldReceiveTouch (UIGestureRecognizer recognizer, UITouch touch)
 		{
 			return true;
 		}
-		
+
 		public override bool ShouldBegin (UIGestureRecognizer recognizer)
 		{
 			return true;
 		}
-		
+
 		public override bool ShouldRecognizeSimultaneously (UIGestureRecognizer gestureRecognizer, UIGestureRecognizer otherGestureRecognizer)
 		{
 			return true;
 		}
-//		
-//		[Export("HandleTapFrom")]
-//		void HandleTapFrom(UITapGestureRecognizer recognizer){
-//			Console.WriteLine("selector from within delegate");	
-//		}
-		
-		
+		//
+		//		[Export("HandleTapFrom")]
+		//		void HandleTapFrom(UITapGestureRecognizer recognizer){
+		//			Console.WriteLine("selector from within delegate");
+		//		}
 	}
 }
 

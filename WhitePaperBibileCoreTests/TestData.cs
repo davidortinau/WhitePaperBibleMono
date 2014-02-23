@@ -21,6 +21,12 @@ namespace WhitePaperBibileCoreTests
 			}
 		}
 
+		public static string ReferenceJSON {
+			get {
+				return JsonConvert.SerializeObject (ReferenceNodeList);
+			}
+		}
+
 		public static List<PaperNode> PaperNodeList {
 			get {
 				return new List<PaperNode> () {
@@ -39,6 +45,20 @@ namespace WhitePaperBibileCoreTests
 					new TagNode () {
 						tag = new Tag () {
 							name = "Faith"
+						}
+					}
+				};
+			}
+		}
+
+		public static List<ReferenceNode> ReferenceNodeList {
+			get {
+				return new List<ReferenceNode> () {
+					new ReferenceNode () {
+						reference = new Reference () {
+							audio_tag = "an audio tag",
+							content = "some content",
+							reference = "a reference"
 						}
 					}
 				};

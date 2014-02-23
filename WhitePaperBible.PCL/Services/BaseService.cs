@@ -51,10 +51,7 @@ namespace WhitePaperBible.Core.Services
 			Success (this, args);
 		}
 
-		protected virtual void HandleSuccess (object sender, EventArgs args)
-		{
-			throw(new NotImplementedException ());
-		}
+		protected abstract void HandleSuccess (object sender, EventArgs args);
 	}
 
 	public class ServiceFaultEventArgs:EventArgs

@@ -15,27 +15,24 @@ namespace WhitePaperBible.Core.Commands
 		public AppModel AM;
 		[Inject]
 		public PaperDetailsReceivedInvoker PaperDetailsReceived;
+		[Inject]
+		public GetPaperReferencesService GetPaperReferences;
 
 		public override void Execute (InvokerArgs args)
 		{
-			var svc = new PaperService ();
-			svc.GetPaperReferences (AM.CurrentPaper.id, onSuccess, onFail);
+			GetPaperReferences.Success += onSuccess;
+			GetPaperReferences.Execute (AM.CurrentPaper.id);
 		}
 
-		void onSuccess (System.Collections.Generic.List<ReferenceNode> referenceNodes)
+		void onSuccess (object sender, EventArgs args)
 		{
 			var references = new List<Reference> ();
-			foreach (var node in referenceNodes) {
+			foreach (var node in (args as GetPaperReferencesServiceEventArgs).References) {
 				references.Add (node.reference);
 			}
 			AM.CurrentPaper.references = references;
 
 			PaperDetailsReceived.Invoke ();
-		}
-
-		void onFail (string message)
-		{
-			Debug.WriteLine ("ERROR {0}", message);
 		}
 	}
 }
