@@ -1,12 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/Models/Paper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/Services/BaseService.cs">
     <Files>
-      <File FileName="WhitePaperBible.PCL/Models/PaperCollection.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetPapersCommand.cs" Line="19" Column="21" />
-      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="5" Column="12" />
-      <File FileName="WhitePaperBible.PCL/Services/PaperService.cs" Line="21" Column="70" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="8" Column="5" />
+      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="28" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
