@@ -89,6 +89,10 @@
     <Compile Include="Invokers\PapersByTagReceivedInvoker.cs" />
     <Compile Include="Views\IPapersByTagListView.cs" />
     <Compile Include="Mediators\PapersListByTagMediator.cs" />
+    <Compile Include="Commands\ConfigureServicesCommand.cs" />
+    <Compile Include="Invokers\ConfigureServicesInvoker.cs" />
+    <Compile Include="Commands\ConfigureCommandsCommand.cs" />
+    <Compile Include="Invokers\ConfigureCommandsInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
