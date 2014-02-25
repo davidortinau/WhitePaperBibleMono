@@ -12,6 +12,11 @@ namespace WhitePaperBible.iOS
 {
 	public partial class PapersView : DialogViewController, IPapersListView
 	{
+		public void PromptForLogin ()
+		{
+			throw new NotImplementedException ();
+		}
+
 		public PapersView () : base (UITableViewStyle.Plain, null, true)
 		{
 			EnableSearch = true; 

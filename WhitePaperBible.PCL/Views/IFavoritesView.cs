@@ -5,7 +5,7 @@ using MonkeyArms;
 
 namespace WhitePaperBible.Core.Views
 {
-	public interface IPapersListView : IMediatorTarget
+	public interface IFavoritesView : IMediatorTarget
 	{
 		void PromptForLogin ();
 

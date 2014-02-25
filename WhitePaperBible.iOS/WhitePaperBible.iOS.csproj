@@ -65,6 +65,7 @@
     <Reference Include="RestSharp.MonoTouch">
       <HintPath>..\Components\restsharp-104.1.0\lib\ios\RestSharp.MonoTouch.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -93,6 +94,13 @@
     <Compile Include="Services\WebClient.cs" />
     <Compile Include="Views\iPhone\TagsView.cs" />
     <Compile Include="Views\iPhone\PapersByTagView.cs" />
+    <Compile Include="Views\iPhone\LoginView.cs" />
+    <Compile Include="UI\AppStyles.cs" />
+    <Compile Include="UI\ClassExtensions.cs" />
+    <Compile Include="UI\Environment.cs" />
+    <Compile Include="Managers\ResourceManager.cs" />
+    <Compile Include="Invokers\LoginFinishedInvokerArgs.cs" />
+    <Compile Include="Invokers\LoginFinishedInvoker.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -121,6 +129,8 @@
     <Folder Include="UI\" />
     <Folder Include="UI\CustomElements\" />
     <Folder Include="Services\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Invokers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
@@ -205,6 +215,8 @@
     <BundleResource Include="Resources\favorites.png" />
     <BundleResource Include="Resources\favorited%402x.png" />
     <BundleResource Include="Resources\favorites%402x.png" />
+    <BundleResource Include="Resources\Strings.xml" />
+    <BundleResource Include="Resources\Integers.xml" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Images\Tabs\favorites.png" />

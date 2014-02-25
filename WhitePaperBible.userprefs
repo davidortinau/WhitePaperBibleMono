@@ -1,70 +1,87 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/Commands/BootstrapCommand.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Views/iPhone/LoginView.cs">
     <Files>
       <File FileName="WhitePaperBible.PCL/Models/PaperCollection.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/GetPapersCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/TagService.cs" Line="25" Column="68" />
       <File FileName="WhitePaperBibileCoreTests/Mediators/PaperListMediatorTests.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBibileCoreTests/Services/GetPapersServiceTests.cs" Line="7" Column="35" />
+      <File FileName="WhitePaperBibileCoreTests/Services/GetPapersServiceTests.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBibileCoreTests/Services/GetTagsServiceTests.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetTagsService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBibileCoreTests/TestData.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Tag.cs" Line="18" Column="2" />
-      <File FileName="WhitePaperBible.PCL/Models/TagNode.cs" Line="7" Column="12" />
+      <File FileName="WhitePaperBible.PCL/Models/Tag.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/TagNode.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBibileCoreTests/Mediators/TagListMediatorTests.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="5" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="5" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/AppModel.cs" Line="26" Column="4" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagElement.cs" Line="52" Column="37" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagCell.cs" Line="53" Column="4" />
-      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="53" Column="4" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="129" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="10" Column="4" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureViewsCommand.cs" Line="17" Column="76" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="13" Column="63" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/AppModel.cs" Line="20" Column="8" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagElement.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagCell.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="59" Column="41" />
+      <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="139" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/ConfigureViewsCommand.cs" Line="17" Column="63" />
       <File FileName="WhitePaperBible.PCL/Mediators/TagsListMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetTagsCommand.cs" Line="18" Column="3" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureInvokersCommand.cs" Line="17" Column="51" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/DIUtil.cs" Line="17" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="18" Column="3" />
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="90" Column="40" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetPaperDetailsCommand.cs" Line="19" Column="35" />
+      <File FileName="WhitePaperBible.PCL/Commands/GetTagsCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/ConfigureInvokersCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/MonkeyArms/DIUtil.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="20" Column="52" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/GetPaperDetailsCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetPaperReferencesService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBibileCoreTests/Services/GetPaperReferencesTestClass.cs" Line="34" Column="22" />
-      <File FileName="WhitePaperBibileCoreTests/Services/GetPapersByTagServiceTests.cs" Line="15" Column="27" />
-      <File FileName="WhitePaperBible.PCL/Services/GetPapersByTagService.cs" Line="12" Column="2" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetPapersByTagCommand.cs" Line="32" Column="31" />
-      <File FileName="WhitePaperBible.PCL/Invokers/GetPapersByTagInvoker.cs" Line="25" Column="3" />
-      <File FileName="WhitePaperBible.PCL/Invokers/PapersByTagReceivedInvoker.cs" Line="14" Column="26" />
-      <File FileName="WhitePaperBibileCoreTests/Mediators/PaperListByTagMediatorTests.cs" Line="109" Column="3" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersByTagView.cs" Line="17" Column="8" />
-      <File FileName="WhitePaperBible.PCL/Views/IPapersListView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IPapersByTagListView.cs" Line="22" Column="27" />
+      <File FileName="WhitePaperBibileCoreTests/Services/GetPaperReferencesTestClass.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBibileCoreTests/Services/GetPapersByTagServiceTests.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/GetPapersByTagService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/GetPapersByTagCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Invokers/GetPapersByTagInvoker.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Invokers/PapersByTagReceivedInvoker.cs" Line="25" Column="4" />
+      <File FileName="WhitePaperBibileCoreTests/Mediators/PaperListByTagMediatorTests.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersByTagView.cs" Line="26" Column="4" />
+      <File FileName="WhitePaperBible.PCL/Views/IPapersListView.cs" Line="10" Column="3" />
+      <File FileName="WhitePaperBible.PCL/Views/IPapersByTagListView.cs" Line="12" Column="26" />
       <File FileName="WhitePaperBible.PCL/Views/IPaperDetailView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PapersListByTagMediator.cs" Line="23" Column="55" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListByTagMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBibileCoreTests/Mediators/LoginMediatorTests.cs" Line="78" Column="4" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/LoginView.cs" Line="121" Column="6" />
+      <File FileName="WhitePaperBible.iOS/SecondViewController.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/ClassExtensions.cs" Line="7" Column="11" />
+      <File FileName="WhitePaperBible.iOS/UI/Environment.cs" Line="5" Column="31" />
+      <File FileName="WhitePaperBible.iOS/Managers/ResourceManager.cs" Line="16" Column="48" />
+      <File FileName="WhitePaperBible.PCL/Mediators/LoginMediator.cs" Line="41" Column="4" />
+      <File FileName="WhitePaperBible.PCL/Invokers/ConfigureViewsInvoker.cs" Line="7" Column="3" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" Line="19" Column="30" />
+      <File FileName="WhitePaperBible.iOS/Resources/Strings.xml" Line="12" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="WhitePaperBibile.PCL.Tests" expanded="True">
             <Node name="Mediators" expanded="True" />
+            <Node name="Services" expanded="True" />
+            <Node name="Commands" expanded="True" />
           </Node>
           <Node name="WhitePaperBible.iOS" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Managers" expanded="True" />
+            <Node name="Invokers" expanded="True" />
+            <Node name="Resources" expanded="True" />
             <Node name="Views" expanded="True">
-              <Node name="iPhone" expanded="True" />
+              <Node name="Common" expanded="True" />
+              <Node name="iPhone" expanded="True">
+                <Node name="LoginView.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="UI" expanded="True">
               <Node name="CustomElements" expanded="True" />
             </Node>
           </Node>
           <Node name="WhitePaperBible.PCL" expanded="True">
-            <Node name="Commands" expanded="True">
-              <Node name="BootstrapCommand.cs" selected="True" />
-            </Node>
+            <Node name="Commands" expanded="True" />
             <Node name="Invokers" expanded="True" />
             <Node name="Mediators" expanded="True" />
+            <Node name="Models" expanded="True" />
             <Node name="MonkeyArms" expanded="True" />
             <Node name="Services" expanded="True" />
             <Node name="Views" expanded="True" />
@@ -77,7 +94,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" line="22" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

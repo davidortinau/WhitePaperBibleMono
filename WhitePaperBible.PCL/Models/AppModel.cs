@@ -20,6 +20,11 @@ namespace WhitePaperBible.Core.Models
 			set;
 		}
 
+		public virtual bool IsLoggedIn
+		{
+			get;set;
+		}
+
 		public virtual List<Paper> FilterPapers (string query)
 		{
 			return Papers.Where (ce => (ce.title.ToLower ().Contains (query))).ToList ();
@@ -32,6 +37,7 @@ namespace WhitePaperBible.Core.Models
 
 		public AppModel ()
 		{
+			IsLoggedIn = false;
 		}
 	}
 }

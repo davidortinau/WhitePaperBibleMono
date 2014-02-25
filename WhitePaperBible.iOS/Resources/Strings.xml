@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">TNTTrainerAndroid</string>
+	
+	<!-- Login -->
+	<string name="login">Login</string>
+	<string name="email">Email</string>
+	<string name="emailPlaceholder">me@example.com</string>
+	<string name="password">Password</string>
+	<string name="submit">Submit</string>
+	<string name="register">Register</string>
+	<string name="learnMore">Learn more about Team in Training</string>
+	<string name="authenticationError">Authentication Error</string>
+	<string name="ok">Ok</string>
+	<string name="invalidLogin">Sorry, your email/password were incorrect.</string>
+	
+	
+	
+	<!--- Tab Titles -->
+	<string name="team">Team</string>
+	<string name="workouts">Workouts</string>
+	<string name="myProgress">My Progress</string>
+	<string name="settings">Settings</string>
+	<string name="today">Today</string>
+
+	<!--- My Progress -->
+	<string name="countdown">Countdown</string>
+	<string name="trainingTotal">Training Total</string>
+	<string name="total">Total</string>
+	<string name="pace">Pace</string>
+	<string name="mins">Mins</string>
+	<string name="hours">Hours</string>
+	<string name="runs">Runs</string>
+	<string name="hoursMinsTotal">{0} hours {1} mins</string>
+	<string name="paceAverage">{0} avg</string>
+	<string name="milesRunsTotal">{0} miles over {1} runs</string>
+	<string name="paceBest">{0} best</string>
+	<string name="minMileBest">Min Mile Best</string>
+	<string name="minMileAvg">Min Mile Avg</string>
+
+
+	<string name="start">Start</string>
+	<string name="selectYourLevel">Select Your Level</string>
+	<string name="level1">Level 1</string>
+	<string name="level2">Level 2</string>
+	<string name="level3">Level 3</string>
+	<string name="itsRaceTime">It\'s race time in:</string>
+	<string name="totalTime">Total Time</string>
+	<string name="totalDistance">Total Distance</string>
+	<string name="totalCalories">Total Calories</string>
+	<string name="avgMilePace">Avg Mile Pace</string>
+	<string name="bestMile">Best Mile</string>
+	<string name="numberOfRuns">Number of Runs</string>
+	
+	<string name="loginIncorrect">Sorry, Username/Password is incorrect</string>
+	<string name="time">Time</string>
+	<string name="distance">Distance</string>
+	<string name="paceMPH">Pace (mph)</string>
+	<string name="calories">Calories</string>
+
+	<!--- Session Screen -->
+	<string name="touchToEnter">Touch to Enter</string>
+	<string name="summary">Summary</string>
+	<string name="editStartTime">Edit Start Time</string>
+	<string name="editEndTime">Edit End Time</string>
+
+	<!-- Social -->
+	<string name="twitter">Twitter</string>
+	<string name="facebook">Facebook</string>
+	<string name="shareResults">Share Results</string>
+	<string name="sessionResults">I just completed {0:0.00} in {1} with @TNTTrainerApp</string>
+	<string name="shareProgress">Share Progress</string>
+	<string name="progressResults">I have trained for a total of {0} hours {1} minutes and completed {2:0.00} in {3} runs with @TNTTrainerApp</string>
+
+	<!--- Exercise Screen -->
+	<string name="done">Done</string>
+	<string name="pause">Pause</string>
+	<string name="resume">Resume</string>
+	<string name="goBack">Go Back</string>
+	<string name="endWorkout">End Workout</string>
+	<string name="selectMusic">Select Music</string>
+
+	<!--- Workout Screen -->
+	<string name="loading">Loading...</string>
+	<string name="updating">Updating...</string>
+	<string name="workout">Workout!</string>
+	<string name="freeRun">Free Run!</string>
+	<string name="freeRunDescription">Start running now or if you want to engage in a workout plan set your event info in the settings screen.</string>
+	<string name="eventCompleted">Event Completed</string>
+	<string name="eventDateNotSet">Event Completed/Not Set</string>
+	<string name="congratulations">Congratulations!</string>
+	<string name="eventCompletedInstructions">Congratulations on completing your event! If you wish to do another event just update the event date in your settings.</string>
+	<string name="complete">Completed!</string>
+	<string name="restDay">Rest Day!</string>
+	<string name="restPlaceholder">“Each person deserves a day away in which no problems are confronted, no solutions searched for. Each of us needs to withdraw from the cares which will not withdraw from us.”
+Maya Angelou
+	</string>
+	<string name="cheerTeammates">Cheer teammates</string>
+	<string name="whoops">Whoops!</string>
+	<string name="whoopsBodyText">You appear to have missed a workout! It happens. We’re all human. If you completed the workout, just enter an update.</string>
+	<string name="noWorkoutLogged">No workout logged!</string>
+	<string name="update">Update</string>
+	<string name="skip">Skip</string>
+	<string name="workoutWeekDay">Week {0}: Day {1}</string>
+	<string name="calendar">Calendar</string>
+
+	<!-- Team Screen -->
+	<string name="noWorkoutsCompleted">No Workouts Completed</string>
+	<string name="lastRun">{0} LAST RUN</string>
+	<string name="milePace">{0} min/mile</string>
+	<string name="kmPace">{0} min/km</string>
+	<string name="members">{0} members</string>
+	
+	<!-- Settings -->
+	<string name="firstName">First Name</string>
+	<string name="lastName">Last Name</string>
+	<string name="height">Height</string>
+	<string name="weight">Weight</string>
+	<string name="gender">Gender</string>
+	<string name="male">Male</string>
+	<string name="female">Female</string>
+	<string name="dateOfBirth">Date of Birth</string>
+	<string name="units">Units</string>
+	<string name="miles">miles</string>
+	<string name="kilometers">kilometers</string>
+	<string name="level">Level</string>
+	<string name="event">Event</string>
+	<string name="startTime">Start Time</string>
+	<string name="endTime">End Time</string>
+	<string name="myTeam">My Team</string>
+	<string name="save">Save</string>
+	<string name="eventName">Event Name</string>
+	<string name="eventDateTime">Event Date/Time</string>
+	<string name="notSet">Not Set</string>
+	<string name="setHeight">Set Height</string>
+	<string name="setWeight">Set Weight</string>
+	<string name="setBirthdate">Set Birthdate</string>
+	<string name="setEventDate">Set Event Date</string>
+	<string name="setUnits">Set Units</string>
+	<string name="setGender">Set Gender</string>
+	
+	<string-array name="gender_options_array">
+		<item>Male</item>
+		<item>Female</item>
+	</string-array>
+	
+	<string-array name="height_feet_options_array">
+		<item>3\'</item>
+		<item>4\'</item>
+		<item>5\'</item>
+		<item>6\'</item>
+		<item>7\'</item>
+	</string-array>
+	
+	<string-array name="height_inches_options_array">
+		<item>0"</item>
+		<item>1"</item>
+		<item>2"</item>
+		<item>3"</item>
+		<item>4"</item>
+		<item>5"</item>
+		<item>6"</item>
+		<item>7"</item>
+		<item>8"</item>
+		<item>9"</item>
+		<item>10"</item>
+		<item>11"</item>
+	</string-array>
+	
+	<string-array name="weight_hundreds_options_array">
+		<item>-</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	
+	<string-array name="numbers_options_array">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+	</string-array>
+	
+	<string-array name="units_options_array">
+		<item>English</item>
+		<item>Metric</item>
+	</string-array>
+	
+	<string-array name="level_options_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+</resources>

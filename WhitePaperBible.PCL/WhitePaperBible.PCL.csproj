@@ -93,6 +93,10 @@
     <Compile Include="Invokers\ConfigureServicesInvoker.cs" />
     <Compile Include="Commands\ConfigureCommandsCommand.cs" />
     <Compile Include="Invokers\ConfigureCommandsInvoker.cs" />
+    <Compile Include="Mediators\FavoritesListMediator.cs" />
+    <Compile Include="Views\ILoginView.cs" />
+    <Compile Include="Mediators\LoginMediator.cs" />
+    <Compile Include="Views\IFavoritesView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

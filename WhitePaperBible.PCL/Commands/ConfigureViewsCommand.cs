@@ -8,13 +8,13 @@ namespace WhitePaperBible.Core.Commands
 	{
 		public override void Execute (InvokerArgs args)
 		{
-//			base.Execute (args);
-
 			DI.MapMediatorToClass<LoadingViewMediator, ILoadingView> ();
 			DI.MapMediatorToClass<PapersListMediator, IPapersListView> ();
 			DI.MapMediatorToClass<PaperDetailMediator, IPaperDetailView> ();
 			DI.MapMediatorToClass<TagsListMediator, ITagsListView> ();
 			DI.MapMediatorToClass<PapersListByTagMediator, IPapersByTagListView> ();
+			DI.MapMediatorToClass<LoginMediator, ILoginView> ();
+			DI.MapMediatorToClass<FavoritesListMediator, IFavoritesView> ();
 
 		}
 	}
