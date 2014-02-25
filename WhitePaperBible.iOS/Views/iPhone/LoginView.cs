@@ -44,7 +44,7 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			this.View.BackgroundColor = UIColor.White;
+			this.View.BackgroundColor = AppStyles.DarkGray;
 
 			InitUI ();
 			AddEventHandlers ();
@@ -135,8 +135,8 @@ namespace WhitePaperBible.iOS
 		void CreateLoginForm ()
 		{
 			//form container
-			loginForm = new UIView (new RectangleF (0, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight, WhitePaperBible.iOS.UI.Environment.ScreenWidth, 125));
-			loginForm.BackgroundColor = AppStyles.OffWhite;
+			loginForm = new UIView (new RectangleF (0, 40, WhitePaperBible.iOS.UI.Environment.ScreenWidth, 125));
+			loginForm.BackgroundColor = AppStyles.DarkGray;
 			View.AddSubview (loginForm);
 
 			//Username Input

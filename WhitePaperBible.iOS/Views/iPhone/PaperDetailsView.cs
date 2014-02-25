@@ -60,8 +60,24 @@ namespace WhitePaperBible.iOS
 			PaperReferencesService.Execute (paper.id);
 			
 			this.Title = paper.title;
+
+			this.View.Frame = this.View.Bounds = new RectangleF (0, 0, this.View.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			this.View.AutoresizingMask = UIViewAutoresizing.All;
+			this.View.AutosizesSubviews = true;
+
+			webView.AutoresizingMask = UIViewAutoresizing.All;
+//
+//			UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin |
+//			UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | 
+//			UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+
 	
+//			webView.Bounds = new RectangleF (webView.Bounds.X, webView.Bounds.Y, webView.Bounds.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			webView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			//			webView.Layer.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
 			webView.ScrollView.ScrollEnabled = true;
+			webView.ScrollView.AutoresizingMask = UIViewAutoresizing.All;
+			webView.ScrollView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
 //			this.NavigationController.SetNavigationBarHidden (true, false);
 
 
@@ -362,7 +378,7 @@ namespace WhitePaperBible.iOS
 			html += "<h2>Our Story</h2><p>If you've ever sent your child empty-handed to a class party, attended parent/teacher conferences on the wrong day or arrived an hour early for a game, you're not alone. It's not bad parenting, it's bad scheduling and trust us, we've been there too.</p><p>Year after year we would receive paper calendars from our children's schools, get several emails a week, or would be encouraged to visit websites to view upcoming events (sports teams, Boy Scouts/ Girl Scouts, ballet, band and track club all had different sites!). Sometimes we would enter the information into a paper agenda, which couldn't be shared. Or we would type everything into our computer's calendar hoping the information wouldn't change. And, as the school year progressed, updates would take the form of crumpled notes, skimmed over emails and hurried messages from coaches and teachers that didn't always make it to the master calendar. We'd often ask ourselves, \"Why can't school events appear on our smart phones or computer calendar programs?\" or \"If there is a change, couldn't someone update the calendar for us so we don't have to keep track of emails, notes, etc? Then, one day, we stopped wishing and got to work.</p><p>We are parents to three school-age (and very busy) children and now we\'re also the proud parents of MyDiem.com. We're so happy to share this much-needed tool with other busy parents. Hopefully you will find this tool helpful in keeping track of your child's activities.</p>";
 			html += "</body>";
 
-			webViewTest = new UIWebView (new RectangleF (0, 0, 320, 435));
+			webViewTest = new UIWebView (new RectangleF (0, 0, 320, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight));
 			webViewTest.SizeToFit ();
 			View.AddSubview (webViewTest);
 
