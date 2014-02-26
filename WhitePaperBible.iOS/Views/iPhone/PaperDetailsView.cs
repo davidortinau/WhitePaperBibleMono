@@ -89,8 +89,6 @@ namespace WhitePaperBible.iOS
 			tapRecognizer.NumberOfTapsRequired = 1;
 			tapRecognizer.Delegate = new GestureDelegate ();
 			
-			//var swipeRecognizer = new UISwipeGestureRecognizer
-						
 			webView.AddGestureRecognizer (tapRecognizer);
 			
 //			UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleTapFrom:)];
