@@ -61,11 +61,11 @@ namespace WhitePaperBible.iOS
 			
 			this.Title = paper.title;
 
-			this.View.Frame = this.View.Bounds = new RectangleF (0, 0, this.View.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			this.View.AutoresizingMask = UIViewAutoresizing.All;
-			this.View.AutosizesSubviews = true;
+//			this.View.Frame = this.View.Bounds = new RectangleF (0, 0, this.View.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+//			this.View.AutoresizingMask = UIViewAutoresizing.All;
+//			this.View.AutosizesSubviews = true;
 
-			webView.AutoresizingMask = UIViewAutoresizing.All;
+//			webView.AutoresizingMask = UIViewAutoresizing.All;
 //
 //			UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin |
 //			UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | 
@@ -73,11 +73,11 @@ namespace WhitePaperBible.iOS
 
 	
 //			webView.Bounds = new RectangleF (webView.Bounds.X, webView.Bounds.Y, webView.Bounds.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			webView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+//			webView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
 			//			webView.Layer.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
 			webView.ScrollView.ScrollEnabled = true;
-			webView.ScrollView.AutoresizingMask = UIViewAutoresizing.All;
-			webView.ScrollView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+//			webView.ScrollView.AutoresizingMask = UIViewAutoresizing.All;
+//			webView.ScrollView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
 //			this.NavigationController.SetNavigationBarHidden (true, false);
 
 
