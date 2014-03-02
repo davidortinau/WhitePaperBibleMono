@@ -15,12 +15,13 @@ namespace WhitePaperBibileCoreTests
 	[TestFixture ()]
 	public class PaperListByTagMediatorTests:BaseTest
 	{
-		[Test, Property ("Intent", "When Register is called on Mediator and Papers NOT Null, SetPapers should be called on View.")]
+		[Test, Property ("Intent", "When Register is called on Mediator GetPapersByTag should be Invoked")]
 		public void VerifyPapersSetOnView ()
 		{
 			SetupAppModelToReturnPaperList ();
+
 			TestMediator.Register ();
-			MockView.Verify (view => view.SetPapers (IsTestPaperList ()), Times.Once (), TestIntent);
+			MockGetPapersByTag.Verify (invoker => invoker.Invoke (IsMockSelectedTag ()), Times.Once (), TestIntent);
 		}
 
 		[Test, Property ("Intent", "When Register is called on Mediator and AppModel.Papers IS Null, SetPapers should NOT be called on View.")]
@@ -42,6 +43,8 @@ namespace WhitePaperBibileCoreTests
 		Mock<IPapersByTagListView> MockView;
 		Mock<AppModel> MockAppModel;
 		Mock<PapersByTagReceivedInvoker> MockPapersReceived;
+		Mock<GetPapersByTagInvoker> MockGetPapersByTag;
+		Mock<Tag> MockSelectedTag;
 		//STUBS
 		Invoker FilterInvoker, OnPaperSelectedInvoker;
 		PapersListByTagMediator TestMediator;
@@ -59,7 +62,9 @@ namespace WhitePaperBibileCoreTests
 			TestMediator = new PapersListByTagMediator (MockView.Object);
 			CreateAppModelMock ();
 			CreatePapersReceivedMock ();
-			TestMediator.GetPapersByTag = new Mock<GetPapersByTagInvoker> ().Object;
+			CreateGetPapersByTagMock ();
+
+
 		}
 
 		void CreateViewMock ()
@@ -67,7 +72,8 @@ namespace WhitePaperBibileCoreTests
 			MockView = new Mock<IPapersByTagListView> ();
 			StubViewOnPaperSelectedInvoker ();
 			StubViewSelectedPaper ();
-//			MockView.SetupGet (view => view.SearchQuery).Returns (TestQuery);
+			MockSelectedTag = new Mock<Tag> ();
+			MockView.SetupGet (view => view.SelectedTag).Returns (MockSelectedTag.Object);
 
 
 		}
@@ -91,6 +97,12 @@ namespace WhitePaperBibileCoreTests
 		{
 			MockPapersReceived = new Mock<PapersByTagReceivedInvoker> ();
 			TestMediator.PapersReceived = MockPapersReceived.Object;
+		}
+
+		void CreateGetPapersByTagMock ()
+		{
+			MockGetPapersByTag = new Mock<GetPapersByTagInvoker> ();
+			TestMediator.GetPapersByTag = MockGetPapersByTag.Object;
 		}
 
 		void StubViewOnPaperSelectedInvoker ()
@@ -118,6 +130,11 @@ namespace WhitePaperBibileCoreTests
 		List<Paper> IsFilteredPaperList ()
 		{
 			return It.Is<List<Paper>> (list => list == TestFilteredPaperList);
+		}
+
+		GetPapersByTagInvokerArgs IsMockSelectedTag ()
+		{
+			return It.Is<GetPapersByTagInvokerArgs> (args => args.Tag == MockSelectedTag.Object);
 		}
 	}
 }

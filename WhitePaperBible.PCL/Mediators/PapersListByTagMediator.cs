@@ -11,14 +11,11 @@ namespace WhitePaperBible.Core.Mediators
 	{
 		[Inject]
 		public AppModel AppModel;
-
 		[Inject]
 		public PapersByTagReceivedInvoker PapersReceived;
-
 		[Inject]
 		public GetPapersByTagInvoker GetPapersByTag;
-
-		IPapersByTagListView Target;
+		protected IPapersByTagListView Target;
 
 		public PapersListByTagMediator (IPapersByTagListView view) : base (view)
 		{
@@ -27,13 +24,9 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-//			InvokerMap.Add (Target.Filter, HandleFilter);
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
-
-//			Target.SearchPlaceHolderText = "Search Papers";
-
-			SetPapers (null);
+			GetPapersByTag.Invoke (new GetPapersByTagInvokerArgs (Target.SelectedTag));
 
 		}
 
@@ -44,11 +37,7 @@ namespace WhitePaperBible.Core.Mediators
 
 		public void SetPapers (PapersReceivedInvokerArgs args)
 		{
-			if (args != null && args.Papers != null) {
-				Target.SetPapers (args.Papers);
-			}else{
-				GetPapersByTag.Invoke (new GetPapersByTagInvokerArgs (Target.SelectedTag));
-			}
+			Target.SetPapers (args.Papers);
 		}
 	}
 }
