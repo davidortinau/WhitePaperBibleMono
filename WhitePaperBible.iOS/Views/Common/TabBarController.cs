@@ -1,11 +1,13 @@
 using MonoTouch.Dialog;
 using MonoTouch.UIKit;
+using WhitePaperBible.iOS.Managers;
+using System.ComponentModel;
+using System;
 
 namespace WhitePaperBible.iOS
 {
 	public class TabBarController : UITabBarController
 	{
-		UIViewController papersScreen = null, tagsScreen;
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
 		DialogViewController favoritesView, searchView, myPapersView, aboutView;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
@@ -17,77 +19,19 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 			
-			// papers tab
-			if (AppDelegate.IsPhone) {
-				papersScreen = new PapersView ();
-				papersScreen.Title = "Papers";
-			} else {
-//				papersScreen = new PapersView();
-			}
-			papersNav = new UINavigationController ();
-			papersNav.PushViewController (papersScreen, false);			
-			papersNav.Title = "Papers";
-			papersNav.TabBarItem = new UITabBarItem ("Papers"
-										, UIImage.FromBundle ("Images/Tabs/papers.png"), 0);
-			
-//			// tags tab
-//			if (AppDelegate.IsPhone) {
-//				tagsView = new TagsView();			
-//				tagsNav = new UINavigationController();
-//				tagsNav.TabBarItem = new UITabBarItem("Tags"
-//											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
-//				tagsNav.PushViewController ( tagsView, false );
-//			} else {
-////				speakersSplitView = new MWC.iOS.Screens.iPad.Speakers.SpeakerSplitView();
-////				speakersSplitView.TabBarItem = new UITabBarItem("Speakers"
-////											, UIImage.FromBundle("Images/Tabs/tag.png"), 1);
-//			}
-			
-			tagsScreen = new TagsView ();
-			tagsScreen.Title = "Tags";
-			tagsNav = new UINavigationController ();
-			tagsNav.TabBarItem = new UITabBarItem ("Tags"
-						, UIImage.FromBundle ("Images/Tabs/tag.png"), 1);
-			tagsNav.PushViewController (tagsScreen, false);
 
-			
-			
-			
+			papersNav = CreateTabView<PapersView> (ResourceManager.GetString ("papers"), "papers");
 
-			// favorites
-			if (AppDelegate.IsPhone) {
-				favoritesView = new FavoritesView ();
-				favoritesNav = new UINavigationController ();
-				favoritesNav.TabBarItem = new UITabBarItem ("Favorites"
-					, UIImage.FromBundle ("Images/Tabs/favorites.png"), 2);
-				favoritesNav.PushViewController (favoritesView, false);
-			} else {
-//				sessionsSplitView = new MWC.iOS.Screens.iPad.Sessions.SessionSplitView();
-//				sessionsSplitView.TabBarItem = new UITabBarItem("Sessions"
-//											, UIImage.FromBundle("Images/Tabs/sessions.png"), 2);		
-			}
+			tagsNav = CreateTabView<TagsView> (ResourceManager.GetString ("tags"), "tag");
+
+			favoritesNav = CreateTabView<FavoritesView> (ResourceManager.GetString ("favorites"), "favorites");
 			
-			// search tab
-			searchView = new SearchView ();
-			searchNav = new UINavigationController ();
-			searchNav.TabBarItem = new UITabBarItem ("Search"
-											, UIImage.FromBundle ("Images/Tabs/search.png"), 3);
-			searchNav.PushViewController (searchView, false);
+			searchNav = CreateTabView<SearchView> (ResourceManager.GetString ("search"), "search");
 			
-			// my papers tab
-			myPapersView = new MyPapersView ();
-			myPapersNav = new UINavigationController ();
-			myPapersNav.TabBarItem = new UITabBarItem ("My Papers"
-											, UIImage.FromBundle ("Images/Tabs/search.png"), 4);
-			myPapersNav.PushViewController (myPapersView, false);
-			
-			
-			// about tab
-			aboutView = new AboutView ();
-			aboutNav = new UINavigationController ();
-			aboutNav.TabBarItem = new UITabBarItem ("About"
-										, UIImage.FromBundle ("Images/Tabs/myDots.png"), 5);
-			aboutNav.PushViewController (aboutView, false);
+			myPapersNav = CreateTabView<MyPapersView> (ResourceManager.GetString ("myPapers"), "search");
+
+			aboutNav = CreateTabView<AboutView> (ResourceManager.GetString ("about"), "myDots");
+
 			
 			UIViewController[] viewControllers;
 			// create our array of controllers
@@ -116,6 +60,16 @@ namespace WhitePaperBible.iOS
 			
 			// set our selected item
 			SelectedViewController = papersNav;
+		}
+
+		protected UINavigationController CreateTabView<TScreen> (string title, string iconName) where TScreen:class
+		{
+			UIViewController view = Activator.CreateInstance<TScreen> () as UIViewController;
+			UINavigationController navController = new UINavigationController ();
+			navController.PushViewController (view, false);			
+			navController.Title = title;
+			navController.TabBarItem = new UITabBarItem (title, UIImage.FromBundle ("Images/Tabs/" + iconName), 0);
+			return navController;
 		}
 		//		public void ShowSessionDay(int day)
 		//		{

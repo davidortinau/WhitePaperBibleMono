@@ -2,7 +2,16 @@
 <resources>
 	
 	<string name="app_name">White Paper Bible</string>
-	
+
+	<!-- Tabs -->
+	<string name="papers">Papers</string>
+	<string name="tags">Tags</string>
+	<string name="favorites">Favorites</string>
+	<string name="myPapers">My Papers</string>
+	<string name="more">More</string>
+	<string name="search">Search</string>
+	<string name="about">About</string>
+
 	<!-- Login -->
 	<string name="login">Login</string>
 	<string name="email">Email</string>
