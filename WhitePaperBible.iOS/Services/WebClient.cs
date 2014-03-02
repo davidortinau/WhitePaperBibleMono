@@ -25,11 +25,11 @@ namespace WhitePaperBible.iOS
 
 			var request = new RestRequest (url, Method.GET) { RequestFormat = DataFormat.Json };
 
-			ShowNetworkActivity (url);
+			AddNetworkActivity (url);
 
 			client.ExecuteAsync (request, response => {
 				responseText = response.Content;
-				CheckPendingNetworkActivity (url);
+				RemoveNetworkActivity (url);
 				if (response.ResponseStatus == ResponseStatus.Error) {
 					RequestError (this, EventArgs.Empty);
 				} else {
@@ -39,13 +39,13 @@ namespace WhitePaperBible.iOS
 			});
 		}
 
-		static void ShowNetworkActivity (string url)
+		static void AddNetworkActivity (string url)
 		{
 			PendingMethods.Add (url);
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 		}
 
-		static void CheckPendingNetworkActivity (string url)
+		static void RemoveNetworkActivity (string url)
 		{
 			PendingMethods.Remove (url);
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = PendingMethods.Count != 0;
