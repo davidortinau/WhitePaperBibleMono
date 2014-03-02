@@ -219,6 +219,12 @@
     <BundleResource Include="Resources\favorites%402x.png" />
     <BundleResource Include="Resources\Strings.xml" />
     <BundleResource Include="Resources\Integers.xml" />
+    <BundleResource Include="Images\Launch-568h%402x.png" />
+    <BundleResource Include="Images\Launch.png" />
+    <BundleResource Include="Images\Launch%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Images\Tabs\favorites.png" />
