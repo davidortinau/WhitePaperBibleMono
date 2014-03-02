@@ -1,6 +1,8 @@
 using System;
 using RestSharp;
 using WhitePaperBible.Core.Services;
+using MonoTouch.UIKit;
+using System.Collections.Generic;
 
 namespace WhitePaperBible.iOS
 {
@@ -9,6 +11,8 @@ namespace WhitePaperBible.iOS
 		public WebClient ()
 		{
 		}
+
+		private static List<string> PendingMethods = new List<string> ();
 
 		#region IJSONWebClient implementation
 
@@ -20,8 +24,12 @@ namespace WhitePaperBible.iOS
 			var client = new RestClient ();
 
 			var request = new RestRequest (url, Method.GET) { RequestFormat = DataFormat.Json };
+
+			ShowNetworkActivity (url);
+
 			client.ExecuteAsync (request, response => {
 				responseText = response.Content;
+				CheckPendingNetworkActivity (url);
 				if (response.ResponseStatus == ResponseStatus.Error) {
 					RequestError (this, EventArgs.Empty);
 				} else {
@@ -29,6 +37,18 @@ namespace WhitePaperBible.iOS
 				}
 
 			});
+		}
+
+		static void ShowNetworkActivity (string url)
+		{
+			PendingMethods.Add (url);
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+		}
+
+		static void CheckPendingNetworkActivity (string url)
+		{
+			PendingMethods.Remove (url);
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = PendingMethods.Count != 0;
 		}
 
 		private string responseText;
