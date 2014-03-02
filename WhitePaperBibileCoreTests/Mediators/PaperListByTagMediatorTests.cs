@@ -22,21 +22,22 @@ namespace WhitePaperBibileCoreTests
 			TestMediator.Register ();
 			MockView.Verify (view => view.SetPapers (IsTestPaperList ()), Times.Once (), TestIntent);
 		}
-		//		[Test, Property ("Intent", "When Register is called on Mediator and AppModel.Papers IS Null, SetPapers should NOT be called on View.")]
-		//		public void VerifyPapersNotSetOnView ()
-		//		{
-		//			TestMediator.Register ();
-		//			MockView.Verify (view => view.SetPapers (IsAnyPaperList ()), Times.Never (), TestIntent);
-		//		}
-		//
-		//		[Test, Property ("Intent", "When OnPaperSelectedInvoker dispatches Mediator should set CurrentPaper on AppModel")]
-		//		public void VerifyCurrentPaperSet ()
-		//		{
-		//			TestMediator.Register ();
-		//			OnPaperSelectedInvoker.Invoke ();
-		//			MockAppModel.VerifySet (model => model.CurrentPaper = TestPaper, Times.Once (), TestIntent);
-		//
-		//		}
+
+		[Test, Property ("Intent", "When Register is called on Mediator and AppModel.Papers IS Null, SetPapers should NOT be called on View.")]
+		public void VerifyPapersNotSetOnView ()
+		{
+			TestMediator.Register ();
+			MockView.Verify (view => view.SetPapers (IsAnyPaperList ()), Times.Never (), TestIntent);
+		}
+
+		[Test, Property ("Intent", "When OnPaperSelectedInvoker dispatches Mediator should set CurrentPaper on AppModel")]
+		public void VerifyCurrentPaperSet ()
+		{
+			TestMediator.Register ();
+			OnPaperSelectedInvoker.Invoke ();
+			MockAppModel.VerifySet (model => model.CurrentPaper = TestPaper, Times.Once (), TestIntent);
+		
+		}
 		//MOCKS
 		Mock<IPapersByTagListView> MockView;
 		Mock<AppModel> MockAppModel;

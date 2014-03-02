@@ -120,6 +120,8 @@
     <Content Include="Images\Tabs\my_papers%402x.png" />
     <Content Include="Images\Tabs\myDots.png" />
     <Content Include="Images\Tabs\myDots%402x.png" />
+    <Content Include="Images\Tabs\favorites.png" />
+    <Content Include="Images\Tabs\favorites%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -225,9 +227,5 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Default.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Images\Tabs\favorites.png" />
-    <ImageAsset Include="Images\Tabs\favorites%402x.png" />
   </ItemGroup>
 </Project>
