@@ -24,7 +24,8 @@
 	<string name="ok">Ok</string>
 	<string name="invalidLogin">Sorry, your email/password were incorrect.</string>
 	
-
+	<string name="loginRequired">Sorry, an account is required to use this feature.</string>
+	<string name="loginRegister">Login/Register</string>
 
 
 

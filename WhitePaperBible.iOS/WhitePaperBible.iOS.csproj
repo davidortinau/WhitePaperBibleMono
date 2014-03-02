@@ -103,6 +103,7 @@
     <Compile Include="Managers\ResourceManager.cs" />
     <Compile Include="Invokers\LoginFinishedInvokerArgs.cs" />
     <Compile Include="Invokers\LoginFinishedInvoker.cs" />
+    <Compile Include="Views\iPhone\Sub\LoginRequiredView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -135,6 +136,7 @@
     <Folder Include="Services\" />
     <Folder Include="Managers\" />
     <Folder Include="Invokers\" />
+    <Folder Include="Views\iPhone\Sub\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
