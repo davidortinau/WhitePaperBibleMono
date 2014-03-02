@@ -9,6 +9,7 @@
 	<string name="emailPlaceholder">me@example.com</string>
 	<string name="password">Password</string>
 	<string name="submit">Submit</string>
+	<string name="cancel">Cancel</string>
 	<string name="register">Register</string>
 	<string name="learnMore">Learn more about Team in Training</string>
 	<string name="authenticationError">Authentication Error</string>

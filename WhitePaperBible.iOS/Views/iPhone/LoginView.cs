@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
@@ -21,13 +20,17 @@ namespace WhitePaperBible.iOS
 			private set;
 		}
 
-		public event EventHandler LoginSubmitted;
+		public Invoker LoginCancelled {
+			get;
+			private set;
+		}
 
+		public event EventHandler LoginSubmitted;
 		public event EventHandler MoreInfoClicked;
 
 		UITextField UsernameInput, PasswordInput;
 		UIView loginForm;
-		TNTButton SubmitButton;
+		WPBButton SubmitButton;
 		UIButton RegisterButton;
 
 		static bool UserInterfaceIdiomIsPhone {
@@ -38,6 +41,7 @@ namespace WhitePaperBible.iOS
 		{
 			this.Title = "Login";
 			this.LoginFinished = new Invoker ();
+			this.LoginCancelled = new Invoker ();
 		}
 
 		public override void ViewDidLoad ()
@@ -54,7 +58,7 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			DI.RequestMediator(this);
+			DI.RequestMediator (this);
 
 		}
 
@@ -67,20 +71,13 @@ namespace WhitePaperBible.iOS
 		public void ShowInvalidPrompt (string message)
 		{
 			InvokeOnMainThread (() => {
-				var alert = new UIAlertView (ResourceManager.GetString("authenticationError"), ResourceManager.GetString("invalidLogin"), null, ResourceManager.GetString("ok"), null);
+				var alert = new UIAlertView (ResourceManager.GetString ("authenticationError"), ResourceManager.GetString ("invalidLogin"), null, ResourceManager.GetString ("ok"), null);
 				alert.Show ();
 			});
 		}
 
 		public void GoToNextScreen ()
 		{
-//			InvokeOnMainThread (() => {
-//				var navigationController = new CustomNavigationController ();
-//				var tabViewController = new MainTabViewController (athleteID,teamID);
-//				navigationController.PushViewController (tabViewController, false);
-//				PresentViewController(navigationController, true, null);
-//
-//			});
 			LoginFinished.Invoke (new LoginFinishedInvokerArgs (this));
 		}
 
@@ -89,24 +86,35 @@ namespace WhitePaperBible.iOS
 			CreateLoginForm ();
 
 			//Submit Button
-			SubmitButton = new TNTButton (ResourceManager.GetString("login"), 
+			SubmitButton = CreateButton (ResourceManager.GetString ("login"), 
 				AppStyles.Red,
 				loginForm.Frame.Bottom + 20);
 
-			SubmitButton.CenterHorizontally ();
-			View.AddSubview (SubmitButton);
+			WPBButton CancelButton = CreateButton (ResourceManager.GetString ("cancel"), AppStyles.DarkGray, SubmitButton.Frame.Bottom + 20);
+			CancelButton.TouchUpInside += (object sender, EventArgs e) => {
+				DismissViewController (true, null);
+				LoginCancelled.Invoke ();
+			};
 
 			//Register Button
 			RegisterButton = new UIButton ();
 			var buttonY = WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight - 60;
 			RegisterButton.Frame = new RectangleF (10, buttonY, 280, 43);
 			RegisterButton.CenterHorizontally ();
-			RegisterButton.SetTitle (ResourceManager.GetString("register"), UIControlState.Normal);
+			RegisterButton.SetTitle (ResourceManager.GetString ("register"), UIControlState.Normal);
 			RegisterButton.BackgroundColor = UIColor.Clear;
 			RegisterButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
 			RegisterButton.Font = UIFont.FromName ("Helvetica", 12);
 			RegisterButton.SetTitleColor (AppStyles.DarkGray, UIControlState.Highlighted); 
 			View.AddSubview (RegisterButton);
+		}
+
+		WPBButton CreateButton (string title, UIColor color, float yPos)
+		{
+			WPBButton button = new WPBButton (title, color, yPos);
+			button.CenterHorizontally ();
+			View.AddSubview (button);
+			return button;
 		}
 
 		void AddEventHandlers ()
@@ -117,17 +125,17 @@ namespace WhitePaperBible.iOS
 			};
 
 			RegisterButton.TouchUpInside += (object sender, EventArgs e) => {
-				MoreInfoClicked(this, EventArgs.Empty);
+				MoreInfoClicked (this, EventArgs.Empty);
 			};
 
 
 			UsernameInput.ShouldReturn = delegate {
-				PasswordInput.BecomeFirstResponder();
+				PasswordInput.BecomeFirstResponder ();
 				return true;
 			};
 
 			PasswordInput.ShouldReturn = delegate {
-				PasswordInput.ResignFirstResponder();
+				PasswordInput.ResignFirstResponder ();
 				return true;
 			};
 		}
@@ -141,8 +149,8 @@ namespace WhitePaperBible.iOS
 
 			//Username Input
 			var userNameRect = new RectangleF (0, 20, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
-			loginForm.AddSubview (CreateLabel("email", userNameRect));
-			UsernameInput = CreateInput ("athlete8@gmail.com", ResourceManager.GetString("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
+			loginForm.AddSubview (CreateLabel ("email", userNameRect));
+			UsernameInput = CreateInput ("athlete8@gmail.com", ResourceManager.GetString ("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
 			loginForm.AddSubview (UsernameInput);
 
 			//horizontal rul
@@ -152,7 +160,7 @@ namespace WhitePaperBible.iOS
 
 			//Password Input
 			var passwordRect = new RectangleF (10, userNameRect.Bottom, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
-			loginForm.AddSubview (CreateLabel("password", passwordRect));
+			loginForm.AddSubview (CreateLabel ("password", passwordRect));
 			PasswordInput = CreateInput ("password8", "", passwordRect, UIReturnKeyType.Done, true);
 			loginForm.AddSubview (PasswordInput);
 
@@ -160,12 +168,13 @@ namespace WhitePaperBible.iOS
 
 
 		}
-		protected UILabel CreateLabel(string labelID, RectangleF rowRect)
+
+		protected UILabel CreateLabel (string labelID, RectangleF rowRect)
 		{
-			var label = new UILabel (rowRect){
+			var label = new UILabel (rowRect) {
 				TextColor = UIColor.White,
-				Text = ResourceManager.GetString(labelID),
-				Font = UIFont.FromName("Helvetica-Bold", 16f),
+				Text = ResourceManager.GetString (labelID),
+				Font = UIFont.FromName ("Helvetica-Bold", 16f),
 				BackgroundColor = UIColor.Clear
 
 			};
@@ -173,11 +182,11 @@ namespace WhitePaperBible.iOS
 			return label;
 		}
 
-		protected UITextField CreateInput(string value,
-			string placeholder,
-			RectangleF rowRect,
-			UIReturnKeyType returnKeyType,
-			bool isPassword)
+		protected UITextField CreateInput (string value,
+		                                   string placeholder,
+		                                   RectangleF rowRect,
+		                                   UIReturnKeyType returnKeyType,
+		                                   bool isPassword)
 		{
 			var tf = new UITextField (rowRect) {
 				BorderStyle = UITextBorderStyle.None,
@@ -197,9 +206,9 @@ namespace WhitePaperBible.iOS
 		}
 	}
 
-	public class TNTButton:UIButton
+	public class WPBButton:UIButton
 	{
-		public TNTButton (string title, UIColor backgroundColor, float yPos, UIColor borderColor = null, float borderWidth = 0, UIColor titleColor = null):base(new RectangleF (10, yPos, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 20, 40))
+		public WPBButton (string title, UIColor backgroundColor, float yPos, UIColor borderColor = null, float borderWidth = 0, UIColor titleColor = null) : base (new RectangleF (10, yPos, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 20, 40))
 		{
 			BackgroundColor = backgroundColor;
 			Layer.CornerRadius = 3f;

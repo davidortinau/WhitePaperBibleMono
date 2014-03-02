@@ -9,10 +9,13 @@ namespace WhitePaperBible.Core.Views
 	{
 		event EventHandler LoginSubmitted, MoreInfoClicked;
 
-		Invoker LoginFinished{ get;}
+		Invoker LoginFinished{ get; }
 
-		void ShowInvalidPrompt(string message);
-		void GoToNextScreen();
+		Invoker LoginCancelled{ get; }
+
+		void ShowInvalidPrompt (string message);
+
+		void GoToNextScreen ();
 	}
 }
 
