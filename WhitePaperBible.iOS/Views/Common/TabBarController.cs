@@ -9,7 +9,6 @@ namespace WhitePaperBible.iOS
 	public class TabBarController : UITabBarController
 	{
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
-		DialogViewController favoritesView, searchView, myPapersView, aboutView;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
 		public TabBarController ()
 		{
@@ -71,16 +70,7 @@ namespace WhitePaperBible.iOS
 			navController.TabBarItem = new UITabBarItem (title, UIImage.FromBundle ("Images/Tabs/" + iconName), 0);
 			return navController;
 		}
-		//		public void ShowSessionDay(int day)
-		//		{
-		//			// WARNING: ORDER IS IMPORTANT, call ShowDay() before setting index (which causes ViewWillAppear)
-		//			var sv = sessionsSplitView as MWC.iOS.Screens.iPad.Sessions.SessionSplitView;
-		//			sv.ShowDay (day);
-		//			SelectedIndex = 2; // Sessions
-		//		}
-		/// <summary>
-		/// Only allow iPad application to rotate, iPhone is always portrait
-		/// </summary>
+
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
 			if (AppDelegate.IsPad)
