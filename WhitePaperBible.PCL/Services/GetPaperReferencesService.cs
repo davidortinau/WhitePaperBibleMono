@@ -18,7 +18,7 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (int paperID)
 		{
-			Client.OpenURL (Constants.BASE_URI + "papers/" + paperID.ToString () + "/references.json?caller=wpb-iPhone");
+			Client.OpenURL (Constants.BASE_URI + "papers/" + paperID.ToString () + "/references.json?caller=wpb-iPhone", false);
 		}
 
 		#region implemented abstract members of BaseService

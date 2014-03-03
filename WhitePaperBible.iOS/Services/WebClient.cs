@@ -19,44 +19,50 @@ namespace WhitePaperBible.iOS
 		public event EventHandler RequestComplete = delegate {};
 		public event EventHandler RequestError;
 
-		public void OpenURL (string url)
+		public void OpenURL (string url, bool isPost)
 		{
 			var client = new RestClient ();
 
-			var request = new RestRequest (url, Method.GET) { RequestFormat = DataFormat.Json };
+			var request = new RestRequest (url, isPost ? Method.POST : Method.GET) { RequestFormat = DataFormat.Json };
 
 			AddNetworkActivity (url);
 
 			client.ExecuteAsync (request, response => {
-				responseText = response.Content;
+				ResponseText = response.Content;
 				RemoveNetworkActivity (url);
 				if (response.ResponseStatus == ResponseStatus.Error) {
-					RequestError (this, EventArgs.Empty);
+					DispatchError ();
 				} else {
-					RequestComplete (this, EventArgs.Empty);
+					DispatchComplete ();
 				}
-
 			});
 		}
 
-		static void AddNetworkActivity (string url)
+		private void DispatchComplete ()
+		{
+			RequestComplete (this, EventArgs.Empty);
+		}
+
+		private void DispatchError ()
+		{
+			RequestError (this, EventArgs.Empty);
+		}
+
+		private static void AddNetworkActivity (string url)
 		{
 			PendingMethods.Add (url);
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 		}
 
-		static void RemoveNetworkActivity (string url)
+		private static void RemoveNetworkActivity (string url)
 		{
 			PendingMethods.Remove (url);
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = PendingMethods.Count != 0;
 		}
 
-		private string responseText;
-
 		public string ResponseText {
-			get {
-				return responseText;
-			}
+			get;
+			private set;
 		}
 
 		#endregion

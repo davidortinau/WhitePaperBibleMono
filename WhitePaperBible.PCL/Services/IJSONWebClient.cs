@@ -8,7 +8,7 @@ namespace WhitePaperBible.Core.Services
 
 		string ResponseText{ get; }
 		//http://tnt.freckleinteractive.com/public/api.php?method=login&username=Ben&password=asdf
-		void OpenURL (string url);
+		void OpenURL (string url, bool isPost);
 	}
 }
 
