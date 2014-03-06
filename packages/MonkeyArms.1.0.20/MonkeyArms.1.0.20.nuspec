@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MonkeyArms</id>
+    <version>1.0.20</version>
+    <title>MonkeyArms</title>
+    <authors>Ben Bishop</authors>
+    <owners>Ben Bishop</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/benbishop/MonkeyArms</projectUrl>
+    <iconUrl>http://rendr.io/MonkeyArms.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MonkeyArms is more of a toolbox than a blueprint. MonkeyArms provides features that are independent of each other to help solve issues that programmers encounter every day while trying to write clean and portable code. These problems include decoupling, dependency injection, messaging between entities, configuration, integration with legacy code, and testability.</description>
+    <summary>MonkeyArms is an application framework inspired by the AS3 framework Robotlegs.</summary>
+    <releaseNotes>Added InjectionMap so develoeprs can specify the injections DIUtil should use instead of solely relying on the DI static class.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <references>
+      <reference file="TinyIOC.dll" />
+    </references>
+  </metadata>
+</package>

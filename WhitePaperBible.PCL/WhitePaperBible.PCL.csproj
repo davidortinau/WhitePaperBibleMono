@@ -34,16 +34,7 @@
   <ItemGroup>
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MonkeyArms\Actor.cs" />
-    <Compile Include="MonkeyArms\Command.cs" />
-    <Compile Include="MonkeyArms\Context.cs" />
     <Compile Include="MonkeyArms\DI.cs" />
-    <Compile Include="MonkeyArms\DIUtil.cs" />
-    <Compile Include="MonkeyArms\Invoker.cs" />
-    <Compile Include="MonkeyArms\InvokerChain.cs" />
-    <Compile Include="MonkeyArms\InvokerMap.cs" />
-    <Compile Include="MonkeyArms\Mediator.cs" />
-    <Compile Include="Constants.cs" />
     <Compile Include="Models\AppModel.cs" />
     <Compile Include="Models\Paper.cs" />
     <Compile Include="Models\PaperCollection.cs" />
@@ -97,6 +88,17 @@
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Mediators\LoginMediator.cs" />
     <Compile Include="Views\IFavoritesView.cs" />
+    <Compile Include="Services\AuthenticateUserService.cs" />
+    <Compile Include="MonkeyArms\Actor.cs" />
+    <Compile Include="MonkeyArms\Command.cs" />
+    <Compile Include="MonkeyArms\Context.cs" />
+    <Compile Include="MonkeyArms\DIUtil.cs" />
+    <Compile Include="MonkeyArms\InjectionMap.cs" />
+    <Compile Include="MonkeyArms\Invoker.cs" />
+    <Compile Include="MonkeyArms\InvokerChain.cs" />
+    <Compile Include="MonkeyArms\InvokerMap.cs" />
+    <Compile Include="MonkeyArms\Mediator.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -104,11 +106,8 @@
       <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="TinyIOC">
-      <HintPath>..\packages\MonkeyArms.1.0.18\lib\TinyIOC.dll</HintPath>
+      <HintPath>..\packages\MonkeyArms.1.0.20\lib\TinyIOC.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
@@ -119,4 +118,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
