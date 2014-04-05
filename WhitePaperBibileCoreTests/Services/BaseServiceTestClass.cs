@@ -26,9 +26,9 @@ namespace WhitePaperBibileCoreTests
 			return Service;
 		}
 
-		protected void VerifyOpenedURLContains (string methodName)
+		protected void VerifyOpenedURLContains (string methodName, bool isPost = false)
 		{
-			MockWebClient.Verify (client => client.OpenURL (UrlContains (methodName), IsGetMethod ()), Times.Once (), TestIntent);
+			MockWebClient.Verify (client => client.OpenURL (UrlContains (methodName), IsCorrectMethod (isPost)), Times.Once (), TestIntent);
 		}
 
 		protected string UrlContains (string methodName)
@@ -36,14 +36,9 @@ namespace WhitePaperBibileCoreTests
 			return It.Is<string> (url => url.Contains (methodName));
 		}
 
-		protected bool IsGetMethod ()
+		static bool IsCorrectMethod (bool isPost)
 		{
-			return It.Is<bool> (b => b == false);
-		}
-
-		protected bool IsPostMethod ()
-		{
-			return It.Is<bool> (b => b == true);
+			return It.Is<bool> (b => b == isPost);
 		}
 
 		protected void MockWebClientSuccessResponseText (string jsonResponse)

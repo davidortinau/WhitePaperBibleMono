@@ -1,23 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBibileCoreTests/Services/GetPaperReferencesTestClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBibileCoreTests/Commands/GetPapersCommandTest.cs">
     <Files>
-      <File FileName="WhitePaperBibileCoreTests/Services/BaseServiceTestClass.cs" Line="16" Column="16" />
-      <File FileName="WhitePaperBibileCoreTests/Services/GetPaperReferencesTestClass.cs" Line="11" Column="67" />
+      <File FileName="WhitePaperBibileCoreTests/Commands/GetPapersCommandTest.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Node name="WhitePaperBibile.PCL.Tests" expanded="True">
-            <Node name="WhitePaperBibileCoreTests" expanded="True">
-              <Node name="GetPaperReferencesTestClass" expanded="True">
-                <Node name="VerifyExecute" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

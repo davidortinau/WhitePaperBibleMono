@@ -27,6 +27,18 @@ namespace WhitePaperBibileCoreTests
 			}
 		}
 
+		public static string AuthenticationSuccess {
+			get {
+				return "Successfully logged in.";
+			}
+		}
+
+		public static string AuthenticationFauilure {
+			get {
+				return "Unsuccessfully logged in.";
+			}
+		}
+
 		public static List<PaperNode> PaperNodeList {
 			get {
 				return new List<PaperNode> () {
