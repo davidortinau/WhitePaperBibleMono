@@ -44,6 +44,18 @@ namespace WhitePaperBible.iOS
 			this.LoginCancelled = new Invoker ();
 		}
 
+		public string UserName {
+			get {
+				return UsernameInput.Text;
+			}
+		}
+
+		public string Password {
+			get {
+				return PasswordInput.Text;
+			}
+		}
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -120,8 +132,8 @@ namespace WhitePaperBible.iOS
 		void AddEventHandlers ()
 		{
 			SubmitButton.TouchUpInside += (object sender, EventArgs e) => {
-//				LoginSubmitted(this, EventArgs.Empty);
-				LoginFinished.Invoke (new LoginFinishedInvokerArgs (this));
+				LoginSubmitted(this, EventArgs.Empty);
+//				LoginFinished.Invoke (new LoginFinishedInvokerArgs (this));
 			};
 
 			RegisterButton.TouchUpInside += (object sender, EventArgs e) => {
@@ -204,6 +216,26 @@ namespace WhitePaperBible.iOS
 			tf.CenterHorizontally ();
 			return tf;
 		}
+
+		public void ShowBusyIndicator ()
+		{
+			InvokeOnMainThread (() => {
+				this.ShowNetworkActivityIndicator ();
+				SubmitButton.Enabled = false;
+				SubmitButton.Alpha = .25f;
+			});
+
+		}
+
+		public void HideBusyIndicator ()
+		{
+			InvokeOnMainThread (() => {
+				this.HideNetworkActivityIndicator ();
+				SubmitButton.Enabled = true;
+				SubmitButton.Alpha = 1;
+			});
+		}
+
 	}
 
 	public class WPBButton:UIButton

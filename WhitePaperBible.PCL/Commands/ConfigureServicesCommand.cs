@@ -10,6 +10,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<GetPapersService, IGetPapersService> ();
 			DI.MapClassToInterface<GetTagsService, IGetTagsService> ();
 			DI.MapClassToInterface<GetPapersByTagService, IGetPapersByTagService> ();
+			DI.MapClassToInterface<AuthenticateUserService, IAuthenticateUserService> ();
 		}
 	}
 }

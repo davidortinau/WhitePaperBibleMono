@@ -17,6 +17,7 @@ namespace WhitePaperBible.iOS
 	public partial class PaperDetailsView : UIViewController, IInjectingTarget
 	{
 		Paper paper;
+
 		[Inject]
 		public GetPaperReferencesService PaperReferencesService;
 

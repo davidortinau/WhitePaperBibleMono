@@ -12,6 +12,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public AppModel AppModel;
 
+		[Inject]
+		public LogInInvoker LoginInvoker;
+
 		ILoginView Target;
 
 		public LoginMediator (ILoginView view) : base (view)
@@ -21,6 +24,7 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
+			this.Target.LoginSubmitted += HandleLoginSubmitted;
 //			InvokerMap.Add (Target.Filter, HandleFilter);
 //			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 //			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
@@ -39,6 +43,12 @@ namespace WhitePaperBible.Core.Mediators
 //				[notLoggedInViewController release];
 //			}
 
+		}
+
+		void HandleLoginSubmitted (object sender, EventArgs e)
+		{
+			LoginInvoker.Invoke (new LogInInvokerArgs (Target.UserName, Target.Password));
+			Target.ShowBusyIndicator ();
 		}
 	}
 }

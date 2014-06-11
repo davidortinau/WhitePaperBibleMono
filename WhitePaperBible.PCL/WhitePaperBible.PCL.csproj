@@ -99,6 +99,8 @@
     <Compile Include="MonkeyArms\InvokerMap.cs" />
     <Compile Include="MonkeyArms\Mediator.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Invokers\LogInInvoker.cs" />
+    <Compile Include="Commands\LoginCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

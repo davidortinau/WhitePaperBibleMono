@@ -3,11 +3,16 @@ using System.ServiceModel.Security;
 
 namespace WhitePaperBible.Core.Services
 {
-	public class AuthenticateUserService:BaseService
+	public interface IAuthenticateUserService:IBaseService
+	{
+		void Execute (string username, string password);
+	}
+
+	public class AuthenticateUserService:BaseService, IAuthenticateUserService
 	{
 		public void Execute (string username, string password)
 		{
-			this.Client.OpenURL (Constants.BASE_URI + String.Format ("/user_sessions/?user_session[username]={0}&user_session[password]={1}", username, password), true);
+			this.Client.OpenURL (Constants.BASE_URI + String.Format ("user_sessions/?user_session[username]={0}&user_session[password]={1}", username, password), true);
 		}
 
 		#region implemented abstract members of BaseService
