@@ -16,6 +16,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<TagsReceivedInvoker> ();
 			DI.MapSingleton<PapersByTagReceivedInvoker> ();
 			DI.MapSingleton<LogInInvoker> ();
+			DI.MapSingleton<LoggedInInvoker> ();
 		}
 	}
 }

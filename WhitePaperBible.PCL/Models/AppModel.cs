@@ -10,6 +10,11 @@ namespace WhitePaperBible.Core.Models
 
 		public virtual List<Tag> Tags { get; set; }
 
+		public SessionCookie UserSessionCookie {
+			get;
+			set;
+		}
+
 		public virtual Paper CurrentPaper {
 			get;
 			set;

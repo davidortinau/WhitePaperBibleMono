@@ -14,12 +14,9 @@ using RestSharp;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PaperDetailsView : UIViewController, IInjectingTarget
+	public partial class PaperDetailsView : UIViewController, IMediatorTarget
 	{
 		Paper paper;
-
-		[Inject]
-		public GetPaperReferencesService PaperReferencesService;
 
 		/**
 		 * TODO
@@ -34,7 +31,6 @@ namespace WhitePaperBible.iOS
 		
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
-			DIUtil.InjectProps (this);
 			this.paper = paper;
 
 			this.HidesBottomBarWhenPushed = true;
@@ -54,36 +50,8 @@ namespace WhitePaperBible.iOS
 
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 
-			PaperReferencesService.Success += (object sender, EventArgs e) => {
-				GetPaperReferencesServiceEventArgs args = e as GetPaperReferencesServiceEventArgs;
-				onReferencesReceived (args.References);
-			};
-			PaperReferencesService.Execute (paper.id);
-			
 			this.Title = paper.title;
-
-//			this.View.Frame = this.View.Bounds = new RectangleF (0, 0, this.View.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-//			this.View.AutoresizingMask = UIViewAutoresizing.All;
-//			this.View.AutosizesSubviews = true;
-
-//			webView.AutoresizingMask = UIViewAutoresizing.All;
-//
-//			UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin |
-//			UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | 
-//			UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-
-	
-//			webView.Bounds = new RectangleF (webView.Bounds.X, webView.Bounds.Y, webView.Bounds.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-//			webView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			//			webView.Layer.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
 			webView.ScrollView.ScrollEnabled = true;
-//			webView.ScrollView.AutoresizingMask = UIViewAutoresizing.All;
-//			webView.ScrollView.Frame = new RectangleF (webView.Frame.X, webView.Frame.Y, webView.Frame.Width, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-//			this.NavigationController.SetNavigationBarHidden (true, false);
-
-
-//			this.TabBarController.
-			
 			webView.ShouldStartLoad += webViewShouldStartLoad;
 			
 			var tapRecognizer = new UITapGestureRecognizer (this, new Selector ("HandleTapFrom"));
@@ -91,43 +59,8 @@ namespace WhitePaperBible.iOS
 			tapRecognizer.Delegate = new GestureDelegate ();
 			
 			webView.AddGestureRecognizer (tapRecognizer);
-			
-//			UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HandleTapFrom:)];
-//    tapRecognizer.numberOfTapsRequired = 1;
-//    tapRecognizer.delegate = self;
-//    [self.webView addGestureRecognizer:tapRecognizer];
 		}
-		//		float startX;
-		//
-		//		public override void HandleTouchesBegan (NSSet touches, UIEvent evt)
-		//		{
-		//			Console.WriteLine("touchesBegan");
-		//			var touch = (touches.AnyObject as UITouch);
-		//
-		//			if(touch.View == this.View)
-		//			{
-		//				var location = touch.LocationInView(this.View);
-		//				startX = location.X - this.View.Center.X;
-		//			}
-		//		}
-		//
-		//		public override void TouchesMoved (NSSet touches, UIEvent evt)
-		//		{
-		//			Console.WriteLine("touchesMoved");
-		//			var touch = (touches.AnyObject as UITouch);
-		//			if(touch.View == this.View)
-		//			{
-		//				var location = touch.LocationInView(this.View);
-		//				location.X = location.X - startX;
-		//				this.View.Center = location;
-		//			}
-		//		}
-		//
-		//		public override void TouchesEnded (NSSet touches, UIEvent evt)
-		//		{
-		//			Console.WriteLine("touchesEnded");
-		//			// do anything?
-		//		}
+
 		[Export ("HandleTapFrom")]
 		public void HandleTapFrom (UITapGestureRecognizer recognizer)
 		{
@@ -180,10 +113,17 @@ namespace WhitePaperBible.iOS
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
+
+			DI.RequestMediator (this);
 			
 			toolbar.Alpha = 1f;
 			var userInfo = new NSString ("MyUserInfo");
 			var timer = NSTimer.CreateScheduledTimer (2, this, new Selector ("HideToolBar"), userInfo, false);
+		}
+
+		public override void ViewWillDisappear(bool animated)
+		{
+			DI.DestroyMediator (this);
 		}
 
 		[Export ("HideToolBar")]
@@ -211,19 +151,9 @@ namespace WhitePaperBible.iOS
 			// Ooops
 		}
 
-		private void onReferencesReceived (List<ReferenceNode> nodes)
+		public void SetReferences (string html)
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
-
-			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; } .description { border-radius: 5px; background-color:#F1F1F1; margin: 10px; padding: 8px; }</style>";
-//			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a>";
-			html += "<h1>" + paper.title + "</h1>";
-			html += "<section class=\"description\">" + paper.description + "</section>";
-						
-			foreach (ReferenceNode node in nodes) {
-				string content = node.reference.content;
-				html += content;
-			}
 
 			InvokeOnMainThread (delegate {
 				webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);//NSBundle.MainBundle.BundleUrl

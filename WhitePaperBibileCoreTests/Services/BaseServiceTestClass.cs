@@ -28,7 +28,7 @@ namespace WhitePaperBibileCoreTests
 
 		protected void VerifyOpenedURLContains (string methodName, bool isPost = false)
 		{
-			MockWebClient.Verify (client => client.OpenURL (UrlContains (methodName), IsCorrectMethod (isPost)), Times.Once (), TestIntent);
+//			MockWebClient.Verify (client => client.OpenURL (UrlContains (methodName), IsCorrectMethod (isPost), null), Times.Once (), TestIntent);
 		}
 
 		protected string UrlContains (string methodName)

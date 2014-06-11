@@ -3,6 +3,9 @@ using RestSharp;
 using WhitePaperBible.Core.Services;
 using MonoTouch.UIKit;
 using System.Collections.Generic;
+using System.Net;
+using WhitePaperBible.Core.Models;
+
 
 namespace WhitePaperBible.iOS
 {
@@ -19,15 +22,27 @@ namespace WhitePaperBible.iOS
 		public event EventHandler RequestComplete = delegate {};
 		public event EventHandler RequestError;
 
-		public void OpenURL (string url, bool isPost)
+
+		public void OpenURL (string url, bool isPost, CookieContainer cookieJar=null)
 		{
+
 			var client = new RestClient ();
+			client.CookieContainer = cookieJar;
 
 			var request = new RestRequest (url, isPost ? Method.POST : Method.GET) { RequestFormat = DataFormat.Json };
 
 			AddNetworkActivity (url);
 
 			client.ExecuteAsync (request, response => {
+				if(response.Cookies.Count > 0){
+					if(response.Cookies[0].Name == "_whitepaperbible_session"){
+						UserSessionCookie = new SessionCookie{ 
+							Name = response.Cookies[0].Name,
+							Value = response.Cookies[0].Value
+						};
+					}
+				}
+
 				ResponseText = response.Content;
 				RemoveNetworkActivity (url);
 				if (response.ResponseStatus == ResponseStatus.Error) {
@@ -61,6 +76,11 @@ namespace WhitePaperBible.iOS
 		}
 
 		public string ResponseText {
+			get;
+			private set;
+		}
+
+		public SessionCookie UserSessionCookie {
 			get;
 			private set;
 		}

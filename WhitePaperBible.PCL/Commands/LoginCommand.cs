@@ -15,6 +15,9 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public IAuthenticateUserService Service;
 
+		[Inject]
+		public LoggedInInvoker LoggedIn;
+
 		public override void Execute (InvokerArgs args)
 		{
 			var loginArgs = (args as LogInInvokerArgs);
@@ -24,7 +27,7 @@ namespace WhitePaperBible.Core.Commands
 
 		void onSuccess (object sender, EventArgs args)
 		{
-
+			LoggedIn.Invoke ();
 		}
 	}
 }
