@@ -28,7 +28,7 @@ namespace WhitePaperBible.Core.Services
 			// http://whitepaperbible.org/user_sessions/?user_session%5Busername%5D=davidortinau&user_session%5Bpassword%5D=simple
 			// session cookie https://gist.github.com/davidortinau/109966433bac7e4c12b1
 			model.UserSessionCookie = Client.UserSessionCookie;
-			DispatchSuccess (new AuthenticateUserServiceEventArgs (Client.ResponseText.Contains ("You are being")));
+			DispatchSuccess (new AuthenticateUserServiceEventArgs (model.UserSessionCookie != null));
 		}
 
 		#endregion

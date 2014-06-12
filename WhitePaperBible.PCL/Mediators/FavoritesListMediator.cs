@@ -30,7 +30,6 @@ namespace WhitePaperBible.Core.Mediators
 //			InvokerMap.Add (Target.Filter, HandleFilter);
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
-
 //			Target.SearchPlaceHolderText = "Search Papers";
 
 //			if([appDelegate isUserLoggedIn]){

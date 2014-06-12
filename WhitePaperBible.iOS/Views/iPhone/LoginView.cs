@@ -162,7 +162,7 @@ namespace WhitePaperBible.iOS
 			//Username Input
 			var userNameRect = new RectangleF (0, 20, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
 			loginForm.AddSubview (CreateLabel ("email", userNameRect));
-			UsernameInput = CreateInput ("athlete8@gmail.com", ResourceManager.GetString ("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
+			UsernameInput = CreateInput ("davidortinau", ResourceManager.GetString ("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
 			loginForm.AddSubview (UsernameInput);
 
 			//horizontal rul
@@ -173,7 +173,7 @@ namespace WhitePaperBible.iOS
 			//Password Input
 			var passwordRect = new RectangleF (10, userNameRect.Bottom, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
 			loginForm.AddSubview (CreateLabel ("password", passwordRect));
-			PasswordInput = CreateInput ("password8", "", passwordRect, UIReturnKeyType.Done, true);
+			PasswordInput = CreateInput ("simple", "", passwordRect, UIReturnKeyType.Done, true);
 			loginForm.AddSubview (PasswordInput);
 
 
@@ -233,6 +233,13 @@ namespace WhitePaperBible.iOS
 				this.HideNetworkActivityIndicator ();
 				SubmitButton.Enabled = true;
 				SubmitButton.Alpha = 1;
+			});
+		}
+
+		public void Dismiss()
+		{
+			InvokeOnMainThread (() => {
+				DismissViewController (true, null);
 			});
 		}
 

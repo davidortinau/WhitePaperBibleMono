@@ -11,7 +11,7 @@ using WhitePaperBible.iOS.Invokers;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class FavoritesView : DialogViewController, IFavoritesView
+	public partial class FavoritesView : DialogViewController, IFavoritesView, IMediatorTarget
 	{
 		LoginRequiredView LoginRequiredView;
 
@@ -97,8 +97,6 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			DI.RequestMediator (this);
-
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
 			};
@@ -110,7 +108,8 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			View.BringSubviewToFront (LoginRequiredView);
+			DI.RequestMediator (this);
+//			View.BringSubviewToFront (LoginRequiredView);
 		}
 
 		public override void ViewDidDisappear (bool animated)

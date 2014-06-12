@@ -22,6 +22,10 @@ namespace WhitePaperBible.Core.Views
 		string Password { get; }
 
 		void ShowBusyIndicator();
+
+		void HideBusyIndicator();
+
+		void Dismiss ();
 	}
 }
 

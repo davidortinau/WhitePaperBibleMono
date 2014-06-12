@@ -103,6 +103,7 @@
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Invokers\LoggedInInvoker.cs" />
     <Compile Include="Models\SessionCookie.cs" />
+    <Compile Include="Invokers\LoginFaultInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
