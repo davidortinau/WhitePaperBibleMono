@@ -11,6 +11,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<GetTagsService, IGetTagsService> ();
 			DI.MapClassToInterface<GetPapersByTagService, IGetPapersByTagService> ();
 			DI.MapClassToInterface<AuthenticateUserService, IAuthenticateUserService> ();
+			DI.MapClassToInterface<GetFavoritesService, IGetFavoritesService> ();
 		}
 	}
 }

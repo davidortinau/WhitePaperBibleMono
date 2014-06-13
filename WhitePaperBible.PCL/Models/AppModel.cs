@@ -6,6 +6,11 @@ namespace WhitePaperBible.Core.Models
 {
 	public class AppModel
 	{
+		public virtual List<Paper> Favorites {
+			get;
+			set;
+		}
+
 		public virtual List<Paper> Papers { get; set; }
 
 		public virtual List<Tag> Tags { get; set; }

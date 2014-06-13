@@ -59,6 +59,10 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
+			if(LoginRequiredView == null && !LoginRequiredView.Hidden){
+				LoginRequiredView.Hidden = true;
+			}
+
 			InvokeOnMainThread (delegate {
 
 				Root = new RootElement ("Papers") {

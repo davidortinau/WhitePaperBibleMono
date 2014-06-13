@@ -4,6 +4,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using System.Linq;
+using WhitePaperBible.Core.Services;
 
 namespace WhitePaperBible.Core.Mediators
 {
@@ -13,10 +14,10 @@ namespace WhitePaperBible.Core.Mediators
 		public AppModel AppModel;
 
 		[Inject]
-		public PapersByTagReceivedInvoker PapersReceived;
+		public FavoritesReceivedInvoker FavoritesReceived;
 
 		[Inject]
-		public GetPapersByTagInvoker GetPapersByTag;
+		public GetFavoritesInvoker GetFavorites;
 
 		IFavoritesView Target;
 
@@ -29,7 +30,7 @@ namespace WhitePaperBible.Core.Mediators
 		{
 //			InvokerMap.Add (Target.Filter, HandleFilter);
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
-			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
+			InvokerMap.Add (FavoritesReceived, (object sender, EventArgs e) => SetPapers ());
 //			Target.SearchPlaceHolderText = "Search Papers";
 
 //			if([appDelegate isUserLoggedIn]){
@@ -45,7 +46,7 @@ namespace WhitePaperBible.Core.Mediators
 //			}
 
 			if (AppModel.IsLoggedIn) {
-				SetPapers (null);
+				SetPapers ();
 			}else{
 				Target.PromptForLogin ();
 			}
@@ -57,13 +58,12 @@ namespace WhitePaperBible.Core.Mediators
 			AppModel.CurrentPaper = Target.SelectedPaper;
 		}
 
-		public void SetPapers (PapersReceivedInvokerArgs args)
+		public void SetPapers ()
 		{
-			if (args != null && args.Papers != null) {
-				Target.SetPapers (args.Papers);
+			if (AppModel.Favorites != null && AppModel.Favorites != null) {
+				Target.SetPapers (AppModel.Favorites);
 			}else{
-//				GetPapersByTag.Invoke (new GetPapers (Target.SelectedTag));
-				// GetFavorites
+				GetFavorites.Invoke ();
 			}
 		}
 	}

@@ -60,6 +60,7 @@
     <Compile Include="Mediators\PaperListByTagMediatorTests.cs" />
     <Compile Include="Mediators\LoginMediatorTests.cs" />
     <Compile Include="Services\AuthenticateUserTestClass.cs" />
+    <Compile Include="Services\GetFavoritesServiceTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

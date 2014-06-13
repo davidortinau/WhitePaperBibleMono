@@ -104,6 +104,10 @@
     <Compile Include="Invokers\LoggedInInvoker.cs" />
     <Compile Include="Models\SessionCookie.cs" />
     <Compile Include="Invokers\LoginFaultInvoker.cs" />
+    <Compile Include="Services\GetFavoritesService.cs" />
+    <Compile Include="Invokers\GetFavoritesInvoker.cs" />
+    <Compile Include="Commands\GetFavoritesCommand.cs" />
+    <Compile Include="Invokers\FavoritesReceivedInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
