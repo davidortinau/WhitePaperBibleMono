@@ -59,7 +59,7 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
-			if(LoginRequiredView == null && !LoginRequiredView.Hidden){
+			if(LoginRequiredView != null && !LoginRequiredView.Hidden){
 				LoginRequiredView.Hidden = true;
 			}
 
