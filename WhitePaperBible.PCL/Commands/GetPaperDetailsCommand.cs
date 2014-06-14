@@ -13,8 +13,10 @@ namespace WhitePaperBible.Core.Commands
 	{
 		[Inject]
 		public AppModel AM;
+
 		[Inject]
 		public PaperDetailsReceivedInvoker PaperDetailsReceived;
+
 		[Inject]
 		public GetPaperReferencesService GetPaperReferences;
 

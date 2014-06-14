@@ -113,6 +113,7 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidAppear (animated);
 			DI.RequestMediator (this);
+			this.Title = "Favorites";
 //			View.BringSubviewToFront (LoginRequiredView);
 		}
 

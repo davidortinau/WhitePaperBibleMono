@@ -9,6 +9,7 @@ namespace WhitePaperBible.Core.Views
 	{
 		void SetPaper (Paper paper);
 		void SetReferences (string html);
+		Paper Paper{ get; set;}
 	}
 }
 

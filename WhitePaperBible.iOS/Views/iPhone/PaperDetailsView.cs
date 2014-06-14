@@ -11,12 +11,16 @@ using MonoTouch.Twitter;
 using System.Web;
 using MonkeyArms;
 using RestSharp;
+using WhitePaperBible.Core.Views;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PaperDetailsView : UIViewController, IMediatorTarget
+	public partial class PaperDetailsView : UIViewController, IMediatorTarget, IPaperDetailView
 	{
-		Paper paper;
+		public Paper Paper {
+			get;
+			set;
+		}
 
 		/**
 		 * TODO
@@ -31,7 +35,7 @@ namespace WhitePaperBible.iOS
 		
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
-			this.paper = paper;
+			this.Paper = paper;
 
 			this.HidesBottomBarWhenPushed = true;
 		}
@@ -50,7 +54,7 @@ namespace WhitePaperBible.iOS
 
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 
-			this.Title = paper.title;
+			this.Title = Paper.title;
 			webView.ScrollView.ScrollEnabled = true;
 			webView.ShouldStartLoad += webViewShouldStartLoad;
 			
@@ -151,6 +155,11 @@ namespace WhitePaperBible.iOS
 			// Ooops
 		}
 
+		public void SetPaper (Paper paper)
+		{
+			this.Paper = paper;
+		}
+
 		public void SetReferences (string html)
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
@@ -207,8 +216,8 @@ namespace WhitePaperBible.iOS
 			Console.WriteLine ("Clicked on item {0}", e.ButtonIndex);
 			if (e.ButtonIndex != myActionSheet.CancelButtonIndex) {
 				
-				string paperTitle = paper.title;
-				string urlTitle = paper.url_title;
+				string paperTitle = Paper.title;
+				string urlTitle = Paper.url_title;
 				string subject = "White Paper Bible: " + paperTitle;
 				string paperFullURL = "http://whitepaperbible.org/" + urlTitle;
 

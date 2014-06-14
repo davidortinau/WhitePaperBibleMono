@@ -31,10 +31,10 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-		
-			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetPaper ());
-
+			AppModel.CurrentPaper = Target.Paper;
+			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetDetails ());
 			GetPaperDetails.Invoke ();
+
 		}
 
 		public void SetPaper ()
@@ -44,23 +44,21 @@ namespace WhitePaperBible.Core.Mediators
 			}
 		}
 
-		private void GetDetails()
+		private void SetDetails()
 		{
-			PaperReferencesService.Success += (object sender, EventArgs e) => {
-				GetPaperReferencesServiceEventArgs args = e as GetPaperReferencesServiceEventArgs;
-				string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; } .description { border-radius: 5px; background-color:#F1F1F1; margin: 10px; padding: 8px; }</style>";
-				//			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a>";
-				html += "<h1>" + AppModel.CurrentPaper.title + "</h1>";
-				html += "<section class=\"description\">" + AppModel.CurrentPaper.description + "</section>";
 
-				foreach (ReferenceNode node in args.References) {
-					string content = node.reference.content;
-					html += content;
-				}
+			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; } .description { border-radius: 5px; background-color:#F1F1F1; margin: 10px; padding: 8px; }</style>";
+			//			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a>";
+			html += "<h1>" + AppModel.CurrentPaper.title + "</h1>";
+			html += "<section class=\"description\">" + AppModel.CurrentPaper.description + "</section>";
 
-				Target.SetReferences(html);
-			};
-			PaperReferencesService.Execute (AppModel.CurrentPaper.id);
+			foreach (Reference r in AppModel.CurrentPaper.references) {
+				string content = r.content;
+				html += content;
+			}
+
+			Target.SetReferences(html);
+
 
 
 		}
