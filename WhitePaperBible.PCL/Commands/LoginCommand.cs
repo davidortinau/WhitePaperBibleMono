@@ -19,6 +19,9 @@ namespace WhitePaperBible.Core.Commands
 		public LoggedInInvoker LoggedIn;
 
 		[Inject]
+		public SaveStorageInvoker SaveStorage;
+
+		[Inject]
 		public LoginFaultInvoker Fault;
 
 		public override void Execute (InvokerArgs args)
@@ -34,6 +37,7 @@ namespace WhitePaperBible.Core.Commands
 			if ((args as AuthenticateUserServiceEventArgs).Success) {
 				AM.IsLoggedIn = true;
 				LoggedIn.Invoke ();
+				SaveStorage.Invoke ();
 			}else{
 				Fault.Invoke ();
 			}

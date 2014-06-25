@@ -12,6 +12,8 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapCommandToInvoker<GetPapersByTagCommand, GetPapersByTagInvoker> ();
 			DI.MapCommandToInvoker<LoginCommand, LogInInvoker> ();
 			DI.MapCommandToInvoker<GetFavoritesCommand, GetFavoritesInvoker> ();
+			DI.MapCommandToInvoker<SaveStorageCommand, SaveStorageInvoker> ();
+
 		}
 	}
 }
