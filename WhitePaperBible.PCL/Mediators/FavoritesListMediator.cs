@@ -11,7 +11,7 @@ namespace WhitePaperBible.Core.Mediators
 	public class FavoritesListMediator : Mediator
 	{
 		[Inject]
-		public AppModel AppModel;
+		public AppModel AM;
 
 		[Inject]
 		public FavoritesReceivedInvoker FavoritesReceived;
@@ -45,7 +45,7 @@ namespace WhitePaperBible.Core.Mediators
 //				[notLoggedInViewController release];
 //			}
 
-			if (AppModel.IsLoggedIn) {
+			if (AM.IsLoggedIn) {
 				SetPapers ();
 			}else{
 				Target.PromptForLogin ();
@@ -55,13 +55,13 @@ namespace WhitePaperBible.Core.Mediators
 
 		void HandlerPaperSelected (object sender, EventArgs e)
 		{
-			AppModel.CurrentPaper = Target.SelectedPaper;
+			AM.CurrentPaper = Target.SelectedPaper;
 		}
 
 		public void SetPapers ()
 		{
-			if (AppModel.Favorites != null && AppModel.Favorites != null) {
-				Target.SetPapers (AppModel.Favorites);
+			if (AM.Favorites != null && AM.Favorites != null) {
+				Target.SetPapers (AM.Favorites);
 			}else{
 				GetFavorites.Invoke ();
 			}

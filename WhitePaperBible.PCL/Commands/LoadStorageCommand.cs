@@ -24,13 +24,15 @@ namespace WhitePaperBible.Core.Commands
 		public async Task LoadStore()
 		{
 			IFolder rootFolder = FileSystem.Current.LocalStorage;
-			IFolder folder = await rootFolder.GetFolderAsync("WhitePaperBible");
+			IFolder folder = await rootFolder.CreateFolderAsync("WhitePaperBible", CreationCollisionOption.OpenIfExists);
 			IFile file = await folder.GetFileAsync("app_model.dat");
 
 			var serializer = new XmlSerializer (AM.GetType());
 			var fileText = await file.ReadAllTextAsync ();
 			var stringReader = new StringReader (fileText);
-			AM = (AppModel)serializer.Deserialize (stringReader);
+			AppModel m = (AppModel)serializer.Deserialize (stringReader);
+			AM.IsLoggedIn = m.IsLoggedIn;
+			AM.UserSessionCookie = m.UserSessionCookie;
 
 		}
 	}
