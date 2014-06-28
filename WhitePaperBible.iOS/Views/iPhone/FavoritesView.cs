@@ -41,6 +41,7 @@ namespace WhitePaperBible.iOS
 			SearchPlaceholder = @"Find Papers";
 			this.Filter = new Invoker ();
 			this.OnPaperSelected = new Invoker ();
+			this.Title = @"Favorites";
 
 
 		}

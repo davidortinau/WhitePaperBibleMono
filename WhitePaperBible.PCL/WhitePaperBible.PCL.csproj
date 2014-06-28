@@ -112,6 +112,17 @@
     <Compile Include="Commands\LoadStorageCommand.cs" />
     <Compile Include="Invokers\SaveStorageInvoker.cs" />
     <Compile Include="Invokers\LoadStorageInvoker.cs" />
+    <Compile Include="Mediators\MyPapersMediator.cs" />
+    <Compile Include="Invokers\MyPapersReceivedInvoker.cs" />
+    <Compile Include="Invokers\GetMyPapersInvoker.cs" />
+    <Compile Include="Views\IMyPapersView.cs" />
+    <Compile Include="Commands\GetMyPapersCommand.cs" />
+    <Compile Include="Services\GetMyPapersService.cs" />
+    <Compile Include="Commands\GetUserProfileCommand.cs" />
+    <Compile Include="Services\GetUserProfileService.cs" />
+    <Compile Include="Invokers\GetUserProfileInvoker.cs" />
+    <Compile Include="Invokers\StorageLoadedInvoker.cs" />
+    <Compile Include="Models\AppUser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

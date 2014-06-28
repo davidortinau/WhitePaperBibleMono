@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using WhitePaperBible.Core.Services;
 
 namespace WhitePaperBible.Core.Models
 {
 	public class AppModel
 	{
-		public virtual List<Paper> Favorites {
-			get;
-			set;
-		}
+		public virtual AppUser User { get; set; }
+
+		public virtual List<Paper> MyPapers { get; set; }
+
+		public virtual List<Paper> Favorites { get; set; }
 
 		public virtual List<Paper> Papers { get; set; }
 
@@ -30,9 +32,9 @@ namespace WhitePaperBible.Core.Models
 			set;
 		}
 
-		public virtual bool IsLoggedIn
-		{
-			get;set;
+		public virtual bool IsLoggedIn {
+			get;
+			set;
 		}
 
 		public virtual List<Paper> FilterPapers (string query)

@@ -14,7 +14,7 @@ namespace WhitePaperBible.Core.Commands
 		public AppModel AM;
 
 		[Inject]
-		public PapersReceivedInvoker PapersReceived;
+		public StorageLoadedInvoker StorageLoaded;
 
 		public override void Execute (InvokerArgs args)
 		{
@@ -33,7 +33,7 @@ namespace WhitePaperBible.Core.Commands
 			AppModel m = (AppModel)serializer.Deserialize (stringReader);
 			AM.IsLoggedIn = m.IsLoggedIn;
 			AM.UserSessionCookie = m.UserSessionCookie;
-
+			StorageLoaded.Invoke ();
 		}
 	}
 }

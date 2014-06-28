@@ -19,6 +19,8 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<LoggedInInvoker> ();
 			DI.MapSingleton<LoginFaultInvoker> ();
 			DI.MapSingleton<FavoritesReceivedInvoker> ();
+			DI.MapSingleton<MyPapersReceivedInvoker> ();
+//			DI.MapSingleton<StorageLoadedInvoker> ();
 		}
 	}
 }
