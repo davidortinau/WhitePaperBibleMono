@@ -51,6 +51,13 @@ namespace WhitePaperBible.Core.Models
 		{
 			IsLoggedIn = false;
 		}
+
+		public void StoreCredentials (string userName, string password)
+		{
+			var user = User ?? new AppUser ();
+			user.username = userName;
+			user.password = password;
+		}
 	}
 }
 

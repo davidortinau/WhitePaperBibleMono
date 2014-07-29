@@ -4,137 +4,304 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Mono.Security.dll</key>
+		<key>Microsoft.Threading.Tasks.Extensions.dll</key>
 		<data>
-		++TaJ7KLnYXUEJbDwRix0k4E0Dg=
+		pZYqwmk7zZ3u+0mWc0mzEoF9Ek0=
 		</data>
-		<key>Mono.Security.dll.mdb</key>
+		<key>Microsoft.Threading.Tasks.dll</key>
 		<data>
-		O0q7XCciw/+AMZyyzWnJTjeNPgU=
+		njBiv8muFGu3DnZkEvB3LLrMr00=
+		</data>
+		<key>Mono.Dynamic.Interpreter.dll</key>
+		<data>
+		QfkZNZT3YO1NP+d2o7PUhe0J66k=
+		</data>
+		<key>Mono.Dynamic.Interpreter.dll.mdb</key>
+		<data>
+		HW+2OKkUvV4d3WAGHmkrl0r4FkY=
 		</data>
 		<key>MonoTouch.Dialog-1.dll</key>
 		<data>
-		Ybqxay4sQlYYHg1BRQKEaaqEOac=
+		Jzr9AhM7SAToryAK7b7hTQGTi+4=
 		</data>
 		<key>MonoTouch.Dialog-1.dll.mdb</key>
 		<data>
-		g/cO+ATm2RXHl+rPJc3gpddQR3M=
+		3/6TbCBIAVROI7ZQbz83+Tqwelo=
 		</data>
 		<key>MonoTouch.NUnitLite.dll</key>
 		<data>
-		LrePYHswcQIMG7fbIhAYYPFtwTE=
+		0Zt9yovNrf3AtIGNxRP7ORmkMoA=
 		</data>
 		<key>MonoTouch.NUnitLite.dll.mdb</key>
 		<data>
-		GAxxjFN8q2RymyIptgJqmymXK/A=
+		uJ/BIBhZJHMqclwr0NEebx44pkA=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
-		oowkf1sL6T19nanXUObgmuayWqM=
+		02XMVP7tuSttiwjP1R5UyX77Nv4=
 		</data>
-		<key>NewtonsoftJsonMonoTouch.dll</key>
+		<key>NOTICE</key>
 		<data>
-		PKdousAUXhf4WDPJlmAxM/L5oWk=
+		udRFZiUn5Wu+JuryWRjPAicxwsE=
+		</data>
+		<key>Newtonsoft.Json.dll</key>
+		<data>
+		OOmJZGsUG+jyRX5FdEY71asKih8=
+		</data>
+		<key>PCLStorage.Abstractions.dll</key>
+		<data>
+		VtrSVy8areWmk1+xeGHNm+Lbs/4=
+		</data>
+		<key>PCLStorage.dll</key>
+		<data>
+		GVnDcRgH3khKL3cw7G2bizsGPu8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>RestSharp.MonoTouch.dll</key>
-		<data>
-		cKbzzuE7gLok3UMpA8krwTMdII4=
-		</data>
-		<key>RestSharp.MonoTouch.dll.mdb</key>
-		<data>
-		4JXS8x+VP8MIvPG4sL4y/esXnnc=
-		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
-		ddYwuHyBR1STpnVi4KQzbDxOT3g=
+		tJPoYRuZMw4WCUT4dYEAqmjMK5M=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		pk9cJXfEXth2ukiGLu14+toWlGw=
+		jO9hDTmudI89/gOXhpFp8Qv4HAM=
 		</data>
 		<key>System.Core.dll.mdb</key>
 		<data>
-		xaTicBMKjwnAjlhc5a46UT6cbFE=
+		2m4+Mk6jSJN6NygGuDUTBNPI4UE=
+		</data>
+		<key>System.Json.dll</key>
+		<data>
+		XVj7tKd8zNOxUj8IaJtgQZz85dU=
+		</data>
+		<key>System.Json.dll.mdb</key>
+		<data>
+		EltWuUD6NvA1rmSmhHh9fDvi700=
 		</data>
 		<key>System.Runtime.Serialization.dll</key>
 		<data>
-		eynyeZ+tfYdVe/cslnlXYI9KxO8=
+		xdbmWqKcLZXGODxSxgaTBMHOyK8=
 		</data>
 		<key>System.Runtime.Serialization.dll.mdb</key>
 		<data>
-		38Co96bT5mSN14nj2lMfjf9LUeA=
+		1COSLP0PhecBE58PlZotWC4VuwQ=
 		</data>
 		<key>System.ServiceModel.dll</key>
 		<data>
-		uL65gplBmqmeTA8j7/RRn6dcmkk=
+		WeLgzCVMai0pLrAeQwJ1mA4ii0Y=
 		</data>
 		<key>System.ServiceModel.dll.mdb</key>
 		<data>
-		lC81fV4/mARwNqwn9DE6nNjpoyg=
-		</data>
-		<key>System.Xml.Linq.dll</key>
-		<data>
-		SgUFTWBKWZmpeanekyrEVy81oKU=
-		</data>
-		<key>System.Xml.Linq.dll.mdb</key>
-		<data>
-		6EAMDEYehLba0dWhIFDMGGGp1Zo=
+		p9y7sVAAYIuI/N2SDDmTgCpDops=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		vyn0qr1+E0mbsNQnFSEfIdje7VE=
+		D1pu7mY3aWUUOiVqhtgzwJuCwfk=
 		</data>
 		<key>System.Xml.dll.mdb</key>
 		<data>
-		HVoIq2fiMWgi07R0KEhQkCnQrqs=
+		0j8QS5NutA2e+wxr2td+8dJiRZg=
 		</data>
 		<key>System.dll</key>
 		<data>
-		QQ5lqbGMskJ638lR0E5AVchlKFw=
+		b3v51O2rnQV7+TQfxa46CqcrlWE=
 		</data>
 		<key>System.dll.mdb</key>
 		<data>
-		pwv6zTfJG/SvG2UiU9ZP3twe8IY=
+		JXs6L9rJ170124kGKweM5H+WCsc=
 		</data>
-		<key>WhitePaperBibleCore.dll</key>
+		<key>TinyIOC.dll</key>
 		<data>
-		iwuON52/4/0BJC3TSN28aaNzpcM=
+		kPUkOFKbSPiXk/ghGN8UBnqbn5M=
 		</data>
-		<key>WhitePaperBibleCore.dll.mdb</key>
+		<key>WhitePaperBible.PCL.dll</key>
 		<data>
-		PAaoRE3eyZJ9zDBqGx5rb3sWB7M=
+		RjJchcHxC6Fg8XUIcE+gsj+N//g=
+		</data>
+		<key>WhitePaperBible.PCL.dll.mdb</key>
+		<data>
+		QXfYf68YQ126Wh9fcleO8eSHBC0=
 		</data>
 		<key>WhitePaperBibleTests.exe</key>
 		<data>
-		I64TEF6TkaFdB4IHJMPaAxCNMaw=
+		ypKRJEe4QqVXa0mX5M6T9NyFBZ0=
 		</data>
 		<key>WhitePaperBibleTests.exe.mdb</key>
 		<data>
-		81xE+7gMMVhZ2g3CQT5R/rrhzPU=
+		NFu3Q0a72pp9AuHHJw+E7h5Ebmw=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		tLft8I28tVMF+M7fmBdE/37JOX8=
+		QRIl7he8i8m+qraJc+DVekOZBpg=
 		</data>
 		<key>monotouch.dll</key>
 		<data>
-		s5qaeKGDkupxFkKT0avwi5Cbl+Q=
+		4mRpmFhaP28Pfinxawg1m/paSgM=
 		</data>
 		<key>monotouch.dll.mdb</key>
 		<data>
-		zol4A911cIzAKH9A5+yVapYHxkM=
+		tJ0r3befzhxZ3lTYDqCRHslX738=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		Y/z88ROJymgtb1la2HENZpd9ODY=
+		Tw3HPBycV5CnxzHy7G4p7H9P+Uw=
 		</data>
 		<key>mscorlib.dll.mdb</key>
 		<data>
-		JBDsKKGe1gR2Ec2QjJZPWdnIWRg=
+		BpKzTqbRt3YhkJjE2hc0NZrZM9I=
+		</data>
+	</dict>
+	<key>files2</key>
+	<dict>
+		<key>Microsoft.Threading.Tasks.Extensions.dll</key>
+		<data>
+		pZYqwmk7zZ3u+0mWc0mzEoF9Ek0=
+		</data>
+		<key>Microsoft.Threading.Tasks.dll</key>
+		<data>
+		njBiv8muFGu3DnZkEvB3LLrMr00=
+		</data>
+		<key>Mono.Dynamic.Interpreter.dll</key>
+		<data>
+		QfkZNZT3YO1NP+d2o7PUhe0J66k=
+		</data>
+		<key>Mono.Dynamic.Interpreter.dll.mdb</key>
+		<data>
+		HW+2OKkUvV4d3WAGHmkrl0r4FkY=
+		</data>
+		<key>MonoTouch.Dialog-1.dll</key>
+		<data>
+		Jzr9AhM7SAToryAK7b7hTQGTi+4=
+		</data>
+		<key>MonoTouch.Dialog-1.dll.mdb</key>
+		<data>
+		3/6TbCBIAVROI7ZQbz83+Tqwelo=
+		</data>
+		<key>MonoTouch.NUnitLite.dll</key>
+		<data>
+		0Zt9yovNrf3AtIGNxRP7ORmkMoA=
+		</data>
+		<key>MonoTouch.NUnitLite.dll.mdb</key>
+		<data>
+		uJ/BIBhZJHMqclwr0NEebx44pkA=
+		</data>
+		<key>MonoTouchDebugConfiguration.txt</key>
+		<data>
+		02XMVP7tuSttiwjP1R5UyX77Nv4=
+		</data>
+		<key>NOTICE</key>
+		<data>
+		udRFZiUn5Wu+JuryWRjPAicxwsE=
+		</data>
+		<key>Newtonsoft.Json.dll</key>
+		<data>
+		OOmJZGsUG+jyRX5FdEY71asKih8=
+		</data>
+		<key>PCLStorage.Abstractions.dll</key>
+		<data>
+		VtrSVy8areWmk1+xeGHNm+Lbs/4=
+		</data>
+		<key>PCLStorage.dll</key>
+		<data>
+		GVnDcRgH3khKL3cw7G2bizsGPu8=
+		</data>
+		<key>PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>Settings.bundle/Root.plist</key>
+		<data>
+		tJPoYRuZMw4WCUT4dYEAqmjMK5M=
+		</data>
+		<key>System.Core.dll</key>
+		<data>
+		jO9hDTmudI89/gOXhpFp8Qv4HAM=
+		</data>
+		<key>System.Core.dll.mdb</key>
+		<data>
+		2m4+Mk6jSJN6NygGuDUTBNPI4UE=
+		</data>
+		<key>System.Json.dll</key>
+		<data>
+		XVj7tKd8zNOxUj8IaJtgQZz85dU=
+		</data>
+		<key>System.Json.dll.mdb</key>
+		<data>
+		EltWuUD6NvA1rmSmhHh9fDvi700=
+		</data>
+		<key>System.Runtime.Serialization.dll</key>
+		<data>
+		xdbmWqKcLZXGODxSxgaTBMHOyK8=
+		</data>
+		<key>System.Runtime.Serialization.dll.mdb</key>
+		<data>
+		1COSLP0PhecBE58PlZotWC4VuwQ=
+		</data>
+		<key>System.ServiceModel.dll</key>
+		<data>
+		WeLgzCVMai0pLrAeQwJ1mA4ii0Y=
+		</data>
+		<key>System.ServiceModel.dll.mdb</key>
+		<data>
+		p9y7sVAAYIuI/N2SDDmTgCpDops=
+		</data>
+		<key>System.Xml.dll</key>
+		<data>
+		D1pu7mY3aWUUOiVqhtgzwJuCwfk=
+		</data>
+		<key>System.Xml.dll.mdb</key>
+		<data>
+		0j8QS5NutA2e+wxr2td+8dJiRZg=
+		</data>
+		<key>System.dll</key>
+		<data>
+		b3v51O2rnQV7+TQfxa46CqcrlWE=
+		</data>
+		<key>System.dll.mdb</key>
+		<data>
+		JXs6L9rJ170124kGKweM5H+WCsc=
+		</data>
+		<key>TinyIOC.dll</key>
+		<data>
+		kPUkOFKbSPiXk/ghGN8UBnqbn5M=
+		</data>
+		<key>WhitePaperBible.PCL.dll</key>
+		<data>
+		RjJchcHxC6Fg8XUIcE+gsj+N//g=
+		</data>
+		<key>WhitePaperBible.PCL.dll.mdb</key>
+		<data>
+		QXfYf68YQ126Wh9fcleO8eSHBC0=
+		</data>
+		<key>WhitePaperBibleTests.exe</key>
+		<data>
+		ypKRJEe4QqVXa0mX5M6T9NyFBZ0=
+		</data>
+		<key>WhitePaperBibleTests.exe.mdb</key>
+		<data>
+		NFu3Q0a72pp9AuHHJw+E7h5Ebmw=
+		</data>
+		<key>embedded.mobileprovision</key>
+		<data>
+		QRIl7he8i8m+qraJc+DVekOZBpg=
+		</data>
+		<key>monotouch.dll</key>
+		<data>
+		4mRpmFhaP28Pfinxawg1m/paSgM=
+		</data>
+		<key>monotouch.dll.mdb</key>
+		<data>
+		tJ0r3befzhxZ3lTYDqCRHslX738=
+		</data>
+		<key>mscorlib.dll</key>
+		<data>
+		Tw3HPBycV5CnxzHy7G4p7H9P+Uw=
+		</data>
+		<key>mscorlib.dll.mdb</key>
+		<data>
+		BpKzTqbRt3YhkJjE2hc0NZrZM9I=
 		</data>
 	</dict>
 	<key>rules</key>
@@ -154,6 +321,32 @@
 			<true/>
 			<key>weight</key>
 			<real>100</real>
+		</dict>
+	</dict>
+	<key>rules2</key>
+	<dict>
+		<key>.*</key>
+		<true/>
+		<key>Info.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>ResourceRules.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>100</real>
+		</dict>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
+		<dict>
+			<key>nested</key>
+			<true/>
+			<key>weight</key>
+			<real>0.0</real>
 		</dict>
 	</dict>
 </dict>

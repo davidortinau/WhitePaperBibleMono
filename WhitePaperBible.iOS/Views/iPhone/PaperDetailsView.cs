@@ -58,61 +58,51 @@ namespace WhitePaperBible.iOS
 			webView.ScrollView.ScrollEnabled = true;
 			webView.ShouldStartLoad += webViewShouldStartLoad;
 			
-			var tapRecognizer = new UITapGestureRecognizer (this, new Selector ("HandleTapFrom"));
+			var tapRecognizer = new UITapGestureRecognizer ((g)=> {
+				Console.WriteLine ("getting taps");
+
+				// so the question is how long were we holding it down? Has the user initialized text selection?
+				var selection = webView.EvaluateJavascript ("window.getSelection().toString()");
+				Console.WriteLine ("selection {0}", selection);
+
+				if (selection.Length <= 0) {			
+					// TODO animate these
+					if (toolbar.Alpha.Equals (1f)) {
+						toolbar.Alpha = 0f;
+					} else {
+						toolbar.Alpha = 1f;
+					}
+				} else {
+					Console.WriteLine ("user is selecting text");
+				}
+
+			});
 			tapRecognizer.NumberOfTapsRequired = 1;
 			tapRecognizer.Delegate = new GestureDelegate ();
 			
 			webView.AddGestureRecognizer (tapRecognizer);
 		}
 
-		[Export ("HandleTapFrom")]
-		public void HandleTapFrom (UITapGestureRecognizer recognizer)
-		{
-			Console.WriteLine ("getting taps");
-			
-			// so the question is how long were we holding it down? Has the user initialized text selection?
-			var selection = webView.EvaluateJavascript ("window.getSelection().toString()");
-			Console.WriteLine ("selection {0}", selection);
-			
-			if (selection.Length <= 0) {			
-				// TODO animate these
-				if (toolbar.Alpha.Equals (1f)) {
-					toolbar.Alpha = 0f;
-				} else {
-					toolbar.Alpha = 1f;
-				}
-			} else {
-				Console.WriteLine ("user is selecting text");
-			}
-			
-//			CGPoint location = [recognizer locationInView:self.navigationController.topViewController.view];
-//		    CGRect bounds = self.navigationController.topViewController.view.bounds;
-//		
-//		    if (location.x < bounds.size.width / 5.0) {
-//		        // This is in the left most quadrant
-//		
-//		        // I implement code here to perform a "previous page" action
-//		    } else if (location.x > bounds.size.width * 4.0 / 5.0) {
-//		        // This is in the right most quadrant
-//		
-//		        // I implement code here to perform a "next page" action
-//		    } else if ((location.x > bounds.size.width / 3.0) && (location.x < bounds.size.width * 2.0 / 3.0)) {
-//		        // This is in the middle third
-//		        BOOL hidden = [self.navigationController isNavigationBarHidden];
-//		
-//		        // resize the height of self.webView1, self.webView2, and self.webView3 based on the toolbar hiding / showing
-//		        CGRect webViewControllerFrame = self.webView.frame;
-//		        webViewControllerFrame.size.height += (hidden ? -44 : 44);
-//		        self.webView.frame = webViewControllerFrame;
-//		
-//		        // I hide all of the upper status bar and navigation bar, and bottom toolbar for a clean reading screen
-//		        [[UIApplication sharedApplication] setStatusBarHidden:!hidden];
-//		        [self.navigationController setNavigationBarHidden:!hidden animated:YES];
-//		        self.toolbar.hidden = !hidden;
-//		
-//		        // I perform content relayout here in the now modified webView screen real estate
-//		    }
-		}
+//		[Export ("HandleTapFrom")]
+//		public void HandleTapFrom (UITapGestureRecognizer recognizer)
+//		{
+//			Console.WriteLine ("getting taps");
+//			
+//			// so the question is how long were we holding it down? Has the user initialized text selection?
+//			var selection = webView.EvaluateJavascript ("window.getSelection().toString()");
+//			Console.WriteLine ("selection {0}", selection);
+//			
+//			if (selection.Length <= 0) {			
+//				// TODO animate these
+//				if (toolbar.Alpha.Equals (1f)) {
+//					toolbar.Alpha = 0f;
+//				} else {
+//					toolbar.Alpha = 1f;
+//				}
+//			} else {
+//				Console.WriteLine ("user is selecting text");
+//			}
+//		}
 
 		public override void ViewWillAppear (bool animated)
 		{
@@ -122,7 +112,11 @@ namespace WhitePaperBible.iOS
 			
 			toolbar.Alpha = 1f;
 			var userInfo = new NSString ("MyUserInfo");
-			var timer = NSTimer.CreateScheduledTimer (2, this, new Selector ("HideToolBar"), userInfo, false);
+//			var timer = NSTimer.CreateScheduledTimer (2, this, new Selector ("HideToolBar"), userInfo, false);
+			var timer = NSTimer.CreateScheduledTimer (2, ()=> {
+				toolbar.Alpha = 0f;
+				Console.WriteLine ("hiding toolbar");
+			});
 		}
 
 		public override void ViewWillDisappear(bool animated)
@@ -130,14 +124,14 @@ namespace WhitePaperBible.iOS
 			DI.DestroyMediator (this);
 		}
 
-		[Export ("HideToolBar")]
-		void HideToolBar (NSTimer timer)
-		{
-			toolbar.Alpha = 0f;
-			Console.WriteLine ("hiding toolbar");
-//			timer.Invalidate();
-//			timer = null;
-		}
+//		[Export ("HideToolBar")]
+//		void HideToolBar (NSTimer timer)
+//		{
+//			toolbar.Alpha = 0f;
+//			Console.WriteLine ("hiding toolbar");
+////			timer.Invalidate();
+////			timer = null;
+//		}
 
 		bool webViewShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType)
 		{

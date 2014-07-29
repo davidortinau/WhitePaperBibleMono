@@ -27,6 +27,9 @@ namespace WhitePaperBible.Core.Commands
 		public override void Execute (InvokerArgs args)
 		{
 			var loginArgs = (args as LogInInvokerArgs);
+
+			AM.StoreCredentials(loginArgs.UserName, loginArgs.Password);
+
 			Service.Success += onSuccess;
 			Service.Fault += onFault;
 			Service.Execute (loginArgs.UserName, loginArgs.Password);
