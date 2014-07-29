@@ -46,7 +46,11 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>True</MtouchDebug>
-    <MtouchProfiling>True</MtouchProfiling>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -112,11 +116,21 @@
     <Compile Include="Invokers\LoginFinishedInvokerArgs.cs" />
     <Compile Include="Invokers\LoginFinishedInvoker.cs" />
     <Compile Include="Views\iPhone\Sub\LoginRequiredView.cs" />
+    <Compile Include="Views\iPhone\CopyrightsView.cs" />
+    <Compile Include="Views\iPhone\CopyrightsView.designer.cs">
+      <DependentUpon>CopyrightsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\TermsAndConditionsView.cs" />
+    <Compile Include="Views\iPhone\TermsAndConditionsView.designer.cs">
+      <DependentUpon>TermsAndConditionsView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\CopyrightsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\TermsAndConditionsView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />
@@ -237,5 +251,8 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\WPB Terms and Conditions.txt" />
+    <BundleResource Include="Resources\my_papers.png" />
+    <BundleResource Include="Resources\my_papers%402x.png" />
   </ItemGroup>
 </Project>

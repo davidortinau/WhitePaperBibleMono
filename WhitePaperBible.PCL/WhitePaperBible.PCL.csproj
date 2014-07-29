@@ -123,6 +123,8 @@
     <Compile Include="Invokers\GetUserProfileInvoker.cs" />
     <Compile Include="Invokers\StorageLoadedInvoker.cs" />
     <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Invokers\LogoutInvoker.cs" />
+    <Compile Include="Commands\LogoutCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

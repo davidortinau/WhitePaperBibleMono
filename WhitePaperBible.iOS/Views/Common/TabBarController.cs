@@ -27,7 +27,7 @@ namespace WhitePaperBible.iOS
 			
 			searchNav = CreateTabView<SearchView> (ResourceManager.GetString ("search"), "search");
 			
-			myPapersNav = CreateTabView<MyPapersView> (ResourceManager.GetString ("myPapers"), "search");
+			myPapersNav = CreateTabView<MyPapersView> (ResourceManager.GetString ("myPapers"), "my_papers");
 
 			aboutNav = CreateTabView<AboutView> (ResourceManager.GetString ("about"), "myDots");
 
@@ -39,8 +39,8 @@ namespace WhitePaperBible.iOS
 					papersNav,
 					tagsNav,
 					favoritesNav,
-					myPapersNav,
 					searchNav,
+					myPapersNav,
 					aboutNav
 				};
 			} else {	// IsPad

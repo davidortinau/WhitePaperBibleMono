@@ -58,6 +58,15 @@ namespace WhitePaperBible.Core.Models
 			user.username = userName;
 			user.password = password;
 		}
+
+		public void ClearCredentials ()
+		{
+			User = null;
+			IsLoggedIn = false;
+			UserSessionCookie = null;
+			MyPapers = null;
+			Favorites = null;
+		}
 	}
 }
 

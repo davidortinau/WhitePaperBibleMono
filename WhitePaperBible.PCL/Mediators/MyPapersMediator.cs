@@ -19,6 +19,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public GetMyPapersInvoker GetMyPapers;
 
+		[Inject]
+		public LogoutInvoker Logout;
+
 		IMyPapersView Target;
 
 		public MyPapersMediator (IMyPapersView view) : base (view)
@@ -30,6 +33,8 @@ namespace WhitePaperBible.Core.Mediators
 		{
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers ());
+			InvokerMap.Add (Logout, (object sender, EventArgs e)=> Target.PromptForLogin());
+			InvokerMap.Add (Target.OnLogoutRequested, (object sender, EventArgs e) => Logout.Invoke ());
 
 
 			if (AM.IsLoggedIn) {

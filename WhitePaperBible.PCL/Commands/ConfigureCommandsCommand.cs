@@ -15,6 +15,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapCommandToInvoker<SaveStorageCommand, SaveStorageInvoker> ();
 			DI.MapCommandToInvoker<GetMyPapersCommand, GetMyPapersInvoker> ();
 			DI.MapCommandToInvoker<GetUserProfileCommand, StorageLoadedInvoker> ();
+			DI.MapCommandToInvoker<LogoutCommand, LogoutInvoker> ();
 
 
 		}

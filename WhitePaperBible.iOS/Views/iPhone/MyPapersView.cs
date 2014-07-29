@@ -40,6 +40,16 @@ namespace WhitePaperBible.iOS
 			SearchPlaceholder = @"Find Papers";
 			this.Filter = new Invoker ();
 			this.OnPaperSelected = new Invoker ();
+			this.OnLogoutRequested = new Invoker ();
+
+			// add logout in upper left
+			NavigationItem.SetLeftBarButtonItem (
+				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					OnLogoutRequested.Invoke();
+				})
+				, true
+			);
+
 		}
 
 		#region IPapersListView implementation
@@ -50,6 +60,11 @@ namespace WhitePaperBible.iOS
 		}
 
 		public Invoker OnPaperSelected {
+			get;
+			private set;
+		}
+
+		public Invoker OnLogoutRequested {
 			get;
 			private set;
 		}
