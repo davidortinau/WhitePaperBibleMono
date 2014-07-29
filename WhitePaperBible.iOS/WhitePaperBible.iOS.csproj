@@ -79,6 +79,7 @@
     <Reference Include="PCLStorage.Abstractions">
       <HintPath>..\packages\PCLStorage.0.9.6\lib\monotouch\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -124,6 +125,11 @@
     <Compile Include="Views\iPhone\TermsAndConditionsView.designer.cs">
       <DependentUpon>TermsAndConditionsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\iPhone\Sub\ProfileView.cs" />
+    <Compile Include="Views\iPhone\MyPapersAndProfileController.cs" />
+    <Compile Include="Views\iPhone\MyPapersAndProfileController.designer.cs">
+      <DependentUpon>MyPapersAndProfileController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -131,6 +137,7 @@
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\CopyrightsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\TermsAndConditionsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\MyPapersAndProfileController.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />

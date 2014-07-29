@@ -27,7 +27,7 @@ namespace WhitePaperBible.iOS
 			
 			searchNav = CreateTabView<SearchView> (ResourceManager.GetString ("search"), "search");
 			
-			myPapersNav = CreateTabView<MyPapersView> (ResourceManager.GetString ("myPapers"), "my_papers");
+			myPapersNav = CreateTabView<MyPapersAndProfileController> (ResourceManager.GetString ("myPapers"), "my_papers");
 
 			aboutNav = CreateTabView<AboutView> (ResourceManager.GetString ("about"), "myDots");
 

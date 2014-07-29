@@ -50,7 +50,17 @@ namespace WhitePaperBible.iOS
 				, true
 			);
 
+//			this.TableView.Frame = new System.Drawing.RectangleF (0, 110, View.Bounds.Width, View.Bounds.Height - 110);
+
+//			AddProfileView ();
+
 		}
+
+//		void AddProfileView ()
+//		{
+//			var profileView = new ProfileView ();
+//			View.AddSubview (profileView);
+//		}
 
 		#region IPapersListView implementation
 
