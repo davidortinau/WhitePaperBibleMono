@@ -127,6 +127,8 @@
     <Compile Include="Commands\LogoutCommand.cs" />
     <Compile Include="Views\IProfileView.cs" />
     <Compile Include="Mediators\ProfileViewMediator.cs" />
+    <Compile Include="Views\IEditProfileView.cs" />
+    <Compile Include="Mediators\EditProfileViewMediator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

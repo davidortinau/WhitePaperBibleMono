@@ -39,12 +39,18 @@ namespace WhitePaperBible.iOS
 			profileView.Frame = new RectangleF (0, 64, View.Bounds.Width, profileView.Bounds.Height);
 			View.AddSubview (profileView);
 
+			profileView.GoToEdit.Invoked += (object sender, EventArgs e) => {
+				var editView = new EditProfileView();
+				this.NavigationController.PushViewController(editView, true);
+			};
+
 			var myPapersView = new MyPapersView ();
 
 			var containerView = new UIView (new RectangleF (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
 			containerView.AddSubview (myPapersView.TableView);
 			View.AddSubview (containerView);
 		}
+
 	}
 }
 

@@ -130,6 +130,8 @@
     <Compile Include="Views\iPhone\MyPapersAndProfileController.designer.cs">
       <DependentUpon>MyPapersAndProfileController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\iPhone\EditProfileView.cs" />
+    <Compile Include="UI\CustomElements\SimpleMultilineEntryElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />

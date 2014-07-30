@@ -20,10 +20,18 @@ namespace WhitePaperBible.iOS
 	{
 		UILabel NameTxt;
 		UIImageView Avatar;
+		UIButton EditBtn;
+
+		public Invoker GoToEdit {
+			get;
+			private set;
+		}
 
 		public ProfileView () : base (new RectangleF (0, 0, 320, 100))
 		{
 			this.BackgroundColor = AppStyles.DarkGray;
+
+			GoToEdit = new Invoker ();
 		}
 
 		public override void LayoutSubviews ()
@@ -49,9 +57,20 @@ namespace WhitePaperBible.iOS
 			AddSubview (NameTxt);
 
 			// edit button
+			EditBtn = new UIButton (UIButtonType.RoundedRect);
+			EditBtn.SetTitle ("Edit Profile", UIControlState.Normal);
+			EditBtn.Frame = new RectangleF (90, 70, 200, 30);
+			EditBtn.BackgroundColor = UIColor.Clear;
+			EditBtn.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			EditBtn.Font = UIFont.FromName ("Helvetica", 12);
+//			EditBtn.SetTitleColor (TNTStyles.DarkGray, UIControlState.Highlighted); 
+			AddSubview (EditBtn);
+
+			EditBtn.TouchUpInside += (object sender, EventArgs e) => {
+				GoToEdit.Invoke();
+			};
 
 		}
-
 
 		async public void SetUserProfile(AppUser user)
 		{
