@@ -31,8 +31,11 @@ namespace WhitePaperBible.Core.Commands
 			var fileText = await file.ReadAllTextAsync ();
 			var stringReader = new StringReader (fileText);
 			AppModel m = (AppModel)serializer.Deserialize (stringReader);
-			AM = m;
-			AM.IsLoggedIn = m.IsLoggedIn;
+			AM.User = m.User;
+			AM.Papers = m.Papers;
+			AM.Favorites = m.Favorites;
+			AM.Tags = m.Tags;
+			AM.IsLoggedIn = (AM.User != null && AM.User.ID > 0);
 			AM.UserSessionCookie = m.UserSessionCookie;
 			StorageLoaded.Invoke ();
 		}

@@ -24,6 +24,9 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public GetUserProfileInvoker GetProfile;
 
+		[Inject]
+		public GetFavoritesInvoker GetFavorites;
+
 		public override void Execute (InvokerArgs args)
 		{
 			var loginArgs = (args as LogInInvokerArgs);
@@ -40,6 +43,7 @@ namespace WhitePaperBible.Core.Commands
 			if ((args as AuthenticateUserServiceEventArgs).Success) {
 				AM.IsLoggedIn = true;
 				LoggedIn.Invoke ();
+				GetFavorites.Invoke ();
 				GetProfile.Invoke ();
 			}else{
 				Fault.Invoke ();

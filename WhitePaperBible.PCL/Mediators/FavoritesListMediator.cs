@@ -19,9 +19,6 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public GetFavoritesInvoker GetFavorites;
 
-		[Inject]
-		public LoggedInInvoker LoggedIn;
-
 		IFavoritesView Target;
 
 		public FavoritesListMediator (IFavoritesView view) : base (view)
@@ -31,10 +28,8 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-//			InvokerMap.Add (Target.Filter, HandleFilter);
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (FavoritesReceived, (object sender, EventArgs e) => SetPapers ());
-//			InvokerMap.Add(LoggedIn, Target.)
 
 			if (AM.IsLoggedIn) {
 				SetPapers ();
