@@ -14,7 +14,7 @@ namespace WhitePaperBible.Core.Mediators
 		public AppModel AM;
 
 		[Inject]
-		public LoggedInInvoker LoggedIn;
+		public UserProfileReceivedInvoker Received;
 
 		IProfileView Target;
 
@@ -25,15 +25,14 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-			InvokerMap.Add (LoggedIn, OnLoggedIn);
+			InvokerMap.Add (Received, OnProfileReceived);
 
-
-			if (AM.IsLoggedIn) {
+			if (AM.IsLoggedIn && AM.User != null && AM.User.Name != null) {
 				SetUserProfile ();
 			}
 		}
 
-		void OnLoggedIn (object sender, EventArgs e)
+		void OnProfileReceived (object sender, EventArgs e)
 		{
 			SetUserProfile ();
 		}

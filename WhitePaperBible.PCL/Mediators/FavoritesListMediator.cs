@@ -19,6 +19,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public GetFavoritesInvoker GetFavorites;
 
+		[Inject]
+		public LoggedInInvoker LoggedIn;
+
 		IFavoritesView Target;
 
 		public FavoritesListMediator (IFavoritesView view) : base (view)
@@ -31,19 +34,7 @@ namespace WhitePaperBible.Core.Mediators
 //			InvokerMap.Add (Target.Filter, HandleFilter);
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (FavoritesReceived, (object sender, EventArgs e) => SetPapers ());
-//			Target.SearchPlaceHolderText = "Search Papers";
-
-//			if([appDelegate isUserLoggedIn]){
-//				self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//				[HRRestModel setDelegate:self];
-//				[HRRestModel getPath:@"/favorite/index/?caller=wpb-iPhone" withOptions:nil object:self];
-//				[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-//			}
-//			else{
-//				NotLoggedInViewController *notLoggedInViewController = [[NotLoggedInViewController alloc] initWithNibName:@"NotLoggedInViewController"  bundle:[NSBundle mainBundle]];
-//				[self presentModalViewController:notLoggedInViewController animated:YES];
-//				[notLoggedInViewController release];
-//			}
+//			InvokerMap.Add(LoggedIn, Target.)
 
 			if (AM.IsLoggedIn) {
 				SetPapers ();

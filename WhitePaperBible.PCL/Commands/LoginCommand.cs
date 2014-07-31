@@ -19,10 +19,10 @@ namespace WhitePaperBible.Core.Commands
 		public LoggedInInvoker LoggedIn;
 
 		[Inject]
-		public SaveStorageInvoker SaveStorage;
+		public LoginFaultInvoker Fault;
 
 		[Inject]
-		public LoginFaultInvoker Fault;
+		public GetUserProfileInvoker GetProfile;
 
 		public override void Execute (InvokerArgs args)
 		{
@@ -40,7 +40,7 @@ namespace WhitePaperBible.Core.Commands
 			if ((args as AuthenticateUserServiceEventArgs).Success) {
 				AM.IsLoggedIn = true;
 				LoggedIn.Invoke ();
-				SaveStorage.Invoke ();
+				GetProfile.Invoke ();
 			}else{
 				Fault.Invoke ();
 			}

@@ -15,6 +15,12 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public IGetUserProfileService Service;
 
+		[Inject]
+		public UserProfileReceivedInvoker Received;
+
+		[Inject]
+		public SaveStorageInvoker SaveStorage;
+
 		public override void Execute (InvokerArgs args)
 		{
 			Service.Success += onSuccess;
@@ -24,6 +30,8 @@ namespace WhitePaperBible.Core.Commands
 		void onSuccess (object sender, EventArgs args)
 		{
 			AM.User = ((GetUserProfileEventArgs)args).User;
+			SaveStorage.Invoke ();
+			Received.Invoke ();
 		}
 	}
 }

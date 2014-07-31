@@ -54,9 +54,10 @@ namespace WhitePaperBible.Core.Models
 
 		public void StoreCredentials (string userName, string password)
 		{
-			var user = User ?? new AppUser ();
-			user.username = userName;
-			user.password = password;
+			User = User ?? new AppUser ();
+			User.username = userName;
+			User.password = password;
+
 		}
 
 		public void ClearCredentials ()
