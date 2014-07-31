@@ -14,11 +14,14 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 	public class PaperElement : Element  {
 		static NSString cellId = new NSString ("PaperCell");
 		Paper paper;
+
+		public event Action Tapped;
 		
 		/// <summary>for iPhone</summary>
-		public PaperElement (Paper p) : base (p.title)
+		public PaperElement (Paper p, Action tapped) : base (p.title)
 		{
 			paper = p;
+			Tapped = tapped;
 		}
 		
 		
@@ -46,9 +49,13 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// </summary>
 		public override void Selected (DialogViewController dvc, UITableView tableView, MonoTouch.Foundation.NSIndexPath path)
 		{
-			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(paper);
-			paperDetails.Title = paper.title;
-			dvc.ActivateController(paperDetails);		
+//			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(paper);
+//			paperDetails.Title = paper.title;
+//			dvc.ActivateController (paperDetails);
+
+			if (Tapped != null)
+				Tapped ();
+			tableView.DeselectRow (path, true);
 		}
 	}
 }

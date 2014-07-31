@@ -25,6 +25,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public LoggedInInvoker LoggedIn;
 
+		[Inject]
+		public ShowMyPaperInvoker ShowMyPaper;
+
 		IMyPapersView Target;
 
 		public MyPapersMediator (IMyPapersView view) : base (view)
@@ -47,7 +50,9 @@ namespace WhitePaperBible.Core.Mediators
 
 		void HandlerPaperSelected (object sender, EventArgs e)
 		{
-			AM.CurrentPaper = Target.SelectedPaper;
+			ShowMyPaper.Invoke ((ShowMyPaperInvokerArgs)e);
+//			var paper = ((ShowMyPaperInvokerArgs)e).Paper;
+//			AM.CurrentPaper = Target.SelectedPaper;
 		}
 
 		void OnLoggedIn (object sender, EventArgs e)

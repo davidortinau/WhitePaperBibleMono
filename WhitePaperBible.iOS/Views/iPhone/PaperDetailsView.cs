@@ -36,6 +36,7 @@ namespace WhitePaperBible.iOS
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
 			this.Paper = paper;
+			this.Title = Paper.title;
 
 			this.HidesBottomBarWhenPushed = true;
 		}

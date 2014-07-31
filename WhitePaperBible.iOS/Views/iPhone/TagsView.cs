@@ -47,7 +47,7 @@ namespace WhitePaperBible.iOS
 					}
 				};
 
-				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+//				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 			});
 
 		}

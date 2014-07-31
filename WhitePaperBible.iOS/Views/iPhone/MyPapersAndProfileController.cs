@@ -15,6 +15,10 @@ namespace WhitePaperBible.iOS
 	{
 		LoginRequiredView LoginRequiredView;
 
+		ProfileView profileView;
+
+		MyPapersView myPapersView;
+
 		public void PromptForLogin ()
 		{
 			if (LoginRequiredView == null) {
@@ -49,6 +53,12 @@ namespace WhitePaperBible.iOS
 			LoginRequiredView.Hidden = true;
 		}
 
+		public void ShowPaper (WhitePaperBible.Core.Models.Paper paper)
+		{
+			var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(paper);
+			NavigationController.PushViewController (paperDetails, true);
+		}
+
 		public MyPapersAndProfileController () : base ("MyPapersAndProfileController", null)
 		{
 			this.Title = "My Papers";
@@ -65,8 +75,7 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			DI.RequestMediator (this);
-			
+						
 			// Perform any additional setup after loading the view, typically from a nib.
 
 		}
@@ -75,30 +84,63 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidDisappear (animated);
 			DI.DestroyMediator (this);
+			if (this.myPapersView != null) {
+				DI.DestroyMediator (this.myPapersView);
+			}
+
+			if(this.profileView != null){
+				DI.DestroyMediator (this.profileView);
+			}
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+
+
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+			DI.RequestMediator (this);
+			if (this.myPapersView != null) {
+				DI.RequestMediator (this.myPapersView);
+			}
+
+			if(this.profileView != null){
+				DI.RequestMediator (this.profileView);
+			}
 		}
 
 		public override void ViewDidLayoutSubviews()
 		{
 			base.ViewDidLayoutSubviews();
 
-			var profileView = new ProfileView ();
-			profileView.Frame = new RectangleF (0, 64, View.Bounds.Width, profileView.Bounds.Height);
-			View.AddSubview (profileView);
+			if (profileView == null) {
+				profileView = new ProfileView ();
+				profileView.Frame = new RectangleF (0, 64, View.Bounds.Width, profileView.Bounds.Height);
+				View.AddSubview (profileView);
 
-			profileView.GoToEdit.Invoked += (object sender, EventArgs e) => {
-				var editView = new EditProfileView();
-				this.NavigationController.PushViewController(editView, true);
-			};
+				profileView.GoToEdit.Invoked += (object sender, EventArgs e) => {
+					var editView = new EditProfileView ();
+					this.NavigationController.PushViewController (editView, true);
+				};
+			}
 
-			var myPapersView = new MyPapersView ();
+			if (myPapersView == null) {
+				myPapersView = new MyPapersView ();
 
-			var containerView = new UIView (new RectangleF (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
-			containerView.AddSubview (myPapersView.TableView);
-			View.AddSubview (containerView);
+				var containerView = new UIView (new RectangleF (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
+				containerView.AddSubview (myPapersView.TableView);
+				View.AddSubview (containerView);
+			}
 
 			if (LoginRequiredView != null) {
 				View.BringSubviewToFront (LoginRequiredView);
 			}
+
+
 		}
 
 	}

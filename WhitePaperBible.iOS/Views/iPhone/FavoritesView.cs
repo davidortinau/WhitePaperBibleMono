@@ -72,7 +72,11 @@ namespace WhitePaperBible.iOS
 					orderby alpha.Key
 					select new Section (alpha.Key) {
 						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
+							var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(eachNode);
+							paperDetails.Title = eachNode.title;
+							NavigationController.PushViewController(paperDetails, true);
+						})
 					}
 				};
 

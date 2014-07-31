@@ -8,6 +8,7 @@ using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.Invokers;
+using WhitePaperBible.Core.Invokers;
 
 namespace WhitePaperBible.iOS
 {
@@ -73,7 +74,9 @@ namespace WhitePaperBible.iOS
 					orderby alpha.Key
 					select new Section (alpha.Key) {
 						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
+							this.OnPaperSelected.Invoke(new ShowMyPaperInvokerArgs(eachNode));
+						})
 					}
 				};
 
@@ -111,19 +114,22 @@ namespace WhitePaperBible.iOS
 
 		}
 
-		public override void ViewDidAppear (bool animated)
-		{
-			base.ViewDidAppear (animated);
-			DI.RequestMediator (this);
-			this.Title = "My Papers";
-			//			View.BringSubviewToFront (LoginRequiredView);
-		}
-
-		public override void ViewDidDisappear (bool animated)
-		{
-			base.ViewDidDisappear (animated);
-
-			DI.DestroyMediator (this);
-		}
+//		public override void ViewDidAppear (bool animated)
+//		{
+//			base.ViewDidAppear (animated);
+//		}
+//
+//		public override void ViewWillAppear (bool animated)
+//		{
+//			base.ViewWillAppear (animated);
+//			DI.RequestMediator (this);
+//			this.Title = "My Papers";
+//		}
+//
+//		public override void ViewDidDisappear (bool animated)
+//		{
+//			base.ViewDidDisappear (animated);
+//			DI.DestroyMediator (this);
+//		}
 	}
 }

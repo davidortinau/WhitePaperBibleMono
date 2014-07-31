@@ -7,6 +7,8 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IMyPapersAndProfileView : IMediatorTarget
 	{
+		void ShowPaper (Paper paper);
+
 		void DismissLoginPrompt ();
 
 		void PromptForLogin ();

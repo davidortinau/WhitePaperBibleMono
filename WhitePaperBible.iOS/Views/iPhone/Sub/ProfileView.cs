@@ -39,7 +39,7 @@ namespace WhitePaperBible.iOS
 			base.LayoutSubviews ();
 			CreateView ();
 
-			DI.RequestMediator (this);
+//			DI.RequestMediator (this);
 		}
 
 

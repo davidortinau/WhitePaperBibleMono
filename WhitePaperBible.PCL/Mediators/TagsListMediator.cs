@@ -48,7 +48,7 @@ namespace WhitePaperBible.Core.Mediators
 
 		public void SetTags ()
 		{
-			if (AppModel.Tags != null) {
+			if (AppModel.Tags != null && AppModel.Tags.Count > 0) {
 				Target.SetTags (AppModel.Tags);
 			} else {
 				GetTags.Invoke ();
