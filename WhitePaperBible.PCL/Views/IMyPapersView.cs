@@ -7,10 +7,6 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IMyPapersView : IMediatorTarget
 	{
-//		void DismissLoginPrompt ();
-
-		void PromptForLogin ();
-
 		Invoker Filter{ get; }
 
 		Invoker OnPaperSelected{ get; }

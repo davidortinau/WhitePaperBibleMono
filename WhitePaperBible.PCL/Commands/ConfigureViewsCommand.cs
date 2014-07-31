@@ -18,6 +18,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapMediatorToClass<MyPapersMediator, IMyPapersView> ();
 			DI.MapMediatorToClass<ProfileViewMediator, IProfileView> ();
 			DI.MapMediatorToClass<EditProfileViewMediator, IEditProfileView> ();
+			DI.MapMediatorToClass<MyPapersAndProfileMediator, IMyPapersAndProfileView> ();
 		}
 	}
 }

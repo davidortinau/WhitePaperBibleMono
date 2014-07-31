@@ -13,26 +13,6 @@ namespace WhitePaperBible.iOS
 {
 	public partial class MyPapersView : DialogViewController, IMyPapersView, IMediatorTarget
 	{
-		LoginRequiredView LoginRequiredView;
-
-		public void PromptForLogin ()
-		{
-			if (LoginRequiredView == null) {
-				CreateLoginRequiredView ();
-				LoginRequiredView.Hidden = false;
-			}
-		}
-
-		public void ShowLoginForm ()
-		{
-			var loginView = new LoginView ();
-			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
-				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
-			};
-
-			this.PresentViewController (loginView, true, null);
-		}
-
 		public MyPapersView () : base (UITableViewStyle.Plain, null, true)
 		{
 			EnableSearch = true; 
@@ -81,10 +61,6 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
-			if(LoginRequiredView != null && !LoginRequiredView.Hidden){
-				LoginRequiredView.Hidden = true;
-			}
-
 			if(papers == null || papers.Count == 0){
 				return;
 			}
@@ -148,15 +124,6 @@ namespace WhitePaperBible.iOS
 			base.ViewDidDisappear (animated);
 
 			DI.DestroyMediator (this);
-		}
-
-		protected void CreateLoginRequiredView ()
-		{
-			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			View.AddSubview (LoginRequiredView);
-			View.BringSubviewToFront (LoginRequiredView);
-			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
-			LoginRequiredView.Hidden = true;
 		}
 	}
 }
