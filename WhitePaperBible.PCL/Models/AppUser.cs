@@ -82,6 +82,21 @@ namespace WhitePaperBible.Core.Models
 			get;
 			set;
 		}
+
+		public string passwordConfirmation {
+			get;
+			set;
+		}
+
+		public void Update (AppUser user)
+		{
+			this.Name = user.Name;
+			this.Bio = user.Bio;
+			this.Website = user.Website;
+			this.Email = user.Email;
+			this.username = user.username;
+
+		}
 	}
 }
 

@@ -13,7 +13,7 @@ namespace WhitePaperBible.Core.Services
 		SessionCookie UserSessionCookie {get; }
 
 		//http://tnt.freckleinteractive.com/public/api.php?method=login&username=Ben&password=asdf
-		void OpenURL (string url, bool isPost, CookieContainer cookieJar=null);
+		void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null);
 	}
 }
 

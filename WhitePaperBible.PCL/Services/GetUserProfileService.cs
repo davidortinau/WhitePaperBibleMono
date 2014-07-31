@@ -21,7 +21,7 @@ namespace WhitePaperBible.Core.Services
 		{
 			var cookieJar = new CookieContainer ();
 			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-			Client.OpenURL (Constants.BASE_URI + "users/davidortinau/", false, cookieJar);
+			Client.OpenURL (Constants.BASE_URI + "users/davidortinau/", MethodEnum.GET, cookieJar);
 		}
 
 		#region implemented abstract members of BaseService

@@ -21,6 +21,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<FavoritesReceivedInvoker> ();
 			DI.MapSingleton<MyPapersReceivedInvoker> ();
 //			DI.MapSingleton<StorageLoadedInvoker> ();
+			DI.MapSingleton<UserProfileSavedInvoker> ();
 		}
 	}
 }

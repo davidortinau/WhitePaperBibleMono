@@ -18,7 +18,7 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (string username, string password)
 		{
-			this.Client.OpenURL (Constants.BASE_URI + String.Format ("user_sessions/?user_session[username]={0}&user_session[password]={1}", username, password), true, null);
+			this.Client.OpenURL (Constants.BASE_URI + String.Format ("user_sessions/?user_session[username]={0}&user_session[password]={1}", username, password), MethodEnum.POST, null);
 		}
 
 		#region implemented abstract members of BaseService

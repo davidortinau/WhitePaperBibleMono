@@ -23,13 +23,13 @@ namespace WhitePaperBible.iOS
 		public event EventHandler RequestError;
 
 
-		public void OpenURL (string url, bool isPost, CookieContainer cookieJar=null)
+		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
 		{
 
 			var client = new RestClient ();
 			client.CookieContainer = cookieJar;
 
-			var request = new RestRequest (url, isPost ? Method.POST : Method.GET) { RequestFormat = DataFormat.Json };
+			var request = new RestRequest (url, (Method)method) { RequestFormat = DataFormat.Json };
 
 			AddNetworkActivity (url);
 
