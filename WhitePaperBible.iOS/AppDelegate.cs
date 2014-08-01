@@ -69,7 +69,7 @@ namespace WhitePaperBible.iOS
 		{
 			initMonkeyArms ();
 
-			UINavigationBar.Appearance.TintColor = UIColor.Black;
+			UINavigationBar.Appearance.TintColor = UIColor.Brown;
 			
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);

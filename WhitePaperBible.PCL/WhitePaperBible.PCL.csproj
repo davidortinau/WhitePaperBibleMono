@@ -139,6 +139,12 @@
     <Compile Include="Views\IMyPapersAndProfileView.cs" />
     <Compile Include="Mediators\MyPapersAndProfileMediator.cs" />
     <Compile Include="Invokers\ShowMyPaperInvoker.cs" />
+    <Compile Include="Views\IBibleSearchView.cs" />
+    <Compile Include="Mediators\BibleSearchViewMediator.cs" />
+    <Compile Include="Invokers\GetBibleSearchResultsInvoker.cs" />
+    <Compile Include="Enums\SearchScopeEnum.cs" />
+    <Compile Include="Commands\GetBibleSearchResultsCommand.cs" />
+    <Compile Include="Services\BibleSearchService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -181,5 +187,8 @@
   </ProjectExtensions>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>

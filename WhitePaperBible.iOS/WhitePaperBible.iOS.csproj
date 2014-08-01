@@ -132,6 +132,10 @@
     </Compile>
     <Compile Include="Views\iPhone\EditProfileView.cs" />
     <Compile Include="UI\CustomElements\SimpleMultilineEntryElement.cs" />
+    <Compile Include="Views\iPhone\BibleSearchView.cs" />
+    <Compile Include="Views\iPhone\BibleSearchView.designer.cs">
+      <DependentUpon>BibleSearchView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -140,6 +144,7 @@
     <InterfaceDefinition Include="Views\iPhone\CopyrightsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\TermsAndConditionsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\MyPapersAndProfileController.xib" />
+    <InterfaceDefinition Include="Views\iPhone\BibleSearchView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />
