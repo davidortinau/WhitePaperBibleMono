@@ -28,7 +28,8 @@ namespace WhitePaperBible.Core.Services
 
 		protected override void HandleSuccess (object sender, EventArgs args)
 		{
-			DispatchSuccess (new BibleSearchServiceEventArgs (ParseResponse<List<Reference>> ()));
+//			DispatchSuccess (new BibleSearchServiceEventArgs (ParseResponse<List<Reference>> ()));
+			DispatchSuccess(new BibleSearchServiceEventArgs(JsonConvert.DeserializeObject<List<ReferenceNode>> (Client.ResponseText)));
 		}
 
 		#endregion
@@ -36,9 +37,9 @@ namespace WhitePaperBible.Core.Services
 
 	public class BibleSearchServiceEventArgs:EventArgs
 	{
-		public readonly List<Reference> Results;
+		public readonly List<ReferenceNode> Results;
 
-		public BibleSearchServiceEventArgs (List<Reference> results)
+		public BibleSearchServiceEventArgs (List<ReferenceNode> results)
 		{
 			Results = results;
 		}

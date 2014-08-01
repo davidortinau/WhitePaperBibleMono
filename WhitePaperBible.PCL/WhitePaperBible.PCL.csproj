@@ -145,6 +145,9 @@
     <Compile Include="Enums\SearchScopeEnum.cs" />
     <Compile Include="Commands\GetBibleSearchResultsCommand.cs" />
     <Compile Include="Services\BibleSearchService.cs" />
+    <Compile Include="Views\IBibleSearchResultsView.cs" />
+    <Compile Include="Mediators\BibleSearchResultsViewMediator.cs" />
+    <Compile Include="Invokers\BibleSearchResultsReceivedInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

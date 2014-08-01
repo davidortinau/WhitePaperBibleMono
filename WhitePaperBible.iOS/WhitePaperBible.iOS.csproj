@@ -136,6 +136,7 @@
     <Compile Include="Views\iPhone\BibleSearchView.designer.cs">
       <DependentUpon>BibleSearchView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\iPhone\Sub\BibleSearchResults.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />

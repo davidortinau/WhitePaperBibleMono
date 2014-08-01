@@ -16,7 +16,7 @@ namespace WhitePaperBible.Core.Commands
 		public IBibleSearchService Service;
 
 		[Inject]
-		public PapersByTagReceivedInvoker PapersReceived;
+		public BibleSearchResultsReceivedInvoker Received;
 
 		public override void Execute (InvokerArgs args)
 		{
@@ -27,12 +27,8 @@ namespace WhitePaperBible.Core.Commands
 
 		void onSuccess (object sender, EventArgs args)
 		{
-//			var papers = new List<Paper> ();
-//			foreach (var node in ((GetPapersByTagServiceEventArgs)args).Papers) {
-//				papers.Add (node.paper);
-//			}
-//
-//			PapersReceived.Invoke (new PapersReceivedInvokerArgs(papers));
+			var a = ((BibleSearchServiceEventArgs)args).Results;
+			Received.Invoke ( new BibleSearchResultsReceivedInvokerArgs ( a ) );
 		}
 	}
 }

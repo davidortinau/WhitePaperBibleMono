@@ -20,6 +20,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapMediatorToClass<EditProfileViewMediator, IEditProfileView> ();
 			DI.MapMediatorToClass<MyPapersAndProfileMediator, IMyPapersAndProfileView> ();
 			DI.MapMediatorToClass<BibleSearchViewMediator, IBibleSearchView> ();
+			DI.MapMediatorToClass<BibleSearchResultsViewMediator, IBibleSearchResultsView> ();
 		}
 	}
 }

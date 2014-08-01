@@ -16,7 +16,7 @@ namespace WhitePaperBible.iOS
 	{
 		public UISearchBar SearchBar;
 
-		UITableView ResultsTable;
+		BibleSearchResults ResultsTable;
 
 		public Invoker DoSearch {
 			get;
@@ -65,9 +65,6 @@ namespace WhitePaperBible.iOS
 			};
 
 			SearchBar.SearchButtonClicked += PerformSearch;
-
-			ResultsTable = new UITableView (new RectangleF (0, 90+64, View.Bounds.Width, View.Bounds.Height - 90));
-			View.AddSubview (ResultsTable);
 		}
 
 		void PerformSearch (object sender, EventArgs e)
@@ -79,10 +76,14 @@ namespace WhitePaperBible.iOS
 			// dismiss keyboard
 		}
 
-		public override void ViewWillAppear (bool animated)
+		public override void ViewDidAppear (bool animated)
 		{
-			base.ViewWillAppear (animated);
+			base.ViewDidAppear (animated);
 			DI.RequestMediator (this);
+
+			if(ResultsTable != null){
+				DI.RequestMediator (ResultsTable);
+			}
 
 //			if(!isComingFromAddingAPaper){
 //				[HRRestModel setDelegate:self];
@@ -103,10 +104,27 @@ namespace WhitePaperBible.iOS
 			// or pop an actionscheet to start a new paper
 		}
 
-		public override void ViewWillDisappear (bool animated)
+		public override void ViewDidDisappear (bool animated)
 		{
-			base.ViewWillDisappear (animated);
+			base.ViewDidDisappear (animated);
 			DI.DestroyMediator (this);
+
+			if(ResultsTable != null){
+				DI.DestroyMediator (ResultsTable);
+			}
+		}
+
+		public override void ViewDidLayoutSubviews()
+		{
+			base.ViewDidLayoutSubviews ();
+
+			if (ResultsTable == null) {
+				ResultsTable = new BibleSearchResults ();
+
+				var containerView = new UIView (new RectangleF (0, 90+64, View.Bounds.Width, View.Bounds.Height - 90));
+				containerView.AddSubview (ResultsTable.TableView);
+				View.AddSubview (containerView);
+			}
 		}
 	}
 }

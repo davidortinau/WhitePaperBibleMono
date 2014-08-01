@@ -109,27 +109,6 @@ namespace WhitePaperBible.iOS
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
 			};
-
-
-
 		}
-
-//		public override void ViewDidAppear (bool animated)
-//		{
-//			base.ViewDidAppear (animated);
-//		}
-//
-//		public override void ViewWillAppear (bool animated)
-//		{
-//			base.ViewWillAppear (animated);
-//			DI.RequestMediator (this);
-//			this.Title = "My Papers";
-//		}
-//
-//		public override void ViewDidDisappear (bool animated)
-//		{
-//			base.ViewDidDisappear (animated);
-//			DI.DestroyMediator (this);
-//		}
 	}
 }
