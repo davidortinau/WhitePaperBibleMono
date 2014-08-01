@@ -40,7 +40,10 @@ namespace WhitePaperBible.Core.Mediators
 		public void SetPaper ()
 		{
 			if (AppModel.CurrentPaper != null) {
-				Target.SetPaper (AppModel.CurrentPaper);
+
+				var isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
+
+				Target.SetPaper (AppModel.CurrentPaper, isFavorite);
 			}
 		}
 

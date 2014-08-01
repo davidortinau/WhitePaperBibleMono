@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
+using WhitePaperBible.Core.Helpers;
 
 namespace WhitePaperBible.Core.Models
 {
@@ -57,6 +58,21 @@ namespace WhitePaperBible.Core.Models
 			set {
 				_htmlContent = value;
 			}
+		}
+
+		public string ToPlainText()
+		{
+			var txt = "";
+			txt +=	title + Environment.NewLine;
+			txt += description + Environment.NewLine;
+
+			if (references != null) {
+				foreach (var reference in references) {
+					txt += HtmlToText.ConvertHtml(reference.content) + Environment.NewLine;
+				}
+			}
+
+			return txt;
 		}
 
 		private string generateHtmlContent()

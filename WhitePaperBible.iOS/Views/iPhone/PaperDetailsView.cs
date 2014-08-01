@@ -12,6 +12,7 @@ using System.Web;
 using MonkeyArms;
 using RestSharp;
 using WhitePaperBible.Core.Views;
+using MonoTouch.Social;
 
 namespace WhitePaperBible.iOS
 {
@@ -21,6 +22,8 @@ namespace WhitePaperBible.iOS
 			get;
 			set;
 		}
+
+		bool IsFavorite;
 
 		/**
 		 * TODO
@@ -41,6 +44,11 @@ namespace WhitePaperBible.iOS
 			this.HidesBottomBarWhenPushed = true;
 		}
 
+		public Invoker ToggleFavorite {
+			get;
+			private set;
+		}
+
 		public override void DidReceiveMemoryWarning ()
 		{
 			// Releases the view if it doesn't have a superview.
@@ -54,6 +62,8 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+
+			ToggleFavorite = new Invoker ();
 
 			this.Title = Paper.title;
 			webView.ScrollView.ScrollEnabled = true;
@@ -150,9 +160,10 @@ namespace WhitePaperBible.iOS
 			// Ooops
 		}
 
-		public void SetPaper (Paper paper)
+		public void SetPaper (Paper paper, bool isFavorite)
 		{
 			this.Paper = paper;
+			this.IsFavorite = isFavorite;
 		}
 
 		public void SetReferences (string html)
@@ -200,6 +211,7 @@ namespace WhitePaperBible.iOS
 			actionSheet.AddButton ("Email");
 			actionSheet.AddButton ("Twitter");
 			actionSheet.AddButton ("Facebook");
+			actionSheet.AddButton ("Other");
 			actionSheet.Clicked += HandleShareOptionClicked;
 				
 			actionSheet.ShowInView (View);
@@ -216,7 +228,7 @@ namespace WhitePaperBible.iOS
 				string subject = "White Paper Bible: " + paperTitle;
 				string paperFullURL = "http://whitepaperbible.org/" + urlTitle;
 
-				string messageCombined = subject + Environment.NewLine + paperFullURL;
+				string messageCombined = subject + Environment.NewLine + paperFullURL + Environment.NewLine + Paper.ToPlainText();
 
 				if (e.ButtonIndex == 1) {
 					//email
@@ -225,21 +237,36 @@ namespace WhitePaperBible.iOS
 						_mail.SetSubject (subject);
 						_mail.SetMessageBody (messageCombined, false);
 						_mail.Finished += HandleMailFinished;
-						this.PresentModalViewController (_mail, true);
+						_mail.ModalPresentationStyle = UIModalPresentationStyle.FormSheet;
+						PresentViewController (_mail, true, null);
 					}			
 				} else if (e.ButtonIndex == 2) {
-					TWTweetComposeViewController tweetComposer = new TWTweetComposeViewController ();
-					tweetComposer.SetInitialText (paperTitle + " | " + paperFullURL);
-					this.PresentModalViewController (tweetComposer, true);
+					Share ("twitter", paperTitle + " | " + paperFullURL);
 				} else if (e.ButtonIndex == 3) {
-					//facebook
-					string encodedURLString = HttpUtility.UrlEncode (paperFullURL);
-					string URLString = @"http://www.facebook.com/sharer.php?u=" + encodedURLString;
-					UIApplication.SharedApplication.OpenUrl (NSUrl.FromString (URLString));
-
+					Share ("facebook", paperTitle + " | " + paperFullURL);
+				}else{
+					var activityItems = new NSObject[] { new NSString(Paper.ToPlainText()) };
+					UIActivityViewController vc = new UIActivityViewController (activityItems, null);
+					PresentViewController (vc, true, null);
 				}
 			}
 		
+		}
+
+		void Share (string type, string msg)
+		{
+			SLComposeViewController slComposer;
+			if (type == "twitter") {
+				slComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
+			} else {
+				slComposer = SLComposeViewController.FromService (SLServiceType.Facebook);
+			}
+
+			slComposer.SetInitialText (msg);
+			slComposer.CompletionHandler += (result) => DismissViewController (true, null);
+//			slComposer.AddImage (UIImage.FromFile("Images/AppIcon/114.png"));
+
+			PresentViewController (slComposer, true, null);
 		}
 
 		void HandleMailFinished (object sender, MFComposeResultEventArgs e)
@@ -256,8 +283,22 @@ namespace WhitePaperBible.iOS
 			e.Controller.DismissModalViewControllerAnimated (true);
 		}
 
+		void SetFavoriteImage (UIBarButtonItem sender)
+		{
+			if (IsFavorite) {
+				sender.Image = UIImage.FromBundle ("favorited");
+			}
+			else {
+				sender.Image = UIImage.FromBundle ("favorites");
+			}
+		}
+
 		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender)
 		{
+			ToggleFavorite.Invoke();
+			IsFavorite = !IsFavorite;
+
+			SetFavoriteImage (sender);
 
 //			WhitePaperBibleAppDelegate *appDelegate = (WhitePaperBibleAppDelegate *)[[UIApplication sharedApplication] delegate];
 //	

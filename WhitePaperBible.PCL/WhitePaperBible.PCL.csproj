@@ -148,6 +148,7 @@
     <Compile Include="Views\IBibleSearchResultsView.cs" />
     <Compile Include="Mediators\BibleSearchResultsViewMediator.cs" />
     <Compile Include="Invokers\BibleSearchResultsReceivedInvoker.cs" />
+    <Compile Include="Helpers\HtmlToText.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -178,6 +179,9 @@
     <Reference Include="PCLStorage.Abstractions">
       <HintPath>..\packages\PCLStorage.0.9.6\lib\portable-net45+sl5+wp8+wpa81+win8+monoandroid+monotouch\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack-PCL">
+      <HintPath>..\packages\HtmlAgilityPack-PCL.1.4.6\lib\HtmlAgilityPack-PCL.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
@@ -193,5 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
