@@ -9,6 +9,7 @@ using WhitePaperBible.Core.Commands;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
+using MonoTouch.SystemConfiguration;
 
 namespace WhitePaperBible.iOS
 {
@@ -31,6 +32,7 @@ namespace WhitePaperBible.iOS
 		// class-level declarations
 		UIWindow window;
 		UITabBarController tabBarController;
+		NetworkStatus remoteHostStatus, internetStatus, localWifiStatus;
 		//		public static List<PaperNode> papers;
 		//
 		public static List<TagNode> tags {
@@ -69,6 +71,8 @@ namespace WhitePaperBible.iOS
 		{
 			initMonkeyArms ();
 
+			UpdateStatus ();
+
 			UINavigationBar.Appearance.TintColor = UIColor.Brown;
 			
 			// create a new window instance based on the screen size
@@ -88,6 +92,29 @@ namespace WhitePaperBible.iOS
 		{
 			DI.MapClassToInterface<WebClient, IJSONWebClient> ();
 			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
+		}
+
+		//
+		// Invoked on the main loop when reachability changes
+		//
+		void ReachabilityChanged (NetworkReachabilityFlags flags)
+		{
+			UpdateStatus ();
+		}
+
+		void UpdateStatus ()
+		{
+			remoteHostStatus = Reachability.RemoteHostStatus ();
+			internetStatus = Reachability.InternetConnectionStatus ();
+			localWifiStatus = Reachability.LocalWifiConnectionStatus ();
+		}
+
+		void AlertUnreachable ()
+		{
+			using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
+			{
+				alert.Show();	
+			}
 		}
 	}
 }

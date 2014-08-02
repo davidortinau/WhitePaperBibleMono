@@ -1,10 +1,11 @@
 // WARNING
 //
-// This file has been generated automatically by MonoDevelop to store outlets and
-// actions made in the Xcode designer. If it is removed, they will be lost.
+// This file has been generated automatically by Xamarin Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
 using MonoTouch.Foundation;
+using System.CodeDom.Compiler;
 
 namespace WhitePaperBible.iOS
 {
@@ -12,16 +13,19 @@ namespace WhitePaperBible.iOS
 	partial class PaperDetailsView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIWebView webView { get; set; }
+		MonoTouch.UIKit.UIBarButtonItem favoriteButton { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UIToolbar toolbar { get; set; }
 
-		[Action ("sharePressed:")]
-		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1);
+		[Outlet]
+		MonoTouch.UIKit.UIWebView webView { get; set; }
 
 		[Action ("favoritePressed:")]
 		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender);
+
+		[Action ("sharePressed:")]
+		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -33,6 +37,11 @@ namespace WhitePaperBible.iOS
 			if (toolbar != null) {
 				toolbar.Dispose ();
 				toolbar = null;
+			}
+
+			if (favoriteButton != null) {
+				favoriteButton.Dispose ();
+				favoriteButton = null;
 			}
 		}
 	}

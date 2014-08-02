@@ -4,9 +4,13 @@ using WhitePaperBible.iOS.Managers;
 using System.ComponentModel;
 using System;
 
+using MonkeyArms;
+using WhitePaperBible.Core.Invokers;
+using WhitePaperBible.Core.Views;
+
 namespace WhitePaperBible.iOS
 {
-	public class TabBarController : UITabBarController
+	public class TabBarController : UITabBarController, ITabBarView, IMediatorTarget
 	{
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
@@ -17,7 +21,6 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
 
 			papersNav = CreateTabView<PapersView> (ResourceManager.GetString ("papers"), "papers");
 
@@ -77,6 +80,30 @@ namespace WhitePaperBible.iOS
 				return true;
 			else
 				return toInterfaceOrientation == UIInterfaceOrientation.Portrait;
+		}
+
+		public void ShowUnreachable ()
+		{
+			InvokeOnMainThread (() => {
+				using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
+				{
+					alert.Show();	
+				}
+			});
+
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			DI.RequestMediator (this);
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			DI.DestroyMediator (this);
+
 		}
 	}
 }

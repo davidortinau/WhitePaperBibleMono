@@ -164,17 +164,16 @@ namespace WhitePaperBible.iOS
 		{
 			this.Paper = paper;
 			this.IsFavorite = isFavorite;
+			InvokeOnMainThread (delegate {
+				SetFavoriteImage (this.favoriteButton);
+				SetReferences (Paper.HtmlContent);
+			});
 		}
 
 		public void SetReferences (string html)
 		{
 			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
-
-			InvokeOnMainThread (delegate {
-				webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);//NSBundle.MainBundle.BundleUrl
-			});
-			
-			
+			webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);//NSBundle.MainBundle.BundleUrl
 		}
 
 		public override void ViewDidUnload ()
@@ -197,14 +196,6 @@ namespace WhitePaperBible.iOS
 
 		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1)
 		{
-//			UIActionSheet *actionSheet =[[UIActionSheet alloc]
-//										 initWithTitle:@"Share this paper"
-//										 delegate:self 
-//										 cancelButtonTitle:@"Cancel" 
-//										 destructiveButtonTitle:nil
-//										 otherButtonTitles:@"E-mail",@"Twitter",@"Facebook", nil];
-//			[actionSheet showInView:self.view];
-
 			var actionSheet = new UIActionSheet ("Sharing", null, "Cancel", null, null) {
 				Style = UIActionSheetStyle.BlackTranslucent
 			};

@@ -137,6 +137,7 @@
       <DependentUpon>BibleSearchView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\iPhone\Sub\BibleSearchResults.cs" />
+    <Compile Include="Utils\Reachability.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -174,6 +175,7 @@
     <Folder Include="Managers\" />
     <Folder Include="Invokers\" />
     <Folder Include="Views\iPhone\Sub\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">

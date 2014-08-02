@@ -6,10 +6,13 @@ using System.Collections.Generic;
 using System.Net;
 using WhitePaperBible.Core.Models;
 
+using MonkeyArms;
+using WhitePaperBible.Core.Invokers;
+
 
 namespace WhitePaperBible.iOS
 {
-	public class WebClient:IJSONWebClient
+	public class WebClient:IJSONWebClient, IInjectingTarget
 	{
 		public WebClient ()
 		{
@@ -22,10 +25,11 @@ namespace WhitePaperBible.iOS
 		public event EventHandler RequestComplete = delegate {};
 		public event EventHandler RequestError;
 
+		[Inject]
+		public UnreachableInvoker Unreachable;
 
 		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
 		{
-
 			var client = new RestClient ();
 			client.CookieContainer = cookieJar;
 
@@ -60,7 +64,11 @@ namespace WhitePaperBible.iOS
 
 		private void DispatchError ()
 		{
-			RequestError (this, EventArgs.Empty);
+			if (!Reachability.IsHostReachable ("http://google.com")) {
+				Unreachable.Invoke ();
+			} else {
+				RequestError (this, EventArgs.Empty);
+			}
 		}
 
 		private static void AddNetworkActivity (string url)

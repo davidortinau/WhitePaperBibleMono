@@ -22,7 +22,12 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public GetPaperReferencesService PaperReferencesService;
 
+		[Inject]
+		public ToggleFavoriteInvoker ToggleFavorite;
+
 		IPaperDetailView Target;
+
+		bool isFavorite;
 
 		public PaperDetailMediator (IPaperDetailView view) : base (view)
 		{
@@ -33,37 +38,22 @@ namespace WhitePaperBible.Core.Mediators
 		{
 			AppModel.CurrentPaper = Target.Paper;
 			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetDetails ());
+			InvokerMap.Add (Target.ToggleFavorite, OnToggleFavorite);
 			GetPaperDetails.Invoke ();
 
 		}
 
-		public void SetPaper ()
-		{
-			if (AppModel.CurrentPaper != null) {
-
-				var isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
-
-				Target.SetPaper (AppModel.CurrentPaper, isFavorite);
-			}
-		}
-
 		private void SetDetails()
 		{
+			isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
+			Target.SetPaper (AppModel.CurrentPaper, isFavorite);
+		}
 
-			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; } .description { border-radius: 5px; background-color:#F1F1F1; margin: 10px; padding: 8px; }</style>";
-			//			html += "<a href='#back'><img src='Images/btn_back.png' alt='back'/></a>";
-			html += "<h1>" + AppModel.CurrentPaper.title + "</h1>";
-			html += "<section class=\"description\">" + AppModel.CurrentPaper.description + "</section>";
-
-			foreach (Reference r in AppModel.CurrentPaper.references) {
-				string content = r.content;
-				html += content;
-			}
-
-			Target.SetReferences(html);
-
-
-
+		void OnToggleFavorite (object sender, EventArgs e)
+		{
+			isFavorite = !isFavorite;
+			var args = new ToggleFavoriteInvokerArgs (AppModel.CurrentPaper, isFavorite);
+			ToggleFavorite.Invoke (args);
 		}
 	}
 }

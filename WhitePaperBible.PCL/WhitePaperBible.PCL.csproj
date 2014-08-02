@@ -149,6 +149,12 @@
     <Compile Include="Mediators\BibleSearchResultsViewMediator.cs" />
     <Compile Include="Invokers\BibleSearchResultsReceivedInvoker.cs" />
     <Compile Include="Helpers\HtmlToText.cs" />
+    <Compile Include="Invokers\ToggleFavoriteInvoker.cs" />
+    <Compile Include="Commands\SaveFavoriteCommand.cs" />
+    <Compile Include="Services\SaveFavoriteService.cs" />
+    <Compile Include="Invokers\UnreachableInvoker.cs" />
+    <Compile Include="Mediators\TabBarMediator.cs" />
+    <Compile Include="Views\ITabBarView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
