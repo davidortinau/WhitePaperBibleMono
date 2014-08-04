@@ -133,7 +133,6 @@
     <Compile Include="Commands\SaveUserCommand.cs" />
     <Compile Include="Services\SaveUserProfileService.cs" />
     <Compile Include="Invokers\UserProfileSavedInvoker.cs" />
-    <Compile Include="Invokers\SaveUserInvokder.cs" />
     <Compile Include="Models\MethodEnum.cs" />
     <Compile Include="Invokers\UserProfileReceivedInvoker.cs" />
     <Compile Include="Views\IMyPapersAndProfileView.cs" />
@@ -155,6 +154,13 @@
     <Compile Include="Invokers\UnreachableInvoker.cs" />
     <Compile Include="Mediators\TabBarMediator.cs" />
     <Compile Include="Views\ITabBarView.cs" />
+    <Compile Include="Views\IEditPaperView.cs" />
+    <Compile Include="Mediators\EditPaperViewMediator.cs" />
+    <Compile Include="Invokers\SaveUserInvoker.cs" />
+    <Compile Include="Invokers\SavePaperInvoker.cs" />
+    <Compile Include="Commands\SavePaperCommand.cs" />
+    <Compile Include="Services\SavePaperService.cs" />
+    <Compile Include="Services\SaveReferenceService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

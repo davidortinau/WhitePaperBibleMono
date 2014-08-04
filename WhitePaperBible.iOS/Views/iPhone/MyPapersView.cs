@@ -21,27 +21,16 @@ namespace WhitePaperBible.iOS
 			SearchPlaceholder = @"Find Papers";
 			this.Filter = new Invoker ();
 			this.OnPaperSelected = new Invoker ();
-			this.OnLogoutRequested = new Invoker ();
+//			this.OnLogoutRequested = new Invoker ();
 
-			// add logout in upper left
-			NavigationItem.SetLeftBarButtonItem (
-				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					OnLogoutRequested.Invoke();
-				})
-				, true
-			);
-
-//			this.TableView.Frame = new System.Drawing.RectangleF (0, 110, View.Bounds.Width, View.Bounds.Height - 110);
-
-//			AddProfileView ();
-
+//			// add logout in upper left
+//			NavigationItem.SetLeftBarButtonItem (
+//				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
+//					OnLogoutRequested.Invoke();
+//				})
+//				, true
+//			);
 		}
-
-//		void AddProfileView ()
-//		{
-//			var profileView = new ProfileView ();
-//			View.AddSubview (profileView);
-//		}
 
 		#region IPapersListView implementation
 
@@ -55,10 +44,10 @@ namespace WhitePaperBible.iOS
 			private set;
 		}
 
-		public Invoker OnLogoutRequested {
-			get;
-			private set;
-		}
+//		public Invoker OnLogoutRequested {
+//			get;
+//			private set;
+//		}
 
 		public void SetPapers (List<Paper> papers)
 		{

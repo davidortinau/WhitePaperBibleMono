@@ -19,6 +19,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapCommandToInvoker<SaveUserCommand, SaveUserInvoker> ();
 			DI.MapCommandToInvoker<GetBibleSearchResultsCommand, GetBibleSearchResultsInvoker> ();
 			DI.MapCommandToInvoker<SaveFavoriteCommand, ToggleFavoriteInvoker> ();
+			DI.MapCommandToInvoker<SavePaperCommand, SavePaperInvoker> ();
 
 		}
 	}

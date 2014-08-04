@@ -13,6 +13,8 @@ namespace WhitePaperBible.Core.Views
 
 		Invoker OnPaperSelected{ get; }
 
+		Invoker AddPaper{ get; }
+
 		void SetPapers (List<Paper> papers);
 
 		string SearchPlaceHolderText{ get; set; }

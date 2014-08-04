@@ -19,6 +19,8 @@ namespace WhitePaperBible.iOS
 
 		MyPapersView myPapersView;
 
+		public Invoker Logout {get;private set;}
+
 		public void PromptForLogin ()
 		{
 			if (LoginRequiredView == null) {
@@ -62,6 +64,15 @@ namespace WhitePaperBible.iOS
 		public MyPapersAndProfileController () : base ("MyPapersAndProfileController", null)
 		{
 			this.Title = "My Papers";
+
+			Logout = new Invoker ();
+
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					Logout.Invoke();
+				})
+				, true
+			);
 		}
 
 		public override void DidReceiveMemoryWarning ()

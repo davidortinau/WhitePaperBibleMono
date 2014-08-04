@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="Views\iPhone\Sub\BibleSearchResults.cs" />
     <Compile Include="Utils\Reachability.cs" />
+    <Compile Include="Views\iPhone\EditPaperView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />

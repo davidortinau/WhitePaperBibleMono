@@ -74,6 +74,7 @@ namespace WhitePaperBible.iOS
 			UpdateStatus ();
 
 			UINavigationBar.Appearance.TintColor = UIColor.Brown;
+			UITabBar.Appearance.TintColor = UIColor.Brown;
 			
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
@@ -83,7 +84,16 @@ namespace WhitePaperBible.iOS
 			window.RootViewController = tabBarController;
 			window.MakeKeyAndVisible ();
 
-
+			DI.Get<UnreachableInvoker> ().Invoked += (object sender, EventArgs e) => {
+				using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
+				{
+					alert.Show();	
+				}
+//				UIAlertView alert = new UIAlertView (ResourceManager.GetString ("noInternetConnection"), ResourceManager.GetString ("internetConnectionRequired"), null, ResourceManager.GetString ("ok"));
+//				alert.Show ();
+//				DismissViewController (true, null);
+//				HideBusyIndicator ();
+			};
 			
 			return true;
 		}

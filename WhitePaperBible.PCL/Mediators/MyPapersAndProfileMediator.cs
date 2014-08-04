@@ -34,11 +34,17 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (Logout, (object sender, EventArgs e)=> Target.PromptForLogin());
 			InvokerMap.Add (LoggedIn, (object sender, EventArgs e) => Target.DismissLoginPrompt ());
 			InvokerMap.Add (ShowMyPaper, (object sender, EventArgs e) => Target.ShowPaper (((ShowMyPaperInvokerArgs)e).Paper));
+			InvokerMap.Add (Target.Logout, OnLogout);
 
 			if (!AM.IsLoggedIn) {
 				Target.PromptForLogin ();
 			}
 
+		}
+
+		void OnLogout (object sender, EventArgs e)
+		{
+			Logout.Invoke ();
 		}
 	}
 }

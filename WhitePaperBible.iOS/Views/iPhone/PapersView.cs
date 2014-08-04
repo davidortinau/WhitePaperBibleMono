@@ -24,6 +24,16 @@ namespace WhitePaperBible.iOS
 			SearchPlaceholder = @"Find Papers";
 			this.Filter = new Invoker ();
 			this.OnPaperSelected = new Invoker ();
+			this.AddPaper = new Invoker ();
+
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Add Paper", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					AddPaper.Invoke();
+					var addPaperView = new EditPaperView();
+					NavigationController.PushViewController(addPaperView, true);
+				})
+				, true
+			);
 		}
 
 		#region IPapersListView implementation
@@ -34,6 +44,11 @@ namespace WhitePaperBible.iOS
 		}
 
 		public Invoker OnPaperSelected {
+			get;
+			private set;
+		}
+
+		public Invoker AddPaper {
 			get;
 			private set;
 		}

@@ -17,7 +17,8 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<SaveUserProfileService, ISaveUserProfileService> ();
 			DI.MapClassToInterface<BibleSearchService, IBibleSearchService> ();
 			DI.MapClassToInterface<SaveFavoriteService, ISaveFavoriteService> ();
+			DI.MapClassToInterface<SavePaperService, ISavePaperService> ();
+			DI.MapClassToInterface<SaveReferenceService, ISaveRefereceService> ();
 		}
 	}
 }
-

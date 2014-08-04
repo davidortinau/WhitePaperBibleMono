@@ -5,15 +5,17 @@ using MonkeyArms;
 
 namespace WhitePaperBible.Core.Views
 {
-	public interface IMyPapersAndProfileView : IMediatorTarget
+	public interface IEditPaperView : IMediatorTarget
 	{
-		void ShowPaper (Paper paper);
+
+		void SetPaper (Paper paper);
 
 		void DismissLoginPrompt ();
 
 		void PromptForLogin ();
 
-		Invoker Logout { get; }
+		Invoker Save {get;}
+
 	}
 }
 

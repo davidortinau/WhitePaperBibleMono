@@ -12,7 +12,7 @@ using WhitePaperBible.Core.Invokers;
 
 namespace WhitePaperBible.iOS
 {
-	public class WebClient:IJSONWebClient, IInjectingTarget
+	public class WebClient:IJSONWebClient
 	{
 		public WebClient ()
 		{
@@ -24,9 +24,6 @@ namespace WhitePaperBible.iOS
 
 		public event EventHandler RequestComplete = delegate {};
 		public event EventHandler RequestError;
-
-		[Inject]
-		public UnreachableInvoker Unreachable;
 
 		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
 		{
@@ -65,7 +62,8 @@ namespace WhitePaperBible.iOS
 		private void DispatchError ()
 		{
 			if (!Reachability.IsHostReachable ("http://google.com")) {
-				Unreachable.Invoke ();
+				DI.Get<UnreachableInvoker> ().Invoke ();
+//				Unreachable.Invoke ();
 			} else {
 				RequestError (this, EventArgs.Empty);
 			}
