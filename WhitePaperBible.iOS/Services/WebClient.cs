@@ -61,12 +61,12 @@ namespace WhitePaperBible.iOS
 
 		private void DispatchError ()
 		{
-			if (!Reachability.IsHostReachable ("http://google.com")) {
-				DI.Get<UnreachableInvoker> ().Invoke ();
-//				Unreachable.Invoke ();
-			} else {
+//			if (!Reachability.IsHostReachable ("http://google.com")) {
+//				DI.Get<UnreachableInvoker> ().Invoke ();
+////				Unreachable.Invoke ();
+//			} else {
 				RequestError (this, EventArgs.Empty);
-			}
+//			}
 		}
 
 		private static void AddNetworkActivity (string url)

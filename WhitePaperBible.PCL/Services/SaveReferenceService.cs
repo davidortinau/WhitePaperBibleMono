@@ -7,7 +7,7 @@ using MonkeyArms;
 
 namespace WhitePaperBible.Core.Services
 {
-	public interface ISaveRefereceService:IBaseService
+	public interface ISaveReferenceService:IBaseService
 	{
 		void Execute (Paper paper, Reference reference);
 	}
@@ -23,29 +23,9 @@ namespace WhitePaperBible.Core.Services
 			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
 
 			var url = Constants.BASE_URI;
-			url += String.Format("papers/{0}?references?reference[reference]={1}&reference[paper_id]={2}&user_id={3}", paper.id, reference.reference, paper.id, AM.User.ID);
+			url += String.Format("papers/{0}/references?reference[reference]={1}&reference[paper_id]={2}", paper.id, reference.reference, paper.id);
 			url += "&caller=wpb-iPhone";
 			Client.OpenURL (url, MethodEnum.POST, cookieJar);
-
-//			NSMutableString *completeSearchURL= [[[NSMutableString alloc] initWithString:serverURLString] autorelease];
-//			[completeSearchURL appendString: @"/papers/"];
-//			[completeSearchURL appendFormat:@"%@",newPaperID];
-//			[completeSearchURL appendString: @"/references?reference[reference]="];
-//			[completeSearchURL appendString: [currentReferenceString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-//			[completeSearchURL appendString: @"&reference[paper_id]="];
-//			[completeSearchURL appendFormat:@"%@",newPaperID];
-//			[completeSearchURL appendString: @"#"];
-//			NSLog(@"complete url: %@", completeSearchURL);
-//
-//			//http://localhost:3000/search/esv_verse_search.json?keyword=Phi%203
-//
-//
-//			NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:completeSearchURL]
-//				cachePolicy:NSURLCacheStorageNotAllowed
-//				timeoutInterval:30];
-//			[urlRequest setHTTPMethod:@"POST"];
-
-
 		}
 
 		#region implemented abstract members of BaseService
@@ -53,10 +33,20 @@ namespace WhitePaperBible.Core.Services
 		protected override void HandleSuccess (object sender, EventArgs args)
 		{
 //			var user = ParseResponse<UserDTO> ();
-			DispatchSuccess (null);
+			DispatchSuccess (new ReferenceSavedEventArgs (ParseResponse<ReferenceNode> ()));
 		}
 
 		#endregion
+
+		public class ReferenceSavedEventArgs:EventArgs
+		{
+			public readonly Reference Reference;
+
+			public ReferenceSavedEventArgs (ReferenceNode node)
+			{
+				Reference = node.reference;
+			}
+		}
 	}
 }
 

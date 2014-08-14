@@ -139,6 +139,7 @@
     <Compile Include="Views\iPhone\Sub\BibleSearchResults.cs" />
     <Compile Include="Utils\Reachability.cs" />
     <Compile Include="Views\iPhone\EditPaperView.cs" />
+    <Compile Include="UI\PlaceholderTextView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -164,6 +165,7 @@
     <Content Include="Images\Tabs\favorites%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Views\Common\" />

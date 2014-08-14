@@ -7,14 +7,52 @@ using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
+using WhitePaperBible.iOS.Invokers;
 
 namespace WhitePaperBible.iOS
 {
 	public partial class PapersView : DialogViewController, IPapersListView
 	{
+		LoginRequiredView LoginRequiredView;
+
+		public Invoker RequestAddPaper {
+			get;
+			private set;
+		}
+
 		public void PromptForLogin ()
 		{
-			throw new NotImplementedException ();
+			if (LoginRequiredView == null) {
+				CreateLoginRequiredView ();
+				LoginRequiredView.Hidden = false;
+			}
+		}
+
+		public void ShowLoginForm ()
+		{
+			var loginView = new LoginView ();
+			//			loginView.LoginFinished.Invoked += HandleLoginFinished;
+			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
+				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
+			};
+
+			this.PresentViewController (loginView, true, null);
+		}
+
+		protected void CreateLoginRequiredView ()
+		{
+			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			View.AddSubview (LoginRequiredView);
+			View.BringSubviewToFront (LoginRequiredView);
+			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
+			LoginRequiredView.Hidden = true;
+		}
+
+		public void DismissLoginPrompt()
+		{
+			if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
+				LoginRequiredView.Hidden = true;
+			}
 		}
 
 		public PapersView () : base (UITableViewStyle.Plain, null, true)
@@ -29,11 +67,15 @@ namespace WhitePaperBible.iOS
 			NavigationItem.SetRightBarButtonItem (
 				new UIBarButtonItem ("Add Paper", UIBarButtonItemStyle.Plain, (sender, args)=> {
 					AddPaper.Invoke();
-					var addPaperView = new EditPaperView();
-					NavigationController.PushViewController(addPaperView, true);
 				})
 				, true
 			);
+		}
+
+		public void AddPaperEditView()
+		{
+			var addPaperView = new EditPaperView();
+			NavigationController.PushViewController(addPaperView, true);
 		}
 
 		#region IPapersListView implementation
@@ -55,7 +97,11 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
-			InvokeOnMainThread (delegate {
+			if(papers == null){
+				return;
+			}
+
+			InvokeOnMainThread (()=> {
 
 				Root = new RootElement ("Papers") {
 					from node in papers
@@ -72,6 +118,7 @@ namespace WhitePaperBible.iOS
 				};
 
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+
 			});
 
 		}

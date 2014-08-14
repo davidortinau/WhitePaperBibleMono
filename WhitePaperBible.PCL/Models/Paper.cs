@@ -2,6 +2,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
 using WhitePaperBible.Core.Helpers;
+using System.Linq;
 
 namespace WhitePaperBible.Core.Models
 {
@@ -60,6 +61,8 @@ namespace WhitePaperBible.Core.Models
 			}
 		}
 
+		public List<Tag> tags;
+
 		public string ToPlainText()
 		{
 			var txt = "";
@@ -86,6 +89,18 @@ namespace WhitePaperBible.Core.Models
 				}
 			}
 			return html;
+		}
+
+		public void UpdateReference(Reference reference)
+		{
+			var exists = references.Single(x => x.reference == reference.reference);
+			var atIndex = 0;
+			if(exists != null){
+				atIndex = references.IndexOf (exists);
+				references.Remove (exists);
+			}
+
+			references.Insert (atIndex, reference);
 		}
     }
 }

@@ -20,10 +20,13 @@ namespace WhitePaperBible.Core.Commands
 		public ISavePaperService Service;
 
 		[Inject]
-		public ISaveRefereceService ReferenceService;
+		public ISaveReferenceService ReferenceService;
 
-//		[Inject]
-//		public PaperSavedInvoker Saved;
+		[Inject]
+		public RefreshPapersInvoker RefreshPapers;
+
+		[Inject]
+		public PaperSavedInvoker Saved;
 
 		Paper paper;
 
@@ -37,12 +40,18 @@ namespace WhitePaperBible.Core.Commands
 		void onSuccess (object sender, EventArgs args)
 		{
 			var a = (WhitePaperBible.Core.Services.SavePaperService.PaperSavedEventArgs)args;
-			AM.Papers.Add (a.Paper);
-//			AM.User.Update (paper);
-//			Saved.Invoke ();
+
 			foreach(var r in paper.references){
+				ReferenceService.Success+= (object s, EventArgs e) => {
+					var refArg = (WhitePaperBible.Core.Services.SaveReferenceService.ReferenceSavedEventArgs)e;
+					a.Paper.UpdateReference(refArg.Reference);
+				};
 				ReferenceService.Execute (a.Paper, r);
 			}
+
+			AM.Papers.Add (a.Paper);
+			RefreshPapers.Invoke ();
+			Saved.Invoke ();
 		}
 	}
 }

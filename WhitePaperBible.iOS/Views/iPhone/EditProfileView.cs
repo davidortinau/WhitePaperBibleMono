@@ -64,7 +64,7 @@ namespace WhitePaperBible.iOS
 				new Section ("Profile") {
 					(nameEl = new EntryElement ("Name", "Enter your name", user.Name)),
 					(websiteEl = new EntryElement ("Website", "http://yoursite.com", user.Website){KeyboardType=UIKeyboardType.Url}),
-					(bioEl = new SimpleMultilineEntryElement ("Bio", user.Bio){Editable=true}),
+					(bioEl = new SimpleMultilineEntryElement ("", "Bio", user.Bio){Editable=true}),
 					(emailEl = new EntryElement ("Email", "you@somewhere.com", user.Email){KeyboardType=UIKeyboardType.EmailAddress}),
 					(usernameEl = new EntryElement ("Username", "Enter your username", user.username)),
 					(passwordEl = new EntryElement ("Password", "Super Secret", user.password, true)),

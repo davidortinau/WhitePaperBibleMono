@@ -11,6 +11,7 @@ using WhitePaperBible.Core.Views;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.Core.Invokers;
+using ElementPack;
 
 namespace WhitePaperBible.iOS
 {
@@ -18,9 +19,14 @@ namespace WhitePaperBible.iOS
 	{
 		EntryElement TitleEl;
 
-		EntryElement DescriptionEl;
+		SimpleMultilineEntryElement DescriptionEl;
 
 		public Invoker Save {
+			get;
+			private set;
+		}
+
+		public Invoker Delete {
 			get;
 			private set;
 		}
@@ -33,7 +39,9 @@ namespace WhitePaperBible.iOS
 				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
 					var paper = new Paper(){
 						title = TitleEl.Value,
-						description = DescriptionEl.Value
+						description = DescriptionEl.Value,
+						references = GetReferences(),
+						tags = GetTags()
 					};
 
 					var invokerArgs = new SavePaperInvokerArgs(paper);
@@ -44,31 +52,66 @@ namespace WhitePaperBible.iOS
 
 		}
 
+		List<Reference> GetReferences ()
+		{
+			var refs = new List<Reference> ();
+			foreach(var el in VerseEls){
+				refs.Add (new Reference () {
+					reference = el.Value
+				});
+			}
+
+			return refs;
+		}
+
+		List<Tag> GetTags ()
+		{
+			return new List<Tag> ();// need to populate
+		}
+
 		#region IEditPaperView implementation
 
 		LoginRequiredView LoginRequiredView;
 
 		Section VersesSection;
+		List<EntryElement> VerseEls;
+
+		EntryElement TagsEl;
 
 		public void SetPaper (Paper paper)
 		{
+			VerseEls = new List<EntryElement> ();
 			VersesSection = new Section ("Verses");
+			VersesSection.Add (new StringElement("Add Verse",()=>{
+				var entryElement = new EntryElement ("", "Verse", "");
+				VerseEls.Add(entryElement);
+				VersesSection.Insert (1, UITableViewRowAnimation.Left, entryElement);
+				// or push to a new view where we can see the verse, the content, and delete it
+			}));
+
 			if (paper.references != null) {
 				foreach (var r in paper.references) {
-					VersesSection.Add (new StyledMultilineElement (r.reference, r.content, UITableViewCellStyle.Subtitle));
+					var entryElement = new EntryElement ("", "Verse", r.reference);
+					VersesSection.Add (entryElement);
+					VerseEls.Add(entryElement);
 				}
 			}
-			VersesSection.Add (new StringElement ("Add Verse", () =>{
-				// add a new verse flow
-			}));
 
 			Root = new RootElement ("EditPaperView") {
 				new Section ("") {
-					(TitleEl = new EntryElement ("Title", "Verses About...", paper.title)),
-					(DescriptionEl = new EntryElement ("Description", "Helps me when...", paper.description)),
+					(TitleEl = new EntryElement ("", "Title", paper.title)),
+					(DescriptionEl = new SimpleMultilineEntryElement ("", "Description", paper.description)),
+					(TagsEl = new EntryElement ("", "Tags", ""))
 				},
-				VersesSection
+				VersesSection,
+				new Section(""){
+					new StringElement("Delete", ()=>{
+						Delete.Invoke();
+					})
+				}
 			};
+
+			// tags element should probably be a StringElement with disclosure, go to another view listing tags to checkbox and an add entry field
 		}
 
 		public void PromptForLogin ()
@@ -103,6 +146,12 @@ namespace WhitePaperBible.iOS
 			View.BringSubviewToFront (LoginRequiredView);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
 			LoginRequiredView.Hidden = true;
+		}
+
+		public void DismissController ()
+		{
+//			this.NavigationController.DismissViewController (true, null);
+			this.DismissViewController (true, null);
 		}
 
 		#endregion

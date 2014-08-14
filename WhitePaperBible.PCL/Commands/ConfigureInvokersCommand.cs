@@ -26,6 +26,8 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<ShowMyPaperInvoker> ();
 			DI.MapSingleton<BibleSearchResultsReceivedInvoker> ();
 			DI.MapSingleton<UnreachableInvoker> ();
+			DI.MapSingleton<RefreshPapersInvoker> ();
+			DI.MapSingleton<PaperSavedInvoker> ();
 		}
 	}
 }

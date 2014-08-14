@@ -23,27 +23,29 @@ namespace WhitePaperBible.Core.Services
 			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
 
 			var url = Constants.BASE_URI;
-			url += String.Format("papers/?paper[title]={0}&paper[description]={1}&user_id={2}", paper.title, paper.description, AM.User.ID);
-			url += "&caller=wpb-iPhone";
-			Client.OpenURL (url, MethodEnum.POST, cookieJar);
 
-			// and what about references?
+			if (paper.id <= 0) {
+				// create
+				url += String.Format ("papers?paper[title]={0}&paper[description]={1}&user_id={2}", paper.title, paper.description, AM.User.ID);
+				url += "&caller=wpb-iPhone";
+				Client.OpenURL (url, MethodEnum.POST, cookieJar);
+			}else{
+				// update
 
+				url += String.Format ("papers/update/{0}?paper[title]={1}&paper[description]={2}&user_id={3}", paper.id, paper.title, paper.description, AM.User.ID);
+				url += "&caller=wpb-iPhone";
 
-//			NSMutableString *completeSearchURL= [[[NSMutableString alloc] initWithString:serverURLString] autorelease];
-//			[completeSearchURL appendString: @"/papers?caller=wpb-iPhone&paper[title]="];
-//			[completeSearchURL appendString: [realTitleString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-//			[completeSearchURL appendString: @"&paper[description]="];
-//			[completeSearchURL appendString: [realDescriptionString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
-//			[completeSearchURL appendString: @"&user_id="];
-//			[completeSearchURL appendFormat:@"%@",[appDelegate getUserID]];
-//			[completeSearchURL appendString: @"#"];
-//			NSLog(@"complete url: %@", completeSearchURL);
-//
-//			NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:completeSearchURL]
-//				cachePolicy:NSURLCacheStorageNotAllowed
-//				timeoutInterval:30];
-//			[urlRequest setHTTPMethod:@"POST"];
+				// now add references
+				foreach(var r in paper.references){
+					url += String.Format("&paper[references_attributes][{0}][id]={1}", r.id, r.id);
+					url += String.Format("&paper[references_attributes][{0}][paper_id]={1}", r.id, paper.id);
+					url += String.Format("&paper[references_attributes][{0}][reference]={1}", r.id, r.reference);
+					url += String.Format("&paper[references_attributes][{0}][_delete]={1}", r.id, r.delete);// i guess set this if to be deleted?
+				}
+
+				Client.OpenURL (url, MethodEnum.PUT, cookieJar);
+			}
+
 
 
 		}
@@ -55,7 +57,7 @@ namespace WhitePaperBible.Core.Services
 //			var user = ParseResponse<UserDTO> ();
 //			DispatchSuccess (null);
 
-			DispatchSuccess (new PaperSavedEventArgs (ParseResponse<Paper> ()));
+			DispatchSuccess (new PaperSavedEventArgs (ParseResponse<PaperNode> ()));
 		}
 
 		#endregion
@@ -64,9 +66,9 @@ namespace WhitePaperBible.Core.Services
 		{
 			public readonly Paper Paper;
 
-			public PaperSavedEventArgs (Paper paper)
+			public PaperSavedEventArgs (PaperNode node)
 			{
-				Paper = paper;
+				Paper = node.paper;
 			}
 		}
 	}

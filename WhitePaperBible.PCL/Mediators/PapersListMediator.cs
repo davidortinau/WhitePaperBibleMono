@@ -18,6 +18,12 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public GetPapersInvoker GetPapers;
 
+		[Inject]
+		public RefreshPapersInvoker RefreshPapers;
+
+		[Inject]
+		public LoggedInInvoker LoggedIn;
+
 		IPapersListView Target;
 
 		public PapersListMediator (IPapersListView view) : base (view)
@@ -31,6 +37,8 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (Target.AddPaper, OnAddPaper);
 			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers ());
+			InvokerMap.Add (RefreshPapers, (object sender, EventArgs e) => SetPapers());
+			InvokerMap.Add (LoggedIn, OnLoggedIn);
 
 			Target.SearchPlaceHolderText = "Search Papers";
 
@@ -62,7 +70,17 @@ namespace WhitePaperBible.Core.Mediators
 		void OnAddPaper (object sender, EventArgs e)
 		{
 			// maybe nothing doing here, all in the view?
-			AppModel.CurrentPaper = new Paper ();
+			if (AppModel.IsLoggedIn) {
+				AppModel.CurrentPaper = new Paper ();
+			}else{
+				Target.PromptForLogin ();
+			}
+		}
+
+		void OnLoggedIn (object sender, EventArgs e)
+		{
+			Target.DismissLoginPrompt ();
+			// maybe also go to add paper?
 		}
 	}
 }

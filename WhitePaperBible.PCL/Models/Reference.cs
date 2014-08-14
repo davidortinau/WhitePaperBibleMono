@@ -5,6 +5,13 @@ namespace WhitePaperBible.Core.Models
 {
 	public class Reference
 	{
+		public bool delete {
+			get;
+			set;
+		}
+
+		public int id { get; set; }
+
 		public string reference { get; set; }
 
 		public string content { get; set; }

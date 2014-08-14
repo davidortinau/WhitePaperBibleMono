@@ -20,7 +20,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapCommandToInvoker<GetBibleSearchResultsCommand, GetBibleSearchResultsInvoker> ();
 			DI.MapCommandToInvoker<SaveFavoriteCommand, ToggleFavoriteInvoker> ();
 			DI.MapCommandToInvoker<SavePaperCommand, SavePaperInvoker> ();
-
+			DI.MapCommandToInvoker<DeletePaperCommand, DeletePaperInvoker> ();
 		}
 	}
 }

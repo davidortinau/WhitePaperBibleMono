@@ -161,6 +161,11 @@
     <Compile Include="Commands\SavePaperCommand.cs" />
     <Compile Include="Services\SavePaperService.cs" />
     <Compile Include="Services\SaveReferenceService.cs" />
+    <Compile Include="Invokers\RefreshPapersInvoker.cs" />
+    <Compile Include="Invokers\PaperSavedInvoker.cs" />
+    <Compile Include="Invokers\DeletePaperInvoker.cs" />
+    <Compile Include="Commands\DeletePaperCommand.cs" />
+    <Compile Include="Services\DeletePaperService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

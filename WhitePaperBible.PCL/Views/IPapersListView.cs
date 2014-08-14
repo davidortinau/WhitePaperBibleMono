@@ -9,6 +9,10 @@ namespace WhitePaperBible.Core.Views
 	{
 		void PromptForLogin ();
 
+		void DismissLoginPrompt();
+
+		void AddPaperEditView();
+
 		Invoker Filter{ get; }
 
 		Invoker OnPaperSelected{ get; }

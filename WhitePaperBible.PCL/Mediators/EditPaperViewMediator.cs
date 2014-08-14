@@ -16,11 +16,22 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public SavePaperInvoker SavePaper;
 
+		[Inject]
+		public PaperSavedInvoker PaperSaved;
+
+		[Inject]
+		public DeletePaperInvoker DeletePaper;
+
 		IEditPaperView Target;
 
 		public EditPaperViewMediator (IEditPaperView view) : base (view)
 		{
 			this.Target = view;
+		}
+
+		void OnPaperSaved (object sender, EventArgs e)
+		{
+			Target.DismissController ();
 		}
 
 		public override void Register ()
@@ -29,6 +40,8 @@ namespace WhitePaperBible.Core.Mediators
 //			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetDetails ());
 
 			InvokerMap.Add (Target.Save, OnSave);
+			InvokerMap.Add (Target.Delete, OnDelete);
+			InvokerMap.Add (PaperSaved, OnPaperSaved);
 
 			if(AppModel.IsLoggedIn){
 				SetPaper ();
@@ -46,6 +59,13 @@ namespace WhitePaperBible.Core.Mediators
 		void OnSave (object sender, EventArgs e)
 		{
 			SavePaper.Invoke ((SavePaperInvokerArgs)e);
+		}
+
+		void OnDelete (object sender, EventArgs e)
+		{
+			var args = new DeletePaperInvokerArgs (AppModel.CurrentPaper);
+			DeletePaper.Invoke (args);
+			Target.DismissController ();
 		}
 	}
 }

@@ -7,6 +7,7 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IEditPaperView : IMediatorTarget
 	{
+		void DismissController ();
 
 		void SetPaper (Paper paper);
 
@@ -15,6 +16,8 @@ namespace WhitePaperBible.Core.Views
 		void PromptForLogin ();
 
 		Invoker Save {get;}
+
+		Invoker Delete {get;}
 
 	}
 }

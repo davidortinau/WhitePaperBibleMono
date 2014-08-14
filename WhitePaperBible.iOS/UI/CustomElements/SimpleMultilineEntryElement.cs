@@ -11,6 +11,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Drawing;
 using MonoTouch.Dialog;
+using WhitePaperBible.UI;
 
 namespace ElementPack
 {
@@ -51,7 +52,7 @@ namespace ElementPack
 			}
 		}
 
-		protected bool editable;
+		protected bool editable = true;
 
 		/// <summary>
 		/// The key used for reusable UITableViewCells.
@@ -130,6 +131,7 @@ namespace ElementPack
 		bool becomeResponder;
 		UITextView entry;
 		static UIFont font = UIFont.BoldSystemFontOfSize (17);
+		string placeholder;
 
 		public event EventHandler Changed;
 		public event Func<bool> ShouldReturn;
@@ -145,9 +147,10 @@ namespace ElementPack
 		/// <param name="value">
 		/// Initial value.
 		/// </param>
-		public SimpleMultilineEntryElement (string caption, string value) : base (caption)
+		public SimpleMultilineEntryElement (string caption, string placeholder, string value) : base (caption)
 		{ 
 			Value = value;
+			this.placeholder = placeholder;
 		}
 
 		public override string Summary ()
@@ -182,14 +185,16 @@ namespace ElementPack
 			return s.EntryAlignment;
 		}
 
-		protected virtual UITextView CreateTextField (RectangleF frame)
+		protected virtual PlaceholderTextView CreateTextField (RectangleF frame)
 		{
-			return new UITextView (frame) {
+			return new PlaceholderTextView (frame) {
 				AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin,
 				Text = Value ?? "",
+				Placeholder = placeholder ?? "",
 				Tag = 1,
 				BackgroundColor = UIColor.Clear,
-				Editable = editable
+				Editable = editable,
+
 			};
 		}
 
