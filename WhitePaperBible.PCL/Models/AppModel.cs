@@ -17,6 +17,11 @@ namespace WhitePaperBible.Core.Models
 
 		public virtual List<Tag> Tags { get; set; }
 
+		public List<Paper> Popular {
+			get;
+			set;
+		}
+
 		public SessionCookie UserSessionCookie {
 			get;
 			set;

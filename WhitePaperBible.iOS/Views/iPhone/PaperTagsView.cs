@@ -9,14 +9,23 @@ using MonoTouch.Dialog;
 using WhitePaperBible.Core.Models;
 using MonkeyArms;
 using WhitePaperBible.Core.Views;
+using WhitePaperBible.Core.Invokers;
+using System.Linq;
 
 namespace WhitePaperBible.iOS
 {
 	public partial class PaperTagsView : DialogViewController, IMediatorTarget, IPaperTagsView
 	{
+		public EditPaperView Controller {
+			get;
+			set;
+		}
+
 		EntryElement NewTagEl;
 
 		Section TagsSection;
+
+		public List<Tag> tags;
 
 		public Invoker Save {
 			get;
@@ -40,10 +49,16 @@ namespace WhitePaperBible.iOS
 			TagsSection = new Section ("");
 			foreach(var t in tags){
 				var el = new CheckboxElement (t.name);
+				el.Value = IsTagSelected (t.name, Controller.Tags);
 				TagsSection.Add (el);
 			}
 
 			Root.Add (TagsSection);
+		}
+
+		bool IsTagSelected (string name, List<Tag> tags)
+		{
+			return (tags != null) && tags.Exists (x => x.name == name);
 		}
 
 		public override void ViewDidAppear (bool animated)
@@ -52,16 +67,7 @@ namespace WhitePaperBible.iOS
 
 			NavigationItem.SetRightBarButtonItem (
 				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
-
-					//					var paper = new Paper(){
-					//						title = TitleEl.Value,
-					//						description = DescriptionEl.Value,
-					//						references = GetReferences(),
-					//						tags = GetTags()
-					//					};
-					//
-					//					var invokerArgs = new SavePaperInvokerArgs(paper);
-					//					Save.Invoke(invokerArgs);
+					ReturnTags();
 					this.NavigationController.PopViewControllerAnimated(true);
 				})
 				, true
@@ -69,10 +75,28 @@ namespace WhitePaperBible.iOS
 
 			NavigationItem.SetLeftBarButtonItem (
 				new UIBarButtonItem ("Back", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					ReturnTags();
 					this.NavigationController.PopViewControllerAnimated(true);
 				})
 				, true
 			);
+		}
+
+		void ReturnTags ()
+		{
+			tags = new List<Tag> ();
+
+			if(!String.IsNullOrEmpty(NewTagEl.Value)){
+				tags.Add(new Tag(){name = NewTagEl.Value});
+			}
+
+			foreach(CheckboxElement cb in TagsSection.Elements){
+				if(cb.Value){
+					tags.Add(new Tag(){name = cb.Caption});
+				}
+			}
+
+			Controller.Tags = tags;
 		}
 
 		public override void ViewWillAppear (bool animated)

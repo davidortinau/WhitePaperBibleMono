@@ -8,6 +8,7 @@ using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using WhitePaperBible.iOS.Invokers;
+using WhitePaperBible.iOS.UI.CustomElements;
 
 namespace WhitePaperBible.iOS
 {
@@ -105,23 +106,39 @@ namespace WhitePaperBible.iOS
 			InvokeOnMainThread (()=> {
 
 				Root = new RootElement ("Papers") {
-					from node in papers
-					group node by (node.title [0].ToString ().ToUpper ()) into alpha
-					orderby alpha.Key
-					select new Section (alpha.Key) {
-						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
-							var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(eachNode);
-							paperDetails.Title = eachNode.title;
-							NavigationController.PushViewController(paperDetails, true);
-						})
+					new Section(""){
+						AddPaperElements(papers)
 					}
+//					from node in papers
+//					group node by (node.title [0].ToString ().ToUpper ()) into alpha
+//					orderby alpha.Key
+//					select new Section (alpha.Key) {
+//						from eachNode in alpha
+//						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
+//							var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(eachNode);
+//							paperDetails.Title = eachNode.title;
+//							NavigationController.PushViewController(paperDetails, true);
+//						})
+//					}
 				};
 
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 
 			});
 
+		}
+
+		List<PaperElement> AddPaperElements (List<Paper> papers)
+		{
+			var elements = new List<PaperElement> ();
+			foreach(var p in papers){
+				elements.Add (new PaperElement (p, () => {
+					var paperDetails = new PaperDetailsView(p);
+					paperDetails.Title = p.title;
+					NavigationController.PushViewController(paperDetails, true);
+				}));
+			}
+			return elements;
 		}
 
 		public string SearchPlaceHolderText {

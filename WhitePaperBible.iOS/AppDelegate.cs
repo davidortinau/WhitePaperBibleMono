@@ -71,7 +71,7 @@ namespace WhitePaperBible.iOS
 		{
 			initMonkeyArms ();
 
-			UpdateStatus ();
+//			UpdateStatus ();
 
 			UINavigationBar.Appearance.TintColor = UIColor.Brown;
 			UITabBar.Appearance.TintColor = UIColor.Brown;
@@ -84,16 +84,12 @@ namespace WhitePaperBible.iOS
 			window.RootViewController = tabBarController;
 			window.MakeKeyAndVisible ();
 
-			DI.Get<UnreachableInvoker> ().Invoked += (object sender, EventArgs e) => {
-				using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
-				{
-					alert.Show();	
-				}
-//				UIAlertView alert = new UIAlertView (ResourceManager.GetString ("noInternetConnection"), ResourceManager.GetString ("internetConnectionRequired"), null, ResourceManager.GetString ("ok"));
-//				alert.Show ();
-//				DismissViewController (true, null);
-//				HideBusyIndicator ();
-			};
+//			DI.Get<UnreachableInvoker> ().Invoked += (object sender, EventArgs e) => {
+//				using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
+//				{
+//					alert.Show();	
+//				}
+//			};
 			
 			return true;
 		}
@@ -107,25 +103,25 @@ namespace WhitePaperBible.iOS
 		//
 		// Invoked on the main loop when reachability changes
 		//
-		void ReachabilityChanged (NetworkReachabilityFlags flags)
-		{
-			UpdateStatus ();
-		}
-
-		void UpdateStatus ()
-		{
-			remoteHostStatus = Reachability.RemoteHostStatus ();
-			internetStatus = Reachability.InternetConnectionStatus ();
-			localWifiStatus = Reachability.LocalWifiConnectionStatus ();
-		}
-
-		void AlertUnreachable ()
-		{
-			using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
-			{
-				alert.Show();	
-			}
-		}
+//		void ReachabilityChanged (NetworkReachabilityFlags flags)
+//		{
+//			UpdateStatus ();
+//		}
+//
+//		void UpdateStatus ()
+//		{
+//			remoteHostStatus = Reachability.RemoteHostStatus ();
+//			internetStatus = Reachability.InternetConnectionStatus ();
+//			localWifiStatus = Reachability.LocalWifiConnectionStatus ();
+//		}
+//
+//		void AlertUnreachable ()
+//		{
+//			using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
+//			{
+//				alert.Show();	
+//			}
+//		}
 	}
 }
 

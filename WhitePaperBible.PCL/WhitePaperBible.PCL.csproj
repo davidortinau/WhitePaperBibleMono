@@ -168,6 +168,9 @@
     <Compile Include="Services\DeletePaperService.cs" />
     <Compile Include="Views\IPaperTagsView.cs" />
     <Compile Include="Mediators\PaperTagsViewMediator.cs" />
+    <Compile Include="Invokers\SaveTagsInvokerArgs.cs" />
+    <Compile Include="Models\PaperHistoryNode.cs" />
+    <Compile Include="Models\History.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

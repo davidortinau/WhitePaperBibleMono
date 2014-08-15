@@ -37,6 +37,11 @@ namespace WhitePaperBible.iOS
 			Delete = new Invoker ();
 		}
 
+		public List<Tag> Tags {
+			get;
+			set;
+		}
+
 		List<Reference> GetReferences ()
 		{
 			var refs = new List<Reference> ();
@@ -86,10 +91,9 @@ namespace WhitePaperBible.iOS
 				new Section ("") {
 					(TitleEl = new EntryElement ("", "Title", paper.title)),
 					(DescriptionEl = new SimpleMultilineEntryElement ("", "Description", paper.description)),
-					(TagsEl = new StyledStringElement ("Tags",()=>{
-						var tagsView = new PaperTagsView();
-						NavigationController.PushViewController(tagsView, true);
-					}) { Accessory = UITableViewCellAccessory.DisclosureIndicator })
+					(TagsEl = new StyledStringElement ("Tags","") { 
+						Accessory = UITableViewCellAccessory.DisclosureIndicator 
+					})
 				},
 				VersesSection,
 				new Section(""){
@@ -98,6 +102,16 @@ namespace WhitePaperBible.iOS
 					})
 				}
 			};
+
+			TagsEl.Tapped += () => {
+				var tagsView = new PaperTagsView ();
+				tagsView.Controller = this;
+				NavigationController.PushViewController (tagsView, true);
+			};
+
+			if(paper.tags != null && paper.tags.Count > 0){
+				Tags = paper.tags;
+			}
 
 			// tags element should probably be a StringElement with disclosure, go to another view listing tags to checkbox and an add entry field
 		}
@@ -175,6 +189,11 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewWillAppear (animated);
 			DI.RequestMediator (this);
+
+			if(Tags != null && Tags.Count > 0){
+				string[] tags = Tags.Select (x => x.name).ToArray ();
+				TagsEl.Value = string.Join (",", tags);
+			}
 		}
 
 		public override void ViewWillDisappear (bool animated)
