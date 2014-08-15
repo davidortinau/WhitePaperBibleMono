@@ -140,6 +140,11 @@
     <Compile Include="Utils\Reachability.cs" />
     <Compile Include="Views\iPhone\EditPaperView.cs" />
     <Compile Include="UI\PlaceholderTextView.cs" />
+    <Compile Include="Views\iPhone\PaperTagsView.cs" />
+    <Compile Include="Views\iPhone\PaperTagsViewContainer.cs" />
+    <Compile Include="Views\iPhone\PaperTagsViewContainer.designer.cs">
+      <DependentUpon>PaperTagsViewContainer.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -149,6 +154,7 @@
     <InterfaceDefinition Include="Views\iPhone\TermsAndConditionsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\MyPapersAndProfileController.xib" />
     <InterfaceDefinition Include="Views\iPhone\BibleSearchView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PaperTagsViewContainer.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />

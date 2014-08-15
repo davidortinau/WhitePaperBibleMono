@@ -166,6 +166,8 @@
     <Compile Include="Invokers\DeletePaperInvoker.cs" />
     <Compile Include="Commands\DeletePaperCommand.cs" />
     <Compile Include="Services\DeletePaperService.cs" />
+    <Compile Include="Views\IPaperTagsView.cs" />
+    <Compile Include="Mediators\PaperTagsViewMediator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

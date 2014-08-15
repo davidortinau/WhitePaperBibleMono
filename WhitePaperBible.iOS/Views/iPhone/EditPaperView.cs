@@ -36,6 +36,8 @@ namespace WhitePaperBible.iOS
 			Save = new Invoker ();
 			Delete = new Invoker ();
 
+			this.Title = "Edit Paper";
+
 			NavigationItem.SetRightBarButtonItem (
 				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
 					var paper = new Paper(){
@@ -47,6 +49,13 @@ namespace WhitePaperBible.iOS
 
 					var invokerArgs = new SavePaperInvokerArgs(paper);
 					Save.Invoke(invokerArgs);
+				})
+				, true
+			);
+
+			NavigationItem.SetLeftBarButtonItem (
+				new UIBarButtonItem ("Cancel", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					this.DismissViewController(true, null);
 				})
 				, true
 			);
@@ -77,7 +86,7 @@ namespace WhitePaperBible.iOS
 		Section VersesSection;
 		List<EntryElement> VerseEls;
 
-		EntryElement TagsEl;
+		StyledStringElement TagsEl;
 
 		public void SetPaper (Paper paper)
 		{
@@ -102,7 +111,13 @@ namespace WhitePaperBible.iOS
 				new Section ("") {
 					(TitleEl = new EntryElement ("", "Title", paper.title)),
 					(DescriptionEl = new SimpleMultilineEntryElement ("", "Description", paper.description)),
-					(TagsEl = new EntryElement ("", "Tags", ""))
+					(TagsEl = new StyledStringElement ("Tags",()=>{
+						// push a tags view
+						var tagsView = new PaperTagsViewContainer();
+//						tagsView.Title = "Tags";
+						NavigationController.PushViewController(tagsView, true);
+//						this.PresentViewController(tagsView, true, null);
+					}) { Accessory = UITableViewCellAccessory.DisclosureIndicator })
 				},
 				VersesSection,
 				new Section(""){

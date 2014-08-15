@@ -16,6 +16,8 @@ namespace WhitePaperBible.Core.Commands
 
 			DI.MapCommandToInvoker<LoadStorageCommand, LoadStorageInvoker> ().Invoke ();
 
+			DI.Get<GetTagsInvoker> ().Invoke ();
+
 		}
 	}
 }
