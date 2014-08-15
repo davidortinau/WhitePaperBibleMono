@@ -64,12 +64,6 @@ namespace WhitePaperBible.iOS
 			this.OnPaperSelected = new Invoker ();
 			this.AddPaper = new Invoker ();
 
-			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Add Paper", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					AddPaper.Invoke();
-				})
-				, true
-			);
 		}
 
 		public void AddPaperEditView()
@@ -151,11 +145,18 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			DI.RequestMediator (this);
+
 
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
 			};
+
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Add Paper", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					AddPaper.Invoke();
+				})
+				, true
+			);
 			
 		}
 
@@ -163,6 +164,18 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidDisappear (animated);
 
+
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			DI.RequestMediator (this);
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
 			DI.DestroyMediator (this);
 		}
 	}

@@ -35,31 +35,6 @@ namespace WhitePaperBible.iOS
 		{
 			Save = new Invoker ();
 			Delete = new Invoker ();
-
-			this.Title = "Edit Paper";
-
-			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					var paper = new Paper(){
-						title = TitleEl.Value,
-						description = DescriptionEl.Value,
-						references = GetReferences(),
-						tags = GetTags()
-					};
-
-					var invokerArgs = new SavePaperInvokerArgs(paper);
-					Save.Invoke(invokerArgs);
-				})
-				, true
-			);
-
-			NavigationItem.SetLeftBarButtonItem (
-				new UIBarButtonItem ("Cancel", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					this.DismissViewController(true, null);
-				})
-				, true
-			);
-
 		}
 
 		List<Reference> GetReferences ()
@@ -107,16 +82,13 @@ namespace WhitePaperBible.iOS
 				}
 			}
 
-			Root = new RootElement ("EditPaperView") {
+			Root = new RootElement ("Edit Paper") {
 				new Section ("") {
 					(TitleEl = new EntryElement ("", "Title", paper.title)),
 					(DescriptionEl = new SimpleMultilineEntryElement ("", "Description", paper.description)),
 					(TagsEl = new StyledStringElement ("Tags",()=>{
-						// push a tags view
-						var tagsView = new PaperTagsViewContainer();
-//						tagsView.Title = "Tags";
+						var tagsView = new PaperTagsView();
 						NavigationController.PushViewController(tagsView, true);
-//						this.PresentViewController(tagsView, true, null);
 					}) { Accessory = UITableViewCellAccessory.DisclosureIndicator })
 				},
 				VersesSection,
@@ -171,6 +143,33 @@ namespace WhitePaperBible.iOS
 		}
 
 		#endregion
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					var paper = new Paper(){
+						title = TitleEl.Value,
+						description = DescriptionEl.Value,
+						references = GetReferences(),
+						tags = GetTags()
+					};
+
+					var invokerArgs = new SavePaperInvokerArgs(paper);
+					Save.Invoke(invokerArgs);
+				})
+				, true
+			);
+
+			NavigationItem.SetLeftBarButtonItem (
+				new UIBarButtonItem ("Cancel", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					this.DismissViewController(true, null);
+				})
+				, true
+			);
+		}
 
 		public override void ViewWillAppear (bool animated)
 		{

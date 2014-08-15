@@ -13,8 +13,6 @@ namespace WhitePaperBible.iOS
 
 		public PaperTagsViewContainer () : base ("PaperTagsViewContainer", null)
 		{
-			this.Title = "Tags";
-
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -39,10 +37,9 @@ namespace WhitePaperBible.iOS
 			if (tagsView == null) {
 				tagsView = new PaperTagsView ();
 
-				var containerView = new UIView (new RectangleF (0, 64, View.Bounds.Width, View.Bounds.Height - 164));
+				var containerView = new UIView (new RectangleF (0, 64, View.Bounds.Width, View.Bounds.Height - 64));
 				containerView.AddSubview (tagsView.TableView);
 				View.AddSubview (containerView);
-
 			}
 		}
 	}

@@ -25,32 +25,14 @@ namespace WhitePaperBible.iOS
 
 		public PaperTagsView () : base (UITableViewStyle.Grouped, null)
 		{
-			Title = "Add Tags";
-
 			Save = new Invoker ();
 
-			Root = new RootElement ("") {
+			Root = new RootElement ("Add Tags") {
 				new Section ("") {
-					(NewTagEl = new EntryElement ("", "Add Tag",string.Empty))
+					(NewTagEl = new EntryElement ("", "New Tag Name",string.Empty))
 				}
 			};
 
-			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
-
-//					var paper = new Paper(){
-//						title = TitleEl.Value,
-//						description = DescriptionEl.Value,
-//						references = GetReferences(),
-//						tags = GetTags()
-//					};
-//
-//					var invokerArgs = new SavePaperInvokerArgs(paper);
-//					Save.Invoke(invokerArgs);
-					NavigationController.DismissViewController(true, null);
-				})
-				, true
-			);
 		}
 
 		public void SetTags(List<Tag> tags,List<Tag> paperTags)
@@ -62,6 +44,35 @@ namespace WhitePaperBible.iOS
 			}
 
 			Root.Add (TagsSection);
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
+
+					//					var paper = new Paper(){
+					//						title = TitleEl.Value,
+					//						description = DescriptionEl.Value,
+					//						references = GetReferences(),
+					//						tags = GetTags()
+					//					};
+					//
+					//					var invokerArgs = new SavePaperInvokerArgs(paper);
+					//					Save.Invoke(invokerArgs);
+					this.NavigationController.PopViewControllerAnimated(true);
+				})
+				, true
+			);
+
+			NavigationItem.SetLeftBarButtonItem (
+				new UIBarButtonItem ("Back", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					this.NavigationController.PopViewControllerAnimated(true);
+				})
+				, true
+			);
 		}
 
 		public override void ViewWillAppear (bool animated)
