@@ -72,6 +72,7 @@ namespace WhitePaperBible.Core.Mediators
 			// maybe nothing doing here, all in the view?
 			if (AppModel.IsLoggedIn) {
 				AppModel.CurrentPaper = new Paper ();
+				Target.AddPaperEditView ();
 			}else{
 				Target.PromptForLogin ();
 			}

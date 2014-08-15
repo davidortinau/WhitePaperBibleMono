@@ -34,6 +34,7 @@ namespace WhitePaperBible.iOS
 		public EditPaperView () : base (UITableViewStyle.Grouped, null)
 		{
 			Save = new Invoker ();
+			Delete = new Invoker ();
 
 			NavigationItem.SetRightBarButtonItem (
 				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
