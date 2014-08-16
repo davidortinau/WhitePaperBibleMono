@@ -56,7 +56,14 @@ namespace WhitePaperBible.iOS
 
 		List<Tag> GetTags ()
 		{
-			return new List<Tag> ();// need to populate
+			string[] t = TagsEl.Value.Split (',');
+			var tags = new List<Tag> ();
+			foreach(var s in t){
+				tags.Add (new Tag (){ name = s });
+			}
+
+			return tags;
+
 		}
 
 		#region IEditPaperView implementation
@@ -70,6 +77,10 @@ namespace WhitePaperBible.iOS
 
 		public void SetPaper (Paper paper)
 		{
+			if(VerseEls != null){
+				return; // don't let it wipe edits that haven't been committed
+			}
+
 			VerseEls = new List<EntryElement> ();
 			VersesSection = new Section ("Verses");
 			VersesSection.Add (new StringElement("Add Verse",()=>{
@@ -104,9 +115,9 @@ namespace WhitePaperBible.iOS
 			};
 
 			TagsEl.Tapped += () => {
-				var tagsView = new PaperTagsView ();
+				var tagsView = new  PaperTagsView();
 				tagsView.Controller = this;
-				NavigationController.PushViewController (tagsView, true);
+				((UINavigationController)this.ParentViewController).PushViewController(tagsView, true);
 			};
 
 			if(paper.tags != null && paper.tags.Count > 0){
@@ -152,8 +163,7 @@ namespace WhitePaperBible.iOS
 
 		public void DismissController ()
 		{
-//			this.NavigationController.DismissViewController (true, null);
-			this.DismissViewController (true, null);
+			((UINavigationController)this.ParentViewController).DismissViewController(true, null);
 		}
 
 		#endregion
@@ -179,7 +189,7 @@ namespace WhitePaperBible.iOS
 
 			NavigationItem.SetLeftBarButtonItem (
 				new UIBarButtonItem ("Cancel", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					this.DismissViewController(true, null);
+					DismissController();
 				})
 				, true
 			);

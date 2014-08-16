@@ -26,13 +26,13 @@ namespace WhitePaperBible.Core.Services
 
 			if (paper.id <= 0) {
 				// create
-				url += String.Format ("papers?paper[title]={0}&paper[description]={1}&user_id={2}", paper.title, paper.description, AM.User.ID);
+				url += String.Format ("papers?paper[title]={0}&paper[description]={1}&user_id={2}&paper[tag_list]={3}", paper.title, paper.description, AM.User.ID, paper.TagsString());
 				url += "&caller=wpb-iPhone";
 				Client.OpenURL (url, MethodEnum.POST, cookieJar);
 			}else{
 				// update
 
-				url += String.Format ("papers/update/{0}?paper[title]={1}&paper[description]={2}&user_id={3}", paper.id, paper.title, paper.description, AM.User.ID);
+				url += String.Format ("papers/update/{0}?paper[title]={1}&paper[description]={2}&user_id={3}&paper[tag_list]={4}", paper.id, paper.title, paper.description, AM.User.ID, paper.TagsString());
 				url += "&caller=wpb-iPhone";
 
 				// now add references

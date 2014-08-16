@@ -66,23 +66,23 @@ namespace WhitePaperBible.iOS
 			base.ViewDidAppear (animated);
 
 			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Save", UIBarButtonItemStyle.Plain, (sender, args)=> {
+				new UIBarButtonItem ("Done", UIBarButtonItemStyle.Done, (sender, args)=> {
 					ReturnTags();
 					this.NavigationController.PopViewControllerAnimated(true);
 				})
 				, true
 			);
 
-			NavigationItem.SetLeftBarButtonItem (
-				new UIBarButtonItem ("Back", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					ReturnTags();
-					this.NavigationController.PopViewControllerAnimated(true);
-				})
-				, true
-			);
+//			NavigationItem.SetLeftBarButtonItem (
+//				new UIBarButtonItem ("Back", UIBarButtonItemStyle.Done, (sender, args)=> {
+//					ReturnTags();
+//					this.NavigationController.PopViewControllerAnimated(true);
+//				})
+//				, true
+//			);
 		}
 
-		void ReturnTags ()
+		public void ReturnTags ()
 		{
 			tags = new List<Tag> ();
 

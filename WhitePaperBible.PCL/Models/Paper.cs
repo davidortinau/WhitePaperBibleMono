@@ -102,5 +102,14 @@ namespace WhitePaperBible.Core.Models
 
 			references.Insert (atIndex, reference);
 		}
+
+		public string TagsString()
+		{	if (tags != null) {
+				string[] tagsArray = tags.Select (x => x.name).ToArray ();
+				return string.Join (",", tagsArray);
+			}else{
+				return string.Empty;
+			}
+		}
     }
 }

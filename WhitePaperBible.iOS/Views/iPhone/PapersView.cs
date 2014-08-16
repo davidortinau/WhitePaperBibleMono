@@ -69,15 +69,9 @@ namespace WhitePaperBible.iOS
 
 		public void AddPaperEditView()
 		{
-
-
 			var addPaperView = new EditPaperView();
-//			addPaperView.Title = "Edit Paper";
-//			addPaperView.ModalInPopover = true;
-//			addPaperView.ModalPresentationStyle = UIModalPresentationStyle.FullScreen;
 			var editNav = new UINavigationController (addPaperView);
 			this.PresentViewController (editNav, true, null);
-//			NavigationController.PushViewController(addPaperView, true);
 		}
 
 		#region IPapersListView implementation

@@ -10,6 +10,7 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using MonoTouch.SystemConfiguration;
+//using Segment;
 
 namespace WhitePaperBible.iOS
 {
@@ -70,6 +71,9 @@ namespace WhitePaperBible.iOS
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			initMonkeyArms ();
+
+//			Analytics.Initialize("llngrdogqn");
+//			Analytics.Client.Track("", "Launched App");
 
 //			UpdateStatus ();
 
