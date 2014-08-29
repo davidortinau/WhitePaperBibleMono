@@ -91,6 +91,15 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.1.0.55\lib\MonoTouch10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporter">
+      <HintPath>..\packages\Xamarin.Insights.1.1.0.55\lib\MonoTouch10\PLCrashReporter.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.InsightsCore">
+      <HintPath>..\packages\Xamarin.Insights.1.1.0.55\lib\MonoTouch10\Xamarin.InsightsCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

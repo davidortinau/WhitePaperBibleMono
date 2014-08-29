@@ -7,6 +7,7 @@ namespace WhitePaperBible.Core.Commands
 	{
 		public override void Execute (InvokerArgs args)
 		{
+			DI.MapCommandToInvoker<GetPapersCommand, GetPapersInvoker> ();
 			DI.MapCommandToInvoker<GetPaperDetailsCommand, GetPaperDetailsInvoker> ();
 			DI.MapCommandToInvoker<GetTagsCommand, GetTagsInvoker> ();
 			DI.MapCommandToInvoker<GetPapersByTagCommand, GetPapersByTagInvoker> ();

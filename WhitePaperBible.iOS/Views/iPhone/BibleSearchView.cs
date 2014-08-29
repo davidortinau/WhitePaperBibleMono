@@ -72,8 +72,7 @@ namespace WhitePaperBible.iOS
 			var args = new GetBibleSearchResultsInvokerArgs (SearchBar.Text, (SearchScopeEnum)SearchBar.SelectedScopeButtonIndex);
 			DoSearch.Invoke (args);
 
-			// release input focus
-			// dismiss keyboard
+			SearchBar.ResignFirstResponder ();
 		}
 
 		public override void ViewDidAppear (bool animated)

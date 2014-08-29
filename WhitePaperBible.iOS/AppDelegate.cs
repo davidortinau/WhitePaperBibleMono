@@ -11,6 +11,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using MonoTouch.SystemConfiguration;
 //using Segment;
+using Xamarin;
 
 namespace WhitePaperBible.iOS
 {
@@ -74,6 +75,9 @@ namespace WhitePaperBible.iOS
 
 //			Analytics.Initialize("llngrdogqn");
 //			Analytics.Client.Track("", "Launched App");
+
+			Insights.Initialize("7fd2e4a9a3eb23a3d95e395a568abc3b8621065e");
+			Insights.Track ("App Launched");
 
 //			UpdateStatus ();
 

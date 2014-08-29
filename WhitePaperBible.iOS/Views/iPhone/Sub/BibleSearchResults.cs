@@ -24,22 +24,33 @@ namespace WhitePaperBible.iOS
 		public void SetResults (List<WhitePaperBible.Core.Models.ReferenceNode> references)
 		{
 			InvokeOnMainThread(()=>{
-
 				ResultsSection = new Section ();
-
-				foreach(var r in references){
-					var el = new StyledStringElement (r.reference.reference, r.reference.content, UITableViewCellStyle.Subtitle);
-					el.Tapped += delegate {
-						new UIAlertView ("Hola", "Thanks for tapping!", null, "Continue").Show (); 
-					};
-					ResultsSection.Add (el);
-				}
-
 				Root = new RootElement ("BibleSearchResults") {
 					ResultsSection
 				};
 
+				Root.UnevenRows = true;
+				this.Style = UITableViewStyle.Plain;
+				this.TableView.RowHeight = 80;
+
+
+				foreach(var r in references){
+					var el = new StyledStringElement (r.reference.reference, r.reference.content, UITableViewCellStyle.Subtitle){
+						Lines = 2,
+						LineBreakMode = UILineBreakMode.WordWrap
+					};
+
+//					el.Tapped += delegate {
+//						new UIAlertView ("Hola", "Thanks for tapping!", null, "Continue").Show (); 
+//					};
+					ResultsSection.Add (el);
+				}
+
+
+
 			});
+
+
 		}
 
 		#endregion
