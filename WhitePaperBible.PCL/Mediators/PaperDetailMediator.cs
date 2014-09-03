@@ -46,7 +46,8 @@ namespace WhitePaperBible.Core.Mediators
 		private void SetDetails()
 		{
 			isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
-			Target.SetPaper (AppModel.CurrentPaper, isFavorite);
+			bool isOwned = (AppModel.IsLoggedIn) && (AppModel.CurrentPaper.user_id == AppModel.User.ID);
+			Target.SetPaper (AppModel.CurrentPaper, isFavorite, isOwned);
 		}
 
 		void OnToggleFavorite (object sender, EventArgs e)

@@ -300,5 +300,7 @@
     <BundleResource Include="Resources\WPB Terms and Conditions.txt" />
     <BundleResource Include="Resources\my_papers.png" />
     <BundleResource Include="Resources\my_papers%402x.png" />
+    <BundleResource Include="Resources\plus_alt.png" />
+    <BundleResource Include="Resources\plus_alt%402x.png" />
   </ItemGroup>
 </Project>

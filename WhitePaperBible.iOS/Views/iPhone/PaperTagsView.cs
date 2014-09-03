@@ -73,13 +73,6 @@ namespace WhitePaperBible.iOS
 				, true
 			);
 
-//			NavigationItem.SetLeftBarButtonItem (
-//				new UIBarButtonItem ("Back", UIBarButtonItemStyle.Done, (sender, args)=> {
-//					ReturnTags();
-//					this.NavigationController.PopViewControllerAnimated(true);
-//				})
-//				, true
-//			);
 		}
 
 		public void ReturnTags ()

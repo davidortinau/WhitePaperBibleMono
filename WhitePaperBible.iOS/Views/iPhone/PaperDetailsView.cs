@@ -24,18 +24,7 @@ namespace WhitePaperBible.iOS
 		}
 
 		bool IsFavorite;
-
-		/**
-		 * TODO
-		 * if I own the paper, set EDIT button in upper right nav
-		 * if logged in enable favorites
-		 * 
-		 * Toolbar with Favorite and Share
-		 * 
-		 * 
-		 * */
-		
-		
+				
 		public PaperDetailsView (Paper paper) : base ("PaperDetailsView", null)
 		{
 			this.Paper = paper;
@@ -94,27 +83,6 @@ namespace WhitePaperBible.iOS
 			webView.AddGestureRecognizer (tapRecognizer);
 		}
 
-//		[Export ("HandleTapFrom")]
-//		public void HandleTapFrom (UITapGestureRecognizer recognizer)
-//		{
-//			Console.WriteLine ("getting taps");
-//			
-//			// so the question is how long were we holding it down? Has the user initialized text selection?
-//			var selection = webView.EvaluateJavascript ("window.getSelection().toString()");
-//			Console.WriteLine ("selection {0}", selection);
-//			
-//			if (selection.Length <= 0) {			
-//				// TODO animate these
-//				if (toolbar.Alpha.Equals (1f)) {
-//					toolbar.Alpha = 0f;
-//				} else {
-//					toolbar.Alpha = 1f;
-//				}
-//			} else {
-//				Console.WriteLine ("user is selecting text");
-//			}
-//		}
-
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
@@ -122,8 +90,6 @@ namespace WhitePaperBible.iOS
 			DI.RequestMediator (this);
 			
 			toolbar.Alpha = 1f;
-			var userInfo = new NSString ("MyUserInfo");
-//			var timer = NSTimer.CreateScheduledTimer (2, this, new Selector ("HideToolBar"), userInfo, false);
 			var timer = NSTimer.CreateScheduledTimer (2, ()=> {
 				toolbar.Alpha = 0f;
 				Console.WriteLine ("hiding toolbar");
@@ -134,15 +100,6 @@ namespace WhitePaperBible.iOS
 		{
 			DI.DestroyMediator (this);
 		}
-
-//		[Export ("HideToolBar")]
-//		void HideToolBar (NSTimer timer)
-//		{
-//			toolbar.Alpha = 0f;
-//			Console.WriteLine ("hiding toolbar");
-////			timer.Invalidate();
-////			timer = null;
-//		}
 
 		bool webViewShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType)
 		{
@@ -160,13 +117,24 @@ namespace WhitePaperBible.iOS
 			// Ooops
 		}
 
-		public void SetPaper (Paper paper, bool isFavorite)
+		public void SetPaper (Paper paper, bool isFavorite, bool isOwned)
 		{
 			this.Paper = paper;
 			this.IsFavorite = isFavorite;
 			InvokeOnMainThread (delegate {
 				SetFavoriteImage (this.favoriteButton);
 				SetReferences (Paper.HtmlContent);
+				if(isOwned){
+					NavigationItem.SetRightBarButtonItem (
+						new UIBarButtonItem ("Edit", UIBarButtonItemStyle.Plain, (sender, args)=> {
+							var editPaperView = new EditPaperView(this.Paper);
+							var editNav = new UINavigationController (editPaperView);
+							this.PresentViewController (editNav, true, null);
+						})
+						, true
+					);
+
+				}
 			});
 		}
 

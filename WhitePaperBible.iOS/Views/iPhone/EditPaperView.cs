@@ -31,10 +31,13 @@ namespace WhitePaperBible.iOS
 			private set;
 		}
 
-		public EditPaperView () : base (UITableViewStyle.Grouped, null)
+		public EditPaperView (Paper paper=null) : base (UITableViewStyle.Grouped, null)
 		{
 			Save = new Invoker ();
 			Delete = new Invoker ();
+			if(paper != null){
+				SetPaper (paper);
+			}
 		}
 
 		public List<Tag> Tags {
@@ -81,14 +84,18 @@ namespace WhitePaperBible.iOS
 				return; // don't let it wipe edits that haven't been committed
 			}
 
-			VerseEls = new List<EntryElement> ();
-			VersesSection = new Section ("Verses");
-			VersesSection.Add (new StringElement("Add Verse",()=>{
+			var AddVerseEl = new StyledStringElement("Add Verse"){
+				Image = UIImage.FromBundle("plus_alt")
+			};
+			AddVerseEl.Tapped += () => {
 				var entryElement = new EntryElement ("", "Verse", "");
 				VerseEls.Add(entryElement);
 				VersesSection.Insert (1, UITableViewRowAnimation.Left, entryElement);
-				// or push to a new view where we can see the verse, the content, and delete it
-			}));
+			};
+
+			VerseEls = new List<EntryElement> ();
+			VersesSection = new Section ("Verses");
+			VersesSection.Add (AddVerseEl);
 
 			if (paper.references != null) {
 				foreach (var r in paper.references) {
@@ -98,21 +105,23 @@ namespace WhitePaperBible.iOS
 				}
 			}
 
+			var ActionsSection = new Section ("");
+
 			Root = new RootElement ("Edit Paper") {
 				new Section ("") {
 					(TitleEl = new EntryElement ("", "Title", paper.title)),
 					(DescriptionEl = new SimpleMultilineEntryElement ("", "Description", paper.description)),
-					(TagsEl = new StyledStringElement ("Tags","") { 
+					(TagsEl = new StyledStringElement ("Tags","...") { 
 						Accessory = UITableViewCellAccessory.DisclosureIndicator 
 					})
 				},
 				VersesSection,
-				new Section(""){
-					new StringElement("Delete", ()=>{
-						Delete.Invoke();
-					})
-				}
+				ActionsSection
 			};
+
+			if(paper.id > 0){
+				ActionsSection.Add (new StringElement ("Delete", () => Delete.Invoke ()));
+			}
 
 			TagsEl.Tapped += () => {
 				var tagsView = new  PaperTagsView();
@@ -124,7 +133,6 @@ namespace WhitePaperBible.iOS
 				Tags = paper.tags;
 			}
 
-			// tags element should probably be a StringElement with disclosure, go to another view listing tags to checkbox and an add entry field
 		}
 
 		public void PromptForLogin ()
@@ -204,6 +212,8 @@ namespace WhitePaperBible.iOS
 				string[] tags = Tags.Select (x => x.name).ToArray ();
 				TagsEl.Value = string.Join (",", tags);
 			}
+
+			this.TableView.ReloadData ();
 		}
 
 		public override void ViewWillDisappear (bool animated)
