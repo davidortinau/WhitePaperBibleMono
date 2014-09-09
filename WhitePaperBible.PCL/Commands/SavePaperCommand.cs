@@ -41,7 +41,7 @@ namespace WhitePaperBible.Core.Commands
 		{
 			var a = (WhitePaperBible.Core.Services.SavePaperService.PaperSavedEventArgs)args;
 
-			foreach(var r in paper.references){
+			foreach(var r in a.Paper.references){
 				ReferenceService.Success+= (object s, EventArgs e) => {
 					var refArg = (WhitePaperBible.Core.Services.SaveReferenceService.ReferenceSavedEventArgs)e;
 					a.Paper.UpdateReference(refArg.Reference);
@@ -49,7 +49,24 @@ namespace WhitePaperBible.Core.Commands
 				ReferenceService.Execute (a.Paper, r);
 			}
 
-			AM.Papers.Add (a.Paper);
+			if (paper.id > 0) {
+				var pIndex = -1;
+				foreach (var paper in AM.Papers) {
+					pIndex++;
+					if (paper.id == a.Paper.id) {
+						AM.Papers.Remove (paper);
+						AM.Papers [pIndex] = a.Paper;
+						break;
+					}
+
+				}
+			}else{
+				AM.Papers.Add (a.Paper);
+				AM.Papers.Sort ();// make sure we sort alpha
+			}
+
+
+
 			RefreshPapers.Invoke ();
 			Saved.Invoke ();
 		}

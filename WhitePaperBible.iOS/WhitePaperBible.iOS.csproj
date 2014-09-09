@@ -165,6 +165,7 @@
     <Compile Include="Views\iPhone\PaperTagsViewContainer.designer.cs">
       <DependentUpon>PaperTagsViewContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CustomElements\VerseEntryElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />

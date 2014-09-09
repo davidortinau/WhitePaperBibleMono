@@ -12,6 +12,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.Core.Invokers;
 using ElementPack;
+using CustomElements;
 
 namespace WhitePaperBible.iOS
 {
@@ -74,7 +75,7 @@ namespace WhitePaperBible.iOS
 		LoginRequiredView LoginRequiredView;
 
 		Section VersesSection;
-		List<EntryElement> VerseEls;
+		List<VerseEntryElement> VerseEls;
 
 		StyledStringElement TagsEl;
 
@@ -88,18 +89,18 @@ namespace WhitePaperBible.iOS
 				Image = UIImage.FromBundle("plus_alt")
 			};
 			AddVerseEl.Tapped += () => {
-				var entryElement = new EntryElement ("", "Verse", "");
+				var entryElement = new VerseEntryElement ("", "Verse", "");
 				VerseEls.Add(entryElement);
 				VersesSection.Insert (1, UITableViewRowAnimation.Left, entryElement);
 			};
 
-			VerseEls = new List<EntryElement> ();
+			VerseEls = new List<VerseEntryElement> ();
 			VersesSection = new Section ("Verses");
 			VersesSection.Add (AddVerseEl);
 
 			if (paper.references != null) {
 				foreach (var r in paper.references) {
-					var entryElement = new EntryElement ("", "Verse", r.reference);
+					var entryElement = new VerseEntryElement ("", "Verse", r.reference);
 					VersesSection.Add (entryElement);
 					VerseEls.Add(entryElement);
 				}
@@ -120,7 +121,7 @@ namespace WhitePaperBible.iOS
 			};
 
 			if(paper.id > 0){
-				ActionsSection.Add (new StringElement ("Delete", () => Delete.Invoke ()));
+				ActionsSection.Add (new StyledStringElement ("Delete Paper", () => Delete.Invoke ()){ TextColor = UIColor.Red});
 			}
 
 			TagsEl.Tapped += () => {
@@ -132,6 +133,8 @@ namespace WhitePaperBible.iOS
 			if(paper.tags != null && paper.tags.Count > 0){
 				Tags = paper.tags;
 			}
+
+
 
 		}
 
@@ -171,7 +174,7 @@ namespace WhitePaperBible.iOS
 
 		public void DismissController ()
 		{
-			((UINavigationController)this.ParentViewController).DismissViewController(true, null);
+			InvokeOnMainThread (() => ((UINavigationController)this.ParentViewController).DismissViewController (true, null));
 		}
 
 		#endregion
@@ -220,6 +223,50 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewWillDisappear (animated);
 			DI.DestroyMediator (this);
+		}
+
+		// This is our subclass of the fixed-size Source that allows editing
+		public class EditingSource : DialogViewController.SizingSource {
+			public EditingSource (DialogViewController dvc) : base (dvc) {}
+
+			public override bool CanEditRow (UITableView tableView, NSIndexPath indexPath)
+			{
+				// Trivial implementation: we let all rows be editable, regardless of section or row
+				if (indexPath.Section == 0 || (indexPath.Section == 1 && indexPath.Row == 0) || indexPath.Section == 2) {
+					return false;
+				}else{
+					return true;
+				}
+			}
+
+			public override UITableViewCellEditingStyle EditingStyleForRow (UITableView tableView, NSIndexPath indexPath)
+			{
+				// trivial implementation: show a delete button always
+				if (indexPath.Section == 0 || (indexPath.Section == 1 && indexPath.Row == 0) || indexPath.Section == 2) {
+					return UITableViewCellEditingStyle.None;
+				}else{
+					return UITableViewCellEditingStyle.Delete;
+				}
+			}
+
+			public override void CommitEditingStyle (UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
+			{
+				//
+				// In this method, we need to actually carry out the request
+				//
+				var section = Container.Root [indexPath.Section];
+				var element = section [indexPath.Row] as VerseEntryElement;
+				element.Delete ();
+				section.Remove (element);
+			}
+		}
+
+		public override Source CreateSizingSource (bool unevenRows)
+		{
+//			if (unevenRows)
+//				throw new NotImplementedException ("You need to create a new SourceSizing subclass, this sample does not have it");
+//			return (!unevenRows) ? new DialogViewController.Source (this) : new DialogViewController.SizingSource (this);
+			return new EditingSource (this);
 		}
 	}
 }
