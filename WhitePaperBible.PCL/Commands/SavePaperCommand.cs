@@ -41,7 +41,7 @@ namespace WhitePaperBible.Core.Commands
 		{
 			var a = (WhitePaperBible.Core.Services.SavePaperService.PaperSavedEventArgs)args;
 
-			foreach(var r in a.Paper.references){
+			foreach(var r in this.paper.references){
 				ReferenceService.Success+= (object s, EventArgs e) => {
 					var refArg = (WhitePaperBible.Core.Services.SaveReferenceService.ReferenceSavedEventArgs)e;
 					a.Paper.UpdateReference(refArg.Reference);
@@ -62,7 +62,6 @@ namespace WhitePaperBible.Core.Commands
 				}
 			}else{
 				AM.Papers.Add (a.Paper);
-				AM.Papers.Sort ();// make sure we sort alpha
 			}
 
 

@@ -36,9 +36,6 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-//			AppModel.CurrentPaper = Target.Paper;
-//			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetDetails ());
-
 			InvokerMap.Add (Target.Save, OnSave);
 			InvokerMap.Add (Target.Delete, OnDelete);
 			InvokerMap.Add (PaperSaved, OnPaperSaved);
