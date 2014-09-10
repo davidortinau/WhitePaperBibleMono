@@ -83,6 +83,14 @@ namespace WhitePaperBible.iOS
 			webView.AddGestureRecognizer (tapRecognizer);
 		}
 
+		public void DismissController()
+		{
+			InvokeOnMainThread (() => {
+				this.NavigationController.PopViewControllerAnimated (true);
+			});
+
+		}
+
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
@@ -258,54 +266,12 @@ namespace WhitePaperBible.iOS
 			IsFavorite = !IsFavorite;
 
 			SetFavoriteImage (sender);
-
-//			WhitePaperBibleAppDelegate *appDelegate = (WhitePaperBibleAppDelegate *)[[UIApplication sharedApplication] delegate];
-//	
-//			if([appDelegate isUserLoggedIn]){
-//				NSString *paperIDToFavorite = [[NSString alloc] initWithFormat:@"%@",[paper valueForKey:@"id"]];
-//				if(!isFavorite){
-//					[favoriteButton setImage:[UIImage imageNamed:@"favorited.png"]];
-//					
-//					NSString *postPath = [NSString stringWithFormat:@"/favorite/create/%@",paperIDToFavorite];
-//					[HRRestModel postPath:postPath withOptions:nil object:nil];
-//					isFavorite = YES;
-//					//send a call out to favorite the paper
-//				}
-//				else{
-//					//[favoriteButton setTitle:@"FAV"];
-//					[favoriteButton setImage:[UIImage imageNamed:@"favorites.png"]];
-//					isFavorite = NO;
-//					NSString *postPath = [NSString stringWithFormat:@"/favorite/destroy/%@",paperIDToFavorite];
-//					[HRRestModel deletePath:postPath withOptions:nil object:nil];
-//					//send a call out to UNfavorite the paper
-//				}
-//			}
-//			else{
-//		
-//				NotLoggedInViewController *notLoggedInViewController = [[NotLoggedInViewController alloc] initWithNibName:@"NotLoggedInViewController"  bundle:[NSBundle mainBundle]];
-//				notLoggedInViewController.title = [paper valueForKey:@"title"];
-//			
-//				
-//				[self presentModalViewController:notLoggedInViewController animated:YES];
-//				
-//				[notLoggedInViewController release];
-//				
-//				
-//			}
-//		
 		}
 
 		protected UIWebView webViewTest;
 
 		protected void AddWebView ()
 		{
-//			Font = UIFont.FromName ("OpenSans", 14),
-//				TextColor = UIColor.FromRGB (67, 67, 67),
-//				TextAlignment = UITextAlignment.Left,
-//				BackgroundColor = UIColor.Clear,
-//				Text = '<a href="http://mydiem.com/index.cfm?event=main.faq">Help</a><br/><a href="mailto:support@mydiem.com">Email Support</a>',
-//				LineBreakMode = UILineBreakMode.WordWrap,
-//				Lines = 0
 			var style = "<style type='text/css'>body { color: #000000; background-color: transparent; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding: 20px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: normal; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
 			var html = style + "<body><h2>Contact</h2><a href='http://mydiem.com/index.cfm?event=main.faq'>Help</a><br/><a href='mailto:support@mydiem.com'>Email Support</a><br/><br/>";
 			html += "<h2>Our Story</h2><p>If you've ever sent your child empty-handed to a class party, attended parent/teacher conferences on the wrong day or arrived an hour early for a game, you're not alone. It's not bad parenting, it's bad scheduling and trust us, we've been there too.</p><p>Year after year we would receive paper calendars from our children's schools, get several emails a week, or would be encouraged to visit websites to view upcoming events (sports teams, Boy Scouts/ Girl Scouts, ballet, band and track club all had different sites!). Sometimes we would enter the information into a paper agenda, which couldn't be shared. Or we would type everything into our computer's calendar hoping the information wouldn't change. And, as the school year progressed, updates would take the form of crumpled notes, skimmed over emails and hurried messages from coaches and teachers that didn't always make it to the master calendar. We'd often ask ourselves, \"Why can't school events appear on our smart phones or computer calendar programs?\" or \"If there is a change, couldn't someone update the calendar for us so we don't have to keep track of emails, notes, etc? Then, one day, we stopped wishing and got to work.</p><p>We are parents to three school-age (and very busy) children and now we\'re also the proud parents of MyDiem.com. We're so happy to share this much-needed tool with other busy parents. Hopefully you will find this tool helpful in keeping track of your child's activities.</p>";
@@ -318,8 +284,6 @@ namespace WhitePaperBible.iOS
 			webViewTest.Opaque = false;
 			webViewTest.BackgroundColor = UIColor.Clear;
 			webViewTest.LoadHtmlString (html, NSUrl.FromString ("http://localhost"));
-
-//			DescriptionLabel.ShouldStartLoad = myHandler;
 		}
 	}
 
@@ -339,11 +303,6 @@ namespace WhitePaperBible.iOS
 		{
 			return true;
 		}
-		//
-		//		[Export("HandleTapFrom")]
-		//		void HandleTapFrom(UITapGestureRecognizer recognizer){
-		//			Console.WriteLine("selector from within delegate");
-		//		}
 	}
 }
 

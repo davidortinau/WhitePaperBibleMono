@@ -7,7 +7,7 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IEditPaperView : IMediatorTarget
 	{
-		void DismissController ();
+		void DismissController (bool deleted);
 
 		void SetPaper (Paper paper);
 

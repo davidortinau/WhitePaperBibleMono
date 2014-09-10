@@ -28,6 +28,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<UnreachableInvoker> ();
 			DI.MapSingleton<RefreshPapersInvoker> ();
 			DI.MapSingleton<PaperSavedInvoker> ();
+			DI.MapSingleton<PaperDeletedInvoker> ();
 		}
 	}
 }

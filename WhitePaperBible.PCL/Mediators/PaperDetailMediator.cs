@@ -25,6 +25,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public ToggleFavoriteInvoker ToggleFavorite;
 
+		[Inject]
+		public PaperDeletedInvoker PaperDeleted;
+
 		IPaperDetailView Target;
 
 		bool isFavorite;
@@ -39,12 +42,17 @@ namespace WhitePaperBible.Core.Mediators
 			AppModel.CurrentPaper = Target.Paper;
 			InvokerMap.Add (PaperDetailsReceived, (object sender, EventArgs e) => SetDetails ());
 			InvokerMap.Add (Target.ToggleFavorite, OnToggleFavorite);
+			InvokerMap.Add (PaperDeleted, (object sender, EventArgs e) => Target.DismissController ());
 			GetPaperDetails.Invoke ();
 
 		}
 
 		private void SetDetails()
 		{
+			if(AppModel.Papers.IndexOf(AppModel.CurrentPaper) < 0){
+				Target.DismissController ();// it has been deleted
+				return;
+			}
 			isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
 			bool isOwned = (AppModel.IsLoggedIn) && (AppModel.CurrentPaper.user_id == AppModel.User.ID);
 			Target.SetPaper (AppModel.CurrentPaper, isFavorite, isOwned);

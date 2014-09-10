@@ -31,7 +31,7 @@ namespace WhitePaperBible.Core.Mediators
 
 		void OnPaperSaved (object sender, EventArgs e)
 		{
-			Target.DismissController ();
+			Target.DismissController (false);
 		}
 
 		public override void Register ()
@@ -65,7 +65,7 @@ namespace WhitePaperBible.Core.Mediators
 		{
 			var args = new DeletePaperInvokerArgs (AppModel.CurrentPaper);
 			DeletePaper.Invoke (args);
-			Target.DismissController ();
+			Target.DismissController (true);
 		}
 	}
 }

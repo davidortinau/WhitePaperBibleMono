@@ -11,6 +11,7 @@ namespace WhitePaperBible.Core.Views
 		void SetReferences (string html);
 		Paper Paper{ get; set;}
 		Invoker ToggleFavorite{get;}
+		void DismissController();
 	}
 }
 

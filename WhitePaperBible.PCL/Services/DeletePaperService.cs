@@ -23,8 +23,9 @@ namespace WhitePaperBible.Core.Services
 			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
 
 			var url = Constants.BASE_URI;
-			url += String.Format("papers/delete/{0}", paper.id);
-			url += "&caller=wpb-iPhone";
+			url += String.Format("papers/{0}/destroy", paper.id);
+			url += "?caller=wpb-iPhone";
+			url += String.Format("&user_id={0}",AM.User.ID);
 			Client.OpenURL (url, MethodEnum.DELETE, cookieJar);
 
 		}

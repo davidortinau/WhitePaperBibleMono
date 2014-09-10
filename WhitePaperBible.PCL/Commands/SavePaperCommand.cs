@@ -49,7 +49,7 @@ namespace WhitePaperBible.Core.Commands
 				ReferenceService.Execute (a.Paper, r);
 			}
 
-			if (paper.id > 0) {
+			if (this.paper.id > 0) {
 				var pIndex = -1;
 				foreach (var paper in AM.Papers) {
 					pIndex++;

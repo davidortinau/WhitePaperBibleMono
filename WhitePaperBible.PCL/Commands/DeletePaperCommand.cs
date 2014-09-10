@@ -38,6 +38,8 @@ namespace WhitePaperBible.Core.Commands
 			AM.Papers.Remove (paper);
 			RefreshPapers.Invoke ();
 
+			DI.Get<PaperDeletedInvoker> ().Invoke ();
+
 		}
 	}
 }

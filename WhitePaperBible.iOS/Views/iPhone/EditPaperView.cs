@@ -172,9 +172,13 @@ namespace WhitePaperBible.iOS
 			LoginRequiredView.Hidden = true;
 		}
 
-		public void DismissController ()
+		public void DismissController (bool deleted)
 		{
-			InvokeOnMainThread (() => ((UINavigationController)this.ParentViewController).DismissViewController (true, null));
+			InvokeOnMainThread (() => {
+				((UINavigationController)this.ParentViewController).DismissViewController (true, null);
+			});
+
+
 		}
 
 		#endregion
@@ -200,7 +204,7 @@ namespace WhitePaperBible.iOS
 
 			NavigationItem.SetLeftBarButtonItem (
 				new UIBarButtonItem ("Cancel", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					DismissController();
+					DismissController(false);
 				})
 				, true
 			);
