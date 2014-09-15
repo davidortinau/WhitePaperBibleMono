@@ -24,6 +24,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public LoggedInInvoker LoggedIn;
 
+		[Inject]
+		public StorageLoadedInvoker StorageLoaded;
+
 		IPapersListView Target;
 
 		public PapersListMediator (IPapersListView view) : base (view)
@@ -38,11 +41,12 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (Target.AddPaper, OnAddPaper);
 			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers ());
 			InvokerMap.Add (RefreshPapers, (object sender, EventArgs e) => SetPapers());
+			InvokerMap.Add (StorageLoaded, (object sender, EventArgs e) => SetPapers());
 			InvokerMap.Add (LoggedIn, OnLoggedIn);
 
 			Target.SearchPlaceHolderText = "Search Papers";
 
-			SetPapers ();
+//			SetPapers ();
 
 		}
 
@@ -62,9 +66,8 @@ namespace WhitePaperBible.Core.Mediators
 		{
 			if (AppModel.Papers != null) {
 				Target.SetPapers (AppModel.Papers);
-			}else{
-				GetPapers.Invoke ();
 			}
+			GetPapers.Invoke ();
 		}
 
 		void OnAddPaper (object sender, EventArgs e)

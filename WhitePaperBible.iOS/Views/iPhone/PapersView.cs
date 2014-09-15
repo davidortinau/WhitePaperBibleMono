@@ -93,6 +93,8 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
+			Console.WriteLine ("SetPapers. {0}", papers.Count);
+
 			if(papers == null){
 				return;
 			}

@@ -27,31 +27,36 @@ namespace WhitePaperBible.iOS
 
 		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
 		{
-			var client = new RestClient ();
-			client.CookieContainer = cookieJar;
+			if (!Reachability.IsHostReachable ("http://www.google.com")) {
+				Console.WriteLine ("UNREACHABLE");
+				DI.Get<UnreachableInvoker> ().Invoke ();
+			} else {
+				var client = new RestClient ();
+				client.CookieContainer = cookieJar;
 
-			var request = new RestRequest (url, (Method)method) { RequestFormat = DataFormat.Json };
+				var request = new RestRequest (url, (Method)method) { RequestFormat = DataFormat.Json };
 
-			AddNetworkActivity (url);
+				AddNetworkActivity (url);
 
-			client.ExecuteAsync (request, response => {
-				if(response.Cookies.Count > 0){
-					if(response.Cookies[0].Name == "_whitepaperbible_session"){
-						UserSessionCookie = new SessionCookie{ 
-							Name = response.Cookies[0].Name,
-							Value = response.Cookies[0].Value
-						};
+				client.ExecuteAsync (request, response => {
+					if (response.Cookies.Count > 0) {
+						if (response.Cookies [0].Name == "_whitepaperbible_session") {
+							UserSessionCookie = new SessionCookie { 
+								Name = response.Cookies [0].Name,
+								Value = response.Cookies [0].Value
+							};
+						}
 					}
-				}
 
-				ResponseText = response.Content;
-				RemoveNetworkActivity (url);
-				if (response.ResponseStatus == ResponseStatus.Error) {
-					DispatchError ();
-				} else {
-					DispatchComplete ();
-				}
-			});
+					ResponseText = response.Content;
+					RemoveNetworkActivity (url);
+					if (response.ResponseStatus == ResponseStatus.Error) {
+						DispatchError ();
+					} else {
+						DispatchComplete ();
+					}
+				});
+			}
 		}
 
 		private void DispatchComplete ()
@@ -61,12 +66,12 @@ namespace WhitePaperBible.iOS
 
 		private void DispatchError ()
 		{
-//			if (!Reachability.IsHostReachable ("http://google.com")) {
-//				DI.Get<UnreachableInvoker> ().Invoke ();
-////				Unreachable.Invoke ();
-//			} else {
+			if (!Reachability.IsHostReachable ("http://google.com")) {
+				DI.Get<UnreachableInvoker> ().Invoke ();
+//				Unreachable.Invoke ();
+			} else {
 				RequestError (this, EventArgs.Empty);
-//			}
+			}
 		}
 
 		private static void AddNetworkActivity (string url)
