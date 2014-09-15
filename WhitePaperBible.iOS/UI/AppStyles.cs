@@ -13,9 +13,9 @@ namespace WhitePaperBible.iOS.UI
 
 		public static UIColor Gray = UIColor.FromRGB (107, 97, 95);
 
-		public static UIColor DarkGray = UIColor.FromRGB (101,91,89);
+		public static UIColor DarkGray = UIColor.Clear.FromHex(0x444444);
 
-		public static UIColor Red = UIColor.FromRGB(204,4,43);
+		public static UIColor Red = UIColor.Clear.FromHex(0xAC1F2D);
 
 		public static UIColor DarkGrayRule = UIColor.FromRGB(92, 83, 82);
 

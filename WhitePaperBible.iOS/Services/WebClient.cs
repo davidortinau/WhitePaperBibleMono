@@ -8,14 +8,20 @@ using WhitePaperBible.Core.Models;
 
 using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
+using WhitePaperBible.Core.Utilities;
 
 
 namespace WhitePaperBible.iOS
 {
 	public class WebClient:IJSONWebClient
 	{
+
+
 		public WebClient ()
 		{
+			if (DI.CanResolve<NetworkUtil> ()) {
+				NUtil = DI.Get<NetworkUtil> ();
+			}
 		}
 
 		private static List<string> PendingMethods = new List<string> ();
@@ -25,12 +31,20 @@ namespace WhitePaperBible.iOS
 		public event EventHandler RequestComplete = delegate {};
 		public event EventHandler RequestError;
 
+		NetworkUtil NUtil;
+
 		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
 		{
-			if (!Reachability.IsHostReachable ("http://www.google.com")) {
+
+			if (NUtil != null && (NUtil.RemoteHostStatus () != NetworkStatus.NotReachable)) {
+
 				Console.WriteLine ("UNREACHABLE");
 				DI.Get<UnreachableInvoker> ().Invoke ();
 			} else {
+				if (DI.CanResolve<NetworkUtil> ()) {
+					NUtil = DI.Get<NetworkUtil> ();
+				}
+
 				var client = new RestClient ();
 				client.CookieContainer = cookieJar;
 
@@ -66,12 +80,12 @@ namespace WhitePaperBible.iOS
 
 		private void DispatchError ()
 		{
-			if (!Reachability.IsHostReachable ("http://google.com")) {
-				DI.Get<UnreachableInvoker> ().Invoke ();
-//				Unreachable.Invoke ();
-			} else {
-				RequestError (this, EventArgs.Empty);
-			}
+//			if (!Reachability.IsHostReachable ("http://google.com")) {
+//				DI.Get<UnreachableInvoker> ().Invoke ();
+////				Unreachable.Invoke ();
+//			} else {
+			RequestError (this, EventArgs.Empty);
+//			}
 		}
 
 		private static void AddNetworkActivity (string url)

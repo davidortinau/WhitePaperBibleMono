@@ -60,7 +60,7 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			this.View.BackgroundColor = AppStyles.DarkGray;
+			this.View.BackgroundColor = AppStyles.OffBlack;
 
 			InitUI ();
 			AddEventHandlers ();
@@ -137,7 +137,8 @@ namespace WhitePaperBible.iOS
 			};
 
 			RegisterButton.TouchUpInside += (object sender, EventArgs e) => {
-				MoreInfoClicked (this, EventArgs.Empty);
+				var registrationView = new RegistrationView();
+				this.PresentViewController(registrationView, true, null);
 			};
 
 

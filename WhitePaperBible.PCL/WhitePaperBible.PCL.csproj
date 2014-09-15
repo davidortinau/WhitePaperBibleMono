@@ -172,6 +172,12 @@
     <Compile Include="Models\PaperHistoryNode.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Invokers\PaperDeletedInvoker.cs" />
+    <Compile Include="Mediators\RegistrationViewMediator.cs" />
+    <Compile Include="Views\IRegistrationView.cs" />
+    <Compile Include="Utilities\NetworkUtil.cs" />
+    <Compile Include="Utilities\RegexUtilities.cs" />
+    <Compile Include="Invokers\RegisterUserInvokerArgs.cs" />
+    <Compile Include="Invokers\UserRegisteredInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -221,5 +227,6 @@
   <ItemGroup>
     <Folder Include="Enums\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
 </Project>

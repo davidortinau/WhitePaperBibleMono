@@ -10,6 +10,7 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using MonoTouch.SystemConfiguration;
+using WhitePaperBible.Core.Utilities;
 //using Segment;
 using Xamarin;
 
@@ -73,8 +74,11 @@ namespace WhitePaperBible.iOS
 		{
 			initMonkeyArms ();
 
-//			Analytics.Initialize("llngrdogqn");
-//			Analytics.Client.Track("", "Launched App");
+			DI.MapInstanceToSingleton<NetworkUtil> (new Reachability ());
+
+			if (DI.CanResolve<NetworkUtil> ()) {
+				var NUtil = DI.Get<NetworkUtil> ();
+			}
 
 			Insights.Initialize("7fd2e4a9a3eb23a3d95e395a568abc3b8621065e");
 			Insights.Track ("App Launched");
