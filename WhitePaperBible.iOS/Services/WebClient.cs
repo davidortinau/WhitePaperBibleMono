@@ -19,9 +19,7 @@ namespace WhitePaperBible.iOS
 
 		public WebClient ()
 		{
-			if (DI.CanResolve<NetworkUtil> ()) {
-				NUtil = DI.Get<NetworkUtil> ();
-			}
+			ResolveNetworkUtil ();
 		}
 
 		private static List<string> PendingMethods = new List<string> ();
@@ -33,18 +31,22 @@ namespace WhitePaperBible.iOS
 
 		NetworkUtil NUtil;
 
-		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
+		void ResolveNetworkUtil ()
 		{
-
-			if (NUtil != null && (NUtil.RemoteHostStatus () != NetworkStatus.NotReachable)) {
-
-				Console.WriteLine ("UNREACHABLE");
-				DI.Get<UnreachableInvoker> ().Invoke ();
-			} else {
+			if (NUtil == null) {
 				if (DI.CanResolve<NetworkUtil> ()) {
 					NUtil = DI.Get<NetworkUtil> ();
 				}
+			}
+		}
 
+		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
+		{
+			ResolveNetworkUtil ();
+
+			if (NUtil != null && (NUtil.RemoteHostStatus () == NetworkStatus.NotReachable)) {
+				DI.Get<UnreachableInvoker> ().Invoke ();
+			} else {
 				var client = new RestClient ();
 				client.CookieContainer = cookieJar;
 

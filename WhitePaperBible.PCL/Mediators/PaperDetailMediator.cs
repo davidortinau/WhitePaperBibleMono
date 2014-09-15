@@ -47,9 +47,20 @@ namespace WhitePaperBible.Core.Mediators
 
 		}
 
+		bool HasPaperBeenDeleted (Paper currentPaper)
+		{
+			foreach(var p in AppModel.Papers){
+				if(p.id == currentPaper.id){
+					return false;
+				}
+			}
+
+			return true;
+		}
+
 		private void SetDetails()
 		{
-			if(AppModel.Papers.IndexOf(AppModel.CurrentPaper) < 0){
+			if(HasPaperBeenDeleted(AppModel.CurrentPaper)){
 				Target.DismissController ();// it has been deleted
 				return;
 			}
