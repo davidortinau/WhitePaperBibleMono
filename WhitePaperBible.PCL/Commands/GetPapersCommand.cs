@@ -30,11 +30,11 @@ namespace WhitePaperBible.Core.Commands
 				AM.Papers.Add (node.paper);
 			}
 
-			AM.Popular = new List<Paper> ();
-			foreach (var node in ((GetPapersServiceEventArgs)args).Histories) {
-				var paper = AM.Papers.Where (x => x.id == node.history.paper_id).Single<Paper> ();
-				AM.Popular.Add (paper);
-			}
+//			AM.Popular = new List<Paper> ();
+//			foreach (var node in ((GetPapersServiceEventArgs)args).Histories) {
+//				var paper = AM.Papers.Where (x => x.id == node.history.paper_id).Single<Paper> ();
+//				AM.Popular.Add (paper);
+//			}
 
 			PapersReceived.Invoke ();
 		}

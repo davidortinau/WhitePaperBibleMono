@@ -7,6 +7,16 @@ namespace WhitePaperBible.Core.Models
 {
 	public class AppModel
 	{
+		bool firstLoad = true;
+		public bool FirstLoad {
+			get {
+				return firstLoad;
+			}
+			set {
+				firstLoad = value;
+			}
+		}
+
 		public virtual AppUser User { get; set; }
 
 		public virtual List<Paper> MyPapers { get; set; }

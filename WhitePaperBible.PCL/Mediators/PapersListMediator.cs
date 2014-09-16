@@ -66,8 +66,13 @@ namespace WhitePaperBible.Core.Mediators
 		{
 			if (AppModel.Papers != null) {
 				Target.SetPapers (AppModel.Papers);
+				if (AppModel.FirstLoad) {
+					GetPapers.Invoke ();
+					AppModel.FirstLoad = false;
+				}
+			} else {
+				GetPapers.Invoke ();
 			}
-			GetPapers.Invoke ();
 		}
 
 		void OnAddPaper (object sender, EventArgs e)
