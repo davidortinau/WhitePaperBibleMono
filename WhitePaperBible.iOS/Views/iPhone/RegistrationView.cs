@@ -35,7 +35,7 @@ namespace WhitePaperBible.iOS
 					(PasswordEl = new EntryElement ("Password", "****", String.Empty, true)),
 					(PasswordConfirmEl = new EntryElement ("Password Confirm", "****", String.Empty, true)),
 					new StringElement("By registering you agree to the terms and conditions",()=>{
-						var termsView = new TermsAndConditionsView();
+						var termsView = new TermsAndConditionsView(true);
 						this.PresentViewController((UIViewController)termsView,true, null);
 					})
 

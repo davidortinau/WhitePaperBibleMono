@@ -49,6 +49,8 @@ namespace WhitePaperBible.iOS
 		protected void CreateLoginRequiredView ()
 		{
 			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+
 			View.AddSubview (LoginRequiredView);
 			View.BringSubviewToFront (LoginRequiredView);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();

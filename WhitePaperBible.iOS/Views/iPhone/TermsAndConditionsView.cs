@@ -9,9 +9,12 @@ namespace WhitePaperBible.iOS
 {
 	public partial class TermsAndConditionsView : UIViewController
 	{
-		public TermsAndConditionsView () : base ("TermsAndConditionsView", null)
+		bool ShowDone;
+
+		public TermsAndConditionsView (bool showDone=false) : base ("TermsAndConditionsView", null)
 		{
 			this.Title = "Terms & Conditions";
+			ShowDone = showDone;
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -26,8 +29,25 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
+			var textTop = 0;
+
+			if(ShowDone){
+				var bar = new UIToolbar (new RectangleF (0, 0, View.Bounds.Width, 48));
+				var done = new UIBarButtonItem (UIBarButtonSystemItem.Done);
+				UIBarButtonItem[] btns = new UIBarButtonItem[]{done};
+				bar.SetItems (btns,false);
+
+				done.Clicked += (object sender, EventArgs e) => {
+//					this.ParentViewController.NavigationController.PopViewControllerAnimated(true);
+					this.DismissViewController(true, null);
+				};
+				this.Add (bar);
+
+				textTop = 48;
+			}
+
 			var text  = System.IO.File.ReadAllText("WPB Terms and Conditions.txt", System.Text.Encoding.UTF8);
-			var textView = new UITextView (new RectangleF (0, 0, View.Bounds.Width, View.Bounds.Height));
+			var textView = new UITextView (new RectangleF (0, textTop, View.Bounds.Width, View.Bounds.Height));
 			textView.Text = text;
 			this.View.AddSubview (textView);
 		}
