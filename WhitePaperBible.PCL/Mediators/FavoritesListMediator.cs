@@ -31,11 +31,11 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (FavoritesReceived, (object sender, EventArgs e) => SetPapers ());
 
-			if (AM.IsLoggedIn) {
-				SetPapers ();
-			}else{
-				Target.PromptForLogin ();
-			}
+//			if (AM.IsLoggedIn) {
+			SetPapers ();
+//			}else{
+//				Target.PromptForLogin ();
+//			}
 
 		}
 
@@ -49,7 +49,9 @@ namespace WhitePaperBible.Core.Mediators
 			if (AM.Favorites != null && AM.Favorites != null) {
 				Target.SetPapers (AM.Favorites);
 			}else{
-				GetFavorites.Invoke ();
+				if (AM.IsLoggedIn) {
+					GetFavorites.Invoke ();
+				}
 			}
 		}
 	}

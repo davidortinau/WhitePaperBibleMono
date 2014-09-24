@@ -28,6 +28,10 @@ namespace WhitePaperBible.Core.Commands
 		{
 			var a = (ToggleFavoriteInvokerArgs)args;
 
+			if(AM.Favorites == null){
+				AM.Favorites = new List<Paper> ();
+			}
+
 			// add or remove from Favorites
 			if(a.IsFavorite){
 				AM.Favorites.Add (a.Paper);

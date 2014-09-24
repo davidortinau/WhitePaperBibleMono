@@ -39,7 +39,13 @@ namespace WhitePaperBible.Core.Commands
 			var serializer = new XmlSerializer (AM.GetType());
 			var fileText = await file.ReadAllTextAsync ();
 			var stringReader = new StringReader (fileText);
-			AppModel m = (AppModel)serializer.Deserialize (stringReader);
+			AppModel m;
+			try{
+				m = (AppModel)serializer.Deserialize (stringReader);
+			}catch{
+				m = new AppModel ();
+			}
+
 			AM.User = m.User;
 			AM.Papers = m.Papers;
 			AM.Favorites = m.Favorites;

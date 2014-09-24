@@ -83,8 +83,6 @@ namespace WhitePaperBible.iOS
 			Insights.Initialize("7fd2e4a9a3eb23a3d95e395a568abc3b8621065e");
 			Insights.Track ("App Launched");
 
-//			UpdateStatus ();
-
 			UINavigationBar.Appearance.TintColor = UIColor.DarkGray;
 			UITabBar.Appearance.TintColor = UIColor.Black;
 //			UITabBar.Appearance.BarTintColor = UIColor.LightGray;
