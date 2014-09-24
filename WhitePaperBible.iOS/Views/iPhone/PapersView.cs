@@ -46,6 +46,7 @@ namespace WhitePaperBible.iOS
 			View.AddSubview (LoginRequiredView);
 			View.BringSubviewToFront (LoginRequiredView);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
+			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => DismissLoginPrompt();
 			LoginRequiredView.Hidden = true;
 		}
 
@@ -53,6 +54,7 @@ namespace WhitePaperBible.iOS
 		{
 			if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
 				LoginRequiredView.Hidden = true;
+				LoginRequiredView = null;
 			}
 		}
 

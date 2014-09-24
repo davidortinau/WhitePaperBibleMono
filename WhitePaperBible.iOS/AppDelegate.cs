@@ -85,8 +85,12 @@ namespace WhitePaperBible.iOS
 
 //			UpdateStatus ();
 
-			UINavigationBar.Appearance.TintColor = UIColor.Brown;
-			UITabBar.Appearance.TintColor = UIColor.Brown;
+			UINavigationBar.Appearance.TintColor = UIColor.DarkGray;
+			UITabBar.Appearance.TintColor = UIColor.Black;
+//			UITabBar.Appearance.BarTintColor = UIColor.LightGray;
+			UITableViewCell.Appearance.TintColor = UIColor.DarkGray;
+			UITableView.Appearance.TintColor = UIColor.DarkGray;
+			UIToolbar.Appearance.TintColor = UIColor.White;
 			
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
@@ -95,13 +99,6 @@ namespace WhitePaperBible.iOS
 			
 			window.RootViewController = tabBarController;
 			window.MakeKeyAndVisible ();
-
-//			DI.Get<UnreachableInvoker> ().Invoked += (object sender, EventArgs e) => {
-//				using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
-//				{
-//					alert.Show();	
-//				}
-//			};
 			
 			return true;
 		}
@@ -111,29 +108,6 @@ namespace WhitePaperBible.iOS
 			DI.MapClassToInterface<WebClient, IJSONWebClient> ();
 			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
 		}
-
-		//
-		// Invoked on the main loop when reachability changes
-		//
-//		void ReachabilityChanged (NetworkReachabilityFlags flags)
-//		{
-//			UpdateStatus ();
-//		}
-//
-//		void UpdateStatus ()
-//		{
-//			remoteHostStatus = Reachability.RemoteHostStatus ();
-//			internetStatus = Reachability.InternetConnectionStatus ();
-//			localWifiStatus = Reachability.LocalWifiConnectionStatus ();
-//		}
-//
-//		void AlertUnreachable ()
-//		{
-//			using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
-//			{
-//				alert.Show();	
-//			}
-//		}
 	}
 }
 

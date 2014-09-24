@@ -12,10 +12,15 @@ namespace WhitePaperBible.Core.Commands
 	{
 		[Inject]
 		public AppModel AM;
+
 		[Inject]
 		public IGetPapersService Service;
+
 		[Inject]
 		public PapersReceivedInvoker PapersReceived;
+
+		[Inject]
+		public SaveStorageInvoker SaveStorage;
 
 		public override void Execute (InvokerArgs args)
 		{
@@ -36,6 +41,7 @@ namespace WhitePaperBible.Core.Commands
 //				AM.Popular.Add (paper);
 //			}
 
+			SaveStorage.Invoke ();
 			PapersReceived.Invoke ();
 		}
 	}

@@ -13,6 +13,7 @@ using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.Core.Invokers;
 using ElementPack;
 using CustomElements;
+using System.Drawing;
 
 namespace WhitePaperBible.iOS
 {
@@ -166,9 +167,15 @@ namespace WhitePaperBible.iOS
 		protected void CreateLoginRequiredView ()
 		{
 			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+
 			View.AddSubview (LoginRequiredView);
 			View.BringSubviewToFront (LoginRequiredView);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
+			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => {
+//				this.ParentViewController.DismissViewController (true, null);
+				this.ParentViewController.NavigationController.DismissViewController(true, null);
+			};
 			LoginRequiredView.Hidden = true;
 		}
 

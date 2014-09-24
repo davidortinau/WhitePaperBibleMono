@@ -131,10 +131,13 @@ namespace WhitePaperBible.iOS
 
 		protected void CreateLoginRequiredView ()
 		{
-			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
+			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight, false);
+			LoginRequiredView.Frame = new System.Drawing.RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+
 			View.AddSubview (LoginRequiredView);
 			View.BringSubviewToFront (LoginRequiredView);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
+
 			LoginRequiredView.Hidden = true;
 		}
 	}

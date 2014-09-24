@@ -11,9 +11,14 @@ namespace WhitePaperBible.iOS
 	{
 		public readonly Invoker LoginRegister = new Invoker ();
 
-		public LoginRequiredView (float height) : base (new RectangleF (0, 0, 320, height))
+		public readonly Invoker CancelRegister = new Invoker ();
+
+		bool ShowCancel;
+
+		public LoginRequiredView (float height, bool showCancel=true) : base (new RectangleF (0, 0, 320, height))
 		{
 			this.BackgroundColor = AppStyles.OffWhite;
+			this.ShowCancel = showCancel;
 		}
 
 		public override void LayoutSubviews ()
@@ -21,7 +26,9 @@ namespace WhitePaperBible.iOS
 			base.LayoutSubviews ();
 			CreateDescription ();
 			CreateLoginRegisterButton ();
-
+			if (ShowCancel) {
+				CreateCancelButton ();
+			}
 		}
 
 		void CreateLoginRegisterButton ()
@@ -33,6 +40,17 @@ namespace WhitePaperBible.iOS
 				LoginRegister.Invoke ();
 			};
 			AddSubview (loginRegisterButton);
+		}
+
+		void CreateCancelButton ()
+		{
+			WPBButton cancelRegisterButton = new WPBButton (ResourceManager.GetString ("cancel"),
+				AppStyles.DarkGray,
+				190);
+			cancelRegisterButton.TouchUpInside += (object sender, EventArgs e) => {
+				CancelRegister.Invoke ();
+			};
+			AddSubview (cancelRegisterButton);
 		}
 
 		void CreateDescription ()
