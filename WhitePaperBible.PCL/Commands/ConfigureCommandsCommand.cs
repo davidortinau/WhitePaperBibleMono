@@ -22,6 +22,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapCommandToInvoker<SaveFavoriteCommand, ToggleFavoriteInvoker> ();
 			DI.MapCommandToInvoker<SavePaperCommand, SavePaperInvoker> ();
 			DI.MapCommandToInvoker<DeletePaperCommand, DeletePaperInvoker> ();
+			DI.MapCommandToInvoker<RegisterUserCommand, RegisterUserInvoker> ();
 		}
 	}
 }

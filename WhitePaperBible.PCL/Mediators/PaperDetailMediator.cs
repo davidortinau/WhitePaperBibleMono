@@ -64,7 +64,9 @@ namespace WhitePaperBible.Core.Mediators
 				Target.DismissController ();// it has been deleted
 				return;
 			}
-			isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
+			if (AppModel.Favorites != null && AppModel.Favorites.Count > 0) {
+				isFavorite = AppModel.Favorites.Any (paper => paper.id == AppModel.CurrentPaper.id);
+			}
 			bool isOwned = (AppModel.IsLoggedIn) && (AppModel.CurrentPaper.user_id == AppModel.User.ID);
 			Target.SetPaper (AppModel.CurrentPaper, isFavorite, isOwned);
 		}

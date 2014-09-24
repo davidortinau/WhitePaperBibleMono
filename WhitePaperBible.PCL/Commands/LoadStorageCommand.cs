@@ -16,6 +16,9 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public StorageLoadedInvoker StorageLoaded;
 
+		[Inject]
+		public GetPapersInvoker GetPapers;
+
 		public override void Execute (InvokerArgs args)
 		{
 			var loadStore = LoadStore ();
@@ -25,8 +28,14 @@ namespace WhitePaperBible.Core.Commands
 		{
 			IFolder rootFolder = FileSystem.Current.LocalStorage;
 			IFolder folder = await rootFolder.CreateFolderAsync("WhitePaperBible", CreationCollisionOption.OpenIfExists);
-			IFile file = await folder.GetFileAsync("app_model.dat");
 
+			ExistenceCheckResult exists = await folder.CheckExistsAsync ("app_model.dat");
+			if (exists == ExistenceCheckResult.NotFound) {
+				GetPapers.Invoke ();
+				return;
+			}
+
+			IFile file = await folder.GetFileAsync ("app_model.dat");
 			var serializer = new XmlSerializer (AM.GetType());
 			var fileText = await file.ReadAllTextAsync ();
 			var stringReader = new StringReader (fileText);

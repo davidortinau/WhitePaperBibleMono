@@ -13,6 +13,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public AppModel AM;
 
+		[Inject]
+		public RegisterUserInvoker RegisterUser;
+
 		IRegistrationView Target;
 
 		public RegistrationViewMediator (IRegistrationView view) : base (view)
@@ -22,11 +25,13 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-//			InvokerMap.Add (Received, OnProfileReceived);
+			InvokerMap.Add (Target.Register, OnRegistration);
+		}
 
-//			if (AM.IsLoggedIn && AM.User != null && AM.User.Name != null) {
-//				SetUserProfile ();
-//			}
+		void OnRegistration (object sender, EventArgs e)
+		{
+			var args = (RegisterUserInvokerArgs)e;
+			RegisterUser.Invoke (args);
 		}
 	}
 }

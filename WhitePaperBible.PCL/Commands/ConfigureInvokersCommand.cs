@@ -29,6 +29,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<RefreshPapersInvoker> ();
 			DI.MapSingleton<PaperSavedInvoker> ();
 			DI.MapSingleton<PaperDeletedInvoker> ();
+			DI.MapSingleton<UserRegisteredInvoker> ();
 		}
 	}
 }

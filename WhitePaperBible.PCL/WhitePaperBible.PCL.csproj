@@ -178,6 +178,9 @@
     <Compile Include="Utilities\RegexUtilities.cs" />
     <Compile Include="Invokers\RegisterUserInvokerArgs.cs" />
     <Compile Include="Invokers\UserRegisteredInvoker.cs" />
+    <Compile Include="Commands\RegisterUserCommand.cs" />
+    <Compile Include="Invokers\RegisterUserInvoker.cs" />
+    <Compile Include="Services\RegisterUserService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
