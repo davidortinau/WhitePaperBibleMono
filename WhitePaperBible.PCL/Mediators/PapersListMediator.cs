@@ -27,6 +27,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public StorageLoadedInvoker StorageLoaded;
 
+		[Inject]
+		public LoginRequiredInvoker LoginRequired;
+
 		IPapersListView Target;
 
 		public PapersListMediator (IPapersListView view) : base (view)
@@ -36,12 +39,14 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-			InvokerMap.Add (Target.Filter, HandleFilter);
-			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
+//			InvokerMap.Add (Target.Filter, HandleFilter);
+//			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 			InvokerMap.Add (Target.AddPaper, OnAddPaper);
 			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers ());
 			InvokerMap.Add (RefreshPapers, (object sender, EventArgs e) => SetPapers());
 			InvokerMap.Add (StorageLoaded, (object sender, EventArgs e) => SetPapers());
+
+			InvokerMap.Add (LoginRequired, OnLoginRequired);
 			InvokerMap.Add (LoggedIn, OnLoggedIn);
 
 			Target.SearchPlaceHolderText = "Search Papers";
@@ -50,17 +55,17 @@ namespace WhitePaperBible.Core.Mediators
 
 		}
 
-		void HandleFilter (object sender, EventArgs e)
-		{
-			if (AppModel.Papers != null) {
-				Target.SetPapers (AppModel.FilterPapers (Target.SearchQuery));
-			}
-		}
-
-		void HandlerPaperSelected (object sender, EventArgs e)
-		{
-			AppModel.CurrentPaper = Target.SelectedPaper;
-		}
+//		void HandleFilter (object sender, EventArgs e)
+//		{
+//			if (AppModel.Papers != null) {
+//				Target.SetPapers (AppModel.FilterPapers (Target.SearchQuery));
+//			}
+//		}
+//
+//		void HandlerPaperSelected (object sender, EventArgs e)
+//		{
+//			AppModel.CurrentPaper = Target.SelectedPaper;
+//		}
 
 		public void SetPapers ()
 		{
@@ -82,14 +87,18 @@ namespace WhitePaperBible.Core.Mediators
 				AppModel.CurrentPaper = new Paper ();
 				Target.AddPaperEditView ();
 			}else{
-				Target.PromptForLogin ();
+				LoginRequired.Invoke ();
 			}
+		}
+
+		void OnLoginRequired (object sender, EventArgs e)
+		{
+			Target.PromptForLogin ();
 		}
 
 		void OnLoggedIn (object sender, EventArgs e)
 		{
 			Target.DismissLoginPrompt ();
-			// maybe also go to add paper?
 		}
 	}
 }

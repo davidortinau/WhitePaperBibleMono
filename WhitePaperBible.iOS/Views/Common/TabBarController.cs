@@ -7,6 +7,7 @@ using System;
 using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
+using WhitePaperBible.iOS.Invokers;
 
 namespace WhitePaperBible.iOS
 {
@@ -14,6 +15,9 @@ namespace WhitePaperBible.iOS
 	{
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
+
+		LoginRequiredController LoginRequiredView;
+
 		public TabBarController ()
 		{
 		}
@@ -22,7 +26,7 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			papersNav = CreateTabView<PapersView> (ResourceManager.GetString ("papers"), "papers");
+			papersNav = CreateTabView<PapersListController> (ResourceManager.GetString ("papers"), "papers");
 
 			tagsNav = CreateTabView<TagsView> (ResourceManager.GetString ("tags"), "tag");
 
@@ -76,10 +80,11 @@ namespace WhitePaperBible.iOS
 
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
-			if (AppDelegate.IsPad)
-				return true;
-			else
-				return toInterfaceOrientation == UIInterfaceOrientation.Portrait;
+			return true;
+//			if (AppDelegate.IsPad)
+//				return true;
+//			else
+//				return toInterfaceOrientation == UIInterfaceOrientation.Portrait;
 		}
 
 		public void ShowUnreachable ()
@@ -105,6 +110,9 @@ namespace WhitePaperBible.iOS
 			DI.DestroyMediator (this);
 
 		}
+
+
+
 	}
 }
 

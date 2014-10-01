@@ -184,6 +184,7 @@
     <Compile Include="Enums\MessageSourceEnum.cs" />
     <Compile Include="Invokers\RegistrationFaultInvoker.cs" />
     <Compile Include="Invokers\FaultInvokerArgs.cs" />
+    <Compile Include="Invokers\LoginRequiredInvoker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

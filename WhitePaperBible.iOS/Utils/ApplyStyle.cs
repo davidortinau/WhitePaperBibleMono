@@ -100,6 +100,24 @@ namespace WhitePaperBible.iOS.Utils
 
 		}
 
+		public static void LoginRequired (LoginRequiredController view)
+		{
+			view.DescriptionLabel.Text = ResourceManager.GetString ("loginRequired");
+			view.DescriptionLabel.BackgroundColor = UIColor.Clear;
+			view.DescriptionLabel.Font = AppStyles.HelveticaNeue (20);
+			view.DescriptionLabel.TextAlignment = UITextAlignment.Center;
+
+			view.LoginRegisterButton.BackgroundColor = AppStyles.Red;
+			view.LoginRegisterButton.Font = UIFont.FromName ("Helvetica", 21);
+			view.LoginRegisterButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+
+			view.CancelButton.BackgroundColor = AppStyles.Gray;
+			view.CancelButton.Font = UIFont.FromName ("Helvetica", 21);
+			view.CancelButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+
+
+		}
+
 //		public static void ItinerarySourceHeader (SourceHeaderCell cell)
 //		{
 //			cell.BackgroundColor = ColorFromHex (0x50575d);

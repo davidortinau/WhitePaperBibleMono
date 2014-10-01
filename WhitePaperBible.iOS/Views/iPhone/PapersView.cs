@@ -13,81 +13,40 @@ using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PapersView : DialogViewController, IPapersListView
+	public partial class PapersView : DialogViewController
 	{
-		LoginRequiredView LoginRequiredView;
+		UINavigationController NavController;
 
 		public Invoker RequestAddPaper {
 			get;
 			private set;
 		}
 
-		public void PromptForLogin ()
+		public PapersView (UINavigationController controller) : base (UITableViewStyle.Plain, null, true)
 		{
-			if (LoginRequiredView == null) {
-				CreateLoginRequiredView ();
-				LoginRequiredView.Hidden = false;
-			}
-		}
-
-		public void ShowLoginForm ()
-		{
-			var loginView = new LoginViewController ();
-			//			loginView.LoginFinished.Invoked += HandleLoginFinished;
-			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
-				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
-			};
-
-			this.PresentViewController (loginView, true, null);
-		}
-
-		protected void CreateLoginRequiredView ()
-		{
-			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			View.AddSubview (LoginRequiredView);
-			View.BringSubviewToFront (LoginRequiredView);
-			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
-			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => DismissLoginPrompt();
-			LoginRequiredView.Hidden = true;
-		}
-
-		public void DismissLoginPrompt()
-		{
-			if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
-				LoginRequiredView.Hidden = true;
-				LoginRequiredView = null;
-			}
-		}
-
-		public PapersView () : base (UITableViewStyle.Plain, null, true)
-		{
+			NavController = controller;
 			EnableSearch = true; 
 			AutoHideSearch = true;
 			SearchPlaceholder = @"Find Papers";
-			this.Filter = new Invoker ();
-			this.OnPaperSelected = new Invoker ();
+//			this.Filter = new Invoker ();
+//			this.OnPaperSelected = new Invoker ();
 			this.AddPaper = new Invoker ();
 
 		}
 
-		public void AddPaperEditView()
-		{
-			var addPaperView = new EditPaperView();
-			var editNav = new UINavigationController (addPaperView);
-			this.PresentViewController (editNav, true, null);
-		}
+
 
 		#region IPapersListView implementation
 
-		public Invoker Filter {
-			get;
-			private set;
-		}
-
-		public Invoker OnPaperSelected {
-			get;
-			private set;
-		}
+//		public Invoker Filter {
+//			get;
+//			private set;
+//		}
+//
+//		public Invoker OnPaperSelected {
+//			get;
+//			private set;
+//		}
 
 		public Invoker AddPaper {
 			get;
@@ -134,7 +93,7 @@ namespace WhitePaperBible.iOS
 				elements.Add (new PaperElement (p, () => {
 					var paperDetails = new PaperDetailsView(p);
 					paperDetails.Title = p.title;
-					NavigationController.PushViewController(paperDetails, true);
+					NavController.PushViewController(paperDetails, true);
 				}));
 			}
 			return elements;
@@ -161,21 +120,9 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-
-
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
-			};
-
-			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Add Paper", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					AddPaper.Invoke();
-				})
-				, true
-			);
-
-			AnalyticsUtil.TrackScreen (this.Title);
-			
+			};			
 		}
 
 		public override void ViewDidDisappear (bool animated)
@@ -188,13 +135,13 @@ namespace WhitePaperBible.iOS
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
-			DI.RequestMediator (this);
+//			DI.RequestMediator (this);
 		}
 
 		public override void ViewWillDisappear (bool animated)
 		{
 			base.ViewWillDisappear (animated);
-			DI.DestroyMediator (this);
+//			DI.DestroyMediator (this);
 		}
 	}
 }

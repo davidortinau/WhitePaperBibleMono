@@ -31,6 +31,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<PaperDeletedInvoker> ();
 			DI.MapSingleton<UserRegisteredInvoker> ();
 			DI.MapSingleton<RegistrationFaultInvoker> ();
+			DI.MapSingleton<LoginRequiredInvoker> ();
 		}
 	}
 }

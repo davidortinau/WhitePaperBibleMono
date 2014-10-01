@@ -14,7 +14,7 @@ namespace WhitePaperBible.iOS
 {
 	public partial class MyPapersAndProfileController : UIViewController, IMyPapersAndProfileView, IMediatorTarget
 	{
-		LoginRequiredView LoginRequiredView;
+		LoginRequiredController LoginRequiredView;
 
 		ProfileView profileView;
 
@@ -28,7 +28,7 @@ namespace WhitePaperBible.iOS
 		{
 			if (LoginRequiredView == null) {
 				CreateLoginRequiredView ();
-				LoginRequiredView.Hidden = false;
+				LoginRequiredView.View.Hidden = false;
 			}
 		}
 
@@ -46,8 +46,8 @@ namespace WhitePaperBible.iOS
 		public void DismissLoginPrompt()
 		{
 			InvokeOnMainThread (() => {
-				if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
-					LoginRequiredView.Hidden = true;
+				if (LoginRequiredView != null && !LoginRequiredView.View.Hidden) {
+					LoginRequiredView.View.Hidden = true;
 				}
 			});
 
@@ -55,14 +55,14 @@ namespace WhitePaperBible.iOS
 
 		protected void CreateLoginRequiredView ()
 		{
-			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight, false);
-			LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+			LoginRequiredView = new LoginRequiredController (false);
+//			LoginRequiredView.View.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
 
-			View.AddSubview (LoginRequiredView);
-			View.BringSubviewToFront (LoginRequiredView);
+			View.AddSubview (LoginRequiredView.View);
+			View.BringSubviewToFront (LoginRequiredView.View);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
 //			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => DismissLoginPrompt ();
-			LoginRequiredView.Hidden = true;
+			LoginRequiredView.View.Hidden = true;
 		}
 
 		public void ShowPaper (WhitePaperBible.Core.Models.Paper paper)
@@ -160,7 +160,7 @@ namespace WhitePaperBible.iOS
 			}
 
 			if (LoginRequiredView != null) {
-				View.BringSubviewToFront (LoginRequiredView);
+				View.BringSubviewToFront (LoginRequiredView.View);
 			}
 
 
@@ -179,9 +179,11 @@ namespace WhitePaperBible.iOS
 				top = 32;
 			}
 
-			if(LoginRequiredView != null){
-				LoginRequiredView.Frame = new RectangleF (0, top - 16, View.Bounds.Width, View.Bounds.Height);
-			}
+//			if(LoginRequiredView != null){
+//				LoginRequiredView.Frame = new RectangleF (0, top - 16, View.Bounds.Width, View.Bounds.Height);
+//			}
+
+			LoginRequiredView.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
 
 			if(containerView != null){
 				containerView.Frame = new RectangleF (0, 100 + top, View.Bounds.Width, View.Bounds.Height - (100 + top));

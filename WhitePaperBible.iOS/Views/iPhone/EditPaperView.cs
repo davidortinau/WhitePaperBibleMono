@@ -75,7 +75,7 @@ namespace WhitePaperBible.iOS
 
 		#region IEditPaperView implementation
 
-		LoginRequiredView LoginRequiredView;
+		LoginRequiredController LoginRequiredView;
 
 		Section VersesSection;
 		List<VerseEntryElement> VerseEls;
@@ -145,7 +145,7 @@ namespace WhitePaperBible.iOS
 		{
 			if (LoginRequiredView == null) {
 				CreateLoginRequiredView ();
-				LoginRequiredView.Hidden = false;
+				LoginRequiredView.View.Hidden = false;
 			}
 		}
 
@@ -161,24 +161,24 @@ namespace WhitePaperBible.iOS
 
 		public void DismissLoginPrompt()
 		{
-			if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
-				LoginRequiredView.Hidden = true;
+			if (LoginRequiredView != null && !LoginRequiredView.View.Hidden) {
+				LoginRequiredView.View.Hidden = true;
 			}
 		}
 
 		protected void CreateLoginRequiredView ()
 		{
-			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+			LoginRequiredView = new LoginRequiredController ();
+//			LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
 
-			View.AddSubview (LoginRequiredView);
-			View.BringSubviewToFront (LoginRequiredView);
+			View.AddSubview (LoginRequiredView.View);
+			View.BringSubviewToFront (LoginRequiredView.View);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
 			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => {
 //				this.ParentViewController.DismissViewController (true, null);
 				this.ParentViewController.NavigationController.DismissViewController(true, null);
 			};
-			LoginRequiredView.Hidden = true;
+			LoginRequiredView.View.Hidden = true;
 		}
 
 		public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
@@ -189,9 +189,9 @@ namespace WhitePaperBible.iOS
 		public override void DidRotate (UIInterfaceOrientation fromInterfaceOrientation)
 		{
 
-			if(LoginRequiredView != null){
-				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
-			}
+//			if(LoginRequiredView != null){
+//				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+//			}
 			base.DidRotate (fromInterfaceOrientation);
 		}
 

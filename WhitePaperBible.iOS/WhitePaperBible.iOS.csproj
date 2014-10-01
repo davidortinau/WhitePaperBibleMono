@@ -176,6 +176,15 @@
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\ApplyStyle.cs" />
+    <Compile Include="Views\iPhone\LoginRequiredController.cs" />
+    <Compile Include="Views\iPhone\LoginRequiredController.designer.cs">
+      <DependentUpon>LoginRequiredController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\PapersListController.cs" />
+    <Compile Include="Views\iPhone\PapersListController.designer.cs">
+      <DependentUpon>PapersListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\IPapersView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -187,6 +196,9 @@
     <InterfaceDefinition Include="Views\iPhone\BibleSearchView.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperTagsViewContainer.xib" />
     <InterfaceDefinition Include="Views\iPhone\LoginViewController.xib" />
+    <InterfaceDefinition Include="Views\iPhone\LoginRequiredController.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PapersListController_iPhone.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PapersListController_iPad.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />

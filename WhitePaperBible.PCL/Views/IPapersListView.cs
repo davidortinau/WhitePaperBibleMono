@@ -7,15 +7,11 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IPapersListView : IMediatorTarget
 	{
-		void PromptForLogin ();
-
-		void DismissLoginPrompt();
-
 		void AddPaperEditView();
 
-		Invoker Filter{ get; }
-
-		Invoker OnPaperSelected{ get; }
+//		Invoker Filter{ get; }
+//
+//		Invoker OnPaperSelected{ get; }
 
 		Invoker AddPaper{ get; }
 
@@ -26,6 +22,11 @@ namespace WhitePaperBible.Core.Views
 		string SearchQuery{ get; }
 
 		Paper SelectedPaper{ get; set; }
+
+		void PromptForLogin ();
+
+		void DismissLoginPrompt();
+
 	}
 }
 

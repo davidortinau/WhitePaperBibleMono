@@ -15,6 +15,12 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public UnreachableInvoker Unreachable;
 
+		[Inject]
+		public LoginRequiredInvoker LoginRequired;
+
+		[Inject]
+		public LoggedInInvoker LoggedIn;
+
 		ITabBarView Target;
 
 		public TabBarMediator (ITabBarView view) : base (view)
