@@ -29,7 +29,7 @@ namespace WhitePaperBible.iOS
 
 		public ProfileView () : base (new RectangleF (0, 0, 320, 100))
 		{
-			this.BackgroundColor = AppStyles.Gray;
+			this.BackgroundColor = UIColor.Clear.FromHex(0xF8F8F8);
 
 			GoToEdit = new Invoker ();
 		}
@@ -61,7 +61,7 @@ namespace WhitePaperBible.iOS
 			EditBtn.SetTitle ("Edit Profile", UIControlState.Normal);
 			EditBtn.Frame = new RectangleF (90, 50, 200, 30);
 			EditBtn.BackgroundColor = UIColor.Clear;
-			EditBtn.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			EditBtn.SetTitleColor (UIColor.DarkGray, UIControlState.Normal); 
 			EditBtn.Font = UIFont.FromName ("Helvetica", 12);
 			EditBtn.HorizontalAlignment = UIControlContentHorizontalAlignment.Left;
 //			EditBtn.SetTitleColor (TNTStyles.DarkGray, UIControlState.Highlighted); 

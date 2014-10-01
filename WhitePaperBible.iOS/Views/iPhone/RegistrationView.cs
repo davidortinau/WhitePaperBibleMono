@@ -30,6 +30,7 @@ namespace WhitePaperBible.iOS
 		{
 			Register = new Invoker ();
 
+
 			Root = new RootElement ("Create Account") {
 				new Section ("") {
 					(FullNameEl = new EntryElement ("Full Name", "Jane Doe", String.Empty)),
@@ -114,6 +115,25 @@ namespace WhitePaperBible.iOS
 
 		#region IRegistrationView implementation
 
+//		public void ShowBusyIndicator ()
+//		{
+//			InvokeOnMainThread (() => {
+//				this.ShowNetworkActivityIndicator ();
+//				SubmitButton.Enabled = false;
+//				SubmitButton.Alpha = .25f;
+//			});
+//
+//		}
+//
+//		public void HideBusyIndicator ()
+//		{
+//			InvokeOnMainThread (() => {
+//				this.HideNetworkActivityIndicator ();
+//				SubmitButton.Enabled = true;
+//				SubmitButton.Alpha = 1;
+//			});
+//		}
+
 		public void DisplayError (string msg)
 		{
 			InvokeOnMainThread (() => {
@@ -133,6 +153,8 @@ namespace WhitePaperBible.iOS
 			private set;
 		}
 
+		public event EventHandler Dismissed;
+
 		#endregion
 
 		public override void ViewWillAppear (bool animated)
@@ -147,6 +169,12 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewWillDisappear (animated);
 			DI.DestroyMediator (this);
+		}
+
+		public override void ViewDidDisappear (bool animated)
+		{
+			base.ViewDidDisappear (animated);
+			Dismissed(this, EventArgs.Empty);
 		}
 	}
 }

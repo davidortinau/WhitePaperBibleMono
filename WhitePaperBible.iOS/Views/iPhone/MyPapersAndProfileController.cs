@@ -35,6 +35,7 @@ namespace WhitePaperBible.iOS
 			var loginView = new LoginView ();
 			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
 				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
+				DismissLoginPrompt();
 			};
 
 			this.PresentViewController (loginView, true, null);
@@ -42,9 +43,12 @@ namespace WhitePaperBible.iOS
 
 		public void DismissLoginPrompt()
 		{
-			if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
-				LoginRequiredView.Hidden = true;
-			}
+			InvokeOnMainThread (() => {
+				if (LoginRequiredView != null && !LoginRequiredView.Hidden) {
+					LoginRequiredView.Hidden = true;
+				}
+			});
+
 		}
 
 		protected void CreateLoginRequiredView ()
@@ -70,7 +74,7 @@ namespace WhitePaperBible.iOS
 			this.Title = "My Papers";
 
 			Logout = new Invoker ();
-
+		
 			NavigationItem.SetRightBarButtonItem (
 				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
 					Logout.Invoke();

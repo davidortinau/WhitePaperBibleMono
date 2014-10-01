@@ -10,6 +10,7 @@ namespace WhitePaperBible.Core.Views
 		void DismissView ();
 
 		Invoker Register { get; }
+
 		void DisplayError (string msg);
 	}
 }

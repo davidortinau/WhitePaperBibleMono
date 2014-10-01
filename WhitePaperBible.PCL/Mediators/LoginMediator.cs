@@ -34,24 +34,6 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (LoggedIn, onLoggedIn);
 			InvokerMap.Add (LoginFault, onLoginFault);
 			InvokerMap.Add (Target.RegistrationClosed, onRegistrationClosed);
-//			InvokerMap.Add (Target.Filter, HandleFilter);
-//			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
-//			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
-
-//			Target.SearchPlaceHolderText = "Search Papers";
-
-//			if([appDelegate isUserLoggedIn]){
-//				self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//				[HRRestModel setDelegate:self];
-//				[HRRestModel getPath:@"/favorite/index/?caller=wpb-iPhone" withOptions:nil object:self];
-//				[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-//			}
-//			else{
-//				NotLoggedInViewController *notLoggedInViewController = [[NotLoggedInViewController alloc] initWithNibName:@"NotLoggedInViewController"  bundle:[NSBundle mainBundle]];
-//				[self presentModalViewController:notLoggedInViewController animated:YES];
-//				[notLoggedInViewController release];
-//			}
-
 		}
 
 		void onRegistrationClosed (object sender, EventArgs e)

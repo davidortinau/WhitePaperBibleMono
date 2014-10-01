@@ -28,6 +28,12 @@ namespace WhitePaperBible.Core.Commands
 		[Inject]
 		public LoggedInInvoker LoggedIn;
 
+		[Inject]
+		public SaveStorageInvoker SaveStorage;
+
+		[Inject]
+		public GetUserProfileInvoker GetProfile;
+
 		AppUser user;
 
 		public override void Execute (InvokerArgs args)
@@ -56,6 +62,8 @@ namespace WhitePaperBible.Core.Commands
 				Registered.Invoke ();
 				AM.IsLoggedIn = true;
 				LoggedIn.Invoke ();
+//				SaveStorage.Invoke ();
+				GetProfile.Invoke ();
 			}else{
 				var fa = new FaultInvokerArgs (a.Messages);
 				FaultInvoker.Invoke (fa);

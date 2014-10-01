@@ -96,11 +96,6 @@ namespace WhitePaperBible.iOS
 			});
 		}
 
-		public void GoToNextScreen ()
-		{
-			LoginFinished.Invoke (new LoginFinishedInvokerArgs (this));
-		}
-
 		void InitUI ()
 		{
 			CreateLoginForm ();
@@ -147,6 +142,7 @@ namespace WhitePaperBible.iOS
 			RegisterButton.TouchUpInside += (object sender, EventArgs e) => {
 				var registrationView = new RegistrationView();
 				this.PresentViewController(registrationView, true, null);
+				registrationView.Dismissed += OnRegistrationDismissed;
 			};
 
 
@@ -159,6 +155,11 @@ namespace WhitePaperBible.iOS
 				PasswordInput.ResignFirstResponder ();
 				return true;
 			};
+		}
+
+		void OnRegistrationDismissed(object sender, EventArgs e) {
+			RegistrationClosed.Invoke();
+
 		}
 
 		void CreateLoginForm ()
@@ -248,7 +249,7 @@ namespace WhitePaperBible.iOS
 		public void Dismiss()
 		{
 			InvokeOnMainThread (() => {
-				DismissViewController (true, null);
+				LoginFinished.Invoke(new LoginFinishedInvokerArgs (this));
 			});
 		}
 

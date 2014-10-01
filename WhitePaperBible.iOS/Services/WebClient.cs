@@ -56,11 +56,13 @@ namespace WhitePaperBible.iOS
 
 				client.ExecuteAsync (request, response => {
 					if (response.Cookies.Count > 0) {
-						if (response.Cookies [0].Name == "_whitepaperbible_session") {
-							UserSessionCookie = new SessionCookie { 
-								Name = response.Cookies [0].Name,
-								Value = response.Cookies [0].Value
-							};
+						foreach(var cookie in response.Cookies){
+							if(cookie.Name == "_whitepaperbible_session"){
+								UserSessionCookie = new SessionCookie { 
+									Name = cookie.Name,
+									Value = cookie.Value
+								};
+							}
 						}
 					}
 

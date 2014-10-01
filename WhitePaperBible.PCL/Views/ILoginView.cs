@@ -17,8 +17,6 @@ namespace WhitePaperBible.Core.Views
 
 		void ShowInvalidPrompt (string message);
 
-		void GoToNextScreen ();
-
 		string UserName { get; }
 
 		string Password { get; }

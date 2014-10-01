@@ -22,6 +22,9 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public ShowMyPaperInvoker ShowMyPaper;
 
+		[Inject]
+		public UserProfileReceivedInvoker ProfileReceived;
+
 		IMyPapersAndProfileView Target;
 
 		public MyPapersAndProfileMediator (IMyPapersAndProfileView view) : base (view)
@@ -35,6 +38,7 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (LoggedIn, (object sender, EventArgs e) => Target.DismissLoginPrompt ());
 			InvokerMap.Add (ShowMyPaper, (object sender, EventArgs e) => Target.ShowPaper (((ShowMyPaperInvokerArgs)e).Paper));
 			InvokerMap.Add (Target.Logout, OnLogout);
+			InvokerMap.Add(ProfileReceived, (object sender, EventArgs e) => Target.DismissLoginPrompt ());
 
 			if (!AM.IsLoggedIn) {
 				Target.PromptForLogin ();
