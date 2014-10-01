@@ -15,6 +15,12 @@ namespace WhitePaperBible.iOS
 
 		bool ShowCancel;
 
+		UITextView description;
+
+		WPBButton cancelRegisterButton;
+
+		WPBButton loginRegisterButton;
+
 		public LoginRequiredView (float height, bool showCancel=true) : base (new RectangleF (0, 0, 320, height))
 		{
 			this.BackgroundColor = AppStyles.OffWhite;
@@ -33,35 +39,41 @@ namespace WhitePaperBible.iOS
 
 		void CreateLoginRegisterButton ()
 		{
-			WPBButton loginRegisterButton = new WPBButton (ResourceManager.GetString ("loginRegister"),
-				                                AppStyles.Red,
-				                                130);
-			loginRegisterButton.TouchUpInside += (object sender, EventArgs e) => {
-				LoginRegister.Invoke ();
-			};
-			AddSubview (loginRegisterButton);
+			if (loginRegisterButton == null) {
+				loginRegisterButton = new WPBButton (ResourceManager.GetString ("loginRegister"),
+					AppStyles.Red,
+					130);
+				loginRegisterButton.TouchUpInside += (object sender, EventArgs e) => {
+					LoginRegister.Invoke ();
+				};
+				AddSubview (loginRegisterButton);
+			}
 		}
 
 		void CreateCancelButton ()
 		{
-			WPBButton cancelRegisterButton = new WPBButton (ResourceManager.GetString ("cancel"),
-				AppStyles.DarkGray,
-				190);
-			cancelRegisterButton.TouchUpInside += (object sender, EventArgs e) => {
-				CancelRegister.Invoke ();
-			};
-			AddSubview (cancelRegisterButton);
+			if (cancelRegisterButton == null) {
+				cancelRegisterButton = new WPBButton (ResourceManager.GetString ("cancel"),
+					AppStyles.DarkGray,
+					190);
+				cancelRegisterButton.TouchUpInside += (object sender, EventArgs e) => {
+					CancelRegister.Invoke ();
+				};
+				AddSubview (cancelRegisterButton);
+			}
 		}
 
 		void CreateDescription ()
 		{
-			UITextView description = new UITextView (new RectangleF (0, 50, Frame.Width, Frame.Height));
-			description.Text = ResourceManager.GetString ("loginRequired");
-			description.BackgroundColor = UIColor.Clear;
-			description.Font = AppStyles.HelveticaNeue (20);
-			description.TextAlignment = UITextAlignment.Center;
-			description.Editable = false;
-			AddSubview (description);
+			if (description == null) {
+				description = new UITextView (new RectangleF (0, 50, Frame.Width, Frame.Height));
+				description.Text = ResourceManager.GetString ("loginRequired");
+				description.BackgroundColor = UIColor.Clear;
+				description.Font = AppStyles.HelveticaNeue (20);
+				description.TextAlignment = UITextAlignment.Center;
+				description.Editable = false;
+				AddSubview (description);
+			}
 		}
 	}
 }

@@ -20,6 +20,8 @@ namespace WhitePaperBible.iOS
 
 		MyPapersView myPapersView;
 
+		UIView containerView;
+
 		public Invoker Logout {get;private set;}
 
 		public void PromptForLogin ()
@@ -32,7 +34,7 @@ namespace WhitePaperBible.iOS
 
 		public void ShowLoginForm ()
 		{
-			var loginView = new LoginView ();
+			var loginView = new LoginViewController ();
 			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
 				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
 				DismissLoginPrompt();
@@ -152,7 +154,7 @@ namespace WhitePaperBible.iOS
 			if (myPapersView == null) {
 				myPapersView = new MyPapersView ();
 
-				var containerView = new UIView (new RectangleF (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
+				containerView = new UIView (new RectangleF (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
 				containerView.AddSubview (myPapersView.TableView);
 				View.AddSubview (containerView);
 			}
@@ -162,6 +164,32 @@ namespace WhitePaperBible.iOS
 			}
 
 
+		}
+
+		public override void DidRotate (UIInterfaceOrientation fromInterfaceOrientation)
+		{
+			Resize (fromInterfaceOrientation);
+			base.DidRotate (fromInterfaceOrientation);
+		}
+
+		void Resize (UIInterfaceOrientation fromInterfaceOrientation)
+		{
+			var top = 64;
+			if(fromInterfaceOrientation == UIInterfaceOrientation.Portrait || fromInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown){
+				top = 32;
+			}
+
+			if(LoginRequiredView != null){
+				LoginRequiredView.Frame = new RectangleF (0, top - 16, View.Bounds.Width, View.Bounds.Height);
+			}
+
+			if(containerView != null){
+				containerView.Frame = new RectangleF (0, 100 + top, View.Bounds.Width, View.Bounds.Height - (100 + top));
+			}
+
+			if(profileView != null){
+				profileView.Frame = new RectangleF (0, top, View.Bounds.Width, 100);
+			}
 		}
 
 	}

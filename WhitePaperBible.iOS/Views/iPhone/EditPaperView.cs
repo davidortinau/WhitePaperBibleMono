@@ -41,6 +41,7 @@ namespace WhitePaperBible.iOS
 			if(paper != null){
 				SetPaper (paper);
 			}
+
 		}
 
 		public List<Tag> Tags {
@@ -150,7 +151,7 @@ namespace WhitePaperBible.iOS
 
 		public void ShowLoginForm ()
 		{
-			var loginView = new LoginView ();
+			var loginView = new LoginViewController ();
 			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
 				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
 			};
@@ -178,6 +179,25 @@ namespace WhitePaperBible.iOS
 				this.ParentViewController.NavigationController.DismissViewController(true, null);
 			};
 			LoginRequiredView.Hidden = true;
+		}
+
+		public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
+		{
+			return base.GetSupportedInterfaceOrientations ();
+		}
+
+		public override void DidRotate (UIInterfaceOrientation fromInterfaceOrientation)
+		{
+
+			if(LoginRequiredView != null){
+				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+			}
+			base.DidRotate (fromInterfaceOrientation);
+		}
+
+		public override void ViewWillLayoutSubviews ()
+		{
+			base.ViewWillLayoutSubviews ();
 		}
 
 		public void DismissController (bool deleted)

@@ -19,6 +19,8 @@ namespace WhitePaperBible.iOS
 
 		BibleSearchResults ResultsTable;
 
+		UIView containerView;
+
 		public Invoker DoSearch {
 			get;
 			private set;
@@ -123,9 +125,34 @@ namespace WhitePaperBible.iOS
 			if (ResultsTable == null) {
 				ResultsTable = new BibleSearchResults ();
 
-				var containerView = new UIView (new RectangleF (0, 90+64, View.Bounds.Width, View.Bounds.Height - 90));
+				containerView = new UIView (new RectangleF (0, 90 + 64, View.Bounds.Width, View.Bounds.Height - 90));
 				containerView.AddSubview (ResultsTable.TableView);
 				View.AddSubview (containerView);
+			}
+		}
+
+		public override void DidRotate (UIInterfaceOrientation fromInterfaceOrientation)
+		{
+			Resize (fromInterfaceOrientation);
+			base.DidRotate (fromInterfaceOrientation);
+		}
+
+		void Resize (UIInterfaceOrientation fromInterfaceOrientation)
+		{
+//			if(LoginRequiredView != null){
+//				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+//			}
+			var top = 64;
+			if(fromInterfaceOrientation == UIInterfaceOrientation.Portrait || fromInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown){
+				top = 32;
+			}
+
+			if(containerView != null){
+				containerView.Frame = new RectangleF (0, 90 + top, View.Bounds.Width, View.Bounds.Height - 90);
+			}
+
+			if(SearchBar != null){
+				SearchBar.Frame = new RectangleF (0, top, View.Bounds.Width, 90);
 			}
 		}
 	}

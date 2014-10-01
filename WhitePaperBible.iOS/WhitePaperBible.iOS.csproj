@@ -24,7 +24,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>i386</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -171,6 +171,11 @@
     <Compile Include="UI\CustomElements\VerseEntryElement.cs" />
     <Compile Include="Views\iPhone\RegistrationView.cs" />
     <Compile Include="Utils\AnalyticsUtil.cs" />
+    <Compile Include="Views\iPhone\LoginViewController.cs" />
+    <Compile Include="Views\iPhone\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ApplyStyle.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -181,6 +186,7 @@
     <InterfaceDefinition Include="Views\iPhone\MyPapersAndProfileController.xib" />
     <InterfaceDefinition Include="Views\iPhone\BibleSearchView.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperTagsViewContainer.xib" />
+    <InterfaceDefinition Include="Views\iPhone\LoginViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />

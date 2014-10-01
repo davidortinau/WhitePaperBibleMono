@@ -26,7 +26,7 @@ namespace WhitePaperBible.iOS
 
 		public void ShowLoginForm ()
 		{
-			var loginView = new LoginView ();
+			var loginView = new LoginViewController ();
 			//			loginView.LoginFinished.Invoked += HandleLoginFinished;
 			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
 				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
@@ -63,6 +63,10 @@ namespace WhitePaperBible.iOS
 		{
 			if(LoginRequiredView != null && !LoginRequiredView.Hidden){
 				LoginRequiredView.Hidden = true;
+			}
+
+			if(papers.Count == 0){
+				return;
 			}
 
 			InvokeOnMainThread (delegate {
