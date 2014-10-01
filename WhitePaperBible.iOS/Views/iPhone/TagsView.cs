@@ -7,6 +7,7 @@ using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -78,7 +79,8 @@ namespace WhitePaperBible.iOS
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
 			};
-			
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewDidDisappear (bool animated)

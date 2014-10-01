@@ -8,6 +8,7 @@ using WhitePaperBible.iOS;
 using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -125,6 +126,8 @@ namespace WhitePaperBible.iOS
 			if(this.profileView != null){
 				DI.RequestMediator (this.profileView);
 			}
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewDidLayoutSubviews()

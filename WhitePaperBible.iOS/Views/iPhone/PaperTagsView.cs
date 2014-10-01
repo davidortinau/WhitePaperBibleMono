@@ -11,6 +11,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Views;
 using WhitePaperBible.Core.Invokers;
 using System.Linq;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -72,6 +73,8 @@ namespace WhitePaperBible.iOS
 				})
 				, true
 			);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 
 		}
 

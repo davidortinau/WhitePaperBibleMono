@@ -33,6 +33,7 @@ namespace WhitePaperBible.Core.Mediators
 			this.Target.LoginSubmitted += HandleLoginSubmitted;
 			InvokerMap.Add (LoggedIn, onLoggedIn);
 			InvokerMap.Add (LoginFault, onLoginFault);
+			InvokerMap.Add (Target.RegistrationClosed, onRegistrationClosed);
 //			InvokerMap.Add (Target.Filter, HandleFilter);
 //			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
 //			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
@@ -51,6 +52,13 @@ namespace WhitePaperBible.Core.Mediators
 //				[notLoggedInViewController release];
 //			}
 
+		}
+
+		void onRegistrationClosed (object sender, EventArgs e)
+		{
+			if(AppModel.IsLoggedIn){
+				Target.Dismiss ();
+			}
 		}
 
 		void HandleLoginSubmitted (object sender, EventArgs e)

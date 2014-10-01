@@ -7,6 +7,7 @@ using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -83,6 +84,8 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 
 			DI.RequestMediator (this);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 
 		}
 

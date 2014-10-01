@@ -4,6 +4,7 @@ using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -33,7 +34,10 @@ namespace WhitePaperBible.iOS
 
 			if(ShowDone){
 				var bar = new UIToolbar (new RectangleF (0, 0, View.Bounds.Width, 48));
+//				bar.BarTintColor = UIColor.DarkGray;
+				bar.TintColor = UIColor.DarkGray;
 				var done = new UIBarButtonItem (UIBarButtonSystemItem.Done);
+
 				UIBarButtonItem[] btns = new UIBarButtonItem[]{done};
 				bar.SetItems (btns,false);
 
@@ -50,6 +54,8 @@ namespace WhitePaperBible.iOS
 			var textView = new UITextView (new RectangleF (0, textTop, View.Bounds.Width, View.Bounds.Height));
 			textView.Text = text;
 			this.View.AddSubview (textView);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 	}
 }

@@ -181,6 +181,9 @@
     <Compile Include="Commands\RegisterUserCommand.cs" />
     <Compile Include="Invokers\RegisterUserInvoker.cs" />
     <Compile Include="Services\RegisterUserService.cs" />
+    <Compile Include="Enums\MessageSourceEnum.cs" />
+    <Compile Include="Invokers\RegistrationFaultInvoker.cs" />
+    <Compile Include="Invokers\FaultInvokerArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

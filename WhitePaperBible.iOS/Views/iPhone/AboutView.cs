@@ -6,6 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using MonoTouch.MessageUI;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -14,6 +15,8 @@ namespace WhitePaperBible.iOS
 		public AboutView () : base (UITableViewStyle.Grouped, null)
 		{
 			this.Title = "About";
+
+			AnalyticsUtil.TrackScreen (this.Title);
 //			aboutTableDataArray = [[NSArray alloc] initWithObjects:@"whitepaperbible.org",@"simplyprofound.com",@"Follow WPB on Twitter",@"Join WPB on Facebook",@"Preface to the ESV® Bible",nil];
 //			legalTableDataArray = [[NSArray alloc] initWithObjects:@"Copyrights",@"Terms and Conditions",nil];
 

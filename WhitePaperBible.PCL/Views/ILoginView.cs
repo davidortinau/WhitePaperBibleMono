@@ -13,6 +13,8 @@ namespace WhitePaperBible.Core.Views
 
 		Invoker LoginCancelled{ get; }
 
+		Invoker RegistrationClosed{ get; }
+
 		void ShowInvalidPrompt (string message);
 
 		void GoToNextScreen ();

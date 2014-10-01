@@ -11,6 +11,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Views;
 using ElementPack;
 using WhitePaperBible.Core.Invokers;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -78,6 +79,8 @@ namespace WhitePaperBible.iOS
 			base.ViewDidAppear (animated);
 
 			DI.RequestMediator (this);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 
 
 		}

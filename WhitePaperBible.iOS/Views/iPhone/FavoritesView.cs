@@ -8,6 +8,7 @@ using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.Invokers;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -111,7 +112,7 @@ namespace WhitePaperBible.iOS
 			};
 
 
-
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewDidAppear (bool animated)

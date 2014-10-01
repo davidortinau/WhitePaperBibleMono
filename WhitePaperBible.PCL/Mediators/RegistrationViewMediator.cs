@@ -16,6 +16,13 @@ namespace WhitePaperBible.Core.Mediators
 		[Inject]
 		public RegisterUserInvoker RegisterUser;
 
+		[Inject]
+		public UserRegisteredInvoker UserRegistered;
+
+		[Inject]
+		public RegistrationFaultInvoker FaultInvoker;
+
+
 		IRegistrationView Target;
 
 		public RegistrationViewMediator (IRegistrationView view) : base (view)
@@ -26,12 +33,25 @@ namespace WhitePaperBible.Core.Mediators
 		public override void Register ()
 		{
 			InvokerMap.Add (Target.Register, OnRegistration);
+			InvokerMap.Add (UserRegistered, OnRegistered);
+			InvokerMap.Add (FaultInvoker, OnFault);
+		}
+
+		void OnFault (object sender, EventArgs e)
+		{
+			var args = (FaultInvokerArgs)e;
+			Target.DisplayError (string.Join(", ",args.Messages));
 		}
 
 		void OnRegistration (object sender, EventArgs e)
 		{
 			var args = (RegisterUserInvokerArgs)e;
 			RegisterUser.Invoke (args);
+		}
+
+		void OnRegistered (object sender, EventArgs e)
+		{
+			Target.DismissView ();
 		}
 	}
 }

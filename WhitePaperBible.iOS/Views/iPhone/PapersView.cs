@@ -9,6 +9,7 @@ using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.iOS.UI.CustomElements;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -172,6 +173,8 @@ namespace WhitePaperBible.iOS
 				})
 				, true
 			);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 			
 		}
 

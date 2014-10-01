@@ -14,6 +14,7 @@ using WhitePaperBible.Core.Invokers;
 using ElementPack;
 using CustomElements;
 using System.Drawing;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -215,6 +216,8 @@ namespace WhitePaperBible.iOS
 				})
 				, true
 			);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewWillAppear (bool animated)

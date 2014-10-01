@@ -10,6 +10,7 @@ using WhitePaperBible.iOS.UI;
 using System.Drawing;
 using WhitePaperBible.iOS.Managers;
 using WhitePaperBible.iOS.Invokers;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -21,6 +22,11 @@ namespace WhitePaperBible.iOS
 		}
 
 		public Invoker LoginCancelled {
+			get;
+			private set;
+		}
+
+		public Invoker RegistrationClosed {
 			get;
 			private set;
 		}
@@ -42,6 +48,7 @@ namespace WhitePaperBible.iOS
 			this.Title = "Login";
 			this.LoginFinished = new Invoker ();
 			this.LoginCancelled = new Invoker ();
+			this.RegistrationClosed = new Invoker ();
 		}
 
 		public string UserName {
@@ -65,6 +72,7 @@ namespace WhitePaperBible.iOS
 			InitUI ();
 			AddEventHandlers ();
 
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewDidAppear (bool animated)
@@ -163,7 +171,7 @@ namespace WhitePaperBible.iOS
 			//Username Input
 			var userNameRect = new RectangleF (0, 20, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
 			loginForm.AddSubview (CreateLabel ("email", userNameRect));
-			UsernameInput = CreateInput ("davidortinau", ResourceManager.GetString ("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
+			UsernameInput = CreateInput ("", ResourceManager.GetString ("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
 			loginForm.AddSubview (UsernameInput);
 
 			//horizontal rul
@@ -174,7 +182,7 @@ namespace WhitePaperBible.iOS
 			//Password Input
 			var passwordRect = new RectangleF (10, userNameRect.Bottom, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
 			loginForm.AddSubview (CreateLabel ("password", passwordRect));
-			PasswordInput = CreateInput ("simple", "", passwordRect, UIReturnKeyType.Done, true);
+			PasswordInput = CreateInput ("", "", passwordRect, UIReturnKeyType.Done, true);
 			loginForm.AddSubview (PasswordInput);
 
 

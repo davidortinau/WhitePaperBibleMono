@@ -10,6 +10,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Views;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Invokers;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -27,6 +28,8 @@ namespace WhitePaperBible.iOS
 
 		public RegistrationView () : base (UITableViewStyle.Grouped, null)
 		{
+			Register = new Invoker ();
+
 			Root = new RootElement ("Create Account") {
 				new Section ("") {
 					(FullNameEl = new EntryElement ("Full Name", "Jane Doe", String.Empty)),
@@ -55,9 +58,7 @@ namespace WhitePaperBible.iOS
 							Register.Invoke(args);
 						}
 					}),
-					new StyledStringElement("Cancel",()=>{
-						this.DismissViewController(true, null);
-					})
+					new StyledStringElement ("Cancel", DismissView)
 				},
 			};
 		}
@@ -85,7 +86,7 @@ namespace WhitePaperBible.iOS
 					results += "Username should be longer than 4 characters." + Environment.NewLine;
 				}
 
-				if(UsernameEl.Value.IndexOf(" ") < 4){
+				if(UsernameEl.Value.IndexOf(" ") != -1){
 					results += "Username should not have empty spaces." + Environment.NewLine;
 				}
 			}
@@ -115,7 +116,16 @@ namespace WhitePaperBible.iOS
 
 		public void DisplayError (string msg)
 		{
-			throw new NotImplementedException ();
+			InvokeOnMainThread (() => {
+				var alert = new UIAlertView("Oops", msg, null, "Okay");
+				alert.Show();
+			});
+		}
+
+		public void DismissView()
+		{
+			InvokeOnMainThread (() => this.DismissViewController (true, null));
+
 		}
 
 		public Invoker Register {
@@ -129,6 +139,8 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewWillAppear (animated);
 			DI.RequestMediator (this);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewWillDisappear (bool animated)

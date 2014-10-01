@@ -19,31 +19,14 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (AppUser user)
 		{
-			var cookieJar = new CookieContainer ();
-			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
+//			var cookieJar = new CookieContainer ();
+//			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
 
-			var url = Constants.BASE_URI + String.Format ("users/create/?caller=wpb-iPhone");
-			url += String.Format ("&user[name]={0}&user[email]={1}&user[username]={2}&eula[accepted]=YES", user.Name, user.Email, user.username);
+			var url = Constants.BASE_URI + String.Format ("users/create/{0}?caller=wpb-iPhone", Uri.EscapeDataString(user.username));
+			url += String.Format ("&user[name]={0}&user[email]={1}&user[username]={2}&eula[accepted]=YES", user.Name, Uri.EscapeDataString(user.Email), Uri.EscapeDataString(user.username));
 			url += String.Format ("&user[password]={0}&user[password_confirmation]={1}", user.password, user.passwordConfirmation);
 
-			Client.OpenURL (url, MethodEnum.GET, cookieJar);
-
-//			[completeSearchURL appendFormat: @"/users/create/"];
-//			[completeSearchURL appendString: [self urlencode:theName]];
-//			[completeSearchURL appendString: @"?user[name]="];
-//			[completeSearchURL appendString: [self urlencode:theName]];
-//			[completeSearchURL appendString: @"&user[email]="];
-//			[completeSearchURL appendString: [self urlencode:theEmail]];
-//			[completeSearchURL appendString: @"&user[username]="];
-//			[completeSearchURL appendString: [self urlencode:theUsername]];
-//			[completeSearchURL appendString: @"&user[password]="];
-//			[completeSearchURL appendString: [self urlencode:thePassword]];
-//			[completeSearchURL appendString: @"&caller=wpb-iPhone"];
-//			[completeSearchURL appendString: @"&eula[accepted]="];
-//			[completeSearchURL appendString: [self urlencode:@"YES"]];
-//			[completeSearchURL appendString: @"&user[password_confirmation]="];
-//			[completeSearchURL appendString: [self urlencode:theConfirmation]];
-//			[completeSearchURL appendString: @"#"];
+			Client.OpenURL (url, MethodEnum.POST);
 //
 		}
 
@@ -51,21 +34,45 @@ namespace WhitePaperBible.Core.Services
 
 		protected override void HandleSuccess (object sender, EventArgs args)
 		{
-//			var user = ParseResponse<UserDTO> ();
-			DispatchSuccess (null);
+			var payload = ParseResponse<RegistrationPayload> ();
+			AM.UserSessionCookie = Client.UserSessionCookie;
+
+			DispatchSuccess (new UserProfileCreatedEventArgs (payload));
+			
 		}
 
 		#endregion
 	}
 
-//	public class GetUserProfileEventArgs:EventArgs
-//	{
-//		public readonly AppUser User;
-//
-//		public GetUserProfileEventArgs (AppUser user)
-//		{
-//			User = user;
-//		}
-//	}
+	public class UserProfileCreatedEventArgs:EventArgs
+	{
+		public bool Success {
+			get;
+			set;
+		}
+
+		public readonly AppUser User;
+
+		public readonly string[] Messages;
+
+		public UserProfileCreatedEventArgs (RegistrationPayload payload)
+		{
+			Success = payload.Success;
+			Messages = payload.Messages;
+			if (Success && payload.User != null) {
+				User = payload.User.User;
+			}
+
+		}
+	}
+
+	public class RegistrationPayload
+	{
+		public Boolean Success;
+
+		public string[] Messages;
+
+		public UserDTO User;
+	}
 }
 

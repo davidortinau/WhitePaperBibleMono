@@ -13,6 +13,7 @@ using MonkeyArms;
 using RestSharp;
 using WhitePaperBible.Core.Views;
 using MonoTouch.Social;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -81,6 +82,8 @@ namespace WhitePaperBible.iOS
 			tapRecognizer.Delegate = new GestureDelegate ();
 			
 			webView.AddGestureRecognizer (tapRecognizer);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public void DismissController()

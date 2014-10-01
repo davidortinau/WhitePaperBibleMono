@@ -9,6 +9,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Views;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Enums;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -41,6 +42,8 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 
 			Title = "Bible Search";
+
+			AnalyticsUtil.TrackScreen (this.Title);
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 			CreateView ();

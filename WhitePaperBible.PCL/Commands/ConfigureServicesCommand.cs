@@ -20,6 +20,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<SavePaperService, ISavePaperService> ();
 			DI.MapClassToInterface<SaveReferenceService, ISaveReferenceService> ();
 			DI.MapClassToInterface<DeletePaperService, IDeletePaperService> ();
+			DI.MapClassToInterface<RegisterUserService, IRegisterUserService> ();
 		}
 	}
 }

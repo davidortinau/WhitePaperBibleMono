@@ -13,6 +13,7 @@ using MonoTouch.SystemConfiguration;
 using WhitePaperBible.Core.Utilities;
 //using Segment;
 using Xamarin;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -97,7 +98,9 @@ namespace WhitePaperBible.iOS
 			
 			window.RootViewController = tabBarController;
 			window.MakeKeyAndVisible ();
-			
+
+			AnalyticsUtil.TrackEvent ("App", "Launched", "");
+
 			return true;
 		}
 

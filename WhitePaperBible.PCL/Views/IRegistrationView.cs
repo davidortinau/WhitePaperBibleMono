@@ -7,6 +7,8 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IRegistrationView : IMediatorTarget
 	{
+		void DismissView ();
+
 		Invoker Register { get; }
 		void DisplayError (string msg);
 	}

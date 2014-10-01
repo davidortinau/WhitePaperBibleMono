@@ -4,6 +4,7 @@ using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -44,6 +45,8 @@ namespace WhitePaperBible.iOS
 				tagsView.ReturnTags();
 				this.ParentViewController.NavigationController.PopViewControllerAnimated(true);
 			};
+
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewDidLayoutSubviews()

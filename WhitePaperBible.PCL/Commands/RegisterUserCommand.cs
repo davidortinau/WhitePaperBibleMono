@@ -17,24 +17,49 @@ namespace WhitePaperBible.Core.Commands
 		public AppModel AM;
 
 		[Inject]
-		public ISaveUserProfileService Service;
+		public IRegisterUserService Service;
 
 		[Inject]
-		public UserProfileSavedInvoker Saved;
+		public UserRegisteredInvoker Registered;
+
+		[Inject]
+		public RegistrationFaultInvoker FaultInvoker;
+
+		[Inject]
+		public LoggedInInvoker LoggedIn;
 
 		AppUser user;
 
 		public override void Execute (InvokerArgs args)
 		{
-			user = ((SaveUserInvokerArgs)args).User;
+			user = ((RegisterUserInvokerArgs)args).User;
 			Service.Success += onSuccess;
 			Service.Execute (user);
 		}
 
 		void onSuccess (object sender, EventArgs args)
 		{
-			AM.User.Update (user);
-			Saved.Invoke ();
+			var a = (UserProfileCreatedEventArgs)args;
+			if (a.Success) {
+				AppUser newUser = a.User;
+				AM.User = newUser;
+
+				// IF user has favorites, but is NOW registered, save those favorites
+				if (AM.Favorites != null && AM.Favorites.Count > 0) {
+					foreach (var f in AM.Favorites) {
+						var toggleFavorite = DI.Get<ToggleFavoriteInvoker> ();
+						var toggleArgs = new ToggleFavoriteInvokerArgs (f, true);
+						toggleFavorite.Invoke (toggleArgs);
+					}
+				}
+
+				Registered.Invoke ();
+				AM.IsLoggedIn = true;
+				LoggedIn.Invoke ();
+			}else{
+				var fa = new FaultInvokerArgs (a.Messages);
+				FaultInvoker.Invoke (fa);
+			}
 		}
 	}
 }
