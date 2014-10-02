@@ -151,6 +151,7 @@ namespace WhitePaperBible.iOS
 		protected void CreateLoginRequiredView ()
 		{
 			LoginRequiredView = new LoginRequiredController ();
+			LoginRequiredView.View.Frame = this.View.Frame;
 			View.AddSubview (LoginRequiredView.View);
 			View.BringSubviewToFront (LoginRequiredView.View);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();

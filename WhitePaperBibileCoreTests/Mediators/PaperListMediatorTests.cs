@@ -81,8 +81,8 @@ namespace WhitePaperBibileCoreTests
 		void CreateViewMock ()
 		{
 			MockView = new Mock<IPapersListView> ();
-			StubViewFilterInvoker ();
-			StubViewOnPaperSelectedInvoker ();
+//			StubViewFilterInvoker ();
+//			StubViewOnPaperSelectedInvoker ();
 			StubViewSelectedPaper ();
 			MockView.SetupGet (view => view.SearchQuery).Returns (TestQuery);
 
@@ -110,17 +110,17 @@ namespace WhitePaperBibileCoreTests
 			TestMediator.PapersReceived = MockPapersReceived.Object;
 		}
 
-		void StubViewFilterInvoker ()
-		{
-			FilterInvoker = new Invoker ();
-			MockView.SetupGet (view => view.Filter).Returns (FilterInvoker);
-		}
+//		void StubViewFilterInvoker ()
+//		{
+//			FilterInvoker = new Invoker ();
+//			MockView.SetupGet (view => view.Filter).Returns (FilterInvoker);
+//		}
 
-		void StubViewOnPaperSelectedInvoker ()
-		{
-			OnPaperSelectedInvoker = new Invoker ();
-			MockView.SetupGet (view => view.OnPaperSelected).Returns (OnPaperSelectedInvoker);
-		}
+//		void StubViewOnPaperSelectedInvoker ()
+//		{
+//			OnPaperSelectedInvoker = new Invoker ();
+//			MockView.SetupGet (view => view.OnPaperSelected).Returns (OnPaperSelectedInvoker);
+//		}
 
 		void StubViewSelectedPaper ()
 		{

@@ -56,6 +56,7 @@ namespace WhitePaperBible.iOS
 		protected void CreateLoginRequiredView ()
 		{
 			LoginRequiredView = new LoginRequiredController (false);
+			LoginRequiredView.View.Frame = this.View.Frame;
 //			LoginRequiredView.View.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
 
 			View.AddSubview (LoginRequiredView.View);

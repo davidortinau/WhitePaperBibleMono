@@ -41,9 +41,17 @@
                 <constraint firstItem="X2o-df-9EO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7f1-db-sZp"/>
                 <constraint firstAttribute="trailing" secondItem="Dea-Rg-xU4" secondAttribute="trailing" id="JWC-31-Vkv"/>
                 <constraint firstItem="X2o-df-9EO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="KCy-jc-n9D"/>
+                <constraint firstAttribute="trailing" secondItem="X2o-df-9EO" secondAttribute="trailing" id="MaV-Mt-BjJ"/>
+                <constraint firstAttribute="trailing" secondItem="Dea-Rg-xU4" secondAttribute="trailing" id="TpT-LD-ibb"/>
+                <constraint firstAttribute="trailing" secondItem="ggx-yz-Ecx" secondAttribute="trailing" id="V4J-mj-H5h"/>
                 <constraint firstAttribute="trailing" secondItem="ggx-yz-Ecx" secondAttribute="trailing" id="ZgV-4X-kB2"/>
+                <constraint firstItem="X2o-df-9EO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cBl-hp-J6v"/>
+                <constraint firstItem="Dea-Rg-xU4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eng-YX-ogo"/>
                 <constraint firstAttribute="trailing" secondItem="X2o-df-9EO" secondAttribute="trailing" id="fnQ-1S-KNe"/>
+                <constraint firstItem="ggx-yz-Ecx" firstAttribute="top" secondItem="X2o-df-9EO" secondAttribute="bottom" constant="15" id="hCB-f2-BMe"/>
+                <constraint firstItem="ggx-yz-Ecx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iQw-Zj-YeI"/>
                 <constraint firstItem="ggx-yz-Ecx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mN2-IU-SqU"/>
+                <constraint firstItem="Dea-Rg-xU4" firstAttribute="top" secondItem="ggx-yz-Ecx" secondAttribute="bottom" constant="15" id="mUe-t9-eLw"/>
                 <constraint firstItem="Dea-Rg-xU4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nXT-KW-PMn"/>
             </constraints>
         </view>

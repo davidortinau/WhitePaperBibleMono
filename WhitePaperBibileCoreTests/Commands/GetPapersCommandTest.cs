@@ -54,7 +54,7 @@ namespace WhitePaperBibileCoreTests
 
 			MockGetPapersService
 				.Setup (service => service.Execute ())
-				.Raises (service => service.Success += null, new GetPapersServiceEventArgs (TestData.PaperNodeList));
+				.Raises (service => service.Success += null, new GetPapersServiceEventArgs (TestData.PaperNodeList, null));
 		}
 	}
 }
