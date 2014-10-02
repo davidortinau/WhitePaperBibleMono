@@ -1,5 +1,5 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.David's iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="App Store|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
   <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs">
     <Files>
       <File FileName="WhitePaperBible.PCL/Services/SaveReferenceService.cs" Line="1" Column="1" />
@@ -100,14 +100,14 @@
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="WhitePaperBible.iOS" expanded="True" selected="True">
-            <Node name="Images" expanded="True" />
-          </Node>
-          <Node name="WhitePaperBible.PCL" expanded="True">
-            <Node name="Commands" expanded="True" />
-            <Node name="Mediators" expanded="True" />
-            <Node name="Models" expanded="True" />
-            <Node name="Services" expanded="True" />
-            <Node name="Views" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="Images.xcassets" expanded="True">
+                <Node name="LaunchImage.launchimage" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Views" expanded="True">
+              <Node name="iPhone" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

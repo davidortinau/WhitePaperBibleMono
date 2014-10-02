@@ -8,7 +8,6 @@
     <ProjectGuid>{46DE30A6-9B97-42A4-A58C-891EE72D1A93}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>WhitePaperBibileCoreTests</RootNamespace>
-    <AssemblyName>WhitePaperBibileCoreTests</AssemblyName>
     <UseMSBuildEngine>False</UseMSBuildEngine>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -21,6 +20,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AssemblyName>WhitePaperBibileCoreTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -29,6 +30,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AssemblyName>WhitePaperBibileCoreTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\App Store</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>WhitePaperBibile.PCL.Tests</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

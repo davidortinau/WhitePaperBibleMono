@@ -61,6 +61,17 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\App Store</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -279,7 +290,6 @@
     <BundleResource Include="Images\headphones%402x.png" />
     <BundleResource Include="Images\heaphones_24x21.png" />
     <BundleResource Include="Images\icon.png" />
-    <BundleResource Include="Images\icon%402x.png" />
     <BundleResource Include="Images\icon_120.png" />
     <BundleResource Include="Images\icon_144.png" />
     <BundleResource Include="Images\icon_152.png" />
@@ -321,9 +331,6 @@
     <BundleResource Include="Images\Launch-568h%402x.png" />
     <BundleResource Include="Images\Launch.png" />
     <BundleResource Include="Images\Launch%402x.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\WPB Terms and Conditions.txt" />
     <BundleResource Include="Resources\my_papers.png" />
     <BundleResource Include="Resources\my_papers%402x.png" />
@@ -335,16 +342,30 @@
     <BundleResource Include="Images\icon%401x.png" />
     <BundleResource Include="Images\icon%403x.png" />
     <BundleResource Include="Images\icon_180.png" />
-    <BundleResource Include="Images\icon_114.png" />
     <BundleResource Include="Images\icon_512.png" />
-    <BundleResource Include="Images\icon_57.png" />
     <BundleResource Include="Images\Launch_320.png" />
     <BundleResource Include="Images\Launch_640.png" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch6%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch_640.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork%402x" />

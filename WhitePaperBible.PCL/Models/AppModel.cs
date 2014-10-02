@@ -62,6 +62,11 @@ namespace WhitePaperBible.Core.Models
 			return Tags.Where (ce => (ce.name.ToLower ().Contains (query))).ToList ();
 		}
 
+		public virtual Paper GetPaperById(int id)
+		{
+			return Papers.Where (p => (p.id.Equals (id))).Single<Paper> ();
+		}
+
 		public AppModel ()
 		{
 			IsLoggedIn = false;

@@ -15,11 +15,11 @@ namespace WhitePaperBible.iOS
 {
 	public partial class BibleSearchView : UIViewController, IMediatorTarget, IBibleSearchView
 	{
-		public UISearchBar SearchBar;
+//		public UISearchBar SearchBar;
 
 		BibleSearchResults ResultsTable;
 
-		UIView containerView;
+//		UIView containerView;
 
 		public Invoker DoSearch {
 			get;
@@ -53,11 +53,11 @@ namespace WhitePaperBible.iOS
 
 		void CreateView ()
 		{
-			SearchBar = new UISearchBar (new RectangleF (0, 64, View.Bounds.Width, 90));
-			SearchBar.ShowsScopeBar = true;
-			SearchBar.Placeholder = @"John 3:16";
-			SearchBar.ScopeButtonTitles = new string[]{"Reference", "Keyword", "Phrase"};
-			View.AddSubview (SearchBar);
+//			SearchBar = new UISearchBar (new RectangleF (0, 64, View.Bounds.Width, 90));
+//			SearchBar.ShowsScopeBar = true;
+//			SearchBar.Placeholder = @"John 3:16";
+//			SearchBar.ScopeButtonTitles = new string[]{"Reference", "Keyword", "Phrase"};
+//			View.AddSubview (SearchBar);
 
 			SearchBar.SelectedScopeButtonIndexChanged += (object sender, UISearchBarButtonIndexEventArgs e) => {
 				if(e.SelectedScope == 0){
@@ -88,6 +88,8 @@ namespace WhitePaperBible.iOS
 			if(ResultsTable != null){
 				DI.RequestMediator (ResultsTable);
 			}
+
+			UpdateTopConstraint ();
 
 //			if(!isComingFromAddingAPaper){
 //				[HRRestModel setDelegate:self];
@@ -124,37 +126,42 @@ namespace WhitePaperBible.iOS
 
 			if (ResultsTable == null) {
 				ResultsTable = new BibleSearchResults ();
-
-				containerView = new UIView (new RectangleF (0, 90 + 64, View.Bounds.Width, View.Bounds.Height - 90));
-				containerView.AddSubview (ResultsTable.TableView);
-				View.AddSubview (containerView);
+				ResultsContainer.AddSubview (ResultsTable.TableView);
 			}
 		}
 
 		public override void DidRotate (UIInterfaceOrientation fromInterfaceOrientation)
 		{
-			Resize (fromInterfaceOrientation);
+			UpdateTopConstraint ();
+//			Resize (fromInterfaceOrientation);
 			base.DidRotate (fromInterfaceOrientation);
 		}
 
-		void Resize (UIInterfaceOrientation fromInterfaceOrientation)
+		void UpdateTopConstraint ()
 		{
-//			if(LoginRequiredView != null){
-//				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
-//			}
-			var top = 64;
-			if(fromInterfaceOrientation == UIInterfaceOrientation.Portrait || fromInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown){
-				top = 32;
-			}
-
-			if(containerView != null){
-				containerView.Frame = new RectangleF (0, 90 + top, View.Bounds.Width, View.Bounds.Height - 90);
-			}
-
-			if(SearchBar != null){
-				SearchBar.Frame = new RectangleF (0, top, View.Bounds.Width, 90);
+			if(this.TopConstraint != null){
+				this.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
 			}
 		}
+
+//		void Resize (UIInterfaceOrientation fromInterfaceOrientation)
+//		{
+////			if(LoginRequiredView != null){
+////				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+////			}
+//			var top = 64;
+//			if(fromInterfaceOrientation == UIInterfaceOrientation.Portrait || fromInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown){
+//				top = 32;
+//			}
+//
+//			if(containerView != null){
+//				containerView.Frame = new RectangleF (0, 90 + top, View.Bounds.Width, View.Bounds.Height - (top + 90));
+//			}
+//
+//			if(SearchBar != null){
+//				SearchBar.Frame = new RectangleF (0, top, View.Bounds.Width, 90);
+//			}
+//		}
 	}
 }
 

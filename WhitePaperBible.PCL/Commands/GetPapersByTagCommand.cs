@@ -11,8 +11,10 @@ namespace WhitePaperBible.Core.Commands
 	{
 		[Inject]
 		public AppModel AM;
+
 		[Inject]
 		public IGetPapersByTagService Service;
+
 		[Inject]
 		public PapersByTagReceivedInvoker PapersReceived;
 
@@ -26,7 +28,10 @@ namespace WhitePaperBible.Core.Commands
 		{
 			var papers = new List<Paper> ();
 			foreach (var node in ((GetPapersByTagServiceEventArgs)args).Papers) {
-				papers.Add (node.paper);
+				Paper p = AM.GetPaperById (node.paper.id);
+				if (p != null) {
+					papers.Add (p);
+				}
 			}
 
 			PapersReceived.Invoke (new PapersReceivedInvokerArgs(papers));
