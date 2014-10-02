@@ -247,7 +247,6 @@
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Icon%402x.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
     <BundleResource Include="Resources\Icon-72.png" />
     <BundleResource Include="Resources\Icon-72%402x.png" />
@@ -330,5 +329,25 @@
     <BundleResource Include="Resources\my_papers%402x.png" />
     <BundleResource Include="Resources\plus_alt.png" />
     <BundleResource Include="Resources\plus_alt%402x.png" />
+    <BundleResource Include="Images\Launch%403x.png" />
+    <BundleResource Include="Images\Launch6%402x.png" />
+    <BundleResource Include="Images\icon_1024.png" />
+    <BundleResource Include="Images\icon%401x.png" />
+    <BundleResource Include="Images\icon%403x.png" />
+    <BundleResource Include="Images\icon_180.png" />
+    <BundleResource Include="Images\icon_114.png" />
+    <BundleResource Include="Images\icon_512.png" />
+    <BundleResource Include="Images\icon_57.png" />
+    <BundleResource Include="Images\Launch_320.png" />
+    <BundleResource Include="Images\Launch_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
 </Project>

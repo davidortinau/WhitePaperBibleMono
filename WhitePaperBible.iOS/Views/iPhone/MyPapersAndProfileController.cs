@@ -28,8 +28,8 @@ namespace WhitePaperBible.iOS
 		{
 			if (LoginRequiredView == null) {
 				CreateLoginRequiredView ();
-				LoginRequiredView.View.Hidden = false;
 			}
+			LoginRequiredView.View.Hidden = false;
 		}
 
 		public void ShowLoginForm ()
@@ -77,12 +77,7 @@ namespace WhitePaperBible.iOS
 
 			Logout = new Invoker ();
 		
-			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
-					Logout.Invoke();
-				})
-				, true
-			);
+
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -98,6 +93,12 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 						
 			// Perform any additional setup after loading the view, typically from a nib.
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Logout", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					Logout.Invoke();
+				})
+				, true
+			);
 
 		}
 

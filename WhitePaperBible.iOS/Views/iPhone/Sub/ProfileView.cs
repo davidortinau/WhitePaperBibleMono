@@ -52,14 +52,14 @@ namespace WhitePaperBible.iOS
 			AddSubview (Avatar);
 
 			// name label
-			NameTxt = new UILabel (new RectangleF (90, 20, 300, 30));
+			NameTxt = new UILabel (new RectangleF (15, 20, 300, 30));//90
 			NameTxt.Text = "";
 			AddSubview (NameTxt);
 
 			// edit button
 			EditBtn = new UIButton (UIButtonType.RoundedRect);
 			EditBtn.SetTitle ("Edit Profile", UIControlState.Normal);
-			EditBtn.Frame = new RectangleF (90, 50, 200, 30);
+			EditBtn.Frame = new RectangleF (15, 50, 200, 30);//90
 			EditBtn.BackgroundColor = UIColor.Clear;
 			EditBtn.SetTitleColor (UIColor.DarkGray, UIControlState.Normal); 
 			EditBtn.Font = UIFont.FromName ("Helvetica", 12);
@@ -81,7 +81,7 @@ namespace WhitePaperBible.iOS
 			var hashString = string.Join ("", hash.Select (x => x.ToString ("x2")));
 			var imgUrl = String.Format ("http://gravatar.com/avatar/{0}.png?s=60&r=PG", hashString);
 			Console.WriteLine ("Avatar URL: {0}", imgUrl);
-			Avatar.Image = await LoadImage (imgUrl);
+//			Avatar.Image = await LoadImage (imgUrl);  TODO figure out why this isn't working
 
 		}
 

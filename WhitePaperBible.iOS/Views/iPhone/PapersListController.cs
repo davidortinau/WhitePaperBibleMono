@@ -27,9 +27,6 @@ namespace WhitePaperBible.iOS
 			: base (UserInterfaceIdiomIsPhone ? "PapersListController_iPhone" : "PapersListController_iPad", null)
 		{
 			this.Title = "Papers";
-
-//			this.Filter = new Invoker ();
-//			this.OnPaperSelected = new Invoker ();
 			this.AddPaper = new Invoker ();
 		}
 
@@ -45,22 +42,17 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 			
-			// Perform any additional setup after loading the view, typically from a nib.
 			AddDialog ();
 			AnalyticsUtil.TrackScreen (this.Title);
 
 			NavigationItem.SetRightBarButtonItem (
-				new UIBarButtonItem ("Add Paper", UIBarButtonItemStyle.Plain, (sender, args)=> {
+				new UIBarButtonItem (UIBarButtonSystemItem.Compose, (sender, args)=> {
 					AddPaper.Invoke();
 				})
 				, true
 			);
 
 			UpdateTopConstraint ();
-
-//			if (![self respondsToSelector:@selector(topLayoutGuide)]) {
-//				self.topConstraint.constant = self.topConstraint.constant - 64;
-//			} 
 		}
 
 		void UpdateTopConstraint ()
@@ -90,35 +82,13 @@ namespace WhitePaperBible.iOS
 		void AddDialog ()
 		{
 			papersList = new PapersView (this.NavigationController);
-//			papersList.Filter.Invoked += OnFilterInvoked;
-//			papersList.OnPaperSelected.Invoked += HandlePaperSelected;
 			ListContainer.AddSubview (papersList.TableView);
 		}
-
-//		void OnFilterInvoked (object sender, EventArgs e)
-//		{
-//			throw new NotImplementedException ();
-//		}
-
-//		void HandlePaperSelected (object sender, EventArgs e)
-//		{
-//			throw new NotImplementedException ();
-//		}
 
 		public void SetPapers (List<Paper> papers)
 		{
 			papersList.SetPapers (papers);
 		}
-
-//		public Invoker Filter {
-//			get;
-//			private set;
-//		}
-//
-//		public Invoker OnPaperSelected {
-//			get;
-//			private set;
-//		}
 
 		public Invoker AddPaper {
 			get;
@@ -163,8 +133,8 @@ namespace WhitePaperBible.iOS
 		{
 			if (LoginRequiredView == null) {
 				CreateLoginRequiredView ();
-				LoginRequiredView.View.Hidden = false;
 			}
+			LoginRequiredView.View.Hidden = false;
 		}
 
 		public void ShowLoginForm ()
@@ -172,6 +142,7 @@ namespace WhitePaperBible.iOS
 			var loginView = new LoginViewController ();
 			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
 				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
+				DismissLoginPrompt();
 			};
 
 			this.PresentViewController (loginView, true, null);

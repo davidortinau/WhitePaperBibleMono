@@ -19,13 +19,13 @@
 	<string>2.0</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>Images/icon</string>
-		<string>Icon@2x</string>
-		<string>Icon-60@2x</string>
+		<string>Images/icon@2x</string>
 		<string>Icon-72</string>
 		<string>Icon-72@2x</string>
 		<string>Icon-76</string>
 		<string>Icon-76@2x</string>
+		<string>Images/icon_114</string>
+		<string>Images/icon_57</string>
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
