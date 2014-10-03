@@ -6,8 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PapersListController">
             <connections>
-                <outlet property="ListContainer" destination="dNg-uC-4t9" id="LeI-qY-lc6"/>
-                <outlet property="ListTopConstraint" destination="TWp-v2-MUX" id="9KU-Xm-6CR"/>
+                <outlet property="ListContainer" destination="7Sg-F1-WQ9" id="5zm-gf-nI4"/>
+                <outlet property="TopConstraint" destination="HIE-Wc-b3U" id="vRm-lX-xDp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
             </connections>
         </placeholder>
@@ -16,19 +16,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNg-uC-4t9">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sg-F1-WQ9">
                     <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="dNg-uC-4t9" secondAttribute="trailing" id="NgF-TF-rxC"/>
-                <constraint firstItem="dNg-uC-4t9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="TWp-v2-MUX"/>
-                <constraint firstItem="dNg-uC-4t9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eal-OS-awW"/>
-                <constraint firstAttribute="bottom" secondItem="dNg-uC-4t9" secondAttribute="bottom" id="vdy-Nu-VXT"/>
+                <constraint firstItem="7Sg-F1-WQ9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="HIE-Wc-b3U"/>
+                <constraint firstAttribute="trailing" secondItem="7Sg-F1-WQ9" secondAttribute="trailing" id="IYE-XH-FHU"/>
+                <constraint firstItem="7Sg-F1-WQ9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bVa-fX-IMo"/>
+                <constraint firstAttribute="bottom" secondItem="7Sg-F1-WQ9" secondAttribute="bottom" id="kwW-Ha-lsy"/>
             </constraints>
-            <point key="canvasLocation" x="305" y="447"/>
+            <point key="canvasLocation" x="305" y="227"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

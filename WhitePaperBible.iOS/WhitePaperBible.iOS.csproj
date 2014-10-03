@@ -209,7 +209,6 @@
     <InterfaceDefinition Include="Views\iPhone\LoginViewController.xib" />
     <InterfaceDefinition Include="Views\iPhone\LoginRequiredController.xib" />
     <InterfaceDefinition Include="Views\iPhone\PapersListController_iPhone.xib" />
-    <InterfaceDefinition Include="Views\iPhone\PapersListController_iPad.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />

@@ -16,10 +16,7 @@ namespace WhitePaperBible.iOS
 		MonoTouch.UIKit.UIView ListContainer { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.NSLayoutConstraint ListTopConstraint { get; set; }
-
-		[Outlet]
-		MonoTouch.UIKit.UIView LoginRequired { get; set; }
+		MonoTouch.UIKit.NSLayoutConstraint TopConstraint { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,14 +25,9 @@ namespace WhitePaperBible.iOS
 				ListContainer = null;
 			}
 
-			if (LoginRequired != null) {
-				LoginRequired.Dispose ();
-				LoginRequired = null;
-			}
-
-			if (ListTopConstraint != null) {
-				ListTopConstraint.Dispose ();
-				ListTopConstraint = null;
+			if (TopConstraint != null) {
+				TopConstraint.Dispose ();
+				TopConstraint = null;
 			}
 		}
 	}

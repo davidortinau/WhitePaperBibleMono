@@ -19,12 +19,7 @@ namespace WhitePaperBible.iOS
 
 		LoginRequiredController LoginRequiredView;
 
-		static bool UserInterfaceIdiomIsPhone {
-			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-		}
-
-		public PapersListController ()
-			: base (UserInterfaceIdiomIsPhone ? "PapersListController_iPhone" : "PapersListController_iPad", null)
+		public PapersListController () : base ("PapersListController_iPhone", null)
 		{
 			this.Title = "Papers";
 			this.AddPaper = new Invoker ();
@@ -41,8 +36,7 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			AddDialog ();
+
 			AnalyticsUtil.TrackScreen (this.Title);
 
 			NavigationItem.SetRightBarButtonItem (
@@ -55,13 +49,22 @@ namespace WhitePaperBible.iOS
 			UpdateTopConstraint ();
 		}
 
+		public override void ViewDidLayoutSubviews()
+		{
+			base.ViewDidLayoutSubviews ();
+
+			if (papersList == null) {
+				AddDialog ();
+			}
+		}
+
 		void UpdateTopConstraint ()
 		{
-			if(this.ListTopConstraint != null){
-				this.ListTopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
+			if(this.TopConstraint != null){
+				this.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
 
 				if(LoginRequiredView != null){
-					LoginRequiredView.TopConstraint.Constant = this.ListTopConstraint.Constant;
+					LoginRequiredView.TopConstraint.Constant = this.TopConstraint.Constant;
 				}
 			}
 		}
@@ -107,7 +110,9 @@ namespace WhitePaperBible.iOS
 				return papersList.SearchPlaceHolderText;
 			}
 			set {
-				papersList.SearchPlaceHolderText = value;
+				if (papersList != null) {
+					papersList.SearchPlaceHolderText = value;
+				}
 			}
 		}
 
