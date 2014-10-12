@@ -26,6 +26,8 @@ namespace WhitePaperBible.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::WhitePaperBible.Android.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::WhitePaperBible.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -179,10 +181,10 @@ namespace WhitePaperBible.Android
 		{
 			
 			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			public const int ApplicationName = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int Hello = 2130968576;
 			
 			static String()
 			{

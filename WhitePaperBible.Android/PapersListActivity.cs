@@ -33,9 +33,8 @@ namespace WhitePaperBible.Android
 		}
 
 		public Invoker AddPaper {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
+			private set;
 		}
 
 		[Inject]
@@ -65,6 +64,8 @@ namespace WhitePaperBible.Android
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
+			AddPaper = new Invoker ();
 
 			// Activate the action bar and display it in navigation mode.
 			RequestWindowFeature(WindowFeatures.ActionBar);

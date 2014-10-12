@@ -47,6 +47,12 @@
     <Reference Include="RestSharp.MonoDroid">
       <HintPath>..\Components\restsharp-104.4.0.1\lib\android\RestSharp.MonoDroid.dll</HintPath>
     </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.0.9.6\lib\monoandroid\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.0.9.6\lib\monoandroid\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -63,6 +69,7 @@
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

@@ -1,19 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Services/WebClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs">
     <Files>
-      <File FileName="WhitePaperBible.Android/MainApplication.cs" Line="58" Column="58" />
-      <File FileName="WhitePaperBible.Android/Services/WebClient.cs" Line="4" Column="4" />
+      <File FileName="WhitePaperBible.Android/MainApplication.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Services/WebClient.cs" Line="1" Column="1" />
       <File FileName="../../../../work/rendr/TheresaNeilLLS/TNT Training App/TNTTrainerMobile/TNTTrainerAndroid/Delegates/TNTWebClient.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/PapersAdapter.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/PapersListActivity.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/PapersListActivity.cs" Line="30" Column="30" />
       <File FileName="WhitePaperBible.PCL/Services/GetTagsService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/SaveStorageCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Helpers/HtmlToText.cs" Line="1" Column="1" />
-      <File FileName="WPB_Android/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="WPB_Android/Services/WebClient.cs" Line="1" Column="1" />
-      <File FileName="WPB_Android/LoadingView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/AuthenticateUserService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/BibleSearchService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetFavoritesService.cs" Line="1" Column="1" />
@@ -28,24 +25,25 @@
       <File FileName="WhitePaperBible.PCL/Services/IJSONWebClient.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/DeletePaperService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="WhitePaperBible.Android/MainActivity.cs" Line="3" Column="3" />
+      <File FileName="WhitePaperBible.PCL/Views/ILoadingView.cs" Line="29" Column="29" />
+      <File FileName="WhitePaperBible.PCL/Mediators/LoadingViewMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="26" Column="26" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs" Line="3" Column="3" />
+      <File FileName="WhitePaperBible.PCL/Commands/ConfigureCommandsCommand.cs" Line="45" Column="45" />
+      <File FileName="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" Line="4" Column="4" />
+      <File FileName="WhitePaperBible.PCL/MonkeyArms/Invoker.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/WhitePaperBible.PCL.csproj" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="WhitePaperBible.Android" expanded="True" selected="True">
-            <Node name="References" expanded="True" />
-            <Node name="Services" expanded="True" />
-          </Node>
-          <Node name="WhitePaperBible.iOS" expanded="True">
-            <Node name="Services" expanded="True" />
-          </Node>
+          <Node name="WhitePaperBible.Android" expanded="True" selected="True" />
           <Node name="WhitePaperBible.PCL" expanded="True">
-            <Node name="Services" expanded="True" />
-          </Node>
-          <Node name="WPB_Android" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="Services" expanded="True" />
+            <Node name="Commands" expanded="True" />
+            <Node name="MonkeyArms" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -60,10 +58,14 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/PaperTagsViewContainer.cs" line="44" column="14" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Services/GetTagsService.cs" line="17" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="44" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="55" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="29" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="29" offsetX="698" offsetY="560" expression="FileSystem.Current.LocalStorage" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android MonoForAntroid.PreferredDevice="Nexus 4" />
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS>
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="39RD98DP2Z" TeamId="NYHGX6KCDG" />
