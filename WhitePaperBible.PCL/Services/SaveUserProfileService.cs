@@ -19,9 +19,6 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (AppUser user)
 		{
-			var cookieJar = new CookieContainer ();
-			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-
 			var url = Constants.BASE_URI + String.Format ("users/update/{0}?caller=wpb-iPhone", Uri.EscapeDataString(AM.User.username));
 			url += String.Format ("&user[name]={0}&user[website]={1}&user[bio]={2}&user[email]={3}&user[username]={4}", user.Name, user.Website, user.Bio, Uri.EscapeDataString(user.Email), Uri.EscapeDataString(user.username));
 			if(user.password.Length > 0){
@@ -29,7 +26,7 @@ namespace WhitePaperBible.Core.Services
 			}
 			url += String.Format ("&user_id={0}#", AM.User.ID);
 
-			Client.OpenURL (url, MethodEnum.GET, cookieJar);
+			Client.OpenURL (url, MethodEnum.GET, true);
 		}
 
 		#region implemented abstract members of BaseService

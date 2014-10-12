@@ -1,119 +1,51 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6Plus.8.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Services/WebClient.cs">
     <Files>
-      <File FileName="WhitePaperBible.PCL/Services/SaveReferenceService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="16" Column="16" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/SimpleMultilineEntryElement.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/PlaceholderTextView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/EditProfileView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetPapersService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/EditPaperViewMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/SavePaperCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/SavePaperService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Constants.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/AppModel.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/RefreshPapersInvoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureInvokersCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/PaperSavedInvoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/DeletePaperInvoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/DeletePaperCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/DeletePaperService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureServicesCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureCommandsCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Reference.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IPapersListView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/MyPapersAndProfileMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBibileCoreTests/Mediators/PaperDetailsMediatorTest.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IPaperTagsView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PaperTagsViewMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersAndProfileController.cs" Line="3" Column="3" />
-      <File FileName="WhitePaperBible.PCL/Invokers/SaveTagsInvokerArgs.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperElement.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/PaperHistoryNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/History.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetPapersCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/MyPapersMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/Sub/BibleSearchResults.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PaperDetailMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IPaperDetailView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Main.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/VerseEntryElement.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Utils/Reachability.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/LoginView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/AppStyles.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/Sub/LoginRequiredView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/RegistrationView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IRegistrationView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/TermsAndConditionsView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Utilities/RegexUtilities.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/RegistrationViewMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/SaveUserInvokerArgs.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/UserRegisteredInvoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/RegisterUserInvokerArgs.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Utilities/NetworkUtil.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureModelsCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureViewsCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/MainApplication.cs" Line="58" Column="58" />
+      <File FileName="WhitePaperBible.Android/Services/WebClient.cs" Line="4" Column="4" />
+      <File FileName="../../../../work/rendr/TheresaNeilLLS/TNT Training App/TNTTrainerMobile/TNTTrainerAndroid/Delegates/TNTWebClient.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/PapersAdapter.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/PapersListActivity.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/GetTagsService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetPaperDetailsCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/LogoutCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/RegisterUserCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/EditProfileViewMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/RegisterUserInvoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/RegisterUserService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/Invoker.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/SaveStorageCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Invokers/SaveStorageInvoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetUserProfileCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Managers/ResourceManager.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Resources/Strings.xml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.designer.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/SaveFavoriteCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Utils/AnalyticsUtil.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/LoginMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/ProfileViewMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetUserProfileService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Helpers/HtmlToText.cs" Line="1" Column="1" />
+      <File FileName="WPB_Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="WPB_Android/Services/WebClient.cs" Line="1" Column="1" />
+      <File FileName="WPB_Android/LoadingView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/AuthenticateUserService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/ILoginView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/Sub/ProfileView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IFavoritesView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/BibleSearchView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/EditPaperView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs" Line="6" Column="6" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/LoginRequiredController.cs" Line="33" Column="33" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="37" Column="37" />
+      <File FileName="WhitePaperBible.PCL/Services/BibleSearchService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/GetFavoritesService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/GetMyPapersService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/GetPaperReferencesService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/GetUserProfileService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/RegisterUserService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/SaveFavoriteService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/SavePaperService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/SaveReferenceService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/SaveUserProfileService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/IJSONWebClient.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/DeletePaperService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="WhitePaperBible.iOS" expanded="True" selected="True">
-            <Node name="Resources" expanded="True">
-              <Node name="Images.xcassets" expanded="True">
-                <Node name="LaunchImage.launchimage" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Views" expanded="True">
-              <Node name="iPhone" expanded="True">
-                <Node name="PapersListController.cs" expanded="True" />
-              </Node>
-            </Node>
+          <Node name="WhitePaperBible.Android" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
+            <Node name="Services" expanded="True" />
+          </Node>
+          <Node name="WhitePaperBible.iOS" expanded="True">
+            <Node name="Services" expanded="True" />
           </Node>
           <Node name="WhitePaperBible.PCL" expanded="True">
-            <Node name="Mediators" expanded="True" />
+            <Node name="Services" expanded="True" />
+          </Node>
+          <Node name="WPB_Android" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Services" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -128,10 +60,13 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/PaperTagsViewContainer.cs" line="44" column="14" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Services/GetTagsService.cs" line="17" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android MonoForAntroid.PreferredDevice="Nexus 4" />
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS>
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="39RD98DP2Z" TeamId="NYHGX6KCDG" />
+    <IPhoneZipBundleSettings CurrentFolder="/Users/dave/Desktop" />
   </MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS>
 </Properties>

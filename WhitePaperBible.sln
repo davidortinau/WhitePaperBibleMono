@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBibile.PCL.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.PCL", "WhitePaperBible.PCL\WhitePaperBible.PCL.csproj", "{75317DE9-E9AA-40ED-A17D-273B3EEAF998}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Android", "WhitePaperBible.Android\WhitePaperBible.Android.csproj", "{2F9B2989-48BC-4219-BFE0-8DCC3E645591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,20 @@ Global
 		{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}.Release|iPhone.Build.0 = Release|iPhone
 		{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{021B3B0C-C57A-4207-8AEA-FC59B4E5F9CC}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.App Store|iPhone.ActiveCfg = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.App Store|iPhone.Build.0 = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Release|iPhone.Build.0 = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{2F9B2989-48BC-4219-BFE0-8DCC3E645591}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.App Store|iPhone.ActiveCfg = App Store|iPhone
 		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.App Store|iPhone.Build.0 = App Store|iPhone
 		{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
@@ -78,6 +94,18 @@ Global
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = WhitePaperBible.iOS\WhitePaperBible.iOS.csproj
+		StartupItem = WhitePaperBible.Android\WhitePaperBible.Android.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = Flat
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.AfterDelegateDeclarationParameterComma = True
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
 	EndGlobalSection
 EndGlobal

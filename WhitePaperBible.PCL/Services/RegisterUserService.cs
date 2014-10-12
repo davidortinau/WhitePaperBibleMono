@@ -19,14 +19,11 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (AppUser user)
 		{
-//			var cookieJar = new CookieContainer ();
-//			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-
 			var url = Constants.BASE_URI + String.Format ("users/create/{0}?caller=wpb-iPhone", Uri.EscapeDataString(user.username));
 			url += String.Format ("&user[name]={0}&user[email]={1}&user[username]={2}&eula[accepted]=YES", user.Name, Uri.EscapeDataString(user.Email), Uri.EscapeDataString(user.username));
 			url += String.Format ("&user[password]={0}&user[password_confirmation]={1}", user.password, user.passwordConfirmation);
 
-			Client.OpenURL (url, MethodEnum.POST, null);
+			Client.OpenURL (url, MethodEnum.POST, false);
 //
 		}
 

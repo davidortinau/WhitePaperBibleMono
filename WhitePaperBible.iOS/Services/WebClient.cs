@@ -9,13 +9,15 @@ using WhitePaperBible.Core.Models;
 using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Utilities;
+using WhitePaperBible.Core;
 
 
 namespace WhitePaperBible.iOS
 {
 	public class WebClient:IJSONWebClient
 	{
-
+		[Inject]
+		public AppModel AM;
 
 		public WebClient ()
 		{
@@ -40,7 +42,7 @@ namespace WhitePaperBible.iOS
 			}
 		}
 
-		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, CookieContainer cookieJar=null)
+		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
 		{
 			ResolveNetworkUtil ();
 
@@ -48,7 +50,11 @@ namespace WhitePaperBible.iOS
 				DI.Get<UnreachableInvoker> ().Invoke ();
 			} else {
 				var client = new RestClient ();
-				client.CookieContainer = cookieJar;
+				if(includeSessionCookie){
+					var cookieJar = new CookieContainer ();
+					cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
+					client.CookieContainer = cookieJar;
+				}
 
 				var request = new RestRequest (url, (Method)method) { RequestFormat = DataFormat.Json };
 

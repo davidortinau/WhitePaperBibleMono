@@ -19,16 +19,13 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (Paper paper)
 		{
-			var cookieJar = new CookieContainer ();
-			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-
 			var url = Constants.BASE_URI;
 
 			if (paper.id <= 0) {
 				// create
 				url += String.Format ("papers?paper[title]={0}&paper[description]={1}&user_id={2}&paper[tag_list]={3}", paper.title, paper.description, AM.User.ID, paper.TagsString());
 				url += "&caller=wpb-iPhone";
-				Client.OpenURL (url, MethodEnum.POST, cookieJar);
+				Client.OpenURL (url, MethodEnum.POST, true);
 			}else{
 				// update
 
@@ -43,7 +40,7 @@ namespace WhitePaperBible.Core.Services
 					url += String.Format("&paper[references_attributes][{0}][_delete]={1}", r.id, r.delete);// i guess set this if to be deleted?
 				}
 
-				Client.OpenURL (url, MethodEnum.PUT, cookieJar);
+				Client.OpenURL (url, MethodEnum.PUT, true);
 			}
 
 

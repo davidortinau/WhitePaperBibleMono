@@ -19,13 +19,10 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (Paper paper, Reference reference)
 		{
-			var cookieJar = new CookieContainer ();
-			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-
 			var url = Constants.BASE_URI;
 			url += String.Format("papers/{0}/references?reference[reference]={1}&reference[paper_id]={2}", paper.id, reference.reference, paper.id);
 			url += "&caller=wpb-iPhone";
-			Client.OpenURL (url, MethodEnum.POST, cookieJar);
+			Client.OpenURL (url, MethodEnum.POST, true);
 		}
 
 		#region implemented abstract members of BaseService

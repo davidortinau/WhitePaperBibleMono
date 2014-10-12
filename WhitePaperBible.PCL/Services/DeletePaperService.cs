@@ -19,14 +19,11 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (Paper paper)
 		{
-			var cookieJar = new CookieContainer ();
-			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-
 			var url = Constants.BASE_URI;
 			url += String.Format("papers/{0}/destroy", paper.id);
 			url += "?caller=wpb-iPhone";
 			url += String.Format("&user_id={0}",AM.User.ID);
-			Client.OpenURL (url, MethodEnum.DELETE, cookieJar);
+			Client.OpenURL (url, MethodEnum.DELETE, true);
 
 		}
 

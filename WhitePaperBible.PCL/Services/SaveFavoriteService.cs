@@ -19,9 +19,6 @@ namespace WhitePaperBible.Core.Services
 
 		public void Execute (Paper paper, bool isFavorite)
 		{
-			var cookieJar = new CookieContainer ();
-			cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
-
 			var url = Constants.BASE_URI + "favorite/";
 			if(isFavorite){
 				url += "create";
@@ -29,7 +26,7 @@ namespace WhitePaperBible.Core.Services
 				url += "destroy";
 			}
 			url += String.Format ("/{0}?caller=wpb-iPhone", paper.id);
-			Client.OpenURL (url, MethodEnum.GET, cookieJar);
+			Client.OpenURL (url, MethodEnum.GET, true);
 
 		}
 
