@@ -18,6 +18,10 @@ namespace WhitePaperBible.Core.Views
 		string SearchQuery{ get; }
 
 		Paper SelectedPaper{ get; set; }
+
+		void ShowLoginButton();
+
+		void HideLoginButton();
 	}
 }
 

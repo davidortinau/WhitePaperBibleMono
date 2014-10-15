@@ -8,6 +8,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using WhitePaperBible.iOS.Invokers;
+using BigTed;
 
 namespace WhitePaperBible.iOS
 {
@@ -90,10 +91,7 @@ namespace WhitePaperBible.iOS
 		public void ShowUnreachable ()
 		{
 			InvokeOnMainThread (() => {
-				using(var alert = new UIAlertView("Network Status", "Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", null, "OK", null))
-				{
-					alert.Show();	
-				}
+				BTProgressHUD.ShowErrorWithStatus("Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", 4000);
 			});
 
 		}

@@ -14,6 +14,8 @@ namespace WhitePaperBible.iOS
 {
 	public partial class FavoritesView : DialogViewController, IFavoritesView, IMediatorTarget
 	{
+		LoginRequiredController LoginRequiredView;
+
 		public FavoritesView () : base (UITableViewStyle.Plain, null, true)
 		{
 			EnableSearch = true; 
@@ -22,8 +24,6 @@ namespace WhitePaperBible.iOS
 			this.Filter = new Invoker ();
 			this.OnPaperSelected = new Invoker ();
 			this.Title = @"Favorites";
-
-
 		}
 
 		#region IPapersListView implementation
@@ -63,6 +63,21 @@ namespace WhitePaperBible.iOS
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 			});
 
+		}
+
+		public void ShowLoginButton()
+		{
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Login", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					ShowLoginForm();
+				})
+				, true
+			);
+		}
+
+		public void HideLoginButton()
+		{
+			NavigationItem.SetRightBarButtonItem (null,false);
 		}
 
 		public string SearchPlaceHolderText {
@@ -107,6 +122,49 @@ namespace WhitePaperBible.iOS
 			base.ViewDidDisappear (animated);
 
 			DI.DestroyMediator (this);
+		}
+
+		public void PromptForLogin ()
+		{
+			if (LoginRequiredView == null) {
+				CreateLoginRequiredView ();
+			}
+			LoginRequiredView.View.Hidden = false;
+		}
+
+		public void ShowLoginForm ()
+		{
+			var loginView = new LoginViewController ();
+			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
+				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
+				DismissLoginPrompt();
+				HideLoginButton();
+			};
+
+			this.PresentViewController (loginView, true, null);
+		}
+
+		public void DismissLoginPrompt()
+		{
+			InvokeOnMainThread (() => {
+				if (LoginRequiredView != null && !LoginRequiredView.View.Hidden) {
+					LoginRequiredView.View.Hidden = true;
+				}
+			});
+
+		}
+
+		protected void CreateLoginRequiredView ()
+		{
+			LoginRequiredView = new LoginRequiredController (false);
+			LoginRequiredView.View.Frame = this.View.Frame;
+			//			LoginRequiredView.View.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+
+			View.AddSubview (LoginRequiredView.View);
+			View.BringSubviewToFront (LoginRequiredView.View);
+			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
+			//			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => DismissLoginPrompt ();
+			LoginRequiredView.View.Hidden = true;
 		}
 	}
 }
