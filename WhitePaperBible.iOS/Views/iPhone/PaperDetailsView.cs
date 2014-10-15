@@ -14,6 +14,7 @@ using RestSharp;
 using WhitePaperBible.Core.Views;
 using MonoTouch.Social;
 using IOS.Util;
+using BigTed;
 
 namespace WhitePaperBible.iOS
 {
@@ -243,12 +244,7 @@ namespace WhitePaperBible.iOS
 		{
 
 			if (e.Result == MFMailComposeResult.Sent) {
-				UIAlertView alert = new UIAlertView ("Mail Alert", "Mail Sent",
-					                    null, "Yippie", null);
-				alert.Show ();
-		        
-				// you should handle other values that could be returned 
-				// in e.Result and also in e.Error 
+				BTProgressHUD.ShowToast("Mail Sent", true, 3000);
 			}
 			e.Controller.DismissModalViewControllerAnimated (true);
 		}

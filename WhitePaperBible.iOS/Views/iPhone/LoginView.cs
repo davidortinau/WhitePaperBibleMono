@@ -11,6 +11,7 @@ using System.Drawing;
 using WhitePaperBible.iOS.Managers;
 using WhitePaperBible.iOS.Invokers;
 using IOS.Util;
+using BigTed;
 
 namespace WhitePaperBible.iOS
 {
@@ -91,8 +92,7 @@ namespace WhitePaperBible.iOS
 		public void ShowInvalidPrompt (string message)
 		{
 			InvokeOnMainThread (() => {
-				var alert = new UIAlertView (ResourceManager.GetString ("authenticationError"), ResourceManager.GetString ("invalidLogin"), null, ResourceManager.GetString ("ok"), null);
-				alert.Show ();
+				BTProgressHUD.ShowErrorWithStatus(message, 3000);
 			});
 		}
 

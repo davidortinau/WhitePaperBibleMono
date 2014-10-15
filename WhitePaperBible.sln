@@ -94,7 +94,7 @@ Global
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = WhitePaperBible.Android\WhitePaperBible.Android.csproj
+		StartupItem = WhitePaperBible.iOS\WhitePaperBible.iOS.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = Flat

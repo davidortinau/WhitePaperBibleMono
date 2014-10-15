@@ -114,6 +114,9 @@
     <Reference Include="GoogleAnalytics.iOS">
       <HintPath>..\Components\googleanalytics-3.0.7\lib\ios\GoogleAnalytics.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.12\lib\ios\BTProgressHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -128,7 +131,6 @@
     </Compile>
     <Compile Include="Views\Common\TabBarController.cs" />
     <Compile Include="Views\iPhone\FavoritesView.cs" />
-    <Compile Include="Views\iPhone\SearchView.cs" />
     <Compile Include="Views\iPhone\MyPapersView.cs" />
     <Compile Include="Views\iPhone\AboutView.cs" />
     <Compile Include="Views\iPhone\PaperDetailsView.cs" />
@@ -253,6 +255,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="googleanalytics">
       <Version>3.0.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.12</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

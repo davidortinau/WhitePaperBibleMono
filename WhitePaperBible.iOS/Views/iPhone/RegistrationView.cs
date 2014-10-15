@@ -11,6 +11,7 @@ using WhitePaperBible.Core.Views;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Invokers;
 using IOS.Util;
+using BigTed;
 
 namespace WhitePaperBible.iOS
 {
@@ -105,8 +106,9 @@ namespace WhitePaperBible.iOS
 			}
 
 			if(!String.IsNullOrEmpty(results)){
-				var alert = new UIAlertView ("Please Fix", results, null, "Okay");
-				alert.Show ();
+				BTProgressHUD.ShowErrorWithStatus(results, 3000);
+//				var alert = new UIAlertView ("Please Fix", results, null, "Okay");
+//				alert.Show ();
 				return false;
 			}else{
 				return true;
@@ -115,30 +117,10 @@ namespace WhitePaperBible.iOS
 
 		#region IRegistrationView implementation
 
-//		public void ShowBusyIndicator ()
-//		{
-//			InvokeOnMainThread (() => {
-//				this.ShowNetworkActivityIndicator ();
-//				SubmitButton.Enabled = false;
-//				SubmitButton.Alpha = .25f;
-//			});
-//
-//		}
-//
-//		public void HideBusyIndicator ()
-//		{
-//			InvokeOnMainThread (() => {
-//				this.HideNetworkActivityIndicator ();
-//				SubmitButton.Enabled = true;
-//				SubmitButton.Alpha = 1;
-//			});
-//		}
-
 		public void DisplayError (string msg)
 		{
 			InvokeOnMainThread (() => {
-				var alert = new UIAlertView("Oops", msg, null, "Okay");
-				alert.Show();
+				BTProgressHUD.ShowErrorWithStatus(msg, 3000);
 			});
 		}
 

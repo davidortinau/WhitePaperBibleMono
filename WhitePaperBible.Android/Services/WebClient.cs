@@ -10,8 +10,8 @@ namespace WhitePaperBible.Android.Services
 {
 	public class WebClient : IJSONWebClient
 	{
-//		[Inject]
-//		public AppModel AM;
+		[Inject]
+		public AppModel AM;
 
 		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
 		{

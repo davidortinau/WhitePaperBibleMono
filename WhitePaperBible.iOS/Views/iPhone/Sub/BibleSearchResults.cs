@@ -40,9 +40,6 @@ namespace WhitePaperBible.iOS
 						LineBreakMode = UILineBreakMode.WordWrap
 					};
 
-//					el.Tapped += delegate {
-//						new UIAlertView ("Hola", "Thanks for tapping!", null, "Continue").Show (); 
-//					};
 					ResultsSection.Add (el);
 				}
 

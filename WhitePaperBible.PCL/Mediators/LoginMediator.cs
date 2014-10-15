@@ -4,6 +4,7 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using System.Linq;
+using System.Resources;
 
 namespace WhitePaperBible.Core.Mediators
 {
@@ -57,6 +58,7 @@ namespace WhitePaperBible.Core.Mediators
 
 		void onLoginFault (object sender, EventArgs e)
 		{
+			Target.ShowInvalidPrompt ("Login Failed");
 			Target.HideBusyIndicator ();
 		}
 	}
