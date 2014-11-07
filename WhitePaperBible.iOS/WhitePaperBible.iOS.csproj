@@ -10,6 +10,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>WhitePaperBible.iOS</RootNamespace>
     <AssemblyName>WhitePaperBibleiOS</AssemblyName>
+    <UseMSBuildEngine>True</UseMSBuildEngine>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>

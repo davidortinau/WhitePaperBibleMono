@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<color name="standard_background">#8568a0</color>
+	<color name="tntwhite">#fff</color>
+	<color name="tntred">#f00</color>
+	<color name="tntgreen">#0f0</color>
+	<color name="tntblue">#00f</color>
+	<color name="tntpurplemedium">#8568a0</color>
+	<color name="tntpurpledark">#765a94</color>
+
+
+</resources>

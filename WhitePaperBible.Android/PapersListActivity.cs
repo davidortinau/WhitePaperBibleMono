@@ -11,10 +11,11 @@ using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using System;
 using WhitePaperBible.Core.Models;
+using WhitePaperBible.Android.Fragments;
 
 namespace WhitePaperBible.Android
 {
-	[Activity (Label = "Papers")]			
+	[Activity (Label = "Papers", Icon = "@drawable/logo_300")]			
 	public class PapersListActivity : ListActivity, IPapersListView, IInjectingTarget
 	{
 		public void AddPaperEditView ()
@@ -71,6 +72,11 @@ namespace WhitePaperBible.Android
 			RequestWindowFeature(WindowFeatures.ActionBar);
 
 			SetContentView( Resource.Layout.PapersList );
+
+			this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+			AddTab ("Papers", Resource.Drawable.Icon, new PapersListFragment());
+			AddTab ("Favorites", Resource.Drawable.Icon, new PapersListFragment());
+			AddTab ("My Papers", Resource.Drawable.Icon, new PapersListFragment());
 
 			DI.RequestMediator(this);
 		}
@@ -134,6 +140,20 @@ namespace WhitePaperBible.Android
 		}
 
 		#endregion
+
+		void AddTab (string tabText, int iconResourceId, Fragment fragment)
+		{
+			var tab = this.ActionBar.NewTab ();            
+			tab.SetText (tabText);
+			tab.SetIcon (iconResourceId);
+
+			// must set event handler for replacing tabs tab
+			tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {
+//				e.FragmentTransaction.Replace(Resource.Id.fragmentContainer, fragment);
+			};
+
+			this.ActionBar.AddTab (tab);
+		}      
 	}
 
 }

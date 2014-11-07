@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="15dp"
+    android:insetRight="15dp" >
+
+    <shape
+        android:shape="line" >
+        <stroke
+            android:color="#c4b6d0" />
+            <size android:height="1px" />
+
+    </shape>
+
+</inset>

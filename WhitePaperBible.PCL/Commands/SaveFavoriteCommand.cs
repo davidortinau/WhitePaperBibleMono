@@ -39,7 +39,7 @@ namespace WhitePaperBible.Core.Commands
 				AM.Favorites.Remove (a.Paper);
 			}
 
-			if(AM.IsLoggedIn){
+			if(AM.IsLoggedIn && AM.UserSessionCookie != null){
 				Service.Success += onSuccess;
 				Service.Execute (a.Paper, a.IsFavorite);
 			}

@@ -30,7 +30,7 @@
             p1:scaleX="0.7"
             p1:scaleY="0.7" />-->
         <TextView
-            p1:text="White Paper Bible"
+            p1:text="1White Paper Bible"
             p1:textAppearance="?android:attr/textAppearanceSmall"
             p1:layout_centerHorizontal="true"
             p1:layout_width="wrap_content"

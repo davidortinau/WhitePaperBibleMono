@@ -27,7 +27,7 @@ namespace WhitePaperBible.Android
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
-
+//			this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 		}
 
 		#region ILoadingView implementation

@@ -16,9 +16,6 @@ namespace WhitePaperBible.iOS
 {
 	public class WebClient:IJSONWebClient
 	{
-		[Inject]
-		public AppModel AM;
-
 		public WebClient ()
 		{
 			ResolveNetworkUtil ();
@@ -51,6 +48,7 @@ namespace WhitePaperBible.iOS
 			} else {
 				var client = new RestClient ();
 				if(includeSessionCookie){
+					AppModel AM = DI.Get<AppModel> ();
 					var cookieJar = new CookieContainer ();
 					cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
 					client.CookieContainer = cookieJar;

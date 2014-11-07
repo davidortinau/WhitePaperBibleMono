@@ -108,9 +108,7 @@ namespace WhitePaperBible.iOS
 		void AddEventHandlers ()
 		{
 			LoginButton.TouchUpInside += (object sender, EventArgs e) => {
-				// add validation
 				LoginSubmitted(this, EventArgs.Empty);
-				//				LoginFinished.Invoke (new LoginFinishedInvokerArgs (this));
 			};
 
 			CancelButton.TouchUpInside += (object sender, EventArgs e) => {
