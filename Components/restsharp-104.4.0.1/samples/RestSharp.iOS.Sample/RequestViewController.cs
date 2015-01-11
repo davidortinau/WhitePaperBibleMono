@@ -21,8 +21,8 @@ using System.Threading.Tasks;
 using Foundation;
 using UIKit;
 #else
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using nfloat = System.Single;
 #endif
 

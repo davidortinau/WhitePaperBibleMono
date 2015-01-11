@@ -90,4 +90,3 @@ namespace WhitePaperBible.Core.Models
 		}
 	}
 }
-

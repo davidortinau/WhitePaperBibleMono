@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MonoTouch.Dialog;
 
 namespace CustomElements

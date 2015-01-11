@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using WhitePaperBible.iOS.UI;
-using System.Drawing;
+using CoreGraphics;
 using WhitePaperBible.iOS.Managers;
 using WhitePaperBible.iOS.Invokers;
 using IOS.Util;
@@ -114,7 +114,7 @@ namespace WhitePaperBible.iOS
 			//Register Button
 			RegisterButton = new UIButton ();
 			var buttonY = WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight - 60;
-			RegisterButton.Frame = new RectangleF (10, buttonY, 280, 43);
+			RegisterButton.Frame = new CGRect (10, buttonY, 280, 43);
 			RegisterButton.CenterHorizontally ();
 			RegisterButton.SetTitle (ResourceManager.GetString ("register"), UIControlState.Normal);
 			RegisterButton.BackgroundColor = UIColor.Clear;
@@ -124,7 +124,7 @@ namespace WhitePaperBible.iOS
 			View.AddSubview (RegisterButton);
 		}
 
-		WPBButton CreateButton (string title, UIColor color, float yPos)
+		WPBButton CreateButton (string title, UIColor color, nfloat yPos)
 		{
 			WPBButton button = new WPBButton (title, color, yPos);
 			button.CenterHorizontally ();
@@ -165,12 +165,12 @@ namespace WhitePaperBible.iOS
 		void CreateLoginForm ()
 		{
 			//form container
-			loginForm = new UIView (new RectangleF (0, 40, WhitePaperBible.iOS.UI.Environment.ScreenWidth, 125));
+			loginForm = new UIView (new CGRect (0, 40, WhitePaperBible.iOS.UI.Environment.ScreenWidth, 125));
 			loginForm.BackgroundColor = AppStyles.DarkGray;
 			View.AddSubview (loginForm);
 
 			//Username Input
-			var userNameRect = new RectangleF (0, 20, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
+			var userNameRect = new CGRect (0, 20, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
 			loginForm.AddSubview (CreateLabel ("email", userNameRect));
 			UsernameInput = CreateInput ("", ResourceManager.GetString ("emailPlaceholder"), userNameRect, UIReturnKeyType.Next, false);
 			loginForm.AddSubview (UsernameInput);
@@ -181,7 +181,7 @@ namespace WhitePaperBible.iOS
 //			loginForm.AddSubview (rule);
 
 			//Password Input
-			var passwordRect = new RectangleF (10, userNameRect.Bottom, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
+			var passwordRect = new CGRect (10, userNameRect.Bottom, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 40, 40);
 			loginForm.AddSubview (CreateLabel ("password", passwordRect));
 			PasswordInput = CreateInput ("", "", passwordRect, UIReturnKeyType.Done, true);
 			loginForm.AddSubview (PasswordInput);
@@ -191,7 +191,7 @@ namespace WhitePaperBible.iOS
 
 		}
 
-		protected UILabel CreateLabel (string labelID, RectangleF rowRect)
+		protected UILabel CreateLabel (string labelID, CGRect rowRect)
 		{
 			var label = new UILabel (rowRect) {
 				TextColor = UIColor.White,
@@ -206,7 +206,7 @@ namespace WhitePaperBible.iOS
 
 		protected UITextField CreateInput (string value,
 		                                   string placeholder,
-		                                   RectangleF rowRect,
+										   CGRect rowRect,
 		                                   UIReturnKeyType returnKeyType,
 		                                   bool isPassword)
 		{
@@ -257,7 +257,7 @@ namespace WhitePaperBible.iOS
 
 	public class WPBButton:UIButton
 	{
-		public WPBButton (string title, UIColor backgroundColor, float yPos, UIColor borderColor = null, float borderWidth = 0, UIColor titleColor = null) : base (new RectangleF (10, yPos, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 20, 40))
+		public WPBButton (string title, UIColor backgroundColor, nfloat yPos, UIColor borderColor = null, float borderWidth = 0, UIColor titleColor = null) : base (new CGRect (10, yPos, WhitePaperBible.iOS.UI.Environment.ScreenWidth - 20, 40))
 		{
 			BackgroundColor = backgroundColor;
 			Layer.CornerRadius = 3f;

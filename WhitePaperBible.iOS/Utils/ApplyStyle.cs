@@ -1,10 +1,10 @@
-﻿using System;
-using MonoTouch.UIKit;
-using System.Drawing;
-using MonoTouch.CoreGraphics;
+using System;
+using UIKit;
+using CoreGraphics;
+using CoreGraphics;
 using WhitePaperBible.iOS.UI;
 using WhitePaperBible.iOS.Managers;
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace WhitePaperBible.iOS.Utils
 {
@@ -67,17 +67,17 @@ namespace WhitePaperBible.iOS.Utils
 		{
 			view.RegisterButton.SetTitle (ResourceManager.GetString ("register"), UIControlState.Normal);
 			view.RegisterButton.BackgroundColor = UIColor.Clear;
-			view.RegisterButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			view.RegisterButton.SetTitleColor (UIColor.White, UIControlState.Normal);
 			view.RegisterButton.Font = UIFont.FromName ("Helvetica", 12);
 			view.RegisterButton.SetTitleColor (AppStyles.DarkGray, UIControlState.Highlighted); 
 
 			view.LoginButton.BackgroundColor = AppStyles.Red;
 			view.LoginButton.Font = UIFont.FromName ("Helvetica", 21);
-			view.LoginButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			view.LoginButton.SetTitleColor (UIColor.White, UIControlState.Normal);
 
 			view.CancelButton.BackgroundColor = AppStyles.Gray;
 			view.CancelButton.Font = UIFont.FromName ("Helvetica", 21);
-			view.CancelButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			view.CancelButton.SetTitleColor (UIColor.White, UIControlState.Normal);
 
 			view.UsernameInput.BackgroundColor = UIColor.Clear;
 			view.UsernameInput.BorderStyle = UITextBorderStyle.None;
@@ -109,11 +109,11 @@ namespace WhitePaperBible.iOS.Utils
 
 			view.LoginRegisterButton.BackgroundColor = AppStyles.Red;
 			view.LoginRegisterButton.Font = UIFont.FromName ("Helvetica", 21);
-			view.LoginRegisterButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			view.LoginRegisterButton.SetTitleColor (UIColor.White, UIControlState.Normal);
 
 			view.CancelButton.BackgroundColor = AppStyles.Gray;
 			view.CancelButton.Font = UIFont.FromName ("Helvetica", 21);
-			view.CancelButton.SetTitleColor (UIColor.White, UIControlState.Normal); 
+			view.CancelButton.SetTitleColor (UIColor.White, UIControlState.Normal);
 
 
 		}
@@ -174,7 +174,7 @@ namespace WhitePaperBible.iOS.Utils
 //		public static void AppointmentView (AppointmentView cell)
 //		{
 //			cell.BackgroundColor = ColorFromHex (0x20aab7).ColorWithAlpha (.5f);
-////			cell.Frame = new RectangleF (140, 0, 400, 100);
+////			cell.Frame = new CGRect (140, 0, 400, 100);
 //
 //			cell.TitleLabel.TextColor = ColorFromHex (0x20aab7);
 //			cell.TitleLabel.Font = UIFont.SystemFontOfSize (16);
@@ -312,4 +312,3 @@ namespace WhitePaperBible.iOS.Utils
 		}
 	}
 }
-

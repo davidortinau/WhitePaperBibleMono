@@ -1,9 +1,9 @@
-﻿
-using System;
-using System.Drawing;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System;
+using CoreGraphics;
+
+using Foundation;
+using UIKit;
 using WhitePaperBible.iOS;
 using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.Core.Views;
@@ -57,7 +57,7 @@ namespace WhitePaperBible.iOS
 		{
 			LoginRequiredView = new LoginRequiredController (false);
 			LoginRequiredView.View.Frame = this.View.Frame;
-//			LoginRequiredView.View.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+//			LoginRequiredView.View.Frame = new CGRect (0, 48, View.Bounds.Width, View.Bounds.Height);
 
 			View.AddSubview (LoginRequiredView.View);
 			View.BringSubviewToFront (LoginRequiredView.View);
@@ -144,7 +144,7 @@ namespace WhitePaperBible.iOS
 
 			if (profileView == null) {
 				profileView = new ProfileView ();
-				profileView.Frame = new RectangleF (0, 64, View.Bounds.Width, profileView.Bounds.Height);
+				profileView.Frame = new CGRect (0, 64, View.Bounds.Width, profileView.Bounds.Height);
 				View.AddSubview (profileView);
 
 				profileView.GoToEdit.Invoked += (object sender, EventArgs e) => {
@@ -156,7 +156,7 @@ namespace WhitePaperBible.iOS
 			if (myPapersView == null) {
 				myPapersView = new MyPapersView ();
 
-				containerView = new UIView (new RectangleF (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
+				containerView = new UIView (new CGRect (0, 164, View.Bounds.Width, View.Bounds.Height - 164));
 				containerView.AddSubview (myPapersView.TableView);
 				View.AddSubview (containerView);
 			}
@@ -182,17 +182,17 @@ namespace WhitePaperBible.iOS
 			}
 
 //			if(LoginRequiredView != null){
-//				LoginRequiredView.Frame = new RectangleF (0, top - 16, View.Bounds.Width, View.Bounds.Height);
+//				LoginRequiredView.Frame = new CGRect (0, top - 16, View.Bounds.Width, View.Bounds.Height);
 //			}
 
 			LoginRequiredView.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
 
 			if(containerView != null){
-				containerView.Frame = new RectangleF (0, 100 + top, View.Bounds.Width, View.Bounds.Height - (100 + top));
+				containerView.Frame = new CGRect (0, 100 + top, View.Bounds.Width, View.Bounds.Height - (100 + top));
 			}
 
 			if(profileView != null){
-				profileView.Frame = new RectangleF (0, top, View.Bounds.Width, 100);
+				profileView.Frame = new CGRect (0, top, View.Bounds.Width, 100);
 			}
 		}
 

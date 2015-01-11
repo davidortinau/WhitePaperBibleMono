@@ -1,9 +1,10 @@
 using System;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
-using System.Drawing;
+using CoreGraphics;
 using WhitePaperBible.Core.Models;
+using UIKit.UIStringDrawing;
 
 namespace WhitePaperBible.iOS.UI.CustomElements
 {
@@ -16,16 +17,16 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		Paper paper;
 
 		const int padding = 13;
-		
+
 		public PaperCell (UITableViewCellStyle style, NSString ident, Paper paperNode) : base (style, ident)
 		{
 			SelectionStyle = UITableViewCellSelectionStyle.Blue;
-			
+
 			titleLabel = new UILabel () {
 				TextAlignment = UITextAlignment.Left,
 				BackgroundColor = UIColor.FromWhiteAlpha (0f, 0f)
 			};
-			
+
 			descriptionLabel = new UILabel () {
 				TextAlignment = UITextAlignment.Left,
 				Font = smallFont,
@@ -34,29 +35,29 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			};
 
 			UpdateCell (paperNode);
-			
+
 			ContentView.Add (titleLabel);
 			ContentView.Add (descriptionLabel);
 		}
-		
+
 		public void UpdateCell (Paper p)
 		{
 			paper = p;
-			
+
 			titleLabel.Font = bigFont;
 			titleLabel.Text = paper.title;
-			
+
 			descriptionLabel.Text = paper.description;
 		}
-		
+
 //		void UpdateImage (bool selected)
 //		{
-//			if (selected)				
+//			if (selected)
 //				button.SetImage (favorited, UIControlState.Normal);
 //			else
 //				button.SetImage (favorite, UIControlState.Normal);
 //		}
-//		
+//
 //		bool ToggleFavorite ()
 //		{
 //			if (FavoritesManager.IsFavorite (paperNode.Key)) {
@@ -70,9 +71,9 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 //		}
 //
 		/// <summary>
-		/// Used in ViewWillAppear (SessionsScreen, SessionDayScheduleScreen) 
+		/// Used in ViewWillAppear (SessionsScreen, SessionDayScheduleScreen)
 		/// to sync favorite-stars that have changed in other views
-		/// </summary>		
+		/// </summary>
 //		public void UpdateFavorite() {
 //			UpdateImage (FavoritesManager.IsFavorite (paperNode.Key)) ;
 //		}
@@ -81,7 +82,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		{
 			base.LayoutSubviews ();
 			var full = ContentView.Bounds;
-			var titleAdjustment = 0;			
+			var titleAdjustment = 0;
 			var titleFrame = full;
 
 			titleFrame.X = padding;
@@ -89,9 +90,9 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			titleFrame.Height = 25;
 			titleFrame.Width -= (padding); // +10
 
-			SizeF size = titleLabel.StringSize (titleLabel.Text
+			CGSize size = UIKit.UIStringDrawing.StringSize(titleLabel.Text
 						, titleLabel.Font
-						, new SizeF(titleFrame.Width, 400));
+				, new CGSize(titleFrame.Width, 400));
 			if (size.Height > 27) {
 				titleAdjustment = 27;
 				titleFrame.Height = titleFrame.Height + titleAdjustment; //size.Height;
@@ -100,27 +101,26 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			else titleLabel.Lines = 1;
 
 			titleLabel.Frame = titleFrame;
-			
+
 //			var locationImagePadding = 18 + 5;
 //			if (descriptionLabel.Text == "") {
 //				locationImagePadding = 0;
 //				locationImageView.Alpha = 0f;
-//			} else 
+//			} else
 //				locationImageView.Alpha = 1f;
 //
 //			var companyFrame = full;
-//			companyFrame.X = padding + locationImagePadding;	// image is 
+//			companyFrame.X = padding + locationImagePadding;	// image is
 //			var bottomRowY = 15 + 23 + titleAdjustment;
 //			companyFrame.Y = bottomRowY;
 //			companyFrame.Height = 14; // 12 -> 14
 //			companyFrame.Width = titleFrame.Width - locationImagePadding;
 //			descriptionLabel.Frame = companyFrame;
-//			
-//			locationImageView.Frame = new RectangleF (padding, bottomRowY, 18, 16);
 //
-//			button.Frame = new RectangleF (full.Width-buttonSpace //-5
-//				, titleAdjustment / 2, buttonSpace, buttonSpace); // 10 + 
+//			locationImageView.Frame = new CGRect (padding, bottomRowY, 18, 16);
+//
+//			button.Frame = new CGRect (full.Width-buttonSpace //-5
+//				, titleAdjustment / 2, buttonSpace, buttonSpace); // 10 +
 		}
 	}
 }
-

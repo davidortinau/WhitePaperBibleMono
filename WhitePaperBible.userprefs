@@ -1,61 +1,8 @@
-﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.David's iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Info.plist">
+﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/AppDelegate.cs">
     <Files>
-      <File FileName="WhitePaperBible.Android/MainApplication.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Services/WebClient.cs" Line="1" Column="1" />
-      <File FileName="../../../../work/rendr/TheresaNeilLLS/TNT Training App/TNTTrainerMobile/TNTTrainerAndroid/Delegates/TNTWebClient.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/PapersAdapter.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/PapersListActivity.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetTagsService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/SaveStorageCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Helpers/HtmlToText.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/AuthenticateUserService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/BibleSearchService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetFavoritesService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetMyPapersService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetPaperReferencesService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/GetUserProfileService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/RegisterUserService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/SaveFavoriteService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/SavePaperService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/SaveReferenceService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/SaveUserProfileService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/IJSONWebClient.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/DeletePaperService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/ILoadingView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/LoadingViewMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/ConfigureCommandsCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/Invoker.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/WhitePaperBible.PCL.csproj" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/LoginView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/LoginViewController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/LoginMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/Sub/BibleSearchResults.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/RegistrationView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersAndProfileController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Views/IFavoritesView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/SaveFavoriteCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/LoginCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/GetFavoritesCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Resources/values/Themes.xml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Resources/values/Styles.xml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Today/TodayViewController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Info.plist" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="15" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -67,9 +14,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="29" offsetX="698" offsetY="560" expression="FileSystem.Current.LocalStorage" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS>
-    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="39RD98DP2Z" TeamId="NYHGX6KCDG" />
-    <IPhoneZipBundleSettings CurrentFolder="/Users/dave/Desktop" />
-  </MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS>
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>

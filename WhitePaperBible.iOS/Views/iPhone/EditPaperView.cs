@@ -1,10 +1,10 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using MonkeyArms;
 using WhitePaperBible.Core.Views;
@@ -13,7 +13,7 @@ using WhitePaperBible.iOS.Invokers;
 using WhitePaperBible.Core.Invokers;
 using ElementPack;
 using CustomElements;
-using System.Drawing;
+using CoreGraphics;
 using IOS.Util;
 
 namespace WhitePaperBible.iOS
@@ -169,7 +169,7 @@ namespace WhitePaperBible.iOS
 		protected void CreateLoginRequiredView ()
 		{
 			LoginRequiredView = new LoginRequiredController ();
-//			LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+//			LoginRequiredView.Frame = new CGRect (0, 48, View.Bounds.Width, View.Bounds.Height);
 
 			View.AddSubview (LoginRequiredView.View);
 			View.BringSubviewToFront (LoginRequiredView.View);
@@ -190,7 +190,7 @@ namespace WhitePaperBible.iOS
 		{
 
 //			if(LoginRequiredView != null){
-//				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+//				LoginRequiredView.Frame = new CGRect (0, 48, View.Bounds.Width, View.Bounds.Height);
 //			}
 			base.DidRotate (fromInterfaceOrientation);
 		}

@@ -1,10 +1,10 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio to store outlets and
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 using System.CodeDom.Compiler;
 
 namespace WhitePaperBible.iOS
@@ -13,25 +13,25 @@ namespace WhitePaperBible.iOS
 	partial class LoginViewController
 	{
 		[Outlet]
-		public MonoTouch.UIKit.UIButton CancelButton { get; set; }
+		public UIKit.UIButton CancelButton { get; set; }
 
 		[Outlet]
-		public MonoTouch.UIKit.UIButton LoginButton { get; set; }
+		public UIKit.UIButton LoginButton { get; set; }
 
 		[Outlet]
-		public MonoTouch.UIKit.UITextField PasswordInput { get; set; }
+		public UIKit.UITextField PasswordInput { get; set; }
 
 		[Outlet]
-		public MonoTouch.UIKit.UILabel PasswordLabel { get; set; }
+		public UIKit.UILabel PasswordLabel { get; set; }
 
 		[Outlet]
-		public MonoTouch.UIKit.UIButton RegisterButton { get; set; }
+		public UIKit.UIButton RegisterButton { get; set; }
 
 		[Outlet]
-		public MonoTouch.UIKit.UITextField UsernameInput { get; set; }
+		public UIKit.UITextField UsernameInput { get; set; }
 
 		[Outlet]
-		public MonoTouch.UIKit.UILabel UsernameLabel { get; set; }
+		public UIKit.UILabel UsernameLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

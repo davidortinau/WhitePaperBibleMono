@@ -1,9 +1,9 @@
-﻿
-using System;
-using System.Drawing;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System;
+using CoreGraphics;
+
+using Foundation;
+using UIKit;
 using MonkeyArms;
 
 using WhitePaperBible.Core.Views;
@@ -53,7 +53,7 @@ namespace WhitePaperBible.iOS
 
 		void CreateView ()
 		{
-//			SearchBar = new UISearchBar (new RectangleF (0, 64, View.Bounds.Width, 90));
+//			SearchBar = new UISearchBar (new CGRect (0, 64, View.Bounds.Width, 90));
 //			SearchBar.ShowsScopeBar = true;
 //			SearchBar.Placeholder = @"John 3:16";
 //			SearchBar.ScopeButtonTitles = new string[]{"Reference", "Keyword", "Phrase"};
@@ -74,7 +74,7 @@ namespace WhitePaperBible.iOS
 
 		void PerformSearch (object sender, EventArgs e)
 		{
-			var args = new GetBibleSearchResultsInvokerArgs (SearchBar.Text, (SearchScopeEnum)SearchBar.SelectedScopeButtonIndex);
+			var args = new GetBibleSearchResultsInvokerArgs (SearchBar.Text, (int)SearchBar.SelectedScopeButtonIndex);
 			DoSearch.Invoke (args);
 
 			SearchBar.ResignFirstResponder ();
@@ -147,7 +147,7 @@ namespace WhitePaperBible.iOS
 //		void Resize (UIInterfaceOrientation fromInterfaceOrientation)
 //		{
 ////			if(LoginRequiredView != null){
-////				LoginRequiredView.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+////				LoginRequiredView.Frame = new CGRect (0, 48, View.Bounds.Width, View.Bounds.Height);
 ////			}
 //			var top = 64;
 //			if(fromInterfaceOrientation == UIInterfaceOrientation.Portrait || fromInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown){
@@ -155,11 +155,11 @@ namespace WhitePaperBible.iOS
 //			}
 //
 //			if(containerView != null){
-//				containerView.Frame = new RectangleF (0, 90 + top, View.Bounds.Width, View.Bounds.Height - (top + 90));
+//				containerView.Frame = new CGRect (0, 90 + top, View.Bounds.Width, View.Bounds.Height - (top + 90));
 //			}
 //
 //			if(SearchBar != null){
-//				SearchBar.Frame = new RectangleF (0, top, View.Bounds.Width, 90);
+//				SearchBar.Frame = new CGRect (0, top, View.Bounds.Width, 90);
 //			}
 //		}
 	}

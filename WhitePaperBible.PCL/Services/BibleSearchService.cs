@@ -8,16 +8,16 @@ namespace WhitePaperBible.Core.Services
 {
 	public interface IBibleSearchService:IBaseService
 	{
-		void Execute (string keywords, SearchScopeEnum scope);
+		void Execute (string keywords, int scope);
 	}
 
 	public class BibleSearchService:BaseService, IBibleSearchService
 	{
-		public void Execute (string keywords, SearchScopeEnum scope)
+		public void Execute (string keywords, int scope)
 		{
-			if (scope == SearchScopeEnum.Reference) {
+			if (scope == (int)SearchScopeEnum.Reference) {
 				Client.OpenURL (Constants.BASE_URI + String.Format ("search/by_reference.json?keywords={0}&caller=wpb-iPhone", keywords));
-			}else if (scope == SearchScopeEnum.Keyword){
+			}else if (scope == (int)SearchScopeEnum.Keyword){
 				Client.OpenURL (Constants.BASE_URI + String.Format ("search/by_keyword.json?keywords={0}&caller=wpb-iPhone", keywords));
 			}else{
 				Client.OpenURL (Constants.BASE_URI + String.Format ("search/by_phrase.json?keywords={0}&caller=wpb-iPhone", keywords));

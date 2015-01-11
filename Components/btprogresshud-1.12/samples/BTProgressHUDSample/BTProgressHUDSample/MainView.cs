@@ -102,7 +102,7 @@ namespace BTProgressHUDDemo
 			float x = 20;
 
 			var button = new UIButton (UIButtonType.RoundedRect);
-			button.Frame = new RectangleF (x, y, 280, 40);
+			button.Frame = new CGRect (x, y, 280, 40);
 			button.SetTitle (text, UIControlState.Normal);
 			button.TouchUpInside += (o,e) => {
 				del() ;

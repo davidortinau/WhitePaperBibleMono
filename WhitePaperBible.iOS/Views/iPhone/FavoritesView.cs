@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
@@ -158,7 +158,7 @@ namespace WhitePaperBible.iOS
 		{
 			LoginRequiredView = new LoginRequiredController (false);
 			LoginRequiredView.View.Frame = this.View.Frame;
-			//			LoginRequiredView.View.Frame = new RectangleF (0, 48, View.Bounds.Width, View.Bounds.Height);
+			//			LoginRequiredView.View.Frame = new CGRect (0, 48, View.Bounds.Width, View.Bounds.Height);
 
 			View.AddSubview (LoginRequiredView.View);
 			View.BringSubviewToFront (LoginRequiredView.View);

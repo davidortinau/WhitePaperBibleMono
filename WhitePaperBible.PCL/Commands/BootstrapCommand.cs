@@ -21,4 +21,3 @@ namespace WhitePaperBible.Core.Commands
 		}
 	}
 }
-

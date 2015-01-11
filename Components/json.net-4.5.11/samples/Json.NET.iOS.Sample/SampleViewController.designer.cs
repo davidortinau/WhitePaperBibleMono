@@ -4,7 +4,7 @@
 // actions made in the Xcode designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace Sample
 {
@@ -12,13 +12,13 @@ namespace Sample
 	partial class SampleViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITextView Json { get; set; }
+		UIKit.UITextView Json { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITextView Output { get; set; }
+		UIKit.UITextView Output { get; set; }
 
 		[Action ("Parse:")]
-		partial void Parse (MonoTouch.Foundation.NSObject sender);
+		partial void Parse (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

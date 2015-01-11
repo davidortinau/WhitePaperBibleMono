@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using MonoTouch.ObjCRuntime;
+using Foundation;
+using UIKit;
+using ObjCRuntime;
 using MonkeyArms;
 using WhitePaperBible.Core.Commands;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
-using MonoTouch.SystemConfiguration;
+using SystemConfiguration;
 using WhitePaperBible.Core.Utilities;
 //using Segment;
 using Xamarin;
@@ -58,8 +58,8 @@ namespace WhitePaperBible.iOS
 
 		public static bool HasRetina {
 			get {
-				if (MonoTouch.UIKit.UIScreen.MainScreen.RespondsToSelector (new Selector ("scale")))
-					return (MonoTouch.UIKit.UIScreen.MainScreen.Scale == 2.0);
+				if (UIKit.UIScreen.MainScreen.RespondsToSelector (new Selector ("scale")))
+					return (UIKit.UIScreen.MainScreen.Scale == 2.0);
 				else
 					return false;
 			}

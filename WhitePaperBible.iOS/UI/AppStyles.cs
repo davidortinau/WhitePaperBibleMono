@@ -1,5 +1,5 @@
-﻿using System;
-using MonoTouch.UIKit;
+using System;
+using UIKit;
 
 namespace WhitePaperBible.iOS.UI
 {
@@ -61,4 +61,3 @@ namespace WhitePaperBible.iOS.UI
 		}
 	}
 }
-

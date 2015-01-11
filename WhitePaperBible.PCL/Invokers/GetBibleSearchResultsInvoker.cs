@@ -14,9 +14,9 @@ namespace WhitePaperBible.Core.Invokers
 	{
 		public string Keywords;
 
-		public SearchScopeEnum Scope;
+		public int Scope;
 
-		public GetBibleSearchResultsInvokerArgs(string keywords, SearchScopeEnum scope)
+		public GetBibleSearchResultsInvokerArgs(string keywords, int scope)
 		{
 			this.Keywords = keywords;
 			this.Scope = scope;

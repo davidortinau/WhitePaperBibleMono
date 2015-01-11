@@ -1,9 +1,9 @@
-﻿
-using System;
-using System.Drawing;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System;
+using CoreGraphics;
+
+using Foundation;
+using UIKit;
 using IOS.Util;
 
 namespace WhitePaperBible.iOS
@@ -33,7 +33,7 @@ namespace WhitePaperBible.iOS
 			var textTop = 0;
 
 			if(ShowDone){
-				var bar = new UIToolbar (new RectangleF (0, 0, View.Bounds.Width, 48));
+				var bar = new UIToolbar (new CGRect (0, 0, View.Bounds.Width, 48));
 //				bar.BarTintColor = UIColor.DarkGray;
 				bar.TintColor = UIColor.DarkGray;
 				var done = new UIBarButtonItem (UIBarButtonSystemItem.Done);
@@ -51,7 +51,7 @@ namespace WhitePaperBible.iOS
 			}
 
 			var text  = System.IO.File.ReadAllText("WPB Terms and Conditions.txt", System.Text.Encoding.UTF8);
-			var textView = new UITextView (new RectangleF (0, textTop, View.Bounds.Width, View.Bounds.Height));
+			var textView = new UITextView (new CGRect (0, textTop, View.Bounds.Width, View.Bounds.Height));
 			textView.Text = text;
 			this.View.AddSubview (textView);
 

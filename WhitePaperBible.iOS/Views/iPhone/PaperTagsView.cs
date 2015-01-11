@@ -1,10 +1,10 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Models;
 using MonkeyArms;
@@ -69,7 +69,7 @@ namespace WhitePaperBible.iOS
 			NavigationItem.SetRightBarButtonItem (
 				new UIBarButtonItem ("Done", UIBarButtonItemStyle.Done, (sender, args)=> {
 					ReturnTags();
-					this.NavigationController.PopViewControllerAnimated(true);
+					this.NavigationController.PopViewController(true);
 				})
 				, true
 			);

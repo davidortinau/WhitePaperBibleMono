@@ -1,4 +1,4 @@
-﻿//
+//
 //  Copyright 2012  Xamarin Inc.
 //
 //    Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,9 +13,9 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 using System;
-using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
+using UIKit;
 
 namespace WhitePaperBible.UI
 {
@@ -30,7 +30,7 @@ namespace WhitePaperBible.UI
 			Initialize ();
 		}
 
-		public PlaceholderTextView (RectangleF frame)
+		public PlaceholderTextView (CGRect frame)
 			: base(frame)
 		{
 			Initialize ();

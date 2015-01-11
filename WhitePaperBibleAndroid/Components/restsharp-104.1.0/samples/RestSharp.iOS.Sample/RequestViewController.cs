@@ -16,8 +16,8 @@
 using System;
 using MonoTouch.Dialog;
 using System.Threading.Tasks;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using UIKit;
+using Foundation;
 
 namespace RestSharp.iOS.Sample
 {

@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Text;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 using WhitePaperBible.iOS.UI;
 using WhitePaperBible.iOS.Managers;
 using MonkeyArms;
 using WhitePaperBible.Core.Models;
 using System.Threading.Tasks;
 using System.Net.Http;
-using MonoTouch.Foundation;
+using Foundation;
 using WhitePaperBible.Core.Views;
 using System.Web;
 using System.Security.Cryptography;
@@ -27,7 +27,7 @@ namespace WhitePaperBible.iOS
 			private set;
 		}
 
-		public ProfileView () : base (new RectangleF (0, 0, 320, 100))
+		public ProfileView () : base (new CGRect (0, 0, 320, 100))
 		{
 			this.BackgroundColor = UIColor.Clear.FromHex(0xF8F8F8);
 
@@ -48,18 +48,18 @@ namespace WhitePaperBible.iOS
 		void CreateView ()
 		{
 			// avatar on left
-			Avatar = new UIImageView (new RectangleF(15, 15, 60, 60));
+			Avatar = new UIImageView (new CGRect(15, 15, 60, 60));
 			AddSubview (Avatar);
 
 			// name label
-			NameTxt = new UILabel (new RectangleF (15, 20, 300, 30));//90
+			NameTxt = new UILabel (new CGRect (15, 20, 300, 30));//90
 			NameTxt.Text = "";
 			AddSubview (NameTxt);
 
 			// edit button
 			EditBtn = new UIButton (UIButtonType.RoundedRect);
 			EditBtn.SetTitle ("Edit Profile", UIControlState.Normal);
-			EditBtn.Frame = new RectangleF (15, 50, 200, 30);//90
+			EditBtn.Frame = new CGRect (15, 50, 200, 30);//90
 			EditBtn.BackgroundColor = UIColor.Clear;
 			EditBtn.SetTitleColor (UIColor.DarkGray, UIControlState.Normal); 
 			EditBtn.Font = UIFont.FromName ("Helvetica", 12);

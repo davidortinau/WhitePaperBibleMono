@@ -4,7 +4,7 @@
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 using System.CodeDom.Compiler;
 
 namespace WhitePaperBible.iOS
@@ -13,19 +13,19 @@ namespace WhitePaperBible.iOS
 	partial class PaperDetailsView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIBarButtonItem favoriteButton { get; set; }
+		UIKit.UIBarButtonItem favoriteButton { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIToolbar toolbar { get; set; }
+		UIKit.UIToolbar toolbar { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIWebView webView { get; set; }
+		UIKit.UIWebView webView { get; set; }
 
 		[Action ("favoritePressed:")]
-		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender);
+		partial void favoritePressed (UIKit.UIBarButtonItem sender);
 
 		[Action ("sharePressed:")]
-		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1);
+		partial void sharePressed (UIKit.UIBarButtonItem sender1);
 		
 		void ReleaseDesignerOutlets ()
 		{

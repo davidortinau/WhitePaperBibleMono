@@ -1,18 +1,18 @@
 using System;
-using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
+using UIKit;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using System.Collections.Generic;
-using MonoTouch.ObjCRuntime;
-using MonoTouch.MessageUI;
-using MonoTouch.Twitter;
+using ObjCRuntime;
+using MessageUI;
+using Twitter;
 using System.Web;
 using MonkeyArms;
 using RestSharp;
 using WhitePaperBible.Core.Views;
-using MonoTouch.Social;
+using Social;
 using IOS.Util;
 using BigTed;
 
@@ -52,7 +52,7 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+			UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 
 			ToggleFavorite = new Invoker ();
 
@@ -90,7 +90,7 @@ namespace WhitePaperBible.iOS
 		public void DismissController()
 		{
 			InvokeOnMainThread (() => {
-				this.NavigationController.PopViewControllerAnimated (true);
+				this.NavigationController.PopViewController (true);
 			});
 
 		}
@@ -102,10 +102,11 @@ namespace WhitePaperBible.iOS
 			DI.RequestMediator (this);
 			
 			toolbar.Alpha = 1f;
-			var timer = NSTimer.CreateScheduledTimer (2, ()=> {
-				toolbar.Alpha = 0f;
-				Console.WriteLine ("hiding toolbar");
-			});
+			// TODO fix timer
+//			var timer = NSTimer.CreateScheduledTimer (2, ()=> {
+//				toolbar.Alpha = 0f;
+//				Console.WriteLine ("hiding toolbar");
+//			});
 		}
 
 		public override void ViewWillDisappear(bool animated)
@@ -117,7 +118,7 @@ namespace WhitePaperBible.iOS
 		{
 			Console.WriteLine (request.Url.AbsoluteString);
 			if (request.Url.AbsoluteString.IndexOf ("#back") > -1) {
-				NavigationController.PopViewControllerAnimated (true);
+				NavigationController.PopViewController (true);
 				return false;
 			}
 		
@@ -152,7 +153,7 @@ namespace WhitePaperBible.iOS
 
 		public void SetReferences (string html)
 		{
-			MonoTouch.UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+			UIKit.UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
 			webView.LoadHtmlString (html, NSBundle.MainBundle.BundleUrl);//NSBundle.MainBundle.BundleUrl
 		}
 
@@ -174,7 +175,7 @@ namespace WhitePaperBible.iOS
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
 
-		partial void sharePressed (MonoTouch.UIKit.UIBarButtonItem sender1)
+		partial void sharePressed (UIKit.UIBarButtonItem sender1)
 		{
 			var actionSheet = new UIActionSheet ("Sharing", null, "Cancel", null, null) {
 				Style = UIActionSheetStyle.BlackTranslucent
@@ -246,7 +247,7 @@ namespace WhitePaperBible.iOS
 			if (e.Result == MFMailComposeResult.Sent) {
 				BTProgressHUD.ShowToast("Mail Sent", true, 3000);
 			}
-			e.Controller.DismissModalViewControllerAnimated (true);
+			e.Controller.DismissModalViewController (true);
 		}
 
 		void SetFavoriteImage (UIBarButtonItem sender)
@@ -259,7 +260,7 @@ namespace WhitePaperBible.iOS
 			}
 		}
 
-		partial void favoritePressed (MonoTouch.UIKit.UIBarButtonItem sender)
+		partial void favoritePressed (UIKit.UIBarButtonItem sender)
 		{
 			ToggleFavorite.Invoke();
 			IsFavorite = !IsFavorite;
@@ -276,7 +277,7 @@ namespace WhitePaperBible.iOS
 			html += "<h2>Our Story</h2><p>If you've ever sent your child empty-handed to a class party, attended parent/teacher conferences on the wrong day or arrived an hour early for a game, you're not alone. It's not bad parenting, it's bad scheduling and trust us, we've been there too.</p><p>Year after year we would receive paper calendars from our children's schools, get several emails a week, or would be encouraged to visit websites to view upcoming events (sports teams, Boy Scouts/ Girl Scouts, ballet, band and track club all had different sites!). Sometimes we would enter the information into a paper agenda, which couldn't be shared. Or we would type everything into our computer's calendar hoping the information wouldn't change. And, as the school year progressed, updates would take the form of crumpled notes, skimmed over emails and hurried messages from coaches and teachers that didn't always make it to the master calendar. We'd often ask ourselves, \"Why can't school events appear on our smart phones or computer calendar programs?\" or \"If there is a change, couldn't someone update the calendar for us so we don't have to keep track of emails, notes, etc? Then, one day, we stopped wishing and got to work.</p><p>We are parents to three school-age (and very busy) children and now we\'re also the proud parents of MyDiem.com. We're so happy to share this much-needed tool with other busy parents. Hopefully you will find this tool helpful in keeping track of your child's activities.</p>";
 			html += "</body>";
 
-			webViewTest = new UIWebView (new RectangleF (0, 0, 320, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight));
+			webViewTest = new UIWebView (new CGRect (0, 0, 320, WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight));
 			webViewTest.SizeToFit ();
 			View.AddSubview (webViewTest);
 

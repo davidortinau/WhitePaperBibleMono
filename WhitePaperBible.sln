@@ -156,7 +156,6 @@ Global
 		{FAB67C98-EB15-4D75-8C09-AA59AD875D25}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = WhitePaperBible.iOS\WhitePaperBible.iOS.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = Flat

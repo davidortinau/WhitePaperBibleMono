@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
-using MonoTouch.MessageUI;
+using MessageUI;
 using IOS.Util;
 
 namespace WhitePaperBible.iOS

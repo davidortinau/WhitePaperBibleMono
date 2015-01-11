@@ -1,6 +1,6 @@
-﻿using System;
-using MonoTouch.UIKit;
-using System.Drawing;
+using System;
+using UIKit;
+using CoreGraphics;
 using WhitePaperBible.iOS.UI;
 using WhitePaperBible.iOS.Managers;
 using MonkeyArms;
@@ -21,7 +21,7 @@ namespace WhitePaperBible.iOS
 
 		WPBButton loginRegisterButton;
 
-		public LoginRequiredView (float height, bool showCancel=true) : base (new RectangleF (0, 0, 320, height))
+		public LoginRequiredView (float height, bool showCancel=true) : base (new CGRect (0, 0, 320, height))
 		{
 			this.BackgroundColor = AppStyles.OffWhite;
 			this.ShowCancel = showCancel;
@@ -66,7 +66,7 @@ namespace WhitePaperBible.iOS
 		void CreateDescription ()
 		{
 			if (description == null) {
-				description = new UITextView (new RectangleF (0, 50, Frame.Width, Frame.Height));
+				description = new UITextView (new CGRect (0, 50, Frame.Width, Frame.Height));
 				description.Text = ResourceManager.GetString ("loginRequired");
 				description.BackgroundColor = UIColor.Clear;
 				description.Font = AppStyles.HelveticaNeue (20);

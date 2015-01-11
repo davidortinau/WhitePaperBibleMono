@@ -4,7 +4,7 @@
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 using System.CodeDom.Compiler;
 
 namespace WhitePaperBible.iOS
@@ -13,13 +13,13 @@ namespace WhitePaperBible.iOS
 	partial class BibleSearchView
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIView ResultsContainer { get; set; }
+		UIKit.UIView ResultsContainer { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UISearchBar SearchBar { get; set; }
+		UIKit.UISearchBar SearchBar { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.NSLayoutConstraint TopConstraint { get; set; }
+		UIKit.NSLayoutConstraint TopConstraint { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

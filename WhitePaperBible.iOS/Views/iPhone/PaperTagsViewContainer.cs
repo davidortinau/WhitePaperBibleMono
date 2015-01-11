@@ -1,9 +1,9 @@
-﻿
-using System;
-using System.Drawing;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System;
+using CoreGraphics;
+
+using Foundation;
+using UIKit;
 using IOS.Util;
 
 namespace WhitePaperBible.iOS
@@ -34,7 +34,7 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
-			var bar = new UIToolbar (new RectangleF (0, 0, View.Bounds.Width, 64));
+			var bar = new UIToolbar (new CGRect (0, 0, View.Bounds.Width, 64));
 			View.AddSubview (bar);
 
 			var btn = new UIBarButtonItem (UIBarButtonSystemItem.Done);
@@ -43,7 +43,7 @@ namespace WhitePaperBible.iOS
 
 			btn.Clicked += (object sender, EventArgs e) => {
 				tagsView.ReturnTags();
-				this.ParentViewController.NavigationController.PopViewControllerAnimated(true);
+				this.ParentViewController.NavigationController.PopViewController(true);
 			};
 
 			AnalyticsUtil.TrackScreen (this.Title);
@@ -57,7 +57,7 @@ namespace WhitePaperBible.iOS
 				tagsView = new PaperTagsView ();
 				tagsView.Controller = Controller;
 
-				var containerView = new UIView (new RectangleF (0, 64, View.Bounds.Width, View.Bounds.Height - 64));
+				var containerView = new UIView (new CGRect (0, 64, View.Bounds.Width, View.Bounds.Height - 64));
 				containerView.AddSubview (tagsView.TableView);
 				View.AddSubview (containerView);
 			}
