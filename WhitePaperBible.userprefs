@@ -1,8 +1,10 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/AppDelegate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.3" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/lib/mono/2.1/Xamarin.iOS.Common.targets">
     <Files>
       <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="15" Column="15" />
+      <File FileName="WhitePaperBible.iOS/UI/ClassExtensions.cs" Line="3" Column="20" />
+      <File FileName="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/lib/mono/2.1/Xamarin.iOS.Common.targets" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

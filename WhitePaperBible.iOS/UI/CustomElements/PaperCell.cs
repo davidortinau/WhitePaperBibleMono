@@ -4,7 +4,6 @@ using UIKit;
 using MonoTouch.Dialog;
 using CoreGraphics;
 using WhitePaperBible.Core.Models;
-using UIKit.UIStringDrawing;
 
 namespace WhitePaperBible.iOS.UI.CustomElements
 {
