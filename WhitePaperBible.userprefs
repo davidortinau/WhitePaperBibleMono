@@ -1,10 +1,14 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.3" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/lib/mono/2.1/Xamarin.iOS.Common.targets">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Tests/Main.cs">
     <Files>
       <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="15" Column="15" />
       <File FileName="WhitePaperBible.iOS/UI/ClassExtensions.cs" Line="3" Column="20" />
       <File FileName="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/lib/mono/2.1/Xamarin.iOS.Common.targets" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="126" Column="1" />
+      <File FileName="WhitePaperBible.iOSWatchKitExtension/GlanceController.cs" Line="20" Column="4" />
+      <File FileName="WhitePaperBible.iOSWatchKitApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json" />
+      <File FileName="WhitePaperBible.Tests/Main.cs" Line="9" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -16,5 +20,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="29" offsetX="698" offsetY="560" expression="FileSystem.Current.LocalStorage" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <DisabledProjects>
+    <String>WhitePaperBible.Tests/WhitePaperBible.Tests.csproj</String>
+    <String>WhitePaperBibileCoreTests/WhitePaperBibile.PCL.Tests.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>

@@ -57,6 +57,8 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -245,6 +247,11 @@
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
       <Project>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</Project>
       <Name>WhitePaperBible.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhitePaperBible.iOSWatchKitExtension\WhitePaperBible.iOSWatchKitExtension.csproj">
+      <Project>{4F76FB08-D2A9-4A5C-9DB2-B52ADB169F94}</Project>
+      <Name>WhitePaperBible.iOSWatchKitExtension</Name>
+      <IsAppExtension>True</IsAppExtension>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
