@@ -4,6 +4,7 @@ using System.CodeDom.Compiler;
 using UIKit;
 using System.Collections.Generic;
 using WatchKit;
+using Newtonsoft.Json;
 
 namespace WhitePaperBible.iOSWatchKitExtension
 {
@@ -19,16 +20,21 @@ namespace WhitePaperBible.iOSWatchKitExtension
 		{
 			base.Awake (context);
 
-			papers.Add("Abiding in Christ");
-			papers.Add("Believer's Authority");
-			papers.Add("Bible Scriptures About Work");
-			papers.Add("Bible Verses about Prospering");
-			papers.Add("Encouragement to do God's work");
-			papers.Add("Encouragement to Receive by Faith");
-			papers.Add("Fear Not");
-			papers.Add("For Daily Encouragement");
-			papers.Add("God Loves Me");
-			papers.Add("God's Word");
+			GetFavorites();
+		}
+
+		void GetFavorites ()
+		{
+			WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, error) => {
+				if(error != null) {
+					Console.WriteLine (error);
+					return;
+				}
+
+				NSString json = replyInfo.ValueForKey(new NSString("payload")) as NSString;
+				papers = JsonConvert.DeserializeObject<List<string>>(json);
+				LoadTableRows();
+			});
 		}
 
 		public override void WillActivate ()

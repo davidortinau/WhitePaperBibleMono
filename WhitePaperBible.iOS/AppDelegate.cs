@@ -14,6 +14,7 @@ using WhitePaperBible.Core.Utilities;
 //using Segment;
 using Xamarin;
 using IOS.Util;
+using Newtonsoft.Json;
 
 namespace WhitePaperBible.iOS
 {
@@ -108,6 +109,28 @@ namespace WhitePaperBible.iOS
 		{
 			DI.MapClassToInterface<WebClient, IJSONWebClient> ();
 			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
+		}
+
+		public override void HandleWatchKitExtensionRequest
+		(UIApplication application, NSDictionary userInfo, Action<NSDictionary> reply)
+		{
+			List<string> papers = new List<string>();
+			papers.Add("Abiding in Christ");
+			papers.Add("Believer's Authority");
+			papers.Add("Bible Scriptures About Work");
+			papers.Add("Bible Verses about Prospering");
+			papers.Add("Encouragement to do God's work");
+			papers.Add("Encouragement to Receive by Faith");
+			papers.Add("Fear Not");
+			papers.Add("For Daily Encouragement");
+			papers.Add("God Loves Me");
+			papers.Add("God's Word");
+
+			var payload = JsonConvert.SerializeObject(papers);
+
+			reply (new NSDictionary (
+				"payload", payload
+			));
 		}
 	}
 }
