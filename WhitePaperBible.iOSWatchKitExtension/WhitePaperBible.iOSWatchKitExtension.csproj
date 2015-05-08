@@ -84,6 +84,19 @@
     <Compile Include="InterfaceController.designer.cs">
       <DependentUpon>InterfaceController.cs</DependentUpon>
     </Compile>
+    <Compile Include="FavoritesController.cs" />
+    <Compile Include="FavoritesController.designer.cs">
+      <DependentUpon>FavoritesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaperRow.cs" />
+    <Compile Include="PaperRow.designer.cs">
+      <DependentUpon>PaperRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaperController.cs" />
+    <Compile Include="PaperController.designer.cs">
+      <DependentUpon>PaperController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.AppExtension.CSharp.targets" />
   <ItemGroup>

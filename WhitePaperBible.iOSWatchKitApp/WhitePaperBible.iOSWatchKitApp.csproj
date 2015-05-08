@@ -78,6 +78,11 @@
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_58.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_55.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon_48.png" />
+    <ImageAsset Include="Resources\Images.xcassets\favorites.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\icon.imageset\header_icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icon.imageset\header_icon%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -88,9 +93,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.WatchApp.CSharp.targets" />
   <ItemGroup>
-    <BundleResource Include="Resources\icon_80.png" />
-    <BundleResource Include="Resources\icon_48.png" />
-    <BundleResource Include="Resources\favorites.png" />
-    <BundleResource Include="Resources\favorites%402x.png" />
+    <BundleResource Include="Resources\Images.xcassets\favorites.imageset\favorites.png" />
+    <BundleResource Include="Resources\Images.xcassets\favorites.imageset\favorites%402x.png" />
   </ItemGroup>
 </Project>
