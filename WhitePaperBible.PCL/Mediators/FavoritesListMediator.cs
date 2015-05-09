@@ -5,6 +5,8 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using System.Linq;
 using WhitePaperBible.Core.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace WhitePaperBible.Core.Mediators
 {
@@ -57,5 +59,10 @@ namespace WhitePaperBible.Core.Mediators
 				}
 			}
 		}
+
+//		public async Task<List<Paper>> Papers()
+//		{
+//			//
+//		}
 	}
 }

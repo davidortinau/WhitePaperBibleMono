@@ -15,7 +15,7 @@ namespace WhitePaperBible.iOSWatchKitExtension
 		{
 			base.Awake (context);
 
-			var p = context as Paper;
+			var p = context as PaperDTO;
 			if(p != null){
 				TitleLabel.SetText(p.Title);
 			}else{

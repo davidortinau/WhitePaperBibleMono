@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOSWatchKit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOSWatchKitExtension", "WhitePaperBible.iOSWatchKitExtension\WhitePaperBible.iOSWatchKitExtension.csproj", "{4F76FB08-D2A9-4A5C-9DB2-B52ADB169F94}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WhitePaperBible.WatchShared", "WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.shproj", "{8A8B5C4C-4217-43F9-88B8-DE45E07DC117}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

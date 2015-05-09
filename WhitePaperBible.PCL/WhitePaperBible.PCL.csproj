@@ -238,8 +238,11 @@
     <Folder Include="Enums\" />
     <Folder Include="Helpers\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Repositories\DownloadService.cs" />
+    <None Include="Repositories\FavoritesRepository.cs" />
   </ItemGroup>
 </Project>

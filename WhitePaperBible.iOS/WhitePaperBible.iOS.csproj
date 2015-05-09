@@ -204,6 +204,7 @@
       <DependentUpon>PapersListController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\iPhone\IPapersView.cs" />
+    <Compile Include="WatchAppManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -381,5 +382,6 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
+  <Import Project="..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems" Label="Shared" Condition="Exists('..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

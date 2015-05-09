@@ -5,12 +5,15 @@ using UIKit;
 using System.Collections.Generic;
 using WatchKit;
 using Newtonsoft.Json;
+using WhitePaperBible.WatchShared;
+using WhitePaperBible.WatchShared.MessageParams;
+using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.iOSWatchKitExtension
 {
 	partial class FavoritesController : WatchKit.WKInterfaceController
 	{
-		List<string> papers = new List<string>();
+		List<Paper> papers = new List<Paper>();
 
 		public FavoritesController (IntPtr handle) : base (handle)
 		{
@@ -23,18 +26,20 @@ namespace WhitePaperBible.iOSWatchKitExtension
 			GetFavorites();
 		}
 
-		void GetFavorites ()
+		async void GetFavorites ()
 		{
-			WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, error) => {
-				if(error != null) {
-					Console.WriteLine (error);
-					return;
-				}
+			WatchMessage<PapersResponseParams> responseMessage = null;
 
-				NSString json = replyInfo.ValueForKey(new NSString("payload")) as NSString;
-				papers = JsonConvert.DeserializeObject<List<string>>(json);
+			WatchMessage<ActionRequestParams> requestParams = new WatchMessage	<ActionRequestParams>();
+
+			try {
+				responseMessage = await WatchMessenger.RequestMessage<PapersResponseParams, ActionRequestParams> (WatchAction.Favorites, requestParams);
+				Console.WriteLine ("Got Papers");
+				papers = responseMessage.Params.Papers;
 				LoadTableRows();
-			});
+			} catch (Exception ex) {
+				Console.WriteLine (ex);
+			}
 		}
 
 		public override void WillActivate ()
@@ -52,7 +57,7 @@ namespace WhitePaperBible.iOSWatchKitExtension
 			for (var i = 0; i < papers.Count; i++) {
 				var elementRow = (PaperRow)PapersTable.GetRowController (i);
 
-				elementRow.SetData (papers [i]);
+				elementRow.SetData (papers [i].title);
 			}
 		}
 
@@ -60,16 +65,14 @@ namespace WhitePaperBible.iOSWatchKitExtension
 		{
 			var rowData = papers [(int)rowIndex];
 
-			var paper = new Paper(){
-				Title = rowData
-			};
+			var paper = (Paper)rowData;
 //			var d = new NSDictionary ();
 //			d.SetValueForKey((NSString)rowData, new NSString("paperTitle"));
-			PushController ("PaperController", paper);
+			PushController ("PaperController", new PaperDTO(){Title = paper.title, ID = paper.id});
 
 
 //			PushController ("PaperController", rowData);
-			Console.WriteLine ("Row selected:" + rowData);
+			Console.WriteLine ("Row selected:" + paper.title);
 		}
 	}
 }
