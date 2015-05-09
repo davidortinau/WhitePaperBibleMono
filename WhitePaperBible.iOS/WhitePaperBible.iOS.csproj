@@ -257,6 +257,10 @@
       <Name>WhitePaperBible.iOSWatchKitExtension</Name>
       <IsAppExtension>True</IsAppExtension>
     </ProjectReference>
+    <ProjectReference Include="..\MonkeyArmsPCL\MonkeyArmsPCL.csproj">
+      <Project>{C3B705A8-81F9-469D-8085-C5333F6FD517}</Project>
+      <Name>MonkeyArmsPCL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="btprogresshud">

@@ -1,39 +1,24 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.David's iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/WatchAppManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs">
     <Files>
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/ClassExtensions.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/GlanceController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOSWatchKitApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json" />
       <File FileName="WhitePaperBible.Tests/Main.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/PaperRow.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/FavoritesController.designer.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOSWatchKitApp/Resources/Images.xcassets/favorites.imageset/Contents.json" />
-      <File FileName="WhitePaperBible.iOSWatchKitApp/Resources/Images.xcassets/icon.imageset/Contents.json" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/PaperController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOSWatchKitExtension/PaperDTO.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/WatchConstants.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/WatchMessenger.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/WatchMessage.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/WatchMessageParams.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/MessageParams/PapersResponseParams.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/MessageParams/ActionRequestParams.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.WatchShared/WatchAction.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/WatchAppManager.cs" Line="35" Column="9" />
-      <File FileName="WhitePaperBible.WatchShared/MessageResponseStatus.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/GetFavoritesCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetFavoritesService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Models/AppModel.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Repositories/DownloadService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/MonkeyArms/DI.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/SaveStorageCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="44" Column="49" />
+      <File FileName="MonkeyArmsPCL/MonkeyArms/DI.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="8" Column="50" />
+      <File FileName="WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs" Line="19" Column="4" />
+      <File FileName="WhitePaperBible.iOSWatchKitExtension/Paper.cs" Line="31" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -48,6 +33,6 @@
   <DisabledProjects>
     <String>WhitePaperBible.Tests/WhitePaperBible.Tests.csproj</String>
     <String>WhitePaperBibileCoreTests/WhitePaperBibile.PCL.Tests.csproj</String>
+    <String>WhitePaperBible.Android/WhitePaperBible.Android.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

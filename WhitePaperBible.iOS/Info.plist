@@ -18,7 +18,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>MinimumOSVersion</key>
-	<string>8.1</string>
+	<string>8.0</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.simplyprofound.WhitePaperBible</string>
 	<key>XSAppIconAssets</key>
