@@ -4,20 +4,22 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Runtime.Serialization;
 using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 namespace WhitePaperBible.Core.Services
 {
 	public interface IGetPapersService:IBaseService
 	{
-		void Execute ();
+		Task<List<PaperNode>> Execute ();
 	}
 
 	public class GetPapersService:BaseService, IGetPapersService
 	{
-		public void Execute ()
+		public async Task<List<PaperNode>> Execute ()
 		{
 //			Client.OpenURL (Constants.BASE_URI + "papers.json?caller=wpb-iPhone");
-			Client.OpenURL (Constants.BASE_URI + "cmd/home.json?caller=wpb-iPhone");
+			await Client.OpenURL (Constants.BASE_URI + "cmd/home.json?caller=wpb-iPhone");
+			return JsonConvert.DeserializeObject<List<PaperNode>> (Client.ResponseText);
 		}
 
 		#region implemented abstract members of BaseService

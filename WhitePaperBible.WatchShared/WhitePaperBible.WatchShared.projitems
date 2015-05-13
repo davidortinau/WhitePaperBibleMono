@@ -17,6 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)MessageParams\ActionRequestParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WatchAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MessageResponseStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageParams\PaperRequestParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageParams\PaperResponseParams.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)MessageParams\" />

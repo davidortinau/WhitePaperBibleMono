@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.WatchShared.MessageParams;
 using WhitePaperBible.Core.Repositories;
+using WhitePaperBible.Core.Services;
 
 namespace WhitePaperBible.iOS
 {
@@ -34,17 +35,17 @@ namespace WhitePaperBible.iOS
 			case WatchAction.Paper:
 				{
 //					// decode message params
-//					IPCMessage<IPCParams> message = new IPCMessage<IPCParams>();
-//					message.DecodeParams(userInfo);
+					WatchMessage<PaperRequestParams> message = new WatchMessage<PaperRequestParams>();
+					message.DecodeParams(userInfo);
 //
 //					// create response message
-//					IPCMessage<IPCParams> responseMessage = new IPCMessage<IPCParams>();
-//
-//					// populate repsonse message
-//					responseMessage.ErrorCode = ErrorCode.SomeError;
-//
-//					// reply to message
-//					reply(responseMessage.EncodeParams());
+					WatchMessage<PaperResponseParams> responseMessage = new WatchMessage<PaperResponseParams>();
+
+					var repo = DI.Get<IPaperRepository>();
+					responseMessage.Params.Paper = await repo.FetchOne(message.Params.Paper);
+
+					responseMessage.ErrorCode = MessageResponseStatus.Success;
+					reply(responseMessage.EncodeParams());
 					break;
 				}
 			}
