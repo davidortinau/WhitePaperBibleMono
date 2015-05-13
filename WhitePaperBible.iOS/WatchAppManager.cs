@@ -6,12 +6,13 @@ using WhitePaperBible.Core.Mediators;
 using System.Collections.Generic;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.WatchShared.MessageParams;
+using WhitePaperBible.Core.Repositories;
 
 namespace WhitePaperBible.iOS
 {
 	static public class WatchAppManager
 	{
-		static public void ProcessMessage(NSDictionary userInfo, Action<NSDictionary> reply)
+		static async public void ProcessMessage(NSDictionary userInfo, Action<NSDictionary> reply)
 		{
 			Console.WriteLine("ProcessMessage");
 			NSNumber messageId = userInfo.ObjectForKey(new NSString(WatchConstants.KEY_ACTION)) as NSNumber;
@@ -22,33 +23,11 @@ namespace WhitePaperBible.iOS
 			{
 			case WatchAction.Favorites:
 				{
-					// create response message
 					WatchMessage<PapersResponseParams> responseMessage = new WatchMessage<PapersResponseParams>();
 
-//					var mediator = DI.Get<FavoritesListMediator>();
-//					mediator.GetFavorites
-//
-//					if (AM.Favorites != null && AM.Favorites != null) {
-//						Target.SetPapers (AM.Favorites);
-//					}else{
-//						if (AM.IsLoggedIn) {
-//							GetFavorites.Invoke ();
-//						}
-//					}
-
+					var repo = DI.Get<IFavoritesRepository>();
+					responseMessage.Params.Papers = await repo.FetchAll();
 					responseMessage.ErrorCode = MessageResponseStatus.Success;
-
-					List<Paper> papers = new List<Paper>();
-					papers.Add(new Paper(){ title = "Abiding in Christ"});
-					papers.Add(new Paper(){ title = "Believer's Authority"});
-					papers.Add(new Paper(){ title = "Bible Scriptures About Work"});
-					papers.Add(new Paper(){ title = "Bible Verses about Prospering"});
-					papers.Add(new Paper(){ title = "Encouragement to do God's work"});
-					papers.Add(new Paper(){ title = "Encouragement to Receive by Faith"});
-
-					responseMessage.Params.Papers = papers;
-
-					// reply to message
 					reply(responseMessage.EncodeParams());
 					break;
 				}

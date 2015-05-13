@@ -1,5 +1,6 @@
 using MonkeyArms;
 using WhitePaperBible.Core.Services;
+using WhitePaperBible.Core.Repositories;
 
 namespace WhitePaperBible.Core.Commands
 {
@@ -21,6 +22,8 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<SaveReferenceService, ISaveReferenceService> ();
 			DI.MapClassToInterface<DeletePaperService, IDeletePaperService> ();
 			DI.MapClassToInterface<RegisterUserService, IRegisterUserService> ();
+
+			DI.MapClassToInterface<FavoritesRepository, IFavoritesRepository> ();
 		}
 	}
 }

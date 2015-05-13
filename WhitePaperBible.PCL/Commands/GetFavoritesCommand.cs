@@ -4,6 +4,7 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Services;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace WhitePaperBible.Core.Commands
 {

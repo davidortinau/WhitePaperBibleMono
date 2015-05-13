@@ -2,12 +2,14 @@
 using System.Threading.Tasks;
 using System.Threading;
 using System.Net.Http;
+using WhitePaperBible.Core.Models;
+using System.Net;
 
 namespace WhitePaperBible.Core.Repositories
 {
 	public interface IDownloadService
 	{
-		Task<string> Download(string url, CancellationTokenSource token = null);
+		Task<string> Download(string url, CancellationTokenSource token = null, SessionCookie sessionCookie = null);
 		void CancelCurrent();
 		void Cancel(CancellationTokenSource token);
 	}
@@ -24,18 +26,24 @@ namespace WhitePaperBible.Core.Repositories
 		private readonly IModernHttpClient _modernModernHttpClient;
 		private CancellationTokenSource _currentToken;
 
-		public DownloadService(IModernHttpClient client)
+		public DownloadService()
 		{
-			_modernModernHttpClient = client;
+//			_modernModernHttpClient = new ModernHttpClient();Xamarin
 		}
 
-		public async Task<string> Download(string url, CancellationTokenSource token = null)
+		public async Task<string> Download(string url, CancellationTokenSource token = null, SessionCookie sessionCookie = null)
 		{
 			_currentToken = token ?? new CancellationTokenSource();
 
 			var handler = _modernModernHttpClient.GetNativeHandler();
 			var outerHandler = new RetryHandler(handler, 3);
 			var client = _modernModernHttpClient.Get(outerHandler);
+			if(sessionCookie != null){
+				var cookieJar = new CookieContainer ();
+				cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (sessionCookie.Name, sessionCookie.Value));
+
+			}
+
 			var msg = await client.GetAsync(url, _currentToken.Token);
 
 			if (!msg.IsSuccessStatusCode) return "Something derped";

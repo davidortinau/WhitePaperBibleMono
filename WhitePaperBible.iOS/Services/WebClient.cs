@@ -10,6 +10,7 @@ using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Utilities;
 using WhitePaperBible.Core;
+using System.Threading.Tasks;
 
 
 namespace WhitePaperBible.iOS
@@ -39,7 +40,7 @@ namespace WhitePaperBible.iOS
 			}
 		}
 
-		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
+		public async Task OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
 		{
 			ResolveNetworkUtil ();
 

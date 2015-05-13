@@ -1,6 +1,6 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.David's iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/lib/mono/2.1/Xamarin.iOS.Common.targets">
     <Files>
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/GlanceController.cs" Line="1" Column="1" />
@@ -11,20 +11,35 @@
       <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/GetFavoritesCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetFavoritesService.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Models/AppModel.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/SaveStorageCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="44" Column="49" />
+      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
       <File FileName="MonkeyArmsPCL/MonkeyArms/DI.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="8" Column="50" />
-      <File FileName="WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs" Line="19" Column="4" />
-      <File FileName="WhitePaperBible.iOSWatchKitExtension/Paper.cs" Line="31" Column="2" />
+      <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/WatchAppManager.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" Line="38" Column="24" />
+      <File FileName="WhitePaperBible.PCL/Commands/ConfigureServicesCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/DeletePaperService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/IJSONWebClient.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/lib/mono/2.1/Xamarin.iOS.Common.targets" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/PaperTagsViewContainer.cs" line="44" column="14" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Commands/LoginCommand.cs" line="55" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/DownloadService.cs" line="38" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/WatchAppManager.cs" line="30" column="54" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/AppDelegate.cs" line="117" column="29" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/WatchAppManager.cs" line="43" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" line="34" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" line="43" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" line="44" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
