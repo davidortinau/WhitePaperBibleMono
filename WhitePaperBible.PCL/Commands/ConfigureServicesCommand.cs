@@ -24,6 +24,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<RegisterUserService, IRegisterUserService> ();
 
 			DI.MapClassToInterface<FavoritesRepository, IFavoritesRepository> ();
+			DI.MapClassToInterface<PaperRepository, IPaperRepository> ();
 		}
 	}
 }

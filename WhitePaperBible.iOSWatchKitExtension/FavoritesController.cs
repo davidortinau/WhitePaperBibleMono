@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using WhitePaperBible.WatchShared;
 using WhitePaperBible.WatchShared.MessageParams;
 using WhitePaperBible.Core.Models;
+using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.iOSWatchKitExtension
 {

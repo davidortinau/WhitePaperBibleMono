@@ -2,7 +2,7 @@
 
 namespace WhitePaperBible.Core.Models
 {
-	public class Paper
+	public class PaperProxy
 	{
 		public string permalink { get; set; }
 
