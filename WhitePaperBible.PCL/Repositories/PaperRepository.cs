@@ -54,6 +54,12 @@ namespace WhitePaperBible.Core.Repositories
 
 		public async Task<Paper> FetchOne (Paper paper, bool forceRefresh = false)
 		{
+			AM = DI.Get<AppModel>();
+			paper = AM.GetPaperById(paper.id);
+
+			if(ReferencesService == null){
+				ReferencesService = DI.Get<IGetPaperReferencesService>();
+			}
 			List<ReferenceNode> nodes = await ReferencesService.Execute(paper.id);
 
 			var references = new List<Reference> ();
@@ -62,6 +68,7 @@ namespace WhitePaperBible.Core.Repositories
 			}
 
 			paper.references = references;
+			paper.WatchText = paper.HtmlContent;//paper.ToPlainText();//make it so the watch extension doesn't need this conversion code
 			return paper;
 		}
 	}

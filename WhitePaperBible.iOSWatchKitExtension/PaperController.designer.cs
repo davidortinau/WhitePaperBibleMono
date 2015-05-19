@@ -24,10 +24,6 @@ namespace WhitePaperBible.iOSWatchKitExtension
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		WatchKit.WKInterfaceLabel TitleLabel { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		WatchKit.WKInterfaceLabel ViewsLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
@@ -39,10 +35,6 @@ namespace WhitePaperBible.iOSWatchKitExtension
 			if (ContentLabel != null) {
 				ContentLabel.Dispose ();
 				ContentLabel = null;
-			}
-			if (TitleLabel != null) {
-				TitleLabel.Dispose ();
-				TitleLabel = null;
 			}
 			if (ViewsLabel != null) {
 				ViewsLabel.Dispose ();

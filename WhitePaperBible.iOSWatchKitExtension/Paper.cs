@@ -2,7 +2,7 @@
 
 namespace WhitePaperBible.Core.Models
 {
-	public class PaperProxy
+	public class Paper
 	{
 		public string permalink { get; set; }
 
@@ -21,11 +21,24 @@ namespace WhitePaperBible.Core.Models
 
 		public int user_id { get; set; }
 
-//		public AppUser Author { get; set; }
+		public string AuthorName { 
+			get {
+				return user != null ? user.Name : "Anonymous";		
+			} 
+		}
+
+		public AppUser user { get; set; }
 
 		public int view_count { get; set; }
 
 		public DateTime created_at { get; set; }
+
+		public string WatchText {get;set;}
+	}
+
+	public class AppUser
+	{
+		public string Name { get; set; }
 	}
 
 }

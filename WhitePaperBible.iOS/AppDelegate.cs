@@ -114,6 +114,7 @@ namespace WhitePaperBible.iOS
 		public override void HandleWatchKitExtensionRequest
 		(UIApplication application, NSDictionary userInfo, Action<NSDictionary> reply)
 		{
+			Console.WriteLine("AppDelegate - HandleWatchKitExtensionRequest");
 			WatchAppManager.ProcessMessage(userInfo, reply);
 
 //			var request = userInfo.Values

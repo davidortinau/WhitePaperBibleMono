@@ -34,9 +34,10 @@ namespace WhitePaperBible.iOSWatchKitExtension
 			WatchMessage<ActionRequestParams> requestParams = new WatchMessage	<ActionRequestParams>();
 
 			try {
+				Console.WriteLine("Favorites - GET PAPERS");
 				responseMessage = await WatchMessenger.RequestMessage<PapersResponseParams, ActionRequestParams> (WatchAction.Favorites, requestParams);
-				Console.WriteLine ("Got Papers");
 				papers = responseMessage.Params.Papers;
+				Console.WriteLine ("Got Papers {0}", papers.Count);
 				LoadTableRows();
 			} catch (Exception ex) {
 				Console.WriteLine (ex);

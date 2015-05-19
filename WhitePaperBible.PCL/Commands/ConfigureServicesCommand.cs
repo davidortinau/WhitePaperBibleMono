@@ -9,6 +9,7 @@ namespace WhitePaperBible.Core.Commands
 		public override void Execute (InvokerArgs args)
 		{
 			DI.MapClassToInterface<GetPapersService, IGetPapersService> ();
+			DI.MapClassToInterface<GetPaperReferencesService, IGetPaperReferencesService> ();
 			DI.MapClassToInterface<GetTagsService, IGetTagsService> ();
 			DI.MapClassToInterface<GetPapersByTagService, IGetPapersByTagService> ();
 			DI.MapClassToInterface<AuthenticateUserService, IAuthenticateUserService> ();

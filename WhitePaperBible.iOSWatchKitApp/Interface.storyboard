@@ -154,40 +154,21 @@
                     <items>
                         <group width="1" alignment="left" id="100" layout="vertical">
                             <items>
-                                <label alignment="left" text="Encouragement to Receive By Faith" id="101" numberOfLines="0">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                    <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <label alignment="left" id="102" width="1" numberOfLines="0" text="Loading...">
                                 </label>
-                                <label alignment="left" id="102" width="1" numberOfLines="0">
-                                    <string key="text">Matthew 21:22
-22 And whatever you ask in prayer, you will receive, if you have faith.”
-
-Galatians 3:2
-2 Let me ask you only this: Did you receive the Spirit by works of the law or by hearing with faith?
-
-Hebrews 11:8-11
-8 By faith Abraham obeyed when he was called to go out to a place that he was to receive as an inheritance. And he went out, not knowing where he was going. 9 By faith he went to live in the land of promise, as in a foreign land, living in tents with Isaac and Jacob, heirs with him of the same promise. 10 For he was looking forward to the city that has foundations, whose designer and builder is God. 11 By faith Sarah herself received power to conceive, even when she was past the age, since she considered him faithful who had promised.
-
-Mark 11:24
-24 Therefore I tell you, whatever you ask in prayer, believe that you have received it, and it will be yours.
-
-Hebrews 6:12
-12 so that you may not be sluggish, but imitators of those who through faith and patience inherit the promises.</string>
+                                <label alignment="left" id="103">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
                             </items>
                         </group>
-                        <label alignment="left" text="By David Ortinau" id="103">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                        </label>
-                        <label alignment="left" text="2229 Views" id="104">
+                        <label alignment="left" id="104">
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
                     <connections>
-                        <outlet property="TitleLabel" destination="101" id="name-outlet-101"/>
                         <outlet property="ContentLabel" destination="102" id="name-outlet-102"/>
-                        <outlet property="AuthorLabel" destination="103" id="name-outlet-103"/>
                         <outlet property="ViewsLabel" destination="104" id="name-outlet-104"/>
+                        <outlet property="AuthorLabel" destination="103" id="name-outlet-103"/>
                     </connections>
                 </controller>
             </objects>

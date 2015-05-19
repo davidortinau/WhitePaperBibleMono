@@ -76,7 +76,7 @@ namespace WhitePaperBible.Core.Helpers
 				{
 				case "p":
 					// treat paragraphs as crlf
-					outText.Write("\r\n");
+//					outText.Write("\r\n");
 					break;
 				}
 

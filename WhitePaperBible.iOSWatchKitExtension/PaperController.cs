@@ -19,11 +19,11 @@ namespace WhitePaperBible.iOSWatchKitExtension
 			base.Awake (context);
 
 			var p = context as PaperDTO;
-			if(p != null){
-				TitleLabel.SetText(p.Title);
-			}else{
-				TitleLabel.SetText("NULL BABY");
-			}
+//			if(p != null){
+//				TitleLabel.SetText(p.Title);
+//			}else{
+//				TitleLabel.SetText("NULL BABY");
+//			}
 
 			// get paper references
 			GetPaper(p.ID);
@@ -40,10 +40,21 @@ namespace WhitePaperBible.iOSWatchKitExtension
 				responseMessage = await WatchMessenger.RequestMessage<PaperResponseParams, PaperRequestParams> (WatchAction.Paper, requestParams);
 				Console.WriteLine ("Got Paper");
 				var paper = (Paper)responseMessage.Params.Paper;
-				this.ContentLabel.SetText(paper.ToPlainText());
+				this.ContentLabel.SetText( GetAttributedStringFromHtml(paper.WatchText) );
+				this.AuthorLabel.SetText(string.Format("By {0}", paper.AuthorName));
+				this.ViewsLabel.SetText(string.Format("{0} Views", paper.view_count));
 			} catch (Exception ex) {
 				Console.WriteLine (ex);
 			}
+		}
+
+		protected NSAttributedString GetAttributedStringFromHtml(string html)
+		{
+			NSError error = null;
+			NSAttributedString attributedString = new NSAttributedString (NSData.FromString(html), 
+				new NSAttributedStringDocumentAttributes{ DocumentType = NSDocumentType.HTML, StringEncoding = NSStringEncoding.UTF8 }, 
+				ref error);
+			return attributedString;
 		}
 
 		public override void WillActivate ()
