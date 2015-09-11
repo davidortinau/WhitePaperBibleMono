@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{8A8B5C4C-4217-43F9-88B8-DE45E07DC117}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>WhitePaperBible.WatchShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)WatchConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WatchMessenger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WatchMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WatchMessageParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageParams\PapersResponseParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageParams\ActionRequestParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WatchAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageResponseStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageParams\PaperRequestParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessageParams\PaperResponseParams.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)MessageParams\" />
+  </ItemGroup>
+</Project>

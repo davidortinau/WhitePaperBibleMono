@@ -20,9 +20,7 @@
 <resources>
 
     <style name="Theme.Tntstyle" parent="@android:style/Theme.Holo.Light">
-        <item name="android:actionBarItemBackground">@drawable/selectable_background_tntstyle</item>
         <item name="android:popupMenuStyle">@style/PopupMenu.Tntstyle</item>
-        <item name="android:dropDownListViewStyle">@style/DropDownListView.Tntstyle</item>
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tntstyle</item>
         <item name="android:actionDropDownStyle">@style/DropDownNav.Tntstyle</item>
         <item name="android:actionBarStyle">@style/ActionBar.Solid.Tntstyle</item>

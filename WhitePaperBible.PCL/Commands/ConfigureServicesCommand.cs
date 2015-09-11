@@ -1,5 +1,6 @@
 using MonkeyArms;
 using WhitePaperBible.Core.Services;
+using WhitePaperBible.Core.Repositories;
 
 namespace WhitePaperBible.Core.Commands
 {
@@ -8,6 +9,7 @@ namespace WhitePaperBible.Core.Commands
 		public override void Execute (InvokerArgs args)
 		{
 			DI.MapClassToInterface<GetPapersService, IGetPapersService> ();
+			DI.MapClassToInterface<GetPaperReferencesService, IGetPaperReferencesService> ();
 			DI.MapClassToInterface<GetTagsService, IGetTagsService> ();
 			DI.MapClassToInterface<GetPapersByTagService, IGetPapersByTagService> ();
 			DI.MapClassToInterface<AuthenticateUserService, IAuthenticateUserService> ();
@@ -21,6 +23,9 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapClassToInterface<SaveReferenceService, ISaveReferenceService> ();
 			DI.MapClassToInterface<DeletePaperService, IDeletePaperService> ();
 			DI.MapClassToInterface<RegisterUserService, IRegisterUserService> ();
+
+			DI.MapClassToInterface<FavoritesRepository, IFavoritesRepository> ();
+			DI.MapClassToInterface<PaperRepository, IPaperRepository> ();
 		}
 	}
 }

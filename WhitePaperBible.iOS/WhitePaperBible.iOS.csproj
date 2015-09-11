@@ -13,6 +13,7 @@
     <UseMSBuildEngine>True</UseMSBuildEngine>
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <XamarinInsightsApiKey>cfccbd40ee5db73c638f378c7e9130c3a90b09c0</XamarinInsightsApiKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>
@@ -25,12 +26,12 @@
     <ConsolePause>False</ConsolePause>
     <MtouchDebug>True</MtouchDebug>
     <MtouchLink>None</MtouchLink>
-    <MtouchI18n>
-    </MtouchI18n>
     <MtouchArch>i386</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchSdkVersion>8.3</MtouchSdkVersion>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -57,6 +58,9 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseSGen>true</MtouchUseSGen>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -67,6 +71,7 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
     <Optimize>false</Optimize>
@@ -78,6 +83,7 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,9 +95,6 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http">
       <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Components\Analytics-1.0.0\lib\ios\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.Extensions.dll</HintPath>
@@ -106,22 +109,29 @@
     <Reference Include="RestSharp.MonoTouch">
       <HintPath>..\Components\restsharp-104.4.0.1\lib\ios-unified\RestSharp.MonoTouch.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.9.1.107\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
-    </Reference>
-    <Reference Include="PLCrashReporterUnifiedBinding">
-      <HintPath>..\packages\Xamarin.Insights.1.9.1.107\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
-    </Reference>
     <Reference Include="PCLStorage">
       <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
     </Reference>
     <Reference Include="PCLStorage.Abstractions">
       <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="packages.config" />
+    <None Include="entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -199,6 +209,7 @@
       <DependentUpon>PapersListController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\iPhone\IPapersView.cs" />
+    <Compile Include="WatchAppManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -245,6 +256,15 @@
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
       <Project>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</Project>
       <Name>WhitePaperBible.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhitePaperBible.iOSWatchKitExtension\WhitePaperBible.iOSWatchKitExtension.csproj">
+      <Project>{4F76FB08-D2A9-4A5C-9DB2-B52ADB169F94}</Project>
+      <Name>WhitePaperBible.iOSWatchKitExtension</Name>
+      <IsAppExtension>True</IsAppExtension>
+    </ProjectReference>
+    <ProjectReference Include="..\MonkeyArmsPCL\MonkeyArmsPCL.csproj">
+      <Project>{C3B705A8-81F9-469D-8085-C5333F6FD517}</Project>
+      <Name>MonkeyArmsPCL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -371,5 +391,7 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
+  <Import Project="..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems" Label="Shared" Condition="Exists('..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
 </Project>

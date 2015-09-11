@@ -10,6 +10,8 @@ using MonkeyArms;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Utilities;
 using WhitePaperBible.Core;
+using System.Threading.Tasks;
+using System.Threading;
 
 
 namespace WhitePaperBible.iOS
@@ -39,7 +41,7 @@ namespace WhitePaperBible.iOS
 			}
 		}
 
-		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
+		public async Task OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
 		{
 			ResolveNetworkUtil ();
 
@@ -58,26 +60,47 @@ namespace WhitePaperBible.iOS
 
 				AddNetworkActivity (url);
 
-				client.ExecuteAsync (request, response => {
-					if (response.Cookies.Count > 0) {
-						foreach(var cookie in response.Cookies){
-							if(cookie.Name == "_whitepaperbible_session"){
-								UserSessionCookie = new SessionCookie { 
-									Name = cookie.Name,
-									Value = cookie.Value
-								};
-							}
+				var cancellationTokenSource = new CancellationTokenSource();
+				var response = await client.ExecuteTaskAsync (request, cancellationTokenSource.Token);
+				if (response.Cookies.Count > 0) {
+					foreach(var cookie in response.Cookies){
+						if(cookie.Name == "_whitepaperbible_session"){
+							UserSessionCookie = new SessionCookie { 
+								Name = cookie.Name,
+								Value = cookie.Value
+							};
 						}
 					}
+				}
 
-					ResponseText = response.Content;
-					RemoveNetworkActivity (url);
-					if (response.ResponseStatus == ResponseStatus.Error) {
-						DispatchError ();
-					} else {
-						DispatchComplete ();
-					}
-				});
+				ResponseText = response.Content;
+				RemoveNetworkActivity (url);
+				if (response.ResponseStatus == ResponseStatus.Error) {
+					DispatchError ();
+				} else {
+					DispatchComplete ();
+				}
+
+//				client.ExecuteAsync (request, response => {
+//					if (response.Cookies.Count > 0) {
+//						foreach(var cookie in response.Cookies){
+//							if(cookie.Name == "_whitepaperbible_session"){
+//								UserSessionCookie = new SessionCookie { 
+//									Name = cookie.Name,
+//									Value = cookie.Value
+//								};
+//							}
+//						}
+//					}
+//
+//					ResponseText = response.Content;
+//					RemoveNetworkActivity (url);
+//					if (response.ResponseStatus == ResponseStatus.Error) {
+//						DispatchError ();
+//					} else {
+//						DispatchComplete ();
+//					}
+//				});
 			}
 		}
 

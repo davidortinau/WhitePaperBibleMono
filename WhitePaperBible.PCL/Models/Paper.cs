@@ -69,7 +69,7 @@ namespace WhitePaperBible.Core.Models
 		public string ToPlainText()
 		{
 			var txt = "";
-			txt +=	title + Environment.NewLine;
+//			txt +=	title + Environment.NewLine;
 			txt += description + Environment.NewLine;
 
 			if (references != null) {
@@ -80,6 +80,9 @@ namespace WhitePaperBible.Core.Models
 
 			return txt;
 		}
+
+		[DataMember(Name = "WatchText")] 
+		public string WatchText {get;set;}
 
 		private string generateHtmlContent()
 		{

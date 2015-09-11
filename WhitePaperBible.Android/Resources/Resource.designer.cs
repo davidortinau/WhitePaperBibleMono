@@ -46,8 +46,29 @@ namespace WhitePaperBible.Android
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int custom_theme_color = 2131099648;
+			// aapt resource value: 0x7f050007
+			public const int custom_theme_color = 2131034119;
+			
+			// aapt resource value: 0x7f050000
+			public const int standard_background = 2131034112;
+			
+			// aapt resource value: 0x7f050004
+			public const int tntblue = 2131034116;
+			
+			// aapt resource value: 0x7f050003
+			public const int tntgreen = 2131034115;
+			
+			// aapt resource value: 0x7f050006
+			public const int tntpurpledark = 2131034118;
+			
+			// aapt resource value: 0x7f050005
+			public const int tntpurplemedium = 2131034117;
+			
+			// aapt resource value: 0x7f050002
+			public const int tntred = 2131034114;
+			
+			// aapt resource value: 0x7f050001
+			public const int tntwhite = 2131034113;
 			
 			static Color()
 			{
@@ -63,31 +84,244 @@ namespace WhitePaperBible.Android
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int HeaderBackground = 2130837504;
+			public const int ab_bottom_solid_tntstyle = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int ab_solid_tntstyle = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ListItemSelector = 2130837506;
+			public const int ab_stacked_solid_tntstyle = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int logo_300 = 2130837507;
+			public const int ab_texture_tile_tntstyle = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int splash = 2130837508;
+			public const int ab_transparent_tntstyle = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int WPB_128 = 2130837509;
+			public const int background_actionbar = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int WPB_16 = 2130837510;
+			public const int background_login = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int WPB_32 = 2130837511;
+			public const int background_login_bottom = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int WPB_48 = 2130837512;
+			public const int background_login_middle = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int background_login_top = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int background_menu = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int background_menu_current = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int background_myprogress_path = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int background_workouts = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int btn_cab_done_default_tntstyle = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int btn_cab_done_focused_tntstyle = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int btn_cab_done_pressed_tntstyle = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int btn_cab_done_tntstyle = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int cab_background_bottom_tntstyle = 2130837522;
+			
+			// aapt resource value: 0x7f020013
+			public const int cab_background_top_tntstyle = 2130837523;
+			
+			// aapt resource value: 0x7f020014
+			public const int HeaderBackground = 2130837524;
+			
+			// aapt resource value: 0x7f020015
+			public const int ic_action_done = 2130837525;
+			
+			// aapt resource value: 0x7f020016
+			public const int ic_actionbar_back = 2130837526;
+			
+			// aapt resource value: 0x7f020017
+			public const int ic_actionbar_calendar = 2130837527;
+			
+			// aapt resource value: 0x7f020018
+			public const int ic_actionbar_logo = 2130837528;
+			
+			// aapt resource value: 0x7f020019
+			public const int ic_actionbar_menu = 2130837529;
+			
+			// aapt resource value: 0x7f02001a
+			public const int ic_actionbar_message = 2130837530;
+			
+			// aapt resource value: 0x7f02001b
+			public const int ic_actionbar_share = 2130837531;
+			
+			// aapt resource value: 0x7f02001c
+			public const int ic_back_navigation_workouts = 2130837532;
+			
+			// aapt resource value: 0x7f02001d
+			public const int ic_calendar_complete = 2130837533;
+			
+			// aapt resource value: 0x7f02001e
+			public const int ic_calendar_missed = 2130837534;
+			
+			// aapt resource value: 0x7f02001f
+			public const int ic_calendar_rest = 2130837535;
+			
+			// aapt resource value: 0x7f020020
+			public const int ic_calendar_running = 2130837536;
+			
+			// aapt resource value: 0x7f020021
+			public const int ic_launcher = 2130837537;
+			
+			// aapt resource value: 0x7f020022
+			public const int ic_menu_myprogress = 2130837538;
+			
+			// aapt resource value: 0x7f020023
+			public const int ic_menu_settings = 2130837539;
+			
+			// aapt resource value: 0x7f020024
+			public const int ic_menu_team = 2130837540;
+			
+			// aapt resource value: 0x7f020025
+			public const int ic_menu_workouts = 2130837541;
+			
+			// aapt resource value: 0x7f020026
+			public const int ic_myprogress_countdown = 2130837542;
+			
+			// aapt resource value: 0x7f020027
+			public const int ic_myprogress_pace = 2130837543;
+			
+			// aapt resource value: 0x7f020028
+			public const int ic_myprogress_total = 2130837544;
+			
+			// aapt resource value: 0x7f020029
+			public const int ic_navigation_drawer = 2130837545;
+			
+			// aapt resource value: 0x7f02002a
+			public const int ic_next_navigation_workouts = 2130837546;
+			
+			// aapt resource value: 0x7f02002b
+			public const int ic_player_next = 2130837547;
+			
+			// aapt resource value: 0x7f02002c
+			public const int ic_player_playlist = 2130837548;
+			
+			// aapt resource value: 0x7f02002d
+			public const int ic_player_prev = 2130837549;
+			
+			// aapt resource value: 0x7f02002e
+			public const int ic_success = 2130837550;
+			
+			// aapt resource value: 0x7f02002f
+			public const int ic_workouts_silhuette_complete = 2130837551;
+			
+			// aapt resource value: 0x7f020030
+			public const int ic_workouts_silhuette_missed = 2130837552;
+			
+			// aapt resource value: 0x7f020031
+			public const int ic_workouts_silhuette_rest = 2130837553;
+			
+			// aapt resource value: 0x7f020032
+			public const int ic_workouts_silhuette_running = 2130837554;
+			
+			// aapt resource value: 0x7f020033
+			public const int Icon = 2130837555;
+			
+			// aapt resource value: 0x7f020034
+			public const int list_focused_tntstyle = 2130837556;
+			
+			// aapt resource value: 0x7f020035
+			public const int list_pressed_tntstyle = 2130837557;
+			
+			// aapt resource value: 0x7f020036
+			public const int ListItemSelector = 2130837558;
+			
+			// aapt resource value: 0x7f020037
+			public const int loginbackgroundrepeat = 2130837559;
+			
+			// aapt resource value: 0x7f020038
+			public const int logo_300 = 2130837560;
+			
+			// aapt resource value: 0x7f020039
+			public const int menu_dropdown_panel_tntstyle = 2130837561;
+			
+			// aapt resource value: 0x7f02003a
+			public const int progress_bg_tntstyle = 2130837562;
+			
+			// aapt resource value: 0x7f02003b
+			public const int progress_horizontal_tntstyle = 2130837563;
+			
+			// aapt resource value: 0x7f02003c
+			public const int progress_primary_tntstyle = 2130837564;
+			
+			// aapt resource value: 0x7f02003d
+			public const int progress_secondary_tntstyle = 2130837565;
+			
+			// aapt resource value: 0x7f02003e
+			public const int selectable_background_tntstyle = 2130837566;
+			
+			// aapt resource value: 0x7f02003f
+			public const int spinner_ab_default_tntstyle = 2130837567;
+			
+			// aapt resource value: 0x7f020040
+			public const int spinner_ab_disabled_tntstyle = 2130837568;
+			
+			// aapt resource value: 0x7f020041
+			public const int spinner_ab_focused_tntstyle = 2130837569;
+			
+			// aapt resource value: 0x7f020042
+			public const int spinner_ab_pressed_tntstyle = 2130837570;
+			
+			// aapt resource value: 0x7f020043
+			public const int spinner_background_ab_tntstyle = 2130837571;
+			
+			// aapt resource value: 0x7f020044
+			public const int splash = 2130837572;
+			
+			// aapt resource value: 0x7f020045
+			public const int tab_indicator_ab_tntstyle = 2130837573;
+			
+			// aapt resource value: 0x7f020046
+			public const int tab_selected_focused_tntstyle = 2130837574;
+			
+			// aapt resource value: 0x7f020047
+			public const int tab_selected_pressed_tntstyle = 2130837575;
+			
+			// aapt resource value: 0x7f020048
+			public const int tab_selected_tntstyle = 2130837576;
+			
+			// aapt resource value: 0x7f020049
+			public const int tab_unselected_focused_tntstyle = 2130837577;
+			
+			// aapt resource value: 0x7f02004a
+			public const int tab_unselected_pressed_tntstyle = 2130837578;
+			
+			// aapt resource value: 0x7f02004b
+			public const int tab_unselected_tntstyle = 2130837579;
+			
+			// aapt resource value: 0x7f02004c
+			public const int WPB_128 = 2130837580;
+			
+			// aapt resource value: 0x7f02004d
+			public const int WPB_16 = 2130837581;
+			
+			// aapt resource value: 0x7f02004e
+			public const int WPB_32 = 2130837582;
+			
+			// aapt resource value: 0x7f02004f
+			public const int WPB_48 = 2130837583;
 			
 			static Drawable()
 			{
@@ -102,26 +336,47 @@ namespace WhitePaperBible.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080004
-			public const int detailsWebView = 2131230724;
-			
-			// aapt resource value: 0x7f080001
-			public const int linearLayout1 = 2131230721;
-			
-			// aapt resource value: 0x7f080006
-			public const int menu_search = 2131230726;
-			
-			// aapt resource value: 0x7f080003
-			public const int progressBar1 = 2131230723;
+			// aapt resource value: 0x7f080002
+			public const int action_calendar = 2131230722;
 			
 			// aapt resource value: 0x7f080000
-			public const int relativeLayout1 = 2131230720;
+			public const int action_email = 2131230720;
 			
-			// aapt resource value: 0x7f080002
-			public const int textView1 = 2131230722;
+			// aapt resource value: 0x7f080003
+			public const int action_save = 2131230723;
+			
+			// aapt resource value: 0x7f080001
+			public const int action_share = 2131230721;
+			
+			// aapt resource value: 0x7f08000b
+			public const int detailsWebView = 2131230731;
+			
+			// aapt resource value: 0x7f080004
+			public const int emailText = 2131230724;
+			
+			// aapt resource value: 0x7f080008
+			public const int linearLayout1 = 2131230728;
+			
+			// aapt resource value: 0x7f080006
+			public const int loginButton = 2131230726;
+			
+			// aapt resource value: 0x7f08000d
+			public const int menu_search = 2131230733;
 			
 			// aapt resource value: 0x7f080005
-			public const int titleTextView = 2131230725;
+			public const int passwordText = 2131230725;
+			
+			// aapt resource value: 0x7f08000a
+			public const int progressBar1 = 2131230730;
+			
+			// aapt resource value: 0x7f080007
+			public const int relativeLayout1 = 2131230727;
+			
+			// aapt resource value: 0x7f080009
+			public const int textView1 = 2131230729;
+			
+			// aapt resource value: 0x7f08000c
+			public const int titleTextView = 2131230732;
 			
 			static Id()
 			{
@@ -137,16 +392,22 @@ namespace WhitePaperBible.Android
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int ActionBarMenu = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int PaperDetail = 2130903041;
+			public const int LogIn = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int PaperListItem = 2130903042;
+			public const int Main = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int PapersList = 2130903043;
+			public const int PaperDetail = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int PaperListItem = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int PapersList = 2130903045;
 			
 			static Layout()
 			{
@@ -186,6 +447,12 @@ namespace WhitePaperBible.Android
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
 			
+			// aapt resource value: 0x7f040002
+			public const int email = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int password = 2130968579;
+			
 			static String()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -199,29 +466,68 @@ namespace WhitePaperBible.Android
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int CustomTheme = 2131034113;
+			// aapt resource value: 0x7f060009
+			public const int ActionBar_Solid_Tntstyle = 2131099657;
 			
-			// aapt resource value: 0x7f050002
-			public const int GreenButton = 2131034114;
+			// aapt resource value: 0x7f06000a
+			public const int ActionBar_TitleTextStyle_Tntstyle = 2131099658;
 			
-			// aapt resource value: 0x7f050007
-			public const int GroupedListItem = 2131034119;
+			// aapt resource value: 0x7f06000b
+			public const int ActionBar_Transparent_Tntstyle = 2131099659;
 			
-			// aapt resource value: 0x7f050006
-			public const int GroupedListItemHeader = 2131034118;
+			// aapt resource value: 0x7f06000e
+			public const int ActionBarTabStyle_Tntstyle = 2131099662;
 			
-			// aapt resource value: 0x7f050003
-			public const int HeaderButton = 2131034115;
+			// aapt resource value: 0x7f060011
+			public const int ActionButton_CloseMode_Tntstyle = 2131099665;
 			
-			// aapt resource value: 0x7f050004
-			public const int IntroCard = 2131034116;
+			// aapt resource value: 0x7f060013
+			public const int CustomActionBarTheme = 2131099667;
 			
-			// aapt resource value: 0x7f050005
-			public const int ListTitleFont = 2131034117;
+			// aapt resource value: 0x7f060001
+			public const int CustomTheme = 2131099649;
 			
-			// aapt resource value: 0x7f050000
-			public const int Theme_Splash = 2131034112;
+			// aapt resource value: 0x7f06000d
+			public const int DropDownListView_Tntstyle = 2131099661;
+			
+			// aapt resource value: 0x7f06000f
+			public const int DropDownNav_Tntstyle = 2131099663;
+			
+			// aapt resource value: 0x7f060002
+			public const int GreenButton = 2131099650;
+			
+			// aapt resource value: 0x7f060007
+			public const int GroupedListItem = 2131099655;
+			
+			// aapt resource value: 0x7f060006
+			public const int GroupedListItemHeader = 2131099654;
+			
+			// aapt resource value: 0x7f060003
+			public const int HeaderButton = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int IntroCard = 2131099652;
+			
+			// aapt resource value: 0x7f060005
+			public const int ListTitleFont = 2131099653;
+			
+			// aapt resource value: 0x7f060014
+			public const int MyActionBar = 2131099668;
+			
+			// aapt resource value: 0x7f06000c
+			public const int PopupMenu_Tntstyle = 2131099660;
+			
+			// aapt resource value: 0x7f060010
+			public const int ProgressBar_Tntstyle = 2131099664;
+			
+			// aapt resource value: 0x7f060000
+			public const int Theme_Splash = 2131099648;
+			
+			// aapt resource value: 0x7f060008
+			public const int Theme_Tntstyle = 2131099656;
+			
+			// aapt resource value: 0x7f060012
+			public const int Theme_Tntstyle_Widget = 2131099666;
 			
 			static Style()
 			{

@@ -14,6 +14,8 @@ using WhitePaperBible.Core.Utilities;
 //using Segment;
 using Xamarin;
 using IOS.Util;
+using Newtonsoft.Json;
+using WhitePaperBible.Core.Repositories;
 
 namespace WhitePaperBible.iOS
 {
@@ -108,6 +110,52 @@ namespace WhitePaperBible.iOS
 		{
 			DI.MapClassToInterface<WebClient, IJSONWebClient> ();
 			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
+		}
+
+		async public override void HandleWatchKitExtensionRequest
+		(UIApplication application, NSDictionary userInfo, Action<NSDictionary> reply)
+		{
+			// need to make sure the app is all ready to go first
+			// is AppModel ready and has a UserSessionCookie
+			// call LoadStorageCommand and listen for StorageLoaded or make it async
+			initMonkeyArms();
+			var appModel = DI.Get<AppModel>();
+			if(appModel.UserSessionCookie == null){
+				Console.WriteLine("NO COOKIE");
+				var loadCmd = DI.Get<LoadStorageCommand>();
+				try{
+					Console.WriteLine("TRY TO LOAD DATA STORE");
+					await loadCmd.LoadStore();
+				}catch(Exception ex){
+					reply (new NSDictionary (
+						"payload", "error " + ex.Message
+					)
+					);
+					return;	
+				}
+			}
+
+			WatchAppManager.ProcessMessage(userInfo, reply);
+
+//			var request = userInfo.Values
+//
+//			List<string> papers = new List<string>();
+//			papers.Add("Abiding in Christ");
+//			papers.Add("Believer's Authority");
+//			papers.Add("Bible Scriptures About Work");
+//			papers.Add("Bible Verses about Prospering");
+//			papers.Add("Encouragement to do God's work");
+//			papers.Add("Encouragement to Receive by Faith");
+//			papers.Add("Fear Not");
+//			papers.Add("For Daily Encouragement");
+//			papers.Add("God Loves Me");
+//			papers.Add("God's Word");
+//
+//			var payload = JsonConvert.SerializeObject(papers);
+//
+//			reply (new NSDictionary (
+//				"payload", payload
+//			));
 		}
 	}
 }

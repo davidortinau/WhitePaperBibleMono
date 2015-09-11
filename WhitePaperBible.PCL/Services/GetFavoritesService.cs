@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Net;
 using MonkeyArms;
+using System.Threading.Tasks;
 
 namespace WhitePaperBible.Core.Services
 {
 	public interface IGetFavoritesService:IBaseService
 	{
-		void Execute ();
+		Task<List<PaperNode>> Execute ();
 	}
 
 	public class GetFavoritesService:BaseService, IGetFavoritesService, IInjectingTarget
@@ -17,9 +18,10 @@ namespace WhitePaperBible.Core.Services
 		[Inject]
 		public AppModel AM;
 
-		public void Execute ()
+		public async Task<List<PaperNode>> Execute ()
 		{
-			Client.OpenURL (Constants.BASE_URI + "favorite/index/?caller=wpb-iPhone", MethodEnum.GET, true);
+			await Client.OpenURL (Constants.BASE_URI + "favorite/index/?caller=wpb-iPhone", MethodEnum.GET, true);
+			return JsonConvert.DeserializeObject<List<PaperNode>> (Client.ResponseText);
 		}
 
 		#region implemented abstract members of BaseService
