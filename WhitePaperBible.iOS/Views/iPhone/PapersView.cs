@@ -31,10 +31,7 @@ namespace WhitePaperBible.iOS
 //			this.Filter = new Invoker ();
 //			this.OnPaperSelected = new Invoker ();
 			this.AddPaper = new Invoker ();
-
 		}
-
-
 
 		#region IPapersListView implementation
 

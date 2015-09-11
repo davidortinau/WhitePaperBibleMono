@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 using WhitePaperBible.WatchShared;
 using WhitePaperBible.WatchShared.MessageParams;
 using WhitePaperBible.Core.Models;
-using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.iOSWatchKitExtension
 {
@@ -30,15 +29,19 @@ namespace WhitePaperBible.iOSWatchKitExtension
 		async void GetFavorites ()
 		{
 			WatchMessage<PapersResponseParams> responseMessage = null;
-
 			WatchMessage<ActionRequestParams> requestParams = new WatchMessage	<ActionRequestParams>();
 
 			try {
-				Console.WriteLine("Favorites - GET PAPERS");
+				Console.WriteLine("Favorites - GET");
 				responseMessage = await WatchMessenger.RequestMessage<PapersResponseParams, ActionRequestParams> (WatchAction.Favorites, requestParams);
 				papers = responseMessage.Params.Papers;
-				Console.WriteLine ("Got Papers {0}", papers.Count);
-				LoadTableRows();
+				if(papers == null){
+					Console.WriteLine ("Null Papers");
+					this.SetTitle("Error!");
+				}else{
+					Console.WriteLine ("Got Papers {0}", papers.Count);
+					LoadTableRows();
+				}
 			} catch (Exception ex) {
 				Console.WriteLine (ex);
 			}

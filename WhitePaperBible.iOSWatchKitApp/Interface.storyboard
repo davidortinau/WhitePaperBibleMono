@@ -134,12 +134,19 @@
         <!--All Papers-->
         <scene sceneID="vio-rh-CBw">
             <objects>
-                <controller title="All Papers" id="dwp-f3-xxo">
+                <controller title="All Papers" id="dwp-f3-xxo" customClass="AllPapersController">
                     <items>
                         <table alignment="left" id="ter-eI-gD8">
                             <items>
-                                <tableRow id="gnB-Vi-VbO">
-                                    <group key="rootItem" width="1" alignment="left" id="BAE-68-14g"/>
+                                <tableRow id="gnB-Vi-VbO" customClass="PaperRow">
+                                    <group key="rootItem" width="1" alignment="left" id="BAE-68-14g">
+                                        <items>
+                                            <label alignment="left" text="Label" id="105" verticalAlignment="center"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="TitleLabel" destination="105" id="name-outlet-105"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

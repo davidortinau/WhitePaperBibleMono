@@ -18,12 +18,14 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>8.2</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.simplyprofound.WhitePaperBible</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Images.xcassets/AppIcons-1.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
+	<key>CFBundleVersion</key>
+	<string>2</string>
 </dict>
 </plist>

@@ -13,6 +13,7 @@
     <UseMSBuildEngine>True</UseMSBuildEngine>
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <XamarinInsightsApiKey>cfccbd40ee5db73c638f378c7e9130c3a90b09c0</XamarinInsightsApiKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>
@@ -25,12 +26,12 @@
     <ConsolePause>False</ConsolePause>
     <MtouchDebug>True</MtouchDebug>
     <MtouchLink>None</MtouchLink>
-    <MtouchI18n>
-    </MtouchI18n>
     <MtouchArch>i386</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchSdkVersion>8.3</MtouchSdkVersion>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -114,17 +115,17 @@
     <Reference Include="PCLStorage.Abstractions">
       <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="ModernHttpClient">
-      <HintPath>..\packages\modernhttpclient.2.4.1\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.10.2.110\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
     </Reference>
     <Reference Include="PLCrashReporterUnifiedBinding">
-      <HintPath>..\packages\Xamarin.Insights.1.10.2.110\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -392,4 +393,5 @@
   </ItemGroup>
   <Import Project="..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems" Label="Shared" Condition="Exists('..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
 </Project>

@@ -15,6 +15,7 @@ using WhitePaperBible.Core.Utilities;
 using Xamarin;
 using IOS.Util;
 using Newtonsoft.Json;
+using WhitePaperBible.Core.Repositories;
 
 namespace WhitePaperBible.iOS
 {
@@ -111,10 +112,29 @@ namespace WhitePaperBible.iOS
 			DI.MapCommandToInvoker <BootstrapCommand, BootstrapInvoker> ().Invoke ();
 		}
 
-		public override void HandleWatchKitExtensionRequest
+		async public override void HandleWatchKitExtensionRequest
 		(UIApplication application, NSDictionary userInfo, Action<NSDictionary> reply)
 		{
-			Console.WriteLine("AppDelegate - HandleWatchKitExtensionRequest");
+			// need to make sure the app is all ready to go first
+			// is AppModel ready and has a UserSessionCookie
+			// call LoadStorageCommand and listen for StorageLoaded or make it async
+			initMonkeyArms();
+			var appModel = DI.Get<AppModel>();
+			if(appModel.UserSessionCookie == null){
+				Console.WriteLine("NO COOKIE");
+				var loadCmd = DI.Get<LoadStorageCommand>();
+				try{
+					Console.WriteLine("TRY TO LOAD DATA STORE");
+					await loadCmd.LoadStore();
+				}catch(Exception ex){
+					reply (new NSDictionary (
+						"payload", "error " + ex.Message
+					)
+					);
+					return;	
+				}
+			}
+
 			WatchAppManager.ProcessMessage(userInfo, reply);
 
 //			var request = userInfo.Values

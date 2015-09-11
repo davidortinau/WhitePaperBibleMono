@@ -41,6 +41,9 @@ namespace WhitePaperBible.Core.Mediators
 				Target.ShowLoginButton ();
 			}
 
+			if (AM.IsLoggedIn) {
+				GetFavorites.Invoke ();
+			}
 			SetPapers ();
 		}
 

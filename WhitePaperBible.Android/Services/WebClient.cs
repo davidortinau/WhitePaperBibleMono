@@ -5,6 +5,7 @@ using WhitePaperBible.Core.Models;
 using System.Net;
 using WhitePaperBible.Core;
 using MonkeyArms;
+using System.Threading.Tasks;
 
 namespace WhitePaperBible.Android.Services
 {
@@ -13,7 +14,7 @@ namespace WhitePaperBible.Android.Services
 		[Inject]
 		public AppModel AM;
 
-		public void OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
+		public async Task OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
 		{
 
 			AppModel AM = DI.Get<AppModel> ();

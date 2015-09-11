@@ -48,10 +48,10 @@
       <HintPath>..\Components\restsharp-104.4.0.1\lib\android\RestSharp.MonoDroid.dll</HintPath>
     </Reference>
     <Reference Include="PCLStorage">
-      <HintPath>..\packages\PCLStorage.0.9.6\lib\monoandroid\PCLStorage.dll</HintPath>
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\monoandroid\PCLStorage.dll</HintPath>
     </Reference>
     <Reference Include="PCLStorage.Abstractions">
-      <HintPath>..\packages\PCLStorage.0.9.6\lib\monoandroid\PCLStorage.Abstractions.dll</HintPath>
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\monoandroid\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -69,7 +69,6 @@
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="packages.config" />
     <None Include="Resources\Resources\drawable\HeaderBackground.png" />
     <None Include="Resources\Resources\drawable\Icon 2.png" />
     <None Include="Resources\Resources\drawable\Icon.png" />
@@ -372,6 +371,7 @@
     <None Include="Resources\Resources\drawable-xxhdpi\tab_unselected_focused_tntstyle.9.png" />
     <None Include="Resources\Resources\drawable-xxhdpi\tab_unselected_pressed_tntstyle.9.png" />
     <None Include="Resources\Resources\drawable-xxhdpi\tab_unselected_tntstyle.9.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -396,12 +396,87 @@
     <AndroidResource Include="Resources\values\Styles_wpb.xml" />
     <AndroidResource Include="Resources\layout\ActionBarMenu.axml" />
     <AndroidResource Include="Resources\layout\LogIn.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_solid_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_stacked_solid_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_texture_tile_tntstyle.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_transparent_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_actionbar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_login_bottom.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_login_middle.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_login_top.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_login.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_menu_current.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_menu.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_myprogress_path.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\background_workouts.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_default_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_focused_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_pressed_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_bottom_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_top_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_done.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_actionbar_back.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_actionbar_calendar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_actionbar_logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_actionbar_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_actionbar_message.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_actionbar_share.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_back_navigation_workouts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_calendar_complete.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_calendar_missed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_calendar_rest.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_calendar_running.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_myprogress.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_team.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_workouts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myprogress_countdown.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myprogress_pace.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_myprogress_total.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_navigation_drawer.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_next_navigation_workouts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_player_next.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_player_playlist.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_player_prev.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_success.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_workouts_silhuette_complete.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_workouts_silhuette_missed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_workouts_silhuette_rest.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_workouts_silhuette_running.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_focused_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_pressed_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_dropdown_panel_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_bg_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_primary_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_secondary_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_default_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_disabled_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_focused_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_pressed_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_focused_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_pressed_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_focused_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_pressed_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_tntstyle.9.png" />
+    <AndroidResource Include="Resources\drawable\loginbackgroundrepeat.xml" />
+    <AndroidResource Include="Resources\drawable\tab_indicator_ab_tntstyle.xml" />
+    <AndroidResource Include="Resources\drawable\spinner_background_ab_tntstyle.xml" />
+    <AndroidResource Include="Resources\drawable\selectable_background_tntstyle.xml" />
+    <AndroidResource Include="Resources\drawable\progress_horizontal_tntstyle.xml" />
+    <AndroidResource Include="Resources\drawable\btn_cab_done_tntstyle.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
       <Project>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</Project>
       <Name>WhitePaperBible.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonkeyArmsPCL\MonkeyArmsPCL.csproj">
+      <Project>{C3B705A8-81F9-469D-8085-C5333F6FD517}</Project>
+      <Name>MonkeyArmsPCL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

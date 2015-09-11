@@ -46,7 +46,7 @@ namespace WhitePaperBible.iOS
 
 			InvokeOnMainThread (delegate {
 
-				Root = new RootElement ("Papers") {
+				Root = new RootElement ("Favorites") {
 					from node in papers
 					group node by (node.title [0].ToString ().ToUpper ()) into alpha
 					orderby alpha.Key

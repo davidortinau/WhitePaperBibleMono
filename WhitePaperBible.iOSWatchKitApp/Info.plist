@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>WhitePaperBible.iOSWatchKitApp</string>
+	<string>White Paper Bible</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.simplyprofound.WhitePaperBible.watchkitapp</string>
 	<key>CFBundleDevelopmentRegion</key>

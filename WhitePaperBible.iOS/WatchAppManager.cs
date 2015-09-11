@@ -29,7 +29,18 @@ namespace WhitePaperBible.iOS
 
 					var repo = DI.Get<IFavoritesRepository>();
 					Console.WriteLine("Favorites - Got Repo");
-					responseMessage.Params.Papers = await repo.FetchAll();
+
+					try{
+						responseMessage.Params.Papers = await repo.FetchAll();
+					}catch(Exception ex){
+						reply (new NSDictionary (
+							"payload", "error " + ex.Message
+						)
+						);
+						return;	
+					}
+
+
 					Console.WriteLine("Favorites - Count {0}", responseMessage.Params.Papers.Count);;
 					responseMessage.ErrorCode = MessageResponseStatus.Success;
 					reply(responseMessage.EncodeParams());
