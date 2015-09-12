@@ -210,6 +210,10 @@
     </Compile>
     <Compile Include="Views\iPhone\IPapersView.cs" />
     <Compile Include="WatchAppManager.cs" />
+    <Compile Include="UI\CustomElements\PaperDetailedCell.cs" />
+    <Compile Include="UI\CustomElements\PaperDetailedCell.designer.cs">
+      <DependentUpon>PaperDetailedCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -223,6 +227,7 @@
     <InterfaceDefinition Include="Views\iPhone\LoginViewController.xib" />
     <InterfaceDefinition Include="Views\iPhone\LoginRequiredController.xib" />
     <InterfaceDefinition Include="Views\iPhone\PapersListController_iPhone.xib" />
+    <InterfaceDefinition Include="UI\CustomElements\PaperDetailedCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />

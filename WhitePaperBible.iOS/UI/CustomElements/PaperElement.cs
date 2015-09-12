@@ -3,6 +3,7 @@ using WhitePaperBible.Core.Models;
 using MonoTouch.Dialog;
 using Foundation;
 using UIKit;
+using CustomElements;
 
 namespace WhitePaperBible.iOS.UI.CustomElements
 {
@@ -12,7 +13,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 	/// on iPad, sends view to SplitViewController
 	/// </summary>
 	public class PaperElement : Element  {
-		static NSString cellId = new NSString ("PaperCell");
+		static NSString cellId = new NSString ("PaperDetailedCell");
 		Paper paper;
 
 		public event Action Tapped;
@@ -28,13 +29,16 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		static int count;
 		public override UITableViewCell GetCell (UITableView tv)
 		{
-			var cell = tv.DequeueReusableCell (cellId);
+			var cell = tv.DequeueReusableCell (cellId) as PaperDetailedCell;
 			count++;
 			if (cell == null)
-				cell = new PaperCell (UITableViewCellStyle.Default, cellId, paper);
-			else
-				((PaperCell)cell).UpdateCell (paper);
+				cell = PaperDetailedCell.Create();
+//			else
+//				((PaperCell)cell).UpdateCell (paper);
 
+			cell.TitleLabel.Text = paper.title;
+			cell.AuthorLabel.Text = string.Format("by: {0}", paper.Author.Name);
+			cell.ViewCountLabel.Text = string.Format("{0} views", paper.view_count);
 			return cell;
 		}
 
