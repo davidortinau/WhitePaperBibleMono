@@ -58,8 +58,9 @@ namespace WhitePaperBible.Core.Mediators
 
 		void onLoginFault (object sender, EventArgs e)
 		{
-			Target.ShowInvalidPrompt ("Login Failed");
 			Target.HideBusyIndicator ();
+			Target.ShowInvalidPrompt ( ResourceManager.GetString ("invalidLogin") );
+
 		}
 	}
 }
