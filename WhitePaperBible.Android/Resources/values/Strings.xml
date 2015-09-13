@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="Hello">Hello World, Click Me!</string>
-	<string name="ApplicationName">WhitePaperBible.Android</string>
+	<string name="ApplicationName">WhitePaperBible</string>
 	<string name="email">user@domain.com</string>
 	<string name="password">password</string>
+
+	<string name="tab_papers">Papers</string>
+	<string name="tab_tags">Tags</string>
+	<string name="tab_favorites">Favorites</string>
+	<string name="tab_search">Search</string>
+	<string name="tab_profile">My Papers</string>
+	<string name="tab_about">About</string>
 </resources>

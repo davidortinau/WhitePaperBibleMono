@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBibile.PCL.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.PCL", "WhitePaperBible.PCL\WhitePaperBible.PCL.csproj", "{75317DE9-E9AA-40ED-A17D-273B3EEAF998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Android", "WhitePaperBible.Android\WhitePaperBible.Android.csproj", "{2F9B2989-48BC-4219-BFE0-8DCC3E645591}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Droid", "WhitePaperBible.Android\WhitePaperBible.Droid.csproj", "{2F9B2989-48BC-4219-BFE0-8DCC3E645591}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.Today", "WhitePaperBible.Today\WhitePaperBible.Today.csproj", "{FAB67C98-EB15-4D75-8C09-AA59AD875D25}"
 EndProject

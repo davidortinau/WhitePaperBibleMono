@@ -7,7 +7,7 @@ using WhitePaperBible.Core;
 using MonkeyArms;
 using System.Threading.Tasks;
 
-namespace WhitePaperBible.Android.Services
+namespace WhitePaperBible.Droid.Services
 {
 	public class WebClient : IJSONWebClient
 	{

@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 using WhitePaperBible.Core.Models;
 
-namespace WhitePaperBible.Android
+namespace WhitePaperBible.Droid
 {		
 	public class PapersAdapter : BaseAdapter
 	{
@@ -49,10 +49,10 @@ namespace WhitePaperBible.Android
 			if (itemView == null) {
 				var layoutInflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
 				//view = context.LayoutInflater.Inflate(Android.Resource.Layout.PaperListItem, null);
-				itemView = layoutInflater.Inflate(Android.Resource.Layout.PaperListItem, parent, false);
+				itemView = layoutInflater.Inflate(Resource.Layout.PaperListItem, parent, false);
 			}
 
-			TextView titleTxtView = itemView.FindViewById<TextView>(Android.Resource.Id.titleTextView);
+			TextView titleTxtView = itemView.FindViewById<TextView>(Resource.Id.titleTextView);
 
 			var paper = items.ElementAt(position);
 			titleTxtView.Text = paper.title;

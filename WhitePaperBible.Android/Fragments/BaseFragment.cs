@@ -9,12 +9,12 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V4.App;
 
-namespace WhitePaperBible.Android.Fragments
+namespace WhitePaperBible.Droid.Fragments
 {
-	public class BaseFragment : Fragment
+	public class BaseFragment : Android.Support.V4.App.Fragment
 	{
-
 		public event EventHandler ToggleSettingsView = delegate{};
 
 		protected string ScreenTitle;
@@ -60,6 +60,11 @@ namespace WhitePaperBible.Android.Fragments
 		#endregion
 
 		protected int LayoutID;
+
+		public BaseFragment(int layoutId)
+		{
+			LayoutID = layoutId;
+		}
 
 		public override void OnCreate (Bundle savedInstanceState)
 		{

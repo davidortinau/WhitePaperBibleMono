@@ -5,12 +5,17 @@ using Android.OS;
 
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
-using WhitePaperBible.Android.Fragments;
+using WhitePaperBible.Droid.Fragments;
+using Android.Support.V4.App;
+using Android.Views;
+using Android.Support.V4.View;
+using Adapters;
+using com.refractored;
 
-namespace WhitePaperBible.Android
+namespace WhitePaperBible.Droid
 {
 	[Activity (MainLauncher=true, NoHistory=true)]			
-	public class MainActivity : Activity, ILoadingView
+	public class MainActivity : FragmentActivity, ILoadingView
 	{
 		protected BaseFragment CurrentScreen;
 
@@ -21,19 +26,27 @@ namespace WhitePaperBible.Android
 
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+			RequestWindowFeature(WindowFeatures.NoTitle);
+			base.OnCreate(bundle);
 
-			DI.RequestMediator(this);
+			SetContentView(Resource.Layout.MainView);
 
-			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
-//			this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+			var pager = FindViewById<ViewPager>(Resource.Id.pager);
+
+			var PagerAdapter = new MainViewPagerAdapter(this.SupportFragmentManager, this.Resources);
+			pager.Adapter = PagerAdapter;
+
+			var tabs = FindViewById<PagerSlidingTabStrip>(Resource.Id.tabs);          
+			tabs.SetViewPager(pager);   
+
+
+//			DI.RequestMediator(this);
 		}
 
 		#region ILoadingView implementation
 		public void OnLoadingComplete ()
 		{
-			var papersView = new Intent(this, typeof(PapersListActivity));
+			var papersView = new Intent(this, typeof(PapersView));
 			StartActivity( papersView );
 		}
 		#endregion

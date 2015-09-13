@@ -13,7 +13,7 @@ using Android.Webkit;
 using Android.Content;
 using WhitePaperBible.Core.Models;
 
-namespace WhitePaperBible.Android
+namespace WhitePaperBible.Droid
 {
 	[Activity (Label = "")]			
 	public class PaperDetailActivity : Activity, IPaperDetailView, IInjectingTarget
@@ -78,7 +78,7 @@ namespace WhitePaperBible.Android
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
 
-			var papersView = new Intent(this, typeof(PapersListActivity));
+			var papersView = new Intent(this, typeof(PapersView));
 			StartActivity( papersView );
 			return false;
 		}

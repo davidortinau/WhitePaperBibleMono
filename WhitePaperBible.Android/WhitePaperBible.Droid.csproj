@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2F9B2989-48BC-4219-BFE0-8DCC3E645591}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WhitePaperBible.Android</RootNamespace>
+    <RootNamespace>WhitePaperBible.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -59,6 +59,10 @@
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="Refractored.PagerSlidingTabStrip">
+      <HintPath>..\packages\Refractored.PagerSlidingTabStrip.1.0.9.4\lib\MonoAndroid10\Refractored.PagerSlidingTabStrip.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -67,11 +71,15 @@
     <Compile Include="MainApplication.cs" />
     <Compile Include="PaperDetailActivity.cs" />
     <Compile Include="PapersAdapter.cs" />
-    <Compile Include="PapersListActivity.cs" />
     <Compile Include="Fragments\BaseFragment.cs" />
     <Compile Include="Fragments\PapersListFragment.cs" />
     <Compile Include="Services\WebClient.cs" />
     <Compile Include="BaseActivity.cs" />
+    <Compile Include="Adapters\MainViewPagerAdapter.cs" />
+    <Compile Include="Views\TagsView.cs" />
+    <Compile Include="PapersView.cs" />
+    <Compile Include="Views\FavoritesView.cs" />
+    <Compile Include="Views\SearchView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -381,7 +389,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\drawable\HeaderBackground.png" />
@@ -477,6 +484,12 @@
     <AndroidResource Include="Resources\menu\sub.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\layout\MainView.axml" />
+    <AndroidResource Include="Resources\layout\TagsView.axml" />
+    <AndroidResource Include="Resources\layout\FavoritesView.axml" />
+    <AndroidResource Include="Resources\layout\SearchView.axml" />
+    <AndroidResource Include="Resources\layout\AboutView.axml" />
+    <AndroidResource Include="Resources\layout\ProfileView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -496,6 +509,8 @@
     <Folder Include="Resources\menu\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\Resources\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">

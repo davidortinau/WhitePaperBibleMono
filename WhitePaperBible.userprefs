@@ -1,6 +1,6 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.Android/WhitePaperBible.Android.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="Android.Nexus 5 (KitKat) v2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Android/Resources/values/Styles_wpb.xml">
+﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.Android/WhitePaperBible.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Android/BaseActivity.cs">
     <Files>
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="95" Column="27" />
       <File FileName="WhitePaperBible.Tests/Main.cs" Line="1" Column="1" />
@@ -37,12 +37,9 @@
       <File FileName="WhitePaperBible.iOS/Views/iPhone/FavoritesView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/GlanceController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Resources/values/Styles.xml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Resources/values/Styles_wpb.xml" Line="33" Column="60" />
       <File FileName="WhitePaperBible.Android/Resources/values/Strings.xml" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Resources/drawable/tab_indicator_ab_tntstyle.xml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Resources/values/Themes.xml" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/MainActivity.cs" Line="36" Column="54" />
+      <File FileName="WhitePaperBible.Android/MainActivity.cs" Line="12" Column="13" />
       <File FileName="WhitePaperBible.Android/Services/WebClient.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperDetailedCell.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="5" Column="13" />
@@ -61,19 +58,23 @@
       <File FileName="WhitePaperBible.iOS/Info.plist" />
       <File FileName="WhitePaperBible.iOS/entitlements.plist" />
       <File FileName="WhitePaperBible.iOSWatchKitExtension/Entitlements.plist" />
-      <File FileName="WhitePaperBible.Android/PapersListActivity.cs" Line="115" Column="6" />
-      <File FileName="WhitePaperBible.Android/BaseActivity.cs" Line="91" Column="9" />
+      <File FileName="WhitePaperBible.Android/PapersListActivity.cs" Line="69" Column="18" />
+      <File FileName="WhitePaperBible.Android/BaseActivity.cs" Line="47" Column="3" />
       <File FileName="WhitePaperBible.Android/Resources/menu/home.xml" Line="24" Column="7" />
+      <File FileName="WhitePaperBible.Android/Properties/AndroidManifest.xml" Line="16" Column="12" />
+      <File FileName="WhitePaperBible.Android/Resources/values/Colors.xml" Line="6" Column="38" />
+      <File FileName="WhitePaperBible.Android/Resources/values/dimens.xml" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/MainApplication.cs" Line="22" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WhitePaperBible" expanded="True">
-            <Node name="WhitePaperBible.Android" expanded="True" selected="True">
+            <Node name="WhitePaperBible.Droid" expanded="True" selected="True">
               <Node name="ComponentReferenceFolder" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="layout" expanded="True" />
-                <Node name="menu" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
             </Node>
@@ -113,5 +114,5 @@
     <String>WhitePaperBible.Tests/WhitePaperBible.Tests.csproj</String>
     <String>WhitePaperBibileCoreTests/WhitePaperBibile.PCL.Tests.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Android AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Droid AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

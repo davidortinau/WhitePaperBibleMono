@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Papers List" />
+        android:text="Search" />
     <ListView
         android:minWidth="45px"
         android:minHeight="?android:attr/listPreferredItemHeight"
