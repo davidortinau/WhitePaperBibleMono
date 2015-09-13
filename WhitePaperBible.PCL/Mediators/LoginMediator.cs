@@ -59,7 +59,7 @@ namespace WhitePaperBible.Core.Mediators
 		void onLoginFault (object sender, EventArgs e)
 		{
 			Target.HideBusyIndicator ();
-			Target.ShowInvalidPrompt ( ResourceManager.GetString ("invalidLogin") );
+			Target.ShowInvalidPrompt ( "" );
 
 		}
 	}

@@ -101,14 +101,34 @@ namespace WhitePaperBible.iOS
 		public void ShowInvalidPrompt (string message)
 		{
 			InvokeOnMainThread (() => {
+				if(string.IsNullOrEmpty(message)){
+					message = ResourceManager.GetString ("invalidLogin");
+				}
 				BTProgressHUD.ShowErrorWithStatus(message, 3000);
 			});
+		}
+
+		bool IsFormValid ()
+		{
+			if(string.IsNullOrEmpty(UsernameInput.Text)){
+				ShowInvalidPrompt("We need a username.");
+				return false;
+			}
+
+			if(string.IsNullOrEmpty(PasswordInput.Text)){
+				ShowInvalidPrompt("Did you forget to enter a password?");
+				return false;
+			}
+
+			return true;
 		}
 
 		void AddEventHandlers ()
 		{
 			LoginButton.TouchUpInside += (object sender, EventArgs e) => {
-				LoginSubmitted(this, EventArgs.Empty);
+				if(IsFormValid()){
+					LoginSubmitted(this, EventArgs.Empty);
+				}
 			};
 
 			CancelButton.TouchUpInside += (object sender, EventArgs e) => {

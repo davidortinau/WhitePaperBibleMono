@@ -1,4 +1,4 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj">
+﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.iOS/WhitePaperBible.iOS.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (KitKat) v2" />
   <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Android/MainActivity.cs">
     <Files>
