@@ -53,7 +53,7 @@ namespace WhitePaperBible.Android
 			}
 			else
 			{
-				MenuInflater.Inflate(Resource.Menu.sub, menu);
+				MenuInflater.Inflate(Resource.Menu.home, menu);
 			}
 			return base.OnCreateOptionsMenu(menu);
 		}
