@@ -9,7 +9,7 @@ using WhitePaperBible.Android.Fragments;
 
 namespace WhitePaperBible.Android
 {
-	[Activity (Theme = "@style/Theme.Splash", MainLauncher=true, NoHistory=true)]			
+	[Activity (MainLauncher=true, NoHistory=true)]			
 	public class MainActivity : Activity, ILoadingView
 	{
 		protected BaseFragment CurrentScreen;

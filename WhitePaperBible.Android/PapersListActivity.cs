@@ -12,11 +12,12 @@ using MonkeyArms;
 using System;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Android.Fragments;
+using Android.Support.V7.Widget;
 
 namespace WhitePaperBible.Android
 {
-	[Activity (Label = "Papers", Icon = "@drawable/logo_300")]			
-	public class PapersListActivity : ListActivity, IPapersListView, IInjectingTarget
+	[Activity]			
+	public class PapersListActivity : BaseActivity, IPapersListView, IInjectingTarget
 	{
 		public void AddPaperEditView ()
 		{
@@ -64,69 +65,79 @@ namespace WhitePaperBible.Android
 
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+//			base.OnCreate (bundle);
+			base.OnCreateWithLayout(bundle, Resource.Layout.PapersList);
 
+			InitActionBar();
 			AddPaper = new Invoker ();
 
 			// Activate the action bar and display it in navigation mode.
-			RequestWindowFeature(WindowFeatures.ActionBar);
+//			RequestWindowFeature(WindowFeatures.ActionBar);
 
-			SetContentView( Resource.Layout.PapersList );
+//			SetContentView( Resource.Layout.PapersList );
 
-			this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-			AddTab ("Papers", Resource.Drawable.Icon, new PapersListFragment());
-			AddTab ("Favorites", Resource.Drawable.Icon, new PapersListFragment());
-			AddTab ("My Papers", Resource.Drawable.Icon, new PapersListFragment());
+//			this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+//			AddTab ("Papers", Resource.Drawable.Icon, new PapersListFragment());
+//			AddTab ("Favorites", Resource.Drawable.Icon, new PapersListFragment());
+//			AddTab ("My Papers", Resource.Drawable.Icon, new PapersListFragment());
 
-			DI.RequestMediator(this);
+//			DI.RequestMediator(this);
 		}
 
-		protected override void OnListItemClick (ListView l, View v, int position, long id)
+		void InitActionBar()
 		{
-			base.OnListItemClick (l, v, position, id);
-
-			SelectedPaper = Papers [position];
-
-			OnPaperSelected (this, new EventArgs ());
-
-			if(Model != null){
-				Model.CurrentPaper = SelectedPaper;
-			}
-
-			var detailsView = new Intent(this, typeof(PaperDetailActivity));
-			StartActivity ( detailsView );
+			var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+			SupportActionBar.SetDisplayShowTitleEnabled(false);
+			SupportActionBar.SetDisplayShowHomeEnabled(false);   
+			SupportActionBar.SetDisplayHomeAsUpEnabled(false);
 		}
 
-		public override bool OnCreateOptionsMenu(IMenu menu)
-		{
-			MenuInflater.Inflate(Resource.Menu.ActionItems,menu);
+//		protected override void OnListItemClick (ListView l, View v, int position, long id)
+//		{
+//			base.OnListItemClick (l, v, position, id);
+//
+//			SelectedPaper = Papers [position];
+//
+//			OnPaperSelected (this, new EventArgs ());
+//
+//			if(Model != null){
+//				Model.CurrentPaper = SelectedPaper;
+//			}
+//
+//			var detailsView = new Intent(this, typeof(PaperDetailActivity));
+//			StartActivity ( detailsView );
+//		}
 
-			var searchView = (SearchView)menu.FindItem(Resource.Id.menu_search).ActionView;
-			searchView.QueryTextChange += OnSearchTextChanged;
-			searchView.QueryTextSubmit += OnSearchTextSubmit;
+//		public override bool OnCreateOptionsMenu(IMenu menu)
+//		{
+//			MenuInflater.Inflate(Resource.Menu.ActionItems,menu);
+//
+//			var searchView = (SearchView)menu.FindItem(Resource.Id.menu_search).ActionView;
+//			searchView.QueryTextChange += OnSearchTextChanged;
+//			searchView.QueryTextSubmit += OnSearchTextSubmit;
+//
+//			return true;
+//		}
 
-			return true;
-		}
+//		public override bool OnOptionsItemSelected(IMenuItem item)
+//		{
+//			//TODO: Handle the selection event here.
+//			return false;
+//		}
 
-		public override bool OnOptionsItemSelected(IMenuItem item)
-		{
-			//TODO: Handle the selection event here.
-			return false;
-		}
-
-		void OnSearchTextSubmit (object sender, SearchView.QueryTextSubmitEventArgs e)
-		{
-			SearchQuery = e.Query;
-			Filter (this, new EventArgs());
-			Console.WriteLine ("OnQueryTextSubmit {0}", SearchQuery);
-		}
-
-		void OnSearchTextChanged (object sender, SearchView.QueryTextChangeEventArgs e)
-		{
-			SearchQuery = e.NewText;
-			Filter (this, new EventArgs());
-			Console.WriteLine ("OnSearchTextChanged {0}", SearchQuery);
-		}
+//		void OnSearchTextSubmit (object sender, SearchView.QueryTextSubmitEventArgs e)
+//		{
+//			SearchQuery = e.Query;
+//			Filter (this, new EventArgs());
+//			Console.WriteLine ("OnQueryTextSubmit {0}", SearchQuery);
+//		}
+//
+//		void OnSearchTextChanged (object sender, SearchView.QueryTextChangeEventArgs e)
+//		{
+//			SearchQuery = e.NewText;
+//			Filter (this, new EventArgs());
+//			Console.WriteLine ("OnSearchTextChanged {0}", SearchQuery);
+//		}
 
 
 		#region IPapersListView implementation
@@ -134,9 +145,9 @@ namespace WhitePaperBible.Android
 		public void SetPapers (List<Paper> papers)
 		{
 			this.Papers = papers;
-			RunOnUiThread(()=>{
-				ListAdapter = new PapersAdapter(this, papers);
-			});
+//			RunOnUiThread(()=>{
+//				ListAdapter = new PapersAdapter(this, papers);
+//			});
 		}
 
 		#endregion

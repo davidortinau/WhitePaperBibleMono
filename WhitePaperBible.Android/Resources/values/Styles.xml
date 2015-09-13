@@ -1,66 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
-	<style name="Theme.Splash" parent="android:Theme">
-	    <item name="android:windowBackground">@drawable/splash</item>
-	    <item name="android:windowNoTitle">true</item>
-	  </style>
-	<!-- Global -->
-	<color name="custom_theme_color">#FDFDFD</color>
-	<style name="CustomTheme" parent="android:Theme.Light">
-	    <item name="android:windowBackground">@color/custom_theme_color</item>
-	    <item name="android:colorBackground">@color/custom_theme_color</item>
-	</style>
-	
-	<style name="GreenButton">
-<!--		<item name="android:background">@drawable/green_button_states</item>-->
-		<item name="android:textColor">#ffffffff</item>
-		<item name="android:textStyle">bold</item>
-		<item name="android:textSize">20dp</item>
-		<item name="android:layout_width">fill_parent</item>
-		<item name="android:layout_height">50dp</item>
-		<item name="android:layout_marginTop">35dp</item>
-		<item name="android:layout_marginBottom">35dp</item>
-	</style>
-	
-	<style name="HeaderButton">
-		<item name="android:textSize">14dp</item>
-		<item name="android:textColor">#ffffff</item>
-	</style>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
 
-	<!--- Intro Screen -->
-	<style name="IntroCard">
-		<item name="android:layout_width">300dp</item>
-		<item name="android:layout_marginLeft">0dp</item>
-		<item name="android:layout_marginRight">0dp</item>
-	</style>
-	
-	<style name="ListTitleFont" parent="@android:style/TextAppearance.Large">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#1d1d1d</item>
-        <item name="android:padding">5dp</item>
-    </style>
-	
-	<!---Grouped List Item -->
-	<style name="GroupedListItemHeader">
-	
-		<item name="android:paddingTop">2dp</item>
-		<item name="android:paddingBottom">2dp</item>
-		<item name="android:paddingLeft">10dp</item>
-		<item name="android:textColor">#ffffffff</item>
-		<item name="android:background">#ff929292</item>
-		<item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-		
-		<item name="android:layout_width">fill_parent</item>
-		<item name="android:layout_height">wrap_content</item>
-		
-	</style>
-	<style name="GroupedListItem">	
-		<item name="android:orientation">horizontal</item>
-		<item name="android:minWidth">25px</item>
-		<item name="android:minHeight">25px</item>
-		<item name="android:layout_width">fill_parent</item>
-		<item name="android:layout_height">60dp</item>
-		<item name="android:padding">10dp</item>
-	</style>
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+<style name="WPBTheme" parent="WPBTheme.Base">
+  </style>
+  <!-- Base theme applied no matter what API -->
+  <style name="WPBTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+  	<item name="android:windowBackground">@color/white</item>
+    <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+    <item name="android:windowNoTitle">true</item>
+    <!--We will be using the toolbar so no need to show ActionBar-->
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">@color/orange</item>
+    <!-- colorPrimaryDark is used for the status bar -->
+    <item name="colorPrimaryDark">@color/orange</item>
+    <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+    <item name="colorAccent">@color/orange</item>
+     <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+     <item name="android:homeAsUpIndicator">@drawable/icon</item>
+
+
+  </style>
+
+  <style name="WPBTheme.BottomBar" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="actionMenuTextColor">@color/black</item>
+ </style>
+
+    
 </resources>

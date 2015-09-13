@@ -9,7 +9,7 @@ using WhitePaperBible.Core.Services;
 
 namespace WhitePaperBible.Android
 {
-	[Application (Theme="@style/CustomTheme")]
+	[Application]
 	public class MainApplication : Application
 	{
 		public MainApplication (IntPtr handle, JniHandleOwnership transfer)

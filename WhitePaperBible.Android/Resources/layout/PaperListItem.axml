@@ -6,6 +6,5 @@
     android:background="@drawable/ListItemSelector">
     <TextView
         android:text="Text"
-        style="@style/ListTitleFont"
         android:id="@+id/titleTextView" />
 </LinearLayout>

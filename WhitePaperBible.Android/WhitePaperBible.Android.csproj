@@ -53,6 +53,12 @@
     <Reference Include="PCLStorage.Abstractions">
       <HintPath>..\packages\PCLStorage.1.0.2\lib\monoandroid\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -65,6 +71,7 @@
     <Compile Include="Fragments\BaseFragment.cs" />
     <Compile Include="Fragments\PapersListFragment.cs" />
     <Compile Include="Services\WebClient.cs" />
+    <Compile Include="BaseActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -388,12 +395,9 @@
     <AndroidResource Include="Resources\layout\PaperDetail.axml" />
     <AndroidResource Include="Resources\layout\PaperListItem.axml" />
     <AndroidResource Include="Resources\layout\PapersList.axml" />
-    <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\menu\ActionItems.axml" />
     <AndroidResource Include="Resources\menu\PaperDetailsActionItems.axml" />
-    <AndroidResource Include="Resources\values\Themes.xml" />
     <AndroidResource Include="Resources\values\Colors.xml" />
-    <AndroidResource Include="Resources\values\Styles_wpb.xml" />
     <AndroidResource Include="Resources\layout\ActionBarMenu.axml" />
     <AndroidResource Include="Resources\layout\LogIn.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_tntstyle.9.png" />
@@ -467,6 +471,12 @@
     <AndroidResource Include="Resources\drawable\selectable_background_tntstyle.xml" />
     <AndroidResource Include="Resources\drawable\progress_horizontal_tntstyle.xml" />
     <AndroidResource Include="Resources\drawable\btn_cab_done_tntstyle.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\menu\empty.xml" />
+    <AndroidResource Include="Resources\menu\home.xml" />
+    <AndroidResource Include="Resources\menu\sub.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -490,6 +500,14 @@
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">
       <Version>104.4.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>22.2.0.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
