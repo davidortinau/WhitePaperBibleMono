@@ -103,9 +103,6 @@
       <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="BTProgressHUD">
-      <HintPath>..\Components\btprogresshud-1.14\lib\ios-unified\BTProgressHUD.dll</HintPath>
-    </Reference>
     <Reference Include="RestSharp.MonoTouch">
       <HintPath>..\Components\restsharp-104.4.0.1\lib\ios-unified\RestSharp.MonoTouch.dll</HintPath>
     </Reference>
@@ -126,6 +123,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.17\lib\ios-unified\BTProgressHUD.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +210,10 @@
     </Compile>
     <Compile Include="Views\iPhone\IPapersView.cs" />
     <Compile Include="WatchAppManager.cs" />
+    <Compile Include="UI\CustomElements\PaperDetailedCell.cs" />
+    <Compile Include="UI\CustomElements\PaperDetailedCell.designer.cs">
+      <DependentUpon>PaperDetailedCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
@@ -223,6 +227,7 @@
     <InterfaceDefinition Include="Views\iPhone\LoginViewController.xib" />
     <InterfaceDefinition Include="Views\iPhone\LoginRequiredController.xib" />
     <InterfaceDefinition Include="Views\iPhone\PapersListController_iPhone.xib" />
+    <InterfaceDefinition Include="UI\CustomElements\PaperDetailedCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />
@@ -268,12 +273,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="btprogresshud">
-      <Version>1.14</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
     <XamarinComponentReference Include="restsharp">
       <Version>104.4.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.17</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

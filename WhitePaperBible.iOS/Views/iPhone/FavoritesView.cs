@@ -73,6 +73,8 @@ namespace WhitePaperBible.iOS
 				})
 				, true
 			);
+
+//			PromptForLogin();
 		}
 
 		public void HideLoginButton()
@@ -130,6 +132,7 @@ namespace WhitePaperBible.iOS
 				CreateLoginRequiredView ();
 			}
 			LoginRequiredView.View.Hidden = false;
+//			View.BringSubviewToFront (LoginRequiredView);
 		}
 
 		public void ShowLoginForm ()
