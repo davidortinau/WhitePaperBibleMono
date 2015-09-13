@@ -23,10 +23,10 @@ namespace WhitePaperBible.iOSWatchKitExtension
 		{
 			base.Awake (context);
 
-			GetFavorites();
+			GetPapers();
 		}
 
-		async void GetFavorites ()
+		async void GetPapers ()
 		{
 			WatchMessage<PapersResponseParams> responseMessage = null;
 			WatchMessage<ActionRequestParams> requestParams = new WatchMessage	<ActionRequestParams>();
@@ -37,7 +37,11 @@ namespace WhitePaperBible.iOSWatchKitExtension
 				papers = responseMessage.Params.Papers;
 				if(papers == null){
 					Console.WriteLine ("Null Papers");
-					this.SetTitle("Error!");
+//					this.SetTitle("Error!");
+					PapersTable.SetNumberOfRows ((nint)papers.Count, "default");
+					var elementRow = (PaperRow)PapersTable.GetRowController (0);
+					elementRow.SetData ("Couldn't find any papers.");
+
 				}else{
 					Console.WriteLine ("Got Papers {0}", papers.Count);
 					LoadTableRows();
@@ -56,6 +60,11 @@ namespace WhitePaperBible.iOSWatchKitExtension
 
 		void LoadTableRows ()
 		{
+			if(papers == null){
+				GetPapers();
+				return;
+			}
+				
 			PapersTable.SetNumberOfRows ((nint)papers.Count, "default");
 			//myTable.SetRowTypes (new [] {"default", "type1", "type2", "default", "default"});
 			// Create all of the table rows.
@@ -69,6 +78,10 @@ namespace WhitePaperBible.iOSWatchKitExtension
 		public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
 		{
 			var rowData = papers [(int)rowIndex];
+
+			if(rowData == null){
+				return;
+			}
 
 			var paper = (Paper)rowData;
 //			var d = new NSDictionary ();

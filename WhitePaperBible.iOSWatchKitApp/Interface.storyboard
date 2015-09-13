@@ -151,6 +151,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="PapersTable" destination="ter-eI-gD8" id="name-outlet-ter-eI-gD8"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="229" y="193"/>

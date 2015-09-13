@@ -14,8 +14,16 @@ namespace WhitePaperBible.iOSWatchKitExtension
 	[Register ("AllPapersController")]
 	partial class AllPapersController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		WatchKit.WKInterfaceTable PapersTable { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (PapersTable != null) {
+				PapersTable.Dispose ();
+				PapersTable = null;
+			}
 		}
 	}
 }
