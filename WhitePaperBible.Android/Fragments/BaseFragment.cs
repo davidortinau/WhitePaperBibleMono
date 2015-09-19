@@ -10,10 +10,11 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V4.App;
+using MonkeyArms;
 
 namespace WhitePaperBible.Droid.Fragments
 {
-	public class BaseFragment : Android.Support.V4.App.Fragment
+	public class BaseFragment : Android.Support.V4.App.Fragment, IMediatorTarget
 	{
 		public event EventHandler ToggleSettingsView = delegate{};
 
@@ -88,9 +89,36 @@ namespace WhitePaperBible.Droid.Fragments
 			var view = inflater.Inflate (LayoutID, null);
 			frame.AddView (view);
 
+			DI.RequestMediator(this);
+
 			return frame;
 		}
 
+		public override void OnResume()
+		{
+			base.OnResume();
+			try
+			{
+				DI.RequestMediator(this);
+			}
+			catch
+			{
+				Console.WriteLine("Unable to request mediator for: " + this.Class.Name);
+			}
+		}
+
+		public override void OnPause()
+		{
+			base.OnPause();
+			try
+			{
+				DI.DestroyMediator(this);
+			}
+			catch
+			{
+				Console.WriteLine("Unable to destroy mediator for: " + this.Class.Name);
+			}
+		}
 //		void InitHeader (LayoutInflater inflater, LinearLayout frame)
 //		{
 //			var headerView = inflater.Inflate (Resource.Layout.ScreenHeader, null);

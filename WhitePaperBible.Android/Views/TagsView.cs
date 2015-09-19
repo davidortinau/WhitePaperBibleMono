@@ -21,50 +21,38 @@ namespace Views
 	{
 		public TagsView (int layoutId) : base (layoutId)
 		{
-			
+			this.Filter = new Invoker ();
+			this.OnTagSelected = new Invoker ();
 		}
 
 		#region ITagsListView implementation
 
 		public void SetTags (List<WhitePaperBible.Core.Models.Tag> tags)
 		{
-			throw new NotImplementedException ();
+			//
 		}
 
 		public Invoker Filter {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
+			private set;
 		}
 
 		public Invoker OnTagSelected {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
+			private set;
 		}
 
 		public string SearchPlaceHolderText {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+			get;set;
 		}
 
 		public string SearchQuery {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
 		}
 
 		public WhitePaperBible.Core.Models.Tag SelectedTag {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+			get;
+			set;
 		}
 
 		#endregion

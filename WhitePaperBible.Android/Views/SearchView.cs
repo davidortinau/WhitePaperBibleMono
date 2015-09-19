@@ -21,15 +21,13 @@ namespace Views
 	{
 		public SearchView (int layoutId) : base (layoutId)
 		{
-			
+			DoSearch = new Invoker();
 		}
 
 		#region IBibleSearchView implementation
 
-		public MonkeyArms.Invoker DoSearch {
-			get {
-				throw new NotImplementedException ();
-			}
+		public Invoker DoSearch {
+			get;
 		}
 
 		#endregion

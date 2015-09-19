@@ -21,60 +21,47 @@ namespace Views
 	{
 		public FavoritesView (int layoutId) : base (layoutId)
 		{
-			
+			Filter = new Invoker();
+			OnPaperSelected = new Invoker();
 		}
 
 		#region IFavoritesView implementation
 
 		public void SetPapers (List<WhitePaperBible.Core.Models.Paper> papers)
 		{
-			throw new NotImplementedException ();
+			// add to table
 		}
 
 		public void ShowLoginButton ()
 		{
-			throw new NotImplementedException ();
+			// 
 		}
 
 		public void HideLoginButton ()
 		{
-			throw new NotImplementedException ();
+			// 
 		}
 
 		public Invoker Filter {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
+			private set;
 		}
 
 		public Invoker OnPaperSelected {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
+			private set;
 		}
 
 		public string SearchPlaceHolderText {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+			get;set;
 		}
 
 		public string SearchQuery {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;
 		}
 
 		public WhitePaperBible.Core.Models.Paper SelectedPaper {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+			get;set;
 		}
 
 		#endregion

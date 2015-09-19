@@ -71,18 +71,18 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="PaperDetailActivity.cs" />
     <Compile Include="PapersAdapter.cs" />
     <Compile Include="Fragments\BaseFragment.cs" />
     <Compile Include="Fragments\PapersListFragment.cs" />
     <Compile Include="Services\WebClient.cs" />
     <Compile Include="Adapters\MainViewPagerAdapter.cs" />
     <Compile Include="Views\TagsView.cs" />
-    <Compile Include="PapersView.cs" />
     <Compile Include="Views\FavoritesView.cs" />
     <Compile Include="Views\SearchView.cs" />
     <Compile Include="BaseActivityView.cs" />
     <Compile Include="MainView.cs" />
+    <Compile Include="Views\PaperDetailActivity.cs" />
+    <Compile Include="Views\PapersView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />

@@ -22,32 +22,25 @@ namespace WhitePaperBible.Droid
 
 		public void SetPaper (Paper paper, bool isFavorite, bool isOwned)
 		{
-			throw new NotImplementedException ();
+			//
 		}
 
 		public void SetReferences (string html)
 		{
-			throw new NotImplementedException ();
+			//
 		}
 
 		public void DismissController ()
 		{
-			throw new NotImplementedException ();
+			//
 		}
 
 		public Paper Paper {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+			get;set;
 		}
 
 		public Invoker ToggleFavorite {
-			get {
-				throw new NotImplementedException ();
-			}
+			get;set;
 		}
 
 		#endregion
@@ -60,6 +53,8 @@ namespace WhitePaperBible.Droid
 			RequestWindowFeature(WindowFeatures.ActionBar);
 
 			SetContentView( Resource.Layout.PaperDetail );
+
+			ToggleFavorite = new Invoker();
 
 			DI.RequestMediator(this);
 
