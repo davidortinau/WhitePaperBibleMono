@@ -72,6 +72,13 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>entitlements.plist</CodesignEntitlements>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
     <Optimize>false</Optimize>
@@ -127,11 +134,15 @@
     <Reference Include="BTProgressHUD">
       <HintPath>..\Components\btprogresshud-1.17\lib\ios-unified\BTProgressHUD.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleAnalytics.iOS">
+      <HintPath>..\Components\googleanalytics-3.0.12\lib\ios-unified\GoogleAnalytics.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="packages.config" />
     <None Include="entitlements.plist" />
+    <None Include="WatchAppManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -209,7 +220,6 @@
       <DependentUpon>PapersListController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\iPhone\IPapersView.cs" />
-    <Compile Include="WatchAppManager.cs" />
     <Compile Include="UI\CustomElements\PaperDetailedCell.cs" />
     <Compile Include="UI\CustomElements\PaperDetailedCell.designer.cs">
       <DependentUpon>PaperDetailedCell.cs</DependentUpon>
@@ -262,11 +272,6 @@
       <Project>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</Project>
       <Name>WhitePaperBible.PCL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WhitePaperBible.iOSWatchKitExtension\WhitePaperBible.iOSWatchKitExtension.csproj">
-      <Project>{4F76FB08-D2A9-4A5C-9DB2-B52ADB169F94}</Project>
-      <Name>WhitePaperBible.iOSWatchKitExtension</Name>
-      <IsAppExtension>True</IsAppExtension>
-    </ProjectReference>
     <ProjectReference Include="..\MonkeyArmsPCL\MonkeyArmsPCL.csproj">
       <Project>{C3B705A8-81F9-469D-8085-C5333F6FD517}</Project>
       <Name>MonkeyArmsPCL</Name>
@@ -279,6 +284,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="btprogresshud">
       <Version>1.17</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleanalytics">
+      <Version>3.0.12</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
@@ -396,7 +405,6 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
-  <Import Project="..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems" Label="Shared" Condition="Exists('..\WhitePaperBible.WatchShared\WhitePaperBible.WatchShared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
 </Project>

@@ -1,5 +1,5 @@
 using System;
-//using GoogleAnalytics.iOS;
+using GoogleAnalytics.iOS;
 using WhitePaperBible.Core.Enum;
 
 namespace IOS.Util
@@ -7,7 +7,7 @@ namespace IOS.Util
 	public static class AnalyticsUtil
 	{
 		// Shared GA tracker
-//		private static IGAITracker Tracker;
+		private static IGAITracker Tracker;
 
 		// Learn how to get your own Tracking Id from:
 		// https://support.google.com/analytics/answer/2614741?hl=en

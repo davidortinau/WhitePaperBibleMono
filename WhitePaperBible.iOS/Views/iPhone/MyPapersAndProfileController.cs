@@ -184,8 +184,9 @@ namespace WhitePaperBible.iOS
 //			if(LoginRequiredView != null){
 //				LoginRequiredView.Frame = new CGRect (0, top - 16, View.Bounds.Width, View.Bounds.Height);
 //			}
-
-			LoginRequiredView.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
+			if(LoginRequiredView != null){
+				LoginRequiredView.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
+			}
 
 			if(containerView != null){
 				containerView.Frame = new CGRect (0, 100 + top, View.Bounds.Width, View.Bounds.Height - (100 + top));

@@ -38,7 +38,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 
 			cell.TitleLabel.Text = paper.title;
 			cell.AuthorLabel.Text = string.Format("by: {0}", paper.Author.Name);
-			cell.ViewCountLabel.Text = string.Format("{0} views", paper.view_count);
+			cell.ViewCountLabel.Text = string.Empty;// string.Format("{0} views", paper.view_count);
 			return cell;
 		}
 

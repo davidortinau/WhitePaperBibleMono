@@ -94,7 +94,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 				, new CGSize(titleFrame.Width, 400));
 			if (size.Height > 27) {
 				titleAdjustment = 27;
-				titleFrame.Height = titleFrame.Height + titleAdjustment; //size.Height;
+				titleFrame.Height = titleFrame.Height + size.Height;
 				titleLabel.Lines = 2;
 			}
 			else titleLabel.Lines = 1;

@@ -1,11 +1,9 @@
 ﻿using System;
 using Foundation;
-using WhitePaperBible.WatchShared;
 using MonkeyArms;
 using WhitePaperBible.Core.Mediators;
 using System.Collections.Generic;
 using WhitePaperBible.Core.Models;
-using WhitePaperBible.WatchShared.MessageParams;
 using WhitePaperBible.Core.Repositories;
 using WhitePaperBible.Core.Services;
 
