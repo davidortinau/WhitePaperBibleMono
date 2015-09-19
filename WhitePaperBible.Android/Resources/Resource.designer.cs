@@ -3918,6 +3918,9 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int email = 2131361813;
 			
+			// aapt resource value: 0x7f0a001d
+			public const int paper_updated = 2131361821;
+			
 			// aapt resource value: 0x7f0a0016
 			public const int password = 2131361814;
 			

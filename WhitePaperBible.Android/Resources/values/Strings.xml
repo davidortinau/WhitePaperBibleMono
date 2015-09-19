@@ -11,4 +11,6 @@
 	<string name="tab_search">Search</string>
 	<string name="tab_profile">My Papers</string>
 	<string name="tab_about">About</string>
+
+	<string name="paper_updated">Paper Updated.</string>
 </resources>

@@ -35,6 +35,8 @@ namespace WhitePaperBible.Droid
 //			configureActionBar (Resource.Id.toolbar);
 //		}
 
+		protected IMenu _menu;
+
 		private void configureActionBar(int idResource)
 		{
 			var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar> (idResource);
@@ -107,7 +109,7 @@ namespace WhitePaperBible.Droid
 
 		protected void showToast(int resourceId)
 		{
-			var toast = Toast.MakeText(this,resourceId, ToastLength.Short);
+			var toast = Toast.MakeText(this, resourceId, ToastLength.Short);
 			toast.Show();
 		}
 

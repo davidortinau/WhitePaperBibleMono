@@ -28,11 +28,13 @@ namespace WhitePaperBible.Droid
 			Paper = JsonConvert.DeserializeObject<Paper>(itemStr);
 			this.setSupportActionBarTitle (Paper.title);
 			this.addSupportActionBarBackButton ();
+
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
 			MenuInflater.Inflate(Resource.Menu.PaperDetailsActionItems,menu);
+			_menu = menu;
 			return base.OnCreateOptionsMenu(menu);
 		}
 
@@ -41,8 +43,13 @@ namespace WhitePaperBible.Droid
 			switch (item.ItemId) {
 			case Android.Resource.Id.Home:
 				{
-//					Finish();
-					base.OnBackPressed();
+					Finish();
+					break;
+				}
+			case Resource.Id.menu_favorite:
+				{
+					ToggleFavorite.Invoke();
+					showToast(Resource.String.paper_updated);
 					break;
 				}
 			default:
@@ -59,6 +66,13 @@ namespace WhitePaperBible.Droid
 			RunOnUiThread (() => {
 				var paperView = (WebView)FindViewById (Resource.Id.detailsWebView);
 				paperView.LoadData (paper.HtmlContent, "text/html", "utf-8");
+
+				var _favMenu = _menu.FindItem(Resource.Id.menu_favorite);
+				if(isFavorite){
+					_favMenu.SetTitle("Unfavorite");
+				}else{
+					_favMenu.SetTitle("Favorite");
+				}
 			});
 
 //			this.Title = paper.title;
