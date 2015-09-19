@@ -5,11 +5,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/white">
-    <com.refractored.PagerSlidingTabStrip
-        android:id="@+id/tabs"
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/orange" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        local:tabPaddingStart="-1dp"
+        local:tabPaddingEnd="-1dp"
+        local:tabMode="fixed"
+        android:elevation="6dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_height="match_parent"
