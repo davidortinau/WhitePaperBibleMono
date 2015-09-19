@@ -17,7 +17,7 @@ using MonkeyArms;
 
 namespace Views
 {
-	public class FavoritesView : BaseFragment, IFavoritesView, IInjectingTarget
+	public class FavoritesView : BaseMediatedFragment, IFavoritesView, IInjectingTarget
 	{
 		public FavoritesView (int layoutId) : base (layoutId)
 		{

@@ -13,14 +13,41 @@ using System;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.Droid.Fragments;
 using Android.Support.V7.Widget;
+using Newtonsoft.Json;
 
 namespace WhitePaperBible.Droid
 {
-	public class PapersView : BaseFragment, IPapersListView, IInjectingTarget
+	public class PapersView : BaseMediatedFragment, IPapersListView, IInjectingTarget
 	{
+		private View _view;
+
+		private ListView _listView;
+
+		PapersAdapter ListAdapter;
+
 		public PapersView (int layoutId) : base (layoutId)
 		{
 			AddPaper = new Invoker ();	
+		}
+
+		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			_view = base.OnCreateView (inflater, container, savedInstanceState);
+
+			_listView = _view.FindViewById<ListView>(Resource.Id.PapersList);
+			_listView.ItemClick += OnRowSelected;
+
+			return _view;
+		}
+
+		void OnRowSelected (object sender, AdapterView.ItemClickEventArgs e)
+		{
+			var item = Papers[e.Position];
+
+			var courseIntent = new Intent(_view.Context, typeof(PaperDetailActivity));
+			var json = JsonConvert.SerializeObject(item);
+			courseIntent.PutExtra("item_json", json);
+			StartActivity(courseIntent);
 		}
 
 		public void AddPaperEditView ()
@@ -74,9 +101,12 @@ namespace WhitePaperBible.Droid
 		public void SetPapers (List<Paper> papers)
 		{
 			this.Papers = papers;
-//			RunOnUiThread(()=>{
+
+			this.Activity.RunOnUiThread(()=>{
 //				ListAdapter = new PapersAdapter(this, papers);
-//			});
+				Console.WriteLine("How Many Papers? {0}", papers.Count);
+				_listView.Adapter = new PapersAdapter(this.Activity, papers);
+			});
 		}
 
 		#endregion

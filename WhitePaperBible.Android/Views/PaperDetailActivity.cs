@@ -12,6 +12,7 @@ using Android.Text;
 using Android.Webkit;
 using Android.Content;
 using WhitePaperBible.Core.Models;
+using Newtonsoft.Json;
 
 namespace WhitePaperBible.Droid
 {
@@ -57,6 +58,9 @@ namespace WhitePaperBible.Droid
 			ToggleFavorite = new Invoker();
 
 			DI.RequestMediator(this);
+
+			var itemStr = this.Intent.GetStringExtra("item_json");
+			var _item = JsonConvert.DeserializeObject<Paper>(itemStr);
 
 		}
 

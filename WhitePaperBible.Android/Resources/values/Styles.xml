@@ -30,12 +30,12 @@
     <item name="windowNoTitle">true</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">@color/orange</item>
+    <item name="colorPrimary">@color/offblack</item>
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="colorPrimaryDark">@color/orange</item>
+    <item name="colorPrimaryDark">@color/black</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-    <item name="colorAccent">@color/orange</item>
+    <item name="colorAccent">@color/red</item>
      <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
      <item name="android:homeAsUpIndicator">@drawable/icon</item>
@@ -47,5 +47,15 @@
     <item name="actionMenuTextColor">@color/black</item>
  </style>
 
+ <style name="PaperTitleLabel">
+	 	<item name="android:textColor">@color/offblack</item>
+	 	<item name="android:textSize">16dp</item>
+	 	<item name="android:textStyle"></item>
+	 </style>
+	 <style name="PaperAuthorLabel">
+	 	<item name="android:textColor">@color/grey</item>
+	 	<item name="android:textSize">10dp</item>
+	 	<item name="android:textStyle"></item>
+	 </style>
     
 </resources>

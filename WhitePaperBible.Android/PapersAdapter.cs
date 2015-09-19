@@ -52,11 +52,12 @@ namespace WhitePaperBible.Droid
 				itemView = layoutInflater.Inflate(Resource.Layout.PaperListItem, parent, false);
 			}
 
-			TextView titleTxtView = itemView.FindViewById<TextView>(Resource.Id.titleTextView);
+			TextView titleTxt = itemView.FindViewById<TextView>(Resource.Id.titleTextView);
+			TextView authorTxt = itemView.FindViewById<TextView>(Resource.Id.authorTextView);
 
 			var paper = items.ElementAt(position);
-			titleTxtView.Text = paper.title;
-
+			titleTxt.Text = paper.title;
+			authorTxt.Text = string.Format("by: {0}", paper.Author.Name);
 
 			return itemView;
 		}

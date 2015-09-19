@@ -3,14 +3,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Papers List" />
     <ListView
         android:minWidth="45px"
         android:minHeight="?android:attr/listPreferredItemHeight"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@android:id/list" />
+        android:id="@+id/PapersList" />
 </LinearLayout>

@@ -4,4 +4,9 @@
 	<color name="white">#fff</color>
 	<color name="black">#000</color>
 	<color name="orange">#FF6600</color>
+	<color name="grey">#666666</color>
+	<color name="darkgrey">#50575d</color>
+	<color name="black">#000000</color>
+	<color name="offblack">#1d1d1d</color>
+	<color name="red">#ed1f24</color>
 </resources>

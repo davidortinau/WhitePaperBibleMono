@@ -18,7 +18,7 @@ namespace WhitePaperBible.Droid
 	[Activity (MainLauncher=true, NoHistory=true)]			
 	public class MainView : BaseActivityView, ILoadingView
 	{
-		protected BaseFragment CurrentScreen;
+		protected BaseMediatedFragment CurrentScreen;
 
 		protected override void OnStart ()
 		{

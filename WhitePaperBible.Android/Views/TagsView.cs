@@ -17,7 +17,7 @@ using MonkeyArms;
 
 namespace Views
 {
-	public class TagsView : BaseFragment, ITagsListView, IInjectingTarget
+	public class TagsView : BaseMediatedFragment, ITagsListView, IInjectingTarget
 	{
 		public TagsView (int layoutId) : base (layoutId)
 		{

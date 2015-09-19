@@ -17,7 +17,7 @@ using MonkeyArms;
 
 namespace Views
 {
-	public class SearchView : BaseFragment, IBibleSearchView, IInjectingTarget
+	public class SearchView : BaseMediatedFragment, IBibleSearchView, IInjectingTarget
 	{
 		public SearchView (int layoutId) : base (layoutId)
 		{

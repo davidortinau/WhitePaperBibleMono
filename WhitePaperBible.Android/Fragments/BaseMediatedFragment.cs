@@ -14,9 +14,11 @@ using MonkeyArms;
 
 namespace WhitePaperBible.Droid.Fragments
 {
-	public class BaseFragment : Android.Support.V4.App.Fragment, IMediatorTarget
+	public class BaseMediatedFragment : Android.Support.V4.App.Fragment, IMediatorTarget
 	{
 		public event EventHandler ToggleSettingsView = delegate{};
+
+		protected int LayoutID;
 
 		protected string ScreenTitle;
 
@@ -30,39 +32,7 @@ namespace WhitePaperBible.Droid.Fragments
 
 		protected string RightHeaderButtonTitle = "";
 
-
-		#region IBaseCalendarView implementation
-
-		public void GoCalendarMonthView ()
-		{
-			//do nothing
-		}
-
-		public void GoCalendarWeekView ()
-		{
-			//do nothing
-		}
-
-		public void GoCalendarDayView ()
-		{
-			//do nothing
-		}
-
-		public void GoAboutView ()
-		{
-			//do nothing
-		}
-
-		public void GoParentDirectory ()
-		{
-			//do nothing
-		}
-
-		#endregion
-
-		protected int LayoutID;
-
-		public BaseFragment(int layoutId)
+		public BaseMediatedFragment(int layoutId)
 		{
 			LayoutID = layoutId;
 		}
@@ -70,8 +40,6 @@ namespace WhitePaperBible.Droid.Fragments
 		public override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-
-			// Create your fragment here
 		}
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -83,7 +51,7 @@ namespace WhitePaperBible.Droid.Fragments
 			var frame = new LinearLayout (Activity);
 			frame.Orientation = Orientation.Vertical;
 
-//			InitHeader (inflater, frame);
+			//			InitHeader (inflater, frame);
 
 
 			var view = inflater.Inflate (LayoutID, null);
@@ -119,6 +87,38 @@ namespace WhitePaperBible.Droid.Fragments
 				Console.WriteLine("Unable to destroy mediator for: " + this.Class.Name);
 			}
 		}
+
+
+		#region IBaseCalendarView implementation
+
+		public void GoCalendarMonthView ()
+		{
+			//do nothing
+		}
+
+		public void GoCalendarWeekView ()
+		{
+			//do nothing
+		}
+
+		public void GoCalendarDayView ()
+		{
+			//do nothing
+		}
+
+		public void GoAboutView ()
+		{
+			//do nothing
+		}
+
+		public void GoParentDirectory ()
+		{
+			//do nothing
+		}
+
+		#endregion
+
+
 //		void InitHeader (LayoutInflater inflater, LinearLayout frame)
 //		{
 //			var headerView = inflater.Inflate (Resource.Layout.ScreenHeader, null);
