@@ -18,7 +18,7 @@ using Android.Graphics.Drawables;
 namespace WhitePaperBible.Droid
 {
 	[Activity]			
-	public class BaseActivityView : AppCompatActivity, IMediatorTarget
+	public class BaseActivityView : ActionBarActivity, IMediatorTarget
 	{
 //		private int _layoutId;
 //

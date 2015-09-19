@@ -8,5 +8,6 @@ xmlns:local="http://schemas.android.com/apk/res-auto">
   <item
       android:id="@+id/menu_share"
       local:showAsAction="never"
+      local:actionProviderClass="android.support.v7.widget.ShareActionProvider"
       android:title="Share" />
 </menu>
