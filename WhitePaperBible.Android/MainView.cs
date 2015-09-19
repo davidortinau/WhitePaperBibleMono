@@ -15,7 +15,7 @@ using Android.Support.Design.Widget;
 
 namespace WhitePaperBible.Droid
 {
-	[Activity (MainLauncher=true, NoHistory=true)]			
+	[Activity (MainLauncher=true, NoHistory=false)]			
 	public class MainView : BaseActivityView, ILoadingView
 	{
 		protected BaseMediatedFragment CurrentScreen;

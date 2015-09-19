@@ -17,13 +17,51 @@ using Newtonsoft.Json;
 namespace WhitePaperBible.Droid
 {
 	[Activity (Label = "")]			
-	public class PaperDetailActivity : Activity, IPaperDetailView, IInjectingTarget
+	public class PaperDetailActivity : BaseActivityView, IPaperDetailView, IInjectingTarget
 	{
-		#region IPaperDetailView implementation
+		protected override void OnCreate (Bundle bundle)
+		{
+			base.OnCreateWithLayout(bundle, Resource.Layout.PaperDetail);
 
+			ToggleFavorite = new Invoker();
+			var itemStr = this.Intent.GetStringExtra("item_json");
+			Paper = JsonConvert.DeserializeObject<Paper>(itemStr);
+			this.setSupportActionBarTitle (Paper.title);
+			this.addSupportActionBarBackButton ();
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.PaperDetailsActionItems,menu);
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			switch (item.ItemId) {
+			case Android.Resource.Id.Home:
+				{
+//					Finish();
+					base.OnBackPressed();
+					break;
+				}
+			default:
+				return base.OnOptionsItemSelected (item);
+			}
+
+			return true;
+		}
+
+
+		#region IPaperDetailView implementation
 		public void SetPaper (Paper paper, bool isFavorite, bool isOwned)
 		{
-			//
+			RunOnUiThread (() => {
+				var paperView = (WebView)FindViewById (Resource.Id.detailsWebView);
+				paperView.LoadData (paper.HtmlContent, "text/html", "utf-8");
+			});
+
+//			this.Title = paper.title;
 		}
 
 		public void SetReferences (string html)
@@ -44,55 +82,6 @@ namespace WhitePaperBible.Droid
 			get;set;
 		}
 
-		#endregion
-
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
-
-			// Activate the action bar and display it in navigation mode.
-			RequestWindowFeature(WindowFeatures.ActionBar);
-
-			SetContentView( Resource.Layout.PaperDetail );
-
-			ToggleFavorite = new Invoker();
-
-			DI.RequestMediator(this);
-
-			var itemStr = this.Intent.GetStringExtra("item_json");
-			var _item = JsonConvert.DeserializeObject<Paper>(itemStr);
-
-		}
-
-		public override bool OnCreateOptionsMenu(IMenu menu)
-		{
-			MenuInflater.Inflate(Resource.Menu.PaperDetailsActionItems,menu);
-//			menu.SetDisplayHomeAsUpEnabled(true);
-			ActionBar.SetDisplayHomeAsUpEnabled (true);
-//			ActionBar.DisplayOptions = ActionBarDisplayOptions.HomeAsUp | ActionBarDisplayOptions.UseLogo | ActionBarDisplayOptions.ShowHome;
-
-			return true;
-		}
-
-		public override bool OnOptionsItemSelected(IMenuItem item)
-		{
-
-			var papersView = new Intent(this, typeof(PapersView));
-			StartActivity( papersView );
-			return false;
-		}
-
-
-		#region IPaperDetailView implementation
-		public void SetPaper (Paper paper)
-		{
-			RunOnUiThread (() => {
-				var paperView = (WebView)FindViewById (Resource.Id.detailsWebView);
-				paperView.LoadData (paper.HtmlContent, "text/html", "utf-8");
-			});
-
-//			this.Title = paper.title;
-		}
 		#endregion
 	}
 
