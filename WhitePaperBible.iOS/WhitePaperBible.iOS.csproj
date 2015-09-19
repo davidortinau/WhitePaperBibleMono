@@ -6,10 +6,14 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>WhitePaperBible.iOS</RootNamespace>
     <AssemblyName>WhitePaperBibleiOS</AssemblyName>
+    <UseMSBuildEngine>True</UseMSBuildEngine>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <XamarinInsightsApiKey>cfccbd40ee5db73c638f378c7e9130c3a90b09c0</XamarinInsightsApiKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>
@@ -22,9 +26,12 @@
     <ConsolePause>False</ConsolePause>
     <MtouchDebug>True</MtouchDebug>
     <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -46,7 +53,14 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>True</MtouchDebug>
-    <MtouchProfiling>True</MtouchProfiling>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseSGen>true</MtouchUseSGen>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -56,22 +70,79 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>entitlements.plist</CodesignEntitlements>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'App Store|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\App Store</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
     <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="System.Web.Services" />
-    <Reference Include="RestSharp.MonoTouch">
-      <HintPath>..\Components\restsharp-104.1.0\lib\ios\RestSharp.MonoTouch.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\Components\Analytics-1.0.0\lib\ios\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="RestSharp.MonoTouch">
+      <HintPath>..\Components\restsharp-104.4.0.1\lib\ios-unified\RestSharp.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.17\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAnalytics.iOS">
+      <HintPath>..\Components\googleanalytics-3.0.12\lib\ios-unified\GoogleAnalytics.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="packages.config" />
+    <None Include="entitlements.plist" />
+    <None Include="WatchAppManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -82,7 +153,6 @@
     </Compile>
     <Compile Include="Views\Common\TabBarController.cs" />
     <Compile Include="Views\iPhone\FavoritesView.cs" />
-    <Compile Include="Views\iPhone\SearchView.cs" />
     <Compile Include="Views\iPhone\MyPapersView.cs" />
     <Compile Include="Views\iPhone\AboutView.cs" />
     <Compile Include="Views\iPhone\PaperDetailsView.cs" />
@@ -105,11 +175,69 @@
     <Compile Include="Invokers\LoginFinishedInvokerArgs.cs" />
     <Compile Include="Invokers\LoginFinishedInvoker.cs" />
     <Compile Include="Views\iPhone\Sub\LoginRequiredView.cs" />
+    <Compile Include="Views\iPhone\CopyrightsView.cs" />
+    <Compile Include="Views\iPhone\CopyrightsView.designer.cs">
+      <DependentUpon>CopyrightsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\TermsAndConditionsView.cs" />
+    <Compile Include="Views\iPhone\TermsAndConditionsView.designer.cs">
+      <DependentUpon>TermsAndConditionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\Sub\ProfileView.cs" />
+    <Compile Include="Views\iPhone\MyPapersAndProfileController.cs" />
+    <Compile Include="Views\iPhone\MyPapersAndProfileController.designer.cs">
+      <DependentUpon>MyPapersAndProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\EditProfileView.cs" />
+    <Compile Include="UI\CustomElements\SimpleMultilineEntryElement.cs" />
+    <Compile Include="Views\iPhone\BibleSearchView.cs" />
+    <Compile Include="Views\iPhone\BibleSearchView.designer.cs">
+      <DependentUpon>BibleSearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\Sub\BibleSearchResults.cs" />
+    <Compile Include="Utils\Reachability.cs" />
+    <Compile Include="Views\iPhone\EditPaperView.cs" />
+    <Compile Include="UI\PlaceholderTextView.cs" />
+    <Compile Include="Views\iPhone\PaperTagsView.cs" />
+    <Compile Include="Views\iPhone\PaperTagsViewContainer.cs" />
+    <Compile Include="Views\iPhone\PaperTagsViewContainer.designer.cs">
+      <DependentUpon>PaperTagsViewContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomElements\VerseEntryElement.cs" />
+    <Compile Include="Views\iPhone\RegistrationView.cs" />
+    <Compile Include="Utils\AnalyticsUtil.cs" />
+    <Compile Include="Views\iPhone\LoginViewController.cs" />
+    <Compile Include="Views\iPhone\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ApplyStyle.cs" />
+    <Compile Include="Views\iPhone\LoginRequiredController.cs" />
+    <Compile Include="Views\iPhone\LoginRequiredController.designer.cs">
+      <DependentUpon>LoginRequiredController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\PapersListController.cs" />
+    <Compile Include="Views\iPhone\PapersListController.designer.cs">
+      <DependentUpon>PapersListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\IPapersView.cs" />
+    <Compile Include="UI\CustomElements\PaperDetailedCell.cs" />
+    <Compile Include="UI\CustomElements\PaperDetailedCell.designer.cs">
+      <DependentUpon>PaperDetailedCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
     <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\CopyrightsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\TermsAndConditionsView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\MyPapersAndProfileController.xib" />
+    <InterfaceDefinition Include="Views\iPhone\BibleSearchView.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PaperTagsViewContainer.xib" />
+    <InterfaceDefinition Include="Views\iPhone\LoginViewController.xib" />
+    <InterfaceDefinition Include="Views\iPhone\LoginRequiredController.xib" />
+    <InterfaceDefinition Include="Views\iPhone\PapersListController_iPhone.xib" />
+    <InterfaceDefinition Include="UI\CustomElements\PaperDetailedCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />
@@ -125,7 +253,6 @@
     <Content Include="Images\Tabs\favorites.png" />
     <Content Include="Images\Tabs\favorites%402x.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Views\Common\" />
@@ -138,21 +265,33 @@
     <Folder Include="Managers\" />
     <Folder Include="Invokers\" />
     <Folder Include="Views\iPhone\Sub\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WhitePaperBible.PCL\WhitePaperBible.PCL.csproj">
       <Project>{75317DE9-E9AA-40ED-A17D-273B3EEAF998}</Project>
       <Name>WhitePaperBible.PCL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MonkeyArmsPCL\MonkeyArmsPCL.csproj">
+      <Project>{C3B705A8-81F9-469D-8085-C5333F6FD517}</Project>
+      <Name>MonkeyArmsPCL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">
-      <Version>104.1.0</Version>
+      <Version>104.4.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.17</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleanalytics">
+      <Version>3.0.12</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Icon%402x.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
     <BundleResource Include="Resources\Icon-72.png" />
     <BundleResource Include="Resources\Icon-72%402x.png" />
@@ -185,7 +324,6 @@
     <BundleResource Include="Images\headphones%402x.png" />
     <BundleResource Include="Images\heaphones_24x21.png" />
     <BundleResource Include="Images\icon.png" />
-    <BundleResource Include="Images\icon%402x.png" />
     <BundleResource Include="Images\icon_120.png" />
     <BundleResource Include="Images\icon_144.png" />
     <BundleResource Include="Images\icon_152.png" />
@@ -227,8 +365,46 @@
     <BundleResource Include="Images\Launch-568h%402x.png" />
     <BundleResource Include="Images\Launch.png" />
     <BundleResource Include="Images\Launch%402x.png" />
-    <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\WPB Terms and Conditions.txt" />
+    <BundleResource Include="Resources\my_papers.png" />
+    <BundleResource Include="Resources\my_papers%402x.png" />
+    <BundleResource Include="Resources\plus_alt.png" />
+    <BundleResource Include="Resources\plus_alt%402x.png" />
+    <BundleResource Include="Images\Launch%403x.png" />
+    <BundleResource Include="Images\Launch6%402x.png" />
+    <BundleResource Include="Images\icon_1024.png" />
+    <BundleResource Include="Images\icon%401x.png" />
+    <BundleResource Include="Images\icon%403x.png" />
+    <BundleResource Include="Images\icon_180.png" />
+    <BundleResource Include="Images\icon_512.png" />
+    <BundleResource Include="Images\Launch_320.png" />
+    <BundleResource Include="Images\Launch_640.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch6%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <ITunesArtwork Include="iTunesArtwork" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
 </Project>

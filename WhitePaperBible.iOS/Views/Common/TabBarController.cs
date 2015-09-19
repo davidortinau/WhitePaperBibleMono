@@ -1,15 +1,24 @@
 using MonoTouch.Dialog;
-using MonoTouch.UIKit;
+using UIKit;
 using WhitePaperBible.iOS.Managers;
 using System.ComponentModel;
 using System;
 
+using MonkeyArms;
+using WhitePaperBible.Core.Invokers;
+using WhitePaperBible.Core.Views;
+using WhitePaperBible.iOS.Invokers;
+using BigTed;
+
 namespace WhitePaperBible.iOS
 {
-	public class TabBarController : UITabBarController
+	public class TabBarController : UITabBarController, ITabBarView, IMediatorTarget
 	{
 		UINavigationController papersNav, tagsNav, favoritesNav, searchNav, aboutNav, myPapersNav;
 		//UISplitViewController speakersSplitView, sessionsSplitView, exhibitorsSplitView, twitterSplitView, newsSplitView;
+
+		LoginRequiredController LoginRequiredView;
+
 		public TabBarController ()
 		{
 		}
@@ -17,17 +26,16 @@ namespace WhitePaperBible.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
 
-			papersNav = CreateTabView<PapersView> (ResourceManager.GetString ("papers"), "papers");
+			papersNav = CreateTabView<PapersListController> (ResourceManager.GetString ("papers"), "papers");
 
 			tagsNav = CreateTabView<TagsView> (ResourceManager.GetString ("tags"), "tag");
 
 			favoritesNav = CreateTabView<FavoritesView> (ResourceManager.GetString ("favorites"), "favorites");
 			
-			searchNav = CreateTabView<SearchView> (ResourceManager.GetString ("search"), "search");
+			searchNav = CreateTabView<BibleSearchView> (ResourceManager.GetString ("search"), "search");
 			
-			myPapersNav = CreateTabView<MyPapersView> (ResourceManager.GetString ("myPapers"), "search");
+			myPapersNav = CreateTabView<MyPapersAndProfileController> (ResourceManager.GetString ("myPapers"), "my_papers");
 
 			aboutNav = CreateTabView<AboutView> (ResourceManager.GetString ("about"), "myDots");
 
@@ -39,8 +47,8 @@ namespace WhitePaperBible.iOS
 					papersNav,
 					tagsNav,
 					favoritesNav,
-					myPapersNav,
 					searchNav,
+					myPapersNav,
 					aboutNav
 				};
 			} else {	// IsPad
@@ -73,11 +81,36 @@ namespace WhitePaperBible.iOS
 
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
-			if (AppDelegate.IsPad)
-				return true;
-			else
-				return toInterfaceOrientation == UIInterfaceOrientation.Portrait;
+			return true;
+//			if (AppDelegate.IsPad)
+//				return true;
+//			else
+//				return toInterfaceOrientation == UIInterfaceOrientation.Portrait;
 		}
+
+		public void ShowUnreachable ()
+		{
+			InvokeOnMainThread (() => {
+				BTProgressHUD.ShowErrorWithStatus("Some features and content may not load without an internet connect. To get the very latest content, please enable WiFi or Data.", 4000);
+			});
+
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			DI.RequestMediator (this);
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			DI.DestroyMediator (this);
+
+		}
+
+
+
 	}
 }
 

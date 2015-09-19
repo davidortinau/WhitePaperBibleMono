@@ -7,10 +7,22 @@ namespace WhitePaperBible.Core.Commands
 	{
 		public override void Execute (InvokerArgs args)
 		{
+			DI.MapCommandToInvoker<GetPapersCommand, GetPapersInvoker> ();
 			DI.MapCommandToInvoker<GetPaperDetailsCommand, GetPaperDetailsInvoker> ();
 			DI.MapCommandToInvoker<GetTagsCommand, GetTagsInvoker> ();
 			DI.MapCommandToInvoker<GetPapersByTagCommand, GetPapersByTagInvoker> ();
 			DI.MapCommandToInvoker<LoginCommand, LogInInvoker> ();
+			DI.MapCommandToInvoker<GetFavoritesCommand, GetFavoritesInvoker> ();
+			DI.MapCommandToInvoker<SaveStorageCommand, SaveStorageInvoker> ();
+			DI.MapCommandToInvoker<GetMyPapersCommand, GetMyPapersInvoker> ();
+			DI.MapCommandToInvoker<GetUserProfileCommand, GetUserProfileInvoker> ();
+			DI.MapCommandToInvoker<LogoutCommand, LogoutInvoker> ();
+			DI.MapCommandToInvoker<SaveUserCommand, SaveUserInvoker> ();
+			DI.MapCommandToInvoker<GetBibleSearchResultsCommand, GetBibleSearchResultsInvoker> ();
+			DI.MapCommandToInvoker<SaveFavoriteCommand, ToggleFavoriteInvoker> ();
+			DI.MapCommandToInvoker<SavePaperCommand, SavePaperInvoker> ();
+			DI.MapCommandToInvoker<DeletePaperCommand, DeletePaperInvoker> ();
+			DI.MapCommandToInvoker<RegisterUserCommand, RegisterUserInvoker> ();
 		}
 	}
 }

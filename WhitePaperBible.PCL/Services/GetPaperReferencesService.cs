@@ -2,12 +2,13 @@
 using WhitePaperBible.Core.Models;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace WhitePaperBible.Core.Services
 {
 	public interface IGetPaperReferencesService:IBaseService
 	{
-		void Execute (int paperID);
+		Task<List<ReferenceNode>> Execute (int paperID);
 	}
 
 	public class GetPaperReferencesService:BaseService, IGetPaperReferencesService
@@ -16,9 +17,10 @@ namespace WhitePaperBible.Core.Services
 		{
 		}
 
-		public void Execute (int paperID)
+		public async Task<List<ReferenceNode>> Execute (int paperID)
 		{
-			Client.OpenURL (Constants.BASE_URI + "papers/" + paperID.ToString () + "/references.json?caller=wpb-iPhone", false);
+			await Client.OpenURL (Constants.BASE_URI + "papers/" + paperID.ToString () + "/references.json?caller=wpb-iPhone");
+			return JsonConvert.DeserializeObject<List<ReferenceNode>> (Client.ResponseText);
 		}
 
 		#region implemented abstract members of BaseService

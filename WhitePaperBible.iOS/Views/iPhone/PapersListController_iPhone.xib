@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PapersListController">
+            <connections>
+                <outlet property="ListContainer" destination="7Sg-F1-WQ9" id="5zm-gf-nI4"/>
+                <outlet property="TopConstraint" destination="HIE-Wc-b3U" id="vRm-lX-xDp"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sg-F1-WQ9">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7Sg-F1-WQ9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="HIE-Wc-b3U"/>
+                <constraint firstAttribute="trailing" secondItem="7Sg-F1-WQ9" secondAttribute="trailing" id="IYE-XH-FHU"/>
+                <constraint firstItem="7Sg-F1-WQ9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bVa-fX-IMo"/>
+                <constraint firstAttribute="bottom" secondItem="7Sg-F1-WQ9" secondAttribute="bottom" id="kwW-Ha-lsy"/>
+            </constraints>
+            <point key="canvasLocation" x="305" y="227"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

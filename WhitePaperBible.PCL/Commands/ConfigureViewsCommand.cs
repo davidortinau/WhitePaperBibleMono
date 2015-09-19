@@ -15,7 +15,16 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapMediatorToClass<PapersListByTagMediator, IPapersByTagListView> ();
 			DI.MapMediatorToClass<LoginMediator, ILoginView> ();
 			DI.MapMediatorToClass<FavoritesListMediator, IFavoritesView> ();
-
+			DI.MapMediatorToClass<MyPapersMediator, IMyPapersView> ();
+			DI.MapMediatorToClass<ProfileViewMediator, IProfileView> ();
+			DI.MapMediatorToClass<EditProfileViewMediator, IEditProfileView> ();
+			DI.MapMediatorToClass<MyPapersAndProfileMediator, IMyPapersAndProfileView> ();
+			DI.MapMediatorToClass<BibleSearchViewMediator, IBibleSearchView> ();
+			DI.MapMediatorToClass<BibleSearchResultsViewMediator, IBibleSearchResultsView> ();
+			DI.MapMediatorToClass<TabBarMediator, ITabBarView> ();
+			DI.MapMediatorToClass<EditPaperViewMediator, IEditPaperView> ();
+			DI.MapMediatorToClass<PaperTagsViewMediator, IPaperTagsView> ();
+			DI.MapMediatorToClass<RegistrationViewMediator, IRegistrationView> ();
 		}
 	}
 }

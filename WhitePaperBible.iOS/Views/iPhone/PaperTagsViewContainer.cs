@@ -1,0 +1,67 @@
+
+using System;
+using CoreGraphics;
+
+using Foundation;
+using UIKit;
+using IOS.Util;
+
+namespace WhitePaperBible.iOS
+{
+	public partial class PaperTagsViewContainer : UIViewController
+	{
+		public PaperTagsView tagsView;
+
+		public EditPaperView Controller {
+			get;
+			set;
+		}
+
+		public PaperTagsViewContainer () : base ("PaperTagsViewContainer", null)
+		{
+		}
+
+		public override void DidReceiveMemoryWarning ()
+		{
+			// Releases the view if it doesn't have a superview.
+			base.DidReceiveMemoryWarning ();
+			
+			// Release any cached data, images, etc that aren't in use.
+		}
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			// Perform any additional setup after loading the view, typically from a nib.
+			var bar = new UIToolbar (new CGRect (0, 0, View.Bounds.Width, 64));
+			View.AddSubview (bar);
+
+			var btn = new UIBarButtonItem (UIBarButtonSystemItem.Done);
+			UIBarButtonItem[] btns = new UIBarButtonItem[]{btn};
+			bar.SetItems (btns,false);
+
+			btn.Clicked += (object sender, EventArgs e) => {
+				tagsView.ReturnTags();
+				this.ParentViewController.NavigationController.PopViewController(true);
+			};
+
+			AnalyticsUtil.TrackScreen (this.Title);
+		}
+
+		public override void ViewDidLayoutSubviews()
+		{
+			base.ViewDidLayoutSubviews();
+
+			if (tagsView == null) {
+				tagsView = new PaperTagsView ();
+				tagsView.Controller = Controller;
+
+				var containerView = new UIView (new CGRect (0, 64, View.Bounds.Width, View.Bounds.Height - 64));
+				containerView.AddSubview (tagsView.TableView);
+				View.AddSubview (containerView);
+			}
+		}
+	}
+}
+

@@ -8,7 +8,6 @@ namespace WhitePaperBible.Core
 		{
 		}
 		
-		public static string BASE_URI = "http://whitepaperbible.org/";
+		public static string BASE_URI = "http://www.whitepaperbible.org/";
 	}
 }
-

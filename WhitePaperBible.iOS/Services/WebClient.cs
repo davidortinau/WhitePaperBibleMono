@@ -1,10 +1,17 @@
 using System;
 using RestSharp;
 using WhitePaperBible.Core.Services;
-using MonoTouch.UIKit;
+using UIKit;
 using System.Collections.Generic;
 using System.Net;
 using WhitePaperBible.Core.Models;
+
+using MonkeyArms;
+using WhitePaperBible.Core.Invokers;
+using WhitePaperBible.Core.Utilities;
+using WhitePaperBible.Core;
+using System.Threading.Tasks;
+using System.Threading;
 
 
 namespace WhitePaperBible.iOS
@@ -13,6 +20,7 @@ namespace WhitePaperBible.iOS
 	{
 		public WebClient ()
 		{
+			ResolveNetworkUtil ();
 		}
 
 		private static List<string> PendingMethods = new List<string> ();
@@ -22,24 +30,46 @@ namespace WhitePaperBible.iOS
 		public event EventHandler RequestComplete = delegate {};
 		public event EventHandler RequestError;
 
+		NetworkUtil NUtil;
 
-		public void OpenURL (string url, bool isPost, CookieContainer cookieJar=null)
+		void ResolveNetworkUtil ()
 		{
+			if (NUtil == null) {
+				if (DI.CanResolve<NetworkUtil> ()) {
+					NUtil = DI.Get<NetworkUtil> ();
+				}
+			}
+		}
 
-			var client = new RestClient ();
-			client.CookieContainer = cookieJar;
+		public async Task OpenURL (string url, MethodEnum method=MethodEnum.GET, bool includeSessionCookie=false)
+		{
+			ResolveNetworkUtil ();
 
-			var request = new RestRequest (url, isPost ? Method.POST : Method.GET) { RequestFormat = DataFormat.Json };
+			if (NUtil != null && (NUtil.RemoteHostStatus () == NetworkStatus.NotReachable)) {
+				DI.Get<UnreachableInvoker> ().Invoke ();
+			} else {
+				var client = new RestClient ();
+				if(includeSessionCookie){
+					AppModel AM = DI.Get<AppModel> ();
+					var cookieJar = new CookieContainer ();
+					cookieJar.Add (new Uri (Constants.BASE_URI), new Cookie (AM.UserSessionCookie.Name, AM.UserSessionCookie.Value));
+					client.CookieContainer = cookieJar;
+				}
 
-			AddNetworkActivity (url);
+				var request = new RestRequest (url, (Method)method) { RequestFormat = DataFormat.Json };
 
-			client.ExecuteAsync (request, response => {
-				if(response.Cookies.Count > 0){
-					if(response.Cookies[0].Name == "_whitepaperbible_session"){
-						UserSessionCookie = new SessionCookie{ 
-							Name = response.Cookies[0].Name,
-							Value = response.Cookies[0].Value
-						};
+				AddNetworkActivity (url);
+
+				var cancellationTokenSource = new CancellationTokenSource();
+				var response = await client.ExecuteTaskAsync (request, cancellationTokenSource.Token);
+				if (response.Cookies.Count > 0) {
+					foreach(var cookie in response.Cookies){
+						if(cookie.Name == "_whitepaperbible_session"){
+							UserSessionCookie = new SessionCookie { 
+								Name = cookie.Name,
+								Value = cookie.Value
+							};
+						}
 					}
 				}
 
@@ -50,7 +80,28 @@ namespace WhitePaperBible.iOS
 				} else {
 					DispatchComplete ();
 				}
-			});
+
+//				client.ExecuteAsync (request, response => {
+//					if (response.Cookies.Count > 0) {
+//						foreach(var cookie in response.Cookies){
+//							if(cookie.Name == "_whitepaperbible_session"){
+//								UserSessionCookie = new SessionCookie { 
+//									Name = cookie.Name,
+//									Value = cookie.Value
+//								};
+//							}
+//						}
+//					}
+//
+//					ResponseText = response.Content;
+//					RemoveNetworkActivity (url);
+//					if (response.ResponseStatus == ResponseStatus.Error) {
+//						DispatchError ();
+//					} else {
+//						DispatchComplete ();
+//					}
+//				});
+			}
 		}
 
 		private void DispatchComplete ()
@@ -60,7 +111,12 @@ namespace WhitePaperBible.iOS
 
 		private void DispatchError ()
 		{
+//			if (!Reachability.IsHostReachable ("http://google.com")) {
+//				DI.Get<UnreachableInvoker> ().Invoke ();
+////				Unreachable.Invoke ();
+//			} else {
 			RequestError (this, EventArgs.Empty);
+//			}
 		}
 
 		private static void AddNetworkActivity (string url)

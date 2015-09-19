@@ -1,6 +1,6 @@
-﻿using System;
-using MonoTouch.UIKit;
-using System.Drawing;
+using System;
+using UIKit;
+using CoreGraphics;
 
 namespace WhitePaperBible.iOS.UI
 {
@@ -17,16 +17,16 @@ namespace WhitePaperBible.iOS.UI
 			}
 		}
 
-		public static PointF DeviceCenter
+		public static CGPoint DeviceCenter
 		{
 			get{
-				return new PointF (ScreenWidth/2, DeviceScreenHeight/2);
+				return new CGPoint (ScreenWidth/2, DeviceScreenHeight/2);
 			}
 		}
 
-		public static float ScreenWidth = 320;
+		public static nfloat ScreenWidth = 320;
 
-		public static float DeviceScreenHeight{
+		public static nfloat DeviceScreenHeight{
 			get{
 				return (IsIOS7)?UIScreen.MainScreen.Bounds.Height:UIScreen.MainScreen.Bounds.Height - 20;
 			}

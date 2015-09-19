@@ -4,19 +4,25 @@ using WhitePaperBible.Core.Models;
 using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using System.Linq;
+using WhitePaperBible.Core.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace WhitePaperBible.Core.Mediators
 {
 	public class FavoritesListMediator : Mediator
 	{
 		[Inject]
-		public AppModel AppModel;
+		public AppModel AM;
 
 		[Inject]
-		public PapersByTagReceivedInvoker PapersReceived;
+		public FavoritesReceivedInvoker FavoritesReceived;
 
 		[Inject]
-		public GetPapersByTagInvoker GetPapersByTag;
+		public GetFavoritesInvoker GetFavorites;
+
+		[Inject]
+		public LoggedInInvoker LoggedIn;
 
 		IFavoritesView Target;
 
@@ -27,45 +33,39 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-//			InvokerMap.Add (Target.Filter, HandleFilter);
 			InvokerMap.Add (Target.OnPaperSelected, HandlerPaperSelected);
-			InvokerMap.Add (PapersReceived, (object sender, EventArgs e) => SetPapers (e as PapersReceivedInvokerArgs));
+			InvokerMap.Add (FavoritesReceived, (object sender, EventArgs e) => SetPapers ());
+			InvokerMap.Add (LoggedIn, (object sender, EventArgs e) => Target.HideLoginButton ());
 
-//			Target.SearchPlaceHolderText = "Search Papers";
-
-//			if([appDelegate isUserLoggedIn]){
-//				self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//				[HRRestModel setDelegate:self];
-//				[HRRestModel getPath:@"/favorite/index/?caller=wpb-iPhone" withOptions:nil object:self];
-//				[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-//			}
-//			else{
-//				NotLoggedInViewController *notLoggedInViewController = [[NotLoggedInViewController alloc] initWithNibName:@"NotLoggedInViewController"  bundle:[NSBundle mainBundle]];
-//				[self presentModalViewController:notLoggedInViewController animated:YES];
-//				[notLoggedInViewController release];
-//			}
-
-			if (AppModel.IsLoggedIn) {
-				SetPapers (null);
-			}else{
-				Target.PromptForLogin ();
+			if (!AM.IsLoggedIn) {
+				Target.ShowLoginButton ();
 			}
 
+			if (AM.IsLoggedIn) {
+				GetFavorites.Invoke ();
+			}
+			SetPapers ();
 		}
 
 		void HandlerPaperSelected (object sender, EventArgs e)
 		{
-			AppModel.CurrentPaper = Target.SelectedPaper;
+			AM.CurrentPaper = Target.SelectedPaper;
 		}
 
-		public void SetPapers (PapersReceivedInvokerArgs args)
+		public void SetPapers ()
 		{
-			if (args != null && args.Papers != null) {
-				Target.SetPapers (args.Papers);
+			if (AM.Favorites != null && AM.Favorites != null) {
+				Target.SetPapers (AM.Favorites);
 			}else{
-//				GetPapersByTag.Invoke (new GetPapers (Target.SelectedTag));
-				// GetFavorites
+				if (AM.IsLoggedIn) {
+					GetFavorites.Invoke ();
+				}
 			}
 		}
+
+//		public async Task<List<Paper>> Papers()
+//		{
+//			//
+//		}
 	}
 }

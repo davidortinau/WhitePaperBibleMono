@@ -22,9 +22,9 @@
 	<string name="register">Register</string>
 	<string name="authenticationError">Authentication Error</string>
 	<string name="ok">Ok</string>
-	<string name="invalidLogin">Sorry, your email/password were incorrect.</string>
+	<string name="invalidLogin">Hmm, we can't find an account matching those details.</string>
 	
-	<string name="loginRequired">Sorry, an account is required to use this feature.</string>
+	<string name="loginRequired">Have we met? Login or register here.</string>
 	<string name="loginRegister">Login/Register</string>
 
 

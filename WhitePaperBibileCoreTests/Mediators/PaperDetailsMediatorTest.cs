@@ -23,7 +23,7 @@ namespace WhitePaperBibileCoreTests
 		{
 			MockAppModel.SetupGet (AppModel => AppModel.CurrentPaper).Returns (new Paper ());
 			MockPaperDetailsReceivedInvoker.Raise (invoker => invoker.Invoked += null, InvokerArgs.Empty);
-			MockView.Verify (view => view.SetPaper (It.IsAny<Paper> ()), Times.Once, TestIntent);
+			MockView.Verify (view => view.SetPaper (It.IsAny<Paper> (), false, false), Times.Once, TestIntent);
 		}
 
 		[Test, Property ("Intent", "When PaperDetailsReceivedInvoker dispatches and AppModel.CurrentPaper is Null, Mediator should NOT call SetPaper on View")]
@@ -31,7 +31,7 @@ namespace WhitePaperBibileCoreTests
 		{
 
 			MockPaperDetailsReceivedInvoker.Raise (invoker => invoker.Invoked += null, InvokerArgs.Empty);
-			MockView.Verify (view => view.SetPaper (It.IsAny<Paper> ()), Times.Never, TestIntent);
+			MockView.Verify (view => view.SetPaper (It.IsAny<Paper> (), false, false), Times.Never, TestIntent);
 		}
 
 		[Test, Property ("Intent", "When UnRegister is called on Mediator, Mediator should remove listener from GetPaperDetailsInvoker.")]

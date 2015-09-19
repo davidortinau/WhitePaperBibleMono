@@ -13,10 +13,11 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapCommandToInvoker<ConfigureInvokersCommand, ConfigureInvokersInvoker> ().Invoke ();
 			DI.MapCommandToInvoker<ConfigureCommandsCommand, ConfigureCommandsInvoker> ().Invoke ();
 
-			DI.MapCommandToInvoker<GetPapersCommand, GetPapersInvoker> ().Invoke ();
 
+			DI.MapCommandToInvoker<LoadStorageCommand, LoadStorageInvoker> ().Invoke ();
+
+			DI.Get<GetTagsInvoker> ().Invoke ();
 
 		}
 	}
 }
-

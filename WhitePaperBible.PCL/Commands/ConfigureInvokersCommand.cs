@@ -17,6 +17,21 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapSingleton<PapersByTagReceivedInvoker> ();
 			DI.MapSingleton<LogInInvoker> ();
 			DI.MapSingleton<LoggedInInvoker> ();
+			DI.MapSingleton<LoginFaultInvoker> ();
+			DI.MapSingleton<FavoritesReceivedInvoker> ();
+			DI.MapSingleton<MyPapersReceivedInvoker> ();
+			DI.MapSingleton<StorageLoadedInvoker> ();
+			DI.MapSingleton<UserProfileSavedInvoker> ();
+			DI.MapSingleton<UserProfileReceivedInvoker> ();
+			DI.MapSingleton<ShowMyPaperInvoker> ();
+			DI.MapSingleton<BibleSearchResultsReceivedInvoker> ();
+			DI.MapSingleton<UnreachableInvoker> ();
+			DI.MapSingleton<RefreshPapersInvoker> ();
+			DI.MapSingleton<PaperSavedInvoker> ();
+			DI.MapSingleton<PaperDeletedInvoker> ();
+			DI.MapSingleton<UserRegisteredInvoker> ();
+			DI.MapSingleton<RegistrationFaultInvoker> ();
+			DI.MapSingleton<LoginRequiredInvoker> ();
 		}
 	}
 }

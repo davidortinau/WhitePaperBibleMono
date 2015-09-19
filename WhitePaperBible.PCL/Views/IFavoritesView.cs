@@ -7,8 +7,6 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IFavoritesView : IMediatorTarget
 	{
-		void PromptForLogin ();
-
 		Invoker Filter{ get; }
 
 		Invoker OnPaperSelected{ get; }
@@ -20,6 +18,10 @@ namespace WhitePaperBible.Core.Views
 		string SearchQuery{ get; }
 
 		Paper SelectedPaper{ get; set; }
+
+		void ShowLoginButton();
+
+		void HideLoginButton();
 	}
 }
 

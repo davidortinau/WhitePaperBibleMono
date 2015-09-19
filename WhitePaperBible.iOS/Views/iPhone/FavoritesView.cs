@@ -1,38 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.Invokers;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class FavoritesView : DialogViewController, IFavoritesView
+	public partial class FavoritesView : DialogViewController, IFavoritesView, IMediatorTarget
 	{
-		LoginRequiredView LoginRequiredView;
-
-		public void PromptForLogin ()
-		{
-			if (LoginRequiredView == null) {
-				CreateLoginRequiredView ();
-				LoginRequiredView.Hidden = false;
-			}
-		}
-
-		public void ShowLoginForm ()
-		{
-			var loginView = new LoginView ();
-			//			loginView.LoginFinished.Invoked += HandleLoginFinished;
-			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
-				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
-			};
-
-			this.PresentViewController (loginView, true, null);
-		}
+		LoginRequiredController LoginRequiredView;
 
 		public FavoritesView () : base (UITableViewStyle.Plain, null, true)
 		{
@@ -41,8 +23,7 @@ namespace WhitePaperBible.iOS
 			SearchPlaceholder = @"Find Papers";
 			this.Filter = new Invoker ();
 			this.OnPaperSelected = new Invoker ();
-
-
+			this.Title = @"Favorites";
 		}
 
 		#region IPapersListView implementation
@@ -59,21 +40,46 @@ namespace WhitePaperBible.iOS
 
 		public void SetPapers (List<Paper> papers)
 		{
+			if(papers.Count == 0){
+				return;
+			}
+
 			InvokeOnMainThread (delegate {
 
-				Root = new RootElement ("Papers") {
+				Root = new RootElement ("Favorites") {
 					from node in papers
 					group node by (node.title [0].ToString ().ToUpper ()) into alpha
 					orderby alpha.Key
 					select new Section (alpha.Key) {
 						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
+							var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(eachNode);
+							paperDetails.Title = eachNode.title;
+							NavigationController.PushViewController(paperDetails, true);
+						})
 					}
 				};
 
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 			});
 
+		}
+
+		public void ShowLoginButton()
+		{
+			NavigationItem.SetRightBarButtonItem (
+				new UIBarButtonItem ("Login", UIBarButtonItemStyle.Plain, (sender, args)=> {
+					ShowLoginForm();
+				})
+				, true
+			);
+
+//			PromptForLogin();
+		}
+
+		public void HideLoginButton()
+		{
+			NavigationItem.SetRightBarButtonItem (null,false);
 		}
 
 		public string SearchPlaceHolderText {
@@ -97,20 +103,20 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			DI.RequestMediator (this);
-
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
 			};
 
 
-
+			AnalyticsUtil.TrackScreen (this.Title);
 		}
 
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			View.BringSubviewToFront (LoginRequiredView);
+			DI.RequestMediator (this);
+			this.Title = "Favorites";
+//			View.BringSubviewToFront (LoginRequiredView);
 		}
 
 		public override void ViewDidDisappear (bool animated)
@@ -120,13 +126,48 @@ namespace WhitePaperBible.iOS
 			DI.DestroyMediator (this);
 		}
 
+		public void PromptForLogin ()
+		{
+			if (LoginRequiredView == null) {
+				CreateLoginRequiredView ();
+			}
+			LoginRequiredView.View.Hidden = false;
+//			View.BringSubviewToFront (LoginRequiredView);
+		}
+
+		public void ShowLoginForm ()
+		{
+			var loginView = new LoginViewController ();
+			loginView.LoginFinished.Invoked += (object sender, EventArgs e) => {
+				(e as LoginFinishedInvokerArgs).Controller.DismissViewController (true, null);
+				DismissLoginPrompt();
+				HideLoginButton();
+			};
+
+			this.PresentViewController (loginView, true, null);
+		}
+
+		public void DismissLoginPrompt()
+		{
+			InvokeOnMainThread (() => {
+				if (LoginRequiredView != null && !LoginRequiredView.View.Hidden) {
+					LoginRequiredView.View.Hidden = true;
+				}
+			});
+
+		}
+
 		protected void CreateLoginRequiredView ()
 		{
-			LoginRequiredView = new LoginRequiredView (WhitePaperBible.iOS.UI.Environment.DeviceScreenHeight);
-			View.AddSubview (LoginRequiredView);
-			View.BringSubviewToFront (LoginRequiredView);
+			LoginRequiredView = new LoginRequiredController (false);
+			LoginRequiredView.View.Frame = this.View.Frame;
+			//			LoginRequiredView.View.Frame = new CGRect (0, 48, View.Bounds.Width, View.Bounds.Height);
+
+			View.AddSubview (LoginRequiredView.View);
+			View.BringSubviewToFront (LoginRequiredView.View);
 			LoginRequiredView.LoginRegister.Invoked += (object sender, EventArgs e) => ShowLoginForm ();
-			LoginRequiredView.Hidden = true;
+			//			LoginRequiredView.CancelRegister.Invoked += (object sender, EventArgs e) => DismissLoginPrompt ();
+			LoginRequiredView.View.Hidden = true;
 		}
 	}
 }

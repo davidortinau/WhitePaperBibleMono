@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--WPB-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="WPB" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="25">
+                            <items>
+                                <imageView alignment="center" image="icon" id="233-I7-5GA" width="60" height="60"/>
+                                <button alignment="left" id="26">
+                                    <group key="contentGroup" width="1" alignment="left" id="kKc-Mu-Mes">
+                                        <items>
+                                            <label width="1" height="44" alignment="left" text="Favorites" textAlignment="left" id="lx0-RC-gLC"/>
+                                        </items>
+                                        <color key="backgroundColor" red="0.67450980392156867" green="0.12156862745098039" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <edgeInsets key="margins" left="10" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <segue destination="7" kind="push" id="77"/>
+                                    </connections>
+                                </button>
+                                <button alignment="left" id="79">
+                                    <group key="contentGroup" width="1" alignment="left" layout="vertical" id="Tur-BZ-UZi">
+                                        <items>
+                                            <label width="1" height="44" alignment="left" text="All Papers" textAlignment="left" id="hjw-8d-9SI">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.67450980392156867" green="0.12156862745098039" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <edgeInsets key="margins" left="10" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <segue destination="dwp-f3-xxo" kind="push" id="F2g-XL-3Ac"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="2" right="2" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="FavoritesBtn" destination="26" id="name-outlet-26"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group width="118" height="26" alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <imageView width="20" height="20" alignment="left" image="icon" id="2"/>
+                                <label alignment="left" text="Promise" id="0"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" text="And without faith it is impossible to please him, for whoever would draw near to God must believe that he exists and..." textAlignment="left" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="1"/>
+                            </items>
+                            <edgeInsets key="margins" left="4" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="ReferenceLabel" destination="0" id="name-outlet-0"/>
+                        <outlet property="VerseLabel" destination="1" id="name-outlet-1"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="367"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="6">
+            <objects>
+                <controller title="Favorites" id="7" customClass="FavoritesController">
+                    <items>
+                        <table alignment="left" id="13">
+                            <items>
+                                <tableRow id="14" customClass="PaperRow">
+                                    <group key="rootItem" width="1" alignment="left" id="15">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Paper Name" id="16"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="TitleLabel" destination="16" id="name-outlet-16"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow id="80">
+                                    <group key="rootItem" width="1" alignment="left" id="81"/>
+                                </tableRow>
+                                <tableRow id="82">
+                                    <group key="rootItem" width="1" alignment="left" id="83"/>
+                                </tableRow>
+                                <tableRow id="84">
+                                    <group key="rootItem" width="1" alignment="left" id="85"/>
+                                </tableRow>
+                                <tableRow id="86">
+                                    <group key="rootItem" width="1" alignment="left" id="87"/>
+                                </tableRow>
+                                <tableRow id="88">
+                                    <group key="rootItem" width="1" alignment="left" id="89"/>
+                                </tableRow>
+                                <tableRow id="90">
+                                    <group key="rootItem" width="1" alignment="left" id="91"/>
+                                </tableRow>
+                                <tableRow id="92">
+                                    <group key="rootItem" width="1" alignment="left" id="93"/>
+                                </tableRow>
+                                <tableRow id="94">
+                                    <group key="rootItem" width="1" alignment="left" id="95"/>
+                                </tableRow>
+                                <tableRow id="96">
+                                    <group key="rootItem" width="1" alignment="left" id="97"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="PapersTable" destination="13" id="name-outlet-13"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="212" y="-82"/>
+        </scene>
+        <!--All Papers-->
+        <scene sceneID="vio-rh-CBw">
+            <objects>
+                <controller title="All Papers" id="dwp-f3-xxo" customClass="AllPapersController">
+                    <items>
+                        <table alignment="left" id="ter-eI-gD8">
+                            <items>
+                                <tableRow id="gnB-Vi-VbO" customClass="PaperRow">
+                                    <group key="rootItem" width="1" alignment="left" id="BAE-68-14g">
+                                        <items>
+                                            <label alignment="left" text="Label" id="105" verticalAlignment="center"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="TitleLabel" destination="105" id="name-outlet-105"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="PapersTable" destination="ter-eI-gD8" id="name-outlet-ter-eI-gD8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="229" y="193"/>
+        </scene>
+        <scene sceneID="98">
+            <objects>
+                <controller id="99" customClass="PaperController" identifier="PaperController" title="Paper">
+                    <items>
+                        <group width="1" alignment="left" id="100" layout="vertical">
+                            <items>
+                                <label alignment="left" id="102" width="1" numberOfLines="0" text="Loading...">
+                                </label>
+                                <label alignment="left" id="103">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="left" id="104">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="ContentLabel" destination="102" id="name-outlet-102"/>
+                        <outlet property="ViewsLabel" destination="104" id="name-outlet-104"/>
+                        <outlet property="AuthorLabel" destination="103" id="name-outlet-103"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="484" y="24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_80.png" width="80" height="80"/>
+        <image name="icon_48.png" width="48" height="48"/>
+        <image name="favorites.png" width="30" height="30"/>
+        <image name="favorites" width="30" height="30"/>
+        <image name="icon" width="60" height="60"/>
+    </resources>
+</document>

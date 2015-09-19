@@ -1,8 +1,8 @@
 using System;
 using WhitePaperBible.Core.Models;
 using MonoTouch.Dialog;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 namespace WhitePaperBible.iOS.UI.CustomElements
 {
@@ -44,7 +44,7 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 		/// <summary>
 		/// Behaves differently depending on iPhone or iPad
 		/// </summary>
-		public override void Selected (DialogViewController dvc, UITableView tableView, MonoTouch.Foundation.NSIndexPath path)
+		public override void Selected (DialogViewController dvc, UITableView tableView, Foundation.NSIndexPath path)
 		{
 			//TODO on selected go to papers list for this tag
 			var papersByTagList = new PapersByTagView ();

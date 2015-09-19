@@ -1,8 +1,8 @@
 using System;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
-using System.Drawing;
+using CoreGraphics;
 using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.iOS.UI.CustomElements
@@ -61,9 +61,9 @@ namespace WhitePaperBible.iOS.UI.CustomElements
 			titleFrame.Height = 25;
 			titleFrame.Width -= (padding); // +10
 
-			SizeF size = titleLabel.StringSize (titleLabel.Text
+			CGSize size = UIKit.UIStringDrawing.StringSize (titleLabel.Text
 						, titleLabel.Font
-						, new SizeF(titleFrame.Width, 400));
+						, new CGSize(titleFrame.Width, 400));
 			if (size.Height > 27) {
 				titleAdjustment = 27;
 				titleFrame.Height = titleFrame.Height + titleAdjustment; //size.Height;

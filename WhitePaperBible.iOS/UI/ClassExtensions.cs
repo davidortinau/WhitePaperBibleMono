@@ -1,8 +1,8 @@
-﻿using System;
-using MonoTouch.UIKit;
-using System.Drawing;
+using System;
+using UIKit;
+using CoreGraphics;
 using WhitePaperBible.iOS.UI;
-using MonoTouch.Foundation;
+using Foundation;
 
 namespace WhitePaperBible.iOS.UI
 {
@@ -22,7 +22,7 @@ namespace WhitePaperBible.iOS.UI
 		//UIImageView
 		public static UIImage Empty(this UIImage image)
 		{
-			UIGraphics.BeginImageContextWithOptions(new SizeF(36,36), false, 0);
+			UIGraphics.BeginImageContextWithOptions(new CGSize(36,36), false, 0);
 			UIImage blank = UIGraphics.GetImageFromCurrentImageContext();
 			UIGraphics.EndImageContext();
 			return blank;
@@ -32,11 +32,11 @@ namespace WhitePaperBible.iOS.UI
 
 			UIGraphics.BeginImageContext(image.Size);
 
-			RectangleF contextRect = new RectangleF (Point.Empty, image.Size);
+			CGRect contextRect = new CGRect (CGPoint.Empty, image.Size);
 
 			// Retrieve source image and begin image context
-			SizeF itemImageSize = image.Size;
-			PointF itemImagePosition = new PointF(); 
+			CGSize itemImageSize = image.Size;
+			CGPoint itemImagePosition = new CGPoint();
 			itemImagePosition.X = (float)Math.Ceiling((contextRect.Size.Width - itemImageSize.Width) / 2);
 			itemImagePosition.Y = (float)Math.Ceiling((contextRect.Size.Height - itemImageSize.Height) );
 
@@ -48,17 +48,17 @@ namespace WhitePaperBible.iOS.UI
 
 			c.BeginTransparencyLayer();
 			c.ScaleCTM (1, -1);
-			c.ClipToMask (new RectangleF(itemImagePosition.X, -itemImagePosition.Y, itemImageSize.Width, -itemImageSize.Height), image.CGImage);
+			c.ClipToMask (new CGRect(itemImagePosition.X, -itemImagePosition.Y, itemImageSize.Width, -itemImageSize.Height), image.CGImage);
 
 			// Fill and end the transparency layer
-			float red = 0;
-			float green = 0;
-			float blue = 0;
-			float a = 0;
+			nfloat red = 0;
+			nfloat green = 0;
+			nfloat blue = 0;
+			nfloat a = 0;
 			color.GetRGBA (out red, out green, out blue, out a);
-			c.SetRGBFillColor (red, green, blue, a);
+			c.SetFillColor (red, green, blue, a);
 
-			contextRect.Size = new SizeF (contextRect.Size.Width, (-1 * contextRect.Size.Height) - 15);
+			contextRect.Size = new CGSize (contextRect.Size.Width, (-1 * contextRect.Size.Height) - 15);
 			c.FillRect(contextRect);
 			c.EndTransparencyLayer();
 
@@ -91,37 +91,37 @@ namespace WhitePaperBible.iOS.UI
 		//UIView
 		public static void CenterHorizontally(this UIView view)
 		{
-			view.Center = new PointF (Environment.DeviceCenter.X, view.Center.Y);
+			view.Center = new CGPoint (Environment.DeviceCenter.X, view.Center.Y);
 		}
 
 		public static void CenterVertically(this UIView view)
 		{
-			view.Center = new PointF (view.Center.X, view.Superview.Frame.Height/2);
+			view.Center = new CGPoint (view.Center.X, view.Superview.Frame.Height/2);
 		}
 
-		public static void Move(this UIView view, Point newLocation)
+		public static void Move(this UIView view, CGPoint newLocation)
 		{
-			view.Frame = new RectangleF (newLocation, view.Frame.Size);
+			view.Frame = new CGRect (newLocation, view.Frame.Size);
 		}
 
 		public static void MoveToYPos(this UIView view, int newY)
 		{
-			view.Move (new Point ((int)view.Frame.X, newY));
+			view.Move (new CGPoint ((int)view.Frame.X, newY));
 		}
 
 		public static void MoveToXPos(this UIView view, int newX)
 		{
-			view.Move (new Point (newX, (int)view.Frame.Y));
+			view.Move (new CGPoint (newX, (int)view.Frame.Y));
 		}
 
-		public static void Resize(this UIView view, Size size)
+		public static void Resize(this UIView view, CGSize size)
 		{
-			view.Frame = new RectangleF (view.Frame.Location, size);
+			view.Frame = new CGRect (view.Frame.Location, size);
 		}
 
 		public static void ResizeHeight(this UIView view, int newHeight)
 		{
-			view.Resize (new Size ((int)view.Frame.Size.Width, newHeight));
+			view.Resize (new CGSize ((int)view.Frame.Size.Width, newHeight));
 		}
 
 		//UITableViewCell
@@ -217,6 +217,5 @@ namespace WhitePaperBible.iOS.UI
 		}
 
 
-	} 
+	}
 }
-

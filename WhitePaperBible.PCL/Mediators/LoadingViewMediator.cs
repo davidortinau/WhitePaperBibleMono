@@ -9,6 +9,7 @@ namespace WhitePaperBible.Core.Mediators
 	{
 		[Inject]
 		public PapersReceivedInvoker PapersReceived;
+
 		ILoadingView Target;
 
 		public LoadingViewMediator (ILoadingView view) : base (view)
@@ -18,9 +19,14 @@ namespace WhitePaperBible.Core.Mediators
 
 		public override void Register ()
 		{
-			PapersReceived.Invoked += (object sender, EventArgs e) => {
-				Target.OnLoadingComplete ();
-			};
+//			InvokerMap.Add (PapersReceived, OnPapersReceived);
+
+			Target.OnLoadingComplete ();
+		}
+
+		void OnPapersReceived (object sender, EventArgs e)
+		{
+			Target.OnLoadingComplete ();
 		}
 
 		public override void Unregister ()

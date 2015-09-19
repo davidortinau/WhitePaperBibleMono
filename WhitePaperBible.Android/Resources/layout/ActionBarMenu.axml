@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Search, should appear as action button -->
+    <item
+        android:id="@+id/action_email"
+        android:icon="@drawable/ic_actionbar_message"
+        android:title="Email"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_actionbar_share"
+        android:title="Share"
+        android:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider" />
+    <item
+        android:id="@+id/action_calendar"
+        android:icon="@drawable/ic_actionbar_calendar"
+        android:title="Calendar"
+        android:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_action_done"
+        android:title="Save"
+        android:showAsAction="ifRoom" />
+</menu>

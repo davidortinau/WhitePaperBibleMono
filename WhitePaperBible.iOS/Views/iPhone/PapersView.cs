@@ -2,59 +2,98 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using WhitePaperBible.Core.Models;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
+using WhitePaperBible.iOS.Invokers;
+using WhitePaperBible.iOS.UI.CustomElements;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class PapersView : DialogViewController, IPapersListView
+	public partial class PapersView : DialogViewController
 	{
-		public void PromptForLogin ()
-		{
-			throw new NotImplementedException ();
-		}
+		UINavigationController NavController;
 
-		public PapersView () : base (UITableViewStyle.Plain, null, true)
-		{
-			EnableSearch = true; 
-			AutoHideSearch = true;
-			SearchPlaceholder = @"Find Papers";
-			this.Filter = new Invoker ();
-			this.OnPaperSelected = new Invoker ();
-		}
-
-		#region IPapersListView implementation
-
-		public Invoker Filter {
+		public Invoker RequestAddPaper {
 			get;
 			private set;
 		}
 
-		public Invoker OnPaperSelected {
+		public PapersView (UINavigationController controller) : base (UITableViewStyle.Plain, null, true)
+		{
+			NavController = controller;
+			EnableSearch = true; 
+			AutoHideSearch = true;
+			SearchPlaceholder = @"Find Papers";
+//			this.Filter = new Invoker ();
+//			this.OnPaperSelected = new Invoker ();
+			this.AddPaper = new Invoker ();
+		}
+
+		#region IPapersListView implementation
+
+//		public Invoker Filter {
+//			get;
+//			private set;
+//		}
+//
+//		public Invoker OnPaperSelected {
+//			get;
+//			private set;
+//		}
+
+		public Invoker AddPaper {
 			get;
 			private set;
 		}
 
 		public void SetPapers (List<Paper> papers)
 		{
-			InvokeOnMainThread (delegate {
+			Console.WriteLine ("SetPapers. {0}", papers.Count);
+
+			if(papers == null || papers.Count == 0){
+				return;
+			}
+
+			InvokeOnMainThread (()=> {
 
 				Root = new RootElement ("Papers") {
-					from node in papers
-					group node by (node.title [0].ToString ().ToUpper ()) into alpha
-					orderby alpha.Key
-					select new Section (alpha.Key) {
-						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+					new Section(""){
+						AddPaperElements(papers)
 					}
+//					from node in papers
+//					group node by (node.title [0].ToString ().ToUpper ()) into alpha
+//					orderby alpha.Key
+//					select new Section (alpha.Key) {
+//						from eachNode in alpha
+//						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
+//							var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(eachNode);
+//							paperDetails.Title = eachNode.title;
+//							NavigationController.PushViewController(paperDetails, true);
+//						})
+//					}
 				};
 
 				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+
 			});
 
+		}
+
+		List<PaperElement> AddPaperElements (List<Paper> papers)
+		{
+			var elements = new List<PaperElement> ();
+			foreach(var p in papers){
+				elements.Add (new PaperElement (p, () => {
+					var paperDetails = new PaperDetailsView(p);
+					paperDetails.Title = p.title;
+					NavController.PushViewController(paperDetails, true);
+				}));
+			}
+			return elements;
 		}
 
 		public string SearchPlaceHolderText {
@@ -78,19 +117,28 @@ namespace WhitePaperBible.iOS
 		{
 			base.ViewDidLoad ();
 
-			DI.RequestMediator (this);
-
 			SearchTextChanged += (sender, args) => {
 				Console.WriteLine ("search text changed");	
-			};
-			
+			};			
 		}
 
 		public override void ViewDidDisappear (bool animated)
 		{
 			base.ViewDidDisappear (animated);
 
-			DI.DestroyMediator (this);
+
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+//			DI.RequestMediator (this);
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+//			DI.DestroyMediator (this);
 		}
 	}
 }

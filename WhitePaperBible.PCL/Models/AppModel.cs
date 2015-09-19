@@ -1,14 +1,36 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using WhitePaperBible.Core.Services;
 
 namespace WhitePaperBible.Core.Models
 {
 	public class AppModel
 	{
+		bool firstLoad = true;
+		public bool FirstLoad {
+			get {
+				return firstLoad;
+			}
+			set {
+				firstLoad = value;
+			}
+		}
+
+		public virtual AppUser User { get; set; }
+
+		public virtual List<Paper> MyPapers { get; set; }
+
+		public virtual List<Paper> Favorites { get; set; }
+
 		public virtual List<Paper> Papers { get; set; }
 
 		public virtual List<Tag> Tags { get; set; }
+
+		public List<Paper> Popular {
+			get;
+			set;
+		}
 
 		public SessionCookie UserSessionCookie {
 			get;
@@ -25,9 +47,9 @@ namespace WhitePaperBible.Core.Models
 			set;
 		}
 
-		public virtual bool IsLoggedIn
-		{
-			get;set;
+		public virtual bool IsLoggedIn {
+			get;
+			set;
 		}
 
 		public virtual List<Paper> FilterPapers (string query)
@@ -40,10 +62,31 @@ namespace WhitePaperBible.Core.Models
 			return Tags.Where (ce => (ce.name.ToLower ().Contains (query))).ToList ();
 		}
 
+		public virtual Paper GetPaperById(int id)
+		{
+			return Papers.Where (p => (p.id.Equals (id))).Single<Paper> ();
+		}
+
 		public AppModel ()
 		{
 			IsLoggedIn = false;
 		}
+
+		public void StoreCredentials (string userName, string password)
+		{
+			User = User ?? new AppUser ();
+			User.username = userName;
+			User.password = password;
+
+		}
+
+		public void ClearCredentials ()
+		{
+			User = null;
+			IsLoggedIn = false;
+			UserSessionCookie = null;
+			MyPapers = null;
+			Favorites = null;
+		}
 	}
 }
-

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using MonkeyArms;
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace WhitePaperBible.iOS.Invokers
 {

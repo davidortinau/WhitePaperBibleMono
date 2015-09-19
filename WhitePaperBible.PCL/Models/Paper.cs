@@ -1,6 +1,8 @@
 using System;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
+using WhitePaperBible.Core.Helpers;
+using System.Linq;
 
 namespace WhitePaperBible.Core.Models
 {
@@ -32,6 +34,9 @@ namespace WhitePaperBible.Core.Models
         [DataMember(Name = "user_id")] 
         public int user_id { get; set; }
 
+		[DataMember(Name = "user")] 
+		public AppUser Author { get; set; }
+
         [DataMember(Name = "view_count")] 
         public int view_count { get; set; }
 
@@ -59,17 +64,61 @@ namespace WhitePaperBible.Core.Models
 			}
 		}
 
+		public List<Tag> tags;
+
+		public string ToPlainText()
+		{
+			var txt = "";
+//			txt +=	title + Environment.NewLine;
+			txt += description + Environment.NewLine;
+
+			if (references != null) {
+				foreach (var reference in references) {
+					txt += HtmlToText.ConvertHtml(reference.content) + Environment.NewLine;
+				}
+			}
+
+			return txt;
+		}
+
+		[DataMember(Name = "WatchText")] 
+		public string WatchText {get;set;}
+
 		private string generateHtmlContent()
 		{
-			var html = "<style type='text/css'>body { color: #000000; background-color: white; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: 20px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; }</style>";
+			string html = @"<style type='text/css'>body { color: #000000; background-color: #FFFFFF; font-family: 'HelveticaNeue-Light', Helvetica, Arial, sans-serif; padding-bottom: 50px; } h1, h2, h3, h4, h5, h6 { padding: 0px; margin: 0px; font-style: normal; font-weight: normal; } h2 { font-family: 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; margin-bottom: -10px; padding-bottom: 0px; } h4 { font-size: 16px; } p { font-family: Helvetica, Verdana, Arial, sans-serif; line-height:1.5; font-size: 16px; } .esv-text { padding: 0 0 10px 0; } .description { border-radius: 5px; background-color:#F1F1F1; margin: 10px; padding: 8px; }</style>";
 			html +=	"<h1>" + title + "</h1>";
-			html += "<h2>" + description + "</h2>";
+
+			string author = (Author != null) ? Author.Name : "Anonymous";
+
+			html += "<section class=\"description\">" + description + "<br><b>By " + author + "</b></section>";
 			if (references != null) {
 				foreach (var reference in references) {
 					html += reference.content;
 				}
 			}
 			return html;
+		}
+
+		public void UpdateReference(Reference reference)
+		{
+			var exists = references.Single(x => x.reference == reference.reference);
+			var atIndex = 0;
+			if(exists != null){
+				atIndex = references.IndexOf (exists);
+				references.Remove (exists);
+			}
+
+			references.Insert (atIndex, reference);
+		}
+
+		public string TagsString()
+		{	if (tags != null) {
+				string[] tagsArray = tags.Select (x => x.name).ToArray ();
+				return string.Join (",", tagsArray);
+			}else{
+				return string.Empty;
+			}
 		}
     }
 }

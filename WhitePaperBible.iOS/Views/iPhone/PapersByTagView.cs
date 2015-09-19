@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using WhitePaperBible.Core.Models;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
+using IOS.Util;
 
 namespace WhitePaperBible.iOS
 {
@@ -48,7 +49,11 @@ namespace WhitePaperBible.iOS
 					orderby alpha.Key
 					select new Section (alpha.Key) {
 						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode)
+						select (Element)new WhitePaperBible.iOS.UI.CustomElements.PaperElement (eachNode, delegate {
+							var paperDetails = new WhitePaperBible.iOS.PaperDetailsView(eachNode);
+							paperDetails.Title = eachNode.title;
+							NavigationController.PushViewController(paperDetails, true);
+						})
 					}
 				};
 
@@ -79,6 +84,8 @@ namespace WhitePaperBible.iOS
 			base.ViewDidLoad ();
 
 			DI.RequestMediator (this);
+
+			AnalyticsUtil.TrackScreen (this.Title);
 
 		}
 
