@@ -33,6 +33,7 @@ namespace WhitePaperBible.Droid
 
 			var pager = FindViewById<ViewPager>(Resource.Id.pager);
 			pager.Adapter = new MainViewPagerAdapter(this.SupportFragmentManager, this.Resources);
+			pager.OffscreenPageLimit = 4;
 
 			var tabs = FindViewById<TabLayout>(Resource.Id.tab_layout);    
 			tabs.SetupWithViewPager (pager);            

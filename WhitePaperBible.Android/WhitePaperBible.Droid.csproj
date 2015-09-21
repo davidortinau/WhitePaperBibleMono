@@ -87,6 +87,7 @@
     <Compile Include="Views\PapersView.cs" />
     <Compile Include="Fragments\BaseMediatedFragment.cs" />
     <Compile Include="Adapters\TagsAdapter.cs" />
+    <Compile Include="Views\PapersByTagActivty.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -200,6 +201,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\layout\PapersByTagList.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
