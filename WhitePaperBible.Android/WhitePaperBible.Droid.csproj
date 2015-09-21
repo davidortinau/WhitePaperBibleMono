@@ -88,6 +88,7 @@
     <Compile Include="Fragments\BaseMediatedFragment.cs" />
     <Compile Include="Adapters\TagsAdapter.cs" />
     <Compile Include="Views\PapersByTagActivty.cs" />
+    <Compile Include="Views\AboutActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />

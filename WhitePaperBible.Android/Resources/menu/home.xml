@@ -1,26 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:local="http://schemas.android.com/apk/res-auto">
-<!--    <item android:id="@+id/action_home"
-          android:icon="@drawable/tab_icon_home_off"
-          android:title="@string/action_home"
-          local:showAsAction="always" />-->
-          <item android:id="@+id/action_papers"
-          android:icon="@drawable/ic_actionbar_calendar"
-          android:title="Papers"
-          local:showAsAction="always" />
-          <item android:id="@+id/action_tags"
-          android:icon="@drawable/ic_actionbar_calendar"
-          android:title="Tags"
-          local:showAsAction="always" />
-          <item android:id="@+id/action_favorites"
-          android:icon="@drawable/ic_actionbar_calendar"
-          android:title="Favorites"
-          local:showAsAction="always" />
-          <item android:id="@+id/action_search"
-          android:icon="@drawable/ic_actionbar_calendar"
-          android:title="Search"
-          local:showAsAction="always" />
  <item
       android:id="@+id/menu_profile"
       local:showAsAction="never"

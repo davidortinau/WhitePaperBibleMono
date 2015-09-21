@@ -52,6 +52,36 @@ namespace WhitePaperBible.Droid
 		}
 		#endregion
 
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.home, menu);
+
+			_menu = menu;
+
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			switch (item.ItemId) {
+			case Resource.Id.menu_about:
+				{
+					var courseIntent = new Intent(this.BaseContext, typeof(AboutActivity));
+					StartActivity(courseIntent);
+					break;
+				}
+			case Resource.Id.menu_profile:
+				{
+//					showToast("Not Implemented");
+					break;
+				}
+			default:
+				return base.OnOptionsItemSelected (item);
+			}
+
+			return true;
+		}
+
 	}
 }
 

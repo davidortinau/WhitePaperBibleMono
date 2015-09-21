@@ -1287,6 +1287,25 @@ namespace WhitePaperBible.Droid
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0c0001
+			public const int app_info_array = 2131492865;
+			
+			// aapt resource value: 0x7f0c0000
+			public const int support_array = 2131492864;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -3152,17 +3171,23 @@ namespace WhitePaperBible.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090086
-			public const int PapersByTagList = 2131296390;
+			// aapt resource value: 0x7f09006c
+			public const int AppInfoList = 2131296364;
 			
-			// aapt resource value: 0x7f090087
-			public const int PapersList = 2131296391;
+			// aapt resource value: 0x7f090088
+			public const int PapersByTagList = 2131296392;
 			
-			// aapt resource value: 0x7f09008b
-			public const int TagsList = 2131296395;
+			// aapt resource value: 0x7f090089
+			public const int PapersList = 2131296393;
 			
-			// aapt resource value: 0x7f090074
-			public const int action0 = 2131296372;
+			// aapt resource value: 0x7f09006b
+			public const int SupportList = 2131296363;
+			
+			// aapt resource value: 0x7f09008d
+			public const int TagsList = 2131296397;
+			
+			// aapt resource value: 0x7f090078
+			public const int action0 = 2131296376;
 			
 			// aapt resource value: 0x7f090059
 			public const int action_bar = 2131296345;
@@ -3185,20 +3210,17 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09003c
 			public const int action_bar_title = 2131296316;
 			
-			// aapt resource value: 0x7f09006a
-			public const int action_calendar = 2131296362;
+			// aapt resource value: 0x7f09006f
+			public const int action_calendar = 2131296367;
 			
 			// aapt resource value: 0x7f09005a
 			public const int action_context_bar = 2131296346;
 			
-			// aapt resource value: 0x7f090078
-			public const int action_divider = 2131296376;
+			// aapt resource value: 0x7f09007c
+			public const int action_divider = 2131296380;
 			
-			// aapt resource value: 0x7f090068
-			public const int action_email = 2131296360;
-			
-			// aapt resource value: 0x7f09008f
-			public const int action_favorites = 2131296399;
+			// aapt resource value: 0x7f09006d
+			public const int action_email = 2131296365;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -3215,20 +3237,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09003e
 			public const int action_mode_close_button = 2131296318;
 			
-			// aapt resource value: 0x7f09008d
-			public const int action_papers = 2131296397;
+			// aapt resource value: 0x7f090070
+			public const int action_save = 2131296368;
 			
-			// aapt resource value: 0x7f09006b
-			public const int action_save = 2131296363;
-			
-			// aapt resource value: 0x7f090090
-			public const int action_search = 2131296400;
-			
-			// aapt resource value: 0x7f090069
-			public const int action_share = 2131296361;
-			
-			// aapt resource value: 0x7f09008e
-			public const int action_tags = 2131296398;
+			// aapt resource value: 0x7f09006e
+			public const int action_share = 2131296366;
 			
 			// aapt resource value: 0x7f09003f
 			public const int activity_chooser_view_content = 2131296319;
@@ -3239,11 +3252,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09002d
 			public const int always = 2131296301;
 			
-			// aapt resource value: 0x7f090082
-			public const int appbar = 2131296386;
+			// aapt resource value: 0x7f090069
+			public const int appbar = 2131296361;
 			
-			// aapt resource value: 0x7f090085
-			public const int authorTextView = 2131296389;
+			// aapt resource value: 0x7f090087
+			public const int authorTextView = 2131296391;
 			
 			// aapt resource value: 0x7f09002b
 			public const int beginning = 2131296299;
@@ -3257,8 +3270,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09004f
 			public const int buttonPanel = 2131296335;
 			
-			// aapt resource value: 0x7f090075
-			public const int cancel_action = 2131296373;
+			// aapt resource value: 0x7f090079
+			public const int cancel_action = 2131296377;
 			
 			// aapt resource value: 0x7f090012
 			public const int center = 2131296274;
@@ -3272,8 +3285,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090051
 			public const int checkbox = 2131296337;
 			
-			// aapt resource value: 0x7f09007b
-			public const int chronometer = 2131296379;
+			// aapt resource value: 0x7f09007f
+			public const int chronometer = 2131296383;
 			
 			// aapt resource value: 0x7f090015
 			public const int clip_horizontal = 2131296277;
@@ -3287,8 +3300,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09004a
 			public const int contentPanel = 2131296330;
 			
-			// aapt resource value: 0x7f09008a
-			public const int countTextView = 2131296394;
+			// aapt resource value: 0x7f09008c
+			public const int countTextView = 2131296396;
 			
 			// aapt resource value: 0x7f09004e
 			public const int custom = 2131296334;
@@ -3302,8 +3315,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090042
 			public const int default_activity_button = 2131296322;
 			
-			// aapt resource value: 0x7f090083
-			public const int detailsWebView = 2131296387;
+			// aapt resource value: 0x7f090085
+			public const int detailsWebView = 2131296389;
 			
 			// aapt resource value: 0x7f090032
 			public const int dialog = 2131296306;
@@ -3317,14 +3330,14 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09005b
 			public const int edit_query = 2131296347;
 			
-			// aapt resource value: 0x7f09006e
-			public const int emailText = 2131296366;
+			// aapt resource value: 0x7f090073
+			public const int emailText = 2131296371;
 			
 			// aapt resource value: 0x7f090017
 			public const int end = 2131296279;
 			
-			// aapt resource value: 0x7f090080
-			public const int end_padder = 2131296384;
+			// aapt resource value: 0x7f090084
+			public const int end_padder = 2131296388;
 			
 			// aapt resource value: 0x7f09000a
 			public const int enterAlways = 2131296266;
@@ -3368,8 +3381,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090041
 			public const int image = 2131296321;
 			
-			// aapt resource value: 0x7f09007f
-			public const int info = 2131296383;
+			// aapt resource value: 0x7f090083
+			public const int info = 2131296387;
 			
 			// aapt resource value: 0x7f09003b
 			public const int italic = 2131296315;
@@ -3377,11 +3390,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09001b
 			public const int left = 2131296283;
 			
-			// aapt resource value: 0x7f090079
-			public const int line1 = 2131296377;
-			
 			// aapt resource value: 0x7f09007d
-			public const int line3 = 2131296381;
+			public const int line1 = 2131296381;
+			
+			// aapt resource value: 0x7f090081
+			public const int line3 = 2131296385;
 			
 			// aapt resource value: 0x7f090023
 			public const int listMode = 2131296291;
@@ -3389,35 +3402,35 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090043
 			public const int list_item = 2131296323;
 			
-			// aapt resource value: 0x7f090070
-			public const int loginButton = 2131296368;
+			// aapt resource value: 0x7f090075
+			public const int loginButton = 2131296373;
 			
-			// aapt resource value: 0x7f090081
-			public const int main_content = 2131296385;
+			// aapt resource value: 0x7f090068
+			public const int main_content = 2131296360;
 			
-			// aapt resource value: 0x7f090077
-			public const int media_actions = 2131296375;
+			// aapt resource value: 0x7f09007b
+			public const int media_actions = 2131296379;
 			
-			// aapt resource value: 0x7f090092
-			public const int menu_about = 2131296402;
-			
-			// aapt resource value: 0x7f090095
-			public const int menu_class = 2131296405;
+			// aapt resource value: 0x7f090090
+			public const int menu_about = 2131296400;
 			
 			// aapt resource value: 0x7f090093
-			public const int menu_favorite = 2131296403;
+			public const int menu_class = 2131296403;
 			
 			// aapt resource value: 0x7f090091
-			public const int menu_profile = 2131296401;
+			public const int menu_favorite = 2131296401;
 			
-			// aapt resource value: 0x7f09008c
-			public const int menu_search = 2131296396;
+			// aapt resource value: 0x7f09008f
+			public const int menu_profile = 2131296399;
+			
+			// aapt resource value: 0x7f09008e
+			public const int menu_search = 2131296398;
+			
+			// aapt resource value: 0x7f090092
+			public const int menu_share = 2131296402;
 			
 			// aapt resource value: 0x7f090094
-			public const int menu_share = 2131296404;
-			
-			// aapt resource value: 0x7f090096
-			public const int menu_time = 2131296406;
+			public const int menu_time = 2131296404;
 			
 			// aapt resource value: 0x7f09002c
 			public const int middle = 2131296300;
@@ -3437,8 +3450,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090020
 			public const int normal = 2131296288;
 			
-			// aapt resource value: 0x7f090073
-			public const int pager = 2131296371;
+			// aapt resource value: 0x7f090077
+			public const int pager = 2131296375;
 			
 			// aapt resource value: 0x7f09000f
 			public const int parallax = 2131296271;
@@ -3446,8 +3459,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090046
 			public const int parentPanel = 2131296326;
 			
-			// aapt resource value: 0x7f09006f
-			public const int passwordText = 2131296367;
+			// aapt resource value: 0x7f090074
+			public const int passwordText = 2131296372;
 			
 			// aapt resource value: 0x7f090010
 			public const int pin = 2131296272;
@@ -3458,8 +3471,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090007
 			public const int progress_horizontal = 2131296263;
 			
-			// aapt resource value: 0x7f090088
-			public const int psts_tab_title = 2131296392;
+			// aapt resource value: 0x7f09008a
+			public const int psts_tab_title = 2131296394;
 			
 			// aapt resource value: 0x7f090053
 			public const int radio = 2131296339;
@@ -3524,11 +3537,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090029
 			public const int showTitle = 2131296297;
 			
-			// aapt resource value: 0x7f09006d
-			public const int snackbar_action = 2131296365;
+			// aapt resource value: 0x7f090072
+			public const int snackbar_action = 2131296370;
 			
-			// aapt resource value: 0x7f09006c
-			public const int snackbar_text = 2131296364;
+			// aapt resource value: 0x7f090071
+			public const int snackbar_text = 2131296369;
 			
 			// aapt resource value: 0x7f090008
 			public const int split_action_bar = 2131296264;
@@ -3545,8 +3558,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09001d
 			public const int start = 2131296285;
 			
-			// aapt resource value: 0x7f090076
-			public const int status_bar_latest_event_content = 2131296374;
+			// aapt resource value: 0x7f09007a
+			public const int status_bar_latest_event_content = 2131296378;
 			
 			// aapt resource value: 0x7f090064
 			public const int submit_area = 2131296356;
@@ -3554,35 +3567,35 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090024
 			public const int tabMode = 2131296292;
 			
-			// aapt resource value: 0x7f090072
-			public const int tab_layout = 2131296370;
+			// aapt resource value: 0x7f090076
+			public const int tab_layout = 2131296374;
 			
-			// aapt resource value: 0x7f090089
-			public const int tagNameTextView = 2131296393;
+			// aapt resource value: 0x7f09008b
+			public const int tagNameTextView = 2131296395;
 			
-			// aapt resource value: 0x7f09007e
-			public const int text = 2131296382;
+			// aapt resource value: 0x7f090082
+			public const int text = 2131296386;
 			
-			// aapt resource value: 0x7f09007c
-			public const int text2 = 2131296380;
+			// aapt resource value: 0x7f090080
+			public const int text2 = 2131296384;
 			
 			// aapt resource value: 0x7f09004c
 			public const int textSpacerNoButtons = 2131296332;
 			
-			// aapt resource value: 0x7f09007a
-			public const int time = 2131296378;
+			// aapt resource value: 0x7f09007e
+			public const int time = 2131296382;
 			
 			// aapt resource value: 0x7f090045
 			public const int title = 2131296325;
 			
-			// aapt resource value: 0x7f090084
-			public const int titleTextView = 2131296388;
+			// aapt resource value: 0x7f090086
+			public const int titleTextView = 2131296390;
 			
 			// aapt resource value: 0x7f090048
 			public const int title_template = 2131296328;
 			
-			// aapt resource value: 0x7f090071
-			public const int toolbar = 2131296369;
+			// aapt resource value: 0x7f09006a
+			public const int toolbar = 2131296362;
 			
 			// aapt resource value: 0x7f09001e
 			public const int top = 2131296286;
@@ -3845,20 +3858,20 @@ namespace WhitePaperBible.Droid
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0c0000
-			public const int ActionItems = 2131492864;
+			// aapt resource value: 0x7f0d0000
+			public const int ActionItems = 2131558400;
 			
-			// aapt resource value: 0x7f0c0001
-			public const int empty = 2131492865;
+			// aapt resource value: 0x7f0d0001
+			public const int empty = 2131558401;
 			
-			// aapt resource value: 0x7f0c0002
-			public const int home = 2131492866;
+			// aapt resource value: 0x7f0d0002
+			public const int home = 2131558402;
 			
-			// aapt resource value: 0x7f0c0003
-			public const int PaperDetailsActionItems = 2131492867;
+			// aapt resource value: 0x7f0d0003
+			public const int PaperDetailsActionItems = 2131558403;
 			
-			// aapt resource value: 0x7f0c0004
-			public const int sub = 2131492868;
+			// aapt resource value: 0x7f0d0004
+			public const int sub = 2131558404;
 			
 			static Menu()
 			{
