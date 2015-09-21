@@ -3155,6 +3155,9 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090086
 			public const int PapersList = 2131296390;
 			
+			// aapt resource value: 0x7f09008a
+			public const int TagsList = 2131296394;
+			
 			// aapt resource value: 0x7f090074
 			public const int action0 = 2131296372;
 			
@@ -3191,8 +3194,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090068
 			public const int action_email = 2131296360;
 			
-			// aapt resource value: 0x7f09008b
-			public const int action_favorites = 2131296395;
+			// aapt resource value: 0x7f09008e
+			public const int action_favorites = 2131296398;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -3209,20 +3212,20 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09003e
 			public const int action_mode_close_button = 2131296318;
 			
-			// aapt resource value: 0x7f090089
-			public const int action_papers = 2131296393;
+			// aapt resource value: 0x7f09008c
+			public const int action_papers = 2131296396;
 			
 			// aapt resource value: 0x7f09006b
 			public const int action_save = 2131296363;
 			
-			// aapt resource value: 0x7f09008c
-			public const int action_search = 2131296396;
+			// aapt resource value: 0x7f09008f
+			public const int action_search = 2131296399;
 			
 			// aapt resource value: 0x7f090069
 			public const int action_share = 2131296361;
 			
-			// aapt resource value: 0x7f09008a
-			public const int action_tags = 2131296394;
+			// aapt resource value: 0x7f09008d
+			public const int action_tags = 2131296397;
 			
 			// aapt resource value: 0x7f09003f
 			public const int activity_chooser_view_content = 2131296319;
@@ -3280,6 +3283,9 @@ namespace WhitePaperBible.Droid
 			
 			// aapt resource value: 0x7f09004a
 			public const int contentPanel = 2131296330;
+			
+			// aapt resource value: 0x7f090089
+			public const int countTextView = 2131296393;
 			
 			// aapt resource value: 0x7f09004e
 			public const int custom = 2131296334;
@@ -3389,26 +3395,26 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090077
 			public const int media_actions = 2131296375;
 			
-			// aapt resource value: 0x7f09008e
-			public const int menu_about = 2131296398;
-			
 			// aapt resource value: 0x7f090091
-			public const int menu_class = 2131296401;
+			public const int menu_about = 2131296401;
 			
-			// aapt resource value: 0x7f09008f
-			public const int menu_favorite = 2131296399;
-			
-			// aapt resource value: 0x7f09008d
-			public const int menu_profile = 2131296397;
-			
-			// aapt resource value: 0x7f090088
-			public const int menu_search = 2131296392;
-			
-			// aapt resource value: 0x7f090090
-			public const int menu_share = 2131296400;
+			// aapt resource value: 0x7f090094
+			public const int menu_class = 2131296404;
 			
 			// aapt resource value: 0x7f090092
-			public const int menu_time = 2131296402;
+			public const int menu_favorite = 2131296402;
+			
+			// aapt resource value: 0x7f090090
+			public const int menu_profile = 2131296400;
+			
+			// aapt resource value: 0x7f09008b
+			public const int menu_search = 2131296395;
+			
+			// aapt resource value: 0x7f090093
+			public const int menu_share = 2131296403;
+			
+			// aapt resource value: 0x7f090095
+			public const int menu_time = 2131296405;
 			
 			// aapt resource value: 0x7f09002c
 			public const int middle = 2131296300;
@@ -3547,6 +3553,9 @@ namespace WhitePaperBible.Droid
 			
 			// aapt resource value: 0x7f090072
 			public const int tab_layout = 2131296370;
+			
+			// aapt resource value: 0x7f090088
+			public const int tagNameTextView = 2131296392;
 			
 			// aapt resource value: 0x7f09007e
 			public const int text = 2131296382;
@@ -3809,10 +3818,13 @@ namespace WhitePaperBible.Droid
 			public const int support_simple_spinner_dropdown_item = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int TagsView = 2130903097;
+			public const int TagListItem = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int Toolbar = 2130903098;
+			public const int TagsView = 2130903098;
+			
+			// aapt resource value: 0x7f03003b
+			public const int Toolbar = 2130903099;
 			
 			static Layout()
 			{

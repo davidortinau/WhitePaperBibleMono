@@ -40,6 +40,15 @@ namespace WhitePaperBible.Droid
 			return _view;
 		}
 
+		public override void OnResume ()
+		{
+			base.OnResume ();
+
+			if(Papers != null){
+				DisplayPapers();
+			}
+		}
+
 		void OnRowSelected (object sender, AdapterView.ItemClickEventArgs e)
 		{
 			var item = Papers[e.Position];
@@ -102,14 +111,22 @@ namespace WhitePaperBible.Droid
 		{
 			this.Papers = papers;
 
-			this.Activity.RunOnUiThread(()=>{
-//				ListAdapter = new PapersAdapter(this, papers);
-				Console.WriteLine("How Many Papers? {0}", papers.Count);
-				_listView.Adapter = new PapersAdapter(this.Activity, papers);
+			this.Activity.RunOnUiThread (() =>  {
+				DisplayPapers ();
 			});
 		}
 
 		#endregion
+
+		void DisplayPapers ()
+		{
+			
+			if(Papers != null){
+				Console.WriteLine ("How Many Papers? {0}", Papers.Count);
+				_listView.Adapter = new PapersAdapter (this.Activity, Papers);
+			}
+
+		}
 		  
 	}
 

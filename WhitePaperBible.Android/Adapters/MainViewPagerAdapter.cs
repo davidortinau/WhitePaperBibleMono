@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Android.Content.Res;
 using WhitePaperBible.Droid;
 using Views;
+using WhitePaperBible.Droid.Views;
 
 namespace Adapters
 {
