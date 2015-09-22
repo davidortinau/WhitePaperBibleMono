@@ -59,7 +59,9 @@ namespace WhitePaperBible.Droid.Views
 		public void SetTags (List<WhitePaperBible.Core.Models.Tag> tags)
 		{
 			_tags = tags;
-			_listView.Adapter = new TagsAdapter (this.Activity, tags);
+			if(_listView != null){
+				_listView.Adapter = new TagsAdapter (this.Activity, tags);
+			}
 		}
 
 		public Invoker Filter {

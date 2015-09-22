@@ -16,11 +16,12 @@ using Android.Support.V4.View;
 using Android.Support.V7.View;
 using Java.Interop;
 using Android.Views;
+using Cocosw.BottomSheetActions;
 
 namespace WhitePaperBible.Droid
 {
 	[Activity (Label = "")]			
-	public class PaperDetailActivity : BaseActivityView, IPaperDetailView, IInjectingTarget
+	public class PaperDetailActivity : BaseActivityView, IPaperDetailView, IInjectingTarget, IDialogInterfaceOnClickListener
 	{
 		private Android.Support.V7.Widget.ShareActionProvider _shareProvider;
 
@@ -41,15 +42,12 @@ namespace WhitePaperBible.Droid
 			MenuInflater.Inflate(Resource.Menu.PaperDetailsActionItems,menu);
 			_menu = menu;
 
-			var share = _menu.FindItem(Resource.Id.menu_share);
-
-			var actionProvider = MenuItemCompat.GetActionProvider (share);
-			_shareProvider = actionProvider.JavaCast<Android.Support.V7.Widget.ShareActionProvider>();
-			var intent = CreateIntent ();
-			_shareProvider.SetShareIntent (intent);
-
-//			_shareProvider = (ShareActionProvider)share.ActionProvider;
-//			_shareProvider.SetShareIntent(CreateIntent());
+//			var share = _menu.FindItem(Resource.Id.menu_share);
+//
+//			var actionProvider = MenuItemCompat.GetActionProvider (share);
+//			_shareProvider = actionProvider.JavaCast<Android.Support.V7.Widget.ShareActionProvider>();
+//			var intent = CreateIntent ();
+//			_shareProvider.SetShareIntent (intent);
 
 			return base.OnCreateOptionsMenu(menu);
 		}
@@ -83,6 +81,11 @@ namespace WhitePaperBible.Droid
 					showToast(Resource.String.paper_updated);
 					break;
 				}
+			case Resource.Id.menu_share:
+				{
+					ShowBottomSheet();
+					break;
+				}
 			default:
 				return base.OnOptionsItemSelected (item);
 			}
@@ -90,6 +93,23 @@ namespace WhitePaperBible.Droid
 			return true;
 		}
 
+		void ShowBottomSheet ()
+		{
+			BottomSheet sheet = new BottomSheet.Builder(this)
+				.Title("Share")
+				.Listener((IDialogInterfaceOnClickListener)this)
+				.Sheet(Resource.Menu.share)
+				.Build();
+
+			sheet.Show();
+
+
+		}
+
+		public void OnClick (IDialogInterface dialog, int which)
+		{
+			Console.WriteLine("clicked {0}", which);
+		}
 
 		#region IPaperDetailView implementation
 		public void SetPaper (Paper paper, bool isFavorite, bool isOwned)

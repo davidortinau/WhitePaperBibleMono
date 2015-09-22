@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOSWatchKit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhitePaperBible.iOSWatchKitExtension", "WhitePaperBible.iOSWatchKitExtension\WhitePaperBible.iOSWatchKitExtension.csproj", "{4F76FB08-D2A9-4A5C-9DB2-B52ADB169F94}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{0004006C-180D-496A-AC96-44FB0ACFFA90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BottomSheet-Xamarin.Android", "..\..\..\..\work\Cocosw.BottomSheet-Xamarin.Android\BottomSheet-Xamarin.Android\BottomSheet-Xamarin.Android.csproj", "{A843452F-ECD2-4F83-8357-F548B9106B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,6 +166,24 @@ Global
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhone.Build.0 = Release|Any CPU
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{75317DE9-E9AA-40ED-A17D-273B3EEAF998}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.App Store|iPhone.ActiveCfg = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.App Store|iPhone.Build.0 = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Release|iPhone.Build.0 = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A843452F-ECD2-4F83-8357-F548B9106B64}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{C3B705A8-81F9-469D-8085-C5333F6FD517}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
 		{C3B705A8-81F9-469D-8085-C5333F6FD517}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
 		{C3B705A8-81F9-469D-8085-C5333F6FD517}.App Store|iPhone.ActiveCfg = Release|Any CPU
@@ -202,6 +224,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{41C87FB7-651F-44E9-9DED-12E8AF630D3E} = {FC05768E-2B31-4E2C-A9D9-8BC797202941}
 		{4F76FB08-D2A9-4A5C-9DB2-B52ADB169F94} = {FC05768E-2B31-4E2C-A9D9-8BC797202941}
+		{A843452F-ECD2-4F83-8357-F548B9106B64} = {0004006C-180D-496A-AC96-44FB0ACFFA90}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

@@ -4,22 +4,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/loginbackgroundrepeat">
-    <com.tnttrainer.ScaleImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/background_login_top"
-        android:background="#f00"
-        android:gravity="top" />
 <!--LinearLayout -->
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#f00">
     <!--LinearLayout.RelativeLayout -->
-        <com.tnttrainer.ScaleImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/background_login_middle" />
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

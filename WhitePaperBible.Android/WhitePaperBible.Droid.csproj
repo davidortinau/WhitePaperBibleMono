@@ -203,6 +203,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\layout\PapersByTagList.axml" />
+    <AndroidResource Include="Resources\menu\share.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -214,6 +215,10 @@
       <Project>{C3B705A8-81F9-469D-8085-C5333F6FD517}</Project>
       <Name>MonkeyArmsPCL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\work\Cocosw.BottomSheet-Xamarin.Android\BottomSheet-Xamarin.Android\BottomSheet-Xamarin.Android.csproj">
+      <Project>{A843452F-ECD2-4F83-8357-F548B9106B64}</Project>
+      <Name>BottomSheet-Xamarin.Android</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fragments\" />
@@ -223,7 +228,6 @@
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Adapters\" />
     <Folder Include="Views\" />
-    <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />

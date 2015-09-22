@@ -1,8 +1,8 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.Android/WhitePaperBible.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.04fbaa120ecd1946" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Android/Views/PaperDetailActivity.cs">
     <Files>
-      <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="25" Column="35" />
       <File FileName="WhitePaperBible.PCL/Commands/GetFavoritesCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetFavoritesService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Models/AppModel.cs" Line="1" Column="1" />
@@ -50,52 +50,54 @@
       <File FileName="WhitePaperBible.Android/Resources/values/Colors.xml" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Resources/values/dimens.xml" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/MainApplication.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Fragments/BaseMediatedFragment.cs" Line="70" Column="1" />
-      <File FileName="WhitePaperBible.Android/Fragments/PapersListFragment.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Fragments/BaseMediatedFragment.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/PapersAdapter.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Resources/Resource.designer.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/PaperCell.cs" Line="15" Column="33" />
       <File FileName="WhitePaperBible.iOS/Utils/AnalyticsUtil.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersAndProfileController.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/UI/ClassExtensions.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Adapters/MainViewPagerAdapter.cs" Line="21" Column="78" />
-      <File FileName="WhitePaperBible.Android/Views/PapersView.cs" Line="114" Column="1" />
+      <File FileName="WhitePaperBible.Android/Adapters/MainViewPagerAdapter.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Views/PapersView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Views/FavoritesView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="45" Column="23" />
-      <File FileName="WhitePaperBible.Android/Views/TagsView.cs" Line="42" Column="3" />
-      <File FileName="WhitePaperBible.Android/Views/PaperDetailActivity.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Views/TagsView.cs" Line="63" Column="5" />
+      <File FileName="WhitePaperBible.Android/Views/PaperDetailActivity.cs" Line="98" Column="8" />
       <File FileName="WhitePaperBible.Android/Views/SearchView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/ConfigureViewsCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/GetPapersCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Services/GetPapersService.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Resources/values/Styles.xml" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Views/IPaperDetailView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Resources/menu/PaperDetailsActionItems.axml" Line="13" Column="8" />
-      <File FileName="WhitePaperBible.Android/MainView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.Android/Properties/AndroidManifest.xml" Line="16" Column="12" />
-      <File FileName="WhitePaperBible.Android/Adapters/TagsAdapter.cs" Line="60" Column="54" />
+      <File FileName="WhitePaperBible.Android/Resources/menu/PaperDetailsActionItems.axml" Line="10" Column="33" />
+      <File FileName="WhitePaperBible.Android/MainView.cs" Line="57" Column="1" />
+      <File FileName="WhitePaperBible.Android/Adapters/TagsAdapter.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/TagsListMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListByTagMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Views/PapersByTagActivty.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersByTagView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Views/AboutActivity.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Resources/menu/share.xml" Line="18" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WhitePaperBible" expanded="True">
-            <Node name="WhitePaperBible.Droid" expanded="True" selected="True">
-              <Node name="References" expanded="True" />
+            <Node name="Android" expanded="True">
+              <Node name="BottomSheet-Xamarin.Android" expanded="True" selected="True" />
+            </Node>
+            <Node name="WhitePaperBible.Droid" expanded="True">
               <Node name="Packages" expanded="True" />
-              <Node name="Adapters" expanded="True" />
-              <Node name="Fragments" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Views" expanded="True" />
             </Node>
             <Node name="WhitePaperBible.iOS" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="Images.xcassets" expanded="True">
-                  <Node name="AppIcons-1.appiconset" expanded="True" />
-                </Node>
+              <Node name="UI" expanded="True">
+                <Node name="CustomElements" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="iPhone" expanded="True" />
               </Node>
             </Node>
             <Node name="WhitePaperBible.PCL" expanded="True">
@@ -130,7 +132,9 @@
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="36" column="1" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="49" column="1" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/AppDelegate.cs" line="121" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/Views/PapersView.cs" line="48" column="18" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/Views/PaperDetailActivity.cs" line="111" column="44" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/MainView.cs" line="67" column="1" />
+      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/Views/PaperDetailActivity.cs" line="98" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
