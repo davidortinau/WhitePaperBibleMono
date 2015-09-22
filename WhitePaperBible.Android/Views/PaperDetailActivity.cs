@@ -42,29 +42,7 @@ namespace WhitePaperBible.Droid
 			MenuInflater.Inflate(Resource.Menu.PaperDetailsActionItems,menu);
 			_menu = menu;
 
-//			var share = _menu.FindItem(Resource.Id.menu_share);
-//
-//			var actionProvider = MenuItemCompat.GetActionProvider (share);
-//			_shareProvider = actionProvider.JavaCast<Android.Support.V7.Widget.ShareActionProvider>();
-//			var intent = CreateIntent ();
-//			_shareProvider.SetShareIntent (intent);
-
 			return base.OnCreateOptionsMenu(menu);
-		}
-
-		Intent CreateIntent () {  
-			// prep content
-			string paperTitle = Paper.title;
-			string urlTitle = Paper.url_title;
-			string subject = "White Paper Bible: " + paperTitle;
-			string paperFullURL = "http://www.whitepaperbible.org/" + urlTitle;
-
-			string messageCombined = subject + System.Environment.NewLine + paperFullURL + System.Environment.NewLine + Paper.ToPlainText();
-
-			var intent = new Intent (Intent.ActionSend);
-			intent.SetType ("text/plain");
-			intent.PutExtra (Intent.ExtraStream, messageCombined);
-			return intent;
 		}
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
@@ -109,6 +87,45 @@ namespace WhitePaperBible.Droid
 		public void OnClick (IDialogInterface dialog, int which)
 		{
 			Console.WriteLine("clicked {0}", which);
+
+			string paperTitle = Paper.title;
+			string urlTitle = Paper.url_title;
+			string subject = "White Paper Bible: " + paperTitle;
+			string paperFullURL = "http://www.whitepaperbible.org/" + urlTitle;
+
+			string messageCombined = subject + System.Environment.NewLine + paperFullURL + System.Environment.NewLine + Paper.ToPlainText();
+
+			switch(which){
+			case Resource.Id.menu_email:
+				{
+					var email = new Intent (Android.Content.Intent.ActionSend);
+//					email.PutExtra(Android.Content.Intent.ExtraEmail, new string[]{"person1@xamarin.com", "person2@xamrin.com"});
+//					email.PutExtra(Android.Content.Intent.ExtraCc, new string[]{"person3@xamarin.com"});
+					email.PutExtra(Android.Content.Intent.ExtraSubject, paperTitle);
+					email.PutExtra(Android.Content.Intent.ExtraText, messageCombined);
+					email.SetType("message/rfc822");
+					StartActivity(email);
+					break;
+				}
+			case Resource.Id.menu_facebook:
+				{
+
+					break;
+				}
+			case Resource.Id.menu_twitter:
+				{
+
+					break;
+				}
+			case Resource.Id.menu_sms:
+				{
+					var smsUri = Android.Net.Uri.Parse("smsto:");
+					var smsIntent = new Intent (Intent.ActionSendto, smsUri);
+					smsIntent.PutExtra ("sms_body", string.Format("{0} {1}", paperTitle, paperFullURL));  
+					StartActivity (smsIntent);
+					break;
+				}
+			}
 		}
 
 		#region IPaperDetailView implementation
