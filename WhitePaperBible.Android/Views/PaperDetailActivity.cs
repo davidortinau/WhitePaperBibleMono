@@ -95,6 +95,8 @@ namespace WhitePaperBible.Droid
 
 			string messageCombined = subject + System.Environment.NewLine + paperFullURL + System.Environment.NewLine + Paper.ToPlainText();
 
+			var shortMsg = string.Format("{0} {1} #whitepaperbible", paperTitle, paperFullURL);
+
 			switch(which){
 			case Resource.Id.menu_email:
 				{
@@ -109,56 +111,12 @@ namespace WhitePaperBible.Droid
 				}
 			case Resource.Id.menu_facebook:
 				{
-					Intent fbIntent = new Intent(Android.Content.Intent.ActionSend);
-					fbIntent.PutExtra(Android.Content.Intent.ExtraText, string.Format("{0} {1} #whitepaperbible", paperTitle, paperFullURL));
-					fbIntent.SetType("text/plain");
-
-					var mgr = this.PackageManager;
-					var resolvedInfoList = mgr.QueryIntentActivities(fbIntent, Android.Content.PM.PackageInfoFlags.MatchDefaultOnly);
-					var resolved = false;
-					foreach (var resolveInfo in resolvedInfoList) {
-						if(resolveInfo.ActivityInfo.PackageName.Contains("facebook")){
-							fbIntent.SetClassName(
-								resolveInfo.ActivityInfo.PackageName,
-								resolveInfo.ActivityInfo.Name
-							);
-							resolved = true;
-							break;
-						}
-					}
-
-					if(resolved){
-						StartActivity(fbIntent);
-					}else{
-						Toast.MakeText(this, "Facebook app isn't found", ToastLength.Short).Show();
-					}
+					ShareToIntent("facebook", "Facebook", shortMsg);
 					break;
 				}
 			case Resource.Id.menu_twitter:
 				{
-					Intent tweetIntent = new Intent(Android.Content.Intent.ActionSend);
-					tweetIntent.PutExtra(Android.Content.Intent.ExtraText, string.Format("{0} {1} #whitepaperbible", paperTitle, paperFullURL));
-					tweetIntent.SetType("text/plain");
-
-					var mgr = this.PackageManager;
-					var resolvedInfoList = mgr.QueryIntentActivities(tweetIntent, Android.Content.PM.PackageInfoFlags.MatchDefaultOnly);
-					var resolved = false;
-					foreach (var resolveInfo in resolvedInfoList) {
-						if(resolveInfo.ActivityInfo.PackageName.StartsWith("com.twitter.android")){
-							tweetIntent.SetClassName(
-								resolveInfo.ActivityInfo.PackageName,
-								resolveInfo.ActivityInfo.Name
-							);
-							resolved = true;
-							break;
-						}
-					}
-
-					if(resolved){
-						StartActivity(tweetIntent);
-					}else{
-						Toast.MakeText(this, "Twitter app isn't found", ToastLength.Short).Show();
-					}
+					ShareToIntent("com.twitter.android", "Twitter", shortMsg);
 					break;
 				}
 			case Resource.Id.menu_sms:
@@ -169,6 +127,33 @@ namespace WhitePaperBible.Droid
 					StartActivity (smsIntent);
 					break;
 				}
+			}
+		}
+
+		void ShareToIntent(string app_id, string app_name, string message)
+		{
+			Intent fbIntent = new Intent(Android.Content.Intent.ActionSend);
+			fbIntent.PutExtra(Android.Content.Intent.ExtraText, message);
+			fbIntent.SetType("text/plain");
+
+			var mgr = this.PackageManager;
+			var resolvedInfoList = mgr.QueryIntentActivities(fbIntent, Android.Content.PM.PackageInfoFlags.MatchDefaultOnly);
+			var resolved = false;
+			foreach (var resolveInfo in resolvedInfoList) {
+				if(resolveInfo.ActivityInfo.PackageName.Contains(app_id)){
+					fbIntent.SetClassName(
+						resolveInfo.ActivityInfo.PackageName,
+						resolveInfo.ActivityInfo.Name
+					);
+					resolved = true;
+					break;
+				}
+			}
+
+			if(resolved){
+				StartActivity(fbIntent);
+			}else{
+				Toast.MakeText(this, string.Format("{0} app isn't found", app_name), ToastLength.Short).Show();
 			}
 		}
 

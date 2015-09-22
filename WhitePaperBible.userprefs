@@ -1,5 +1,5 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.Android/WhitePaperBible.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.04fbaa120ecd1946" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Android/Views/PaperDetailActivity.cs">
     <Files>
       <File FileName="WhitePaperBible.PCL/Mediators/FavoritesListMediator.cs" Line="25" Column="35" />
@@ -64,7 +64,7 @@
       <File FileName="WhitePaperBible.PCL/Commands/BootstrapCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Views/TagsView.cs" Line="63" Column="5" />
-      <File FileName="WhitePaperBible.Android/Views/PaperDetailActivity.cs" Line="98" Column="8" />
+      <File FileName="WhitePaperBible.Android/Views/PaperDetailActivity.cs" Line="126" Column="20" />
       <File FileName="WhitePaperBible.Android/Views/SearchView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/ConfigureViewsCommand.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.PCL/Commands/GetPapersCommand.cs" Line="1" Column="1" />
@@ -81,29 +81,18 @@
       <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Views/AboutActivity.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.Android/Resources/menu/share.xml" Line="18" Column="34" />
+      <File FileName="../../../../work/Cocosw.BottomSheet-Xamarin.Android/BottomSheet-Xamarin.Android/packages.config" Line="4" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WhitePaperBible" expanded="True">
             <Node name="Android" expanded="True">
-              <Node name="BottomSheet-Xamarin.Android" expanded="True" selected="True" />
-            </Node>
-            <Node name="WhitePaperBible.Droid" expanded="True">
-              <Node name="Packages" expanded="True" />
-            </Node>
-            <Node name="WhitePaperBible.iOS" expanded="True">
-              <Node name="UI" expanded="True">
-                <Node name="CustomElements" expanded="True" />
+              <Node name="WhitePaperBible.Droid" expanded="True">
+                <Node name="Views" expanded="True">
+                  <Node name="PaperDetailActivity.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="Views" expanded="True">
-                <Node name="iPhone" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="WhitePaperBible.PCL" expanded="True">
-              <Node name="Mediators" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -132,9 +121,7 @@
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="36" column="1" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="49" column="1" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/AppDelegate.cs" line="121" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/Views/PaperDetailActivity.cs" line="111" column="44" />
       <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/MainView.cs" line="67" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.Android/Views/PaperDetailActivity.cs" line="98" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
@@ -144,5 +131,4 @@
     <String>WhitePaperBible.Tests/WhitePaperBible.Tests.csproj</String>
     <String>WhitePaperBibileCoreTests/WhitePaperBibile.PCL.Tests.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Droid AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>
