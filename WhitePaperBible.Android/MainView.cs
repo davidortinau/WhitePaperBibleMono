@@ -12,6 +12,7 @@ using Android.Support.V4.View;
 using Adapters;
 using com.refractored;
 using Android.Support.Design.Widget;
+using Android.Support.V7.Widget;
 
 namespace WhitePaperBible.Droid
 {
@@ -64,6 +65,12 @@ namespace WhitePaperBible.Droid
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
 			switch (item.ItemId) {
+			case Resource.Id.menu_search:
+				{
+					var courseIntent = new Intent(this.BaseContext, typeof(SearchPapersActivity));
+					StartActivity(courseIntent);
+					break;
+				}
 			case Resource.Id.menu_about:
 				{
 					var courseIntent = new Intent(this.BaseContext, typeof(AboutActivity));

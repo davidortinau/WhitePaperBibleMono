@@ -92,6 +92,7 @@
     <Compile Include="Adapters\AboutListAdapter.cs" />
     <Compile Include="Views\CopyrightsActivity.cs" />
     <Compile Include="Views\TermsAndConditionsActivity.cs" />
+    <Compile Include="Views\SearchPapersActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -210,6 +211,8 @@
     <AndroidResource Include="Resources\layout\AboutListItem.axml" />
     <AndroidResource Include="Resources\layout\CopyrightsView.axml" />
     <AndroidResource Include="Resources\layout\TermsAndConditionsView.axml" />
+    <AndroidResource Include="Resources\xml\searchable.xml" />
+    <AndroidResource Include="Resources\layout\SearchPapersView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -237,6 +240,7 @@
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\xml\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">

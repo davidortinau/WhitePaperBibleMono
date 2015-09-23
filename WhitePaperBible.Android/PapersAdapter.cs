@@ -14,14 +14,25 @@ using WhitePaperBible.Core.Models;
 
 namespace WhitePaperBible.Droid
 {		
-	public class PapersAdapter : BaseAdapter
+	public class PapersAdapter : BaseAdapter, IFilterable
 	{
-		List<Paper> items;
+		public List<Paper> Items;
+		public List<Paper> _filteredItems;
 		Activity context;
+		private readonly Lazy<PapersFilter> _filter;
 
 		public PapersAdapter(Activity context, List<Paper> items) : base() {
 			this.context = context;
-			this.items = items;
+			this.Items = items;
+			_filteredItems = items;
+			_filter = new Lazy<PapersFilter>(() => new PapersFilter(this), true);
+		}
+
+
+		public Filter Filter {
+			get {
+				return _filter.Value;
+			}
 		}
 
 		public override long GetItemId(int position)
@@ -40,7 +51,7 @@ namespace WhitePaperBible.Droid
 		}
 
 		public override int Count {
-			get { return items.Count; }
+			get { return Items.Count; }
 		}
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
@@ -55,13 +66,47 @@ namespace WhitePaperBible.Droid
 			TextView titleTxt = itemView.FindViewById<TextView>(Resource.Id.titleTextView);
 			TextView authorTxt = itemView.FindViewById<TextView>(Resource.Id.authorTextView);
 
-			var paper = items.ElementAt(position);
+			var paper = _filteredItems.ElementAt(position);
 			titleTxt.Text = paper.title;
 			authorTxt.Text = string.Format("by: {0}", paper.Author.Name);
 
 			return itemView;
 		}
 
+		public void SetFilter(IEnumerable<string> values)
+		{
+			_filteredItems = Items.Where(i => values.Contains(i.title)).ToList();
+			NotifyDataSetChanged();
+		}
+
+		private class PapersFilter : Filter
+		{
+			private PapersAdapter _adapter;
+
+			public PapersFilter (PapersAdapter adapter)
+			{
+				_adapter = adapter;
+			}
+			#region implemented abstract members of Filter
+			protected override FilterResults PerformFiltering (Java.Lang.ICharSequence constraint)
+			{
+				string strConstraint = constraint == null ? null : constraint.ToString();
+				List<Paper> items = strConstraint == null ? _adapter.Items.ToList() : _adapter.Items.Where(i => i.title.ToLowerInvariant().Contains(strConstraint.ToLowerInvariant())).ToList();
+				FilterResults results = new FilterResults()
+				{
+					Values = items.Select(i => i.title).ToArray(),
+					Count = items.Count
+				};
+
+				return results;
+			}
+
+			protected override void PublishResults (Java.Lang.ICharSequence constraint, FilterResults results)
+			{
+				_adapter.SetFilter(results.Values.ToArray<string>());
+			}
+			#endregion
+		}
 	}
 }
 
