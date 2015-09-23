@@ -26,4 +26,7 @@
 	    <item>Licenses</item>
 	    <item>Terms and Conditions</item>
 	  </string-array>
+
+	<string name="copyrights">© 2014 Simply Profound, LLC\n\nAll Scripture quotations, unless otherwise indicated, are taken from The Holy Bible, English Standard Version. Copyright ©2001 by Crossway Bibles, a publishing ministry of Good News Publishers. Used by permission. All rights reserved. Text provided by the Crossway Bibles Web Service.</string>
+	<string name="terms"></string>
 </resources>

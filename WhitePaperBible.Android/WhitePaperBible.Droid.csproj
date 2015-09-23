@@ -89,6 +89,9 @@
     <Compile Include="Adapters\TagsAdapter.cs" />
     <Compile Include="Views\PapersByTagActivty.cs" />
     <Compile Include="Views\AboutActivity.cs" />
+    <Compile Include="Adapters\AboutListAdapter.cs" />
+    <Compile Include="Views\CopyrightsActivity.cs" />
+    <Compile Include="Views\TermsAndConditionsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -204,6 +207,9 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\layout\PapersByTagList.axml" />
     <AndroidResource Include="Resources\menu\share.xml" />
+    <AndroidResource Include="Resources\layout\AboutListItem.axml" />
+    <AndroidResource Include="Resources\layout\CopyrightsView.axml" />
+    <AndroidResource Include="Resources\layout\TermsAndConditionsView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -249,5 +255,8 @@
       <Version>22.2.0.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\WPB Terms and Conditions.txt" />
   </ItemGroup>
 </Project>

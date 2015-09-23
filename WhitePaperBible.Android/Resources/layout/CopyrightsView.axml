@@ -19,37 +19,14 @@
             local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
-<!--    <ScrollView
+    <ScrollView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        local:layout_behavior="@string/appbar_scrolling_view_behavior">-->
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         local:layout_behavior="@string/appbar_scrolling_view_behavior">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:padding="10dp"
-            android:text="Support" />
-        <ListView
-            android:id="@+id/SupportList"
-            android:minWidth="45px"
-            android:minHeight="?android:attr/listPreferredItemHeight"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="App Info" />
-        <ListView
-            android:id="@+id/AppInfoList"
-            android:minWidth="45px"
-            android:minHeight="?android:attr/listPreferredItemHeight"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-<!--    </ScrollView>-->
+            android:text="@string/copyrights" />
+    </ScrollView>
 </android.support.design.widget.CoordinatorLayout>
