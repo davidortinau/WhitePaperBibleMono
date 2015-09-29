@@ -3,7 +3,7 @@
 xmlns:local="http://schemas.android.com/apk/res-auto">
  <item android:id="@+id/menu_search"
         android:title="Search"
-        android:showAsAction="always" />
+        local:showAsAction="always" />
  <item
       android:id="@+id/menu_profile"
       local:showAsAction="never"

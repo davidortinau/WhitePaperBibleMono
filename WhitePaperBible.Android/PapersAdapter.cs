@@ -17,14 +17,14 @@ namespace WhitePaperBible.Droid
 	public class PapersAdapter : BaseAdapter, IFilterable
 	{
 		public List<Paper> Items;
-		public List<Paper> _filteredItems;
+		public List<Paper> FilteredItems;
 		Activity context;
 		private readonly Lazy<PapersFilter> _filter;
 
 		public PapersAdapter(Activity context, List<Paper> items) : base() {
 			this.context = context;
 			this.Items = items;
-			_filteredItems = items;
+			FilteredItems = items;
 			_filter = new Lazy<PapersFilter>(() => new PapersFilter(this), true);
 		}
 
@@ -51,11 +51,12 @@ namespace WhitePaperBible.Droid
 		}
 
 		public override int Count {
-			get { return Items.Count; }
+			get { return FilteredItems.Count; }
 		}
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
+			Console.WriteLine("{0} of {1}", position, FilteredItems.Count);
 			var itemView = convertView; // re-use an existing view, if one is available
 			if (itemView == null) {
 				var layoutInflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
@@ -66,7 +67,7 @@ namespace WhitePaperBible.Droid
 			TextView titleTxt = itemView.FindViewById<TextView>(Resource.Id.titleTextView);
 			TextView authorTxt = itemView.FindViewById<TextView>(Resource.Id.authorTextView);
 
-			var paper = _filteredItems.ElementAt(position);
+			var paper = FilteredItems.ElementAt(position);
 			titleTxt.Text = paper.title;
 			authorTxt.Text = string.Format("by: {0}", paper.Author.Name);
 
@@ -75,7 +76,7 @@ namespace WhitePaperBible.Droid
 
 		public void SetFilter(IEnumerable<string> values)
 		{
-			_filteredItems = Items.Where(i => values.Contains(i.title)).ToList();
+			FilteredItems = Items.Where(i => values.Contains(i.title)).ToList();
 			NotifyDataSetChanged();
 		}
 

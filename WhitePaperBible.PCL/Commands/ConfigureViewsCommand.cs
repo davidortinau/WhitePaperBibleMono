@@ -25,6 +25,7 @@ namespace WhitePaperBible.Core.Commands
 			DI.MapMediatorToClass<EditPaperViewMediator, IEditPaperView> ();
 			DI.MapMediatorToClass<PaperTagsViewMediator, IPaperTagsView> ();
 			DI.MapMediatorToClass<RegistrationViewMediator, IRegistrationView> ();
+			DI.MapMediatorToClass<SearchPapersMediator, ISearchPapersView>();
 		}
 	}
 }

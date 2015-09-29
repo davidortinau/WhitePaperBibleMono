@@ -23,7 +23,7 @@ namespace WhitePaperBible.Droid
 	[Activity (Label = "")]		
 	[IntentFilter(new string[]{"android.intent.action.SEARCH"})]
 	[MetaData(("android.app.searchable"), Resource = "@xml/searchable")]
-	public class SearchPapersActivity : BaseActivityView, IPapersListView, IInjectingTarget
+	public class SearchPapersActivity : BaseActivityView, ISearchPapersView, IInjectingTarget
 	{
 		private ListView _listView;
 
@@ -44,9 +44,14 @@ namespace WhitePaperBible.Droid
 
 		}
 
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+		}
+
 		void OnRowClicked (object sender, AdapterView.ItemClickEventArgs e)
 		{
-			var item = _papers[e.Position];
+			var item = ListAdapter.FilteredItems[e.Position];
 
 			var courseIntent = new Intent(this, typeof(PaperDetailActivity));
 			var json = JsonConvert.SerializeObject(item);
@@ -115,9 +120,12 @@ namespace WhitePaperBible.Droid
 			var searchItem = MenuItemCompat.GetActionView(item);//(Android.Support.V7.Widget.SearchView) searchItem.ActionView;
 			var searchView = searchItem.JavaCast<Android.Support.V7.Widget.SearchView>();
 			searchView.SetSearchableInfo(searchManager.GetSearchableInfo(ComponentName));
+
+
 //			searchView.SetOnSuggestionListener(new SuggestionListener(searchView.SuggestionsAdapter, this, searchItem));
 			searchView.SetOnQueryTextListener(new OnQueryTextListener(this));
-			searchView.SetIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+			searchView.SetIconifiedByDefault(false);// should start it open
+			searchView.RequestFocus();
 
 			return base.OnCreateOptionsMenu(menu);
 		}
