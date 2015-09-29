@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="Hello">Hello World, Click Me!</string>
-	<string name="ApplicationName">WhitePaperBible.Android</string>
+	<string name="ApplicationName">WhitePaperBible</string>
 	<string name="email">user@domain.com</string>
 	<string name="password">password</string>
+
+	<string name="tab_papers">Papers</string>
+	<string name="tab_tags">Tags</string>
+	<string name="tab_favorites">Favorites</string>
+	<string name="tab_search">Search</string>
+	<string name="tab_profile">My Papers</string>
+	<string name="tab_about">About</string>
+
+	<string name="paper_updated">Paper Updated.</string>
+
+	<string-array name="support_array">
+	    <item>Get Help</item>
+	    <item>Send Feedback</item>
+	  </string-array>
+
+	<string-array name="app_info_array">
+	    <item>App Version</item>
+	    <item>Visit whitepaperbible.org</item>
+	    <item>Preface to the ESV Bible</item>
+	    <item>Licenses</item>
+	    <item>Terms and Conditions</item>
+	  </string-array>
+
+	<string name="copyrights">© 2014 Simply Profound, LLC\n\nAll Scripture quotations, unless otherwise indicated, are taken from The Holy Bible, English Standard Version. Copyright ©2001 by Crossway Bibles, a publishing ministry of Good News Publishers. Used by permission. All rights reserved. Text provided by the Crossway Bibles Web Service.</string>
+	<string name="terms"></string>
 </resources>

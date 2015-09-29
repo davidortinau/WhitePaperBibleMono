@@ -76,6 +76,9 @@ namespace WhitePaperBible.Core.Mediators
 			isFavorite = !isFavorite;
 			var args = new ToggleFavoriteInvokerArgs (AppModel.CurrentPaper, isFavorite);
 			ToggleFavorite.Invoke (args);
+
+			bool isOwned = (AppModel.IsLoggedIn) && (AppModel.CurrentPaper.user_id == AppModel.User.ID);
+			Target.SetPaper (AppModel.CurrentPaper, isFavorite, isOwned);
 		}
 	}
 }

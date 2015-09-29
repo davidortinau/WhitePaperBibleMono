@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Refractored.PagerSlidingTabStrip</name>
+    </assembly>
+    <members>
+        <member name="M:com.refractored.PagerSlidingTabStrip.SetTypeface(Android.Graphics.Typeface,Android.Graphics.TypefaceStyle)">
+            <summary>
+            Sets the typeface
+            </summary>
+            <param name="typeFace"></param>
+            <param name="style"></param>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.OnPageChangeListener">
+            <summary>
+            Gets or sets the page change listener
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.OnTabReselectedListener">
+            <summary>
+            Gets or sets the tab reselected listener
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.IndicatorColor">
+            <summary>
+            Gets or sets the indicator color
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.IndicatorHeight">
+            <summary>
+            Gets or sets the indicator height
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.UnderlineHeight">
+            <summary>
+            Gets or sets the underline height
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.UnderlineColor">
+            <summary>
+            Gets or sets the underline color
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.DividerWidth">
+            <summary>
+            gets or sets the divider width
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.DividerPadding">
+            <summary>
+            gets or sets the divider padding
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.DividerColor">
+            <summary>
+            gets or sets the divider color
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.TabPaddingLeftRight">
+            <summary>
+            Gets or sets padding left
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.TabTextSize">
+            <summary>
+            Gets or sets text size
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.TextAlpha">
+            <summary>
+            Gets or sets the text alpha
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.TabTextColorSelected">
+            <summary>
+            Gets or sets the inactive text color
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.TabTextColor">
+            <summary>
+            Gets or sets tab text color
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.ShouldExpand">
+            <summary>
+            Gets or sets if should expand
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.IsPaddingMiddle">
+            <summary>
+            Gets or sets is padding middle
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.ScrollOffset">
+            <summary>
+            Sets the scrolloffset
+            </summary>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.TabBackground">
+            <summary>
+            Sets tab background
+            </summary>
+        </member>
+        <member name="T:com.refractored.PagerSlidingTabStrip.PagerSlidingTabStripState">
+            <summary>
+            The state saved by an instance of PagerSlidingTabStrip during orientation changes etc.
+            </summary>
+        </member>
+        <member name="M:com.refractored.PagerSlidingTabStrip.PagerSlidingTabStripState.#ctor(Android.OS.IParcelable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:com.refractored.PagerSlidingTabStrip.PagerSlidingTabStripState"/> class.
+            </summary>
+            <param name="superState">State of the super.</param>
+        </member>
+        <member name="M:com.refractored.PagerSlidingTabStrip.PagerSlidingTabStripState.WriteToParcel(Android.OS.Parcel,Android.OS.ParcelableWriteFlags)">
+            <summary>
+            Implementation of AbsSavedState.WriteToParcel
+            
+            This is overriden to 
+            </summary>
+            <param name="dest">The Parcel in which the object should be written.</param>
+            <param name="flags">Additional flags about how the object should be written.
+            May be 0 or <c><see cref="F:Android.OS.Parcelable.ParcelableWriteReturnValue" /></c>.</param>
+        </member>
+        <member name="P:com.refractored.PagerSlidingTabStrip.PagerSlidingTabStripState.CurrentPosition">
+            <summary>
+            Gets or sets the current position.
+            </summary>
+            <value>
+            The current position.
+            </value>
+        </member>
+    </members>
+</doc>

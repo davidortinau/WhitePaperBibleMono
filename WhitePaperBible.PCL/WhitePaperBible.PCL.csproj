@@ -182,6 +182,8 @@
     <Compile Include="Invokers\LoginRequiredInvoker.cs" />
     <Compile Include="Repositories\FavoritesRepository.cs" />
     <Compile Include="Repositories\PaperRepository.cs" />
+    <Compile Include="Views\ISearchPapersView.cs" />
+    <Compile Include="Mediators\SearchPapersMediator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

@@ -5,12 +5,12 @@ using Android.App;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle ("WhitePaperBible.Android")]
+[assembly: AssemblyTitle ("WhitePaperBible.Droid")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Rendr LLC")]
+[assembly: AssemblyCompany ("Rendr")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("2014 Rendr LLC")]
+[assembly: AssemblyCopyright ("2015 Rendr LLC")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

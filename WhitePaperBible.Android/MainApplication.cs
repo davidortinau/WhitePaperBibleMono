@@ -4,10 +4,10 @@ using Android.Runtime;
 using MonkeyArms;
 using WhitePaperBible.Core.Commands;
 using WhitePaperBible.Core.Invokers;
-using WhitePaperBible.Android.Services;
+using WhitePaperBible.Droid.Services;
 using WhitePaperBible.Core.Services;
 
-namespace WhitePaperBible.Android
+namespace WhitePaperBible.Droid
 {
 	[Application]
 	public class MainApplication : Application

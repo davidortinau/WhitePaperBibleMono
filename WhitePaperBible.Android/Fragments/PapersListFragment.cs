@@ -1,7 +1,7 @@
 using Android.App;
 using Android.OS;
 
-namespace WhitePaperBible.Android.Fragments
+namespace WhitePaperBible.Droid.Fragments
 {
 	public class PapersListFragment : Fragment
 	{
