@@ -4135,6 +4135,12 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b0016
 			public const int email = 2131427350;
 			
+			// aapt resource value: 0x7f0b0021
+			public const int icon_heart = 2131427361;
+			
+			// aapt resource value: 0x7f0b0022
+			public const int icon_search = 2131427362;
+			
 			// aapt resource value: 0x7f0b001e
 			public const int paper_updated = 2131427358;
 			

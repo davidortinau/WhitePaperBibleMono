@@ -98,6 +98,7 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
+    <None Include="Resources\values\fontawesome.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -262,5 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\WPB Terms and Conditions.txt" />
+    <AndroidAsset Include="Assets\FontAwesome.ttf" />
+    <AndroidAsset Include="Assets\fontawesome-webfont.ttf" />
   </ItemGroup>
 </Project>

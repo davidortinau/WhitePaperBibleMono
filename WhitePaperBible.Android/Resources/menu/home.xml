@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:local="http://schemas.android.com/apk/res-auto">
  <item android:id="@+id/menu_search"
-        android:title="Search"
-        local:showAsAction="always" />
+        local:showAsAction="always"
+          />
  <item
       android:id="@+id/menu_profile"
       local:showAsAction="never"
