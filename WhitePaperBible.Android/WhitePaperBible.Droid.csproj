@@ -93,6 +93,7 @@
     <Compile Include="Views\CopyrightsActivity.cs" />
     <Compile Include="Views\TermsAndConditionsActivity.cs" />
     <Compile Include="Views\SearchPapersActivity.cs" />
+    <Compile Include="Views\Components\TextDrawable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -242,6 +243,7 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\xml\" />
+    <Folder Include="Views\Components\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="restsharp">

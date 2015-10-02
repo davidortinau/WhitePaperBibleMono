@@ -17,6 +17,7 @@ using Java.Interop;
 using Android.Views;
 using Android.Support.V7.Widget;
 using Android.Widget;
+using Rendr.Droid.Components;
 
 namespace WhitePaperBible.Droid
 {
@@ -93,43 +94,45 @@ namespace WhitePaperBible.Droid
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
+            _menu = menu;
 			MenuInflater.Inflate(Resource.Menu.ActionItems, menu);
-
-			_menu = menu;
-
-//			SearchManager searchManager = (SearchManager)
-//				GetSystemService(Android.Content.Context.SearchService);
-//			var searchMenuItem = _menu.FindItem(Resource.Id.search);
-//			var searchView = (SearchView) searchMenuItem.ActionView;
-//
-//			searchView.SetSearchableInfo(searchManager.
-//				GetSearchableInfo(ComponentName));
-//			searchView.SubmitButtonEnabled = true;
-//			searchView.SetOnQueryTextListener(this);
-
-//			var share = _menu.FindItem(Resource.Id.menu_share);
-//
-//			var actionProvider = MenuItemCompat.GetActionProvider (share);
-//			_shareProvider = actionProvider.JavaCast<Android.Support.V7.Widget.ShareActionProvider>();
-//			var intent = CreateIntent ();
-//			_shareProvider.SetShareIntent (intent);
-
-
-			var searchManager = (SearchManager) GetSystemService(SearchService);
-			IMenuItem item = menu.FindItem(Resource.Id.action_search);
-			var searchItem = MenuItemCompat.GetActionView(item);//(Android.Support.V7.Widget.SearchView) searchItem.ActionView;
-			var searchView = searchItem.JavaCast<Android.Support.V7.Widget.SearchView>();
-			searchView.SetSearchableInfo(searchManager.GetSearchableInfo(ComponentName));
-
-
-//			searchView.SetOnSuggestionListener(new SuggestionListener(searchView.SuggestionsAdapter, this, searchItem));
-			searchView.SetOnQueryTextListener(new OnQueryTextListener(this));
-			searchView.SetIconifiedByDefault(false);// should start it open
-			searchView.RequestFocus();
-
-			return base.OnCreateOptionsMenu(menu);
+            SetupSearch(menu);
+            return base.OnCreateOptionsMenu(menu);
 		}
 
+        public override bool OnPrepareOptionsMenu (IMenu menu)
+        {
+            
+            searchView.SetIconifiedByDefault(false);// should start it open
+            searchView.RequestFocus();
+            return base.OnPrepareOptionsMenu (menu);
+        }
+
+        Android.Support.V7.Widget.SearchView searchView;
+
+        void SetupSearch(IMenu menu)
+        {
+            var key = Resources.GetText (Resource.String.icon_search);
+            var icon = new TextDrawable(key, this);
+            var searchItem = menu.FindItem(Resource.Id.action_search);
+            searchItem.SetIcon(icon);
+
+
+            var searchManager = (SearchManager) GetSystemService(SearchService);
+            var searchActionView = MenuItemCompat.GetActionView(searchItem);//(Android.Support.V7.Widget.SearchView) searchItem.ActionView;
+
+            searchView = searchActionView.JavaCast<Android.Support.V7.Widget.SearchView> ();
+            searchView.SetSearchableInfo(searchManager.GetSearchableInfo(ComponentName));
+            searchView.SetOnQueryTextListener(new OnQueryTextListener(this));
+            searchView.SetIconifiedByDefault(false);// should start it open
+
+
+            searchItem.ExpandActionView();
+
+//            int searchImgId = Resource.Id.search_button; // I used the explicit layout ID of searchview's ImageView
+//            ImageView v = (ImageView) searchView.FindViewById(searchImgId);
+//            v.Visibility = ViewStates.Gone;
+        }
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{

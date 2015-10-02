@@ -38,7 +38,7 @@
     <item name="colorAccent">@color/red</item>
      <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
-     <item name="android:homeAsUpIndicator">@drawable/icon</item>
+<!--     <item name="android:homeAsUpIndicator">@drawable/icon</item>-->
 
 
   </style>
