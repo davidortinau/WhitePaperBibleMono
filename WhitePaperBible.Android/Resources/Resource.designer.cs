@@ -28,1208 +28,6 @@ namespace WhitePaperBible.Droid
 		{
 			global::PCLStorage.Resource.String.ApplicationName = global::WhitePaperBible.Droid.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::WhitePaperBible.Droid.Resource.String.Hello;
-			global::com.refractored.Resource.Animation.abc_fade_in = global::WhitePaperBible.Droid.Resource.Animation.abc_fade_in;
-			global::com.refractored.Resource.Animation.abc_fade_out = global::WhitePaperBible.Droid.Resource.Animation.abc_fade_out;
-			global::com.refractored.Resource.Animation.abc_grow_fade_in_from_bottom = global::WhitePaperBible.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::com.refractored.Resource.Animation.abc_popup_enter = global::WhitePaperBible.Droid.Resource.Animation.abc_popup_enter;
-			global::com.refractored.Resource.Animation.abc_popup_exit = global::WhitePaperBible.Droid.Resource.Animation.abc_popup_exit;
-			global::com.refractored.Resource.Animation.abc_shrink_fade_out_from_bottom = global::WhitePaperBible.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::com.refractored.Resource.Animation.abc_slide_in_bottom = global::WhitePaperBible.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::com.refractored.Resource.Animation.abc_slide_in_top = global::WhitePaperBible.Droid.Resource.Animation.abc_slide_in_top;
-			global::com.refractored.Resource.Animation.abc_slide_out_bottom = global::WhitePaperBible.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::com.refractored.Resource.Animation.abc_slide_out_top = global::WhitePaperBible.Droid.Resource.Animation.abc_slide_out_top;
-			global::com.refractored.Resource.Attribute.actionBarDivider = global::WhitePaperBible.Droid.Resource.Attribute.actionBarDivider;
-			global::com.refractored.Resource.Attribute.actionBarItemBackground = global::WhitePaperBible.Droid.Resource.Attribute.actionBarItemBackground;
-			global::com.refractored.Resource.Attribute.actionBarPopupTheme = global::WhitePaperBible.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::com.refractored.Resource.Attribute.actionBarSize = global::WhitePaperBible.Droid.Resource.Attribute.actionBarSize;
-			global::com.refractored.Resource.Attribute.actionBarSplitStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::com.refractored.Resource.Attribute.actionBarStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionBarStyle;
-			global::com.refractored.Resource.Attribute.actionBarTabBarStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::com.refractored.Resource.Attribute.actionBarTabStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionBarTabStyle;
-			global::com.refractored.Resource.Attribute.actionBarTabTextStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::com.refractored.Resource.Attribute.actionBarTheme = global::WhitePaperBible.Droid.Resource.Attribute.actionBarTheme;
-			global::com.refractored.Resource.Attribute.actionBarWidgetTheme = global::WhitePaperBible.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::com.refractored.Resource.Attribute.actionButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionButtonStyle;
-			global::com.refractored.Resource.Attribute.actionDropDownStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionDropDownStyle;
-			global::com.refractored.Resource.Attribute.actionLayout = global::WhitePaperBible.Droid.Resource.Attribute.actionLayout;
-			global::com.refractored.Resource.Attribute.actionMenuTextAppearance = global::WhitePaperBible.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::com.refractored.Resource.Attribute.actionMenuTextColor = global::WhitePaperBible.Droid.Resource.Attribute.actionMenuTextColor;
-			global::com.refractored.Resource.Attribute.actionModeBackground = global::WhitePaperBible.Droid.Resource.Attribute.actionModeBackground;
-			global::com.refractored.Resource.Attribute.actionModeCloseButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::com.refractored.Resource.Attribute.actionModeCloseDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::com.refractored.Resource.Attribute.actionModeCopyDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::com.refractored.Resource.Attribute.actionModeCutDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::com.refractored.Resource.Attribute.actionModeFindDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::com.refractored.Resource.Attribute.actionModePasteDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::com.refractored.Resource.Attribute.actionModePopupWindowStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::com.refractored.Resource.Attribute.actionModeSelectAllDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::com.refractored.Resource.Attribute.actionModeShareDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::com.refractored.Resource.Attribute.actionModeSplitBackground = global::WhitePaperBible.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::com.refractored.Resource.Attribute.actionModeStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionModeStyle;
-			global::com.refractored.Resource.Attribute.actionModeWebSearchDrawable = global::WhitePaperBible.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::com.refractored.Resource.Attribute.actionOverflowButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::com.refractored.Resource.Attribute.actionOverflowMenuStyle = global::WhitePaperBible.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::com.refractored.Resource.Attribute.actionProviderClass = global::WhitePaperBible.Droid.Resource.Attribute.actionProviderClass;
-			global::com.refractored.Resource.Attribute.actionViewClass = global::WhitePaperBible.Droid.Resource.Attribute.actionViewClass;
-			global::com.refractored.Resource.Attribute.activityChooserViewStyle = global::WhitePaperBible.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::com.refractored.Resource.Attribute.alertDialogButtonGroupStyle = global::WhitePaperBible.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::com.refractored.Resource.Attribute.alertDialogCenterButtons = global::WhitePaperBible.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::com.refractored.Resource.Attribute.alertDialogStyle = global::WhitePaperBible.Droid.Resource.Attribute.alertDialogStyle;
-			global::com.refractored.Resource.Attribute.alertDialogTheme = global::WhitePaperBible.Droid.Resource.Attribute.alertDialogTheme;
-			global::com.refractored.Resource.Attribute.autoCompleteTextViewStyle = global::WhitePaperBible.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::com.refractored.Resource.Attribute.background = global::WhitePaperBible.Droid.Resource.Attribute.background;
-			global::com.refractored.Resource.Attribute.backgroundSplit = global::WhitePaperBible.Droid.Resource.Attribute.backgroundSplit;
-			global::com.refractored.Resource.Attribute.backgroundStacked = global::WhitePaperBible.Droid.Resource.Attribute.backgroundStacked;
-			global::com.refractored.Resource.Attribute.backgroundTint = global::WhitePaperBible.Droid.Resource.Attribute.backgroundTint;
-			global::com.refractored.Resource.Attribute.backgroundTintMode = global::WhitePaperBible.Droid.Resource.Attribute.backgroundTintMode;
-			global::com.refractored.Resource.Attribute.barSize = global::WhitePaperBible.Droid.Resource.Attribute.barSize;
-			global::com.refractored.Resource.Attribute.borderlessButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::com.refractored.Resource.Attribute.buttonBarButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::com.refractored.Resource.Attribute.buttonBarNegativeButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::com.refractored.Resource.Attribute.buttonBarNeutralButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::com.refractored.Resource.Attribute.buttonBarPositiveButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::com.refractored.Resource.Attribute.buttonBarStyle = global::WhitePaperBible.Droid.Resource.Attribute.buttonBarStyle;
-			global::com.refractored.Resource.Attribute.buttonPanelSideLayout = global::WhitePaperBible.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::com.refractored.Resource.Attribute.buttonStyle = global::WhitePaperBible.Droid.Resource.Attribute.buttonStyle;
-			global::com.refractored.Resource.Attribute.buttonStyleSmall = global::WhitePaperBible.Droid.Resource.Attribute.buttonStyleSmall;
-			global::com.refractored.Resource.Attribute.checkboxStyle = global::WhitePaperBible.Droid.Resource.Attribute.checkboxStyle;
-			global::com.refractored.Resource.Attribute.checkedTextViewStyle = global::WhitePaperBible.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::com.refractored.Resource.Attribute.closeIcon = global::WhitePaperBible.Droid.Resource.Attribute.closeIcon;
-			global::com.refractored.Resource.Attribute.closeItemLayout = global::WhitePaperBible.Droid.Resource.Attribute.closeItemLayout;
-			global::com.refractored.Resource.Attribute.collapseContentDescription = global::WhitePaperBible.Droid.Resource.Attribute.collapseContentDescription;
-			global::com.refractored.Resource.Attribute.collapseIcon = global::WhitePaperBible.Droid.Resource.Attribute.collapseIcon;
-			global::com.refractored.Resource.Attribute.color = global::WhitePaperBible.Droid.Resource.Attribute.color;
-			global::com.refractored.Resource.Attribute.colorAccent = global::WhitePaperBible.Droid.Resource.Attribute.colorAccent;
-			global::com.refractored.Resource.Attribute.colorButtonNormal = global::WhitePaperBible.Droid.Resource.Attribute.colorButtonNormal;
-			global::com.refractored.Resource.Attribute.colorControlActivated = global::WhitePaperBible.Droid.Resource.Attribute.colorControlActivated;
-			global::com.refractored.Resource.Attribute.colorControlHighlight = global::WhitePaperBible.Droid.Resource.Attribute.colorControlHighlight;
-			global::com.refractored.Resource.Attribute.colorControlNormal = global::WhitePaperBible.Droid.Resource.Attribute.colorControlNormal;
-			global::com.refractored.Resource.Attribute.colorPrimary = global::WhitePaperBible.Droid.Resource.Attribute.colorPrimary;
-			global::com.refractored.Resource.Attribute.colorPrimaryDark = global::WhitePaperBible.Droid.Resource.Attribute.colorPrimaryDark;
-			global::com.refractored.Resource.Attribute.colorSwitchThumbNormal = global::WhitePaperBible.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::com.refractored.Resource.Attribute.commitIcon = global::WhitePaperBible.Droid.Resource.Attribute.commitIcon;
-			global::com.refractored.Resource.Attribute.contentInsetEnd = global::WhitePaperBible.Droid.Resource.Attribute.contentInsetEnd;
-			global::com.refractored.Resource.Attribute.contentInsetLeft = global::WhitePaperBible.Droid.Resource.Attribute.contentInsetLeft;
-			global::com.refractored.Resource.Attribute.contentInsetRight = global::WhitePaperBible.Droid.Resource.Attribute.contentInsetRight;
-			global::com.refractored.Resource.Attribute.contentInsetStart = global::WhitePaperBible.Droid.Resource.Attribute.contentInsetStart;
-			global::com.refractored.Resource.Attribute.customNavigationLayout = global::WhitePaperBible.Droid.Resource.Attribute.customNavigationLayout;
-			global::com.refractored.Resource.Attribute.defaultQueryHint = global::WhitePaperBible.Droid.Resource.Attribute.defaultQueryHint;
-			global::com.refractored.Resource.Attribute.dialogPreferredPadding = global::WhitePaperBible.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::com.refractored.Resource.Attribute.dialogTheme = global::WhitePaperBible.Droid.Resource.Attribute.dialogTheme;
-			global::com.refractored.Resource.Attribute.disableChildrenWhenDisabled = global::WhitePaperBible.Droid.Resource.Attribute.disableChildrenWhenDisabled;
-			global::com.refractored.Resource.Attribute.displayOptions = global::WhitePaperBible.Droid.Resource.Attribute.displayOptions;
-			global::com.refractored.Resource.Attribute.divider = global::WhitePaperBible.Droid.Resource.Attribute.divider;
-			global::com.refractored.Resource.Attribute.dividerHorizontal = global::WhitePaperBible.Droid.Resource.Attribute.dividerHorizontal;
-			global::com.refractored.Resource.Attribute.dividerPadding = global::WhitePaperBible.Droid.Resource.Attribute.dividerPadding;
-			global::com.refractored.Resource.Attribute.dividerVertical = global::WhitePaperBible.Droid.Resource.Attribute.dividerVertical;
-			global::com.refractored.Resource.Attribute.drawableSize = global::WhitePaperBible.Droid.Resource.Attribute.drawableSize;
-			global::com.refractored.Resource.Attribute.drawerArrowStyle = global::WhitePaperBible.Droid.Resource.Attribute.drawerArrowStyle;
-			global::com.refractored.Resource.Attribute.dropDownListViewStyle = global::WhitePaperBible.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::com.refractored.Resource.Attribute.dropdownListPreferredItemHeight = global::WhitePaperBible.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::com.refractored.Resource.Attribute.editTextBackground = global::WhitePaperBible.Droid.Resource.Attribute.editTextBackground;
-			global::com.refractored.Resource.Attribute.editTextColor = global::WhitePaperBible.Droid.Resource.Attribute.editTextColor;
-			global::com.refractored.Resource.Attribute.editTextStyle = global::WhitePaperBible.Droid.Resource.Attribute.editTextStyle;
-			global::com.refractored.Resource.Attribute.elevation = global::WhitePaperBible.Droid.Resource.Attribute.elevation;
-			global::com.refractored.Resource.Attribute.expandActivityOverflowButtonDrawable = global::WhitePaperBible.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::com.refractored.Resource.Attribute.gapBetweenBars = global::WhitePaperBible.Droid.Resource.Attribute.gapBetweenBars;
-			global::com.refractored.Resource.Attribute.goIcon = global::WhitePaperBible.Droid.Resource.Attribute.goIcon;
-			global::com.refractored.Resource.Attribute.height = global::WhitePaperBible.Droid.Resource.Attribute.height;
-			global::com.refractored.Resource.Attribute.hideOnContentScroll = global::WhitePaperBible.Droid.Resource.Attribute.hideOnContentScroll;
-			global::com.refractored.Resource.Attribute.homeAsUpIndicator = global::WhitePaperBible.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::com.refractored.Resource.Attribute.homeLayout = global::WhitePaperBible.Droid.Resource.Attribute.homeLayout;
-			global::com.refractored.Resource.Attribute.icon = global::WhitePaperBible.Droid.Resource.Attribute.icon;
-			global::com.refractored.Resource.Attribute.iconifiedByDefault = global::WhitePaperBible.Droid.Resource.Attribute.iconifiedByDefault;
-			global::com.refractored.Resource.Attribute.indeterminateProgressStyle = global::WhitePaperBible.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::com.refractored.Resource.Attribute.initialActivityCount = global::WhitePaperBible.Droid.Resource.Attribute.initialActivityCount;
-			global::com.refractored.Resource.Attribute.isLightTheme = global::WhitePaperBible.Droid.Resource.Attribute.isLightTheme;
-			global::com.refractored.Resource.Attribute.itemPadding = global::WhitePaperBible.Droid.Resource.Attribute.itemPadding;
-			global::com.refractored.Resource.Attribute.layout = global::WhitePaperBible.Droid.Resource.Attribute.layout;
-			global::com.refractored.Resource.Attribute.listChoiceBackgroundIndicator = global::WhitePaperBible.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::com.refractored.Resource.Attribute.listDividerAlertDialog = global::WhitePaperBible.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::com.refractored.Resource.Attribute.listItemLayout = global::WhitePaperBible.Droid.Resource.Attribute.listItemLayout;
-			global::com.refractored.Resource.Attribute.listLayout = global::WhitePaperBible.Droid.Resource.Attribute.listLayout;
-			global::com.refractored.Resource.Attribute.listPopupWindowStyle = global::WhitePaperBible.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::com.refractored.Resource.Attribute.listPreferredItemHeight = global::WhitePaperBible.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::com.refractored.Resource.Attribute.listPreferredItemHeightLarge = global::WhitePaperBible.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::com.refractored.Resource.Attribute.listPreferredItemHeightSmall = global::WhitePaperBible.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::com.refractored.Resource.Attribute.listPreferredItemPaddingLeft = global::WhitePaperBible.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::com.refractored.Resource.Attribute.listPreferredItemPaddingRight = global::WhitePaperBible.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::com.refractored.Resource.Attribute.logo = global::WhitePaperBible.Droid.Resource.Attribute.logo;
-			global::com.refractored.Resource.Attribute.maxButtonHeight = global::WhitePaperBible.Droid.Resource.Attribute.maxButtonHeight;
-			global::com.refractored.Resource.Attribute.measureWithLargestChild = global::WhitePaperBible.Droid.Resource.Attribute.measureWithLargestChild;
-			global::com.refractored.Resource.Attribute.middleBarArrowSize = global::WhitePaperBible.Droid.Resource.Attribute.middleBarArrowSize;
-			global::com.refractored.Resource.Attribute.multiChoiceItemLayout = global::WhitePaperBible.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::com.refractored.Resource.Attribute.navigationContentDescription = global::WhitePaperBible.Droid.Resource.Attribute.navigationContentDescription;
-			global::com.refractored.Resource.Attribute.navigationIcon = global::WhitePaperBible.Droid.Resource.Attribute.navigationIcon;
-			global::com.refractored.Resource.Attribute.navigationMode = global::WhitePaperBible.Droid.Resource.Attribute.navigationMode;
-			global::com.refractored.Resource.Attribute.overlapAnchor = global::WhitePaperBible.Droid.Resource.Attribute.overlapAnchor;
-			global::com.refractored.Resource.Attribute.paddingEnd = global::WhitePaperBible.Droid.Resource.Attribute.paddingEnd;
-			global::com.refractored.Resource.Attribute.paddingStart = global::WhitePaperBible.Droid.Resource.Attribute.paddingStart;
-			global::com.refractored.Resource.Attribute.panelBackground = global::WhitePaperBible.Droid.Resource.Attribute.panelBackground;
-			global::com.refractored.Resource.Attribute.panelMenuListTheme = global::WhitePaperBible.Droid.Resource.Attribute.panelMenuListTheme;
-			global::com.refractored.Resource.Attribute.panelMenuListWidth = global::WhitePaperBible.Droid.Resource.Attribute.panelMenuListWidth;
-			global::com.refractored.Resource.Attribute.popupMenuStyle = global::WhitePaperBible.Droid.Resource.Attribute.popupMenuStyle;
-			global::com.refractored.Resource.Attribute.popupPromptView = global::WhitePaperBible.Droid.Resource.Attribute.popupPromptView;
-			global::com.refractored.Resource.Attribute.popupTheme = global::WhitePaperBible.Droid.Resource.Attribute.popupTheme;
-			global::com.refractored.Resource.Attribute.popupWindowStyle = global::WhitePaperBible.Droid.Resource.Attribute.popupWindowStyle;
-			global::com.refractored.Resource.Attribute.preserveIconSpacing = global::WhitePaperBible.Droid.Resource.Attribute.preserveIconSpacing;
-			global::com.refractored.Resource.Attribute.progressBarPadding = global::WhitePaperBible.Droid.Resource.Attribute.progressBarPadding;
-			global::com.refractored.Resource.Attribute.progressBarStyle = global::WhitePaperBible.Droid.Resource.Attribute.progressBarStyle;
-			global::com.refractored.Resource.Attribute.prompt = global::WhitePaperBible.Droid.Resource.Attribute.prompt;
-			global::com.refractored.Resource.Attribute.pstsDividerColor = global::WhitePaperBible.Droid.Resource.Attribute.pstsDividerColor;
-			global::com.refractored.Resource.Attribute.pstsDividerPadding = global::WhitePaperBible.Droid.Resource.Attribute.pstsDividerPadding;
-			global::com.refractored.Resource.Attribute.pstsDividerWidth = global::WhitePaperBible.Droid.Resource.Attribute.pstsDividerWidth;
-			global::com.refractored.Resource.Attribute.pstsIndicatorColor = global::WhitePaperBible.Droid.Resource.Attribute.pstsIndicatorColor;
-			global::com.refractored.Resource.Attribute.pstsIndicatorHeight = global::WhitePaperBible.Droid.Resource.Attribute.pstsIndicatorHeight;
-			global::com.refractored.Resource.Attribute.pstsPaddingMiddle = global::WhitePaperBible.Droid.Resource.Attribute.pstsPaddingMiddle;
-			global::com.refractored.Resource.Attribute.pstsScrollOffset = global::WhitePaperBible.Droid.Resource.Attribute.pstsScrollOffset;
-			global::com.refractored.Resource.Attribute.pstsShouldExpand = global::WhitePaperBible.Droid.Resource.Attribute.pstsShouldExpand;
-			global::com.refractored.Resource.Attribute.pstsTabBackground = global::WhitePaperBible.Droid.Resource.Attribute.pstsTabBackground;
-			global::com.refractored.Resource.Attribute.pstsTabPaddingLeftRight = global::WhitePaperBible.Droid.Resource.Attribute.pstsTabPaddingLeftRight;
-			global::com.refractored.Resource.Attribute.pstsTextAllCaps = global::WhitePaperBible.Droid.Resource.Attribute.pstsTextAllCaps;
-			global::com.refractored.Resource.Attribute.pstsTextAlpha = global::WhitePaperBible.Droid.Resource.Attribute.pstsTextAlpha;
-			global::com.refractored.Resource.Attribute.pstsTextColorSelected = global::WhitePaperBible.Droid.Resource.Attribute.pstsTextColorSelected;
-			global::com.refractored.Resource.Attribute.pstsTextSelectedStyle = global::WhitePaperBible.Droid.Resource.Attribute.pstsTextSelectedStyle;
-			global::com.refractored.Resource.Attribute.pstsTextStyle = global::WhitePaperBible.Droid.Resource.Attribute.pstsTextStyle;
-			global::com.refractored.Resource.Attribute.pstsUnderlineColor = global::WhitePaperBible.Droid.Resource.Attribute.pstsUnderlineColor;
-			global::com.refractored.Resource.Attribute.pstsUnderlineHeight = global::WhitePaperBible.Droid.Resource.Attribute.pstsUnderlineHeight;
-			global::com.refractored.Resource.Attribute.queryBackground = global::WhitePaperBible.Droid.Resource.Attribute.queryBackground;
-			global::com.refractored.Resource.Attribute.queryHint = global::WhitePaperBible.Droid.Resource.Attribute.queryHint;
-			global::com.refractored.Resource.Attribute.radioButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.radioButtonStyle;
-			global::com.refractored.Resource.Attribute.ratingBarStyle = global::WhitePaperBible.Droid.Resource.Attribute.ratingBarStyle;
-			global::com.refractored.Resource.Attribute.searchHintIcon = global::WhitePaperBible.Droid.Resource.Attribute.searchHintIcon;
-			global::com.refractored.Resource.Attribute.searchIcon = global::WhitePaperBible.Droid.Resource.Attribute.searchIcon;
-			global::com.refractored.Resource.Attribute.searchViewStyle = global::WhitePaperBible.Droid.Resource.Attribute.searchViewStyle;
-			global::com.refractored.Resource.Attribute.selectableItemBackground = global::WhitePaperBible.Droid.Resource.Attribute.selectableItemBackground;
-			global::com.refractored.Resource.Attribute.selectableItemBackgroundBorderless = global::WhitePaperBible.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::com.refractored.Resource.Attribute.showAsAction = global::WhitePaperBible.Droid.Resource.Attribute.showAsAction;
-			global::com.refractored.Resource.Attribute.showDividers = global::WhitePaperBible.Droid.Resource.Attribute.showDividers;
-			global::com.refractored.Resource.Attribute.showText = global::WhitePaperBible.Droid.Resource.Attribute.showText;
-			global::com.refractored.Resource.Attribute.singleChoiceItemLayout = global::WhitePaperBible.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::com.refractored.Resource.Attribute.spinBars = global::WhitePaperBible.Droid.Resource.Attribute.spinBars;
-			global::com.refractored.Resource.Attribute.spinnerDropDownItemStyle = global::WhitePaperBible.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::com.refractored.Resource.Attribute.spinnerMode = global::WhitePaperBible.Droid.Resource.Attribute.spinnerMode;
-			global::com.refractored.Resource.Attribute.spinnerStyle = global::WhitePaperBible.Droid.Resource.Attribute.spinnerStyle;
-			global::com.refractored.Resource.Attribute.splitTrack = global::WhitePaperBible.Droid.Resource.Attribute.splitTrack;
-			global::com.refractored.Resource.Attribute.state_above_anchor = global::WhitePaperBible.Droid.Resource.Attribute.state_above_anchor;
-			global::com.refractored.Resource.Attribute.submitBackground = global::WhitePaperBible.Droid.Resource.Attribute.submitBackground;
-			global::com.refractored.Resource.Attribute.subtitle = global::WhitePaperBible.Droid.Resource.Attribute.subtitle;
-			global::com.refractored.Resource.Attribute.subtitleTextAppearance = global::WhitePaperBible.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::com.refractored.Resource.Attribute.subtitleTextStyle = global::WhitePaperBible.Droid.Resource.Attribute.subtitleTextStyle;
-			global::com.refractored.Resource.Attribute.suggestionRowLayout = global::WhitePaperBible.Droid.Resource.Attribute.suggestionRowLayout;
-			global::com.refractored.Resource.Attribute.switchMinWidth = global::WhitePaperBible.Droid.Resource.Attribute.switchMinWidth;
-			global::com.refractored.Resource.Attribute.switchPadding = global::WhitePaperBible.Droid.Resource.Attribute.switchPadding;
-			global::com.refractored.Resource.Attribute.switchStyle = global::WhitePaperBible.Droid.Resource.Attribute.switchStyle;
-			global::com.refractored.Resource.Attribute.switchTextAppearance = global::WhitePaperBible.Droid.Resource.Attribute.switchTextAppearance;
-			global::com.refractored.Resource.Attribute.textAllCaps = global::WhitePaperBible.Droid.Resource.Attribute.textAllCaps;
-			global::com.refractored.Resource.Attribute.textAppearanceLargePopupMenu = global::WhitePaperBible.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::com.refractored.Resource.Attribute.textAppearanceListItem = global::WhitePaperBible.Droid.Resource.Attribute.textAppearanceListItem;
-			global::com.refractored.Resource.Attribute.textAppearanceListItemSmall = global::WhitePaperBible.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::com.refractored.Resource.Attribute.textAppearanceSearchResultSubtitle = global::WhitePaperBible.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::com.refractored.Resource.Attribute.textAppearanceSearchResultTitle = global::WhitePaperBible.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::com.refractored.Resource.Attribute.textAppearanceSmallPopupMenu = global::WhitePaperBible.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::com.refractored.Resource.Attribute.textColorAlertDialogListItem = global::WhitePaperBible.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::com.refractored.Resource.Attribute.textColorSearchUrl = global::WhitePaperBible.Droid.Resource.Attribute.textColorSearchUrl;
-			global::com.refractored.Resource.Attribute.theme = global::WhitePaperBible.Droid.Resource.Attribute.theme;
-			global::com.refractored.Resource.Attribute.thickness = global::WhitePaperBible.Droid.Resource.Attribute.thickness;
-			global::com.refractored.Resource.Attribute.thumbTextPadding = global::WhitePaperBible.Droid.Resource.Attribute.thumbTextPadding;
-			global::com.refractored.Resource.Attribute.title = global::WhitePaperBible.Droid.Resource.Attribute.title;
-			global::com.refractored.Resource.Attribute.titleMarginBottom = global::WhitePaperBible.Droid.Resource.Attribute.titleMarginBottom;
-			global::com.refractored.Resource.Attribute.titleMarginEnd = global::WhitePaperBible.Droid.Resource.Attribute.titleMarginEnd;
-			global::com.refractored.Resource.Attribute.titleMarginStart = global::WhitePaperBible.Droid.Resource.Attribute.titleMarginStart;
-			global::com.refractored.Resource.Attribute.titleMarginTop = global::WhitePaperBible.Droid.Resource.Attribute.titleMarginTop;
-			global::com.refractored.Resource.Attribute.titleMargins = global::WhitePaperBible.Droid.Resource.Attribute.titleMargins;
-			global::com.refractored.Resource.Attribute.titleTextAppearance = global::WhitePaperBible.Droid.Resource.Attribute.titleTextAppearance;
-			global::com.refractored.Resource.Attribute.titleTextStyle = global::WhitePaperBible.Droid.Resource.Attribute.titleTextStyle;
-			global::com.refractored.Resource.Attribute.toolbarNavigationButtonStyle = global::WhitePaperBible.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::com.refractored.Resource.Attribute.toolbarStyle = global::WhitePaperBible.Droid.Resource.Attribute.toolbarStyle;
-			global::com.refractored.Resource.Attribute.topBottomBarArrowSize = global::WhitePaperBible.Droid.Resource.Attribute.topBottomBarArrowSize;
-			global::com.refractored.Resource.Attribute.track = global::WhitePaperBible.Droid.Resource.Attribute.track;
-			global::com.refractored.Resource.Attribute.voiceIcon = global::WhitePaperBible.Droid.Resource.Attribute.voiceIcon;
-			global::com.refractored.Resource.Attribute.windowActionBar = global::WhitePaperBible.Droid.Resource.Attribute.windowActionBar;
-			global::com.refractored.Resource.Attribute.windowActionBarOverlay = global::WhitePaperBible.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::com.refractored.Resource.Attribute.windowActionModeOverlay = global::WhitePaperBible.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::com.refractored.Resource.Attribute.windowFixedHeightMajor = global::WhitePaperBible.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::com.refractored.Resource.Attribute.windowFixedHeightMinor = global::WhitePaperBible.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::com.refractored.Resource.Attribute.windowFixedWidthMajor = global::WhitePaperBible.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::com.refractored.Resource.Attribute.windowFixedWidthMinor = global::WhitePaperBible.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::com.refractored.Resource.Attribute.windowMinWidthMajor = global::WhitePaperBible.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::com.refractored.Resource.Attribute.windowMinWidthMinor = global::WhitePaperBible.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::com.refractored.Resource.Attribute.windowNoTitle = global::WhitePaperBible.Droid.Resource.Attribute.windowNoTitle;
-			global::com.refractored.Resource.Boolean.abc_action_bar_embed_tabs = global::WhitePaperBible.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::com.refractored.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb = global::WhitePaperBible.Droid.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb;
-			global::com.refractored.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive = global::WhitePaperBible.Droid.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive;
-			global::com.refractored.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::WhitePaperBible.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::com.refractored.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon = global::WhitePaperBible.Droid.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon;
-			global::com.refractored.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::WhitePaperBible.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
-			global::com.refractored.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::WhitePaperBible.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
-			global::com.refractored.Resource.Color.abc_background_cache_hint_selector_material_dark = global::WhitePaperBible.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::com.refractored.Resource.Color.abc_background_cache_hint_selector_material_light = global::WhitePaperBible.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::com.refractored.Resource.Color.abc_input_method_navigation_guard = global::WhitePaperBible.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::com.refractored.Resource.Color.abc_primary_text_disable_only_material_dark = global::WhitePaperBible.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::com.refractored.Resource.Color.abc_primary_text_disable_only_material_light = global::WhitePaperBible.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::com.refractored.Resource.Color.abc_primary_text_material_dark = global::WhitePaperBible.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::com.refractored.Resource.Color.abc_primary_text_material_light = global::WhitePaperBible.Droid.Resource.Color.abc_primary_text_material_light;
-			global::com.refractored.Resource.Color.abc_search_url_text = global::WhitePaperBible.Droid.Resource.Color.abc_search_url_text;
-			global::com.refractored.Resource.Color.abc_search_url_text_normal = global::WhitePaperBible.Droid.Resource.Color.abc_search_url_text_normal;
-			global::com.refractored.Resource.Color.abc_search_url_text_pressed = global::WhitePaperBible.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::com.refractored.Resource.Color.abc_search_url_text_selected = global::WhitePaperBible.Droid.Resource.Color.abc_search_url_text_selected;
-			global::com.refractored.Resource.Color.abc_secondary_text_material_dark = global::WhitePaperBible.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::com.refractored.Resource.Color.abc_secondary_text_material_light = global::WhitePaperBible.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::com.refractored.Resource.Color.accent_material_dark = global::WhitePaperBible.Droid.Resource.Color.accent_material_dark;
-			global::com.refractored.Resource.Color.accent_material_light = global::WhitePaperBible.Droid.Resource.Color.accent_material_light;
-			global::com.refractored.Resource.Color.background_floating_material_dark = global::WhitePaperBible.Droid.Resource.Color.background_floating_material_dark;
-			global::com.refractored.Resource.Color.background_floating_material_light = global::WhitePaperBible.Droid.Resource.Color.background_floating_material_light;
-			global::com.refractored.Resource.Color.background_material_dark = global::WhitePaperBible.Droid.Resource.Color.background_material_dark;
-			global::com.refractored.Resource.Color.background_material_light = global::WhitePaperBible.Droid.Resource.Color.background_material_light;
-			global::com.refractored.Resource.Color.bright_foreground_disabled_material_dark = global::WhitePaperBible.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::com.refractored.Resource.Color.bright_foreground_disabled_material_light = global::WhitePaperBible.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::com.refractored.Resource.Color.bright_foreground_inverse_material_dark = global::WhitePaperBible.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::com.refractored.Resource.Color.bright_foreground_inverse_material_light = global::WhitePaperBible.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::com.refractored.Resource.Color.bright_foreground_material_dark = global::WhitePaperBible.Droid.Resource.Color.bright_foreground_material_dark;
-			global::com.refractored.Resource.Color.bright_foreground_material_light = global::WhitePaperBible.Droid.Resource.Color.bright_foreground_material_light;
-			global::com.refractored.Resource.Color.button_material_dark = global::WhitePaperBible.Droid.Resource.Color.button_material_dark;
-			global::com.refractored.Resource.Color.button_material_light = global::WhitePaperBible.Droid.Resource.Color.button_material_light;
-			global::com.refractored.Resource.Color.dim_foreground_disabled_material_dark = global::WhitePaperBible.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::com.refractored.Resource.Color.dim_foreground_disabled_material_light = global::WhitePaperBible.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::com.refractored.Resource.Color.dim_foreground_material_dark = global::WhitePaperBible.Droid.Resource.Color.dim_foreground_material_dark;
-			global::com.refractored.Resource.Color.dim_foreground_material_light = global::WhitePaperBible.Droid.Resource.Color.dim_foreground_material_light;
-			global::com.refractored.Resource.Color.highlighted_text_material_dark = global::WhitePaperBible.Droid.Resource.Color.highlighted_text_material_dark;
-			global::com.refractored.Resource.Color.highlighted_text_material_light = global::WhitePaperBible.Droid.Resource.Color.highlighted_text_material_light;
-			global::com.refractored.Resource.Color.hint_foreground_material_dark = global::WhitePaperBible.Droid.Resource.Color.hint_foreground_material_dark;
-			global::com.refractored.Resource.Color.hint_foreground_material_light = global::WhitePaperBible.Droid.Resource.Color.hint_foreground_material_light;
-			global::com.refractored.Resource.Color.link_text_material_dark = global::WhitePaperBible.Droid.Resource.Color.link_text_material_dark;
-			global::com.refractored.Resource.Color.link_text_material_light = global::WhitePaperBible.Droid.Resource.Color.link_text_material_light;
-			global::com.refractored.Resource.Color.material_blue_grey_800 = global::WhitePaperBible.Droid.Resource.Color.material_blue_grey_800;
-			global::com.refractored.Resource.Color.material_blue_grey_900 = global::WhitePaperBible.Droid.Resource.Color.material_blue_grey_900;
-			global::com.refractored.Resource.Color.material_blue_grey_950 = global::WhitePaperBible.Droid.Resource.Color.material_blue_grey_950;
-			global::com.refractored.Resource.Color.material_deep_teal_200 = global::WhitePaperBible.Droid.Resource.Color.material_deep_teal_200;
-			global::com.refractored.Resource.Color.material_deep_teal_500 = global::WhitePaperBible.Droid.Resource.Color.material_deep_teal_500;
-			global::com.refractored.Resource.Color.primary_dark_material_dark = global::WhitePaperBible.Droid.Resource.Color.primary_dark_material_dark;
-			global::com.refractored.Resource.Color.primary_dark_material_light = global::WhitePaperBible.Droid.Resource.Color.primary_dark_material_light;
-			global::com.refractored.Resource.Color.primary_material_dark = global::WhitePaperBible.Droid.Resource.Color.primary_material_dark;
-			global::com.refractored.Resource.Color.primary_material_light = global::WhitePaperBible.Droid.Resource.Color.primary_material_light;
-			global::com.refractored.Resource.Color.primary_text_default_material_dark = global::WhitePaperBible.Droid.Resource.Color.primary_text_default_material_dark;
-			global::com.refractored.Resource.Color.primary_text_default_material_light = global::WhitePaperBible.Droid.Resource.Color.primary_text_default_material_light;
-			global::com.refractored.Resource.Color.primary_text_disabled_material_dark = global::WhitePaperBible.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::com.refractored.Resource.Color.primary_text_disabled_material_light = global::WhitePaperBible.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::com.refractored.Resource.Color.psts_background_tab_pressed = global::WhitePaperBible.Droid.Resource.Color.psts_background_tab_pressed;
-			global::com.refractored.Resource.Color.ripple_material_dark = global::WhitePaperBible.Droid.Resource.Color.ripple_material_dark;
-			global::com.refractored.Resource.Color.ripple_material_light = global::WhitePaperBible.Droid.Resource.Color.ripple_material_light;
-			global::com.refractored.Resource.Color.secondary_text_default_material_dark = global::WhitePaperBible.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::com.refractored.Resource.Color.secondary_text_default_material_light = global::WhitePaperBible.Droid.Resource.Color.secondary_text_default_material_light;
-			global::com.refractored.Resource.Color.secondary_text_disabled_material_dark = global::WhitePaperBible.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::com.refractored.Resource.Color.secondary_text_disabled_material_light = global::WhitePaperBible.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::com.refractored.Resource.Color.switch_thumb_disabled_material_dark = global::WhitePaperBible.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::com.refractored.Resource.Color.switch_thumb_disabled_material_light = global::WhitePaperBible.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::com.refractored.Resource.Color.switch_thumb_material_dark = global::WhitePaperBible.Droid.Resource.Color.switch_thumb_material_dark;
-			global::com.refractored.Resource.Color.switch_thumb_material_light = global::WhitePaperBible.Droid.Resource.Color.switch_thumb_material_light;
-			global::com.refractored.Resource.Color.switch_thumb_normal_material_dark = global::WhitePaperBible.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::com.refractored.Resource.Color.switch_thumb_normal_material_light = global::WhitePaperBible.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::com.refractored.Resource.Dimension.abc_action_bar_content_inset_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_default_height_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_default_padding_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_default_padding_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_navigation_padding_start_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_navigation_padding_start_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_progress_bar_size = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
-			global::com.refractored.Resource.Dimension.abc_action_bar_stacked_max_height = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::com.refractored.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::com.refractored.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::com.refractored.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::com.refractored.Resource.Dimension.abc_action_button_min_height_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::com.refractored.Resource.Dimension.abc_action_button_min_width_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::com.refractored.Resource.Dimension.abc_action_button_min_width_overflow_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::com.refractored.Resource.Dimension.abc_alert_dialog_button_bar_height = global::WhitePaperBible.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::com.refractored.Resource.Dimension.abc_button_inset_horizontal_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::com.refractored.Resource.Dimension.abc_button_inset_vertical_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::com.refractored.Resource.Dimension.abc_button_padding_horizontal_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::com.refractored.Resource.Dimension.abc_button_padding_vertical_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::com.refractored.Resource.Dimension.abc_config_prefDialogWidth = global::WhitePaperBible.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::com.refractored.Resource.Dimension.abc_control_corner_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_control_corner_material;
-			global::com.refractored.Resource.Dimension.abc_control_inset_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_control_inset_material;
-			global::com.refractored.Resource.Dimension.abc_control_padding_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_control_padding_material;
-			global::com.refractored.Resource.Dimension.abc_dialog_list_padding_vertical_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_dialog_list_padding_vertical_material;
-			global::com.refractored.Resource.Dimension.abc_dialog_min_width_major = global::WhitePaperBible.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::com.refractored.Resource.Dimension.abc_dialog_min_width_minor = global::WhitePaperBible.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::com.refractored.Resource.Dimension.abc_dialog_padding_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::com.refractored.Resource.Dimension.abc_dialog_padding_top_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::com.refractored.Resource.Dimension.abc_disabled_alpha_material_dark = global::WhitePaperBible.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::com.refractored.Resource.Dimension.abc_disabled_alpha_material_light = global::WhitePaperBible.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::com.refractored.Resource.Dimension.abc_dropdownitem_icon_width = global::WhitePaperBible.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::com.refractored.Resource.Dimension.abc_dropdownitem_text_padding_left = global::WhitePaperBible.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::com.refractored.Resource.Dimension.abc_dropdownitem_text_padding_right = global::WhitePaperBible.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::com.refractored.Resource.Dimension.abc_edit_text_inset_bottom_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::com.refractored.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::com.refractored.Resource.Dimension.abc_edit_text_inset_top_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::com.refractored.Resource.Dimension.abc_floating_window_z = global::WhitePaperBible.Droid.Resource.Dimension.abc_floating_window_z;
-			global::com.refractored.Resource.Dimension.abc_list_item_padding_horizontal_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::com.refractored.Resource.Dimension.abc_panel_menu_list_width = global::WhitePaperBible.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::com.refractored.Resource.Dimension.abc_search_view_preferred_width = global::WhitePaperBible.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::com.refractored.Resource.Dimension.abc_search_view_text_min_width = global::WhitePaperBible.Droid.Resource.Dimension.abc_search_view_text_min_width;
-			global::com.refractored.Resource.Dimension.abc_switch_padding = global::WhitePaperBible.Droid.Resource.Dimension.abc_switch_padding;
-			global::com.refractored.Resource.Dimension.abc_text_size_body_1_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_body_2_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_button_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_caption_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_display_1_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_display_2_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_display_3_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_display_4_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_headline_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_large_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_medium_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_menu_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_small_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_subhead_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::com.refractored.Resource.Dimension.abc_text_size_title_material = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::com.refractored.Resource.Dimension.abc_text_size_title_material_toolbar = global::WhitePaperBible.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::com.refractored.Resource.Dimension.dialog_fixed_height_major = global::WhitePaperBible.Droid.Resource.Dimension.dialog_fixed_height_major;
-			global::com.refractored.Resource.Dimension.dialog_fixed_height_minor = global::WhitePaperBible.Droid.Resource.Dimension.dialog_fixed_height_minor;
-			global::com.refractored.Resource.Dimension.dialog_fixed_width_major = global::WhitePaperBible.Droid.Resource.Dimension.dialog_fixed_width_major;
-			global::com.refractored.Resource.Dimension.dialog_fixed_width_minor = global::WhitePaperBible.Droid.Resource.Dimension.dialog_fixed_width_minor;
-			global::com.refractored.Resource.Dimension.disabled_alpha_material_dark = global::WhitePaperBible.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::com.refractored.Resource.Dimension.disabled_alpha_material_light = global::WhitePaperBible.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::com.refractored.Resource.Dimension.notification_large_icon_height = global::WhitePaperBible.Droid.Resource.Dimension.notification_large_icon_height;
-			global::com.refractored.Resource.Dimension.notification_large_icon_width = global::WhitePaperBible.Droid.Resource.Dimension.notification_large_icon_width;
-			global::com.refractored.Resource.Dimension.notification_subtext_size = global::WhitePaperBible.Droid.Resource.Dimension.notification_subtext_size;
-			global::com.refractored.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_btn_borderless_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::com.refractored.Resource.Drawable.abc_btn_check_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_check_material;
-			global::com.refractored.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::com.refractored.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::com.refractored.Resource.Drawable.abc_btn_default_mtrl_shape = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::com.refractored.Resource.Drawable.abc_btn_radio_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::com.refractored.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::com.refractored.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::com.refractored.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::com.refractored.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::WhitePaperBible.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::com.refractored.Resource.Drawable.abc_cab_background_internal_bg = global::WhitePaperBible.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::com.refractored.Resource.Drawable.abc_cab_background_top_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::com.refractored.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_dialog_material_background_dark = global::WhitePaperBible.Droid.Resource.Drawable.abc_dialog_material_background_dark;
-			global::com.refractored.Resource.Drawable.abc_dialog_material_background_light = global::WhitePaperBible.Droid.Resource.Drawable.abc_dialog_material_background_light;
-			global::com.refractored.Resource.Drawable.abc_edit_text_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_edit_text_material;
-			global::com.refractored.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_clear_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_clear_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_search_api_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_search_api_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_item_background_holo_dark = global::WhitePaperBible.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::com.refractored.Resource.Drawable.abc_item_background_holo_light = global::WhitePaperBible.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::com.refractored.Resource.Drawable.abc_list_divider_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_list_focused_holo = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::com.refractored.Resource.Drawable.abc_list_longpressed_holo = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::com.refractored.Resource.Drawable.abc_list_pressed_holo_dark = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::com.refractored.Resource.Drawable.abc_list_pressed_holo_light = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::com.refractored.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::com.refractored.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::com.refractored.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::com.refractored.Resource.Drawable.abc_list_selector_disabled_holo_light = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::com.refractored.Resource.Drawable.abc_list_selector_holo_dark = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::com.refractored.Resource.Drawable.abc_list_selector_holo_light = global::WhitePaperBible.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::com.refractored.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::WhitePaperBible.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::com.refractored.Resource.Drawable.abc_popup_background_mtrl_mult = global::WhitePaperBible.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::com.refractored.Resource.Drawable.abc_ratingbar_full_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_ratingbar_full_material;
-			global::com.refractored.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::com.refractored.Resource.Drawable.abc_spinner_textfield_background_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::com.refractored.Resource.Drawable.abc_switch_thumb_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::com.refractored.Resource.Drawable.abc_switch_track_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_tab_indicator_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::com.refractored.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_text_cursor_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_text_cursor_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::WhitePaperBible.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::com.refractored.Resource.Drawable.abc_textfield_search_material = global::WhitePaperBible.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::com.refractored.Resource.Drawable.notification_template_icon_bg = global::WhitePaperBible.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::com.refractored.Resource.Drawable.psts_background_tab = global::WhitePaperBible.Droid.Resource.Drawable.psts_background_tab;
-			global::com.refractored.Resource.Id.action0 = global::WhitePaperBible.Droid.Resource.Id.action0;
-			global::com.refractored.Resource.Id.action_bar = global::WhitePaperBible.Droid.Resource.Id.action_bar;
-			global::com.refractored.Resource.Id.action_bar_activity_content = global::WhitePaperBible.Droid.Resource.Id.action_bar_activity_content;
-			global::com.refractored.Resource.Id.action_bar_container = global::WhitePaperBible.Droid.Resource.Id.action_bar_container;
-			global::com.refractored.Resource.Id.action_bar_root = global::WhitePaperBible.Droid.Resource.Id.action_bar_root;
-			global::com.refractored.Resource.Id.action_bar_spinner = global::WhitePaperBible.Droid.Resource.Id.action_bar_spinner;
-			global::com.refractored.Resource.Id.action_bar_subtitle = global::WhitePaperBible.Droid.Resource.Id.action_bar_subtitle;
-			global::com.refractored.Resource.Id.action_bar_title = global::WhitePaperBible.Droid.Resource.Id.action_bar_title;
-			global::com.refractored.Resource.Id.action_context_bar = global::WhitePaperBible.Droid.Resource.Id.action_context_bar;
-			global::com.refractored.Resource.Id.action_divider = global::WhitePaperBible.Droid.Resource.Id.action_divider;
-			global::com.refractored.Resource.Id.action_menu_divider = global::WhitePaperBible.Droid.Resource.Id.action_menu_divider;
-			global::com.refractored.Resource.Id.action_menu_presenter = global::WhitePaperBible.Droid.Resource.Id.action_menu_presenter;
-			global::com.refractored.Resource.Id.action_mode_bar = global::WhitePaperBible.Droid.Resource.Id.action_mode_bar;
-			global::com.refractored.Resource.Id.action_mode_bar_stub = global::WhitePaperBible.Droid.Resource.Id.action_mode_bar_stub;
-			global::com.refractored.Resource.Id.action_mode_close_button = global::WhitePaperBible.Droid.Resource.Id.action_mode_close_button;
-			global::com.refractored.Resource.Id.activity_chooser_view_content = global::WhitePaperBible.Droid.Resource.Id.activity_chooser_view_content;
-			global::com.refractored.Resource.Id.alertTitle = global::WhitePaperBible.Droid.Resource.Id.alertTitle;
-			global::com.refractored.Resource.Id.always = global::WhitePaperBible.Droid.Resource.Id.always;
-			global::com.refractored.Resource.Id.beginning = global::WhitePaperBible.Droid.Resource.Id.beginning;
-			global::com.refractored.Resource.Id.bold = global::WhitePaperBible.Droid.Resource.Id.bold;
-			global::com.refractored.Resource.Id.buttonPanel = global::WhitePaperBible.Droid.Resource.Id.buttonPanel;
-			global::com.refractored.Resource.Id.cancel_action = global::WhitePaperBible.Droid.Resource.Id.cancel_action;
-			global::com.refractored.Resource.Id.checkbox = global::WhitePaperBible.Droid.Resource.Id.checkbox;
-			global::com.refractored.Resource.Id.chronometer = global::WhitePaperBible.Droid.Resource.Id.chronometer;
-			global::com.refractored.Resource.Id.collapseActionView = global::WhitePaperBible.Droid.Resource.Id.collapseActionView;
-			global::com.refractored.Resource.Id.contentPanel = global::WhitePaperBible.Droid.Resource.Id.contentPanel;
-			global::com.refractored.Resource.Id.custom = global::WhitePaperBible.Droid.Resource.Id.custom;
-			global::com.refractored.Resource.Id.customPanel = global::WhitePaperBible.Droid.Resource.Id.customPanel;
-			global::com.refractored.Resource.Id.decor_content_parent = global::WhitePaperBible.Droid.Resource.Id.decor_content_parent;
-			global::com.refractored.Resource.Id.default_activity_button = global::WhitePaperBible.Droid.Resource.Id.default_activity_button;
-			global::com.refractored.Resource.Id.dialog = global::WhitePaperBible.Droid.Resource.Id.dialog;
-			global::com.refractored.Resource.Id.disableHome = global::WhitePaperBible.Droid.Resource.Id.disableHome;
-			global::com.refractored.Resource.Id.dropdown = global::WhitePaperBible.Droid.Resource.Id.dropdown;
-			global::com.refractored.Resource.Id.edit_query = global::WhitePaperBible.Droid.Resource.Id.edit_query;
-			global::com.refractored.Resource.Id.end = global::WhitePaperBible.Droid.Resource.Id.end;
-			global::com.refractored.Resource.Id.end_padder = global::WhitePaperBible.Droid.Resource.Id.end_padder;
-			global::com.refractored.Resource.Id.expand_activities_button = global::WhitePaperBible.Droid.Resource.Id.expand_activities_button;
-			global::com.refractored.Resource.Id.expanded_menu = global::WhitePaperBible.Droid.Resource.Id.expanded_menu;
-			global::com.refractored.Resource.Id.home = global::WhitePaperBible.Droid.Resource.Id.home;
-			global::com.refractored.Resource.Id.homeAsUp = global::WhitePaperBible.Droid.Resource.Id.homeAsUp;
-			global::com.refractored.Resource.Id.icon = global::WhitePaperBible.Droid.Resource.Id.icon;
-			global::com.refractored.Resource.Id.ifRoom = global::WhitePaperBible.Droid.Resource.Id.ifRoom;
-			global::com.refractored.Resource.Id.image = global::WhitePaperBible.Droid.Resource.Id.image;
-			global::com.refractored.Resource.Id.info = global::WhitePaperBible.Droid.Resource.Id.info;
-			global::com.refractored.Resource.Id.italic = global::WhitePaperBible.Droid.Resource.Id.italic;
-			global::com.refractored.Resource.Id.line1 = global::WhitePaperBible.Droid.Resource.Id.line1;
-			global::com.refractored.Resource.Id.line3 = global::WhitePaperBible.Droid.Resource.Id.line3;
-			global::com.refractored.Resource.Id.listMode = global::WhitePaperBible.Droid.Resource.Id.listMode;
-			global::com.refractored.Resource.Id.list_item = global::WhitePaperBible.Droid.Resource.Id.list_item;
-			global::com.refractored.Resource.Id.media_actions = global::WhitePaperBible.Droid.Resource.Id.media_actions;
-			global::com.refractored.Resource.Id.middle = global::WhitePaperBible.Droid.Resource.Id.middle;
-			global::com.refractored.Resource.Id.multiply = global::WhitePaperBible.Droid.Resource.Id.multiply;
-			global::com.refractored.Resource.Id.never = global::WhitePaperBible.Droid.Resource.Id.never;
-			global::com.refractored.Resource.Id.none = global::WhitePaperBible.Droid.Resource.Id.none;
-			global::com.refractored.Resource.Id.normal = global::WhitePaperBible.Droid.Resource.Id.normal;
-			global::com.refractored.Resource.Id.parentPanel = global::WhitePaperBible.Droid.Resource.Id.parentPanel;
-			global::com.refractored.Resource.Id.progress_circular = global::WhitePaperBible.Droid.Resource.Id.progress_circular;
-			global::com.refractored.Resource.Id.progress_horizontal = global::WhitePaperBible.Droid.Resource.Id.progress_horizontal;
-			global::com.refractored.Resource.Id.psts_tab_title = global::WhitePaperBible.Droid.Resource.Id.psts_tab_title;
-			global::com.refractored.Resource.Id.radio = global::WhitePaperBible.Droid.Resource.Id.radio;
-			global::com.refractored.Resource.Id.screen = global::WhitePaperBible.Droid.Resource.Id.screen;
-			global::com.refractored.Resource.Id.scrollView = global::WhitePaperBible.Droid.Resource.Id.scrollView;
-			global::com.refractored.Resource.Id.search_badge = global::WhitePaperBible.Droid.Resource.Id.search_badge;
-			global::com.refractored.Resource.Id.search_bar = global::WhitePaperBible.Droid.Resource.Id.search_bar;
-			global::com.refractored.Resource.Id.search_button = global::WhitePaperBible.Droid.Resource.Id.search_button;
-			global::com.refractored.Resource.Id.search_close_btn = global::WhitePaperBible.Droid.Resource.Id.search_close_btn;
-			global::com.refractored.Resource.Id.search_edit_frame = global::WhitePaperBible.Droid.Resource.Id.search_edit_frame;
-			global::com.refractored.Resource.Id.search_go_btn = global::WhitePaperBible.Droid.Resource.Id.search_go_btn;
-			global::com.refractored.Resource.Id.search_mag_icon = global::WhitePaperBible.Droid.Resource.Id.search_mag_icon;
-			global::com.refractored.Resource.Id.search_plate = global::WhitePaperBible.Droid.Resource.Id.search_plate;
-			global::com.refractored.Resource.Id.search_src_text = global::WhitePaperBible.Droid.Resource.Id.search_src_text;
-			global::com.refractored.Resource.Id.search_voice_btn = global::WhitePaperBible.Droid.Resource.Id.search_voice_btn;
-			global::com.refractored.Resource.Id.select_dialog_listview = global::WhitePaperBible.Droid.Resource.Id.select_dialog_listview;
-			global::com.refractored.Resource.Id.shortcut = global::WhitePaperBible.Droid.Resource.Id.shortcut;
-			global::com.refractored.Resource.Id.showCustom = global::WhitePaperBible.Droid.Resource.Id.showCustom;
-			global::com.refractored.Resource.Id.showHome = global::WhitePaperBible.Droid.Resource.Id.showHome;
-			global::com.refractored.Resource.Id.showTitle = global::WhitePaperBible.Droid.Resource.Id.showTitle;
-			global::com.refractored.Resource.Id.split_action_bar = global::WhitePaperBible.Droid.Resource.Id.split_action_bar;
-			global::com.refractored.Resource.Id.src_atop = global::WhitePaperBible.Droid.Resource.Id.src_atop;
-			global::com.refractored.Resource.Id.src_in = global::WhitePaperBible.Droid.Resource.Id.src_in;
-			global::com.refractored.Resource.Id.src_over = global::WhitePaperBible.Droid.Resource.Id.src_over;
-			global::com.refractored.Resource.Id.status_bar_latest_event_content = global::WhitePaperBible.Droid.Resource.Id.status_bar_latest_event_content;
-			global::com.refractored.Resource.Id.submit_area = global::WhitePaperBible.Droid.Resource.Id.submit_area;
-			global::com.refractored.Resource.Id.tabMode = global::WhitePaperBible.Droid.Resource.Id.tabMode;
-			global::com.refractored.Resource.Id.text = global::WhitePaperBible.Droid.Resource.Id.text;
-			global::com.refractored.Resource.Id.text2 = global::WhitePaperBible.Droid.Resource.Id.text2;
-			global::com.refractored.Resource.Id.textSpacerNoButtons = global::WhitePaperBible.Droid.Resource.Id.textSpacerNoButtons;
-			global::com.refractored.Resource.Id.time = global::WhitePaperBible.Droid.Resource.Id.time;
-			global::com.refractored.Resource.Id.title = global::WhitePaperBible.Droid.Resource.Id.title;
-			global::com.refractored.Resource.Id.title_template = global::WhitePaperBible.Droid.Resource.Id.title_template;
-			global::com.refractored.Resource.Id.topPanel = global::WhitePaperBible.Droid.Resource.Id.topPanel;
-			global::com.refractored.Resource.Id.up = global::WhitePaperBible.Droid.Resource.Id.up;
-			global::com.refractored.Resource.Id.useLogo = global::WhitePaperBible.Droid.Resource.Id.useLogo;
-			global::com.refractored.Resource.Id.withText = global::WhitePaperBible.Droid.Resource.Id.withText;
-			global::com.refractored.Resource.Id.wrap_content = global::WhitePaperBible.Droid.Resource.Id.wrap_content;
-			global::com.refractored.Resource.Integer.abc_config_activityDefaultDur = global::WhitePaperBible.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::com.refractored.Resource.Integer.abc_config_activityShortDur = global::WhitePaperBible.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::com.refractored.Resource.Integer.abc_max_action_buttons = global::WhitePaperBible.Droid.Resource.Integer.abc_max_action_buttons;
-			global::com.refractored.Resource.Integer.cancel_button_image_alpha = global::WhitePaperBible.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::com.refractored.Resource.Integer.status_bar_notification_info_maxnum = global::WhitePaperBible.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::com.refractored.Resource.Layout.abc_action_bar_title_item = global::WhitePaperBible.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::com.refractored.Resource.Layout.abc_action_bar_up_container = global::WhitePaperBible.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::com.refractored.Resource.Layout.abc_action_bar_view_list_nav_layout = global::WhitePaperBible.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
-			global::com.refractored.Resource.Layout.abc_action_menu_item_layout = global::WhitePaperBible.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::com.refractored.Resource.Layout.abc_action_menu_layout = global::WhitePaperBible.Droid.Resource.Layout.abc_action_menu_layout;
-			global::com.refractored.Resource.Layout.abc_action_mode_bar = global::WhitePaperBible.Droid.Resource.Layout.abc_action_mode_bar;
-			global::com.refractored.Resource.Layout.abc_action_mode_close_item_material = global::WhitePaperBible.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::com.refractored.Resource.Layout.abc_activity_chooser_view = global::WhitePaperBible.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::com.refractored.Resource.Layout.abc_activity_chooser_view_list_item = global::WhitePaperBible.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::com.refractored.Resource.Layout.abc_alert_dialog_material = global::WhitePaperBible.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::com.refractored.Resource.Layout.abc_dialog_title_material = global::WhitePaperBible.Droid.Resource.Layout.abc_dialog_title_material;
-			global::com.refractored.Resource.Layout.abc_expanded_menu_layout = global::WhitePaperBible.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::com.refractored.Resource.Layout.abc_list_menu_item_checkbox = global::WhitePaperBible.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::com.refractored.Resource.Layout.abc_list_menu_item_icon = global::WhitePaperBible.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::com.refractored.Resource.Layout.abc_list_menu_item_layout = global::WhitePaperBible.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::com.refractored.Resource.Layout.abc_list_menu_item_radio = global::WhitePaperBible.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::com.refractored.Resource.Layout.abc_popup_menu_item_layout = global::WhitePaperBible.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::com.refractored.Resource.Layout.abc_screen_content_include = global::WhitePaperBible.Droid.Resource.Layout.abc_screen_content_include;
-			global::com.refractored.Resource.Layout.abc_screen_simple = global::WhitePaperBible.Droid.Resource.Layout.abc_screen_simple;
-			global::com.refractored.Resource.Layout.abc_screen_simple_overlay_action_mode = global::WhitePaperBible.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::com.refractored.Resource.Layout.abc_screen_toolbar = global::WhitePaperBible.Droid.Resource.Layout.abc_screen_toolbar;
-			global::com.refractored.Resource.Layout.abc_search_dropdown_item_icons_2line = global::WhitePaperBible.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::com.refractored.Resource.Layout.abc_search_view = global::WhitePaperBible.Droid.Resource.Layout.abc_search_view;
-			global::com.refractored.Resource.Layout.abc_select_dialog_material = global::WhitePaperBible.Droid.Resource.Layout.abc_select_dialog_material;
-			global::com.refractored.Resource.Layout.abc_simple_dropdown_hint = global::WhitePaperBible.Droid.Resource.Layout.abc_simple_dropdown_hint;
-			global::com.refractored.Resource.Layout.notification_media_action = global::WhitePaperBible.Droid.Resource.Layout.notification_media_action;
-			global::com.refractored.Resource.Layout.notification_media_cancel_action = global::WhitePaperBible.Droid.Resource.Layout.notification_media_cancel_action;
-			global::com.refractored.Resource.Layout.notification_template_big_media = global::WhitePaperBible.Droid.Resource.Layout.notification_template_big_media;
-			global::com.refractored.Resource.Layout.notification_template_big_media_narrow = global::WhitePaperBible.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::com.refractored.Resource.Layout.notification_template_lines = global::WhitePaperBible.Droid.Resource.Layout.notification_template_lines;
-			global::com.refractored.Resource.Layout.notification_template_media = global::WhitePaperBible.Droid.Resource.Layout.notification_template_media;
-			global::com.refractored.Resource.Layout.notification_template_part_chronometer = global::WhitePaperBible.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::com.refractored.Resource.Layout.notification_template_part_time = global::WhitePaperBible.Droid.Resource.Layout.notification_template_part_time;
-			global::com.refractored.Resource.Layout.psts_tab = global::WhitePaperBible.Droid.Resource.Layout.psts_tab;
-			global::com.refractored.Resource.Layout.select_dialog_item_material = global::WhitePaperBible.Droid.Resource.Layout.select_dialog_item_material;
-			global::com.refractored.Resource.Layout.select_dialog_multichoice_material = global::WhitePaperBible.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::com.refractored.Resource.Layout.select_dialog_singlechoice_material = global::WhitePaperBible.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::com.refractored.Resource.Layout.support_simple_spinner_dropdown_item = global::WhitePaperBible.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::com.refractored.Resource.String.abc_action_bar_home_description = global::WhitePaperBible.Droid.Resource.String.abc_action_bar_home_description;
-			global::com.refractored.Resource.String.abc_action_bar_home_description_format = global::WhitePaperBible.Droid.Resource.String.abc_action_bar_home_description_format;
-			global::com.refractored.Resource.String.abc_action_bar_home_subtitle_description_format = global::WhitePaperBible.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
-			global::com.refractored.Resource.String.abc_action_bar_up_description = global::WhitePaperBible.Droid.Resource.String.abc_action_bar_up_description;
-			global::com.refractored.Resource.String.abc_action_menu_overflow_description = global::WhitePaperBible.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::com.refractored.Resource.String.abc_action_mode_done = global::WhitePaperBible.Droid.Resource.String.abc_action_mode_done;
-			global::com.refractored.Resource.String.abc_activity_chooser_view_see_all = global::WhitePaperBible.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::com.refractored.Resource.String.abc_activitychooserview_choose_application = global::WhitePaperBible.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::com.refractored.Resource.String.abc_search_hint = global::WhitePaperBible.Droid.Resource.String.abc_search_hint;
-			global::com.refractored.Resource.String.abc_searchview_description_clear = global::WhitePaperBible.Droid.Resource.String.abc_searchview_description_clear;
-			global::com.refractored.Resource.String.abc_searchview_description_query = global::WhitePaperBible.Droid.Resource.String.abc_searchview_description_query;
-			global::com.refractored.Resource.String.abc_searchview_description_search = global::WhitePaperBible.Droid.Resource.String.abc_searchview_description_search;
-			global::com.refractored.Resource.String.abc_searchview_description_submit = global::WhitePaperBible.Droid.Resource.String.abc_searchview_description_submit;
-			global::com.refractored.Resource.String.abc_searchview_description_voice = global::WhitePaperBible.Droid.Resource.String.abc_searchview_description_voice;
-			global::com.refractored.Resource.String.abc_shareactionprovider_share_with = global::WhitePaperBible.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::com.refractored.Resource.String.abc_shareactionprovider_share_with_application = global::WhitePaperBible.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::com.refractored.Resource.String.abc_toolbar_collapse_description = global::WhitePaperBible.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::com.refractored.Resource.String.status_bar_notification_info_overflow = global::WhitePaperBible.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::com.refractored.Resource.Style.AlertDialog_AppCompat = global::WhitePaperBible.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::com.refractored.Resource.Style.AlertDialog_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::com.refractored.Resource.Style.Animation_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Animation_AppCompat_DropDownUp = global::WhitePaperBible.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::com.refractored.Resource.Style.Base_AlertDialog_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::com.refractored.Resource.Style.Base_AlertDialog_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::com.refractored.Resource.Style.Base_Animation_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::WhitePaperBible.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::com.refractored.Resource.Style.Base_DialogWindowTitle_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::com.refractored.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Button = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Large = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Small = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Title = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::com.refractored.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::com.refractored.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::com.refractored.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::com.refractored.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::WhitePaperBible.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::com.refractored.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::WhitePaperBible.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::com.refractored.Resource.Style.Base_ThemeOverlay_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::com.refractored.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::com.refractored.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::WhitePaperBible.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::com.refractored.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::com.refractored.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::com.refractored.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
-			global::com.refractored.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::WhitePaperBible.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
-			global::com.refractored.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::WhitePaperBible.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
-			global::com.refractored.Resource.Style.Base_V21_Theme_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::com.refractored.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Base_V21_Theme_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::com.refractored.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::com.refractored.Resource.Style.Base_V7_Theme_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::com.refractored.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Base_V7_Theme_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::com.refractored.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::WhitePaperBible.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::com.refractored.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::WhitePaperBible.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::com.refractored.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::WhitePaperBible.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionButton = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActionMode = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Button = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Button_Small = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_EditText = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ListView = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_RatingBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_SearchView = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Spinner = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Spinner_DropDown_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Toolbar = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::com.refractored.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::WhitePaperBible.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::com.refractored.Resource.Style.Platform_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Platform_AppCompat;
-			global::com.refractored.Resource.Style.Platform_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::com.refractored.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::WhitePaperBible.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::com.refractored.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::com.refractored.Resource.Style.Platform_V11_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Platform_V11_AppCompat;
-			global::com.refractored.Resource.Style.Platform_V11_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Platform_V11_AppCompat_Light;
-			global::com.refractored.Resource.Style.Platform_V14_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Platform_V14_AppCompat;
-			global::com.refractored.Resource.Style.Platform_V14_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Platform_V14_AppCompat_Light;
-			global::com.refractored.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_Toolbar_Button_Navigation = global::WhitePaperBible.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Body1 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Body2 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Button = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Caption = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Display1 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Display2 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Display3 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Display4 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Headline = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Large = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Medium = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Menu = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Small = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Subhead = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::com.refractored.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::com.refractored.Resource.Style.TextAppearance_StatusBar_EventContent = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_StatusBar_EventContent;
-			global::com.refractored.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
-			global::com.refractored.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
-			global::com.refractored.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
-			global::com.refractored.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
-			global::com.refractored.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::com.refractored.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::com.refractored.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::WhitePaperBible.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::com.refractored.Resource.Style.Theme_AppCompat = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat;
-			global::com.refractored.Resource.Style.Theme_AppCompat_CompactMenu = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Dialog = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Dialog_Alert = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::com.refractored.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light_Dialog = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::com.refractored.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::com.refractored.Resource.Style.Theme_AppCompat_NoActionBar = global::WhitePaperBible.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::com.refractored.Resource.Style.ThemeOverlay_AppCompat = global::WhitePaperBible.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::com.refractored.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::WhitePaperBible.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::com.refractored.Resource.Style.ThemeOverlay_AppCompat_Dark = global::WhitePaperBible.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::com.refractored.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::WhitePaperBible.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::com.refractored.Resource.Style.ThemeOverlay_AppCompat_Light = global::WhitePaperBible.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionButton = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActionMode = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ActivityChooserView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Button = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Button_Borderless = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Button_Small = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ButtonBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::com.refractored.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::com.refractored.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::com.refractored.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::com.refractored.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::com.refractored.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::com.refractored.Resource.Style.Widget_AppCompat_EditText = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionButton = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_SearchView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ListPopupWindow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ListView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ListView_DropDown = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ListView_Menu = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::com.refractored.Resource.Style.Widget_AppCompat_PopupMenu = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::com.refractored.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_PopupWindow = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ProgressBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::com.refractored.Resource.Style.Widget_AppCompat_RatingBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_SearchView = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::com.refractored.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Spinner = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::com.refractored.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Toolbar = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::com.refractored.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::WhitePaperBible.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::com.refractored.Resource.Styleable.ActionBar = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar;
-			global::com.refractored.Resource.Styleable.ActionBar_background = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_background;
-			global::com.refractored.Resource.Styleable.ActionBar_backgroundSplit = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::com.refractored.Resource.Styleable.ActionBar_backgroundStacked = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::com.refractored.Resource.Styleable.ActionBar_contentInsetEnd = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::com.refractored.Resource.Styleable.ActionBar_contentInsetLeft = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::com.refractored.Resource.Styleable.ActionBar_contentInsetRight = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::com.refractored.Resource.Styleable.ActionBar_contentInsetStart = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::com.refractored.Resource.Styleable.ActionBar_customNavigationLayout = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::com.refractored.Resource.Styleable.ActionBar_displayOptions = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::com.refractored.Resource.Styleable.ActionBar_divider = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_divider;
-			global::com.refractored.Resource.Styleable.ActionBar_elevation = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_elevation;
-			global::com.refractored.Resource.Styleable.ActionBar_height = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_height;
-			global::com.refractored.Resource.Styleable.ActionBar_hideOnContentScroll = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::com.refractored.Resource.Styleable.ActionBar_homeAsUpIndicator = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::com.refractored.Resource.Styleable.ActionBar_homeLayout = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::com.refractored.Resource.Styleable.ActionBar_icon = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_icon;
-			global::com.refractored.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::com.refractored.Resource.Styleable.ActionBar_itemPadding = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::com.refractored.Resource.Styleable.ActionBar_logo = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_logo;
-			global::com.refractored.Resource.Styleable.ActionBar_navigationMode = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::com.refractored.Resource.Styleable.ActionBar_popupTheme = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::com.refractored.Resource.Styleable.ActionBar_progressBarPadding = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::com.refractored.Resource.Styleable.ActionBar_progressBarStyle = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::com.refractored.Resource.Styleable.ActionBar_subtitle = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::com.refractored.Resource.Styleable.ActionBar_subtitleTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::com.refractored.Resource.Styleable.ActionBar_title = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_title;
-			global::com.refractored.Resource.Styleable.ActionBar_titleTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::com.refractored.Resource.Styleable.ActionBarLayout = global::WhitePaperBible.Droid.Resource.Styleable.ActionBarLayout;
-			global::com.refractored.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::WhitePaperBible.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::com.refractored.Resource.Styleable.ActionMenuItemView = global::WhitePaperBible.Droid.Resource.Styleable.ActionMenuItemView;
-			global::com.refractored.Resource.Styleable.ActionMenuItemView_android_minWidth = global::WhitePaperBible.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::com.refractored.Resource.Styleable.ActionMenuView = global::WhitePaperBible.Droid.Resource.Styleable.ActionMenuView;
-			global::com.refractored.Resource.Styleable.ActionMode = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode;
-			global::com.refractored.Resource.Styleable.ActionMode_background = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode_background;
-			global::com.refractored.Resource.Styleable.ActionMode_backgroundSplit = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::com.refractored.Resource.Styleable.ActionMode_closeItemLayout = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::com.refractored.Resource.Styleable.ActionMode_height = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode_height;
-			global::com.refractored.Resource.Styleable.ActionMode_subtitleTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::com.refractored.Resource.Styleable.ActionMode_titleTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::com.refractored.Resource.Styleable.ActivityChooserView = global::WhitePaperBible.Droid.Resource.Styleable.ActivityChooserView;
-			global::com.refractored.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::WhitePaperBible.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::com.refractored.Resource.Styleable.ActivityChooserView_initialActivityCount = global::WhitePaperBible.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::com.refractored.Resource.Styleable.AlertDialog = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog;
-			global::com.refractored.Resource.Styleable.AlertDialog_android_layout = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::com.refractored.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::com.refractored.Resource.Styleable.AlertDialog_listItemLayout = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::com.refractored.Resource.Styleable.AlertDialog_listLayout = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::com.refractored.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::com.refractored.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::WhitePaperBible.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::com.refractored.Resource.Styleable.AppCompatTextView = global::WhitePaperBible.Droid.Resource.Styleable.AppCompatTextView;
-			global::com.refractored.Resource.Styleable.AppCompatTextView_android_textAppearance = global::WhitePaperBible.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::com.refractored.Resource.Styleable.AppCompatTextView_textAllCaps = global::WhitePaperBible.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_barSize = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_barSize;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_color = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_drawableSize = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_middleBarArrowSize = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_middleBarArrowSize;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_spinBars = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_thickness = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::com.refractored.Resource.Styleable.DrawerArrowToggle_topBottomBarArrowSize = global::WhitePaperBible.Droid.Resource.Styleable.DrawerArrowToggle_topBottomBarArrowSize;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_android_gravity = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_android_orientation = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_divider = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_showDividers = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_Layout = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::com.refractored.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::WhitePaperBible.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::com.refractored.Resource.Styleable.ListPopupWindow = global::WhitePaperBible.Droid.Resource.Styleable.ListPopupWindow;
-			global::com.refractored.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::WhitePaperBible.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::com.refractored.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::WhitePaperBible.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::com.refractored.Resource.Styleable.MenuGroup = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup;
-			global::com.refractored.Resource.Styleable.MenuGroup_android_checkableBehavior = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::com.refractored.Resource.Styleable.MenuGroup_android_enabled = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::com.refractored.Resource.Styleable.MenuGroup_android_id = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::com.refractored.Resource.Styleable.MenuGroup_android_menuCategory = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::com.refractored.Resource.Styleable.MenuGroup_android_orderInCategory = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::com.refractored.Resource.Styleable.MenuGroup_android_visible = global::WhitePaperBible.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::com.refractored.Resource.Styleable.MenuItem = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem;
-			global::com.refractored.Resource.Styleable.MenuItem_actionLayout = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::com.refractored.Resource.Styleable.MenuItem_actionProviderClass = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::com.refractored.Resource.Styleable.MenuItem_actionViewClass = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::com.refractored.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::com.refractored.Resource.Styleable.MenuItem_android_checkable = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::com.refractored.Resource.Styleable.MenuItem_android_checked = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::com.refractored.Resource.Styleable.MenuItem_android_enabled = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::com.refractored.Resource.Styleable.MenuItem_android_icon = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::com.refractored.Resource.Styleable.MenuItem_android_id = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_id;
-			global::com.refractored.Resource.Styleable.MenuItem_android_menuCategory = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::com.refractored.Resource.Styleable.MenuItem_android_numericShortcut = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::com.refractored.Resource.Styleable.MenuItem_android_onClick = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::com.refractored.Resource.Styleable.MenuItem_android_orderInCategory = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::com.refractored.Resource.Styleable.MenuItem_android_title = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_title;
-			global::com.refractored.Resource.Styleable.MenuItem_android_titleCondensed = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::com.refractored.Resource.Styleable.MenuItem_android_visible = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::com.refractored.Resource.Styleable.MenuItem_showAsAction = global::WhitePaperBible.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::com.refractored.Resource.Styleable.MenuView = global::WhitePaperBible.Droid.Resource.Styleable.MenuView;
-			global::com.refractored.Resource.Styleable.MenuView_android_headerBackground = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::com.refractored.Resource.Styleable.MenuView_android_horizontalDivider = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::com.refractored.Resource.Styleable.MenuView_android_itemBackground = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::com.refractored.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::com.refractored.Resource.Styleable.MenuView_android_itemTextAppearance = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::com.refractored.Resource.Styleable.MenuView_android_verticalDivider = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::com.refractored.Resource.Styleable.MenuView_android_windowAnimationStyle = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::com.refractored.Resource.Styleable.MenuView_preserveIconSpacing = global::WhitePaperBible.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsDividerColor = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsDividerColor;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsDividerPadding = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsDividerPadding;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsDividerWidth = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsDividerWidth;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsIndicatorColor = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsIndicatorColor;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsIndicatorHeight = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsIndicatorHeight;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsPaddingMiddle = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsPaddingMiddle;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsScrollOffset = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsScrollOffset;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsShouldExpand = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsShouldExpand;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTabBackground = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTabBackground;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTabPaddingLeftRight = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTabPaddingLeftRight;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTextAllCaps = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTextAllCaps;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTextAlpha = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTextAlpha;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTextColorSelected = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTextColorSelected;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTextSelectedStyle = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTextSelectedStyle;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsTextStyle;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsUnderlineColor = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsUnderlineColor;
-			global::com.refractored.Resource.Styleable.PagerSlidingTabStrip_pstsUnderlineHeight = global::WhitePaperBible.Droid.Resource.Styleable.PagerSlidingTabStrip_pstsUnderlineHeight;
-			global::com.refractored.Resource.Styleable.PopupWindow = global::WhitePaperBible.Droid.Resource.Styleable.PopupWindow;
-			global::com.refractored.Resource.Styleable.PopupWindow_android_popupBackground = global::WhitePaperBible.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::com.refractored.Resource.Styleable.PopupWindow_overlapAnchor = global::WhitePaperBible.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::com.refractored.Resource.Styleable.PopupWindowBackgroundState = global::WhitePaperBible.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::com.refractored.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::WhitePaperBible.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::com.refractored.Resource.Styleable.SearchView = global::WhitePaperBible.Droid.Resource.Styleable.SearchView;
-			global::com.refractored.Resource.Styleable.SearchView_android_focusable = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::com.refractored.Resource.Styleable.SearchView_android_imeOptions = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::com.refractored.Resource.Styleable.SearchView_android_inputType = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::com.refractored.Resource.Styleable.SearchView_android_maxWidth = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::com.refractored.Resource.Styleable.SearchView_closeIcon = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::com.refractored.Resource.Styleable.SearchView_commitIcon = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::com.refractored.Resource.Styleable.SearchView_defaultQueryHint = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::com.refractored.Resource.Styleable.SearchView_goIcon = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_goIcon;
-			global::com.refractored.Resource.Styleable.SearchView_iconifiedByDefault = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::com.refractored.Resource.Styleable.SearchView_layout = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_layout;
-			global::com.refractored.Resource.Styleable.SearchView_queryBackground = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::com.refractored.Resource.Styleable.SearchView_queryHint = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_queryHint;
-			global::com.refractored.Resource.Styleable.SearchView_searchHintIcon = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::com.refractored.Resource.Styleable.SearchView_searchIcon = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::com.refractored.Resource.Styleable.SearchView_submitBackground = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::com.refractored.Resource.Styleable.SearchView_suggestionRowLayout = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::com.refractored.Resource.Styleable.SearchView_voiceIcon = global::WhitePaperBible.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::com.refractored.Resource.Styleable.Spinner = global::WhitePaperBible.Droid.Resource.Styleable.Spinner;
-			global::com.refractored.Resource.Styleable.Spinner_android_background = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_background;
-			global::com.refractored.Resource.Styleable.Spinner_android_dropDownHorizontalOffset = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_dropDownHorizontalOffset;
-			global::com.refractored.Resource.Styleable.Spinner_android_dropDownSelector = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_dropDownSelector;
-			global::com.refractored.Resource.Styleable.Spinner_android_dropDownVerticalOffset = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_dropDownVerticalOffset;
-			global::com.refractored.Resource.Styleable.Spinner_android_dropDownWidth = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::com.refractored.Resource.Styleable.Spinner_android_gravity = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_gravity;
-			global::com.refractored.Resource.Styleable.Spinner_android_popupBackground = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::com.refractored.Resource.Styleable.Spinner_disableChildrenWhenDisabled = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_disableChildrenWhenDisabled;
-			global::com.refractored.Resource.Styleable.Spinner_popupPromptView = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_popupPromptView;
-			global::com.refractored.Resource.Styleable.Spinner_prompt = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_prompt;
-			global::com.refractored.Resource.Styleable.Spinner_spinnerMode = global::WhitePaperBible.Droid.Resource.Styleable.Spinner_spinnerMode;
-			global::com.refractored.Resource.Styleable.SwitchCompat = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat;
-			global::com.refractored.Resource.Styleable.SwitchCompat_android_textOff = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::com.refractored.Resource.Styleable.SwitchCompat_android_textOn = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::com.refractored.Resource.Styleable.SwitchCompat_android_thumb = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::com.refractored.Resource.Styleable.SwitchCompat_showText = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::com.refractored.Resource.Styleable.SwitchCompat_splitTrack = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::com.refractored.Resource.Styleable.SwitchCompat_switchMinWidth = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::com.refractored.Resource.Styleable.SwitchCompat_switchPadding = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::com.refractored.Resource.Styleable.SwitchCompat_switchTextAppearance = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::com.refractored.Resource.Styleable.SwitchCompat_thumbTextPadding = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::com.refractored.Resource.Styleable.SwitchCompat_track = global::WhitePaperBible.Droid.Resource.Styleable.SwitchCompat_track;
-			global::com.refractored.Resource.Styleable.TextAppearance = global::WhitePaperBible.Droid.Resource.Styleable.TextAppearance;
-			global::com.refractored.Resource.Styleable.TextAppearance_android_textColor = global::WhitePaperBible.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::com.refractored.Resource.Styleable.TextAppearance_android_textSize = global::WhitePaperBible.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::com.refractored.Resource.Styleable.TextAppearance_android_textStyle = global::WhitePaperBible.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::com.refractored.Resource.Styleable.TextAppearance_android_typeface = global::WhitePaperBible.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::com.refractored.Resource.Styleable.TextAppearance_textAllCaps = global::WhitePaperBible.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::com.refractored.Resource.Styleable.Theme = global::WhitePaperBible.Droid.Resource.Styleable.Theme;
-			global::com.refractored.Resource.Styleable.Theme_actionBarDivider = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarDivider;
-			global::com.refractored.Resource.Styleable.Theme_actionBarItemBackground = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarItemBackground;
-			global::com.refractored.Resource.Styleable.Theme_actionBarPopupTheme = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarPopupTheme;
-			global::com.refractored.Resource.Styleable.Theme_actionBarSize = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarSize;
-			global::com.refractored.Resource.Styleable.Theme_actionBarSplitStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarSplitStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionBarStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionBarTabBarStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarTabBarStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionBarTabStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarTabStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionBarTabTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarTabTextStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionBarTheme = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarTheme;
-			global::com.refractored.Resource.Styleable.Theme_actionBarWidgetTheme = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionBarWidgetTheme;
-			global::com.refractored.Resource.Styleable.Theme_actionButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionDropDownStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionDropDownStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionMenuTextAppearance = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionMenuTextAppearance;
-			global::com.refractored.Resource.Styleable.Theme_actionMenuTextColor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionMenuTextColor;
-			global::com.refractored.Resource.Styleable.Theme_actionModeBackground = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeBackground;
-			global::com.refractored.Resource.Styleable.Theme_actionModeCloseButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeCloseButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionModeCloseDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeCloseDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModeCopyDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeCopyDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModeCutDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeCutDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModeFindDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeFindDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModePasteDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModePasteDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModePopupWindowStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModePopupWindowStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionModeSelectAllDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeSelectAllDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModeShareDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeShareDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionModeSplitBackground = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeSplitBackground;
-			global::com.refractored.Resource.Styleable.Theme_actionModeStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionModeWebSearchDrawable = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionModeWebSearchDrawable;
-			global::com.refractored.Resource.Styleable.Theme_actionOverflowButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionOverflowButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_actionOverflowMenuStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_actionOverflowMenuStyle;
-			global::com.refractored.Resource.Styleable.Theme_activityChooserViewStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_activityChooserViewStyle;
-			global::com.refractored.Resource.Styleable.Theme_alertDialogButtonGroupStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_alertDialogButtonGroupStyle;
-			global::com.refractored.Resource.Styleable.Theme_alertDialogCenterButtons = global::WhitePaperBible.Droid.Resource.Styleable.Theme_alertDialogCenterButtons;
-			global::com.refractored.Resource.Styleable.Theme_alertDialogStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_alertDialogStyle;
-			global::com.refractored.Resource.Styleable.Theme_alertDialogTheme = global::WhitePaperBible.Droid.Resource.Styleable.Theme_alertDialogTheme;
-			global::com.refractored.Resource.Styleable.Theme_android_windowAnimationStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_android_windowAnimationStyle;
-			global::com.refractored.Resource.Styleable.Theme_android_windowIsFloating = global::WhitePaperBible.Droid.Resource.Styleable.Theme_android_windowIsFloating;
-			global::com.refractored.Resource.Styleable.Theme_autoCompleteTextViewStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_autoCompleteTextViewStyle;
-			global::com.refractored.Resource.Styleable.Theme_borderlessButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_borderlessButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonBarButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonBarButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonBarNegativeButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonBarNegativeButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonBarNeutralButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonBarNeutralButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonBarPositiveButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonBarPositiveButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonBarStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonBarStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonStyle;
-			global::com.refractored.Resource.Styleable.Theme_buttonStyleSmall = global::WhitePaperBible.Droid.Resource.Styleable.Theme_buttonStyleSmall;
-			global::com.refractored.Resource.Styleable.Theme_checkboxStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_checkboxStyle;
-			global::com.refractored.Resource.Styleable.Theme_checkedTextViewStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_checkedTextViewStyle;
-			global::com.refractored.Resource.Styleable.Theme_colorAccent = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorAccent;
-			global::com.refractored.Resource.Styleable.Theme_colorButtonNormal = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorButtonNormal;
-			global::com.refractored.Resource.Styleable.Theme_colorControlActivated = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorControlActivated;
-			global::com.refractored.Resource.Styleable.Theme_colorControlHighlight = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorControlHighlight;
-			global::com.refractored.Resource.Styleable.Theme_colorControlNormal = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorControlNormal;
-			global::com.refractored.Resource.Styleable.Theme_colorPrimary = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorPrimary;
-			global::com.refractored.Resource.Styleable.Theme_colorPrimaryDark = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorPrimaryDark;
-			global::com.refractored.Resource.Styleable.Theme_colorSwitchThumbNormal = global::WhitePaperBible.Droid.Resource.Styleable.Theme_colorSwitchThumbNormal;
-			global::com.refractored.Resource.Styleable.Theme_dialogPreferredPadding = global::WhitePaperBible.Droid.Resource.Styleable.Theme_dialogPreferredPadding;
-			global::com.refractored.Resource.Styleable.Theme_dialogTheme = global::WhitePaperBible.Droid.Resource.Styleable.Theme_dialogTheme;
-			global::com.refractored.Resource.Styleable.Theme_dividerHorizontal = global::WhitePaperBible.Droid.Resource.Styleable.Theme_dividerHorizontal;
-			global::com.refractored.Resource.Styleable.Theme_dividerVertical = global::WhitePaperBible.Droid.Resource.Styleable.Theme_dividerVertical;
-			global::com.refractored.Resource.Styleable.Theme_dropDownListViewStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_dropDownListViewStyle;
-			global::com.refractored.Resource.Styleable.Theme_dropdownListPreferredItemHeight = global::WhitePaperBible.Droid.Resource.Styleable.Theme_dropdownListPreferredItemHeight;
-			global::com.refractored.Resource.Styleable.Theme_editTextBackground = global::WhitePaperBible.Droid.Resource.Styleable.Theme_editTextBackground;
-			global::com.refractored.Resource.Styleable.Theme_editTextColor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_editTextColor;
-			global::com.refractored.Resource.Styleable.Theme_editTextStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_editTextStyle;
-			global::com.refractored.Resource.Styleable.Theme_homeAsUpIndicator = global::WhitePaperBible.Droid.Resource.Styleable.Theme_homeAsUpIndicator;
-			global::com.refractored.Resource.Styleable.Theme_listChoiceBackgroundIndicator = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listChoiceBackgroundIndicator;
-			global::com.refractored.Resource.Styleable.Theme_listDividerAlertDialog = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listDividerAlertDialog;
-			global::com.refractored.Resource.Styleable.Theme_listPopupWindowStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listPopupWindowStyle;
-			global::com.refractored.Resource.Styleable.Theme_listPreferredItemHeight = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listPreferredItemHeight;
-			global::com.refractored.Resource.Styleable.Theme_listPreferredItemHeightLarge = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listPreferredItemHeightLarge;
-			global::com.refractored.Resource.Styleable.Theme_listPreferredItemHeightSmall = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listPreferredItemHeightSmall;
-			global::com.refractored.Resource.Styleable.Theme_listPreferredItemPaddingLeft = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listPreferredItemPaddingLeft;
-			global::com.refractored.Resource.Styleable.Theme_listPreferredItemPaddingRight = global::WhitePaperBible.Droid.Resource.Styleable.Theme_listPreferredItemPaddingRight;
-			global::com.refractored.Resource.Styleable.Theme_panelBackground = global::WhitePaperBible.Droid.Resource.Styleable.Theme_panelBackground;
-			global::com.refractored.Resource.Styleable.Theme_panelMenuListTheme = global::WhitePaperBible.Droid.Resource.Styleable.Theme_panelMenuListTheme;
-			global::com.refractored.Resource.Styleable.Theme_panelMenuListWidth = global::WhitePaperBible.Droid.Resource.Styleable.Theme_panelMenuListWidth;
-			global::com.refractored.Resource.Styleable.Theme_popupMenuStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_popupMenuStyle;
-			global::com.refractored.Resource.Styleable.Theme_popupWindowStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_popupWindowStyle;
-			global::com.refractored.Resource.Styleable.Theme_radioButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_radioButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_ratingBarStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_ratingBarStyle;
-			global::com.refractored.Resource.Styleable.Theme_searchViewStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_searchViewStyle;
-			global::com.refractored.Resource.Styleable.Theme_selectableItemBackground = global::WhitePaperBible.Droid.Resource.Styleable.Theme_selectableItemBackground;
-			global::com.refractored.Resource.Styleable.Theme_selectableItemBackgroundBorderless = global::WhitePaperBible.Droid.Resource.Styleable.Theme_selectableItemBackgroundBorderless;
-			global::com.refractored.Resource.Styleable.Theme_spinnerDropDownItemStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_spinnerDropDownItemStyle;
-			global::com.refractored.Resource.Styleable.Theme_spinnerStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_spinnerStyle;
-			global::com.refractored.Resource.Styleable.Theme_switchStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_switchStyle;
-			global::com.refractored.Resource.Styleable.Theme_textAppearanceLargePopupMenu = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textAppearanceLargePopupMenu;
-			global::com.refractored.Resource.Styleable.Theme_textAppearanceListItem = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textAppearanceListItem;
-			global::com.refractored.Resource.Styleable.Theme_textAppearanceListItemSmall = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textAppearanceListItemSmall;
-			global::com.refractored.Resource.Styleable.Theme_textAppearanceSearchResultSubtitle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textAppearanceSearchResultSubtitle;
-			global::com.refractored.Resource.Styleable.Theme_textAppearanceSearchResultTitle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textAppearanceSearchResultTitle;
-			global::com.refractored.Resource.Styleable.Theme_textAppearanceSmallPopupMenu = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textAppearanceSmallPopupMenu;
-			global::com.refractored.Resource.Styleable.Theme_textColorAlertDialogListItem = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textColorAlertDialogListItem;
-			global::com.refractored.Resource.Styleable.Theme_textColorSearchUrl = global::WhitePaperBible.Droid.Resource.Styleable.Theme_textColorSearchUrl;
-			global::com.refractored.Resource.Styleable.Theme_toolbarNavigationButtonStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_toolbarNavigationButtonStyle;
-			global::com.refractored.Resource.Styleable.Theme_toolbarStyle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_toolbarStyle;
-			global::com.refractored.Resource.Styleable.Theme_windowActionBar = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowActionBar;
-			global::com.refractored.Resource.Styleable.Theme_windowActionBarOverlay = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowActionBarOverlay;
-			global::com.refractored.Resource.Styleable.Theme_windowActionModeOverlay = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowActionModeOverlay;
-			global::com.refractored.Resource.Styleable.Theme_windowFixedHeightMajor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowFixedHeightMajor;
-			global::com.refractored.Resource.Styleable.Theme_windowFixedHeightMinor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowFixedHeightMinor;
-			global::com.refractored.Resource.Styleable.Theme_windowFixedWidthMajor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowFixedWidthMajor;
-			global::com.refractored.Resource.Styleable.Theme_windowFixedWidthMinor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowFixedWidthMinor;
-			global::com.refractored.Resource.Styleable.Theme_windowMinWidthMajor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowMinWidthMajor;
-			global::com.refractored.Resource.Styleable.Theme_windowMinWidthMinor = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowMinWidthMinor;
-			global::com.refractored.Resource.Styleable.Theme_windowNoTitle = global::WhitePaperBible.Droid.Resource.Styleable.Theme_windowNoTitle;
-			global::com.refractored.Resource.Styleable.Toolbar = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar;
-			global::com.refractored.Resource.Styleable.Toolbar_android_gravity = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::com.refractored.Resource.Styleable.Toolbar_android_minHeight = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::com.refractored.Resource.Styleable.Toolbar_collapseContentDescription = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::com.refractored.Resource.Styleable.Toolbar_collapseIcon = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::com.refractored.Resource.Styleable.Toolbar_contentInsetEnd = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::com.refractored.Resource.Styleable.Toolbar_contentInsetLeft = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::com.refractored.Resource.Styleable.Toolbar_contentInsetRight = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::com.refractored.Resource.Styleable.Toolbar_contentInsetStart = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::com.refractored.Resource.Styleable.Toolbar_maxButtonHeight = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::com.refractored.Resource.Styleable.Toolbar_navigationContentDescription = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::com.refractored.Resource.Styleable.Toolbar_navigationIcon = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::com.refractored.Resource.Styleable.Toolbar_popupTheme = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::com.refractored.Resource.Styleable.Toolbar_subtitle = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::com.refractored.Resource.Styleable.Toolbar_subtitleTextAppearance = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::com.refractored.Resource.Styleable.Toolbar_title = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_title;
-			global::com.refractored.Resource.Styleable.Toolbar_titleMarginBottom = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::com.refractored.Resource.Styleable.Toolbar_titleMarginEnd = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::com.refractored.Resource.Styleable.Toolbar_titleMarginStart = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::com.refractored.Resource.Styleable.Toolbar_titleMarginTop = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::com.refractored.Resource.Styleable.Toolbar_titleMargins = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::com.refractored.Resource.Styleable.Toolbar_titleTextAppearance = global::WhitePaperBible.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::com.refractored.Resource.Styleable.View = global::WhitePaperBible.Droid.Resource.Styleable.View;
-			global::com.refractored.Resource.Styleable.View_android_focusable = global::WhitePaperBible.Droid.Resource.Styleable.View_android_focusable;
-			global::com.refractored.Resource.Styleable.View_android_theme = global::WhitePaperBible.Droid.Resource.Styleable.View_android_theme;
-			global::com.refractored.Resource.Styleable.View_backgroundTint = global::WhitePaperBible.Droid.Resource.Styleable.View_backgroundTint;
-			global::com.refractored.Resource.Styleable.View_backgroundTintMode = global::WhitePaperBible.Droid.Resource.Styleable.View_backgroundTintMode;
-			global::com.refractored.Resource.Styleable.View_paddingEnd = global::WhitePaperBible.Droid.Resource.Styleable.View_paddingEnd;
-			global::com.refractored.Resource.Styleable.View_paddingStart = global::WhitePaperBible.Droid.Resource.Styleable.View_paddingStart;
-			global::com.refractored.Resource.Styleable.View_theme = global::WhitePaperBible.Droid.Resource.Styleable.View_theme;
-			global::com.refractored.Resource.Styleable.ViewStubCompat = global::WhitePaperBible.Droid.Resource.Styleable.ViewStubCompat;
-			global::com.refractored.Resource.Styleable.ViewStubCompat_android_id = global::WhitePaperBible.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::com.refractored.Resource.Styleable.ViewStubCompat_android_inflatedId = global::WhitePaperBible.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::com.refractored.Resource.Styleable.ViewStubCompat_android_layout = global::WhitePaperBible.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 		}
 		
 		public partial class Animation
@@ -1272,22 +70,22 @@ namespace WhitePaperBible.Droid
 			public const int bs_list_layout_anim_in = 2130968587;
 			
 			// aapt resource value: 0x7f04000c
-			public const int dock_bottom_enter = 2130968588;
+			public const int design_fab_in = 2130968588;
 			
 			// aapt resource value: 0x7f04000d
-			public const int dock_bottom_exit = 2130968589;
+			public const int design_fab_out = 2130968589;
 			
 			// aapt resource value: 0x7f04000e
-			public const int fab_in = 2130968590;
+			public const int design_snackbar_in = 2130968590;
 			
 			// aapt resource value: 0x7f04000f
-			public const int fab_out = 2130968591;
+			public const int design_snackbar_out = 2130968591;
 			
 			// aapt resource value: 0x7f040010
-			public const int snackbar_in = 2130968592;
+			public const int dock_bottom_enter = 2130968592;
 			
 			// aapt resource value: 0x7f040011
-			public const int snackbar_out = 2130968593;
+			public const int dock_bottom_exit = 2130968593;
 			
 			static Animation()
 			{
@@ -1321,857 +119,830 @@ namespace WhitePaperBible.Droid
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010097
-			public const int actionBarDivider = 2130772119;
-			
-			// aapt resource value: 0x7f010098
-			public const int actionBarItemBackground = 2130772120;
-			
-			// aapt resource value: 0x7f010091
-			public const int actionBarPopupTheme = 2130772113;
-			
-			// aapt resource value: 0x7f010096
-			public const int actionBarSize = 2130772118;
-			
-			// aapt resource value: 0x7f010093
-			public const int actionBarSplitStyle = 2130772115;
-			
-			// aapt resource value: 0x7f010092
-			public const int actionBarStyle = 2130772114;
-			
-			// aapt resource value: 0x7f01008d
-			public const int actionBarTabBarStyle = 2130772109;
-			
-			// aapt resource value: 0x7f01008c
-			public const int actionBarTabStyle = 2130772108;
-			
-			// aapt resource value: 0x7f01008e
-			public const int actionBarTabTextStyle = 2130772110;
-			
-			// aapt resource value: 0x7f010094
-			public const int actionBarTheme = 2130772116;
-			
-			// aapt resource value: 0x7f010095
-			public const int actionBarWidgetTheme = 2130772117;
-			
-			// aapt resource value: 0x7f0100b1
-			public const int actionButtonStyle = 2130772145;
-			
-			// aapt resource value: 0x7f0100ad
-			public const int actionDropDownStyle = 2130772141;
-			
-			// aapt resource value: 0x7f010064
-			public const int actionLayout = 2130772068;
-			
-			// aapt resource value: 0x7f010099
-			public const int actionMenuTextAppearance = 2130772121;
-			
-			// aapt resource value: 0x7f01009a
-			public const int actionMenuTextColor = 2130772122;
-			
-			// aapt resource value: 0x7f01009d
-			public const int actionModeBackground = 2130772125;
+			// aapt resource value: 0x7f01009b
+			public const int actionBarDivider = 2130772123;
 			
 			// aapt resource value: 0x7f01009c
-			public const int actionModeCloseButtonStyle = 2130772124;
+			public const int actionBarItemBackground = 2130772124;
 			
-			// aapt resource value: 0x7f01009f
-			public const int actionModeCloseDrawable = 2130772127;
+			// aapt resource value: 0x7f010095
+			public const int actionBarPopupTheme = 2130772117;
 			
-			// aapt resource value: 0x7f0100a1
-			public const int actionModeCopyDrawable = 2130772129;
+			// aapt resource value: 0x7f01009a
+			public const int actionBarSize = 2130772122;
 			
-			// aapt resource value: 0x7f0100a0
-			public const int actionModeCutDrawable = 2130772128;
+			// aapt resource value: 0x7f010097
+			public const int actionBarSplitStyle = 2130772119;
 			
-			// aapt resource value: 0x7f0100a5
-			public const int actionModeFindDrawable = 2130772133;
+			// aapt resource value: 0x7f010096
+			public const int actionBarStyle = 2130772118;
 			
-			// aapt resource value: 0x7f0100a2
-			public const int actionModePasteDrawable = 2130772130;
-			
-			// aapt resource value: 0x7f0100a7
-			public const int actionModePopupWindowStyle = 2130772135;
-			
-			// aapt resource value: 0x7f0100a3
-			public const int actionModeSelectAllDrawable = 2130772131;
-			
-			// aapt resource value: 0x7f0100a4
-			public const int actionModeShareDrawable = 2130772132;
-			
-			// aapt resource value: 0x7f01009e
-			public const int actionModeSplitBackground = 2130772126;
-			
-			// aapt resource value: 0x7f01009b
-			public const int actionModeStyle = 2130772123;
-			
-			// aapt resource value: 0x7f0100a6
-			public const int actionModeWebSearchDrawable = 2130772134;
-			
-			// aapt resource value: 0x7f01008f
-			public const int actionOverflowButtonStyle = 2130772111;
+			// aapt resource value: 0x7f010091
+			public const int actionBarTabBarStyle = 2130772113;
 			
 			// aapt resource value: 0x7f010090
-			public const int actionOverflowMenuStyle = 2130772112;
+			public const int actionBarTabStyle = 2130772112;
 			
-			// aapt resource value: 0x7f010066
-			public const int actionProviderClass = 2130772070;
+			// aapt resource value: 0x7f010092
+			public const int actionBarTabTextStyle = 2130772114;
 			
-			// aapt resource value: 0x7f010065
-			public const int actionViewClass = 2130772069;
+			// aapt resource value: 0x7f010098
+			public const int actionBarTheme = 2130772120;
 			
-			// aapt resource value: 0x7f0100b9
-			public const int activityChooserViewStyle = 2130772153;
-			
-			// aapt resource value: 0x7f0100da
-			public const int alertDialogButtonGroupStyle = 2130772186;
-			
-			// aapt resource value: 0x7f0100db
-			public const int alertDialogCenterButtons = 2130772187;
-			
-			// aapt resource value: 0x7f0100d9
-			public const int alertDialogStyle = 2130772185;
-			
-			// aapt resource value: 0x7f0100dc
-			public const int alertDialogTheme = 2130772188;
-			
-			// aapt resource value: 0x7f0100e1
-			public const int autoCompleteTextViewStyle = 2130772193;
-			
-			// aapt resource value: 0x7f01003f
-			public const int background = 2130772031;
-			
-			// aapt resource value: 0x7f010041
-			public const int backgroundSplit = 2130772033;
-			
-			// aapt resource value: 0x7f010040
-			public const int backgroundStacked = 2130772032;
-			
-			// aapt resource value: 0x7f0100fa
-			public const int backgroundTint = 2130772218;
-			
-			// aapt resource value: 0x7f0100fb
-			public const int backgroundTintMode = 2130772219;
-			
-			// aapt resource value: 0x7f01005e
-			public const int barSize = 2130772062;
-			
-			// aapt resource value: 0x7f01001e
-			public const int behavior_overlapTop = 2130771998;
-			
-			// aapt resource value: 0x7f010017
-			public const int borderWidth = 2130771991;
-			
-			// aapt resource value: 0x7f0100b6
-			public const int borderlessButtonStyle = 2130772150;
-			
-			// aapt resource value: 0x7f0100fc
-			public const int bottomSheetStyle = 2130772220;
-			
-			// aapt resource value: 0x7f010106
-			public const int bs_closeDrawable = 2130772230;
-			
-			// aapt resource value: 0x7f010107
-			public const int bs_collapseListIcons = 2130772231;
-			
-			// aapt resource value: 0x7f0100fd
-			public const int bs_dialogBackground = 2130772221;
-			
-			// aapt resource value: 0x7f0100ff
-			public const int bs_dividerColor = 2130772223;
-			
-			// aapt resource value: 0x7f010109
-			public const int bs_gridItemLayout = 2130772233;
-			
-			// aapt resource value: 0x7f010103
-			public const int bs_gridItemTitleTextAppearance = 2130772227;
-			
-			// aapt resource value: 0x7f01010a
-			public const int bs_headerLayout = 2130772234;
-			
-			// aapt resource value: 0x7f010108
-			public const int bs_listItemLayout = 2130772232;
-			
-			// aapt resource value: 0x7f010102
-			public const int bs_listItemTitleTextAppearance = 2130772226;
-			
-			// aapt resource value: 0x7f0100fe
-			public const int bs_listStyle = 2130772222;
-			
-			// aapt resource value: 0x7f010104
-			public const int bs_moreDrawable = 2130772228;
-			
-			// aapt resource value: 0x7f010105
-			public const int bs_moreText = 2130772229;
-			
-			// aapt resource value: 0x7f010100
-			public const int bs_numColumns = 2130772224;
-			
-			// aapt resource value: 0x7f010101
-			public const int bs_titleTextAppearance = 2130772225;
-			
-			// aapt resource value: 0x7f0100b3
-			public const int buttonBarButtonStyle = 2130772147;
-			
-			// aapt resource value: 0x7f0100df
-			public const int buttonBarNegativeButtonStyle = 2130772191;
-			
-			// aapt resource value: 0x7f0100e0
-			public const int buttonBarNeutralButtonStyle = 2130772192;
-			
-			// aapt resource value: 0x7f0100de
-			public const int buttonBarPositiveButtonStyle = 2130772190;
-			
-			// aapt resource value: 0x7f0100b2
-			public const int buttonBarStyle = 2130772146;
-			
-			// aapt resource value: 0x7f010052
-			public const int buttonPanelSideLayout = 2130772050;
-			
-			// aapt resource value: 0x7f0100e2
-			public const int buttonStyle = 2130772194;
-			
-			// aapt resource value: 0x7f0100e3
-			public const int buttonStyleSmall = 2130772195;
-			
-			// aapt resource value: 0x7f0100e4
-			public const int checkboxStyle = 2130772196;
-			
-			// aapt resource value: 0x7f0100e5
-			public const int checkedTextViewStyle = 2130772197;
-			
-			// aapt resource value: 0x7f01006e
-			public const int closeIcon = 2130772078;
-			
-			// aapt resource value: 0x7f01004f
-			public const int closeItemLayout = 2130772047;
-			
-			// aapt resource value: 0x7f0100f4
-			public const int collapseContentDescription = 2130772212;
-			
-			// aapt resource value: 0x7f0100f3
-			public const int collapseIcon = 2130772211;
-			
-			// aapt resource value: 0x7f01000a
-			public const int collapsedTitleTextAppearance = 2130771978;
-			
-			// aapt resource value: 0x7f010058
-			public const int color = 2130772056;
-			
-			// aapt resource value: 0x7f0100d3
-			public const int colorAccent = 2130772179;
-			
-			// aapt resource value: 0x7f0100d7
-			public const int colorButtonNormal = 2130772183;
-			
-			// aapt resource value: 0x7f0100d5
-			public const int colorControlActivated = 2130772181;
-			
-			// aapt resource value: 0x7f0100d6
-			public const int colorControlHighlight = 2130772182;
-			
-			// aapt resource value: 0x7f0100d4
-			public const int colorControlNormal = 2130772180;
-			
-			// aapt resource value: 0x7f0100d1
-			public const int colorPrimary = 2130772177;
-			
-			// aapt resource value: 0x7f0100d2
-			public const int colorPrimaryDark = 2130772178;
-			
-			// aapt resource value: 0x7f0100d8
-			public const int colorSwitchThumbNormal = 2130772184;
-			
-			// aapt resource value: 0x7f010073
-			public const int commitIcon = 2130772083;
-			
-			// aapt resource value: 0x7f01004a
-			public const int contentInsetEnd = 2130772042;
-			
-			// aapt resource value: 0x7f01004b
-			public const int contentInsetLeft = 2130772043;
-			
-			// aapt resource value: 0x7f01004c
-			public const int contentInsetRight = 2130772044;
-			
-			// aapt resource value: 0x7f010049
-			public const int contentInsetStart = 2130772041;
-			
-			// aapt resource value: 0x7f01000b
-			public const int contentScrim = 2130771979;
-			
-			// aapt resource value: 0x7f010042
-			public const int customNavigationLayout = 2130772034;
-			
-			// aapt resource value: 0x7f01006d
-			public const int defaultQueryHint = 2130772077;
-			
-			// aapt resource value: 0x7f0100ab
-			public const int dialogPreferredPadding = 2130772139;
-			
-			// aapt resource value: 0x7f0100aa
-			public const int dialogTheme = 2130772138;
-			
-			// aapt resource value: 0x7f01007a
-			public const int disableChildrenWhenDisabled = 2130772090;
-			
-			// aapt resource value: 0x7f010038
-			public const int displayOptions = 2130772024;
-			
-			// aapt resource value: 0x7f01003e
-			public const int divider = 2130772030;
-			
-			// aapt resource value: 0x7f0100b8
-			public const int dividerHorizontal = 2130772152;
-			
-			// aapt resource value: 0x7f010062
-			public const int dividerPadding = 2130772066;
-			
-			// aapt resource value: 0x7f0100b7
-			public const int dividerVertical = 2130772151;
-			
-			// aapt resource value: 0x7f01005a
-			public const int drawableSize = 2130772058;
-			
-			// aapt resource value: 0x7f010033
-			public const int drawerArrowStyle = 2130772019;
-			
-			// aapt resource value: 0x7f0100c9
-			public const int dropDownListViewStyle = 2130772169;
-			
-			// aapt resource value: 0x7f0100ae
-			public const int dropdownListPreferredItemHeight = 2130772142;
-			
-			// aapt resource value: 0x7f0100bf
-			public const int editTextBackground = 2130772159;
-			
-			// aapt resource value: 0x7f0100be
-			public const int editTextColor = 2130772158;
-			
-			// aapt resource value: 0x7f0100e6
-			public const int editTextStyle = 2130772198;
-			
-			// aapt resource value: 0x7f01004d
-			public const int elevation = 2130772045;
-			
-			// aapt resource value: 0x7f010031
-			public const int errorEnabled = 2130772017;
-			
-			// aapt resource value: 0x7f010032
-			public const int errorTextAppearance = 2130772018;
-			
-			// aapt resource value: 0x7f010051
-			public const int expandActivityOverflowButtonDrawable = 2130772049;
-			
-			// aapt resource value: 0x7f010004
-			public const int expandedTitleMargin = 2130771972;
-			
-			// aapt resource value: 0x7f010008
-			public const int expandedTitleMarginBottom = 2130771976;
-			
-			// aapt resource value: 0x7f010007
-			public const int expandedTitleMarginEnd = 2130771975;
-			
-			// aapt resource value: 0x7f010005
-			public const int expandedTitleMarginStart = 2130771973;
-			
-			// aapt resource value: 0x7f010006
-			public const int expandedTitleMarginTop = 2130771974;
-			
-			// aapt resource value: 0x7f010009
-			public const int expandedTitleTextAppearance = 2130771977;
-			
-			// aapt resource value: 0x7f010015
-			public const int fabSize = 2130771989;
-			
-			// aapt resource value: 0x7f01005b
-			public const int gapBetweenBars = 2130772059;
-			
-			// aapt resource value: 0x7f01006f
-			public const int goIcon = 2130772079;
-			
-			// aapt resource value: 0x7f01001c
-			public const int headerLayout = 2130771996;
-			
-			// aapt resource value: 0x7f010034
-			public const int height = 2130772020;
-			
-			// aapt resource value: 0x7f010048
-			public const int hideOnContentScroll = 2130772040;
-			
-			// aapt resource value: 0x7f010030
-			public const int hintTextAppearance = 2130772016;
-			
-			// aapt resource value: 0x7f0100b0
-			public const int homeAsUpIndicator = 2130772144;
-			
-			// aapt resource value: 0x7f010043
-			public const int homeLayout = 2130772035;
-			
-			// aapt resource value: 0x7f01003c
-			public const int icon = 2130772028;
-			
-			// aapt resource value: 0x7f01006b
-			public const int iconifiedByDefault = 2130772075;
-			
-			// aapt resource value: 0x7f010045
-			public const int indeterminateProgressStyle = 2130772037;
-			
-			// aapt resource value: 0x7f010050
-			public const int initialActivityCount = 2130772048;
-			
-			// aapt resource value: 0x7f01001d
-			public const int insetForeground = 2130771997;
-			
-			// aapt resource value: 0x7f010035
-			public const int isLightTheme = 2130772021;
-			
-			// aapt resource value: 0x7f01001b
-			public const int itemBackground = 2130771995;
-			
-			// aapt resource value: 0x7f010019
-			public const int itemIconTint = 2130771993;
-			
-			// aapt resource value: 0x7f010047
-			public const int itemPadding = 2130772039;
-			
-			// aapt resource value: 0x7f01001a
-			public const int itemTextColor = 2130771994;
-			
-			// aapt resource value: 0x7f01000e
-			public const int keylines = 2130771982;
-			
-			// aapt resource value: 0x7f01006a
-			public const int layout = 2130772074;
-			
-			// aapt resource value: 0x7f010011
-			public const int layout_anchor = 2130771985;
-			
-			// aapt resource value: 0x7f010013
-			public const int layout_anchorGravity = 2130771987;
-			
-			// aapt resource value: 0x7f010010
-			public const int layout_behavior = 2130771984;
-			
-			// aapt resource value: 0x7f010002
-			public const int layout_collapseMode = 2130771970;
-			
-			// aapt resource value: 0x7f010003
-			public const int layout_collapseParallaxMultiplier = 2130771971;
-			
-			// aapt resource value: 0x7f010012
-			public const int layout_keyline = 2130771986;
-			
-			// aapt resource value: 0x7f010000
-			public const int layout_scrollFlags = 2130771968;
-			
-			// aapt resource value: 0x7f010001
-			public const int layout_scrollInterpolator = 2130771969;
-			
-			// aapt resource value: 0x7f0100d0
-			public const int listChoiceBackgroundIndicator = 2130772176;
-			
-			// aapt resource value: 0x7f0100ac
-			public const int listDividerAlertDialog = 2130772140;
-			
-			// aapt resource value: 0x7f010056
-			public const int listItemLayout = 2130772054;
-			
-			// aapt resource value: 0x7f010053
-			public const int listLayout = 2130772051;
-			
-			// aapt resource value: 0x7f0100ca
-			public const int listPopupWindowStyle = 2130772170;
-			
-			// aapt resource value: 0x7f0100c4
-			public const int listPreferredItemHeight = 2130772164;
-			
-			// aapt resource value: 0x7f0100c6
-			public const int listPreferredItemHeightLarge = 2130772166;
-			
-			// aapt resource value: 0x7f0100c5
-			public const int listPreferredItemHeightSmall = 2130772165;
-			
-			// aapt resource value: 0x7f0100c7
-			public const int listPreferredItemPaddingLeft = 2130772167;
-			
-			// aapt resource value: 0x7f0100c8
-			public const int listPreferredItemPaddingRight = 2130772168;
-			
-			// aapt resource value: 0x7f01003d
-			public const int logo = 2130772029;
-			
-			// aapt resource value: 0x7f01001f
-			public const int maxActionInlineWidth = 2130771999;
-			
-			// aapt resource value: 0x7f0100f2
-			public const int maxButtonHeight = 2130772210;
-			
-			// aapt resource value: 0x7f010060
-			public const int measureWithLargestChild = 2130772064;
-			
-			// aapt resource value: 0x7f010018
-			public const int menu = 2130771992;
-			
-			// aapt resource value: 0x7f01005d
-			public const int middleBarArrowSize = 2130772061;
-			
-			// aapt resource value: 0x7f010054
-			public const int multiChoiceItemLayout = 2130772052;
-			
-			// aapt resource value: 0x7f0100f6
-			public const int navigationContentDescription = 2130772214;
-			
-			// aapt resource value: 0x7f0100f5
-			public const int navigationIcon = 2130772213;
-			
-			// aapt resource value: 0x7f010037
-			public const int navigationMode = 2130772023;
-			
-			// aapt resource value: 0x7f010068
-			public const int overlapAnchor = 2130772072;
-			
-			// aapt resource value: 0x7f0100f8
-			public const int paddingEnd = 2130772216;
-			
-			// aapt resource value: 0x7f0100f7
-			public const int paddingStart = 2130772215;
-			
-			// aapt resource value: 0x7f0100cd
-			public const int panelBackground = 2130772173;
-			
-			// aapt resource value: 0x7f0100cf
-			public const int panelMenuListTheme = 2130772175;
-			
-			// aapt resource value: 0x7f0100ce
-			public const int panelMenuListWidth = 2130772174;
-			
-			// aapt resource value: 0x7f0100bc
-			public const int popupMenuStyle = 2130772156;
-			
-			// aapt resource value: 0x7f010079
-			public const int popupPromptView = 2130772089;
-			
-			// aapt resource value: 0x7f01004e
-			public const int popupTheme = 2130772046;
-			
-			// aapt resource value: 0x7f0100bd
-			public const int popupWindowStyle = 2130772157;
-			
-			// aapt resource value: 0x7f010067
-			public const int preserveIconSpacing = 2130772071;
-			
-			// aapt resource value: 0x7f010016
-			public const int pressedTranslationZ = 2130771990;
-			
-			// aapt resource value: 0x7f010046
-			public const int progressBarPadding = 2130772038;
-			
-			// aapt resource value: 0x7f010044
-			public const int progressBarStyle = 2130772036;
-			
-			// aapt resource value: 0x7f010077
-			public const int prompt = 2130772087;
-			
-			// aapt resource value: 0x7f01010d
-			public const int pstsDividerColor = 2130772237;
-			
-			// aapt resource value: 0x7f010111
-			public const int pstsDividerPadding = 2130772241;
-			
-			// aapt resource value: 0x7f01010e
-			public const int pstsDividerWidth = 2130772238;
-			
-			// aapt resource value: 0x7f01010b
-			public const int pstsIndicatorColor = 2130772235;
-			
-			// aapt resource value: 0x7f01010f
-			public const int pstsIndicatorHeight = 2130772239;
-			
-			// aapt resource value: 0x7f010117
-			public const int pstsPaddingMiddle = 2130772247;
-			
-			// aapt resource value: 0x7f010113
-			public const int pstsScrollOffset = 2130772243;
-			
-			// aapt resource value: 0x7f010115
-			public const int pstsShouldExpand = 2130772245;
-			
-			// aapt resource value: 0x7f010114
-			public const int pstsTabBackground = 2130772244;
-			
-			// aapt resource value: 0x7f010112
-			public const int pstsTabPaddingLeftRight = 2130772242;
-			
-			// aapt resource value: 0x7f010116
-			public const int pstsTextAllCaps = 2130772246;
-			
-			// aapt resource value: 0x7f010119
-			public const int pstsTextAlpha = 2130772249;
-			
-			// aapt resource value: 0x7f010118
-			public const int pstsTextColorSelected = 2130772248;
-			
-			// aapt resource value: 0x7f01011b
-			public const int pstsTextSelectedStyle = 2130772251;
-			
-			// aapt resource value: 0x7f01011a
-			public const int pstsTextStyle = 2130772250;
-			
-			// aapt resource value: 0x7f01010c
-			public const int pstsUnderlineColor = 2130772236;
-			
-			// aapt resource value: 0x7f010110
-			public const int pstsUnderlineHeight = 2130772240;
-			
-			// aapt resource value: 0x7f010075
-			public const int queryBackground = 2130772085;
-			
-			// aapt resource value: 0x7f01006c
-			public const int queryHint = 2130772076;
-			
-			// aapt resource value: 0x7f0100e7
-			public const int radioButtonStyle = 2130772199;
-			
-			// aapt resource value: 0x7f0100e8
-			public const int ratingBarStyle = 2130772200;
-			
-			// aapt resource value: 0x7f010014
-			public const int rippleColor = 2130771988;
-			
-			// aapt resource value: 0x7f010071
-			public const int searchHintIcon = 2130772081;
-			
-			// aapt resource value: 0x7f010070
-			public const int searchIcon = 2130772080;
-			
-			// aapt resource value: 0x7f0100c3
-			public const int searchViewStyle = 2130772163;
-			
-			// aapt resource value: 0x7f0100b4
-			public const int selectableItemBackground = 2130772148;
+			// aapt resource value: 0x7f010099
+			public const int actionBarWidgetTheme = 2130772121;
 			
 			// aapt resource value: 0x7f0100b5
-			public const int selectableItemBackgroundBorderless = 2130772149;
+			public const int actionButtonStyle = 2130772149;
 			
-			// aapt resource value: 0x7f010063
-			public const int showAsAction = 2130772067;
+			// aapt resource value: 0x7f0100b1
+			public const int actionDropDownStyle = 2130772145;
 			
-			// aapt resource value: 0x7f010061
-			public const int showDividers = 2130772065;
+			// aapt resource value: 0x7f01006c
+			public const int actionLayout = 2130772076;
 			
-			// aapt resource value: 0x7f010081
-			public const int showText = 2130772097;
+			// aapt resource value: 0x7f01009d
+			public const int actionMenuTextAppearance = 2130772125;
 			
-			// aapt resource value: 0x7f010055
-			public const int singleChoiceItemLayout = 2130772053;
+			// aapt resource value: 0x7f01009e
+			public const int actionMenuTextColor = 2130772126;
 			
-			// aapt resource value: 0x7f010059
-			public const int spinBars = 2130772057;
+			// aapt resource value: 0x7f0100a1
+			public const int actionModeBackground = 2130772129;
 			
-			// aapt resource value: 0x7f0100af
-			public const int spinnerDropDownItemStyle = 2130772143;
+			// aapt resource value: 0x7f0100a0
+			public const int actionModeCloseButtonStyle = 2130772128;
 			
-			// aapt resource value: 0x7f010078
-			public const int spinnerMode = 2130772088;
+			// aapt resource value: 0x7f0100a3
+			public const int actionModeCloseDrawable = 2130772131;
 			
-			// aapt resource value: 0x7f0100e9
-			public const int spinnerStyle = 2130772201;
+			// aapt resource value: 0x7f0100a5
+			public const int actionModeCopyDrawable = 2130772133;
 			
-			// aapt resource value: 0x7f010080
-			public const int splitTrack = 2130772096;
-			
-			// aapt resource value: 0x7f010069
-			public const int state_above_anchor = 2130772073;
-			
-			// aapt resource value: 0x7f01000f
-			public const int statusBarBackground = 2130771983;
-			
-			// aapt resource value: 0x7f01000c
-			public const int statusBarScrim = 2130771980;
-			
-			// aapt resource value: 0x7f010076
-			public const int submitBackground = 2130772086;
-			
-			// aapt resource value: 0x7f010039
-			public const int subtitle = 2130772025;
-			
-			// aapt resource value: 0x7f0100ec
-			public const int subtitleTextAppearance = 2130772204;
-			
-			// aapt resource value: 0x7f01003b
-			public const int subtitleTextStyle = 2130772027;
-			
-			// aapt resource value: 0x7f010074
-			public const int suggestionRowLayout = 2130772084;
-			
-			// aapt resource value: 0x7f01007e
-			public const int switchMinWidth = 2130772094;
-			
-			// aapt resource value: 0x7f01007f
-			public const int switchPadding = 2130772095;
-			
-			// aapt resource value: 0x7f0100ea
-			public const int switchStyle = 2130772202;
-			
-			// aapt resource value: 0x7f01007d
-			public const int switchTextAppearance = 2130772093;
-			
-			// aapt resource value: 0x7f010023
-			public const int tabBackground = 2130772003;
-			
-			// aapt resource value: 0x7f010022
-			public const int tabContentStart = 2130772002;
-			
-			// aapt resource value: 0x7f010025
-			public const int tabGravity = 2130772005;
-			
-			// aapt resource value: 0x7f010020
-			public const int tabIndicatorColor = 2130772000;
-			
-			// aapt resource value: 0x7f010021
-			public const int tabIndicatorHeight = 2130772001;
-			
-			// aapt resource value: 0x7f010027
-			public const int tabMaxWidth = 2130772007;
-			
-			// aapt resource value: 0x7f010026
-			public const int tabMinWidth = 2130772006;
-			
-			// aapt resource value: 0x7f010024
-			public const int tabMode = 2130772004;
-			
-			// aapt resource value: 0x7f01002f
-			public const int tabPadding = 2130772015;
-			
-			// aapt resource value: 0x7f01002e
-			public const int tabPaddingBottom = 2130772014;
-			
-			// aapt resource value: 0x7f01002d
-			public const int tabPaddingEnd = 2130772013;
-			
-			// aapt resource value: 0x7f01002b
-			public const int tabPaddingStart = 2130772011;
-			
-			// aapt resource value: 0x7f01002c
-			public const int tabPaddingTop = 2130772012;
-			
-			// aapt resource value: 0x7f01002a
-			public const int tabSelectedTextColor = 2130772010;
-			
-			// aapt resource value: 0x7f010028
-			public const int tabTextAppearance = 2130772008;
-			
-			// aapt resource value: 0x7f010029
-			public const int tabTextColor = 2130772009;
-			
-			// aapt resource value: 0x7f010057
-			public const int textAllCaps = 2130772055;
-			
-			// aapt resource value: 0x7f0100a8
-			public const int textAppearanceLargePopupMenu = 2130772136;
-			
-			// aapt resource value: 0x7f0100cb
-			public const int textAppearanceListItem = 2130772171;
-			
-			// aapt resource value: 0x7f0100cc
-			public const int textAppearanceListItemSmall = 2130772172;
-			
-			// aapt resource value: 0x7f0100c1
-			public const int textAppearanceSearchResultSubtitle = 2130772161;
-			
-			// aapt resource value: 0x7f0100c0
-			public const int textAppearanceSearchResultTitle = 2130772160;
+			// aapt resource value: 0x7f0100a4
+			public const int actionModeCutDrawable = 2130772132;
 			
 			// aapt resource value: 0x7f0100a9
-			public const int textAppearanceSmallPopupMenu = 2130772137;
+			public const int actionModeFindDrawable = 2130772137;
 			
-			// aapt resource value: 0x7f0100dd
-			public const int textColorAlertDialogListItem = 2130772189;
+			// aapt resource value: 0x7f0100a6
+			public const int actionModePasteDrawable = 2130772134;
 			
-			// aapt resource value: 0x7f0100c2
-			public const int textColorSearchUrl = 2130772162;
+			// aapt resource value: 0x7f0100ab
+			public const int actionModePopupWindowStyle = 2130772139;
 			
-			// aapt resource value: 0x7f0100f9
-			public const int theme = 2130772217;
+			// aapt resource value: 0x7f0100a7
+			public const int actionModeSelectAllDrawable = 2130772135;
 			
-			// aapt resource value: 0x7f01005f
-			public const int thickness = 2130772063;
+			// aapt resource value: 0x7f0100a8
+			public const int actionModeShareDrawable = 2130772136;
 			
-			// aapt resource value: 0x7f01007c
-			public const int thumbTextPadding = 2130772092;
+			// aapt resource value: 0x7f0100a2
+			public const int actionModeSplitBackground = 2130772130;
 			
-			// aapt resource value: 0x7f010036
-			public const int title = 2130772022;
+			// aapt resource value: 0x7f01009f
+			public const int actionModeStyle = 2130772127;
 			
-			// aapt resource value: 0x7f0100f1
-			public const int titleMarginBottom = 2130772209;
+			// aapt resource value: 0x7f0100aa
+			public const int actionModeWebSearchDrawable = 2130772138;
 			
-			// aapt resource value: 0x7f0100ef
-			public const int titleMarginEnd = 2130772207;
+			// aapt resource value: 0x7f010093
+			public const int actionOverflowButtonStyle = 2130772115;
 			
-			// aapt resource value: 0x7f0100ee
-			public const int titleMarginStart = 2130772206;
+			// aapt resource value: 0x7f010094
+			public const int actionOverflowMenuStyle = 2130772116;
 			
-			// aapt resource value: 0x7f0100f0
-			public const int titleMarginTop = 2130772208;
+			// aapt resource value: 0x7f01006e
+			public const int actionProviderClass = 2130772078;
 			
-			// aapt resource value: 0x7f0100ed
-			public const int titleMargins = 2130772205;
+			// aapt resource value: 0x7f01006d
+			public const int actionViewClass = 2130772077;
 			
-			// aapt resource value: 0x7f0100eb
-			public const int titleTextAppearance = 2130772203;
+			// aapt resource value: 0x7f0100bd
+			public const int activityChooserViewStyle = 2130772157;
 			
-			// aapt resource value: 0x7f01003a
-			public const int titleTextStyle = 2130772026;
+			// aapt resource value: 0x7f0100df
+			public const int alertDialogButtonGroupStyle = 2130772191;
 			
-			// aapt resource value: 0x7f01000d
-			public const int toolbarId = 2130771981;
+			// aapt resource value: 0x7f0100e0
+			public const int alertDialogCenterButtons = 2130772192;
 			
-			// aapt resource value: 0x7f0100bb
-			public const int toolbarNavigationButtonStyle = 2130772155;
+			// aapt resource value: 0x7f0100de
+			public const int alertDialogStyle = 2130772190;
+			
+			// aapt resource value: 0x7f0100e1
+			public const int alertDialogTheme = 2130772193;
+			
+			// aapt resource value: 0x7f010064
+			public const int arrowHeadLength = 2130772068;
+			
+			// aapt resource value: 0x7f010065
+			public const int arrowShaftLength = 2130772069;
+			
+			// aapt resource value: 0x7f0100e6
+			public const int autoCompleteTextViewStyle = 2130772198;
+			
+			// aapt resource value: 0x7f010045
+			public const int background = 2130772037;
+			
+			// aapt resource value: 0x7f010047
+			public const int backgroundSplit = 2130772039;
+			
+			// aapt resource value: 0x7f010046
+			public const int backgroundStacked = 2130772038;
+			
+			// aapt resource value: 0x7f010102
+			public const int backgroundTint = 2130772226;
+			
+			// aapt resource value: 0x7f010103
+			public const int backgroundTintMode = 2130772227;
+			
+			// aapt resource value: 0x7f010066
+			public const int barLength = 2130772070;
+			
+			// aapt resource value: 0x7f010023
+			public const int behavior_overlapTop = 2130772003;
+			
+			// aapt resource value: 0x7f01001b
+			public const int borderWidth = 2130771995;
 			
 			// aapt resource value: 0x7f0100ba
-			public const int toolbarStyle = 2130772154;
+			public const int borderlessButtonStyle = 2130772154;
 			
-			// aapt resource value: 0x7f01005c
-			public const int topBottomBarArrowSize = 2130772060;
+			// aapt resource value: 0x7f010104
+			public const int bottomSheetStyle = 2130772228;
+			
+			// aapt resource value: 0x7f01010e
+			public const int bs_closeDrawable = 2130772238;
+			
+			// aapt resource value: 0x7f01010f
+			public const int bs_collapseListIcons = 2130772239;
+			
+			// aapt resource value: 0x7f010105
+			public const int bs_dialogBackground = 2130772229;
+			
+			// aapt resource value: 0x7f010107
+			public const int bs_dividerColor = 2130772231;
+			
+			// aapt resource value: 0x7f010111
+			public const int bs_gridItemLayout = 2130772241;
+			
+			// aapt resource value: 0x7f01010b
+			public const int bs_gridItemTitleTextAppearance = 2130772235;
+			
+			// aapt resource value: 0x7f010112
+			public const int bs_headerLayout = 2130772242;
+			
+			// aapt resource value: 0x7f010110
+			public const int bs_listItemLayout = 2130772240;
+			
+			// aapt resource value: 0x7f01010a
+			public const int bs_listItemTitleTextAppearance = 2130772234;
+			
+			// aapt resource value: 0x7f010106
+			public const int bs_listStyle = 2130772230;
+			
+			// aapt resource value: 0x7f01010c
+			public const int bs_moreDrawable = 2130772236;
+			
+			// aapt resource value: 0x7f01010d
+			public const int bs_moreText = 2130772237;
+			
+			// aapt resource value: 0x7f010108
+			public const int bs_numColumns = 2130772232;
+			
+			// aapt resource value: 0x7f010109
+			public const int bs_titleTextAppearance = 2130772233;
+			
+			// aapt resource value: 0x7f0100b7
+			public const int buttonBarButtonStyle = 2130772151;
+			
+			// aapt resource value: 0x7f0100e4
+			public const int buttonBarNegativeButtonStyle = 2130772196;
+			
+			// aapt resource value: 0x7f0100e5
+			public const int buttonBarNeutralButtonStyle = 2130772197;
+			
+			// aapt resource value: 0x7f0100e3
+			public const int buttonBarPositiveButtonStyle = 2130772195;
+			
+			// aapt resource value: 0x7f0100b6
+			public const int buttonBarStyle = 2130772150;
+			
+			// aapt resource value: 0x7f010058
+			public const int buttonPanelSideLayout = 2130772056;
+			
+			// aapt resource value: 0x7f0100e7
+			public const int buttonStyle = 2130772199;
+			
+			// aapt resource value: 0x7f0100e8
+			public const int buttonStyleSmall = 2130772200;
+			
+			// aapt resource value: 0x7f01005e
+			public const int buttonTint = 2130772062;
+			
+			// aapt resource value: 0x7f01005f
+			public const int buttonTintMode = 2130772063;
+			
+			// aapt resource value: 0x7f0100e9
+			public const int checkboxStyle = 2130772201;
+			
+			// aapt resource value: 0x7f0100ea
+			public const int checkedTextViewStyle = 2130772202;
+			
+			// aapt resource value: 0x7f010076
+			public const int closeIcon = 2130772086;
+			
+			// aapt resource value: 0x7f010055
+			public const int closeItemLayout = 2130772053;
+			
+			// aapt resource value: 0x7f0100f9
+			public const int collapseContentDescription = 2130772217;
+			
+			// aapt resource value: 0x7f0100f8
+			public const int collapseIcon = 2130772216;
+			
+			// aapt resource value: 0x7f01000f
+			public const int collapsedTitleGravity = 2130771983;
+			
+			// aapt resource value: 0x7f01000b
+			public const int collapsedTitleTextAppearance = 2130771979;
+			
+			// aapt resource value: 0x7f010060
+			public const int color = 2130772064;
+			
+			// aapt resource value: 0x7f0100d7
+			public const int colorAccent = 2130772183;
+			
+			// aapt resource value: 0x7f0100db
+			public const int colorButtonNormal = 2130772187;
+			
+			// aapt resource value: 0x7f0100d9
+			public const int colorControlActivated = 2130772185;
+			
+			// aapt resource value: 0x7f0100da
+			public const int colorControlHighlight = 2130772186;
+			
+			// aapt resource value: 0x7f0100d8
+			public const int colorControlNormal = 2130772184;
+			
+			// aapt resource value: 0x7f0100d5
+			public const int colorPrimary = 2130772181;
+			
+			// aapt resource value: 0x7f0100d6
+			public const int colorPrimaryDark = 2130772182;
+			
+			// aapt resource value: 0x7f0100dc
+			public const int colorSwitchThumbNormal = 2130772188;
 			
 			// aapt resource value: 0x7f01007b
-			public const int track = 2130772091;
+			public const int commitIcon = 2130772091;
+			
+			// aapt resource value: 0x7f010050
+			public const int contentInsetEnd = 2130772048;
+			
+			// aapt resource value: 0x7f010051
+			public const int contentInsetLeft = 2130772049;
+			
+			// aapt resource value: 0x7f010052
+			public const int contentInsetRight = 2130772050;
+			
+			// aapt resource value: 0x7f01004f
+			public const int contentInsetStart = 2130772047;
+			
+			// aapt resource value: 0x7f01000c
+			public const int contentScrim = 2130771980;
+			
+			// aapt resource value: 0x7f0100dd
+			public const int controlBackground = 2130772189;
+			
+			// aapt resource value: 0x7f010048
+			public const int customNavigationLayout = 2130772040;
+			
+			// aapt resource value: 0x7f010075
+			public const int defaultQueryHint = 2130772085;
+			
+			// aapt resource value: 0x7f0100af
+			public const int dialogPreferredPadding = 2130772143;
+			
+			// aapt resource value: 0x7f0100ae
+			public const int dialogTheme = 2130772142;
+			
+			// aapt resource value: 0x7f01003e
+			public const int displayOptions = 2130772030;
+			
+			// aapt resource value: 0x7f010044
+			public const int divider = 2130772036;
+			
+			// aapt resource value: 0x7f0100bc
+			public const int dividerHorizontal = 2130772156;
+			
+			// aapt resource value: 0x7f01006a
+			public const int dividerPadding = 2130772074;
+			
+			// aapt resource value: 0x7f0100bb
+			public const int dividerVertical = 2130772155;
+			
+			// aapt resource value: 0x7f010062
+			public const int drawableSize = 2130772066;
+			
+			// aapt resource value: 0x7f010039
+			public const int drawerArrowStyle = 2130772025;
+			
+			// aapt resource value: 0x7f0100cd
+			public const int dropDownListViewStyle = 2130772173;
+			
+			// aapt resource value: 0x7f0100b2
+			public const int dropdownListPreferredItemHeight = 2130772146;
+			
+			// aapt resource value: 0x7f0100c3
+			public const int editTextBackground = 2130772163;
+			
+			// aapt resource value: 0x7f0100c2
+			public const int editTextColor = 2130772162;
+			
+			// aapt resource value: 0x7f0100eb
+			public const int editTextStyle = 2130772203;
+			
+			// aapt resource value: 0x7f010053
+			public const int elevation = 2130772051;
+			
+			// aapt resource value: 0x7f010036
+			public const int errorEnabled = 2130772022;
+			
+			// aapt resource value: 0x7f010037
+			public const int errorTextAppearance = 2130772023;
+			
+			// aapt resource value: 0x7f010057
+			public const int expandActivityOverflowButtonDrawable = 2130772055;
+			
+			// aapt resource value: 0x7f010000
+			public const int expanded = 2130771968;
+			
+			// aapt resource value: 0x7f010010
+			public const int expandedTitleGravity = 2130771984;
+			
+			// aapt resource value: 0x7f010005
+			public const int expandedTitleMargin = 2130771973;
+			
+			// aapt resource value: 0x7f010009
+			public const int expandedTitleMarginBottom = 2130771977;
+			
+			// aapt resource value: 0x7f010008
+			public const int expandedTitleMarginEnd = 2130771976;
+			
+			// aapt resource value: 0x7f010006
+			public const int expandedTitleMarginStart = 2130771974;
+			
+			// aapt resource value: 0x7f010007
+			public const int expandedTitleMarginTop = 2130771975;
+			
+			// aapt resource value: 0x7f01000a
+			public const int expandedTitleTextAppearance = 2130771978;
+			
+			// aapt resource value: 0x7f010019
+			public const int fabSize = 2130771993;
+			
+			// aapt resource value: 0x7f010063
+			public const int gapBetweenBars = 2130772067;
+			
+			// aapt resource value: 0x7f010077
+			public const int goIcon = 2130772087;
+			
+			// aapt resource value: 0x7f010021
+			public const int headerLayout = 2130772001;
+			
+			// aapt resource value: 0x7f01003a
+			public const int height = 2130772026;
+			
+			// aapt resource value: 0x7f01004e
+			public const int hideOnContentScroll = 2130772046;
+			
+			// aapt resource value: 0x7f010038
+			public const int hintAnimationEnabled = 2130772024;
+			
+			// aapt resource value: 0x7f010035
+			public const int hintTextAppearance = 2130772021;
+			
+			// aapt resource value: 0x7f0100b4
+			public const int homeAsUpIndicator = 2130772148;
+			
+			// aapt resource value: 0x7f010049
+			public const int homeLayout = 2130772041;
+			
+			// aapt resource value: 0x7f010042
+			public const int icon = 2130772034;
+			
+			// aapt resource value: 0x7f010073
+			public const int iconifiedByDefault = 2130772083;
+			
+			// aapt resource value: 0x7f01004b
+			public const int indeterminateProgressStyle = 2130772043;
+			
+			// aapt resource value: 0x7f010056
+			public const int initialActivityCount = 2130772054;
+			
+			// aapt resource value: 0x7f010022
+			public const int insetForeground = 2130772002;
+			
+			// aapt resource value: 0x7f01003b
+			public const int isLightTheme = 2130772027;
+			
+			// aapt resource value: 0x7f01001f
+			public const int itemBackground = 2130771999;
+			
+			// aapt resource value: 0x7f01001d
+			public const int itemIconTint = 2130771997;
+			
+			// aapt resource value: 0x7f01004d
+			public const int itemPadding = 2130772045;
+			
+			// aapt resource value: 0x7f010020
+			public const int itemTextAppearance = 2130772000;
+			
+			// aapt resource value: 0x7f01001e
+			public const int itemTextColor = 2130771998;
+			
+			// aapt resource value: 0x7f010012
+			public const int keylines = 2130771986;
 			
 			// aapt resource value: 0x7f010072
-			public const int voiceIcon = 2130772082;
+			public const int layout = 2130772082;
 			
-			// aapt resource value: 0x7f010082
-			public const int windowActionBar = 2130772098;
+			// aapt resource value: 0x7f010015
+			public const int layout_anchor = 2130771989;
 			
-			// aapt resource value: 0x7f010084
-			public const int windowActionBarOverlay = 2130772100;
+			// aapt resource value: 0x7f010017
+			public const int layout_anchorGravity = 2130771991;
+			
+			// aapt resource value: 0x7f010014
+			public const int layout_behavior = 2130771988;
+			
+			// aapt resource value: 0x7f010003
+			public const int layout_collapseMode = 2130771971;
+			
+			// aapt resource value: 0x7f010004
+			public const int layout_collapseParallaxMultiplier = 2130771972;
+			
+			// aapt resource value: 0x7f010016
+			public const int layout_keyline = 2130771990;
+			
+			// aapt resource value: 0x7f010001
+			public const int layout_scrollFlags = 2130771969;
+			
+			// aapt resource value: 0x7f010002
+			public const int layout_scrollInterpolator = 2130771970;
+			
+			// aapt resource value: 0x7f0100d4
+			public const int listChoiceBackgroundIndicator = 2130772180;
+			
+			// aapt resource value: 0x7f0100b0
+			public const int listDividerAlertDialog = 2130772144;
+			
+			// aapt resource value: 0x7f01005c
+			public const int listItemLayout = 2130772060;
+			
+			// aapt resource value: 0x7f010059
+			public const int listLayout = 2130772057;
+			
+			// aapt resource value: 0x7f0100ce
+			public const int listPopupWindowStyle = 2130772174;
+			
+			// aapt resource value: 0x7f0100c8
+			public const int listPreferredItemHeight = 2130772168;
+			
+			// aapt resource value: 0x7f0100ca
+			public const int listPreferredItemHeightLarge = 2130772170;
+			
+			// aapt resource value: 0x7f0100c9
+			public const int listPreferredItemHeightSmall = 2130772169;
+			
+			// aapt resource value: 0x7f0100cb
+			public const int listPreferredItemPaddingLeft = 2130772171;
+			
+			// aapt resource value: 0x7f0100cc
+			public const int listPreferredItemPaddingRight = 2130772172;
+			
+			// aapt resource value: 0x7f010043
+			public const int logo = 2130772035;
+			
+			// aapt resource value: 0x7f0100fc
+			public const int logoDescription = 2130772220;
+			
+			// aapt resource value: 0x7f010024
+			public const int maxActionInlineWidth = 2130772004;
+			
+			// aapt resource value: 0x7f0100f7
+			public const int maxButtonHeight = 2130772215;
+			
+			// aapt resource value: 0x7f010068
+			public const int measureWithLargestChild = 2130772072;
+			
+			// aapt resource value: 0x7f01001c
+			public const int menu = 2130771996;
+			
+			// aapt resource value: 0x7f01005a
+			public const int multiChoiceItemLayout = 2130772058;
+			
+			// aapt resource value: 0x7f0100fb
+			public const int navigationContentDescription = 2130772219;
+			
+			// aapt resource value: 0x7f0100fa
+			public const int navigationIcon = 2130772218;
+			
+			// aapt resource value: 0x7f01003d
+			public const int navigationMode = 2130772029;
+			
+			// aapt resource value: 0x7f010070
+			public const int overlapAnchor = 2130772080;
+			
+			// aapt resource value: 0x7f010100
+			public const int paddingEnd = 2130772224;
+			
+			// aapt resource value: 0x7f0100ff
+			public const int paddingStart = 2130772223;
+			
+			// aapt resource value: 0x7f0100d1
+			public const int panelBackground = 2130772177;
+			
+			// aapt resource value: 0x7f0100d3
+			public const int panelMenuListTheme = 2130772179;
+			
+			// aapt resource value: 0x7f0100d2
+			public const int panelMenuListWidth = 2130772178;
+			
+			// aapt resource value: 0x7f0100c0
+			public const int popupMenuStyle = 2130772160;
+			
+			// aapt resource value: 0x7f010054
+			public const int popupTheme = 2130772052;
+			
+			// aapt resource value: 0x7f0100c1
+			public const int popupWindowStyle = 2130772161;
+			
+			// aapt resource value: 0x7f01006f
+			public const int preserveIconSpacing = 2130772079;
+			
+			// aapt resource value: 0x7f01001a
+			public const int pressedTranslationZ = 2130771994;
+			
+			// aapt resource value: 0x7f01004c
+			public const int progressBarPadding = 2130772044;
+			
+			// aapt resource value: 0x7f01004a
+			public const int progressBarStyle = 2130772042;
+			
+			// aapt resource value: 0x7f01007d
+			public const int queryBackground = 2130772093;
+			
+			// aapt resource value: 0x7f010074
+			public const int queryHint = 2130772084;
+			
+			// aapt resource value: 0x7f0100ec
+			public const int radioButtonStyle = 2130772204;
+			
+			// aapt resource value: 0x7f0100ed
+			public const int ratingBarStyle = 2130772205;
+			
+			// aapt resource value: 0x7f010018
+			public const int rippleColor = 2130771992;
+			
+			// aapt resource value: 0x7f010079
+			public const int searchHintIcon = 2130772089;
+			
+			// aapt resource value: 0x7f010078
+			public const int searchIcon = 2130772088;
+			
+			// aapt resource value: 0x7f0100c7
+			public const int searchViewStyle = 2130772167;
+			
+			// aapt resource value: 0x7f0100b8
+			public const int selectableItemBackground = 2130772152;
+			
+			// aapt resource value: 0x7f0100b9
+			public const int selectableItemBackgroundBorderless = 2130772153;
+			
+			// aapt resource value: 0x7f01006b
+			public const int showAsAction = 2130772075;
+			
+			// aapt resource value: 0x7f010069
+			public const int showDividers = 2130772073;
 			
 			// aapt resource value: 0x7f010085
-			public const int windowActionModeOverlay = 2130772101;
+			public const int showText = 2130772101;
 			
-			// aapt resource value: 0x7f010089
-			public const int windowFixedHeightMajor = 2130772105;
+			// aapt resource value: 0x7f01005b
+			public const int singleChoiceItemLayout = 2130772059;
 			
-			// aapt resource value: 0x7f010087
-			public const int windowFixedHeightMinor = 2130772103;
+			// aapt resource value: 0x7f010061
+			public const int spinBars = 2130772065;
 			
-			// aapt resource value: 0x7f010086
-			public const int windowFixedWidthMajor = 2130772102;
+			// aapt resource value: 0x7f0100b3
+			public const int spinnerDropDownItemStyle = 2130772147;
 			
-			// aapt resource value: 0x7f010088
-			public const int windowFixedWidthMinor = 2130772104;
+			// aapt resource value: 0x7f0100ee
+			public const int spinnerStyle = 2130772206;
 			
-			// aapt resource value: 0x7f01008a
-			public const int windowMinWidthMajor = 2130772106;
+			// aapt resource value: 0x7f010084
+			public const int splitTrack = 2130772100;
 			
-			// aapt resource value: 0x7f01008b
-			public const int windowMinWidthMinor = 2130772107;
+			// aapt resource value: 0x7f010071
+			public const int state_above_anchor = 2130772081;
+			
+			// aapt resource value: 0x7f010013
+			public const int statusBarBackground = 2130771987;
+			
+			// aapt resource value: 0x7f01000d
+			public const int statusBarScrim = 2130771981;
+			
+			// aapt resource value: 0x7f01007e
+			public const int submitBackground = 2130772094;
+			
+			// aapt resource value: 0x7f01003f
+			public const int subtitle = 2130772031;
+			
+			// aapt resource value: 0x7f0100f1
+			public const int subtitleTextAppearance = 2130772209;
+			
+			// aapt resource value: 0x7f0100fe
+			public const int subtitleTextColor = 2130772222;
+			
+			// aapt resource value: 0x7f010041
+			public const int subtitleTextStyle = 2130772033;
+			
+			// aapt resource value: 0x7f01007c
+			public const int suggestionRowLayout = 2130772092;
+			
+			// aapt resource value: 0x7f010082
+			public const int switchMinWidth = 2130772098;
 			
 			// aapt resource value: 0x7f010083
-			public const int windowNoTitle = 2130772099;
+			public const int switchPadding = 2130772099;
+			
+			// aapt resource value: 0x7f0100ef
+			public const int switchStyle = 2130772207;
+			
+			// aapt resource value: 0x7f010081
+			public const int switchTextAppearance = 2130772097;
+			
+			// aapt resource value: 0x7f010028
+			public const int tabBackground = 2130772008;
+			
+			// aapt resource value: 0x7f010027
+			public const int tabContentStart = 2130772007;
+			
+			// aapt resource value: 0x7f01002a
+			public const int tabGravity = 2130772010;
+			
+			// aapt resource value: 0x7f010025
+			public const int tabIndicatorColor = 2130772005;
+			
+			// aapt resource value: 0x7f010026
+			public const int tabIndicatorHeight = 2130772006;
+			
+			// aapt resource value: 0x7f01002c
+			public const int tabMaxWidth = 2130772012;
+			
+			// aapt resource value: 0x7f01002b
+			public const int tabMinWidth = 2130772011;
+			
+			// aapt resource value: 0x7f010029
+			public const int tabMode = 2130772009;
+			
+			// aapt resource value: 0x7f010034
+			public const int tabPadding = 2130772020;
+			
+			// aapt resource value: 0x7f010033
+			public const int tabPaddingBottom = 2130772019;
+			
+			// aapt resource value: 0x7f010032
+			public const int tabPaddingEnd = 2130772018;
+			
+			// aapt resource value: 0x7f010030
+			public const int tabPaddingStart = 2130772016;
+			
+			// aapt resource value: 0x7f010031
+			public const int tabPaddingTop = 2130772017;
+			
+			// aapt resource value: 0x7f01002f
+			public const int tabSelectedTextColor = 2130772015;
+			
+			// aapt resource value: 0x7f01002d
+			public const int tabTextAppearance = 2130772013;
+			
+			// aapt resource value: 0x7f01002e
+			public const int tabTextColor = 2130772014;
+			
+			// aapt resource value: 0x7f01005d
+			public const int textAllCaps = 2130772061;
+			
+			// aapt resource value: 0x7f0100ac
+			public const int textAppearanceLargePopupMenu = 2130772140;
+			
+			// aapt resource value: 0x7f0100cf
+			public const int textAppearanceListItem = 2130772175;
+			
+			// aapt resource value: 0x7f0100d0
+			public const int textAppearanceListItemSmall = 2130772176;
+			
+			// aapt resource value: 0x7f0100c5
+			public const int textAppearanceSearchResultSubtitle = 2130772165;
+			
+			// aapt resource value: 0x7f0100c4
+			public const int textAppearanceSearchResultTitle = 2130772164;
+			
+			// aapt resource value: 0x7f0100ad
+			public const int textAppearanceSmallPopupMenu = 2130772141;
+			
+			// aapt resource value: 0x7f0100e2
+			public const int textColorAlertDialogListItem = 2130772194;
+			
+			// aapt resource value: 0x7f0100c6
+			public const int textColorSearchUrl = 2130772166;
+			
+			// aapt resource value: 0x7f010101
+			public const int theme = 2130772225;
+			
+			// aapt resource value: 0x7f010067
+			public const int thickness = 2130772071;
+			
+			// aapt resource value: 0x7f010080
+			public const int thumbTextPadding = 2130772096;
+			
+			// aapt resource value: 0x7f01003c
+			public const int title = 2130772028;
+			
+			// aapt resource value: 0x7f010011
+			public const int titleEnabled = 2130771985;
+			
+			// aapt resource value: 0x7f0100f6
+			public const int titleMarginBottom = 2130772214;
+			
+			// aapt resource value: 0x7f0100f4
+			public const int titleMarginEnd = 2130772212;
+			
+			// aapt resource value: 0x7f0100f3
+			public const int titleMarginStart = 2130772211;
+			
+			// aapt resource value: 0x7f0100f5
+			public const int titleMarginTop = 2130772213;
+			
+			// aapt resource value: 0x7f0100f2
+			public const int titleMargins = 2130772210;
+			
+			// aapt resource value: 0x7f0100f0
+			public const int titleTextAppearance = 2130772208;
+			
+			// aapt resource value: 0x7f0100fd
+			public const int titleTextColor = 2130772221;
+			
+			// aapt resource value: 0x7f010040
+			public const int titleTextStyle = 2130772032;
+			
+			// aapt resource value: 0x7f01000e
+			public const int toolbarId = 2130771982;
+			
+			// aapt resource value: 0x7f0100bf
+			public const int toolbarNavigationButtonStyle = 2130772159;
+			
+			// aapt resource value: 0x7f0100be
+			public const int toolbarStyle = 2130772158;
+			
+			// aapt resource value: 0x7f01007f
+			public const int track = 2130772095;
+			
+			// aapt resource value: 0x7f01007a
+			public const int voiceIcon = 2130772090;
+			
+			// aapt resource value: 0x7f010086
+			public const int windowActionBar = 2130772102;
+			
+			// aapt resource value: 0x7f010088
+			public const int windowActionBarOverlay = 2130772104;
+			
+			// aapt resource value: 0x7f010089
+			public const int windowActionModeOverlay = 2130772105;
+			
+			// aapt resource value: 0x7f01008d
+			public const int windowFixedHeightMajor = 2130772109;
+			
+			// aapt resource value: 0x7f01008b
+			public const int windowFixedHeightMinor = 2130772107;
+			
+			// aapt resource value: 0x7f01008a
+			public const int windowFixedWidthMajor = 2130772106;
+			
+			// aapt resource value: 0x7f01008c
+			public const int windowFixedWidthMinor = 2130772108;
+			
+			// aapt resource value: 0x7f01008e
+			public const int windowMinWidthMajor = 2130772110;
+			
+			// aapt resource value: 0x7f01008f
+			public const int windowMinWidthMinor = 2130772111;
+			
+			// aapt resource value: 0x7f010087
+			public const int windowNoTitle = 2130772103;
 			
 			static Attribute()
 			{
@@ -2220,29 +991,29 @@ namespace WhitePaperBible.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090047
-			public const int abc_background_cache_hint_selector_material_dark = 2131296327;
+			// aapt resource value: 0x7f09004d
+			public const int abc_background_cache_hint_selector_material_dark = 2131296333;
 			
-			// aapt resource value: 0x7f090048
-			public const int abc_background_cache_hint_selector_material_light = 2131296328;
+			// aapt resource value: 0x7f09004e
+			public const int abc_background_cache_hint_selector_material_light = 2131296334;
 			
 			// aapt resource value: 0x7f090009
 			public const int abc_input_method_navigation_guard = 2131296265;
 			
-			// aapt resource value: 0x7f090049
-			public const int abc_primary_text_disable_only_material_dark = 2131296329;
+			// aapt resource value: 0x7f09004f
+			public const int abc_primary_text_disable_only_material_dark = 2131296335;
 			
-			// aapt resource value: 0x7f09004a
-			public const int abc_primary_text_disable_only_material_light = 2131296330;
+			// aapt resource value: 0x7f090050
+			public const int abc_primary_text_disable_only_material_light = 2131296336;
 			
-			// aapt resource value: 0x7f09004b
-			public const int abc_primary_text_material_dark = 2131296331;
+			// aapt resource value: 0x7f090051
+			public const int abc_primary_text_material_dark = 2131296337;
 			
-			// aapt resource value: 0x7f09004c
-			public const int abc_primary_text_material_light = 2131296332;
+			// aapt resource value: 0x7f090052
+			public const int abc_primary_text_material_light = 2131296338;
 			
-			// aapt resource value: 0x7f09004d
-			public const int abc_search_url_text = 2131296333;
+			// aapt resource value: 0x7f090053
+			public const int abc_search_url_text = 2131296339;
 			
 			// aapt resource value: 0x7f09000a
 			public const int abc_search_url_text_normal = 2131296266;
@@ -2253,11 +1024,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09000c
 			public const int abc_search_url_text_selected = 2131296268;
 			
-			// aapt resource value: 0x7f09004e
-			public const int abc_secondary_text_material_dark = 2131296334;
+			// aapt resource value: 0x7f090054
+			public const int abc_secondary_text_material_dark = 2131296340;
 			
-			// aapt resource value: 0x7f09004f
-			public const int abc_secondary_text_material_light = 2131296335;
+			// aapt resource value: 0x7f090055
+			public const int abc_secondary_text_material_light = 2131296341;
 			
 			// aapt resource value: 0x7f09000d
 			public const int accent_material_dark = 2131296269;
@@ -2277,8 +1048,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090012
 			public const int background_material_light = 2131296274;
 			
-			// aapt resource value: 0x7f090041
-			public const int black = 2131296321;
+			// aapt resource value: 0x7f090047
+			public const int black = 2131296327;
 			
 			// aapt resource value: 0x7f090013
 			public const int bright_foreground_disabled_material_dark = 2131296275;
@@ -2298,11 +1069,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090018
 			public const int bright_foreground_material_light = 2131296280;
 			
-			// aapt resource value: 0x7f09003c
-			public const int bs_dark_divider_color = 2131296316;
+			// aapt resource value: 0x7f090043
+			public const int bs_dark_divider_color = 2131296323;
 			
-			// aapt resource value: 0x7f09003d
-			public const int bs_divider_color = 2131296317;
+			// aapt resource value: 0x7f090044
+			public const int bs_divider_color = 2131296324;
 			
 			// aapt resource value: 0x7f090019
 			public const int button_material_dark = 2131296281;
@@ -2310,8 +1081,35 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09001a
 			public const int button_material_light = 2131296282;
 			
-			// aapt resource value: 0x7f090044
-			public const int darkgrey = 2131296324;
+			// aapt resource value: 0x7f09004a
+			public const int darkgrey = 2131296330;
+			
+			// aapt resource value: 0x7f090000
+			public const int design_fab_shadow_end_color = 2131296256;
+			
+			// aapt resource value: 0x7f090001
+			public const int design_fab_shadow_mid_color = 2131296257;
+			
+			// aapt resource value: 0x7f090002
+			public const int design_fab_shadow_start_color = 2131296258;
+			
+			// aapt resource value: 0x7f090003
+			public const int design_fab_stroke_end_inner_color = 2131296259;
+			
+			// aapt resource value: 0x7f090004
+			public const int design_fab_stroke_end_outer_color = 2131296260;
+			
+			// aapt resource value: 0x7f090005
+			public const int design_fab_stroke_top_inner_color = 2131296261;
+			
+			// aapt resource value: 0x7f090006
+			public const int design_fab_stroke_top_outer_color = 2131296262;
+			
+			// aapt resource value: 0x7f090007
+			public const int design_snackbar_background_color = 2131296263;
+			
+			// aapt resource value: 0x7f090008
+			public const int design_textinput_error_color = 2131296264;
 			
 			// aapt resource value: 0x7f09001b
 			public const int dim_foreground_disabled_material_dark = 2131296283;
@@ -2325,41 +1123,26 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f09001e
 			public const int dim_foreground_material_light = 2131296286;
 			
-			// aapt resource value: 0x7f090000
-			public const int error_color = 2131296256;
-			
-			// aapt resource value: 0x7f090001
-			public const int fab_stroke_end_inner_color = 2131296257;
-			
-			// aapt resource value: 0x7f090002
-			public const int fab_stroke_end_outer_color = 2131296258;
-			
-			// aapt resource value: 0x7f090003
-			public const int fab_stroke_top_inner_color = 2131296259;
-			
-			// aapt resource value: 0x7f090004
-			public const int fab_stroke_top_outer_color = 2131296260;
-			
-			// aapt resource value: 0x7f090043
-			public const int grey = 2131296323;
-			
 			// aapt resource value: 0x7f09001f
-			public const int highlighted_text_material_dark = 2131296287;
+			public const int foreground_material_dark = 2131296287;
 			
 			// aapt resource value: 0x7f090020
-			public const int highlighted_text_material_light = 2131296288;
+			public const int foreground_material_light = 2131296288;
+			
+			// aapt resource value: 0x7f090049
+			public const int grey = 2131296329;
 			
 			// aapt resource value: 0x7f090021
-			public const int hint_foreground_material_dark = 2131296289;
+			public const int highlighted_text_material_dark = 2131296289;
 			
 			// aapt resource value: 0x7f090022
-			public const int hint_foreground_material_light = 2131296290;
+			public const int highlighted_text_material_light = 2131296290;
 			
 			// aapt resource value: 0x7f090023
-			public const int link_text_material_dark = 2131296291;
+			public const int hint_foreground_material_dark = 2131296291;
 			
 			// aapt resource value: 0x7f090024
-			public const int link_text_material_light = 2131296292;
+			public const int hint_foreground_material_light = 2131296292;
 			
 			// aapt resource value: 0x7f090025
 			public const int material_blue_grey_800 = 2131296293;
@@ -2376,95 +1159,101 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f090029
 			public const int material_deep_teal_500 = 2131296297;
 			
-			// aapt resource value: 0x7f090045
-			public const int offblack = 2131296325;
-			
-			// aapt resource value: 0x7f090042
-			public const int orange = 2131296322;
-			
 			// aapt resource value: 0x7f09002a
-			public const int primary_dark_material_dark = 2131296298;
+			public const int material_grey_100 = 2131296298;
 			
 			// aapt resource value: 0x7f09002b
-			public const int primary_dark_material_light = 2131296299;
+			public const int material_grey_300 = 2131296299;
 			
 			// aapt resource value: 0x7f09002c
-			public const int primary_material_dark = 2131296300;
+			public const int material_grey_50 = 2131296300;
 			
 			// aapt resource value: 0x7f09002d
-			public const int primary_material_light = 2131296301;
+			public const int material_grey_600 = 2131296301;
 			
 			// aapt resource value: 0x7f09002e
-			public const int primary_text_default_material_dark = 2131296302;
+			public const int material_grey_800 = 2131296302;
 			
 			// aapt resource value: 0x7f09002f
-			public const int primary_text_default_material_light = 2131296303;
+			public const int material_grey_850 = 2131296303;
 			
 			// aapt resource value: 0x7f090030
-			public const int primary_text_disabled_material_dark = 2131296304;
+			public const int material_grey_900 = 2131296304;
+			
+			// aapt resource value: 0x7f09004b
+			public const int offblack = 2131296331;
+			
+			// aapt resource value: 0x7f090048
+			public const int orange = 2131296328;
 			
 			// aapt resource value: 0x7f090031
-			public const int primary_text_disabled_material_light = 2131296305;
-			
-			// aapt resource value: 0x7f09003e
-			public const int psts_background_tab_pressed = 2131296318;
-			
-			// aapt resource value: 0x7f090046
-			public const int red = 2131296326;
+			public const int primary_dark_material_dark = 2131296305;
 			
 			// aapt resource value: 0x7f090032
-			public const int ripple_material_dark = 2131296306;
+			public const int primary_dark_material_light = 2131296306;
 			
 			// aapt resource value: 0x7f090033
-			public const int ripple_material_light = 2131296307;
+			public const int primary_material_dark = 2131296307;
 			
 			// aapt resource value: 0x7f090034
-			public const int secondary_text_default_material_dark = 2131296308;
+			public const int primary_material_light = 2131296308;
 			
 			// aapt resource value: 0x7f090035
-			public const int secondary_text_default_material_light = 2131296309;
+			public const int primary_text_default_material_dark = 2131296309;
 			
 			// aapt resource value: 0x7f090036
-			public const int secondary_text_disabled_material_dark = 2131296310;
+			public const int primary_text_default_material_light = 2131296310;
 			
 			// aapt resource value: 0x7f090037
-			public const int secondary_text_disabled_material_light = 2131296311;
-			
-			// aapt resource value: 0x7f090005
-			public const int shadow_end_color = 2131296261;
-			
-			// aapt resource value: 0x7f090006
-			public const int shadow_mid_color = 2131296262;
-			
-			// aapt resource value: 0x7f090007
-			public const int shadow_start_color = 2131296263;
-			
-			// aapt resource value: 0x7f090008
-			public const int snackbar_background_color = 2131296264;
-			
-			// aapt resource value: 0x7f09003f
-			public const int standard_background = 2131296319;
+			public const int primary_text_disabled_material_dark = 2131296311;
 			
 			// aapt resource value: 0x7f090038
-			public const int switch_thumb_disabled_material_dark = 2131296312;
+			public const int primary_text_disabled_material_light = 2131296312;
+			
+			// aapt resource value: 0x7f09004c
+			public const int red = 2131296332;
 			
 			// aapt resource value: 0x7f090039
-			public const int switch_thumb_disabled_material_light = 2131296313;
-			
-			// aapt resource value: 0x7f090050
-			public const int switch_thumb_material_dark = 2131296336;
-			
-			// aapt resource value: 0x7f090051
-			public const int switch_thumb_material_light = 2131296337;
+			public const int ripple_material_dark = 2131296313;
 			
 			// aapt resource value: 0x7f09003a
-			public const int switch_thumb_normal_material_dark = 2131296314;
+			public const int ripple_material_light = 2131296314;
 			
 			// aapt resource value: 0x7f09003b
-			public const int switch_thumb_normal_material_light = 2131296315;
+			public const int secondary_text_default_material_dark = 2131296315;
+			
+			// aapt resource value: 0x7f09003c
+			public const int secondary_text_default_material_light = 2131296316;
+			
+			// aapt resource value: 0x7f09003d
+			public const int secondary_text_disabled_material_dark = 2131296317;
+			
+			// aapt resource value: 0x7f09003e
+			public const int secondary_text_disabled_material_light = 2131296318;
+			
+			// aapt resource value: 0x7f090045
+			public const int standard_background = 2131296325;
+			
+			// aapt resource value: 0x7f09003f
+			public const int switch_thumb_disabled_material_dark = 2131296319;
 			
 			// aapt resource value: 0x7f090040
-			public const int white = 2131296320;
+			public const int switch_thumb_disabled_material_light = 2131296320;
+			
+			// aapt resource value: 0x7f090056
+			public const int switch_thumb_material_dark = 2131296342;
+			
+			// aapt resource value: 0x7f090057
+			public const int switch_thumb_material_light = 2131296343;
+			
+			// aapt resource value: 0x7f090041
+			public const int switch_thumb_normal_material_dark = 2131296321;
+			
+			// aapt resource value: 0x7f090042
+			public const int switch_thumb_normal_material_light = 2131296322;
+			
+			// aapt resource value: 0x7f090046
+			public const int white = 2131296326;
 			
 			static Color()
 			{
@@ -2479,29 +1268,29 @@ namespace WhitePaperBible.Droid
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f070026
-			public const int abc_action_bar_content_inset_material = 2131165222;
+			// aapt resource value: 0x7f070025
+			public const int abc_action_bar_content_inset_material = 2131165221;
 			
 			// aapt resource value: 0x7f07001b
 			public const int abc_action_bar_default_height_material = 2131165211;
 			
-			// aapt resource value: 0x7f07001c
-			public const int abc_action_bar_default_padding_material = 2131165212;
-			
-			// aapt resource value: 0x7f07002a
-			public const int abc_action_bar_icon_vertical_padding_material = 2131165226;
+			// aapt resource value: 0x7f070026
+			public const int abc_action_bar_default_padding_end_material = 2131165222;
 			
 			// aapt resource value: 0x7f070027
-			public const int abc_action_bar_navigation_padding_start_material = 2131165223;
+			public const int abc_action_bar_default_padding_start_material = 2131165223;
 			
-			// aapt resource value: 0x7f070028
-			public const int abc_action_bar_overflow_padding_end_material = 2131165224;
+			// aapt resource value: 0x7f070029
+			public const int abc_action_bar_icon_vertical_padding_material = 2131165225;
+			
+			// aapt resource value: 0x7f07002a
+			public const int abc_action_bar_overflow_padding_end_material = 2131165226;
 			
 			// aapt resource value: 0x7f07002b
 			public const int abc_action_bar_overflow_padding_start_material = 2131165227;
 			
-			// aapt resource value: 0x7f07001d
-			public const int abc_action_bar_progress_bar_size = 2131165213;
+			// aapt resource value: 0x7f07001c
+			public const int abc_action_bar_progress_bar_size = 2131165212;
 			
 			// aapt resource value: 0x7f07002c
 			public const int abc_action_bar_stacked_max_height = 2131165228;
@@ -2539,8 +1328,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f070036
 			public const int abc_button_padding_vertical_material = 2131165238;
 			
-			// aapt resource value: 0x7f070020
-			public const int abc_config_prefDialogWidth = 2131165216;
+			// aapt resource value: 0x7f07001f
+			public const int abc_config_prefDialogWidth = 2131165215;
 			
 			// aapt resource value: 0x7f070037
 			public const int abc_control_corner_material = 2131165239;
@@ -2602,11 +1391,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f07004a
 			public const int abc_search_view_preferred_width = 2131165258;
 			
-			// aapt resource value: 0x7f070021
-			public const int abc_search_view_text_min_width = 2131165217;
+			// aapt resource value: 0x7f070020
+			public const int abc_search_view_text_min_width = 2131165216;
 			
-			// aapt resource value: 0x7f070029
-			public const int abc_switch_padding = 2131165225;
+			// aapt resource value: 0x7f070028
+			public const int abc_switch_padding = 2131165224;
 			
 			// aapt resource value: 0x7f07004b
 			public const int abc_text_size_body_1_material = 2131165259;
@@ -2650,44 +1439,119 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f070058
 			public const int abc_text_size_subhead_material = 2131165272;
 			
-			// aapt resource value: 0x7f07001e
-			public const int abc_text_size_subtitle_material_toolbar = 2131165214;
+			// aapt resource value: 0x7f07001d
+			public const int abc_text_size_subtitle_material_toolbar = 2131165213;
 			
 			// aapt resource value: 0x7f070059
 			public const int abc_text_size_title_material = 2131165273;
 			
-			// aapt resource value: 0x7f07001f
-			public const int abc_text_size_title_material_toolbar = 2131165215;
+			// aapt resource value: 0x7f07001e
+			public const int abc_text_size_title_material_toolbar = 2131165214;
 			
-			// aapt resource value: 0x7f070064
-			public const int action_bar_size = 2131165284;
-			
-			// aapt resource value: 0x7f070008
-			public const int appbar_elevation = 2131165192;
-			
-			// aapt resource value: 0x7f07005f
-			public const int bs_grid_bottom_padding = 2131165279;
-			
-			// aapt resource value: 0x7f070060
-			public const int bs_grid_left_padding = 2131165280;
-			
-			// aapt resource value: 0x7f070061
-			public const int bs_grid_right_padding = 2131165281;
+			// aapt resource value: 0x7f070069
+			public const int action_bar_size = 2131165289;
 			
 			// aapt resource value: 0x7f070062
-			public const int bs_grid_top_padding = 2131165282;
+			public const int bs_grid_bottom_padding = 2131165282;
+			
+			// aapt resource value: 0x7f070063
+			public const int bs_grid_left_padding = 2131165283;
+			
+			// aapt resource value: 0x7f070064
+			public const int bs_grid_right_padding = 2131165284;
+			
+			// aapt resource value: 0x7f070065
+			public const int bs_grid_top_padding = 2131165285;
+			
+			// aapt resource value: 0x7f070008
+			public const int design_appbar_elevation = 2131165192;
+			
+			// aapt resource value: 0x7f070009
+			public const int design_fab_border_width = 2131165193;
+			
+			// aapt resource value: 0x7f07000a
+			public const int design_fab_content_size = 2131165194;
+			
+			// aapt resource value: 0x7f07000b
+			public const int design_fab_elevation = 2131165195;
+			
+			// aapt resource value: 0x7f07000c
+			public const int design_fab_size_mini = 2131165196;
+			
+			// aapt resource value: 0x7f07000d
+			public const int design_fab_size_normal = 2131165197;
+			
+			// aapt resource value: 0x7f07000e
+			public const int design_fab_translation_z_pressed = 2131165198;
+			
+			// aapt resource value: 0x7f07000f
+			public const int design_navigation_elevation = 2131165199;
+			
+			// aapt resource value: 0x7f070010
+			public const int design_navigation_icon_padding = 2131165200;
+			
+			// aapt resource value: 0x7f070011
+			public const int design_navigation_icon_size = 2131165201;
+			
+			// aapt resource value: 0x7f070012
+			public const int design_navigation_max_width = 2131165202;
+			
+			// aapt resource value: 0x7f070013
+			public const int design_navigation_padding_bottom = 2131165203;
+			
+			// aapt resource value: 0x7f070007
+			public const int design_navigation_padding_top_default = 2131165191;
+			
+			// aapt resource value: 0x7f070014
+			public const int design_navigation_separator_vertical_padding = 2131165204;
+			
+			// aapt resource value: 0x7f070000
+			public const int design_snackbar_action_inline_max_width = 2131165184;
+			
+			// aapt resource value: 0x7f070001
+			public const int design_snackbar_background_corner_radius = 2131165185;
+			
+			// aapt resource value: 0x7f070015
+			public const int design_snackbar_elevation = 2131165205;
+			
+			// aapt resource value: 0x7f070002
+			public const int design_snackbar_extra_spacing_horizontal = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int design_snackbar_max_width = 2131165187;
+			
+			// aapt resource value: 0x7f070004
+			public const int design_snackbar_min_width = 2131165188;
+			
+			// aapt resource value: 0x7f070016
+			public const int design_snackbar_padding_horizontal = 2131165206;
+			
+			// aapt resource value: 0x7f070017
+			public const int design_snackbar_padding_vertical = 2131165207;
+			
+			// aapt resource value: 0x7f070005
+			public const int design_snackbar_padding_vertical_2lines = 2131165189;
+			
+			// aapt resource value: 0x7f070018
+			public const int design_snackbar_text_size = 2131165208;
+			
+			// aapt resource value: 0x7f070019
+			public const int design_tab_max_width = 2131165209;
+			
+			// aapt resource value: 0x7f070006
+			public const int design_tab_min_width = 2131165190;
+			
+			// aapt resource value: 0x7f070021
+			public const int dialog_fixed_height_major = 2131165217;
 			
 			// aapt resource value: 0x7f070022
-			public const int dialog_fixed_height_major = 2131165218;
+			public const int dialog_fixed_height_minor = 2131165218;
 			
 			// aapt resource value: 0x7f070023
-			public const int dialog_fixed_height_minor = 2131165219;
+			public const int dialog_fixed_width_major = 2131165219;
 			
 			// aapt resource value: 0x7f070024
-			public const int dialog_fixed_width_major = 2131165220;
-			
-			// aapt resource value: 0x7f070025
-			public const int dialog_fixed_width_minor = 2131165221;
+			public const int dialog_fixed_width_minor = 2131165220;
 			
 			// aapt resource value: 0x7f07005a
 			public const int disabled_alpha_material_dark = 2131165274;
@@ -2695,101 +1559,41 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f07005b
 			public const int disabled_alpha_material_light = 2131165275;
 			
-			// aapt resource value: 0x7f070009
-			public const int fab_border_width = 2131165193;
+			// aapt resource value: 0x7f07006b
+			public const int fab_elevation_lollipop = 2131165291;
 			
-			// aapt resource value: 0x7f07000a
-			public const int fab_content_size = 2131165194;
+			// aapt resource value: 0x7f07006a
+			public const int fab_scroll_threshold = 2131165290;
 			
-			// aapt resource value: 0x7f07000b
-			public const int fab_elevation = 2131165195;
-			
-			// aapt resource value: 0x7f070066
-			public const int fab_elevation_lollipop = 2131165286;
-			
-			// aapt resource value: 0x7f070065
-			public const int fab_scroll_threshold = 2131165285;
-			
-			// aapt resource value: 0x7f070063
-			public const int fab_shadow_size = 2131165283;
-			
-			// aapt resource value: 0x7f07000c
-			public const int fab_size_mini = 2131165196;
-			
-			// aapt resource value: 0x7f07000d
-			public const int fab_size_normal = 2131165197;
-			
-			// aapt resource value: 0x7f07000e
-			public const int fab_translation_z_pressed = 2131165198;
-			
-			// aapt resource value: 0x7f07000f
-			public const int navigation_elevation = 2131165199;
-			
-			// aapt resource value: 0x7f070010
-			public const int navigation_icon_padding = 2131165200;
-			
-			// aapt resource value: 0x7f070011
-			public const int navigation_icon_size = 2131165201;
-			
-			// aapt resource value: 0x7f070012
-			public const int navigation_max_width = 2131165202;
-			
-			// aapt resource value: 0x7f070013
-			public const int navigation_padding_bottom = 2131165203;
-			
-			// aapt resource value: 0x7f070007
-			public const int navigation_padding_top_default = 2131165191;
-			
-			// aapt resource value: 0x7f070014
-			public const int navigation_separator_vertical_padding = 2131165204;
-			
-			// aapt resource value: 0x7f07005c
-			public const int notification_large_icon_height = 2131165276;
-			
-			// aapt resource value: 0x7f07005d
-			public const int notification_large_icon_width = 2131165277;
-			
-			// aapt resource value: 0x7f07005e
-			public const int notification_subtext_size = 2131165278;
+			// aapt resource value: 0x7f070068
+			public const int fab_shadow_size = 2131165288;
 			
 			// aapt resource value: 0x7f070067
-			public const int screen_padding = 2131165287;
+			public const int fab_size_mini = 2131165287;
 			
-			// aapt resource value: 0x7f070000
-			public const int snackbar_action_inline_max_width = 2131165184;
+			// aapt resource value: 0x7f070066
+			public const int fab_size_normal = 2131165286;
 			
-			// aapt resource value: 0x7f070001
-			public const int snackbar_background_corner_radius = 2131165185;
+			// aapt resource value: 0x7f07005c
+			public const int highlight_alpha_material_colored = 2131165276;
 			
-			// aapt resource value: 0x7f070015
-			public const int snackbar_elevation = 2131165205;
+			// aapt resource value: 0x7f07005d
+			public const int highlight_alpha_material_dark = 2131165277;
 			
-			// aapt resource value: 0x7f070002
-			public const int snackbar_extra_spacing_horizontal = 2131165186;
+			// aapt resource value: 0x7f07005e
+			public const int highlight_alpha_material_light = 2131165278;
 			
-			// aapt resource value: 0x7f070003
-			public const int snackbar_max_width = 2131165187;
+			// aapt resource value: 0x7f07005f
+			public const int notification_large_icon_height = 2131165279;
 			
-			// aapt resource value: 0x7f070004
-			public const int snackbar_min_width = 2131165188;
+			// aapt resource value: 0x7f070060
+			public const int notification_large_icon_width = 2131165280;
 			
-			// aapt resource value: 0x7f070016
-			public const int snackbar_padding_horizontal = 2131165206;
+			// aapt resource value: 0x7f070061
+			public const int notification_subtext_size = 2131165281;
 			
-			// aapt resource value: 0x7f070017
-			public const int snackbar_padding_vertical = 2131165207;
-			
-			// aapt resource value: 0x7f070005
-			public const int snackbar_padding_vertical_2lines = 2131165189;
-			
-			// aapt resource value: 0x7f070018
-			public const int snackbar_text_size = 2131165208;
-			
-			// aapt resource value: 0x7f070019
-			public const int tab_max_width = 2131165209;
-			
-			// aapt resource value: 0x7f070006
-			public const int tab_min_width = 2131165190;
+			// aapt resource value: 0x7f07006c
+			public const int screen_padding = 2131165292;
 			
 			static Dimension()
 			{
@@ -2823,433 +1627,436 @@ namespace WhitePaperBible.Droid
 			public const int abc_ab_share_pack_mtrl_alpha = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int abc_btn_borderless_material = 2130837510;
+			public const int abc_action_bar_item_background_material = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int abc_btn_check_material = 2130837511;
+			public const int abc_btn_borderless_material = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int abc_btn_check_to_on_mtrl_000 = 2130837512;
+			public const int abc_btn_check_material = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int abc_btn_check_to_on_mtrl_015 = 2130837513;
+			public const int abc_btn_check_to_on_mtrl_000 = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int abc_btn_default_mtrl_shape = 2130837514;
+			public const int abc_btn_check_to_on_mtrl_015 = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int abc_btn_radio_material = 2130837515;
+			public const int abc_btn_colored_material = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int abc_btn_radio_to_on_mtrl_000 = 2130837516;
+			public const int abc_btn_default_mtrl_shape = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int abc_btn_radio_to_on_mtrl_015 = 2130837517;
+			public const int abc_btn_radio_material = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int abc_btn_rating_star_off_mtrl_alpha = 2130837518;
+			public const int abc_btn_radio_to_on_mtrl_000 = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int abc_btn_rating_star_on_mtrl_alpha = 2130837519;
+			public const int abc_btn_radio_to_on_mtrl_015 = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int abc_btn_switch_to_on_mtrl_00001 = 2130837520;
+			public const int abc_btn_rating_star_off_mtrl_alpha = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int abc_btn_switch_to_on_mtrl_00012 = 2130837521;
+			public const int abc_btn_rating_star_on_mtrl_alpha = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int abc_cab_background_internal_bg = 2130837522;
+			public const int abc_btn_switch_to_on_mtrl_00001 = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int abc_cab_background_top_material = 2130837523;
+			public const int abc_btn_switch_to_on_mtrl_00012 = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int abc_cab_background_top_mtrl_alpha = 2130837524;
+			public const int abc_cab_background_internal_bg = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int abc_dialog_material_background_dark = 2130837525;
+			public const int abc_cab_background_top_material = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int abc_dialog_material_background_light = 2130837526;
+			public const int abc_cab_background_top_mtrl_alpha = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int abc_edit_text_material = 2130837527;
+			public const int abc_dialog_material_background_dark = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int abc_ic_ab_back_mtrl_am_alpha = 2130837528;
+			public const int abc_dialog_material_background_light = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int abc_ic_clear_mtrl_alpha = 2130837529;
+			public const int abc_edit_text_material = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int abc_ic_commit_search_api_mtrl_alpha = 2130837530;
+			public const int abc_ic_ab_back_mtrl_am_alpha = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int abc_ic_go_search_api_mtrl_alpha = 2130837531;
+			public const int abc_ic_clear_mtrl_alpha = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int abc_ic_menu_copy_mtrl_am_alpha = 2130837532;
+			public const int abc_ic_commit_search_api_mtrl_alpha = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int abc_ic_menu_cut_mtrl_alpha = 2130837533;
+			public const int abc_ic_go_search_api_mtrl_alpha = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int abc_ic_menu_moreoverflow_mtrl_alpha = 2130837534;
+			public const int abc_ic_menu_copy_mtrl_am_alpha = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int abc_ic_menu_paste_mtrl_am_alpha = 2130837535;
+			public const int abc_ic_menu_cut_mtrl_alpha = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int abc_ic_menu_selectall_mtrl_alpha = 2130837536;
+			public const int abc_ic_menu_moreoverflow_mtrl_alpha = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int abc_ic_menu_share_mtrl_alpha = 2130837537;
+			public const int abc_ic_menu_paste_mtrl_am_alpha = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int abc_ic_search_api_mtrl_alpha = 2130837538;
+			public const int abc_ic_menu_selectall_mtrl_alpha = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int abc_ic_voice_search_api_mtrl_alpha = 2130837539;
+			public const int abc_ic_menu_share_mtrl_alpha = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int abc_item_background_holo_dark = 2130837540;
+			public const int abc_ic_search_api_mtrl_alpha = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int abc_item_background_holo_light = 2130837541;
+			public const int abc_ic_voice_search_api_mtrl_alpha = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int abc_list_divider_mtrl_alpha = 2130837542;
+			public const int abc_item_background_holo_dark = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int abc_list_focused_holo = 2130837543;
+			public const int abc_item_background_holo_light = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int abc_list_longpressed_holo = 2130837544;
+			public const int abc_list_divider_mtrl_alpha = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int abc_list_pressed_holo_dark = 2130837545;
+			public const int abc_list_focused_holo = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int abc_list_pressed_holo_light = 2130837546;
+			public const int abc_list_longpressed_holo = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int abc_list_selector_background_transition_holo_dark = 2130837547;
+			public const int abc_list_pressed_holo_dark = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int abc_list_selector_background_transition_holo_light = 2130837548;
+			public const int abc_list_pressed_holo_light = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int abc_list_selector_disabled_holo_dark = 2130837549;
+			public const int abc_list_selector_background_transition_holo_dark = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int abc_list_selector_disabled_holo_light = 2130837550;
+			public const int abc_list_selector_background_transition_holo_light = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int abc_list_selector_holo_dark = 2130837551;
+			public const int abc_list_selector_disabled_holo_dark = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int abc_list_selector_holo_light = 2130837552;
+			public const int abc_list_selector_disabled_holo_light = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int abc_menu_hardkey_panel_mtrl_mult = 2130837553;
+			public const int abc_list_selector_holo_dark = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int abc_popup_background_mtrl_mult = 2130837554;
+			public const int abc_list_selector_holo_light = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int abc_ratingbar_full_material = 2130837555;
+			public const int abc_menu_hardkey_panel_mtrl_mult = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int abc_spinner_mtrl_am_alpha = 2130837556;
+			public const int abc_popup_background_mtrl_mult = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int abc_spinner_textfield_background_material = 2130837557;
+			public const int abc_ratingbar_full_material = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int abc_switch_thumb_material = 2130837558;
+			public const int abc_spinner_mtrl_am_alpha = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int abc_switch_track_mtrl_alpha = 2130837559;
+			public const int abc_spinner_textfield_background_material = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int abc_tab_indicator_material = 2130837560;
+			public const int abc_switch_thumb_material = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int abc_tab_indicator_mtrl_alpha = 2130837561;
+			public const int abc_switch_track_mtrl_alpha = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int abc_text_cursor_mtrl_alpha = 2130837562;
+			public const int abc_tab_indicator_material = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int abc_textfield_activated_mtrl_alpha = 2130837563;
+			public const int abc_tab_indicator_mtrl_alpha = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int abc_textfield_default_mtrl_alpha = 2130837564;
+			public const int abc_text_cursor_material = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int abc_textfield_search_activated_mtrl_alpha = 2130837565;
+			public const int abc_textfield_activated_mtrl_alpha = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int abc_textfield_search_default_mtrl_alpha = 2130837566;
+			public const int abc_textfield_default_mtrl_alpha = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int abc_textfield_search_material = 2130837567;
+			public const int abc_textfield_search_activated_mtrl_alpha = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int background_actionbar = 2130837568;
+			public const int abc_textfield_search_default_mtrl_alpha = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int background_login = 2130837569;
+			public const int abc_textfield_search_material = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int background_login_bottom = 2130837570;
+			public const int background_actionbar = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int background_login_middle = 2130837571;
+			public const int background_login = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int background_login_top = 2130837572;
+			public const int background_login_bottom = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int background_menu = 2130837573;
+			public const int background_login_middle = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int background_menu_current = 2130837574;
+			public const int background_login_top = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int background_myprogress_path = 2130837575;
+			public const int background_menu = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int background_workouts = 2130837576;
+			public const int background_menu_current = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int bs_ic_clear = 2130837577;
+			public const int background_myprogress_path = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int bs_ic_clear_light = 2130837578;
+			public const int background_workouts = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int bs_ic_more = 2130837579;
+			public const int bs_ic_clear = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int bs_ic_more_light = 2130837580;
+			public const int bs_ic_clear_light = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int bs_list_dark_selector = 2130837581;
+			public const int bs_ic_more = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int bs_list_selector = 2130837582;
+			public const int bs_ic_more_light = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int btn_cab_done_default_tntstyle = 2130837583;
+			public const int bs_list_dark_selector = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int btn_cab_done_focused_tntstyle = 2130837584;
+			public const int bs_list_selector = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int btn_cab_done_pressed_tntstyle = 2130837585;
+			public const int btn_cab_done_default_tntstyle = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int btn_cab_done_tntstyle = 2130837586;
+			public const int btn_cab_done_focused_tntstyle = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int cab_background_bottom_tntstyle = 2130837587;
+			public const int btn_cab_done_pressed_tntstyle = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int cab_background_top_tntstyle = 2130837588;
+			public const int btn_cab_done_tntstyle = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int fab_background = 2130837589;
+			public const int cab_background_bottom_tntstyle = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int HeaderBackground = 2130837590;
+			public const int cab_background_top_tntstyle = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int ic_action_done = 2130837591;
+			public const int design_fab_background = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int ic_actionbar_back = 2130837592;
+			public const int design_snackbar_background = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int ic_actionbar_calendar = 2130837593;
+			public const int HeaderBackground = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int ic_actionbar_logo = 2130837594;
+			public const int ic_action_done = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_actionbar_menu = 2130837595;
+			public const int ic_actionbar_back = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_actionbar_message = 2130837596;
+			public const int ic_actionbar_calendar = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_actionbar_share = 2130837597;
+			public const int ic_actionbar_logo = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_back_navigation_workouts = 2130837598;
+			public const int ic_actionbar_menu = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_calendar_complete = 2130837599;
+			public const int ic_actionbar_message = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_calendar_missed = 2130837600;
+			public const int ic_actionbar_share = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_calendar_rest = 2130837601;
+			public const int ic_back_navigation_workouts = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_calendar_running = 2130837602;
+			public const int ic_calendar_complete = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_launcher = 2130837603;
+			public const int ic_calendar_missed = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_menu_myprogress = 2130837604;
+			public const int ic_calendar_rest = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_menu_settings = 2130837605;
+			public const int ic_calendar_running = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_menu_team = 2130837606;
+			public const int ic_launcher = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_menu_workouts = 2130837607;
+			public const int ic_menu_myprogress = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_myprogress_countdown = 2130837608;
+			public const int ic_menu_settings = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_myprogress_pace = 2130837609;
+			public const int ic_menu_team = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_myprogress_total = 2130837610;
+			public const int ic_menu_workouts = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_navigation_drawer = 2130837611;
+			public const int ic_myprogress_countdown = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_next_navigation_workouts = 2130837612;
+			public const int ic_myprogress_pace = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_player_next = 2130837613;
+			public const int ic_myprogress_total = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_player_playlist = 2130837614;
+			public const int ic_navigation_drawer = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_player_prev = 2130837615;
+			public const int ic_next_navigation_workouts = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_success = 2130837616;
+			public const int ic_player_next = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_workouts_silhuette_complete = 2130837617;
+			public const int ic_player_playlist = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_workouts_silhuette_missed = 2130837618;
+			public const int ic_player_prev = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_workouts_silhuette_rest = 2130837619;
+			public const int ic_success = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_workouts_silhuette_running = 2130837620;
+			public const int ic_workouts_silhuette_complete = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int Icon = 2130837621;
+			public const int ic_workouts_silhuette_missed = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int list_focused_tntstyle = 2130837622;
+			public const int ic_workouts_silhuette_rest = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int list_pressed_tntstyle = 2130837623;
+			public const int ic_workouts_silhuette_running = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ListItemSelector = 2130837624;
+			public const int Icon = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int loginbackgroundrepeat = 2130837625;
+			public const int list_focused_tntstyle = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int logo_300 = 2130837626;
+			public const int list_pressed_tntstyle = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int menu_dropdown_panel_tntstyle = 2130837627;
-			
-			// aapt resource value: 0x7f020094
-			public const int notification_template_icon_bg = 2130837652;
+			public const int ListItemSelector = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int progress_bg_tntstyle = 2130837628;
+			public const int loginbackgroundrepeat = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int progress_horizontal_tntstyle = 2130837629;
+			public const int logo_300 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int progress_primary_tntstyle = 2130837630;
+			public const int menu_dropdown_panel_tntstyle = 2130837630;
+			
+			// aapt resource value: 0x7f020095
+			public const int notification_template_icon_bg = 2130837653;
 			
 			// aapt resource value: 0x7f02007f
-			public const int progress_secondary_tntstyle = 2130837631;
+			public const int progress_bg_tntstyle = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int psts_background_tab = 2130837632;
+			public const int progress_horizontal_tntstyle = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int selectable_background_tntstyle = 2130837633;
+			public const int progress_primary_tntstyle = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int snackbar_background = 2130837634;
+			public const int progress_secondary_tntstyle = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int spinner_ab_default_tntstyle = 2130837635;
+			public const int selectable_background_tntstyle = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int spinner_ab_disabled_tntstyle = 2130837636;
+			public const int spinner_ab_default_tntstyle = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int spinner_ab_focused_tntstyle = 2130837637;
+			public const int spinner_ab_disabled_tntstyle = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int spinner_ab_pressed_tntstyle = 2130837638;
+			public const int spinner_ab_focused_tntstyle = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int spinner_background_ab_tntstyle = 2130837639;
+			public const int spinner_ab_pressed_tntstyle = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int splash = 2130837640;
+			public const int spinner_background_ab_tntstyle = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int tab_indicator_ab_tntstyle = 2130837641;
+			public const int splash = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int tab_selected_focused_tntstyle = 2130837642;
+			public const int tab_indicator_ab_tntstyle = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int tab_selected_pressed_tntstyle = 2130837643;
+			public const int tab_selected_focused_tntstyle = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int tab_selected_tntstyle = 2130837644;
+			public const int tab_selected_pressed_tntstyle = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int tab_unselected_focused_tntstyle = 2130837645;
+			public const int tab_selected_tntstyle = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int tab_unselected_pressed_tntstyle = 2130837646;
+			public const int tab_unselected_focused_tntstyle = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int tab_unselected_tntstyle = 2130837647;
+			public const int tab_unselected_pressed_tntstyle = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int WPB_128 = 2130837648;
+			public const int tab_unselected_tntstyle = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int WPB_16 = 2130837649;
+			public const int WPB_128 = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int WPB_32 = 2130837650;
+			public const int WPB_16 = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int WPB_48 = 2130837651;
+			public const int WPB_32 = 2130837651;
+			
+			// aapt resource value: 0x7f020094
+			public const int WPB_48 = 2130837652;
 			
 			static Drawable()
 			{
@@ -3264,59 +2071,59 @@ namespace WhitePaperBible.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0072
-			public const int AppInfoList = 2131361906;
+			// aapt resource value: 0x7f0a006e
+			public const int AppInfoList = 2131361902;
 			
-			// aapt resource value: 0x7f0a0091
-			public const int PapersByTagList = 2131361937;
+			// aapt resource value: 0x7f0a008e
+			public const int PapersByTagList = 2131361934;
+			
+			// aapt resource value: 0x7f0a008f
+			public const int PapersList = 2131361935;
+			
+			// aapt resource value: 0x7f0a006d
+			public const int SupportList = 2131361901;
 			
 			// aapt resource value: 0x7f0a0092
-			public const int PapersList = 2131361938;
+			public const int TagsList = 2131361938;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int SupportList = 2131361905;
+			// aapt resource value: 0x7f0a0093
+			public const int TermsTextView = 2131361939;
 			
-			// aapt resource value: 0x7f0a0096
-			public const int TagsList = 2131361942;
+			// aapt resource value: 0x7f0a007f
+			public const int action0 = 2131361919;
 			
-			// aapt resource value: 0x7f0a0097
-			public const int TermsTextView = 2131361943;
-			
-			// aapt resource value: 0x7f0a0082
-			public const int action0 = 2131361922;
-			
-			// aapt resource value: 0x7f0a005e
-			public const int action_bar = 2131361886;
+			// aapt resource value: 0x7f0a005a
+			public const int action_bar = 2131361882;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int action_bar_activity_content = 2131361793;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int action_bar_container = 2131361885;
-			
 			// aapt resource value: 0x7f0a0059
-			public const int action_bar_root = 2131361881;
+			public const int action_bar_container = 2131361881;
+			
+			// aapt resource value: 0x7f0a0055
+			public const int action_bar_root = 2131361877;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_bar_spinner = 2131361794;
 			
-			// aapt resource value: 0x7f0a0042
-			public const int action_bar_subtitle = 2131361858;
+			// aapt resource value: 0x7f0a003e
+			public const int action_bar_subtitle = 2131361854;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int action_bar_title = 2131361857;
+			// aapt resource value: 0x7f0a003d
+			public const int action_bar_title = 2131361853;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int action_calendar = 2131361909;
+			// aapt resource value: 0x7f0a0071
+			public const int action_calendar = 2131361905;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int action_context_bar = 2131361887;
+			// aapt resource value: 0x7f0a005b
+			public const int action_context_bar = 2131361883;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int action_divider = 2131361926;
+			// aapt resource value: 0x7f0a0083
+			public const int action_divider = 2131361923;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int action_email = 2131361907;
+			// aapt resource value: 0x7f0a006f
+			public const int action_email = 2131361903;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -3324,50 +2131,47 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0004
 			public const int action_menu_presenter = 2131361796;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int action_mode_bar = 2131361883;
+			// aapt resource value: 0x7f0a0057
+			public const int action_mode_bar = 2131361879;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int action_mode_bar_stub = 2131361882;
-			
-			// aapt resource value: 0x7f0a0043
-			public const int action_mode_close_button = 2131361859;
-			
-			// aapt resource value: 0x7f0a0076
-			public const int action_save = 2131361910;
-			
-			// aapt resource value: 0x7f0a0098
-			public const int action_search = 2131361944;
-			
-			// aapt resource value: 0x7f0a0074
-			public const int action_share = 2131361908;
-			
-			// aapt resource value: 0x7f0a0044
-			public const int activity_chooser_view_content = 2131361860;
-			
-			// aapt resource value: 0x7f0a004e
-			public const int alertTitle = 2131361870;
-			
-			// aapt resource value: 0x7f0a0032
-			public const int always = 2131361842;
-			
-			// aapt resource value: 0x7f0a006f
-			public const int appbar = 2131361903;
-			
-			// aapt resource value: 0x7f0a0090
-			public const int authorTextView = 2131361936;
-			
-			// aapt resource value: 0x7f0a0030
-			public const int beginning = 2131361840;
+			// aapt resource value: 0x7f0a0056
+			public const int action_mode_bar_stub = 2131361878;
 			
 			// aapt resource value: 0x7f0a003f
-			public const int bold = 2131361855;
+			public const int action_mode_close_button = 2131361855;
+			
+			// aapt resource value: 0x7f0a0072
+			public const int action_save = 2131361906;
+			
+			// aapt resource value: 0x7f0a0094
+			public const int action_search = 2131361940;
+			
+			// aapt resource value: 0x7f0a0070
+			public const int action_share = 2131361904;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int activity_chooser_view_content = 2131361856;
+			
+			// aapt resource value: 0x7f0a004a
+			public const int alertTitle = 2131361866;
+			
+			// aapt resource value: 0x7f0a0037
+			public const int always = 2131361847;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int appbar = 2131361899;
+			
+			// aapt resource value: 0x7f0a008d
+			public const int authorTextView = 2131361933;
+			
+			// aapt resource value: 0x7f0a0035
+			public const int beginning = 2131361845;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int bottom = 2131361814;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int bottom_sheet_gridview = 2131361912;
+			// aapt resource value: 0x7f0a0074
+			public const int bottom_sheet_gridview = 2131361908;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int bottom_sheet_title = 2131361802;
@@ -3381,17 +2185,17 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a000d
 			public const int bs_list_title = 2131361805;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int bs_main = 2131361911;
+			// aapt resource value: 0x7f0a0073
+			public const int bs_main = 2131361907;
 			
 			// aapt resource value: 0x7f0a000e
 			public const int bs_more = 2131361806;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int buttonPanel = 2131361876;
+			// aapt resource value: 0x7f0a0050
+			public const int buttonPanel = 2131361872;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int cancel_action = 2131361923;
+			// aapt resource value: 0x7f0a0080
+			public const int cancel_action = 2131361920;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int center = 2131361815;
@@ -3402,62 +2206,56 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0019
 			public const int center_vertical = 2131361817;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int checkbox = 2131361878;
+			// aapt resource value: 0x7f0a0052
+			public const int checkbox = 2131361874;
 			
-			// aapt resource value: 0x7f0a0089
-			public const int chronometer = 2131361929;
+			// aapt resource value: 0x7f0a0086
+			public const int chronometer = 2131361926;
 			
-			// aapt resource value: 0x7f0a001a
-			public const int clip_horizontal = 2131361818;
+			// aapt resource value: 0x7f0a0020
+			public const int clip_horizontal = 2131361824;
 			
-			// aapt resource value: 0x7f0a001b
-			public const int clip_vertical = 2131361819;
+			// aapt resource value: 0x7f0a0021
+			public const int clip_vertical = 2131361825;
 			
-			// aapt resource value: 0x7f0a0033
-			public const int collapseActionView = 2131361843;
+			// aapt resource value: 0x7f0a0038
+			public const int collapseActionView = 2131361848;
+			
+			// aapt resource value: 0x7f0a004b
+			public const int contentPanel = 2131361867;
+			
+			// aapt resource value: 0x7f0a0091
+			public const int countTextView = 2131361937;
 			
 			// aapt resource value: 0x7f0a004f
-			public const int contentPanel = 2131361871;
+			public const int custom = 2131361871;
 			
-			// aapt resource value: 0x7f0a0095
-			public const int countTextView = 2131361941;
+			// aapt resource value: 0x7f0a004e
+			public const int customPanel = 2131361870;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int custom = 2131361875;
+			// aapt resource value: 0x7f0a0058
+			public const int decor_content_parent = 2131361880;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int customPanel = 2131361874;
+			// aapt resource value: 0x7f0a0043
+			public const int default_activity_button = 2131361859;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int decor_content_parent = 2131361884;
-			
-			// aapt resource value: 0x7f0a0047
-			public const int default_activity_button = 2131361863;
-			
-			// aapt resource value: 0x7f0a008f
-			public const int detailsWebView = 2131361935;
-			
-			// aapt resource value: 0x7f0a0037
-			public const int dialog = 2131361847;
+			// aapt resource value: 0x7f0a008c
+			public const int detailsWebView = 2131361932;
 			
 			// aapt resource value: 0x7f0a002a
 			public const int disableHome = 2131361834;
 			
-			// aapt resource value: 0x7f0a0038
-			public const int dropdown = 2131361848;
+			// aapt resource value: 0x7f0a005c
+			public const int edit_query = 2131361884;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int edit_query = 2131361888;
+			// aapt resource value: 0x7f0a0079
+			public const int emailText = 2131361913;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int emailText = 2131361917;
+			// aapt resource value: 0x7f0a001a
+			public const int end = 2131361818;
 			
-			// aapt resource value: 0x7f0a001c
-			public const int end = 2131361820;
-			
-			// aapt resource value: 0x7f0a008e
-			public const int end_padder = 2131361934;
+			// aapt resource value: 0x7f0a008b
+			public const int end_padder = 2131361931;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int enterAlways = 2131361807;
@@ -3468,29 +2266,29 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0011
 			public const int exitUntilCollapsed = 2131361809;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int expand_activities_button = 2131361861;
+			// aapt resource value: 0x7f0a0041
+			public const int expand_activities_button = 2131361857;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int expanded_menu = 2131361877;
+			// aapt resource value: 0x7f0a0051
+			public const int expanded_menu = 2131361873;
 			
-			// aapt resource value: 0x7f0a001d
-			public const int fill = 2131361821;
+			// aapt resource value: 0x7f0a0022
+			public const int fill = 2131361826;
 			
-			// aapt resource value: 0x7f0a001e
-			public const int fill_horizontal = 2131361822;
+			// aapt resource value: 0x7f0a0023
+			public const int fill_horizontal = 2131361827;
 			
-			// aapt resource value: 0x7f0a001f
-			public const int fill_vertical = 2131361823;
+			// aapt resource value: 0x7f0a001b
+			public const int fill_vertical = 2131361819;
 			
 			// aapt resource value: 0x7f0a0026
 			public const int @fixed = 2131361830;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int header = 2131361914;
+			// aapt resource value: 0x7f0a0076
+			public const int header = 2131361910;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int headerlayout = 2131361913;
+			// aapt resource value: 0x7f0a0075
+			public const int headerlayout = 2131361909;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int home = 2131361797;
@@ -3498,89 +2296,86 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a002b
 			public const int homeAsUp = 2131361835;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int icon = 2131361865;
+			// aapt resource value: 0x7f0a0045
+			public const int icon = 2131361861;
 			
-			// aapt resource value: 0x7f0a0034
-			public const int ifRoom = 2131361844;
+			// aapt resource value: 0x7f0a0039
+			public const int ifRoom = 2131361849;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int image = 2131361862;
+			// aapt resource value: 0x7f0a0042
+			public const int image = 2131361858;
 			
-			// aapt resource value: 0x7f0a008d
-			public const int info = 2131361933;
+			// aapt resource value: 0x7f0a008a
+			public const int info = 2131361930;
 			
-			// aapt resource value: 0x7f0a0040
-			public const int italic = 2131361856;
+			// aapt resource value: 0x7f0a001c
+			public const int left = 2131361820;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int left = 2131361824;
+			// aapt resource value: 0x7f0a0084
+			public const int line1 = 2131361924;
 			
-			// aapt resource value: 0x7f0a0087
-			public const int line1 = 2131361927;
-			
-			// aapt resource value: 0x7f0a008b
-			public const int line3 = 2131361931;
+			// aapt resource value: 0x7f0a0088
+			public const int line3 = 2131361928;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int listMode = 2131361832;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int list_item = 2131361864;
+			// aapt resource value: 0x7f0a0044
+			public const int list_item = 2131361860;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int loginButton = 2131361919;
+			// aapt resource value: 0x7f0a007b
+			public const int loginButton = 2131361915;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int main_content = 2131361902;
+			// aapt resource value: 0x7f0a006a
+			public const int main_content = 2131361898;
 			
-			// aapt resource value: 0x7f0a0085
-			public const int media_actions = 2131361925;
+			// aapt resource value: 0x7f0a0082
+			public const int media_actions = 2131361922;
 			
-			// aapt resource value: 0x7f0a009b
-			public const int menu_about = 2131361947;
-			
-			// aapt resource value: 0x7f0a00a2
-			public const int menu_class = 2131361954;
+			// aapt resource value: 0x7f0a0097
+			public const int menu_about = 2131361943;
 			
 			// aapt resource value: 0x7f0a009e
-			public const int menu_email = 2131361950;
-			
-			// aapt resource value: 0x7f0a009f
-			public const int menu_facebook = 2131361951;
-			
-			// aapt resource value: 0x7f0a009c
-			public const int menu_favorite = 2131361948;
+			public const int menu_class = 2131361950;
 			
 			// aapt resource value: 0x7f0a009a
-			public const int menu_profile = 2131361946;
+			public const int menu_email = 2131361946;
+			
+			// aapt resource value: 0x7f0a009b
+			public const int menu_facebook = 2131361947;
+			
+			// aapt resource value: 0x7f0a0098
+			public const int menu_favorite = 2131361944;
+			
+			// aapt resource value: 0x7f0a0096
+			public const int menu_profile = 2131361942;
+			
+			// aapt resource value: 0x7f0a0095
+			public const int menu_search = 2131361941;
 			
 			// aapt resource value: 0x7f0a0099
-			public const int menu_search = 2131361945;
+			public const int menu_share = 2131361945;
 			
 			// aapt resource value: 0x7f0a009d
-			public const int menu_share = 2131361949;
+			public const int menu_sms = 2131361949;
 			
-			// aapt resource value: 0x7f0a00a1
-			public const int menu_sms = 2131361953;
+			// aapt resource value: 0x7f0a009f
+			public const int menu_time = 2131361951;
 			
-			// aapt resource value: 0x7f0a00a3
-			public const int menu_time = 2131361955;
+			// aapt resource value: 0x7f0a009c
+			public const int menu_twitter = 2131361948;
 			
-			// aapt resource value: 0x7f0a00a0
-			public const int menu_twitter = 2131361952;
-			
-			// aapt resource value: 0x7f0a0031
-			public const int middle = 2131361841;
+			// aapt resource value: 0x7f0a0036
+			public const int middle = 2131361846;
 			
 			// aapt resource value: 0x7f0a0024
 			public const int mini = 2131361828;
 			
-			// aapt resource value: 0x7f0a003a
-			public const int multiply = 2131361850;
+			// aapt resource value: 0x7f0a0030
+			public const int multiply = 2131361840;
 			
-			// aapt resource value: 0x7f0a0035
-			public const int never = 2131361845;
+			// aapt resource value: 0x7f0a003a
+			public const int never = 2131361850;
 			
 			// aapt resource value: 0x7f0a0013
 			public const int none = 2131361811;
@@ -3588,17 +2383,17 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0025
 			public const int normal = 2131361829;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int pager = 2131361921;
+			// aapt resource value: 0x7f0a007e
+			public const int pager = 2131361918;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int parallax = 2131361812;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int parentPanel = 2131361867;
+			// aapt resource value: 0x7f0a0047
+			public const int parentPanel = 2131361863;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int passwordText = 2131361918;
+			// aapt resource value: 0x7f0a007a
+			public const int passwordText = 2131361914;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int pin = 2131361813;
@@ -3609,62 +2404,62 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0007
 			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0a0093
-			public const int psts_tab_title = 2131361939;
+			// aapt resource value: 0x7f0a0054
+			public const int radio = 2131361876;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int radio = 2131361880;
+			// aapt resource value: 0x7f0a007c
+			public const int registerButton = 2131361916;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int right = 2131361825;
+			// aapt resource value: 0x7f0a001d
+			public const int right = 2131361821;
 			
-			// aapt resource value: 0x7f0a003b
-			public const int screen = 2131361851;
+			// aapt resource value: 0x7f0a0031
+			public const int screen = 2131361841;
 			
 			// aapt resource value: 0x7f0a0012
 			public const int scroll = 2131361810;
 			
-			// aapt resource value: 0x7f0a0050
-			public const int scrollView = 2131361872;
+			// aapt resource value: 0x7f0a004c
+			public const int scrollView = 2131361868;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int scrollable = 2131361831;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int search_badge = 2131361890;
+			// aapt resource value: 0x7f0a005e
+			public const int search_badge = 2131361886;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int search_bar = 2131361889;
+			// aapt resource value: 0x7f0a005d
+			public const int search_bar = 2131361885;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int search_button = 2131361891;
-			
-			// aapt resource value: 0x7f0a0068
-			public const int search_close_btn = 2131361896;
+			// aapt resource value: 0x7f0a005f
+			public const int search_button = 2131361887;
 			
 			// aapt resource value: 0x7f0a0064
-			public const int search_edit_frame = 2131361892;
+			public const int search_close_btn = 2131361892;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int search_go_btn = 2131361898;
-			
-			// aapt resource value: 0x7f0a0065
-			public const int search_mag_icon = 2131361893;
+			// aapt resource value: 0x7f0a0060
+			public const int search_edit_frame = 2131361888;
 			
 			// aapt resource value: 0x7f0a0066
-			public const int search_plate = 2131361894;
+			public const int search_go_btn = 2131361894;
+			
+			// aapt resource value: 0x7f0a0061
+			public const int search_mag_icon = 2131361889;
+			
+			// aapt resource value: 0x7f0a0062
+			public const int search_plate = 2131361890;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int search_src_text = 2131361891;
 			
 			// aapt resource value: 0x7f0a0067
-			public const int search_src_text = 2131361895;
+			public const int search_voice_btn = 2131361895;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int search_voice_btn = 2131361899;
+			// aapt resource value: 0x7f0a0068
+			public const int select_dialog_listview = 2131361896;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int select_dialog_listview = 2131361900;
-			
-			// aapt resource value: 0x7f0a0057
-			public const int shortcut = 2131361879;
+			// aapt resource value: 0x7f0a0053
+			public const int shortcut = 2131361875;
 			
 			// aapt resource value: 0x7f0a002c
 			public const int showCustom = 2131361836;
@@ -3675,71 +2470,71 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a002e
 			public const int showTitle = 2131361838;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int snackbar_action = 2131361916;
+			// aapt resource value: 0x7f0a0078
+			public const int snackbar_action = 2131361912;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int snackbar_text = 2131361915;
+			// aapt resource value: 0x7f0a0077
+			public const int snackbar_text = 2131361911;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int src_atop = 2131361852;
+			// aapt resource value: 0x7f0a0032
+			public const int src_atop = 2131361842;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int src_in = 2131361853;
+			// aapt resource value: 0x7f0a0033
+			public const int src_in = 2131361843;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int src_over = 2131361854;
+			// aapt resource value: 0x7f0a0034
+			public const int src_over = 2131361844;
 			
-			// aapt resource value: 0x7f0a0022
-			public const int start = 2131361826;
+			// aapt resource value: 0x7f0a001e
+			public const int start = 2131361822;
 			
-			// aapt resource value: 0x7f0a0084
-			public const int status_bar_latest_event_content = 2131361924;
+			// aapt resource value: 0x7f0a0081
+			public const int status_bar_latest_event_content = 2131361921;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int submit_area = 2131361897;
+			// aapt resource value: 0x7f0a0065
+			public const int submit_area = 2131361893;
 			
 			// aapt resource value: 0x7f0a0029
 			public const int tabMode = 2131361833;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int tab_layout = 2131361920;
+			// aapt resource value: 0x7f0a007d
+			public const int tab_layout = 2131361917;
 			
-			// aapt resource value: 0x7f0a0094
-			public const int tagNameTextView = 2131361940;
+			// aapt resource value: 0x7f0a0090
+			public const int tagNameTextView = 2131361936;
 			
-			// aapt resource value: 0x7f0a008c
-			public const int text = 2131361932;
+			// aapt resource value: 0x7f0a0089
+			public const int text = 2131361929;
 			
-			// aapt resource value: 0x7f0a008a
-			public const int text2 = 2131361930;
-			
-			// aapt resource value: 0x7f0a0051
-			public const int textSpacerNoButtons = 2131361873;
-			
-			// aapt resource value: 0x7f0a0088
-			public const int time = 2131361928;
-			
-			// aapt resource value: 0x7f0a004a
-			public const int title = 2131361866;
-			
-			// aapt resource value: 0x7f0a006d
-			public const int titleTextView = 2131361901;
+			// aapt resource value: 0x7f0a0087
+			public const int text2 = 2131361927;
 			
 			// aapt resource value: 0x7f0a004d
-			public const int title_template = 2131361869;
+			public const int textSpacerNoButtons = 2131361869;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int toolbar = 2131361904;
+			// aapt resource value: 0x7f0a0085
+			public const int time = 2131361925;
 			
-			// aapt resource value: 0x7f0a0023
-			public const int top = 2131361827;
+			// aapt resource value: 0x7f0a0046
+			public const int title = 2131361862;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int topPanel = 2131361868;
+			// aapt resource value: 0x7f0a0069
+			public const int titleTextView = 2131361897;
+			
+			// aapt resource value: 0x7f0a0049
+			public const int title_template = 2131361865;
+			
+			// aapt resource value: 0x7f0a006c
+			public const int toolbar = 2131361900;
+			
+			// aapt resource value: 0x7f0a001f
+			public const int top = 2131361823;
+			
+			// aapt resource value: 0x7f0a0048
+			public const int topPanel = 2131361864;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int up = 2131361801;
@@ -3750,11 +2545,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0a0000
 			public const int view_offset_helper = 2131361792;
 			
-			// aapt resource value: 0x7f0a0036
-			public const int withText = 2131361846;
+			// aapt resource value: 0x7f0a003b
+			public const int withText = 2131361851;
 			
-			// aapt resource value: 0x7f0a0039
-			public const int wrap_content = 2131361849;
+			// aapt resource value: 0x7f0a003c
+			public const int wrap_content = 2131361852;
 			
 			static Id()
 			{
@@ -3790,11 +2585,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f080004
 			public const int cancel_button_image_alpha = 2131230724;
 			
+			// aapt resource value: 0x7f080000
+			public const int design_snackbar_text_max_lines = 2131230720;
+			
 			// aapt resource value: 0x7f080009
 			public const int no_limit = 2131230729;
-			
-			// aapt resource value: 0x7f080000
-			public const int snackbar_text_max_lines = 2131230720;
 			
 			// aapt resource value: 0x7f080005
 			public const int status_bar_notification_info_maxnum = 2131230725;
@@ -3885,67 +2680,67 @@ namespace WhitePaperBible.Droid
 			public const int abc_select_dialog_material = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int abc_simple_dropdown_hint = 2130903064;
+			public const int AboutListItem = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int AboutListItem = 2130903065;
+			public const int AboutView = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int AboutView = 2130903066;
+			public const int ActionBarMenu = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int ActionBarMenu = 2130903067;
+			public const int bottom_sheet_dialog = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int bottom_sheet_dialog = 2130903068;
+			public const int bs_grid_entry = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int bs_grid_entry = 2130903069;
+			public const int bs_header = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int bs_header = 2130903070;
+			public const int bs_list_divider = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int bs_list_divider = 2130903071;
+			public const int bs_list_entry = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int bs_list_entry = 2130903072;
+			public const int CopyrightsView = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int CopyrightsView = 2130903073;
+			public const int design_layout_snackbar = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int design_navigation_item = 2130903074;
+			public const int design_layout_snackbar_include = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int design_navigation_item_header = 2130903075;
+			public const int design_layout_tab_icon = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int design_navigation_item_separator = 2130903076;
+			public const int design_layout_tab_text = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int design_navigation_item_subheader = 2130903077;
+			public const int design_navigation_item = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int design_navigation_menu = 2130903078;
+			public const int design_navigation_item_header = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int FavoritesView = 2130903079;
+			public const int design_navigation_item_separator = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int layout_snackbar = 2130903080;
+			public const int design_navigation_item_subheader = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int layout_snackbar_include = 2130903081;
+			public const int design_navigation_menu = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int layout_tab_icon = 2130903082;
+			public const int FavoritesView = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int layout_tab_text = 2130903083;
+			public const int LogIn = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int LogIn = 2130903084;
+			public const int LoginView = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
 			public const int MainView = 2130903085;
@@ -3990,37 +2785,34 @@ namespace WhitePaperBible.Droid
 			public const int ProfileView = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int psts_tab = 2130903099;
+			public const int SearchPapersView = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int SearchPapersView = 2130903100;
+			public const int SearchView = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int SearchView = 2130903101;
+			public const int select_dialog_item_material = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int select_dialog_item_material = 2130903102;
+			public const int select_dialog_multichoice_material = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int select_dialog_multichoice_material = 2130903103;
+			public const int select_dialog_singlechoice_material = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int select_dialog_singlechoice_material = 2130903104;
+			public const int support_simple_spinner_dropdown_item = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int support_simple_spinner_dropdown_item = 2130903105;
+			public const int TagListItem = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int TagListItem = 2130903106;
+			public const int TagsView = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int TagsView = 2130903107;
+			public const int TermsAndConditionsView = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int TermsAndConditionsView = 2130903108;
-			
-			// aapt resource value: 0x7f030045
-			public const int Toolbar = 2130903109;
+			public const int Toolbar = 2130903108;
 			
 			static Layout()
 			{
@@ -4072,53 +2864,56 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b0014
 			public const int Hello = 2131427348;
 			
+			// aapt resource value: 0x7f0b001e
+			public const int Login = 2131427358;
+			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_action_bar_home_description = 2131427329;
 			
-			// aapt resource value: 0x7f0b000e
-			public const int abc_action_bar_home_description_format = 2131427342;
-			
-			// aapt resource value: 0x7f0b000f
-			public const int abc_action_bar_home_subtitle_description_format = 2131427343;
-			
 			// aapt resource value: 0x7f0b0002
-			public const int abc_action_bar_up_description = 2131427330;
+			public const int abc_action_bar_home_description_format = 2131427330;
 			
 			// aapt resource value: 0x7f0b0003
-			public const int abc_action_menu_overflow_description = 2131427331;
+			public const int abc_action_bar_home_subtitle_description_format = 2131427331;
 			
 			// aapt resource value: 0x7f0b0004
-			public const int abc_action_mode_done = 2131427332;
+			public const int abc_action_bar_up_description = 2131427332;
 			
 			// aapt resource value: 0x7f0b0005
-			public const int abc_activity_chooser_view_see_all = 2131427333;
+			public const int abc_action_menu_overflow_description = 2131427333;
 			
 			// aapt resource value: 0x7f0b0006
-			public const int abc_activitychooserview_choose_application = 2131427334;
-			
-			// aapt resource value: 0x7f0b0010
-			public const int abc_search_hint = 2131427344;
+			public const int abc_action_mode_done = 2131427334;
 			
 			// aapt resource value: 0x7f0b0007
-			public const int abc_searchview_description_clear = 2131427335;
+			public const int abc_activity_chooser_view_see_all = 2131427335;
 			
 			// aapt resource value: 0x7f0b0008
-			public const int abc_searchview_description_query = 2131427336;
+			public const int abc_activitychooserview_choose_application = 2131427336;
 			
 			// aapt resource value: 0x7f0b0009
-			public const int abc_searchview_description_search = 2131427337;
+			public const int abc_search_hint = 2131427337;
 			
 			// aapt resource value: 0x7f0b000a
-			public const int abc_searchview_description_submit = 2131427338;
+			public const int abc_searchview_description_clear = 2131427338;
 			
 			// aapt resource value: 0x7f0b000b
-			public const int abc_searchview_description_voice = 2131427339;
+			public const int abc_searchview_description_query = 2131427339;
 			
 			// aapt resource value: 0x7f0b000c
-			public const int abc_shareactionprovider_share_with = 2131427340;
+			public const int abc_searchview_description_search = 2131427340;
 			
 			// aapt resource value: 0x7f0b000d
-			public const int abc_shareactionprovider_share_with_application = 2131427341;
+			public const int abc_searchview_description_submit = 2131427341;
+			
+			// aapt resource value: 0x7f0b000e
+			public const int abc_searchview_description_voice = 2131427342;
+			
+			// aapt resource value: 0x7f0b000f
+			public const int abc_shareactionprovider_share_with = 2131427343;
+			
+			// aapt resource value: 0x7f0b0010
+			public const int abc_shareactionprovider_share_with_application = 2131427344;
 			
 			// aapt resource value: 0x7f0b0011
 			public const int abc_toolbar_collapse_description = 2131427345;
@@ -4129,20 +2924,20 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b0013
 			public const int bs_more = 2131427347;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int copyrights = 2131427359;
+			// aapt resource value: 0x7f0b0020
+			public const int copyrights = 2131427360;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int email = 2131427350;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int icon_heart = 2131427361;
-			
 			// aapt resource value: 0x7f0b0022
-			public const int icon_search = 2131427362;
+			public const int icon_heart = 2131427362;
 			
-			// aapt resource value: 0x7f0b001e
-			public const int paper_updated = 2131427358;
+			// aapt resource value: 0x7f0b0023
+			public const int icon_search = 2131427363;
+			
+			// aapt resource value: 0x7f0b001f
+			public const int paper_updated = 2131427359;
 			
 			// aapt resource value: 0x7f0b0017
 			public const int password = 2131427351;
@@ -4168,8 +2963,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b0019
 			public const int tab_tags = 2131427353;
 			
-			// aapt resource value: 0x7f0b0020
-			public const int terms = 2131427360;
+			// aapt resource value: 0x7f0b0021
+			public const int terms = 2131427361;
 			
 			static String()
 			{
@@ -4214,449 +3009,458 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f06008c
 			public const int Base_DialogWindowTitleBackground_AppCompat = 2131099788;
 			
+			// aapt resource value: 0x7f06003c
+			public const int Base_TextAppearance_AppCompat = 2131099708;
+			
+			// aapt resource value: 0x7f06003d
+			public const int Base_TextAppearance_AppCompat_Body1 = 2131099709;
+			
 			// aapt resource value: 0x7f06003e
-			public const int Base_TextAppearance_AppCompat = 2131099710;
+			public const int Base_TextAppearance_AppCompat_Body2 = 2131099710;
+			
+			// aapt resource value: 0x7f060027
+			public const int Base_TextAppearance_AppCompat_Button = 2131099687;
 			
 			// aapt resource value: 0x7f06003f
-			public const int Base_TextAppearance_AppCompat_Body1 = 2131099711;
+			public const int Base_TextAppearance_AppCompat_Caption = 2131099711;
 			
 			// aapt resource value: 0x7f060040
-			public const int Base_TextAppearance_AppCompat_Body2 = 2131099712;
-			
-			// aapt resource value: 0x7f060028
-			public const int Base_TextAppearance_AppCompat_Button = 2131099688;
+			public const int Base_TextAppearance_AppCompat_Display1 = 2131099712;
 			
 			// aapt resource value: 0x7f060041
-			public const int Base_TextAppearance_AppCompat_Caption = 2131099713;
+			public const int Base_TextAppearance_AppCompat_Display2 = 2131099713;
 			
 			// aapt resource value: 0x7f060042
-			public const int Base_TextAppearance_AppCompat_Display1 = 2131099714;
+			public const int Base_TextAppearance_AppCompat_Display3 = 2131099714;
 			
 			// aapt resource value: 0x7f060043
-			public const int Base_TextAppearance_AppCompat_Display2 = 2131099715;
+			public const int Base_TextAppearance_AppCompat_Display4 = 2131099715;
 			
 			// aapt resource value: 0x7f060044
-			public const int Base_TextAppearance_AppCompat_Display3 = 2131099716;
+			public const int Base_TextAppearance_AppCompat_Headline = 2131099716;
+			
+			// aapt resource value: 0x7f060012
+			public const int Base_TextAppearance_AppCompat_Inverse = 2131099666;
 			
 			// aapt resource value: 0x7f060045
-			public const int Base_TextAppearance_AppCompat_Display4 = 2131099717;
-			
-			// aapt resource value: 0x7f060046
-			public const int Base_TextAppearance_AppCompat_Headline = 2131099718;
+			public const int Base_TextAppearance_AppCompat_Large = 2131099717;
 			
 			// aapt resource value: 0x7f060013
-			public const int Base_TextAppearance_AppCompat_Inverse = 2131099667;
+			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131099667;
+			
+			// aapt resource value: 0x7f060046
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131099718;
 			
 			// aapt resource value: 0x7f060047
-			public const int Base_TextAppearance_AppCompat_Large = 2131099719;
-			
-			// aapt resource value: 0x7f060014
-			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131099668;
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131099719;
 			
 			// aapt resource value: 0x7f060048
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131099720;
+			public const int Base_TextAppearance_AppCompat_Medium = 2131099720;
+			
+			// aapt resource value: 0x7f060014
+			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131099668;
 			
 			// aapt resource value: 0x7f060049
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131099721;
-			
-			// aapt resource value: 0x7f06004a
-			public const int Base_TextAppearance_AppCompat_Medium = 2131099722;
-			
-			// aapt resource value: 0x7f060015
-			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131099669;
-			
-			// aapt resource value: 0x7f06004b
-			public const int Base_TextAppearance_AppCompat_Menu = 2131099723;
+			public const int Base_TextAppearance_AppCompat_Menu = 2131099721;
 			
 			// aapt resource value: 0x7f06008d
 			public const int Base_TextAppearance_AppCompat_SearchResult = 2131099789;
 			
+			// aapt resource value: 0x7f06004a
+			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131099722;
+			
+			// aapt resource value: 0x7f06004b
+			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131099723;
+			
 			// aapt resource value: 0x7f06004c
-			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131099724;
+			public const int Base_TextAppearance_AppCompat_Small = 2131099724;
+			
+			// aapt resource value: 0x7f060015
+			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131099669;
 			
 			// aapt resource value: 0x7f06004d
-			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131099725;
-			
-			// aapt resource value: 0x7f06004e
-			public const int Base_TextAppearance_AppCompat_Small = 2131099726;
+			public const int Base_TextAppearance_AppCompat_Subhead = 2131099725;
 			
 			// aapt resource value: 0x7f060016
-			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131099670;
+			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131099670;
 			
-			// aapt resource value: 0x7f06004f
-			public const int Base_TextAppearance_AppCompat_Subhead = 2131099727;
+			// aapt resource value: 0x7f06004e
+			public const int Base_TextAppearance_AppCompat_Title = 2131099726;
 			
 			// aapt resource value: 0x7f060017
-			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131099671;
+			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131099671;
+			
+			// aapt resource value: 0x7f06004f
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131099727;
 			
 			// aapt resource value: 0x7f060050
-			public const int Base_TextAppearance_AppCompat_Title = 2131099728;
-			
-			// aapt resource value: 0x7f060018
-			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131099672;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131099728;
 			
 			// aapt resource value: 0x7f060051
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131099729;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131099729;
 			
 			// aapt resource value: 0x7f060052
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131099730;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131099730;
 			
 			// aapt resource value: 0x7f060053
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131099731;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131099731;
 			
 			// aapt resource value: 0x7f060054
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131099732;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131099732;
 			
 			// aapt resource value: 0x7f060055
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131099733;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131099733;
 			
 			// aapt resource value: 0x7f060056
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131099734;
-			
-			// aapt resource value: 0x7f060057
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131099735;
+			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131099734;
 			
 			// aapt resource value: 0x7f06008e
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131099790;
-			
-			// aapt resource value: 0x7f060058
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131099736;
-			
-			// aapt resource value: 0x7f060059
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131099737;
-			
-			// aapt resource value: 0x7f06005a
-			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131099738;
-			
-			// aapt resource value: 0x7f06005b
-			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131099739;
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131099790;
 			
 			// aapt resource value: 0x7f06008f
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131099791;
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131099791;
 			
-			// aapt resource value: 0x7f06005c
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131099740;
+			// aapt resource value: 0x7f060057
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131099735;
 			
-			// aapt resource value: 0x7f06005d
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131099741;
+			// aapt resource value: 0x7f060058
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131099736;
 			
-			// aapt resource value: 0x7f06005e
-			public const int Base_Theme_AppCompat = 2131099742;
+			// aapt resource value: 0x7f060059
+			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131099737;
+			
+			// aapt resource value: 0x7f06005a
+			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131099738;
 			
 			// aapt resource value: 0x7f060090
-			public const int Base_Theme_AppCompat_CompactMenu = 2131099792;
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131099792;
 			
-			// aapt resource value: 0x7f060019
-			public const int Base_Theme_AppCompat_Dialog = 2131099673;
+			// aapt resource value: 0x7f06005b
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131099739;
+			
+			// aapt resource value: 0x7f06005c
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131099740;
+			
+			// aapt resource value: 0x7f06005d
+			public const int Base_Theme_AppCompat = 2131099741;
 			
 			// aapt resource value: 0x7f060091
-			public const int Base_Theme_AppCompat_Dialog_Alert = 2131099793;
+			public const int Base_Theme_AppCompat_CompactMenu = 2131099793;
+			
+			// aapt resource value: 0x7f060018
+			public const int Base_Theme_AppCompat_Dialog = 2131099672;
 			
 			// aapt resource value: 0x7f060092
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131099794;
+			public const int Base_Theme_AppCompat_Dialog_Alert = 2131099794;
 			
 			// aapt resource value: 0x7f060093
-			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131099795;
-			
-			// aapt resource value: 0x7f060011
-			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131099665;
-			
-			// aapt resource value: 0x7f06005f
-			public const int Base_Theme_AppCompat_Light = 2131099743;
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131099795;
 			
 			// aapt resource value: 0x7f060094
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131099796;
-			
-			// aapt resource value: 0x7f06001a
-			public const int Base_Theme_AppCompat_Light_Dialog = 2131099674;
-			
-			// aapt resource value: 0x7f060095
-			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131099797;
-			
-			// aapt resource value: 0x7f060096
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131099798;
-			
-			// aapt resource value: 0x7f060097
-			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131099799;
-			
-			// aapt resource value: 0x7f060012
-			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131099666;
-			
-			// aapt resource value: 0x7f060098
-			public const int Base_ThemeOverlay_AppCompat = 2131099800;
-			
-			// aapt resource value: 0x7f060099
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131099801;
-			
-			// aapt resource value: 0x7f06009a
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131099802;
-			
-			// aapt resource value: 0x7f06009b
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131099803;
-			
-			// aapt resource value: 0x7f06009c
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131099804;
-			
-			// aapt resource value: 0x7f06001b
-			public const int Base_V11_Theme_AppCompat_Dialog = 2131099675;
-			
-			// aapt resource value: 0x7f06001c
-			public const int Base_V11_Theme_AppCompat_Light_Dialog = 2131099676;
-			
-			// aapt resource value: 0x7f060024
-			public const int Base_V12_Widget_AppCompat_AutoCompleteTextView = 2131099684;
-			
-			// aapt resource value: 0x7f060025
-			public const int Base_V12_Widget_AppCompat_EditText = 2131099685;
-			
-			// aapt resource value: 0x7f060060
-			public const int Base_V21_Theme_AppCompat = 2131099744;
-			
-			// aapt resource value: 0x7f060061
-			public const int Base_V21_Theme_AppCompat_Dialog = 2131099745;
-			
-			// aapt resource value: 0x7f060062
-			public const int Base_V21_Theme_AppCompat_Light = 2131099746;
-			
-			// aapt resource value: 0x7f060063
-			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131099747;
-			
-			// aapt resource value: 0x7f06009d
-			public const int Base_V7_Theme_AppCompat = 2131099805;
-			
-			// aapt resource value: 0x7f06009e
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131099806;
-			
-			// aapt resource value: 0x7f06009f
-			public const int Base_V7_Theme_AppCompat_Light = 2131099807;
-			
-			// aapt resource value: 0x7f0600a0
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131099808;
-			
-			// aapt resource value: 0x7f0600a1
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131099809;
-			
-			// aapt resource value: 0x7f0600a2
-			public const int Base_V7_Widget_AppCompat_EditText = 2131099810;
-			
-			// aapt resource value: 0x7f0600a3
-			public const int Base_Widget_AppCompat_ActionBar = 2131099811;
-			
-			// aapt resource value: 0x7f0600a4
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131099812;
-			
-			// aapt resource value: 0x7f0600a5
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131099813;
-			
-			// aapt resource value: 0x7f060064
-			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131099748;
-			
-			// aapt resource value: 0x7f060065
-			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131099749;
-			
-			// aapt resource value: 0x7f060066
-			public const int Base_Widget_AppCompat_ActionButton = 2131099750;
-			
-			// aapt resource value: 0x7f060067
-			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131099751;
-			
-			// aapt resource value: 0x7f060068
-			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131099752;
-			
-			// aapt resource value: 0x7f0600a6
-			public const int Base_Widget_AppCompat_ActionMode = 2131099814;
-			
-			// aapt resource value: 0x7f0600a7
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131099815;
-			
-			// aapt resource value: 0x7f060026
-			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131099686;
-			
-			// aapt resource value: 0x7f060069
-			public const int Base_Widget_AppCompat_Button = 2131099753;
-			
-			// aapt resource value: 0x7f06006a
-			public const int Base_Widget_AppCompat_Button_Borderless = 2131099754;
-			
-			// aapt resource value: 0x7f06006b
-			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131099755;
-			
-			// aapt resource value: 0x7f0600a8
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131099816;
-			
-			// aapt resource value: 0x7f06006c
-			public const int Base_Widget_AppCompat_Button_Small = 2131099756;
-			
-			// aapt resource value: 0x7f06006d
-			public const int Base_Widget_AppCompat_ButtonBar = 2131099757;
-			
-			// aapt resource value: 0x7f0600a9
-			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131099817;
-			
-			// aapt resource value: 0x7f06006e
-			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131099758;
-			
-			// aapt resource value: 0x7f06006f
-			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131099759;
-			
-			// aapt resource value: 0x7f0600aa
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131099818;
+			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131099796;
 			
 			// aapt resource value: 0x7f060010
-			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131099664;
+			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131099664;
+			
+			// aapt resource value: 0x7f06005e
+			public const int Base_Theme_AppCompat_Light = 2131099742;
+			
+			// aapt resource value: 0x7f060095
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131099797;
+			
+			// aapt resource value: 0x7f060019
+			public const int Base_Theme_AppCompat_Light_Dialog = 2131099673;
+			
+			// aapt resource value: 0x7f060096
+			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131099798;
+			
+			// aapt resource value: 0x7f060097
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131099799;
+			
+			// aapt resource value: 0x7f060098
+			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131099800;
+			
+			// aapt resource value: 0x7f060011
+			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131099665;
+			
+			// aapt resource value: 0x7f060099
+			public const int Base_ThemeOverlay_AppCompat = 2131099801;
+			
+			// aapt resource value: 0x7f06009a
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131099802;
+			
+			// aapt resource value: 0x7f06009b
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131099803;
+			
+			// aapt resource value: 0x7f06009c
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131099804;
+			
+			// aapt resource value: 0x7f06009d
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131099805;
+			
+			// aapt resource value: 0x7f06001a
+			public const int Base_V11_Theme_AppCompat_Dialog = 2131099674;
+			
+			// aapt resource value: 0x7f06001b
+			public const int Base_V11_Theme_AppCompat_Light_Dialog = 2131099675;
+			
+			// aapt resource value: 0x7f060023
+			public const int Base_V12_Widget_AppCompat_AutoCompleteTextView = 2131099683;
+			
+			// aapt resource value: 0x7f060024
+			public const int Base_V12_Widget_AppCompat_EditText = 2131099684;
+			
+			// aapt resource value: 0x7f06005f
+			public const int Base_V21_Theme_AppCompat = 2131099743;
+			
+			// aapt resource value: 0x7f060060
+			public const int Base_V21_Theme_AppCompat_Dialog = 2131099744;
+			
+			// aapt resource value: 0x7f060061
+			public const int Base_V21_Theme_AppCompat_Light = 2131099745;
+			
+			// aapt resource value: 0x7f060062
+			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131099746;
+			
+			// aapt resource value: 0x7f06009e
+			public const int Base_V7_Theme_AppCompat = 2131099806;
+			
+			// aapt resource value: 0x7f06009f
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131099807;
+			
+			// aapt resource value: 0x7f0600a0
+			public const int Base_V7_Theme_AppCompat_Light = 2131099808;
+			
+			// aapt resource value: 0x7f0600a1
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131099809;
+			
+			// aapt resource value: 0x7f0600a2
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131099810;
+			
+			// aapt resource value: 0x7f0600a3
+			public const int Base_V7_Widget_AppCompat_EditText = 2131099811;
+			
+			// aapt resource value: 0x7f0600a4
+			public const int Base_Widget_AppCompat_ActionBar = 2131099812;
+			
+			// aapt resource value: 0x7f0600a5
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131099813;
+			
+			// aapt resource value: 0x7f0600a6
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131099814;
+			
+			// aapt resource value: 0x7f060063
+			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131099747;
+			
+			// aapt resource value: 0x7f060064
+			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131099748;
+			
+			// aapt resource value: 0x7f060065
+			public const int Base_Widget_AppCompat_ActionButton = 2131099749;
+			
+			// aapt resource value: 0x7f060066
+			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131099750;
+			
+			// aapt resource value: 0x7f060067
+			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131099751;
+			
+			// aapt resource value: 0x7f0600a7
+			public const int Base_Widget_AppCompat_ActionMode = 2131099815;
+			
+			// aapt resource value: 0x7f0600a8
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131099816;
+			
+			// aapt resource value: 0x7f060025
+			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131099685;
+			
+			// aapt resource value: 0x7f060068
+			public const int Base_Widget_AppCompat_Button = 2131099752;
+			
+			// aapt resource value: 0x7f060069
+			public const int Base_Widget_AppCompat_Button_Borderless = 2131099753;
+			
+			// aapt resource value: 0x7f06006a
+			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131099754;
+			
+			// aapt resource value: 0x7f0600a9
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131099817;
+			
+			// aapt resource value: 0x7f0600aa
+			public const int Base_Widget_AppCompat_Button_Colored = 2131099818;
+			
+			// aapt resource value: 0x7f06006b
+			public const int Base_Widget_AppCompat_Button_Small = 2131099755;
+			
+			// aapt resource value: 0x7f06006c
+			public const int Base_Widget_AppCompat_ButtonBar = 2131099756;
 			
 			// aapt resource value: 0x7f0600ab
-			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131099819;
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131099819;
 			
-			// aapt resource value: 0x7f060070
-			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131099760;
+			// aapt resource value: 0x7f06006d
+			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131099757;
 			
-			// aapt resource value: 0x7f060027
-			public const int Base_Widget_AppCompat_EditText = 2131099687;
+			// aapt resource value: 0x7f06006e
+			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131099758;
 			
 			// aapt resource value: 0x7f0600ac
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131099820;
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131099820;
+			
+			// aapt resource value: 0x7f06000f
+			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131099663;
 			
 			// aapt resource value: 0x7f0600ad
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131099821;
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131099821;
+			
+			// aapt resource value: 0x7f06006f
+			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131099759;
+			
+			// aapt resource value: 0x7f060026
+			public const int Base_Widget_AppCompat_EditText = 2131099686;
 			
 			// aapt resource value: 0x7f0600ae
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131099822;
-			
-			// aapt resource value: 0x7f060071
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131099761;
-			
-			// aapt resource value: 0x7f060072
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131099762;
-			
-			// aapt resource value: 0x7f060073
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131099763;
-			
-			// aapt resource value: 0x7f060074
-			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131099764;
-			
-			// aapt resource value: 0x7f060075
-			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131099765;
-			
-			// aapt resource value: 0x7f060076
-			public const int Base_Widget_AppCompat_ListPopupWindow = 2131099766;
-			
-			// aapt resource value: 0x7f060077
-			public const int Base_Widget_AppCompat_ListView = 2131099767;
-			
-			// aapt resource value: 0x7f060078
-			public const int Base_Widget_AppCompat_ListView_DropDown = 2131099768;
-			
-			// aapt resource value: 0x7f060079
-			public const int Base_Widget_AppCompat_ListView_Menu = 2131099769;
-			
-			// aapt resource value: 0x7f06007a
-			public const int Base_Widget_AppCompat_PopupMenu = 2131099770;
-			
-			// aapt resource value: 0x7f06007b
-			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131099771;
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131099822;
 			
 			// aapt resource value: 0x7f0600af
-			public const int Base_Widget_AppCompat_PopupWindow = 2131099823;
-			
-			// aapt resource value: 0x7f06001d
-			public const int Base_Widget_AppCompat_ProgressBar = 2131099677;
-			
-			// aapt resource value: 0x7f06001e
-			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131099678;
-			
-			// aapt resource value: 0x7f06007c
-			public const int Base_Widget_AppCompat_RatingBar = 2131099772;
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131099823;
 			
 			// aapt resource value: 0x7f0600b0
-			public const int Base_Widget_AppCompat_SearchView = 2131099824;
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131099824;
+			
+			// aapt resource value: 0x7f060070
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131099760;
+			
+			// aapt resource value: 0x7f060071
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131099761;
+			
+			// aapt resource value: 0x7f060072
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131099762;
+			
+			// aapt resource value: 0x7f060073
+			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131099763;
+			
+			// aapt resource value: 0x7f060074
+			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131099764;
+			
+			// aapt resource value: 0x7f060075
+			public const int Base_Widget_AppCompat_ListPopupWindow = 2131099765;
+			
+			// aapt resource value: 0x7f060076
+			public const int Base_Widget_AppCompat_ListView = 2131099766;
+			
+			// aapt resource value: 0x7f060077
+			public const int Base_Widget_AppCompat_ListView_DropDown = 2131099767;
+			
+			// aapt resource value: 0x7f060078
+			public const int Base_Widget_AppCompat_ListView_Menu = 2131099768;
+			
+			// aapt resource value: 0x7f060079
+			public const int Base_Widget_AppCompat_PopupMenu = 2131099769;
+			
+			// aapt resource value: 0x7f06007a
+			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131099770;
 			
 			// aapt resource value: 0x7f0600b1
-			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131099825;
+			public const int Base_Widget_AppCompat_PopupWindow = 2131099825;
 			
-			// aapt resource value: 0x7f06001f
-			public const int Base_Widget_AppCompat_Spinner = 2131099679;
+			// aapt resource value: 0x7f06001c
+			public const int Base_Widget_AppCompat_ProgressBar = 2131099676;
 			
-			// aapt resource value: 0x7f06007d
-			public const int Base_Widget_AppCompat_Spinner_DropDown_ActionBar = 2131099773;
+			// aapt resource value: 0x7f06001d
+			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131099677;
 			
-			// aapt resource value: 0x7f06007e
-			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131099774;
-			
-			// aapt resource value: 0x7f06007f
-			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131099775;
+			// aapt resource value: 0x7f06007b
+			public const int Base_Widget_AppCompat_RatingBar = 2131099771;
 			
 			// aapt resource value: 0x7f0600b2
-			public const int Base_Widget_AppCompat_Toolbar = 2131099826;
+			public const int Base_Widget_AppCompat_SearchView = 2131099826;
 			
-			// aapt resource value: 0x7f060080
-			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131099776;
+			// aapt resource value: 0x7f0600b3
+			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131099827;
+			
+			// aapt resource value: 0x7f06007c
+			public const int Base_Widget_AppCompat_Spinner = 2131099772;
+			
+			// aapt resource value: 0x7f06007d
+			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131099773;
+			
+			// aapt resource value: 0x7f06007e
+			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131099774;
+			
+			// aapt resource value: 0x7f0600b4
+			public const int Base_Widget_AppCompat_Toolbar = 2131099828;
+			
+			// aapt resource value: 0x7f06007f
+			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131099775;
 			
 			// aapt resource value: 0x7f060001
 			public const int Base_Widget_Design_TabLayout = 2131099649;
 			
-			// aapt resource value: 0x7f060134
-			public const int BottomSheet = 2131099956;
-			
-			// aapt resource value: 0x7f060135
-			public const int BottomSheet_Animation = 2131099957;
-			
-			// aapt resource value: 0x7f060136
-			public const int BottomSheet_Dialog = 2131099958;
-			
-			// aapt resource value: 0x7f060137
-			public const int BottomSheet_Dialog_Dark = 2131099959;
-			
-			// aapt resource value: 0x7f060138
-			public const int BottomSheet_Grid = 2131099960;
-			
 			// aapt resource value: 0x7f060139
-			public const int BottomSheet_GridItem = 2131099961;
+			public const int BottomSheet = 2131099961;
 			
 			// aapt resource value: 0x7f06013a
-			public const int BottomSheet_GridItemImage = 2131099962;
+			public const int BottomSheet_Animation = 2131099962;
 			
 			// aapt resource value: 0x7f06013b
-			public const int BottomSheet_GridItemTitle = 2131099963;
+			public const int BottomSheet_Dialog = 2131099963;
 			
 			// aapt resource value: 0x7f06013c
-			public const int BottomSheet_Icon = 2131099964;
+			public const int BottomSheet_Dialog_Dark = 2131099964;
 			
 			// aapt resource value: 0x7f06013d
-			public const int BottomSheet_List = 2131099965;
+			public const int BottomSheet_Grid = 2131099965;
 			
 			// aapt resource value: 0x7f06013e
-			public const int BottomSheet_List_Dark = 2131099966;
+			public const int BottomSheet_GridItem = 2131099966;
 			
 			// aapt resource value: 0x7f06013f
-			public const int BottomSheet_ListDivider = 2131099967;
+			public const int BottomSheet_GridItemImage = 2131099967;
 			
 			// aapt resource value: 0x7f060140
-			public const int BottomSheet_ListItem = 2131099968;
+			public const int BottomSheet_GridItemTitle = 2131099968;
 			
 			// aapt resource value: 0x7f060141
-			public const int BottomSheet_ListItemImage = 2131099969;
+			public const int BottomSheet_Icon = 2131099969;
 			
 			// aapt resource value: 0x7f060142
-			public const int BottomSheet_ListItemTitle = 2131099970;
+			public const int BottomSheet_List = 2131099970;
 			
 			// aapt resource value: 0x7f060143
-			public const int BottomSheet_Title = 2131099971;
+			public const int BottomSheet_List_Dark = 2131099971;
 			
 			// aapt resource value: 0x7f060144
-			public const int BottomSheet_TopDivider = 2131099972;
+			public const int BottomSheet_ListDivider = 2131099972;
 			
-			// aapt resource value: 0x7f06014e
-			public const int PaperAuthorLabel = 2131099982;
+			// aapt resource value: 0x7f060145
+			public const int BottomSheet_ListItem = 2131099973;
 			
-			// aapt resource value: 0x7f06014d
-			public const int PaperTitleLabel = 2131099981;
+			// aapt resource value: 0x7f060146
+			public const int BottomSheet_ListItemImage = 2131099974;
 			
-			// aapt resource value: 0x7f060020
-			public const int Platform_AppCompat = 2131099680;
+			// aapt resource value: 0x7f060147
+			public const int BottomSheet_ListItemTitle = 2131099975;
 			
-			// aapt resource value: 0x7f060021
-			public const int Platform_AppCompat_Light = 2131099681;
+			// aapt resource value: 0x7f060148
+			public const int BottomSheet_Title = 2131099976;
+			
+			// aapt resource value: 0x7f060149
+			public const int BottomSheet_TopDivider = 2131099977;
+			
+			// aapt resource value: 0x7f060153
+			public const int PaperAuthorLabel = 2131099987;
+			
+			// aapt resource value: 0x7f060152
+			public const int PaperTitleLabel = 2131099986;
+			
+			// aapt resource value: 0x7f06001e
+			public const int Platform_AppCompat = 2131099678;
+			
+			// aapt resource value: 0x7f06001f
+			public const int Platform_AppCompat_Light = 2131099679;
+			
+			// aapt resource value: 0x7f060080
+			public const int Platform_ThemeOverlay_AppCompat = 2131099776;
 			
 			// aapt resource value: 0x7f060081
 			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131099777;
@@ -4664,200 +3468,206 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f060082
 			public const int Platform_ThemeOverlay_AppCompat_Light = 2131099778;
 			
-			// aapt resource value: 0x7f060022
-			public const int Platform_V11_AppCompat = 2131099682;
+			// aapt resource value: 0x7f060020
+			public const int Platform_V11_AppCompat = 2131099680;
 			
-			// aapt resource value: 0x7f060023
-			public const int Platform_V11_AppCompat_Light = 2131099683;
+			// aapt resource value: 0x7f060021
+			public const int Platform_V11_AppCompat_Light = 2131099681;
+			
+			// aapt resource value: 0x7f060028
+			public const int Platform_V14_AppCompat = 2131099688;
 			
 			// aapt resource value: 0x7f060029
-			public const int Platform_V14_AppCompat = 2131099689;
+			public const int Platform_V14_AppCompat_Light = 2131099689;
 			
-			// aapt resource value: 0x7f06002a
-			public const int Platform_V14_AppCompat_Light = 2131099690;
+			// aapt resource value: 0x7f060022
+			public const int Platform_Widget_AppCompat_Spinner = 2131099682;
+			
+			// aapt resource value: 0x7f06002f
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131099695;
 			
 			// aapt resource value: 0x7f060030
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131099696;
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131099696;
 			
 			// aapt resource value: 0x7f060031
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131099697;
+			public const int RtlOverlay_Widget_AppCompat_ActionButton_Overflow = 2131099697;
 			
 			// aapt resource value: 0x7f060032
-			public const int RtlOverlay_Widget_AppCompat_ActionButton_Overflow = 2131099698;
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131099698;
 			
 			// aapt resource value: 0x7f060033
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131099699;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131099699;
 			
 			// aapt resource value: 0x7f060034
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131099700;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131099700;
 			
 			// aapt resource value: 0x7f060035
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131099701;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131099701;
 			
 			// aapt resource value: 0x7f060036
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131099702;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131099702;
 			
 			// aapt resource value: 0x7f060037
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131099703;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131099703;
 			
 			// aapt resource value: 0x7f060038
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131099704;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131099704;
 			
 			// aapt resource value: 0x7f060039
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131099705;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131099705;
 			
 			// aapt resource value: 0x7f06003a
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131099706;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131099706;
 			
 			// aapt resource value: 0x7f06003b
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131099707;
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131099707;
 			
-			// aapt resource value: 0x7f06003c
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131099708;
+			// aapt resource value: 0x7f06014a
+			public const int Text = 2131099978;
 			
-			// aapt resource value: 0x7f06003d
-			public const int RtlOverlay_Widget_AppCompat_Toolbar_Button_Navigation = 2131099709;
+			// aapt resource value: 0x7f06014b
+			public const int Text_Headline = 2131099979;
 			
-			// aapt resource value: 0x7f060145
-			public const int Text = 2131099973;
+			// aapt resource value: 0x7f06014c
+			public const int Text_Hint = 2131099980;
 			
-			// aapt resource value: 0x7f060146
-			public const int Text_Headline = 2131099974;
+			// aapt resource value: 0x7f06014d
+			public const int Text_Subhead = 2131099981;
 			
-			// aapt resource value: 0x7f060147
-			public const int Text_Hint = 2131099975;
-			
-			// aapt resource value: 0x7f060148
-			public const int Text_Subhead = 2131099976;
-			
-			// aapt resource value: 0x7f060149
-			public const int Text_Title = 2131099977;
-			
-			// aapt resource value: 0x7f0600b3
-			public const int TextAppearance_AppCompat = 2131099827;
-			
-			// aapt resource value: 0x7f0600b4
-			public const int TextAppearance_AppCompat_Body1 = 2131099828;
+			// aapt resource value: 0x7f06014e
+			public const int Text_Title = 2131099982;
 			
 			// aapt resource value: 0x7f0600b5
-			public const int TextAppearance_AppCompat_Body2 = 2131099829;
+			public const int TextAppearance_AppCompat = 2131099829;
 			
 			// aapt resource value: 0x7f0600b6
-			public const int TextAppearance_AppCompat_Button = 2131099830;
+			public const int TextAppearance_AppCompat_Body1 = 2131099830;
 			
 			// aapt resource value: 0x7f0600b7
-			public const int TextAppearance_AppCompat_Caption = 2131099831;
+			public const int TextAppearance_AppCompat_Body2 = 2131099831;
 			
 			// aapt resource value: 0x7f0600b8
-			public const int TextAppearance_AppCompat_Display1 = 2131099832;
+			public const int TextAppearance_AppCompat_Button = 2131099832;
 			
 			// aapt resource value: 0x7f0600b9
-			public const int TextAppearance_AppCompat_Display2 = 2131099833;
+			public const int TextAppearance_AppCompat_Caption = 2131099833;
 			
 			// aapt resource value: 0x7f0600ba
-			public const int TextAppearance_AppCompat_Display3 = 2131099834;
+			public const int TextAppearance_AppCompat_Display1 = 2131099834;
 			
 			// aapt resource value: 0x7f0600bb
-			public const int TextAppearance_AppCompat_Display4 = 2131099835;
+			public const int TextAppearance_AppCompat_Display2 = 2131099835;
 			
 			// aapt resource value: 0x7f0600bc
-			public const int TextAppearance_AppCompat_Headline = 2131099836;
+			public const int TextAppearance_AppCompat_Display3 = 2131099836;
 			
 			// aapt resource value: 0x7f0600bd
-			public const int TextAppearance_AppCompat_Inverse = 2131099837;
+			public const int TextAppearance_AppCompat_Display4 = 2131099837;
 			
 			// aapt resource value: 0x7f0600be
-			public const int TextAppearance_AppCompat_Large = 2131099838;
+			public const int TextAppearance_AppCompat_Headline = 2131099838;
 			
 			// aapt resource value: 0x7f0600bf
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131099839;
+			public const int TextAppearance_AppCompat_Inverse = 2131099839;
 			
 			// aapt resource value: 0x7f0600c0
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131099840;
+			public const int TextAppearance_AppCompat_Large = 2131099840;
 			
 			// aapt resource value: 0x7f0600c1
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131099841;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131099841;
 			
 			// aapt resource value: 0x7f0600c2
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131099842;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131099842;
 			
 			// aapt resource value: 0x7f0600c3
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131099843;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131099843;
 			
 			// aapt resource value: 0x7f0600c4
-			public const int TextAppearance_AppCompat_Medium = 2131099844;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131099844;
 			
 			// aapt resource value: 0x7f0600c5
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131099845;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131099845;
 			
 			// aapt resource value: 0x7f0600c6
-			public const int TextAppearance_AppCompat_Menu = 2131099846;
+			public const int TextAppearance_AppCompat_Medium = 2131099846;
 			
 			// aapt resource value: 0x7f0600c7
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131099847;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131099847;
 			
 			// aapt resource value: 0x7f0600c8
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131099848;
+			public const int TextAppearance_AppCompat_Menu = 2131099848;
 			
 			// aapt resource value: 0x7f0600c9
-			public const int TextAppearance_AppCompat_Small = 2131099849;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131099849;
 			
 			// aapt resource value: 0x7f0600ca
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131099850;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131099850;
 			
 			// aapt resource value: 0x7f0600cb
-			public const int TextAppearance_AppCompat_Subhead = 2131099851;
+			public const int TextAppearance_AppCompat_Small = 2131099851;
 			
 			// aapt resource value: 0x7f0600cc
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131099852;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131099852;
 			
 			// aapt resource value: 0x7f0600cd
-			public const int TextAppearance_AppCompat_Title = 2131099853;
+			public const int TextAppearance_AppCompat_Subhead = 2131099853;
 			
 			// aapt resource value: 0x7f0600ce
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131099854;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131099854;
 			
 			// aapt resource value: 0x7f0600cf
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131099855;
+			public const int TextAppearance_AppCompat_Title = 2131099855;
 			
 			// aapt resource value: 0x7f0600d0
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131099856;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131099856;
 			
 			// aapt resource value: 0x7f0600d1
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131099857;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131099857;
 			
 			// aapt resource value: 0x7f0600d2
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131099858;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131099858;
 			
 			// aapt resource value: 0x7f0600d3
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131099859;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131099859;
 			
 			// aapt resource value: 0x7f0600d4
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131099860;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131099860;
 			
 			// aapt resource value: 0x7f0600d5
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131099861;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131099861;
 			
 			// aapt resource value: 0x7f0600d6
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131099862;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131099862;
 			
 			// aapt resource value: 0x7f0600d7
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131099863;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131099863;
 			
 			// aapt resource value: 0x7f0600d8
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131099864;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131099864;
 			
 			// aapt resource value: 0x7f0600d9
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131099865;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131099865;
 			
 			// aapt resource value: 0x7f0600da
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131099866;
+			public const int TextAppearance_AppCompat_Widget_Button = 2131099866;
 			
 			// aapt resource value: 0x7f0600db
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131099867;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131099867;
 			
 			// aapt resource value: 0x7f0600dc
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131099868;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131099868;
+			
+			// aapt resource value: 0x7f0600dd
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131099869;
+			
+			// aapt resource value: 0x7f0600de
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131099870;
+			
+			// aapt resource value: 0x7f0600df
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131099871;
+			
+			// aapt resource value: 0x7f0600e0
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131099872;
 			
 			// aapt resource value: 0x7f060002
 			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131099650;
@@ -4869,325 +3679,325 @@ namespace WhitePaperBible.Droid
 			public const int TextAppearance_Design_Hint = 2131099652;
 			
 			// aapt resource value: 0x7f060005
-			public const int TextAppearance_Design_Snackbar_Action = 2131099653;
+			public const int TextAppearance_Design_Snackbar_Message = 2131099653;
 			
 			// aapt resource value: 0x7f060006
-			public const int TextAppearance_Design_Snackbar_Message = 2131099654;
+			public const int TextAppearance_Design_Tab = 2131099654;
 			
-			// aapt resource value: 0x7f060007
-			public const int TextAppearance_Design_Tab = 2131099655;
+			// aapt resource value: 0x7f06002a
+			public const int TextAppearance_StatusBar_EventContent = 2131099690;
 			
 			// aapt resource value: 0x7f06002b
-			public const int TextAppearance_StatusBar_EventContent = 2131099691;
+			public const int TextAppearance_StatusBar_EventContent_Info = 2131099691;
 			
 			// aapt resource value: 0x7f06002c
-			public const int TextAppearance_StatusBar_EventContent_Info = 2131099692;
+			public const int TextAppearance_StatusBar_EventContent_Line2 = 2131099692;
 			
 			// aapt resource value: 0x7f06002d
-			public const int TextAppearance_StatusBar_EventContent_Line2 = 2131099693;
+			public const int TextAppearance_StatusBar_EventContent_Time = 2131099693;
 			
 			// aapt resource value: 0x7f06002e
-			public const int TextAppearance_StatusBar_EventContent_Time = 2131099694;
-			
-			// aapt resource value: 0x7f06002f
-			public const int TextAppearance_StatusBar_EventContent_Title = 2131099695;
-			
-			// aapt resource value: 0x7f0600dd
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131099869;
-			
-			// aapt resource value: 0x7f0600de
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131099870;
-			
-			// aapt resource value: 0x7f0600df
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131099871;
-			
-			// aapt resource value: 0x7f0600e0
-			public const int Theme_AppCompat = 2131099872;
+			public const int TextAppearance_StatusBar_EventContent_Title = 2131099694;
 			
 			// aapt resource value: 0x7f0600e1
-			public const int Theme_AppCompat_CompactMenu = 2131099873;
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131099873;
 			
 			// aapt resource value: 0x7f0600e2
-			public const int Theme_AppCompat_Dialog = 2131099874;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131099874;
 			
 			// aapt resource value: 0x7f0600e3
-			public const int Theme_AppCompat_Dialog_Alert = 2131099875;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131099875;
 			
 			// aapt resource value: 0x7f0600e4
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131099876;
+			public const int Theme_AppCompat = 2131099876;
 			
 			// aapt resource value: 0x7f0600e5
-			public const int Theme_AppCompat_DialogWhenLarge = 2131099877;
+			public const int Theme_AppCompat_CompactMenu = 2131099877;
 			
 			// aapt resource value: 0x7f0600e6
-			public const int Theme_AppCompat_Light = 2131099878;
+			public const int Theme_AppCompat_Dialog = 2131099878;
 			
 			// aapt resource value: 0x7f0600e7
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131099879;
+			public const int Theme_AppCompat_Dialog_Alert = 2131099879;
 			
 			// aapt resource value: 0x7f0600e8
-			public const int Theme_AppCompat_Light_Dialog = 2131099880;
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131099880;
 			
 			// aapt resource value: 0x7f0600e9
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131099881;
+			public const int Theme_AppCompat_DialogWhenLarge = 2131099881;
 			
 			// aapt resource value: 0x7f0600ea
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131099882;
+			public const int Theme_AppCompat_Light = 2131099882;
 			
 			// aapt resource value: 0x7f0600eb
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131099883;
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131099883;
 			
 			// aapt resource value: 0x7f0600ec
-			public const int Theme_AppCompat_Light_NoActionBar = 2131099884;
+			public const int Theme_AppCompat_Light_Dialog = 2131099884;
 			
 			// aapt resource value: 0x7f0600ed
-			public const int Theme_AppCompat_NoActionBar = 2131099885;
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131099885;
 			
 			// aapt resource value: 0x7f0600ee
-			public const int ThemeOverlay_AppCompat = 2131099886;
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131099886;
 			
 			// aapt resource value: 0x7f0600ef
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131099887;
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131099887;
 			
 			// aapt resource value: 0x7f0600f0
-			public const int ThemeOverlay_AppCompat_Dark = 2131099888;
+			public const int Theme_AppCompat_Light_NoActionBar = 2131099888;
 			
 			// aapt resource value: 0x7f0600f1
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131099889;
+			public const int Theme_AppCompat_NoActionBar = 2131099889;
 			
 			// aapt resource value: 0x7f0600f2
-			public const int ThemeOverlay_AppCompat_Light = 2131099890;
-			
-			// aapt resource value: 0x7f06014a
-			public const int WPBTheme = 2131099978;
-			
-			// aapt resource value: 0x7f06014b
-			public const int WPBTheme_Base = 2131099979;
-			
-			// aapt resource value: 0x7f06014c
-			public const int WPBTheme_BottomBar = 2131099980;
+			public const int ThemeOverlay_AppCompat = 2131099890;
 			
 			// aapt resource value: 0x7f0600f3
-			public const int Widget_AppCompat_ActionBar = 2131099891;
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131099891;
 			
 			// aapt resource value: 0x7f0600f4
-			public const int Widget_AppCompat_ActionBar_Solid = 2131099892;
+			public const int ThemeOverlay_AppCompat_Dark = 2131099892;
 			
 			// aapt resource value: 0x7f0600f5
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131099893;
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131099893;
 			
 			// aapt resource value: 0x7f0600f6
-			public const int Widget_AppCompat_ActionBar_TabText = 2131099894;
+			public const int ThemeOverlay_AppCompat_Light = 2131099894;
+			
+			// aapt resource value: 0x7f06014f
+			public const int WPBTheme = 2131099983;
+			
+			// aapt resource value: 0x7f060150
+			public const int WPBTheme_Base = 2131099984;
+			
+			// aapt resource value: 0x7f060151
+			public const int WPBTheme_BottomBar = 2131099985;
 			
 			// aapt resource value: 0x7f0600f7
-			public const int Widget_AppCompat_ActionBar_TabView = 2131099895;
+			public const int Widget_AppCompat_ActionBar = 2131099895;
 			
 			// aapt resource value: 0x7f0600f8
-			public const int Widget_AppCompat_ActionButton = 2131099896;
+			public const int Widget_AppCompat_ActionBar_Solid = 2131099896;
 			
 			// aapt resource value: 0x7f0600f9
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131099897;
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131099897;
 			
 			// aapt resource value: 0x7f0600fa
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131099898;
+			public const int Widget_AppCompat_ActionBar_TabText = 2131099898;
 			
 			// aapt resource value: 0x7f0600fb
-			public const int Widget_AppCompat_ActionMode = 2131099899;
+			public const int Widget_AppCompat_ActionBar_TabView = 2131099899;
 			
 			// aapt resource value: 0x7f0600fc
-			public const int Widget_AppCompat_ActivityChooserView = 2131099900;
+			public const int Widget_AppCompat_ActionButton = 2131099900;
 			
 			// aapt resource value: 0x7f0600fd
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131099901;
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131099901;
 			
 			// aapt resource value: 0x7f0600fe
-			public const int Widget_AppCompat_Button = 2131099902;
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131099902;
 			
 			// aapt resource value: 0x7f0600ff
-			public const int Widget_AppCompat_Button_Borderless = 2131099903;
+			public const int Widget_AppCompat_ActionMode = 2131099903;
 			
 			// aapt resource value: 0x7f060100
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131099904;
+			public const int Widget_AppCompat_ActivityChooserView = 2131099904;
 			
 			// aapt resource value: 0x7f060101
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131099905;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131099905;
 			
 			// aapt resource value: 0x7f060102
-			public const int Widget_AppCompat_Button_Small = 2131099906;
+			public const int Widget_AppCompat_Button = 2131099906;
 			
 			// aapt resource value: 0x7f060103
-			public const int Widget_AppCompat_ButtonBar = 2131099907;
+			public const int Widget_AppCompat_Button_Borderless = 2131099907;
 			
 			// aapt resource value: 0x7f060104
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131099908;
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131099908;
 			
 			// aapt resource value: 0x7f060105
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131099909;
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131099909;
 			
 			// aapt resource value: 0x7f060106
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131099910;
+			public const int Widget_AppCompat_Button_Colored = 2131099910;
 			
 			// aapt resource value: 0x7f060107
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131099911;
+			public const int Widget_AppCompat_Button_Small = 2131099911;
 			
 			// aapt resource value: 0x7f060108
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131099912;
+			public const int Widget_AppCompat_ButtonBar = 2131099912;
 			
 			// aapt resource value: 0x7f060109
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131099913;
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131099913;
 			
 			// aapt resource value: 0x7f06010a
-			public const int Widget_AppCompat_EditText = 2131099914;
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131099914;
 			
 			// aapt resource value: 0x7f06010b
-			public const int Widget_AppCompat_Light_ActionBar = 2131099915;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131099915;
 			
 			// aapt resource value: 0x7f06010c
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131099916;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131099916;
 			
 			// aapt resource value: 0x7f06010d
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131099917;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131099917;
 			
 			// aapt resource value: 0x7f06010e
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131099918;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131099918;
 			
 			// aapt resource value: 0x7f06010f
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131099919;
+			public const int Widget_AppCompat_EditText = 2131099919;
 			
 			// aapt resource value: 0x7f060110
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131099920;
+			public const int Widget_AppCompat_Light_ActionBar = 2131099920;
 			
 			// aapt resource value: 0x7f060111
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131099921;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131099921;
 			
 			// aapt resource value: 0x7f060112
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131099922;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131099922;
 			
 			// aapt resource value: 0x7f060113
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131099923;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131099923;
 			
 			// aapt resource value: 0x7f060114
-			public const int Widget_AppCompat_Light_ActionButton = 2131099924;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131099924;
 			
 			// aapt resource value: 0x7f060115
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131099925;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131099925;
 			
 			// aapt resource value: 0x7f060116
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131099926;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131099926;
 			
 			// aapt resource value: 0x7f060117
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131099927;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131099927;
 			
 			// aapt resource value: 0x7f060118
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131099928;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131099928;
 			
 			// aapt resource value: 0x7f060119
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131099929;
+			public const int Widget_AppCompat_Light_ActionButton = 2131099929;
 			
 			// aapt resource value: 0x7f06011a
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131099930;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131099930;
 			
 			// aapt resource value: 0x7f06011b
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131099931;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131099931;
 			
 			// aapt resource value: 0x7f06011c
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131099932;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131099932;
 			
 			// aapt resource value: 0x7f06011d
-			public const int Widget_AppCompat_Light_PopupMenu = 2131099933;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131099933;
 			
 			// aapt resource value: 0x7f06011e
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131099934;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131099934;
 			
 			// aapt resource value: 0x7f06011f
-			public const int Widget_AppCompat_Light_SearchView = 2131099935;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131099935;
 			
 			// aapt resource value: 0x7f060120
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131099936;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131099936;
 			
 			// aapt resource value: 0x7f060121
-			public const int Widget_AppCompat_ListPopupWindow = 2131099937;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131099937;
 			
 			// aapt resource value: 0x7f060122
-			public const int Widget_AppCompat_ListView = 2131099938;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131099938;
 			
 			// aapt resource value: 0x7f060123
-			public const int Widget_AppCompat_ListView_DropDown = 2131099939;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131099939;
 			
 			// aapt resource value: 0x7f060124
-			public const int Widget_AppCompat_ListView_Menu = 2131099940;
+			public const int Widget_AppCompat_Light_SearchView = 2131099940;
 			
 			// aapt resource value: 0x7f060125
-			public const int Widget_AppCompat_PopupMenu = 2131099941;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131099941;
 			
 			// aapt resource value: 0x7f060126
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131099942;
+			public const int Widget_AppCompat_ListPopupWindow = 2131099942;
 			
 			// aapt resource value: 0x7f060127
-			public const int Widget_AppCompat_PopupWindow = 2131099943;
+			public const int Widget_AppCompat_ListView = 2131099943;
 			
 			// aapt resource value: 0x7f060128
-			public const int Widget_AppCompat_ProgressBar = 2131099944;
+			public const int Widget_AppCompat_ListView_DropDown = 2131099944;
 			
 			// aapt resource value: 0x7f060129
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131099945;
+			public const int Widget_AppCompat_ListView_Menu = 2131099945;
 			
 			// aapt resource value: 0x7f06012a
-			public const int Widget_AppCompat_RatingBar = 2131099946;
+			public const int Widget_AppCompat_PopupMenu = 2131099946;
 			
 			// aapt resource value: 0x7f06012b
-			public const int Widget_AppCompat_SearchView = 2131099947;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131099947;
 			
 			// aapt resource value: 0x7f06012c
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131099948;
+			public const int Widget_AppCompat_PopupWindow = 2131099948;
 			
 			// aapt resource value: 0x7f06012d
-			public const int Widget_AppCompat_Spinner = 2131099949;
+			public const int Widget_AppCompat_ProgressBar = 2131099949;
 			
 			// aapt resource value: 0x7f06012e
-			public const int Widget_AppCompat_Spinner_DropDown = 2131099950;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131099950;
 			
 			// aapt resource value: 0x7f06012f
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131099951;
+			public const int Widget_AppCompat_RatingBar = 2131099951;
 			
 			// aapt resource value: 0x7f060130
-			public const int Widget_AppCompat_Spinner_Underlined = 2131099952;
+			public const int Widget_AppCompat_SearchView = 2131099952;
 			
 			// aapt resource value: 0x7f060131
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131099953;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131099953;
 			
 			// aapt resource value: 0x7f060132
-			public const int Widget_AppCompat_Toolbar = 2131099954;
+			public const int Widget_AppCompat_Spinner = 2131099954;
 			
 			// aapt resource value: 0x7f060133
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131099955;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131099955;
+			
+			// aapt resource value: 0x7f060134
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131099956;
+			
+			// aapt resource value: 0x7f060135
+			public const int Widget_AppCompat_Spinner_Underlined = 2131099957;
+			
+			// aapt resource value: 0x7f060136
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131099958;
+			
+			// aapt resource value: 0x7f060137
+			public const int Widget_AppCompat_Toolbar = 2131099959;
+			
+			// aapt resource value: 0x7f060138
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131099960;
+			
+			// aapt resource value: 0x7f060007
+			public const int Widget_Design_AppBarLayout = 2131099655;
 			
 			// aapt resource value: 0x7f060008
-			public const int Widget_Design_AppBarLayout = 2131099656;
+			public const int Widget_Design_CollapsingToolbar = 2131099656;
 			
 			// aapt resource value: 0x7f060009
-			public const int Widget_Design_CollapsingToolbar = 2131099657;
+			public const int Widget_Design_CoordinatorLayout = 2131099657;
 			
 			// aapt resource value: 0x7f06000a
-			public const int Widget_Design_CoordinatorLayout = 2131099658;
+			public const int Widget_Design_FloatingActionButton = 2131099658;
 			
 			// aapt resource value: 0x7f06000b
-			public const int Widget_Design_FloatingActionButton = 2131099659;
+			public const int Widget_Design_NavigationView = 2131099659;
 			
 			// aapt resource value: 0x7f06000c
-			public const int Widget_Design_NavigationView = 2131099660;
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131099660;
 			
 			// aapt resource value: 0x7f06000d
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131099661;
-			
-			// aapt resource value: 0x7f06000e
-			public const int Widget_Design_Snackbar = 2131099662;
+			public const int Widget_Design_Snackbar = 2131099661;
 			
 			// aapt resource value: 0x7f060000
 			public const int Widget_Design_TabLayout = 2131099648;
 			
-			// aapt resource value: 0x7f06000f
-			public const int Widget_Design_TextInputLayout = 2131099663;
+			// aapt resource value: 0x7f06000e
+			public const int Widget_Design_TextInputLayout = 2131099662;
 			
 			static Style()
 			{
@@ -5220,13 +4030,7 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] ActionBar = new int[]
 			{
-					2130772020,
-					2130772022,
-					2130772023,
-					2130772024,
-					2130772025,
 					2130772026,
-					2130772027,
 					2130772028,
 					2130772029,
 					2130772030,
@@ -5246,7 +4050,13 @@ namespace WhitePaperBible.Droid
 					2130772044,
 					2130772045,
 					2130772046,
-					2130772144};
+					2130772047,
+					2130772048,
+					2130772049,
+					2130772050,
+					2130772051,
+					2130772052,
+					2130772148};
 			
 			// aapt resource value: 10
 			public const int ActionBar_background = 10;
@@ -5347,12 +4157,12 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] ActionMode = new int[]
 			{
-					2130772020,
 					2130772026,
-					2130772027,
-					2130772031,
+					2130772032,
 					2130772033,
-					2130772047};
+					2130772037,
+					2130772039,
+					2130772053};
 			
 			// aapt resource value: 3
 			public const int ActionMode_background = 3;
@@ -5374,8 +4184,8 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] ActivityChooserView = new int[]
 			{
-					2130772048,
-					2130772049};
+					2130772054,
+					2130772055};
 			
 			// aapt resource value: 1
 			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
@@ -5386,11 +4196,11 @@ namespace WhitePaperBible.Droid
 			public static int[] AlertDialog = new int[]
 			{
 					16842994,
-					2130772050,
-					2130772051,
-					2130772052,
-					2130772053,
-					2130772054};
+					2130772056,
+					2130772057,
+					2130772058,
+					2130772059,
+					2130772060};
 			
 			// aapt resource value: 0
 			public const int AlertDialog_android_layout = 0;
@@ -5413,18 +4223,22 @@ namespace WhitePaperBible.Droid
 			public static int[] AppBarLayout = new int[]
 			{
 					16842964,
-					2130772045};
+					2130771968,
+					2130772051};
 			
 			// aapt resource value: 0
 			public const int AppBarLayout_android_background = 0;
 			
+			// aapt resource value: 2
+			public const int AppBarLayout_elevation = 2;
+			
 			// aapt resource value: 1
-			public const int AppBarLayout_elevation = 1;
+			public const int AppBarLayout_expanded = 1;
 			
 			public static int[] AppBarLayout_LayoutParams = new int[]
 			{
-					2130771968,
-					2130771969};
+					2130771969,
+					2130771970};
 			
 			// aapt resource value: 0
 			public const int AppBarLayout_LayoutParams_layout_scrollFlags = 0;
@@ -5435,7 +4249,7 @@ namespace WhitePaperBible.Droid
 			public static int[] AppCompatTextView = new int[]
 			{
 					16842804,
-					2130772055};
+					2130772061};
 			
 			// aapt resource value: 0
 			public const int AppCompatTextView_android_textAppearance = 0;
@@ -5445,21 +4259,21 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] BottomSheet = new int[]
 			{
-					2130772220,
-					2130772221,
-					2130772222,
-					2130772223,
-					2130772224,
-					2130772225,
-					2130772226,
-					2130772227,
 					2130772228,
 					2130772229,
 					2130772230,
 					2130772231,
 					2130772232,
 					2130772233,
-					2130772234};
+					2130772234,
+					2130772235,
+					2130772236,
+					2130772237,
+					2130772238,
+					2130772239,
+					2130772240,
+					2130772241,
+					2130772242};
 			
 			// aapt resource value: 0
 			public const int BottomSheet_bottomSheetStyle = 0;
@@ -5508,8 +4322,8 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] CollapsingAppBarLayout_LayoutParams = new int[]
 			{
-					2130771970,
-					2130771971};
+					2130771971,
+					2130771972};
 			
 			// aapt resource value: 0
 			public const int CollapsingAppBarLayout_LayoutParams_layout_collapseMode = 0;
@@ -5519,7 +4333,6 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] CollapsingToolbarLayout = new int[]
 			{
-					2130771972,
 					2130771973,
 					2130771974,
 					2130771975,
@@ -5528,13 +4341,24 @@ namespace WhitePaperBible.Droid
 					2130771978,
 					2130771979,
 					2130771980,
-					2130771981};
+					2130771981,
+					2130771982,
+					2130771983,
+					2130771984,
+					2130771985,
+					2130772028};
+			
+			// aapt resource value: 10
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 10;
 			
 			// aapt resource value: 6
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 6;
 			
 			// aapt resource value: 7
 			public const int CollapsingToolbarLayout_contentScrim = 7;
+			
+			// aapt resource value: 11
+			public const int CollapsingToolbarLayout_expandedTitleGravity = 11;
 			
 			// aapt resource value: 0
 			public const int CollapsingToolbarLayout_expandedTitleMargin = 0;
@@ -5557,13 +4381,34 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 8
 			public const int CollapsingToolbarLayout_statusBarScrim = 8;
 			
+			// aapt resource value: 13
+			public const int CollapsingToolbarLayout_title = 13;
+			
+			// aapt resource value: 12
+			public const int CollapsingToolbarLayout_titleEnabled = 12;
+			
 			// aapt resource value: 9
 			public const int CollapsingToolbarLayout_toolbarId = 9;
 			
+			public static int[] CompoundButton = new int[]
+			{
+					16843015,
+					2130772062,
+					2130772063};
+			
+			// aapt resource value: 0
+			public const int CompoundButton_android_button = 0;
+			
+			// aapt resource value: 1
+			public const int CompoundButton_buttonTint = 1;
+			
+			// aapt resource value: 2
+			public const int CompoundButton_buttonTintMode = 2;
+			
 			public static int[] CoordinatorLayout = new int[]
 			{
-					2130771982,
-					2130771983};
+					2130771986,
+					2130771987};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_keylines = 0;
@@ -5574,10 +4419,10 @@ namespace WhitePaperBible.Droid
 			public static int[] CoordinatorLayout_LayoutParams = new int[]
 			{
 					16842931,
-					2130771984,
-					2130771985,
-					2130771986,
-					2130771987};
+					2130771988,
+					2130771989,
+					2130771990,
+					2130771991};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_LayoutParams_android_layout_gravity = 0;
@@ -5596,17 +4441,23 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] DrawerArrowToggle = new int[]
 			{
-					2130772056,
-					2130772057,
-					2130772058,
-					2130772059,
-					2130772060,
-					2130772061,
-					2130772062,
-					2130772063};
+					2130772064,
+					2130772065,
+					2130772066,
+					2130772067,
+					2130772068,
+					2130772069,
+					2130772070,
+					2130772071};
+			
+			// aapt resource value: 4
+			public const int DrawerArrowToggle_arrowHeadLength = 4;
+			
+			// aapt resource value: 5
+			public const int DrawerArrowToggle_arrowShaftLength = 5;
 			
 			// aapt resource value: 6
-			public const int DrawerArrowToggle_barSize = 6;
+			public const int DrawerArrowToggle_barLength = 6;
 			
 			// aapt resource value: 0
 			public const int DrawerArrowToggle_color = 0;
@@ -5617,28 +4468,22 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 3
 			public const int DrawerArrowToggle_gapBetweenBars = 3;
 			
-			// aapt resource value: 5
-			public const int DrawerArrowToggle_middleBarArrowSize = 5;
-			
 			// aapt resource value: 1
 			public const int DrawerArrowToggle_spinBars = 1;
 			
 			// aapt resource value: 7
 			public const int DrawerArrowToggle_thickness = 7;
 			
-			// aapt resource value: 4
-			public const int DrawerArrowToggle_topBottomBarArrowSize = 4;
-			
 			public static int[] FloatingActionButton = new int[]
 			{
 					16842964,
-					2130771988,
-					2130771989,
-					2130771990,
-					2130771991,
-					2130772045,
-					2130772218,
-					2130772219};
+					2130771992,
+					2130771993,
+					2130771994,
+					2130771995,
+					2130772051,
+					2130772226,
+					2130772227};
 			
 			// aapt resource value: 0
 			public const int FloatingActionButton_android_background = 0;
@@ -5671,10 +4516,10 @@ namespace WhitePaperBible.Droid
 					16843046,
 					16843047,
 					16843048,
-					2130772030,
-					2130772064,
-					2130772065,
-					2130772066};
+					2130772036,
+					2130772072,
+					2130772073,
+					2130772074};
 			
 			// aapt resource value: 2
 			public const int LinearLayoutCompat_android_baselineAligned = 2;
@@ -5775,10 +4620,10 @@ namespace WhitePaperBible.Droid
 					16843236,
 					16843237,
 					16843375,
-					2130772067,
-					2130772068,
-					2130772069,
-					2130772070};
+					2130772075,
+					2130772076,
+					2130772077,
+					2130772078};
 			
 			// aapt resource value: 14
 			public const int MenuItem_actionLayout = 14;
@@ -5840,7 +4685,7 @@ namespace WhitePaperBible.Droid
 					16843055,
 					16843056,
 					16843057,
-					2130772071};
+					2130772079};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;
@@ -5871,12 +4716,13 @@ namespace WhitePaperBible.Droid
 					16842964,
 					16842973,
 					16843039,
-					2130771992,
-					2130771993,
-					2130771994,
-					2130771995,
 					2130771996,
-					2130772045};
+					2130771997,
+					2130771998,
+					2130771999,
+					2130772000,
+					2130772001,
+					2130772051};
 			
 			// aapt resource value: 0
 			public const int NavigationView_android_background = 0;
@@ -5887,11 +4733,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 2
 			public const int NavigationView_android_maxWidth = 2;
 			
-			// aapt resource value: 8
-			public const int NavigationView_elevation = 8;
+			// aapt resource value: 9
+			public const int NavigationView_elevation = 9;
 			
-			// aapt resource value: 7
-			public const int NavigationView_headerLayout = 7;
+			// aapt resource value: 8
+			public const int NavigationView_headerLayout = 8;
 			
 			// aapt resource value: 6
 			public const int NavigationView_itemBackground = 6;
@@ -5899,87 +4745,19 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 4
 			public const int NavigationView_itemIconTint = 4;
 			
+			// aapt resource value: 7
+			public const int NavigationView_itemTextAppearance = 7;
+			
 			// aapt resource value: 5
 			public const int NavigationView_itemTextColor = 5;
 			
 			// aapt resource value: 3
 			public const int NavigationView_menu = 3;
 			
-			public static int[] PagerSlidingTabStrip = new int[]
-			{
-					2130772235,
-					2130772236,
-					2130772237,
-					2130772238,
-					2130772239,
-					2130772240,
-					2130772241,
-					2130772242,
-					2130772243,
-					2130772244,
-					2130772245,
-					2130772246,
-					2130772247,
-					2130772248,
-					2130772249,
-					2130772250,
-					2130772251};
-			
-			// aapt resource value: 2
-			public const int PagerSlidingTabStrip_pstsDividerColor = 2;
-			
-			// aapt resource value: 6
-			public const int PagerSlidingTabStrip_pstsDividerPadding = 6;
-			
-			// aapt resource value: 3
-			public const int PagerSlidingTabStrip_pstsDividerWidth = 3;
-			
-			// aapt resource value: 0
-			public const int PagerSlidingTabStrip_pstsIndicatorColor = 0;
-			
-			// aapt resource value: 4
-			public const int PagerSlidingTabStrip_pstsIndicatorHeight = 4;
-			
-			// aapt resource value: 12
-			public const int PagerSlidingTabStrip_pstsPaddingMiddle = 12;
-			
-			// aapt resource value: 8
-			public const int PagerSlidingTabStrip_pstsScrollOffset = 8;
-			
-			// aapt resource value: 10
-			public const int PagerSlidingTabStrip_pstsShouldExpand = 10;
-			
-			// aapt resource value: 9
-			public const int PagerSlidingTabStrip_pstsTabBackground = 9;
-			
-			// aapt resource value: 7
-			public const int PagerSlidingTabStrip_pstsTabPaddingLeftRight = 7;
-			
-			// aapt resource value: 11
-			public const int PagerSlidingTabStrip_pstsTextAllCaps = 11;
-			
-			// aapt resource value: 14
-			public const int PagerSlidingTabStrip_pstsTextAlpha = 14;
-			
-			// aapt resource value: 13
-			public const int PagerSlidingTabStrip_pstsTextColorSelected = 13;
-			
-			// aapt resource value: 16
-			public const int PagerSlidingTabStrip_pstsTextSelectedStyle = 16;
-			
-			// aapt resource value: 15
-			public const int PagerSlidingTabStrip_pstsTextStyle = 15;
-			
-			// aapt resource value: 1
-			public const int PagerSlidingTabStrip_pstsUnderlineColor = 1;
-			
-			// aapt resource value: 5
-			public const int PagerSlidingTabStrip_pstsUnderlineHeight = 5;
-			
 			public static int[] PopupWindow = new int[]
 			{
 					16843126,
-					2130772072};
+					2130772080};
 			
 			// aapt resource value: 0
 			public const int PopupWindow_android_popupBackground = 0;
@@ -5989,21 +4767,21 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] PopupWindowBackgroundState = new int[]
 			{
-					2130772073};
+					2130772081};
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
 			
 			public static int[] ScrimInsetsFrameLayout = new int[]
 			{
-					2130771997};
+					2130772002};
 			
 			// aapt resource value: 0
 			public const int ScrimInsetsFrameLayout_insetForeground = 0;
 			
 			public static int[] ScrollingViewBehavior_Params = new int[]
 			{
-					2130771998};
+					2130772003};
 			
 			// aapt resource value: 0
 			public const int ScrollingViewBehavior_Params_behavior_overlapTop = 0;
@@ -6014,19 +4792,19 @@ namespace WhitePaperBible.Droid
 					16843039,
 					16843296,
 					16843364,
-					2130772074,
-					2130772075,
-					2130772076,
-					2130772077,
-					2130772078,
-					2130772079,
-					2130772080,
-					2130772081,
 					2130772082,
 					2130772083,
 					2130772084,
 					2130772085,
-					2130772086};
+					2130772086,
+					2130772087,
+					2130772088,
+					2130772089,
+					2130772090,
+					2130772091,
+					2130772092,
+					2130772093,
+					2130772094};
 			
 			// aapt resource value: 0
 			public const int SearchView_android_focusable = 0;
@@ -6082,8 +4860,8 @@ namespace WhitePaperBible.Droid
 			public static int[] SnackbarLayout = new int[]
 			{
 					16843039,
-					2130771999,
-					2130772045};
+					2130772004,
+					2130772051};
 			
 			// aapt resource value: 0
 			public const int SnackbarLayout_android_maxWidth = 0;
@@ -6096,63 +4874,35 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] Spinner = new int[]
 			{
-					16842927,
-					16842964,
-					16843125,
 					16843126,
+					16843131,
 					16843362,
-					16843436,
-					16843437,
-					2130772087,
-					2130772088,
-					2130772089,
-					2130772090};
-			
-			// aapt resource value: 1
-			public const int Spinner_android_background = 1;
-			
-			// aapt resource value: 5
-			public const int Spinner_android_dropDownHorizontalOffset = 5;
+					2130772052};
 			
 			// aapt resource value: 2
-			public const int Spinner_android_dropDownSelector = 2;
-			
-			// aapt resource value: 6
-			public const int Spinner_android_dropDownVerticalOffset = 6;
-			
-			// aapt resource value: 4
-			public const int Spinner_android_dropDownWidth = 4;
+			public const int Spinner_android_dropDownWidth = 2;
 			
 			// aapt resource value: 0
-			public const int Spinner_android_gravity = 0;
+			public const int Spinner_android_popupBackground = 0;
+			
+			// aapt resource value: 1
+			public const int Spinner_android_prompt = 1;
 			
 			// aapt resource value: 3
-			public const int Spinner_android_popupBackground = 3;
-			
-			// aapt resource value: 10
-			public const int Spinner_disableChildrenWhenDisabled = 10;
-			
-			// aapt resource value: 9
-			public const int Spinner_popupPromptView = 9;
-			
-			// aapt resource value: 7
-			public const int Spinner_prompt = 7;
-			
-			// aapt resource value: 8
-			public const int Spinner_spinnerMode = 8;
+			public const int Spinner_popupTheme = 3;
 			
 			public static int[] SwitchCompat = new int[]
 			{
 					16843044,
 					16843045,
 					16843074,
-					2130772091,
-					2130772092,
-					2130772093,
-					2130772094,
 					2130772095,
 					2130772096,
-					2130772097};
+					2130772097,
+					2130772098,
+					2130772099,
+					2130772100,
+					2130772101};
 			
 			// aapt resource value: 1
 			public const int SwitchCompat_android_textOff = 1;
@@ -6186,11 +4936,6 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] TabLayout = new int[]
 			{
-					2130772000,
-					2130772001,
-					2130772002,
-					2130772003,
-					2130772004,
 					2130772005,
 					2130772006,
 					2130772007,
@@ -6201,7 +4946,12 @@ namespace WhitePaperBible.Droid
 					2130772012,
 					2130772013,
 					2130772014,
-					2130772015};
+					2130772015,
+					2130772016,
+					2130772017,
+					2130772018,
+					2130772019,
+					2130772020};
 			
 			// aapt resource value: 3
 			public const int TabLayout_tabBackground = 3;
@@ -6257,7 +5007,7 @@ namespace WhitePaperBible.Droid
 					16842902,
 					16842903,
 					16842904,
-					2130772055};
+					2130772061};
 			
 			// aapt resource value: 3
 			public const int TextAppearance_android_textColor = 3;
@@ -6276,31 +5026,35 @@ namespace WhitePaperBible.Droid
 			
 			public static int[] TextInputLayout = new int[]
 			{
+					16842906,
 					16843088,
-					2130772016,
-					2130772017,
-					2130772018};
-			
-			// aapt resource value: 0
-			public const int TextInputLayout_android_hint = 0;
-			
-			// aapt resource value: 2
-			public const int TextInputLayout_errorEnabled = 2;
-			
-			// aapt resource value: 3
-			public const int TextInputLayout_errorTextAppearance = 3;
+					2130772021,
+					2130772022,
+					2130772023,
+					2130772024};
 			
 			// aapt resource value: 1
-			public const int TextInputLayout_hintTextAppearance = 1;
+			public const int TextInputLayout_android_hint = 1;
+			
+			// aapt resource value: 0
+			public const int TextInputLayout_android_textColorHint = 0;
+			
+			// aapt resource value: 3
+			public const int TextInputLayout_errorEnabled = 3;
+			
+			// aapt resource value: 4
+			public const int TextInputLayout_errorTextAppearance = 4;
+			
+			// aapt resource value: 5
+			public const int TextInputLayout_hintAnimationEnabled = 5;
+			
+			// aapt resource value: 2
+			public const int TextInputLayout_hintTextAppearance = 2;
 			
 			public static int[] Theme = new int[]
 			{
 					16842839,
 					16842926,
-					2130772098,
-					2130772099,
-					2130772100,
-					2130772101,
 					2130772102,
 					2130772103,
 					2130772104,
@@ -6401,7 +5155,12 @@ namespace WhitePaperBible.Droid
 					2130772199,
 					2130772200,
 					2130772201,
-					2130772202};
+					2130772202,
+					2130772203,
+					2130772204,
+					2130772205,
+					2130772206,
+					2130772207};
 			
 			// aapt resource value: 23
 			public const int Theme_actionBarDivider = 23;
@@ -6496,17 +5255,17 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 57
 			public const int Theme_activityChooserViewStyle = 57;
 			
-			// aapt resource value: 90
-			public const int Theme_alertDialogButtonGroupStyle = 90;
-			
 			// aapt resource value: 91
-			public const int Theme_alertDialogCenterButtons = 91;
-			
-			// aapt resource value: 89
-			public const int Theme_alertDialogStyle = 89;
+			public const int Theme_alertDialogButtonGroupStyle = 91;
 			
 			// aapt resource value: 92
-			public const int Theme_alertDialogTheme = 92;
+			public const int Theme_alertDialogCenterButtons = 92;
+			
+			// aapt resource value: 90
+			public const int Theme_alertDialogStyle = 90;
+			
+			// aapt resource value: 93
+			public const int Theme_alertDialogTheme = 93;
 			
 			// aapt resource value: 1
 			public const int Theme_android_windowAnimationStyle = 1;
@@ -6514,8 +5273,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0
 			public const int Theme_android_windowIsFloating = 0;
 			
-			// aapt resource value: 97
-			public const int Theme_autoCompleteTextViewStyle = 97;
+			// aapt resource value: 98
+			public const int Theme_autoCompleteTextViewStyle = 98;
 			
 			// aapt resource value: 54
 			public const int Theme_borderlessButtonStyle = 54;
@@ -6523,29 +5282,29 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 51
 			public const int Theme_buttonBarButtonStyle = 51;
 			
-			// aapt resource value: 95
-			public const int Theme_buttonBarNegativeButtonStyle = 95;
-			
 			// aapt resource value: 96
-			public const int Theme_buttonBarNeutralButtonStyle = 96;
+			public const int Theme_buttonBarNegativeButtonStyle = 96;
 			
-			// aapt resource value: 94
-			public const int Theme_buttonBarPositiveButtonStyle = 94;
+			// aapt resource value: 97
+			public const int Theme_buttonBarNeutralButtonStyle = 97;
+			
+			// aapt resource value: 95
+			public const int Theme_buttonBarPositiveButtonStyle = 95;
 			
 			// aapt resource value: 50
 			public const int Theme_buttonBarStyle = 50;
 			
-			// aapt resource value: 98
-			public const int Theme_buttonStyle = 98;
-			
 			// aapt resource value: 99
-			public const int Theme_buttonStyleSmall = 99;
+			public const int Theme_buttonStyle = 99;
 			
 			// aapt resource value: 100
-			public const int Theme_checkboxStyle = 100;
+			public const int Theme_buttonStyleSmall = 100;
 			
 			// aapt resource value: 101
-			public const int Theme_checkedTextViewStyle = 101;
+			public const int Theme_checkboxStyle = 101;
+			
+			// aapt resource value: 102
+			public const int Theme_checkedTextViewStyle = 102;
 			
 			// aapt resource value: 83
 			public const int Theme_colorAccent = 83;
@@ -6571,6 +5330,9 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 88
 			public const int Theme_colorSwitchThumbNormal = 88;
 			
+			// aapt resource value: 89
+			public const int Theme_controlBackground = 89;
+			
 			// aapt resource value: 43
 			public const int Theme_dialogPreferredPadding = 43;
 			
@@ -6595,8 +5357,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 62
 			public const int Theme_editTextColor = 62;
 			
-			// aapt resource value: 102
-			public const int Theme_editTextStyle = 102;
+			// aapt resource value: 103
+			public const int Theme_editTextStyle = 103;
 			
 			// aapt resource value: 48
 			public const int Theme_homeAsUpIndicator = 48;
@@ -6640,11 +5402,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 61
 			public const int Theme_popupWindowStyle = 61;
 			
-			// aapt resource value: 103
-			public const int Theme_radioButtonStyle = 103;
-			
 			// aapt resource value: 104
-			public const int Theme_ratingBarStyle = 104;
+			public const int Theme_radioButtonStyle = 104;
+			
+			// aapt resource value: 105
+			public const int Theme_ratingBarStyle = 105;
 			
 			// aapt resource value: 67
 			public const int Theme_searchViewStyle = 67;
@@ -6658,11 +5420,11 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 47
 			public const int Theme_spinnerDropDownItemStyle = 47;
 			
-			// aapt resource value: 105
-			public const int Theme_spinnerStyle = 105;
-			
 			// aapt resource value: 106
-			public const int Theme_switchStyle = 106;
+			public const int Theme_spinnerStyle = 106;
+			
+			// aapt resource value: 107
+			public const int Theme_switchStyle = 107;
 			
 			// aapt resource value: 40
 			public const int Theme_textAppearanceLargePopupMenu = 40;
@@ -6682,8 +5444,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 41
 			public const int Theme_textAppearanceSmallPopupMenu = 41;
 			
-			// aapt resource value: 93
-			public const int Theme_textColorAlertDialogListItem = 93;
+			// aapt resource value: 94
+			public const int Theme_textColorAlertDialogListItem = 94;
 			
 			// aapt resource value: 66
 			public const int Theme_textColorSearchUrl = 66;
@@ -6728,25 +5490,29 @@ namespace WhitePaperBible.Droid
 			{
 					16842927,
 					16843072,
-					2130772022,
-					2130772025,
-					2130772041,
-					2130772042,
-					2130772043,
-					2130772044,
-					2130772046,
-					2130772203,
-					2130772204,
-					2130772205,
-					2130772206,
-					2130772207,
+					2130772028,
+					2130772031,
+					2130772035,
+					2130772047,
+					2130772048,
+					2130772049,
+					2130772050,
+					2130772052,
 					2130772208,
 					2130772209,
 					2130772210,
 					2130772211,
 					2130772212,
 					2130772213,
-					2130772214};
+					2130772214,
+					2130772215,
+					2130772216,
+					2130772217,
+					2130772218,
+					2130772219,
+					2130772220,
+					2130772221,
+					2130772222};
 			
 			// aapt resource value: 0
 			public const int Toolbar_android_gravity = 0;
@@ -6754,84 +5520,88 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 1
 			public const int Toolbar_android_minHeight = 1;
 			
+			// aapt resource value: 19
+			public const int Toolbar_collapseContentDescription = 19;
+			
 			// aapt resource value: 18
-			public const int Toolbar_collapseContentDescription = 18;
-			
-			// aapt resource value: 17
-			public const int Toolbar_collapseIcon = 17;
-			
-			// aapt resource value: 5
-			public const int Toolbar_contentInsetEnd = 5;
+			public const int Toolbar_collapseIcon = 18;
 			
 			// aapt resource value: 6
-			public const int Toolbar_contentInsetLeft = 6;
+			public const int Toolbar_contentInsetEnd = 6;
 			
 			// aapt resource value: 7
-			public const int Toolbar_contentInsetRight = 7;
-			
-			// aapt resource value: 4
-			public const int Toolbar_contentInsetStart = 4;
-			
-			// aapt resource value: 16
-			public const int Toolbar_maxButtonHeight = 16;
-			
-			// aapt resource value: 20
-			public const int Toolbar_navigationContentDescription = 20;
-			
-			// aapt resource value: 19
-			public const int Toolbar_navigationIcon = 19;
+			public const int Toolbar_contentInsetLeft = 7;
 			
 			// aapt resource value: 8
-			public const int Toolbar_popupTheme = 8;
+			public const int Toolbar_contentInsetRight = 8;
+			
+			// aapt resource value: 5
+			public const int Toolbar_contentInsetStart = 5;
+			
+			// aapt resource value: 4
+			public const int Toolbar_logo = 4;
+			
+			// aapt resource value: 22
+			public const int Toolbar_logoDescription = 22;
+			
+			// aapt resource value: 17
+			public const int Toolbar_maxButtonHeight = 17;
+			
+			// aapt resource value: 21
+			public const int Toolbar_navigationContentDescription = 21;
+			
+			// aapt resource value: 20
+			public const int Toolbar_navigationIcon = 20;
+			
+			// aapt resource value: 9
+			public const int Toolbar_popupTheme = 9;
 			
 			// aapt resource value: 3
 			public const int Toolbar_subtitle = 3;
 			
-			// aapt resource value: 10
-			public const int Toolbar_subtitleTextAppearance = 10;
+			// aapt resource value: 11
+			public const int Toolbar_subtitleTextAppearance = 11;
+			
+			// aapt resource value: 24
+			public const int Toolbar_subtitleTextColor = 24;
 			
 			// aapt resource value: 2
 			public const int Toolbar_title = 2;
 			
-			// aapt resource value: 15
-			public const int Toolbar_titleMarginBottom = 15;
-			
-			// aapt resource value: 13
-			public const int Toolbar_titleMarginEnd = 13;
-			
-			// aapt resource value: 12
-			public const int Toolbar_titleMarginStart = 12;
+			// aapt resource value: 16
+			public const int Toolbar_titleMarginBottom = 16;
 			
 			// aapt resource value: 14
-			public const int Toolbar_titleMarginTop = 14;
+			public const int Toolbar_titleMarginEnd = 14;
 			
-			// aapt resource value: 11
-			public const int Toolbar_titleMargins = 11;
+			// aapt resource value: 13
+			public const int Toolbar_titleMarginStart = 13;
 			
-			// aapt resource value: 9
-			public const int Toolbar_titleTextAppearance = 9;
+			// aapt resource value: 15
+			public const int Toolbar_titleMarginTop = 15;
+			
+			// aapt resource value: 12
+			public const int Toolbar_titleMargins = 12;
+			
+			// aapt resource value: 10
+			public const int Toolbar_titleTextAppearance = 10;
+			
+			// aapt resource value: 23
+			public const int Toolbar_titleTextColor = 23;
 			
 			public static int[] View = new int[]
 			{
 					16842752,
 					16842970,
-					2130772215,
-					2130772216,
-					2130772217,
-					2130772218,
-					2130772219};
+					2130772223,
+					2130772224,
+					2130772225};
 			
 			// aapt resource value: 1
 			public const int View_android_focusable = 1;
 			
 			// aapt resource value: 0
 			public const int View_android_theme = 0;
-			
-			// aapt resource value: 5
-			public const int View_backgroundTint = 5;
-			
-			// aapt resource value: 6
-			public const int View_backgroundTintMode = 6;
 			
 			// aapt resource value: 3
 			public const int View_paddingEnd = 3;
@@ -6841,6 +5611,21 @@ namespace WhitePaperBible.Droid
 			
 			// aapt resource value: 4
 			public const int View_theme = 4;
+			
+			public static int[] ViewBackgroundHelper = new int[]
+			{
+					16842964,
+					2130772226,
+					2130772227};
+			
+			// aapt resource value: 0
+			public const int ViewBackgroundHelper_android_background = 0;
+			
+			// aapt resource value: 1
+			public const int ViewBackgroundHelper_backgroundTint = 1;
+			
+			// aapt resource value: 2
+			public const int ViewBackgroundHelper_backgroundTintMode = 2;
 			
 			public static int[] ViewStubCompat = new int[]
 			{

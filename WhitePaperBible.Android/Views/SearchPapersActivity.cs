@@ -128,10 +128,6 @@ namespace WhitePaperBible.Droid
 
 
             searchItem.ExpandActionView();
-
-//            int searchImgId = Resource.Id.search_button; // I used the explicit layout ID of searchview's ImageView
-//            ImageView v = (ImageView) searchView.FindViewById(searchImgId);
-//            v.Visibility = ViewStates.Gone;
         }
 
 		public override bool OnOptionsItemSelected (IMenuItem item)

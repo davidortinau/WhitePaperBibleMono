@@ -10,7 +10,7 @@ using Android.Support.V4.App;
 using Android.Views;
 using Android.Support.V4.View;
 using Adapters;
-using com.refractored;
+
 using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using Android.Graphics;
@@ -91,6 +91,8 @@ namespace WhitePaperBible.Droid
 			case Resource.Id.menu_profile:
 				{
 //					showToast("Not Implemented");
+                    var loginIntent = new Intent(this.BaseContext, typeof(LoginActivity));
+                    StartActivity(loginIntent);
 					break;
 				}
 			default:

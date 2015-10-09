@@ -12,6 +12,8 @@
 	<string name="tab_profile">My Papers</string>
 	<string name="tab_about">About</string>
 
+	<string name="Login">Login</string>
+
 	<string name="paper_updated">Paper Updated.</string>
 
 	<string-array name="support_array">
