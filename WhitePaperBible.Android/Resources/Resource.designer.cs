@@ -3006,8 +3006,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b0015
 			public const int Hello = 2131427349;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int Login = 2131427359;
+			// aapt resource value: 0x7f0b0020
+			public const int Login = 2131427360;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_action_bar_home_description = 2131427329;
@@ -3066,23 +3066,23 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b0013
 			public const int bs_more = 2131427347;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int copyrights = 2131427361;
+			// aapt resource value: 0x7f0b0022
+			public const int copyrights = 2131427362;
 			
 			// aapt resource value: 0x7f0b0017
 			public const int email = 2131427351;
 			
-			// aapt resource value: 0x7f0b0023
-			public const int icon_heart = 2131427363;
-			
 			// aapt resource value: 0x7f0b0024
-			public const int icon_search = 2131427364;
+			public const int icon_heart = 2131427364;
+			
+			// aapt resource value: 0x7f0b0025
+			public const int icon_search = 2131427365;
 			
 			// aapt resource value: 0x7f0b0014
 			public const int library_name = 2131427348;
 			
-			// aapt resource value: 0x7f0b0020
-			public const int paper_updated = 2131427360;
+			// aapt resource value: 0x7f0b0021
+			public const int paper_updated = 2131427361;
 			
 			// aapt resource value: 0x7f0b0018
 			public const int password = 2131427352;
@@ -3092,6 +3092,9 @@ namespace WhitePaperBible.Droid
 			
 			// aapt resource value: 0x7f0b001e
 			public const int tab_about = 2131427358;
+			
+			// aapt resource value: 0x7f0b001f
+			public const int tab_edit_profile = 2131427359;
 			
 			// aapt resource value: 0x7f0b001b
 			public const int tab_favorites = 2131427355;
@@ -3108,8 +3111,8 @@ namespace WhitePaperBible.Droid
 			// aapt resource value: 0x7f0b001a
 			public const int tab_tags = 2131427354;
 			
-			// aapt resource value: 0x7f0b0022
-			public const int terms = 2131427362;
+			// aapt resource value: 0x7f0b0023
+			public const int terms = 2131427363;
 			
 			static String()
 			{

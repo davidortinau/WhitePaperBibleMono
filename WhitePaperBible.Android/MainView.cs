@@ -90,9 +90,8 @@ namespace WhitePaperBible.Droid
 				}
 			case Resource.Id.menu_profile:
 				{
-//					showToast("Not Implemented");
-                    var loginIntent = new Intent(this.BaseContext, typeof(LoginActivity));
-                    StartActivity(loginIntent);
+                    var myPapersIntent = new Intent(this.BaseContext, typeof(MyPapersActivity));
+                    StartActivity(myPapersIntent);
 					break;
 				}
 			default:

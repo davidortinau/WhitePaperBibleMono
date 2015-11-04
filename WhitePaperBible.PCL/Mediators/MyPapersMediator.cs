@@ -41,7 +41,9 @@ namespace WhitePaperBible.Core.Mediators
 
 			if (AM.IsLoggedIn) {
 				SetPapers ();
-			}
+            }else{
+                Target.PromptForLogin ();
+            }
 		}
 
 		void HandlerPaperSelected (object sender, EventArgs e)

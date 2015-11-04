@@ -35,10 +35,10 @@ namespace WhitePaperBible.Droid
 		{
             base.OnCreateWithLayout(bundle, Resource.Layout.MyPapersView);
 
-			this.setSupportActionBarTitle ("My Papers");
+            this.setSupportActionBarTitle (Resource.String.tab_profile);
 			this.addSupportActionBarBackButton ();
 
-            _listView = FindViewById<ListView>(Resource.Id.PapersByTagList);
+            _listView = FindViewById<ListView>(Resource.Id.MyPapersList);
             _listView.ItemClick += OnRowClicked;
 
             _nameText = FindViewById<TextView>(Resource.Id.NameText);
@@ -132,7 +132,16 @@ namespace WhitePaperBible.Droid
 
         public void SetUserProfile (AppUser user)
         {
-            _nameText.Text = user.Name;
+            RunOnUiThread(()=>{
+                _nameText.Text = user.Name;    
+            });
+
+        }
+
+        public void PromptForLogin()
+        {
+            var loginIntent = new Intent(this.BaseContext, typeof(LoginActivity));
+            StartActivity(loginIntent);
         }
         #endregion
 	}
