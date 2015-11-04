@@ -17,6 +17,7 @@ using Android.Support.V7.View;
 using Java.Interop;
 using Android.Views;
 using WhitePaperBible.Droid.Adapters;
+using AndroidHUD;
 
 namespace WhitePaperBible.Droid
 {
@@ -60,22 +61,26 @@ namespace WhitePaperBible.Droid
 
         public void ShowInvalidPrompt (string message)
         {
-            throw new NotImplementedException ();
+            AndHUD.Shared.ShowToast(this, message);
         }
 
         public void ShowBusyIndicator ()
         {
-//            throw new NotImplementedException ();
+            AndHUD.Shared.Show(this, "Signing In", 0, MaskType.Black);
         }
 
         public void HideBusyIndicator ()
         {
-//            throw new NotImplementedException ();
+            AndHUD.Shared.Dismiss(this);
         }
 
         public void Dismiss ()
         {
-            throw new NotImplementedException ();
+            AndHUD.Shared.Dismiss(this);
+            // kick back to caller Activity
+//            RunOnUiThread (() => {
+//                LoginFinished.Invoke(new LoginFinishedInvokerArgs (this));
+//            });
         }
 
         public Invoker LoginFinished {

@@ -1,8 +1,15 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="WhitePaperBible.Android/WhitePaperBible.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.Android.framework/Versions/5.1.7-12/lib/xbuild/Xamarin/Android/Xamarin.Android.Bindings.targets">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.06157df6c8567824" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.Android/Views/LoginActivity.cs">
     <Files>
-      <File FileName="../../../../Library/Frameworks/Xamarin.Android.framework/Versions/5.1.7-12/lib/xbuild/Xamarin/Android/Xamarin.Android.Bindings.targets" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.Android/Views/LoginActivity.cs" Line="81" Column="50" />
+      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/Reference.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/ReferenceNode.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/SessionCookie.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Models/Tag.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/LoginMediator.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

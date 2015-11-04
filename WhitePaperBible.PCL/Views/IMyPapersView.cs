@@ -7,6 +7,8 @@ namespace WhitePaperBible.Core.Views
 {
 	public interface IMyPapersView : IMediatorTarget
 	{
+        void SetUserProfile (AppUser user);
+
 		Invoker Filter{ get; }
 
 		Invoker OnPaperSelected{ get; }

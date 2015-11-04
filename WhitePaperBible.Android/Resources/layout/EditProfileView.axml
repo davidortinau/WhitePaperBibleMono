@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            local:layout_scrollFlags="scroll|enterAlways"
+            local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+<!--    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        local:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Name" />
+        <EditText
+            android:id="@+id/NameText"
+            android:hint="Your Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Website" />
+        <EditText
+            android:id="@+id/WebsiteText"
+            android:hint="http://yoursite.com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Email" />
+        <EditText
+            android:id="@+id/EmailText"
+            android:hint="you@email.com"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Username" />
+        <EditText
+            android:id="@+id/UsernameText"
+            android:hint="username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Password" />
+        <EditText
+            android:id="@+id/PasswordText"
+            android:hint="Super Secret"
+            android:password="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="ConfirmPassword" />
+        <EditText
+            android:id="@+id/ConfirmPasswordText"
+            android:hint="Super Secret"
+            android:password="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+<!--    </ScrollView>-->
+</android.support.design.widget.CoordinatorLayout>

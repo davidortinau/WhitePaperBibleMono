@@ -62,7 +62,7 @@ namespace WhitePaperBible.Core.Mediators
 				select paper).ToList<Paper>();
 
 			Target.SetPapers (myPapers);
-
+            Target.SetUserProfile (AM.User);
 		}
 	}
 }
