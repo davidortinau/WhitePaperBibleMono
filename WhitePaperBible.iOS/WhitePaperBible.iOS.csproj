@@ -122,12 +122,6 @@
     <Reference Include="ModernHttpClient">
       <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
-    </Reference>
-    <Reference Include="PLCrashReporterUnifiedBinding">
-      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -143,6 +137,7 @@
     <None Include="packages.config" />
     <None Include="entitlements.plist" />
     <None Include="WatchAppManager.cs" />
+    <None Include="Utils\Reachability.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -195,7 +190,6 @@
       <DependentUpon>BibleSearchView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\iPhone\Sub\BibleSearchResults.cs" />
-    <Compile Include="Utils\Reachability.cs" />
     <Compile Include="Views\iPhone\EditPaperView.cs" />
     <Compile Include="UI\PlaceholderTextView.cs" />
     <Compile Include="Views\iPhone\PaperTagsView.cs" />
@@ -406,5 +400,4 @@
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
 </Project>

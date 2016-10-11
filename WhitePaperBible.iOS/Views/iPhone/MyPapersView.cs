@@ -99,5 +99,15 @@ namespace WhitePaperBible.iOS
 				Console.WriteLine ("search text changed");	
 			};
 		}
-	}
+
+        public void PromptForLogin ()
+        {
+            throw new NotImplementedException ();
+        }
+
+        public void SetUserProfile (AppUser user)
+        {
+            throw new NotImplementedException ();
+        }
+    }
 }
