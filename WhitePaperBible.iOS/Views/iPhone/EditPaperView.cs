@@ -66,7 +66,9 @@ namespace WhitePaperBible.iOS
 			string[] t = TagsEl.Value.Split (',');
 			var tags = new List<Tag> ();
 			foreach(var s in t){
-				tags.Add (new Tag (){ name = s });
+                if(s != "..." && !string.IsNullOrEmpty(s)){
+				    tags.Add (new Tag (){ name = s });
+                }
 			}
 
 			return tags;
