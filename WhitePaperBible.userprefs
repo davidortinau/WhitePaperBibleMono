@@ -1,69 +1,27 @@
-﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/AppDelegate.cs">
+﻿<Properties StartupConfiguration="{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonkeyArmsPCL/MonkeyArms/DI.cs">
     <Files>
-      <File FileName="WhitePaperBible.Android/Views/LoginActivity.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Reference.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/ReferenceNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/SessionCookie.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Tag.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/LoginMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/EditPaperView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersAndProfileController.cs" Line="162" Column="5" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersView.cs" Line="114" Column="1" />
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="218" Column="77" />
-      <File FileName="WhitePaperBible.iOS/Utils/Reachability.cs" Line="11" Column="27" />
-      <File FileName="WhitePaperBible.iOS/Main.cs" Line="14" Column="4" />
+      <File FileName="WhitePaperBibileCoreTests/Commands/GetPapersCommandTest.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBibileCoreTests/Services/AuthenticateUserTestClass.cs" Line="11" Column="21" />
+      <File FileName="WhitePaperBible.iOS/Services/WebClient.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/AuthenticateUserService.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/BaseService.cs" Line="40" Column="27" />
+      <File FileName="WhitePaperBible.PCL/Commands/LoginCommand.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperDetailsView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PaperDetailMediator.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Views/IPaperDetailView.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Services/IJSONWebClient.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="1" Column="16" />
+      <File FileName="MonkeyArmsPCL/MonkeyArms/DI.cs" Line="3" Column="7" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="WhitePaperBible" expanded="True">
-            <Node name="MonkeyArmsPCL" expanded="True" />
-            <Node name="WhitePaperBible.iOS" expanded="True">
-              <Node name="ComponentReferenceFolder" expanded="True" />
-              <Node name="Packages" expanded="True" />
-              <Node name="Utils" expanded="True" />
-              <Node name="AppDelegate.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.7e7dc0ce29eec3b638418b893c77ebbc98cd3da3" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.63521425-5212-4D09-B068-83795A9A08EF" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/PaperTagsViewContainer.cs" line="44" column="14" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/DownloadService.cs" line="38" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" line="44" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.PCL/Repositories/FavoritesRepository.cs" line="45" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.WatchShared/WatchMessenger.cs" line="39" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/AppDelegate.cs" line="123" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/LoginView.cs" line="138" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/LoginView.cs" line="95" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/LoginView.cs" line="94" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/LoginView.cs" line="234" column="17" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/Views/iPhone/LoginView.cs" line="244" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs" line="37" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/FavoritesController.cs" line="50" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="34" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="36" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOSWatchKitExtension/AllPapersController.cs" line="49" column="1" />
-      <Breakpoint file="/Users/dave/Projects/WhitePaperBible/WhitePaperBible.iOS/AppDelegate.cs" line="121" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="WhitePaperBible.PCL/Commands/LoadStorageCommand.cs" line="29" offsetX="698" offsetY="560" expression="FileSystem.Current.LocalStorage" liveUpdate="False" />
-    <Watch file="WhitePaperBible.Android/MainView.cs" line="67" offsetX="746" offsetY="1320" expression="key" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus 5 (KitKat) API 19" />
-  <DisabledProjects>
-    <String>WhitePaperBible.Tests/WhitePaperBible.Tests.csproj</String>
-    <String>WhitePaperBibileCoreTests/WhitePaperBibile.PCL.Tests.csproj</String>
-  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
