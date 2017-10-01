@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{D73F8E79-B4DD-4AB0-A767-D9FA3E2FE740};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{D73F8E79-B4DD-4AB0-A767-D9FA3E2FE740};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{41C87FB7-651F-44E9-9DED-12E8AF630D3E}</ProjectGuid>

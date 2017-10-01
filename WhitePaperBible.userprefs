@@ -1,5 +1,5 @@
-﻿<Properties StartupConfiguration="{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonkeyArmsPCL/MonkeyArms/DI.cs">
+﻿<Properties StartupConfiguration="{26C58839-D21B-43E3-B13E-1D3361955852}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Forms/iOS/AppDelegate.cs">
     <Files>
       <File FileName="WhitePaperBibileCoreTests/Commands/GetPapersCommandTest.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBibileCoreTests/Services/AuthenticateUserTestClass.cs" Line="11" Column="21" />
@@ -14,14 +14,27 @@
       <File FileName="WhitePaperBible.iOS/Main.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="1" Column="16" />
-      <File FileName="MonkeyArmsPCL/MonkeyArms/DI.cs" Line="3" Column="7" />
+      <File FileName="MonkeyArmsPCL/MonkeyArms/DI.cs" Line="11" Column="18" />
+      <File FileName="Forms/iOS/AppDelegate.cs" Line="28" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WhitePaperBible" expanded="True">
+            <Node name="Forms" expanded="True">
+              <Node name="WhitePaperBible.iOS" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.63521425-5212-4D09-B068-83795A9A08EF" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Forms.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.63521425-5212-4D09-B068-83795A9A08EF" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
