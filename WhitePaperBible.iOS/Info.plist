@@ -27,5 +27,7 @@
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
 	<key>CFBundleVersion</key>
 	<string>4</string>
+	<key>CFBundleName</key>
+	<string>White Paper Bible</string>
 </dict>
 </plist>

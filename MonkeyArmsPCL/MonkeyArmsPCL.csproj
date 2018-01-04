@@ -65,8 +65,8 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="TinyIoC">
-      <HintPath>..\..\..\..\..\work\rendr\MonkeyArms\DLL\TinyIOC.dll</HintPath>
+    <Reference Include="TinyIOC">
+      <HintPath>..\MonkeyArms\DLL\TinyIOC.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
