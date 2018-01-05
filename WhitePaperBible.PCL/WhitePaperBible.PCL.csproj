@@ -220,7 +220,7 @@
     <MonoDevelop>
       <Properties>
         <Policies>
-          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedHierarchical" ResourceNamePolicy="FileFormatDefault" />
+          <DotNetNamingPolicy ResourceNamePolicy="FileFormatDefault" DirectoryNamespaceAssociation="PrefixedHierarchical" />
         </Policies>
       </Properties>
     </MonoDevelop>
@@ -230,7 +230,6 @@
     <Folder Include="Helpers\" />
     <Folder Include="Utilities\" />
     <Folder Include="Repositories\" />
-    <Folder Include="New Folder\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -49,7 +49,7 @@ namespace WhitePaperBible.Core.Mediators
 			InvokerMap.Add (LoginRequired, OnLoginRequired);
 			InvokerMap.Add (LoggedIn, OnLoggedIn);
 
-			Target.SearchPlaceHolderText = "Search Papers";
+			//Target.SearchPlaceHolderText = "Search Papers";
 
 //			SetPapers ();
 

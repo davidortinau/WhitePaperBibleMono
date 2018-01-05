@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Forms.PapersListView">
+	<StackLayout>
+        <SearchBar Placeholder="Search Papers" TextChanged="Handle_TextChanged" />
+        <ListView ItemsSource="{Binding Papers}" ItemSelected="Handle_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="18,5">
+                            <Label FontSize="15" TextColor="Black" Text="{Binding title}"/>
+                            <Label FontSize="11" TextColor="Gray" Text="{Binding Author.Name}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

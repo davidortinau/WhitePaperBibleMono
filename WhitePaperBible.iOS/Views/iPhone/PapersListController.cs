@@ -10,12 +10,14 @@ using System.Collections.Generic;
 using WhitePaperBible.Core.Models;
 using WhitePaperBible.iOS.Invokers;
 using IOS.Util;
+using Forms;
+using Xamarin.Forms;
 
 namespace WhitePaperBible.iOS
 {
 	public partial class PapersListController : UIViewController, IPapersListView
 	{
-		PapersView papersList;
+		//PapersView papersList;
 
 		LoginRequiredController LoginRequiredView;
 
@@ -82,15 +84,25 @@ namespace WhitePaperBible.iOS
 
 		}
 
+        PapersListView papersList;
 		void AddDialog ()
 		{
-			papersList = new PapersView (this.NavigationController);
-			ListContainer.AddSubview (papersList.TableView);
+			Xamarin.Forms.Forms.Init();
+			//papersList = new PapersView (this.NavigationController);
+			//ListContainer.AddSubview (papersList.TableView);
+            papersList = new PapersListView();
+            papersList.ItemSelected += (object sender, EventArgs e) => {
+                Paper p = (WhitePaperBible.Core.Models.Paper)(e as SelectedItemChangedEventArgs).SelectedItem;
+                var paperDetails = new PaperDetailsView (p);
+                paperDetails.Title = p.title;
+                this.NavigationController.PushViewController (paperDetails, true);
+            };
+            ListContainer.AddSubview (papersList.CreateViewController ().View);
 		}
 
 		public void SetPapers (List<Paper> papers)
 		{
-			papersList.SetPapers (papers);
+            papersList.Papers = papers;
 		}
 
 		public Invoker AddPaper {
@@ -105,16 +117,16 @@ namespace WhitePaperBible.iOS
 			this.PresentViewController (editNav, true, null);
 		}
 
-		public string SearchPlaceHolderText {
-			get{
-				return papersList.SearchPlaceHolderText;
-			}
-			set {
-				if (papersList != null) {
-					papersList.SearchPlaceHolderText = value;
-				}
-			}
-		}
+		//public string SearchPlaceHolderText {
+		//	get{
+		//		return PapersList.SearchPlaceHolderText;
+		//	}
+		//	set {
+		//		if (papersList != null) {
+		//			papersList.SearchPlaceHolderText = value;
+		//		}
+		//	}
+		//}
 
 		public string SearchQuery {
 			get{

@@ -17,7 +17,7 @@ namespace WhitePaperBible.Core.Views
 
 		void SetPapers (List<Paper> papers);
 
-		string SearchPlaceHolderText{ get; set; }
+		//string SearchPlaceHolderText{ get; set; }
 
 		string SearchQuery{ get; }
 
