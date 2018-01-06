@@ -4,7 +4,8 @@
              x:Class="Forms.PapersListView">
 	<StackLayout>
         <SearchBar Placeholder="Search Papers" TextChanged="Handle_TextChanged" />
-        <ListView ItemsSource="{Binding Papers}" ItemSelected="Handle_ItemSelected">
+        <ListView ItemsSource="{Binding Papers}"
+            ItemSelected="Handle_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

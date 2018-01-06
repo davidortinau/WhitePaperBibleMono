@@ -88,9 +88,7 @@ namespace WhitePaperBible.iOS
 		void AddDialog ()
 		{
 			Xamarin.Forms.Forms.Init();
-			//papersList = new PapersView (this.NavigationController);
-			//ListContainer.AddSubview (papersList.TableView);
-            papersList = new PapersListView();
+			papersList = new PapersListView();
             papersList.ItemSelected += (object sender, EventArgs e) => {
                 Paper p = (WhitePaperBible.Core.Models.Paper)(e as SelectedItemChangedEventArgs).SelectedItem;
                 var paperDetails = new PaperDetailsView (p);

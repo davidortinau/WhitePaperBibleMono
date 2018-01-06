@@ -1,23 +1,9 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBibleMono Status">
     <Files>
-      <File FileName="WhitePaperBible.Android/Views/LoginActivity.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Paper.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/PaperNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Reference.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/ReferenceNode.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/SessionCookie.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Models/Tag.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.PCL/Mediators/LoginMediator.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/AboutView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs" Line="93" Column="83" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/EditPaperView.cs" Line="1" Column="1" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersAndProfileController.cs" Line="162" Column="5" />
-      <File FileName="WhitePaperBible.iOS/Views/iPhone/MyPapersView.cs" Line="114" Column="1" />
-      <File FileName="WhitePaperBible.iOS/AppDelegate.cs" Line="218" Column="10" />
-      <File FileName="WhitePaperBible.iOS/Utils/Reachability.cs" Line="11" Column="27" />
-      <File FileName="WhitePaperBible.iOS/Main.cs" Line="14" Column="4" />
-      <File FileName="WhitePaperBible.iOS/Views/Forms/PapersListView.xaml" Line="7" Column="31" />
+      <File FileName="WhitePaperBible.iOS/Views/Forms/PapersListView.xaml.cs" Line="30" Column="1" />
+      <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="19" Column="37" />
+      <File FileName="WhitePaperBibleMono Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F1CA338C-897C-496C-9BE7-CC0096366E8D" />

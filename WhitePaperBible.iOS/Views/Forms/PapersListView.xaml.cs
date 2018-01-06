@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using WhitePaperBible.Core.Models;
 using System.ComponentModel;
+using System.Linq;
 
 namespace Forms
 {
@@ -11,11 +12,17 @@ namespace Forms
     {
         List<Paper> papers;
 
+        string searchQuery;
+
         public event EventHandler ItemSelected = delegate { };
 
         public List<Paper> Papers {
             get {
-                return papers;
+                if (string.IsNullOrEmpty (searchQuery)) {
+                    return papers;
+                } else {
+                    return papers.Where (x => x.title.IndexOf (searchQuery, StringComparison.OrdinalIgnoreCase) != -1).ToList ();
+                }
             }
 
             set {
@@ -39,7 +46,8 @@ namespace Forms
 
         void Handle_TextChanged (object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
-            throw new NotImplementedException ();
+            searchQuery = e.NewTextValue;
+            OnPropertyChanged (nameof (Papers));
         }
 
         void Handle_ItemSelected (object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
