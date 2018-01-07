@@ -8,19 +8,26 @@ using MonoTouch.Dialog;
 using WhitePaperBible.Core.Views;
 using MonkeyArms;
 using IOS.Util;
+using Forms;
+using Xamarin.Forms;
 
 namespace WhitePaperBible.iOS
 {
-	public partial class TagsView : DialogViewController, ITagsListView
+    public partial class TagsView : UIViewController, ITagsListView
 	{
-		public TagsView () : base (UITableViewStyle.Plain, null, true)
-		{
-			EnableSearch = true; 
-			AutoHideSearch = true;
-			SearchPlaceholder = @"Find Tags";
-			this.Filter = new Invoker ();
-			this.OnTagSelected = new Invoker ();
-		}
+        public TagsView () : base()
+        {
+
+        }
+
+  //      public TagsView () : base (UITableViewStyle.Plain, null, true)
+		//{
+		//	EnableSearch = true; 
+		//	AutoHideSearch = true;
+		//	SearchPlaceholder = @"Find Tags";
+		//	this.Filter = new Invoker ();
+		//	this.OnTagSelected = new Invoker ();
+		//}
 
 		#region ITagsListView implementation
 
@@ -37,18 +44,19 @@ namespace WhitePaperBible.iOS
 		public void SetTags (List<Tag> tags)
 		{
 			InvokeOnMainThread (delegate {
+                tagsListView.Tags = tags;
 
-				Root = new RootElement ("Tags") {
-					from node in tags
-					group node by (node.name [0].ToString ().ToUpper ()) into alpha
-					orderby alpha.Key
-					select new Section (alpha.Key) {
-						from eachNode in alpha
-						select (Element)new WhitePaperBible.iOS.UI.CustomElements.TagElement (eachNode)
-					}
-				};
+			//	Root = new RootElement ("Tags") {
+			//		from node in tags
+			//		group node by (node.name [0].ToString ().ToUpper ()) into alpha
+			//		orderby alpha.Key
+			//		select new Section (alpha.Key) {
+			//			from eachNode in alpha
+			//			select (Element)new WhitePaperBible.iOS.UI.CustomElements.TagElement (eachNode)
+			//		}
+			//	};
 
-				TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
+			//	TableView.ScrollToRow (NSIndexPath.FromRowSection (0, 0), UITableViewScrollPosition.Top, false);
 			});
 
 		}
@@ -68,7 +76,9 @@ namespace WhitePaperBible.iOS
 			set;
 		}
 
-		#endregion
+        #endregion
+
+        TagsListView tagsListView;
 
 		public override void ViewDidLoad ()
 		{
@@ -76,9 +86,14 @@ namespace WhitePaperBible.iOS
 
 			DI.RequestMediator (this);
 
-			SearchTextChanged += (sender, args) => {
-				Console.WriteLine ("search text changed");	
-			};
+            tagsListView = new TagsListView ();
+            this.View = tagsListView.CreateViewController ().View;
+
+			//SearchTextChanged += (sender, args) => {
+			//	Console.WriteLine ("search text changed");	
+			//};
+
+
 
 			AnalyticsUtil.TrackScreen (this.Title);
 		}

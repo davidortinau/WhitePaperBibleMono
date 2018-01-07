@@ -1,12 +1,24 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{3F900B9B-EBCF-4CAC-BDA5-EB32993D6114}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workbench ActiveDocument="WhitePaperBibleMono Status">
     <Files>
-      <File FileName="WhitePaperBible.iOS/Views/Forms/PapersListView.xaml.cs" Line="30" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/Forms/PapersListView.xaml.cs" Line="45" Column="10" />
       <File FileName="WhitePaperBible.PCL/Mediators/PapersListMediator.cs" Line="19" Column="37" />
+      <File FileName="WhitePaperBible.iOS/Views/Forms/PapersListView.xaml" Line="22" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsView.cs" Line="89" Column="39" />
+      <File FileName="WhitePaperBible.iOS/Views/Forms/TagsListView.xaml" Line="23" Column="1" />
+      <File FileName="WhitePaperBible.iOS/Views/Forms/TagsListView.xaml.cs" Line="59" Column="10" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperTagsView.cs" Line="40" Column="41" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersView.cs" Line="26" Column="4" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PaperTagsViewContainer.cs" Line="23" Column="9" />
+      <File FileName="WhitePaperBible.iOS/Views/Common/TabBarController.cs" Line="52" Column="18" />
+      <File FileName="WhitePaperBible.PCL/Mediators/TagsListMediator.cs" Line="27" Column="49" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/PapersListController.cs" Line="93" Column="111" />
+      <File FileName="WhitePaperBible.iOS/Views/iPhone/TagsViewController.cs" Line="14" Column="78" />
+      <File FileName="WhitePaperBible.iOS/UI/CustomElements/TagElement.cs" Line="53" Column="45" />
       <File FileName="WhitePaperBibleMono Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F1CA338C-897C-496C-9BE7-CC0096366E8D" />
+  <MonoDevelop.Ide.ItemProperties.WhitePaperBible.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.79B1635A-7DBF-46E6-9774-961C9865771A" automaticSigning="False" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

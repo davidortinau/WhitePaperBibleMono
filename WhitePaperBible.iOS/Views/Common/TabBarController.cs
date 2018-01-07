@@ -9,6 +9,7 @@ using WhitePaperBible.Core.Invokers;
 using WhitePaperBible.Core.Views;
 using WhitePaperBible.iOS.Invokers;
 using BigTed;
+using iPhone;
 
 namespace WhitePaperBible.iOS
 {
@@ -29,7 +30,7 @@ namespace WhitePaperBible.iOS
 
 			papersNav = CreateTabView<PapersListController> (ResourceManager.GetString ("papers"), "papers");
 
-			tagsNav = CreateTabView<TagsView> (ResourceManager.GetString ("tags"), "tag");
+			tagsNav = CreateTabView<TagsViewController> (ResourceManager.GetString ("tags"), "tag");
 
 			favoritesNav = CreateTabView<FavoritesView> (ResourceManager.GetString ("favorites"), "favorites");
 			

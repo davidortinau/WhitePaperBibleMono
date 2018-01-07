@@ -62,13 +62,13 @@ namespace WhitePaperBible.iOS
 
 		void UpdateTopConstraint ()
 		{
-			if(this.TopConstraint != null){
-				this.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
+			//if(this.TopConstraint != null){
+			//	this.TopConstraint.Constant = UIApplication.SharedApplication.StatusBarFrame.Height + this.NavigationController.NavigationBar.Frame.Height;
 
-				if(LoginRequiredView != null){
-					LoginRequiredView.TopConstraint.Constant = this.TopConstraint.Constant;
-				}
-			}
+			//	if(LoginRequiredView != null){
+			//		LoginRequiredView.TopConstraint.Constant = this.TopConstraint.Constant;
+			//	}
+			//}
 		}
 
 		public override void ViewWillAppear (bool animated)
@@ -108,23 +108,12 @@ namespace WhitePaperBible.iOS
 			private set;
 		}
 
-		public void AddPaperEditView()
-		{
-			var addPaperView = new EditPaperView();
-			var editNav = new UINavigationController (addPaperView);
-			this.PresentViewController (editNav, true, null);
-		}
-
-		//public string SearchPlaceHolderText {
-		//	get{
-		//		return PapersList.SearchPlaceHolderText;
-		//	}
-		//	set {
-		//		if (papersList != null) {
-		//			papersList.SearchPlaceHolderText = value;
-		//		}
-		//	}
-		//}
+        public void AddPaperEditView ()
+        {
+            var addPaperView = new EditPaperView ();
+            var editNav = new UINavigationController (addPaperView);
+            this.PresentViewController (editNav, true, null);
+        }
 
 		public string SearchQuery {
 			get{

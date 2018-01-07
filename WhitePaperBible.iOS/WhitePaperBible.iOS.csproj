@@ -150,10 +150,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="SecondViewController.cs" />
-    <Compile Include="SecondViewController.designer.cs">
-      <DependentUpon>SecondViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Common\TabBarController.cs" />
     <Compile Include="Views\iPhone\FavoritesView.cs" />
     <Compile Include="Views\iPhone\MyPapersView.cs" />
@@ -229,10 +225,15 @@
     <Compile Include="Views\Forms\PapersListView.xaml.cs">
       <DependentUpon>PapersListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Forms\TagsListView.xaml.cs">
+      <DependentUpon>TagsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\iPhone\TagsViewController.cs" />
+    <Compile Include="Views\iPhone\TagsViewController.designer.cs">
+      <DependentUpon>TagsViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="SecondViewController_iPhone.xib" />
-    <InterfaceDefinition Include="SecondViewController_iPad.xib" />
     <InterfaceDefinition Include="Views\iPhone\PaperDetailsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\CopyrightsView.xib" />
     <InterfaceDefinition Include="Views\iPhone\TermsAndConditionsView.xib" />
@@ -243,6 +244,8 @@
     <InterfaceDefinition Include="Views\iPhone\LoginRequiredController.xib" />
     <InterfaceDefinition Include="Views\iPhone\PapersListController_iPhone.xib" />
     <InterfaceDefinition Include="UI\CustomElements\PaperDetailedCell.xib" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Views\iPhone\TagsViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Tabs\papers.png" />
@@ -391,21 +394,12 @@
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_57.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_114.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon%402x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_180.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_120.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_80.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_87.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_58.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons-1.appiconset\icon_29.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch%403x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch6%402x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch%402x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch-568h%402x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Launch_640.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork%402x" />
@@ -415,6 +409,10 @@
     <EmbeddedResource Include="Views\Forms\PapersListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\TagsListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
